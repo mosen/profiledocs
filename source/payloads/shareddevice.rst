@@ -1,10 +1,10 @@
 Shared Device
 =============
 
-.. pfm:: com.apple.shareddeviceconfiguration manifest.plist
+.. pfm:: manifests/ac2/com.apple.shareddeviceconfiguration manifest.plist
 
 Keys
 ----
 
-.. pfmkey:: IfLostReturnToMessage com.apple.shareddeviceconfiguration manifest.plist
-.. pfmkey:: AssetTagInformation com.apple.shareddeviceconfiguration manifest.plist
+.. pfmkey:: IfLostReturnToMessage manifests/ac2/com.apple.shareddeviceconfiguration manifest.plist
+.. pfmkey:: AssetTagInformation manifests/ac2/com.apple.shareddeviceconfiguration manifest.plist

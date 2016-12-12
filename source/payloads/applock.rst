@@ -1,10 +1,10 @@
 App Lock
 ========
 
-.. pfm:: com.apple.app.lock manifest.plist
+.. pfm:: manifests/ac2/com.apple.app.lock manifest.plist
 
 Keys
 ----
 
-.. pfmkey:: App com.apple.app.lock manifest.plist
+.. pfmkey:: App manifests/ac2/com.apple.app.lock manifest.plist
 

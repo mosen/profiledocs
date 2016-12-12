@@ -1,15 +1,15 @@
 LDAP Account
 ============
 
-.. pfm:: com.apple.ldap.account manifest.plist
+.. pfm:: manifests/ac2/com.apple.ldap.account manifest.plist
 
 Keys
 ----
 
-.. pfmkey:: LDAPAccountDescription com.apple.ldap.account manifest.plist
-.. pfmkey:: LDAPAccountUserName com.apple.ldap.account manifest.plist
-.. pfmkey:: LDAPAccountPassword com.apple.ldap.account manifest.plist
-.. pfmkey:: LDAPAccountHostName com.apple.ldap.account manifest.plist
-.. pfmkey:: LDAPAccountUseSSL com.apple.ldap.account manifest.plist
-.. pfmkey:: LDAPSearchSettings com.apple.ldap.account manifest.plist
-.. pfmkey:: CommunicationServiceRules com.apple.ldap.account manifest.plist
+.. pfmkey:: LDAPAccountDescription manifests/ac2/com.apple.ldap.account manifest.plist
+.. pfmkey:: LDAPAccountUserName manifests/ac2/com.apple.ldap.account manifest.plist
+.. pfmkey:: LDAPAccountPassword manifests/ac2/com.apple.ldap.account manifest.plist
+.. pfmkey:: LDAPAccountHostName manifests/ac2/com.apple.ldap.account manifest.plist
+.. pfmkey:: LDAPAccountUseSSL manifests/ac2/com.apple.ldap.account manifest.plist
+.. pfmkey:: LDAPSearchSettings manifests/ac2/com.apple.ldap.account manifest.plist
+.. pfmkey:: CommunicationServiceRules manifests/ac2/com.apple.ldap.account manifest.plist

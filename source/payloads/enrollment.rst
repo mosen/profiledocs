@@ -1,12 +1,12 @@
 Enrollment
 ==========
 
-.. pfm:: com.apple.enrollment manifest.plist
+.. pfm:: manifests/ac2/com.apple.enrollment manifest.plist
 
 Keys
 ----
 
-.. pfmkey:: MDMServerURL com.apple.enrollment manifest.plist
-.. pfmkey:: AnchorCertificates com.apple.enrollment manifest.plist
+.. pfmkey:: MDMServerURL manifests/ac2/com.apple.enrollment manifest.plist
+.. pfmkey:: AnchorCertificates manifests/ac2/com.apple.enrollment manifest.plist
 
 

@@ -1,14 +1,14 @@
 WebClip
 =======
 
-.. pfm:: com.apple.webClip.managed manifest.plist
+.. pfm:: manifests/ac2/com.apple.webClip.managed manifest.plist
 
 Keys
 ----
 
-.. pfmkey:: URL com.apple.webClip.managed manifest.plist
-.. pfmkey:: Label com.apple.webClip.managed manifest.plist
-.. pfmkey:: Icon com.apple.webClip.managed manifest.plist
-.. pfmkey:: IsRemovable com.apple.webClip.managed manifest.plist
-.. pfmkey:: FullScreen com.apple.webClip.managed manifest.plist
-.. pfmkey:: Precomposed com.apple.webClip.managed manifest.plist
+.. pfmkey:: URL manifests/ac2/com.apple.webClip.managed manifest.plist
+.. pfmkey:: Label manifests/ac2/com.apple.webClip.managed manifest.plist
+.. pfmkey:: Icon manifests/ac2/com.apple.webClip.managed manifest.plist
+.. pfmkey:: IsRemovable manifests/ac2/com.apple.webClip.managed manifest.plist
+.. pfmkey:: FullScreen manifests/ac2/com.apple.webClip.managed manifest.plist
+.. pfmkey:: Precomposed manifests/ac2/com.apple.webClip.managed manifest.plist

@@ -1,14 +1,14 @@
 OSX Server Account
 ==================
 
-.. pfm:: com.apple.osxserver.account manifest.plist
+.. pfm:: manifests/ac2/com.apple.osxserver.account manifest.plist
 
 Keys
 ----
 
-.. pfmkey:: AccountDescription com.apple.osxserver.account manifest.plist
-.. pfmkey:: HostName com.apple.osxserver.account manifest.plist
-.. pfmkey:: UserName com.apple.osxserver.account manifest.plist
-.. pfmkey:: Password com.apple.osxserver.account manifest.plist
-.. pfmkey:: ConfiguredAccounts com.apple.osxserver.account manifest.plist
+.. pfmkey:: AccountDescription manifests/ac2/com.apple.osxserver.account manifest.plist
+.. pfmkey:: HostName manifests/ac2/com.apple.osxserver.account manifest.plist
+.. pfmkey:: UserName manifests/ac2/com.apple.osxserver.account manifest.plist
+.. pfmkey:: Password manifests/ac2/com.apple.osxserver.account manifest.plist
+.. pfmkey:: ConfiguredAccounts manifests/ac2/com.apple.osxserver.account manifest.plist
 

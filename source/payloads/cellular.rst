@@ -1,10 +1,10 @@
 Cellular
 ========
 
-.. pfm:: com.apple.cellular manifest.plist
+.. pfm:: manifests/ac2/com.apple.cellular manifest.plist
 
 Keys
 ----
 
-.. pfmkey:: APNs com.apple.cellular manifest.plist
-.. pfmkey:: AttachAPN com.apple.cellular manifest.plist
+.. pfmkey:: APNs manifests/ac2/com.apple.cellular manifest.plist
+.. pfmkey:: AttachAPN manifests/ac2/com.apple.cellular manifest.plist

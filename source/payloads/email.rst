@@ -1,34 +1,34 @@
 E-mail Account
 ==============
 
-.. pfm:: com.apple.mail.managed manifest.plist
+.. pfm:: manifests/ac2/com.apple.mail.managed manifest.plist
 
 Keys
 ----
 
-.. pfmkey:: EmailAccountDescription com.apple.mail.managed manifest.plist
-.. pfmkey:: EmailAccountType com.apple.mail.managed manifest.plist
-.. pfmkey:: EmailAccountName com.apple.mail.managed manifest.plist
-.. pfmkey:: EmailAddress com.apple.mail.managed manifest.plist
-.. pfmkey:: disableMailRecentsSyncing com.apple.mail.managed manifest.plist
-.. pfmkey:: allowMailDrop com.apple.mail.managed manifest.plist
-.. pfmkey:: PreventMove com.apple.mail.managed manifest.plist
-.. pfmkey:: PreventAppSheet com.apple.mail.managed manifest.plist
-.. pfmkey:: SMIMEEnabled com.apple.mail.managed manifest.plist
-.. pfmkey:: SMIMEEnablePerMessageSwitch com.apple.mail.managed manifest.plist
-.. pfmkey:: SMIMESigningCertificateUUID com.apple.mail.managed manifest.plist
-.. pfmkey:: SMIMEEncryptionCertificateUUID com.apple.mail.managed manifest.plist
-.. pfmkey:: IncomingMailServerAuthentication com.apple.mail.managed manifest.plist
-.. pfmkey:: IncomingMailServerHostName com.apple.mail.managed manifest.plist
-.. pfmkey:: IncomingMailServerIMAPPathPrefix com.apple.mail.managed manifest.plist
-.. pfmkey:: IncomingMailServerPortNumber com.apple.mail.managed manifest.plist
-.. pfmkey:: IncomingMailServerUseSSL com.apple.mail.managed manifest.plist
-.. pfmkey:: IncomingMailServerUsername com.apple.mail.managed manifest.plist
-.. pfmkey:: IncomingPassword com.apple.mail.managed manifest.plist
-.. pfmkey:: OutgoingPassword com.apple.mail.managed manifest.plist
-.. pfmkey:: OutgoingPasswordSameAsIncomingPassword com.apple.mail.managed manifest.plist
-.. pfmkey:: OutgoingMailServerAuthentication com.apple.mail.managed manifest.plist
-.. pfmkey:: OutgoingMailServerHostName com.apple.mail.managed manifest.plist
-.. pfmkey:: OutgoingMailServerPortNumber com.apple.mail.managed manifest.plist
-.. pfmkey:: OutgoingMailServerUseSSL com.apple.mail.managed manifest.plist
-.. pfmkey:: OutgoingMailServerUsername com.apple.mail.managed manifest.plist
+.. pfmkey:: EmailAccountDescription manifests/ac2/com.apple.mail.managed manifest.plist
+.. pfmkey:: EmailAccountType manifests/ac2/com.apple.mail.managed manifest.plist
+.. pfmkey:: EmailAccountName manifests/ac2/com.apple.mail.managed manifest.plist
+.. pfmkey:: EmailAddress manifests/ac2/com.apple.mail.managed manifest.plist
+.. pfmkey:: disableMailRecentsSyncing manifests/ac2/com.apple.mail.managed manifest.plist
+.. pfmkey:: allowMailDrop manifests/ac2/com.apple.mail.managed manifest.plist
+.. pfmkey:: PreventMove manifests/ac2/com.apple.mail.managed manifest.plist
+.. pfmkey:: PreventAppSheet manifests/ac2/com.apple.mail.managed manifest.plist
+.. pfmkey:: SMIMEEnabled manifests/ac2/com.apple.mail.managed manifest.plist
+.. pfmkey:: SMIMEEnablePerMessageSwitch manifests/ac2/com.apple.mail.managed manifest.plist
+.. pfmkey:: SMIMESigningCertificateUUID manifests/ac2/com.apple.mail.managed manifest.plist
+.. pfmkey:: SMIMEEncryptionCertificateUUID manifests/ac2/com.apple.mail.managed manifest.plist
+.. pfmkey:: IncomingMailServerAuthentication manifests/ac2/com.apple.mail.managed manifest.plist
+.. pfmkey:: IncomingMailServerHostName manifests/ac2/com.apple.mail.managed manifest.plist
+.. pfmkey:: IncomingMailServerIMAPPathPrefix manifests/ac2/com.apple.mail.managed manifest.plist
+.. pfmkey:: IncomingMailServerPortNumber manifests/ac2/com.apple.mail.managed manifest.plist
+.. pfmkey:: IncomingMailServerUseSSL manifests/ac2/com.apple.mail.managed manifest.plist
+.. pfmkey:: IncomingMailServerUsername manifests/ac2/com.apple.mail.managed manifest.plist
+.. pfmkey:: IncomingPassword manifests/ac2/com.apple.mail.managed manifest.plist
+.. pfmkey:: OutgoingPassword manifests/ac2/com.apple.mail.managed manifest.plist
+.. pfmkey:: OutgoingPasswordSameAsIncomingPassword manifests/ac2/com.apple.mail.managed manifest.plist
+.. pfmkey:: OutgoingMailServerAuthentication manifests/ac2/com.apple.mail.managed manifest.plist
+.. pfmkey:: OutgoingMailServerHostName manifests/ac2/com.apple.mail.managed manifest.plist
+.. pfmkey:: OutgoingMailServerPortNumber manifests/ac2/com.apple.mail.managed manifest.plist
+.. pfmkey:: OutgoingMailServerUseSSL manifests/ac2/com.apple.mail.managed manifest.plist
+.. pfmkey:: OutgoingMailServerUsername manifests/ac2/com.apple.mail.managed manifest.plist

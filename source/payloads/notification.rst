@@ -1,10 +1,10 @@
 Notification Settings
 =====================
 
-.. pfm:: com.apple.notificationsettings manifest.plist
+.. pfm:: manifests/ac2/com.apple.notificationsettings manifest.plist
 
 Keys
 ----
 
-.. pfmkey:: NotificationSettings com.apple.notificationsettings manifest.plist
+.. pfmkey:: NotificationSettings manifests/ac2/com.apple.notificationsettings manifest.plist
 

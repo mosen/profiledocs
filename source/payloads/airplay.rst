@@ -1,9 +1,9 @@
 AirPlay
 =======
 
-.. pfm:: com.apple.airplay manifest.plist
+.. pfm:: manifests/ac2/com.apple.airplay manifest.plist
 
 
-.. pfmkey:: Whitelist com.apple.airplay manifest.plist
+.. pfmkey:: Whitelist manifests/ac2/com.apple.airplay manifest.plist
 
-.. pfmkey:: Passwords com.apple.airplay manifest.plist
+.. pfmkey:: Passwords manifests/ac2/com.apple.airplay manifest.plist

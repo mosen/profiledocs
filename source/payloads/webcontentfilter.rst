@@ -1,22 +1,22 @@
 Web Content Filter
 ==================
 
-.. pfm:: com.apple.webcontent-filter manifest.plist
+.. pfm:: manifests/ac2/com.apple.webcontent-filter manifest.plist
 
 Keys
 ----
 
-.. pfmkey:: FilterType com.apple.webcontent-filter manifest.plist
-.. pfmkey:: AutoFilterEnabled com.apple.webcontent-filter manifest.plist
-.. pfmkey:: PermittedURLs com.apple.webcontent-filter manifest.plist
-.. pfmkey:: WhitelistedBookmarks com.apple.webcontent-filter manifest.plist
-.. pfmkey:: BlacklistedURLs com.apple.webcontent-filter manifest.plist
-.. pfmkey:: UserDefinedName com.apple.webcontent-filter manifest.plist
-.. pfmkey:: PluginBundleID com.apple.webcontent-filter manifest.plist
-.. pfmkey:: ServerAddress com.apple.webcontent-filter manifest.plist
-.. pfmkey:: UserName com.apple.webcontent-filter manifest.plist
-.. pfmkey:: Password com.apple.webcontent-filter manifest.plist
-.. pfmkey:: PayloadCertificateUUID com.apple.webcontent-filter manifest.plist
-.. pfmkey:: Organization com.apple.webcontent-filter manifest.plist
-.. pfmkey:: FilterBrowsers com.apple.webcontent-filter manifest.plist
-.. pfmkey:: FilterSockets com.apple.webcontent-filter manifest.plist
+.. pfmkey:: FilterType manifests/ac2/com.apple.webcontent-filter manifest.plist
+.. pfmkey:: AutoFilterEnabled manifests/ac2/com.apple.webcontent-filter manifest.plist
+.. pfmkey:: PermittedURLs manifests/ac2/com.apple.webcontent-filter manifest.plist
+.. pfmkey:: WhitelistedBookmarks manifests/ac2/com.apple.webcontent-filter manifest.plist
+.. pfmkey:: BlacklistedURLs manifests/ac2/com.apple.webcontent-filter manifest.plist
+.. pfmkey:: UserDefinedName manifests/ac2/com.apple.webcontent-filter manifest.plist
+.. pfmkey:: PluginBundleID manifests/ac2/com.apple.webcontent-filter manifest.plist
+.. pfmkey:: ServerAddress manifests/ac2/com.apple.webcontent-filter manifest.plist
+.. pfmkey:: UserName manifests/ac2/com.apple.webcontent-filter manifest.plist
+.. pfmkey:: Password manifests/ac2/com.apple.webcontent-filter manifest.plist
+.. pfmkey:: PayloadCertificateUUID manifests/ac2/com.apple.webcontent-filter manifest.plist
+.. pfmkey:: Organization manifests/ac2/com.apple.webcontent-filter manifest.plist
+.. pfmkey:: FilterBrowsers manifests/ac2/com.apple.webcontent-filter manifest.plist
+.. pfmkey:: FilterSockets manifests/ac2/com.apple.webcontent-filter manifest.plist
