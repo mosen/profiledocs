@@ -10,6 +10,7 @@ Welcome to MacAdmins Profile Reference's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   official.rst
    payloads/index.rst
 
 

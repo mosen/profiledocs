@@ -1,6 +1,8 @@
 Certificate (Root CA)
 =====================
 
+Alias for com.apple.security.pkcs1.
+
 .. pfm:: com.apple.security.root manifest.plist
 
 Keys

@@ -1,6 +1,8 @@
 CalDAV
 ======
 
+This payload configures a CalDAV account.
+
 .. pfm:: com.apple.caldav.account manifest.plist
 
 Keys

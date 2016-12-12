@@ -1,6 +1,8 @@
 Certificate (PEM)
 =================
 
+PEM-encoded certificate without private key. May contain root certificates.
+
 .. pfm:: com.apple.security.pem manifest.plist
 
 Keys

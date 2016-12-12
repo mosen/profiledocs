@@ -1,6 +1,8 @@
 E-mail Account
 ==============
 
+An email payload creates an email account on the device.
+
 .. pfm:: com.apple.mail.managed manifest.plist
 
 Keys

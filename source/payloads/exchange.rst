@@ -1,5 +1,11 @@
-Exchange ActiveSync
-===================
+Exchange
+========
+
+In iOS, the Exchange payload is designated by specifying com.apple.eas.account as the PayloadType value. This payload configures an Exchange Active Sync account on the device.
+
+In macOS, the Exchange payload is designated by specifying com.apple.ews.account as the PayloadType value. This payload will configure an Exchange Web Services account for Contacts, Mail, Notes, Reminders, and Calendar.
+
+.. NOTE:: As with VPN and Wi-Fi configurations, it is possible to associate an SCEP credential with an Exchange configuration via the PayloadCertificateUUID key.
 
 .. pfm:: com.apple.eas.account manifest.plist
 
