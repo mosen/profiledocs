@@ -1,5 +1,5 @@
 Profile Defaults
 ================
 
-.. pfm:: com.apple.defaults.managed manifest.plist
+.. pfm:: manifests/ac2/com.apple.defaults.managed manifest.plist
 

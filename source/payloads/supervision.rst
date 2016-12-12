@@ -1,10 +1,10 @@
 Supervision
 ===========
 
-.. pfm:: com.apple.chaperone manifest.plist
+.. pfm:: manifests/ac2/com.apple.chaperone manifest.plist
 
 Keys
 ----
 
-.. pfmkey:: PairingCertificate com.apple.chaperone manifest.plist
+.. pfmkey:: PairingCertificate manifests/ac2/com.apple.chaperone manifest.plist
 

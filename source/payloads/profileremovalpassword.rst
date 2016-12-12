@@ -1,5 +1,5 @@
 Profile Removal Password
 ========================
 
-.. pfm:: com.apple.profileRemovalPassword manifest.plist
+.. pfm:: manifests/ac2/com.apple.profileRemovalPassword manifest.plist
 

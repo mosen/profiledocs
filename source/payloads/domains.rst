@@ -1,12 +1,12 @@
 Domains
 =======
 
-.. pfm:: com.apple.domains manifest.plist
+.. pfm:: manifests/ac2/com.apple.domains manifest.plist
 
 Keys
 ----
 
-.. pfmkey:: EmailDomains com.apple.domains manifest.plist
-.. pfmkey:: WebDomains com.apple.domains manifest.plist
-.. pfmkey:: SafariPasswordAutoFillDomains com.apple.domains manifest.plist
+.. pfmkey:: EmailDomains manifests/ac2/com.apple.domains manifest.plist
+.. pfmkey:: WebDomains manifests/ac2/com.apple.domains manifest.plist
+.. pfmkey:: SafariPasswordAutoFillDomains manifests/ac2/com.apple.domains manifest.plist
 
