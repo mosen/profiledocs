@@ -11,6 +11,8 @@ Welcome to MacAdmins Profile Reference's documentation!
    :caption: Contents:
 
    official.rst
+   manifest.rst
+   extmanifest.rst
    payloads/index.rst
 
 

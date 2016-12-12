@@ -5,7 +5,7 @@ It can contain only one payload, which must be installed on supervised devices. 
 
 This payload specifies the restriction enforced notification settings for apps, using their bundle identifiers.
 
-.. pfm:: com.apple.notificationsettings manifest.plist
+.. pfm:: manifests/ac2/com.apple.notificationsettings manifest.plist
 
 Requirements
 ------------
@@ -15,5 +15,5 @@ Requirements
 Keys
 ----
 
-.. pfmkey:: NotificationSettings com.apple.notificationsettings manifest.plist
+.. pfmkey:: NotificationSettings manifests/ac2/com.apple.notificationsettings manifest.plist
 
