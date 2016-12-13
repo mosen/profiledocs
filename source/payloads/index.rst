@@ -5,6 +5,8 @@ Payloads
     :maxdepth: 2
     :caption: Payloads:
 
+    activedirectory.rst
+    adcert.rst
     airplay.rst
     airprint.rst
     applock.rst
