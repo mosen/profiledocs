@@ -35,7 +35,13 @@ Payloads
     restrictions.rst
     scep.rst
     shareddevice.rst
+    sharekit.rst
+    sso.rst
     supervision.rst
+    swupd.rst
+    spctl.rst
+    systempolicy.rst
+    sprule.rst
     vpn.rst
     webclip.rst
     webcontentfilter.rst

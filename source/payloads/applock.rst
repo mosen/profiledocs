@@ -9,7 +9,12 @@ By installing an app lock payload, the device is locked to a single application 
 Requirements
 ------------
 
-- iOS 6.0+
+iOS
+    6.0+
+Supervised
+    YES
+Highlander
+    YES
 
 Keys
 ----

@@ -6,10 +6,10 @@ AirPlay
 Requirements
 ------------
 
-- macOS 10.10+
-- iOS 7.0+
-
-
+macOS
+    10.10+
+iOS
+    7.0+
 
 Keys
 ----

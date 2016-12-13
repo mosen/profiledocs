@@ -1,13 +1,19 @@
 Active Directory
 ================
 
-In macOS 10.9 and later, a configuration profile can be used to configure macOS to join an Active Directory (AD) domain.
+Join an active directory domain.
 
 Advanced AD options available via Directory Utility or the dsconfigad command line tool can also be set using a configuration profile.
 
 - ClientID does not appear in the official documentation.
 
 .. pfm:: manifests/manual/com.apple.DirectoryService.managed manifest.plist
+
+Requirements
+------------
+
+macOS
+    10.9+
 
 Keys
 ----
