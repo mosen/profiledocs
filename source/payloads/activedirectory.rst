@@ -7,13 +7,12 @@ Advanced AD options available via Directory Utility or the dsconfigad command li
 
 - ClientID does not appear in the official documentation.
 
+Summary
+-------
+
+.. pfmheader:: manifests/manual/com.apple.DirectoryService.managed manifest.plist
+
 .. pfm:: manifests/manual/com.apple.DirectoryService.managed manifest.plist
-
-Requirements
-------------
-
-macOS
-    10.9+
 
 Keys
 ----

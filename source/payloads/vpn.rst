@@ -1,6 +1,8 @@
 VPN
 ===
 
+.. pfmheader:: manifests/ac2/com.apple.vpn.managed manifest.plist
+
 .. pfm:: manifests/ac2/com.apple.vpn.managed manifest.plist
 
 Keys
@@ -49,6 +51,10 @@ VendorConfig Keys
     :key: IKEv2
 
 .. pfmkey:: AlwaysOn manifests/ac2/com.apple.vpn.managed manifest.plist
+
+.. pfm:: manifests/ac2/com.apple.vpn.managed manifest.plist
+    :key: AlwaysOn
+
 .. pfmkey:: DisconnectOnIdle manifests/ac2/com.apple.vpn.managed manifest.plist
 .. pfmkey:: DisconnectOnIdleTimer manifests/ac2/com.apple.vpn.managed manifest.plist
 

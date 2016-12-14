@@ -17,3 +17,5 @@ Keys
 .. pfmkey:: CardDAVPassword manifests/ac2/com.apple.carddav.account manifest.plist
 .. pfmkey:: CommunicationServiceRules manifests/ac2/com.apple.carddav.account manifest.plist
 
+.. pfm:: manifests/ac2/com.apple.carddav.account manifest.plist
+    :key: CommunicationServiceRules

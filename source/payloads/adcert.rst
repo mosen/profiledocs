@@ -4,6 +4,8 @@ Active Directory Certificate
 You can request a certificate from a Microsoft Certificate Authority (CA) using DCE/RPC and the
 Active Directory Certificate profile payload instructions detailed at https://support.apple.com/kb/HT5357.
 
+.. pfmheader:: manifests/manual/com.apple.ADCertificate.managed manifest.plist
+
 .. pfm:: manifests/manual/com.apple.ADCertificate.managed manifest.plist
 
 

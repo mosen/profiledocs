@@ -1,15 +1,14 @@
 AirPlay
 =======
 
+Whitelist AirPlay destinations
+
+Summary
+-------
+
+.. pfmheader:: manifests/ac2/com.apple.airplay manifest.plist
+
 .. pfm:: manifests/ac2/com.apple.airplay manifest.plist
-
-Requirements
-------------
-
-macOS
-    10.10+
-iOS
-    7.0+
 
 Keys
 ----
