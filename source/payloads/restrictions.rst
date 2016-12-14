@@ -3,13 +3,30 @@
 Restrictions
 ============
 
+A Restrictions payload allows the administrator to restrict the user from doing certain things with the device, such as using the camera.
+
+The Restrictions payload is supported in iOS; some keys are also supported in macOS, as noted below.
+
 .. pfm:: manifests/ac2/com.apple.applicationaccess manifest.plist
 
 Keys
 ----
 
 .. pfmkey:: allowAppInstallation manifests/ac2/com.apple.applicationaccess manifest.plist
+
+Supervised
+    YES
+
+.. tip:: This key is deprecated on unsupervised devices.
+
 .. pfmkey:: allowUIAppInstallation manifests/ac2/com.apple.applicationaccess manifest.plist
+
+Supervised
+    YES
+
+iOS
+    9.0+
+
 .. pfmkey:: allowAutomaticAppDownloads manifests/ac2/com.apple.applicationaccess manifest.plist
 .. pfmkey:: allowAppRemoval manifests/ac2/com.apple.applicationaccess manifest.plist
 .. pfmkey:: allowEnterpriseAppTrust manifests/ac2/com.apple.applicationaccess manifest.plist

@@ -18,6 +18,7 @@ Payloads
     certpkcs1.rst
     certpkcs12.rst
     certroot.rst
+    custom.rst
     domains.rst
     email.rst
     enrollment.rst
@@ -26,6 +27,7 @@ Payloads
     font.rst
     globalproxy.rst
     google.rst
+    identification.rst
     ldap.rst
     mdm.rst
     passcode.rst

@@ -10,17 +10,22 @@ The following is a description of keys added to the manifest format by the commu
 Suggested Keys
 --------------
 
-pfm_macos_since
-^^^^^^^^^^^^^^^
+pfm_macos_min
+^^^^^^^^^^^^^
 
 Version of macOS that started supporting the key or payload.
-Could also add **pfm_ios_since** and **pfm_tvos_since**.
+Could also add **pfm_ios_min** and **pfm_tvos_min**.
 
-pfm_macos_deprecated
-^^^^^^^^^^^^^^^^^^^^
+pfm_macos_max
+^^^^^^^^^^^^^
 
 Version of macOS that stopped supporting the key or payload.
 Can also apply to iOS and tvOS.
+
+pfm_supervised
+^^^^^^^^^^^^^^
+
+Bool true/false, requires device to be supervised for this setting to work.
 
 pfm_incompatible
 ^^^^^^^^^^^^^^^^
@@ -31,4 +36,10 @@ happen when one payload becomes superseded by another, and installing both resul
 
 There's currently no way to reference other manifests so there might need to be a **pfm_target_domain** key to
 match a domain in another manifest.
+
+pfm_target
+^^^^^^^^^^
+
+Resurrect this key from old MCX style manifests.
+Allows specifying the scope.
 

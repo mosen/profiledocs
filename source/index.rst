@@ -22,6 +22,8 @@ Welcome to MacAdmins Profile Reference's documentation!
 
    macos/index.rst
 
+   pdp/index.rst
+
 
 Indices and tables
 ==================

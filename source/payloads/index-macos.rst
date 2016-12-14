@@ -6,7 +6,9 @@ macOS Payloads
     :caption: macOS Payloads:
 
     activedirectory.rst
+    custom.rst
     fv2.rst
+    identification.rst
     sharekit.rst
     spctl.rst
     sprule.rst
