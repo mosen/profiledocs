@@ -30,7 +30,7 @@ Bool true/false, requires device to be supervised for this setting to work.
 pfm_incompatible
 ^^^^^^^^^^^^^^^^
 
-Suggest using the `pfm_target_conditions`_ dictionaries to specify rules about
+Suggest using the **pfm_target_conditions** dictionaries to specify rules about
 how this key or payload is incompatible with the other payload or key. Usually this would
 happen when one payload becomes superseded by another, and installing both results in undefined behaviour.
 

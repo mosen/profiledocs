@@ -1,3 +1,5 @@
+.. _payloadtype-com.apple.ManagedClient.preferences:
+
 Custom Settings (MCX)
 =====================
 

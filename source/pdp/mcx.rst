@@ -13,7 +13,7 @@ Domains
 - com.apple.coremediaio.support
 - com.apple.preferences.users
 - com.apple.domains
-- com.apple.airprint :ref:`com.apple.airprint`.
+- com.apple.airprint (:ref:`payloadtype-com.apple.airprint`)
 - com.apple.screensaver.user
 - com.apple.screensaver
 - com.apple.appstore
@@ -21,15 +21,15 @@ Domains
 - com.apple.trackpad
 - com.apple.universalaccess
 - com.apple.gamed
-- com.apple.ShareKitHelper
+- com.apple.ShareKitHelper (:ref:`payloadtype-com.apple.ShareKitHelper`)
 - com.apple.ironwood.support
 - com.apple.proxy.http.global
 - com.apple.desktop
 - com.apple.MCXRedirector
 - com.apple.MCX.TimeMachine
 - com.apple.MCX.sidebar
-- com.apple.configurationprofile.identification
-- com.apple.ManagedClient.preferences
+- com.apple.configurationprofile.identification (:ref:`payloadtype-com.apple.configurationprofile.identification`)
+- com.apple.ManagedClient.preferences (:ref:`payloadtype-com.apple.ManagedClient.preferences`)
 - com.apple.Dictionary
 - com.apple.familycontrols.timelimits.v2
 - com.apple.familycontrols.timelimits
