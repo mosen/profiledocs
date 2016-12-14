@@ -1,0 +1,17 @@
+{
+  "name": "pm2pfm",
+  "version": "1.0.0",
+  "description": "Profile Manager to PFM Manifest Format",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/.bin/casperjs ./index.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "casperjs": "^1.1.3",
+    "phantomjs": "^2.1.7",
+    "sproutcore": "^1.11.2-2"
+  }
+}

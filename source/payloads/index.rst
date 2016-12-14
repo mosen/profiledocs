@@ -22,12 +22,13 @@ Payloads
     email.rst
     enrollment.rst
     exchange.rst
+    fv2.rst
     font.rst
     globalproxy.rst
     google.rst
     ldap.rst
     mdm.rst
-    mobilepassword.rst
+    passcode.rst
     notification.rst
     osxserver.rst
     defaults.rst
