@@ -35,7 +35,7 @@
         <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="Configuration Profiles  documentation" href="../index.html"/>
         <link rel="up" title="Payloads" href="index.html"/>
-        <link rel="next" title="Profile Defaults" href="defaults.html"/>
+        <link rel="next" title="Per-App VPN" href="perappvpn.html"/>
         <link rel="prev" title="Notification Settings" href="notification.html"/> 
 
   
@@ -86,7 +86,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../official.html">Official Links and Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../manifest.html">Manifest File Format</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../extmanifest.html">Extended Manifest Format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index-common.html">Common Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index-ios.html">iOS Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index-macos.html">macOS Payloads</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Payloads</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="activedirectory.html">Active Directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adcert.html">Active Directory Certificate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="airplay.html">AirPlay</a></li>
 <li class="toctree-l2"><a class="reference internal" href="airprint.html">AirPrint</a></li>
 <li class="toctree-l2"><a class="reference internal" href="applock.html">App Lock</a></li>
@@ -98,18 +103,22 @@
 <li class="toctree-l2"><a class="reference internal" href="certpkcs1.html">Certificate (PKCS#1)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certpkcs12.html">Certificate (PKCS#12)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certroot.html">Certificate (Root CA)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom.html">Custom Settings (MCX)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="domains.html">Domains</a></li>
 <li class="toctree-l2"><a class="reference internal" href="email.html">E-mail Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="enrollment.html">Enrollment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="exchange.html">Exchange</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fv2.html">FileVault 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="font.html">Font</a></li>
 <li class="toctree-l2"><a class="reference internal" href="globalproxy.html">Global HTTP Proxy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="google.html">Google Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="identification.html">Identification</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ldap.html">LDAP Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mdm.html">MDM</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mobilepassword.html">Password Policy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passcode.html">Password Policy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="notification.html">Notification Settings</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">OSX Server Account</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#keys">Keys</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#com.apple.osxserver.account-AccountDescription-auto">AccountDescription</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#com.apple.osxserver.account-HostName-auto">HostName</a></li>
@@ -120,18 +129,28 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="perappvpn.html">Per-App VPN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appmapping.html">App-to-Per-App VPN Mapping</a></li>
 <li class="toctree-l2"><a class="reference internal" href="defaults.html">Profile Defaults</a></li>
 <li class="toctree-l2"><a class="reference internal" href="profileremovalpassword.html">Profile Removal Password</a></li>
 <li class="toctree-l2"><a class="reference internal" href="restrictions.html">Restrictions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="scep.html">SCEP</a></li>
 <li class="toctree-l2"><a class="reference internal" href="shareddevice.html">Shared Device</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sharekit.html">ShareKit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sso.html">Single-Sign On</a></li>
 <li class="toctree-l2"><a class="reference internal" href="supervision.html">Supervision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="swupd.html">Software Update Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spctl.html">System Policy Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="systempolicy.html">System Policy (Gatekeeper)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sprule.html">System Policy Rule</a></li>
 <li class="toctree-l2"><a class="reference internal" href="vpn.html">VPN</a></li>
 <li class="toctree-l2"><a class="reference internal" href="webclip.html">WebClip</a></li>
 <li class="toctree-l2"><a class="reference internal" href="webcontentfilter.html">Web Content Filter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="wifi.html">Wi-Fi</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../macos/index.html">macOS Subsystem Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pdp/index.html">Profile Domain Plugins</a></li>
 </ul>
 
             
@@ -180,10 +199,30 @@
             
   <div class="section" id="osx-server-account">
 <h1>OSX Server Account<a class="headerlink" href="#osx-server-account" title="Permalink to this headline">¶</a></h1>
-<dl class="docutils">
-<dt>PayloadType</dt>
-<dd>com.apple.osxserver.account</dd>
-</dl>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">PayloadType:</th><td class="field-body">com.apple.osxserver.account</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Supervised Only:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">N/A</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">macOS:</th><td class="field-body">N/A</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">macOS Deprecated:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">N/A</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">iOS:</th><td class="field-body">N/A</td>
+</tr>
+<tr class="field-even field"><th class="field-name">iOS Deprecated:</th><td class="field-body">N/A</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Highlander:</th><td class="field-body">N/A</td>
+</tr>
+</tbody>
+</table>
 <table border="1" class="docutils">
 <colgroup>
 <col width="14%" />
@@ -201,73 +240,31 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>PayloadDescription</td>
-<td>string</td>
-<td>Payload Description</td>
-<td>Description of the payload</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>PayloadDisplayName</td>
-<td>string</td>
-<td>Payload Display Name</td>
-<td>Name of the payload</td>
-<td>always</td>
-</tr>
-<tr class="row-even"><td>PayloadIdentifier</td>
-<td>string</td>
-<td>Payload Identifier</td>
-<td>A unique identifier for the payload, dot-delimited.  Usually root PayloadIdentifier+subidentifier</td>
-<td>always</td>
-</tr>
-<tr class="row-odd"><td>PayloadType</td>
-<td>string</td>
-<td>Payload Type</td>
-<td>The type of the payload, a reverse dns string</td>
-<td>always</td>
-</tr>
-<tr class="row-even"><td>PayloadUUID</td>
-<td>string</td>
-<td>Payload UUID</td>
-<td>Unique identifier for the payload (format 01234567-89AB-CDEF-0123-456789ABCDEF)</td>
-<td>always</td>
-</tr>
-<tr class="row-odd"><td>PayloadVersion</td>
-<td>integer</td>
-<td>Payload Version</td>
-<td>The version of the whole configuration profile.</td>
-<td>always</td>
-</tr>
-<tr class="row-even"><td>PayloadOrganization</td>
-<td>string</td>
-<td>Payload Organization</td>
-<td>This value describes the issuing organization of the profile, as displayed to the user</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>AccountDescription</td>
+<tr class="row-even"><td>AccountDescription</td>
 <td>string</td>
 <td>Account Description</td>
 <td>The display name of the account (e.g. &#8220;Company Server Account&#8221;)</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>HostName</td>
+<tr class="row-odd"><td>HostName</td>
 <td>string</td>
 <td>Account Hostname</td>
 <td>The Server hostname</td>
 <td>always</td>
 </tr>
-<tr class="row-odd"><td>UserName</td>
+<tr class="row-even"><td>UserName</td>
 <td>string</td>
 <td>Account Username</td>
 <td>The Server account username</td>
 <td>always</td>
 </tr>
-<tr class="row-even"><td>Password</td>
+<tr class="row-odd"><td>Password</td>
 <td>string</td>
 <td>Account Password</td>
 <td>The Server account password</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>ConfiguredAccounts</td>
+<tr class="row-even"><td>ConfiguredAccounts</td>
 <td>array</td>
 <td>Configured Accounts</td>
 <td>Array of dictionaries containing configured account types and relevant settings</td>
@@ -275,6 +272,7 @@
 </tr>
 </tbody>
 </table>
+</div>
 <div class="section" id="keys">
 <h2>Keys<a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="com.apple.osxserver.account-AccountDescription-auto">
@@ -283,21 +281,30 @@
 <p>The display name of the account (e.g. &#8220;Company Server Account&#8221;)</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>string</td>
 <td>My Server Account</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
 </tr>
@@ -310,22 +317,31 @@
 <p>The Server hostname</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>string</td>
 <td>N/A</td>
 <td>always</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 </tr>
 </tbody>
@@ -337,22 +353,31 @@
 <p>The Server account username</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>string</td>
 <td>N/A</td>
 <td>always</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 </tr>
 </tbody>
@@ -364,20 +389,29 @@
 <p>The Server account password</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
@@ -391,20 +425,29 @@
 <p>Array of dictionaries containing configured account types and relevant settings</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>array</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
@@ -422,7 +465,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="defaults.html" class="btn btn-neutral float-right" title="Profile Defaults" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="perappvpn.html" class="btn btn-neutral float-right" title="Per-App VPN" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="notification.html" class="btn btn-neutral" title="Notification Settings" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>

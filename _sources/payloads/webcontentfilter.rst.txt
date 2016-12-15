@@ -1,6 +1,10 @@
 Web Content Filter
 ==================
 
+Summary
+-------
+
+.. pfmheader:: manifests/ac2/com.apple.webcontent-filter manifest.plist
 .. pfm:: manifests/ac2/com.apple.webcontent-filter manifest.plist
 
 Keys

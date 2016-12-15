@@ -1,0 +1,268 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>mcx &mdash; Configuration Profiles  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Configuration Profiles  documentation" href="../index.html"/>
+        <link rel="up" title="Profile Domain Plugins" href="index.html"/>
+        <link rel="next" title="wifi" href="wifi.html"/>
+        <link rel="prev" title="Profile Domain Plugins" href="index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Configuration Profiles
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../official.html">Official Links and Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manifest.html">Manifest File Format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extmanifest.html">Extended Manifest Format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../payloads/index-common.html">Common Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../payloads/index-ios.html">iOS Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../payloads/index-macos.html">macOS Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../payloads/index.html">Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../macos/index.html">macOS Subsystem Notes</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Profile Domain Plugins</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">mcx</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#domains">Domains</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="wifi.html">wifi</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Configuration Profiles</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Profile Domain Plugins</a> &raquo;</li>
+      
+    <li>mcx</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/pdp/mcx.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="mcx">
+<h1>mcx<a class="headerlink" href="#mcx" title="Permalink to this headline">¶</a></h1>
+<p>The mcx plugin takes care of a bunch of &#8220;legacy&#8221; profile domains that seem to be ported over from 10.6.
+Some of these domains still seem to receive updates.</p>
+<div class="section" id="domains">
+<h2>Domains<a class="headerlink" href="#domains" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>com.apple.Safari</li>
+<li>com.apple.SystemConfiguration</li>
+<li>com.apple.SetupAssistant.managed</li>
+<li>com.apple.coremediaio.support</li>
+<li>com.apple.preferences.users</li>
+<li>com.apple.domains</li>
+<li>com.apple.airprint (<a class="reference internal" href="../payloads/airprint.html#payloadtype-com-apple-airprint"><span class="std std-ref">AirPrint</span></a>)</li>
+<li>com.apple.screensaver.user</li>
+<li>com.apple.screensaver</li>
+<li>com.apple.appstore</li>
+<li>com.apple.preference.security</li>
+<li>com.apple.trackpad</li>
+<li>com.apple.universalaccess</li>
+<li>com.apple.gamed</li>
+<li>com.apple.ShareKitHelper (<a class="reference internal" href="../payloads/sharekit.html#payloadtype-com-apple-sharekithelper"><span class="std std-ref">ShareKit</span></a>)</li>
+<li>com.apple.ironwood.support</li>
+<li>com.apple.proxy.http.global</li>
+<li>com.apple.desktop</li>
+<li>com.apple.MCXRedirector</li>
+<li>com.apple.MCX.TimeMachine</li>
+<li>com.apple.MCX.sidebar</li>
+<li>com.apple.configurationprofile.identification (<a class="reference internal" href="../payloads/identification.html#payloadtype-com-apple-configurationprofile-identification"><span class="std std-ref">Identification</span></a>)</li>
+<li>com.apple.ManagedClient.preferences (<a class="reference internal" href="../payloads/custom.html#payloadtype-com-apple-managedclient-preferences"><span class="std std-ref">Custom Settings (MCX)</span></a>)</li>
+<li>com.apple.Dictionary</li>
+<li>com.apple.familycontrols.timelimits.v2</li>
+<li>com.apple.familycontrols.timelimits</li>
+<li>com.apple.familycontrols.contentfilter</li>
+<li>com.apple.systempreferences</li>
+<li>com.apple.SubmitDiagInfo</li>
+<li>com.apple.NetworkBrowser</li>
+<li>loginwindow</li>
+<li>com.apple.loginitems.managed</li>
+<li>com.apple.finder</li>
+<li>com.apple.DiscRecording</li>
+<li>com.apple.systemuiserver</li>
+<li>com.apple.loginwindow</li>
+<li>com.apple.applicationaccess.new</li>
+<li>com.apple.MCX</li>
+<li>com.apple.SoftwareUpdate</li>
+<li>com.apple.mcxprinting</li>
+<li>com.apple.dashboard</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="wifi.html" class="btn btn-neutral float-right" title="wifi" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Profile Domain Plugins" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, MacAdmins Community.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

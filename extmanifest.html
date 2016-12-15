@@ -34,7 +34,7 @@
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="Configuration Profiles  documentation" href="index.html"/>
-        <link rel="next" title="Payloads" href="payloads/index.html"/>
+        <link rel="next" title="Common Payloads" href="payloads/index-common.html"/>
         <link rel="prev" title="Manifest File Format" href="manifest.html"/> 
 
   
@@ -84,8 +84,23 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="official.html">Official Links and Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="manifest.html">Manifest File Format</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Extended Manifest Format</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Extended Manifest Format</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#suggested-keys">Suggested Keys</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pfm-macos-min">pfm_macos_min</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pfm-macos-max">pfm_macos_max</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pfm-supervised">pfm_supervised</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pfm-incompatible">pfm_incompatible</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pfm-target">pfm_target</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="payloads/index-common.html">Common Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="payloads/index-ios.html">iOS Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="payloads/index-macos.html">macOS Payloads</a></li>
 <li class="toctree-l1"><a class="reference internal" href="payloads/index.html">Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="macos/index.html">macOS Subsystem Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pdp/index.html">Profile Domain Plugins</a></li>
 </ul>
 
             
@@ -135,6 +150,36 @@
 <p>The manifest format covers most of the required information for writing configuration profiles, except for a few
 cases.</p>
 <p>The following is a description of keys added to the manifest format by the community as a working standard.</p>
+<div class="section" id="suggested-keys">
+<h2>Suggested Keys<a class="headerlink" href="#suggested-keys" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="pfm-macos-min">
+<h3>pfm_macos_min<a class="headerlink" href="#pfm-macos-min" title="Permalink to this headline">¶</a></h3>
+<p>Version of macOS that started supporting the key or payload.
+Could also add <strong>pfm_ios_min</strong> and <strong>pfm_tvos_min</strong>.</p>
+</div>
+<div class="section" id="pfm-macos-max">
+<h3>pfm_macos_max<a class="headerlink" href="#pfm-macos-max" title="Permalink to this headline">¶</a></h3>
+<p>Version of macOS that stopped supporting the key or payload.
+Can also apply to iOS and tvOS.</p>
+</div>
+<div class="section" id="pfm-supervised">
+<h3>pfm_supervised<a class="headerlink" href="#pfm-supervised" title="Permalink to this headline">¶</a></h3>
+<p>Bool true/false, requires device to be supervised for this setting to work.</p>
+</div>
+<div class="section" id="pfm-incompatible">
+<h3>pfm_incompatible<a class="headerlink" href="#pfm-incompatible" title="Permalink to this headline">¶</a></h3>
+<p>Suggest using the <strong>pfm_target_conditions</strong> dictionaries to specify rules about
+how this key or payload is incompatible with the other payload or key. Usually this would
+happen when one payload becomes superseded by another, and installing both results in undefined behaviour.</p>
+<p>There&#8217;s currently no way to reference other manifests so there might need to be a <strong>pfm_target_domain</strong> key to
+match a domain in another manifest.</p>
+</div>
+<div class="section" id="pfm-target">
+<h3>pfm_target<a class="headerlink" href="#pfm-target" title="Permalink to this headline">¶</a></h3>
+<p>Resurrect this key from old MCX style manifests.
+Allows specifying the scope.</p>
+</div>
+</div>
 </div>
 
 
@@ -144,7 +189,7 @@ cases.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="payloads/index.html" class="btn btn-neutral float-right" title="Payloads" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="payloads/index-common.html" class="btn btn-neutral float-right" title="Common Payloads" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="manifest.html" class="btn btn-neutral" title="Manifest File Format" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>

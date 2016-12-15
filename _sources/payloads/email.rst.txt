@@ -3,6 +3,11 @@ E-mail Account
 
 An email payload creates an email account on the device.
 
+Summary
+-------
+
+.. pfmheader:: manifests/ac2/com.apple.mail.managed manifest.plist
+
 .. pfm:: manifests/ac2/com.apple.mail.managed manifest.plist
 
 Keys

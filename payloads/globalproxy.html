@@ -86,7 +86,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../official.html">Official Links and Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../manifest.html">Manifest File Format</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../extmanifest.html">Extended Manifest Format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index-common.html">Common Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index-ios.html">iOS Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index-macos.html">macOS Payloads</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Payloads</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="activedirectory.html">Active Directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adcert.html">Active Directory Certificate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="airplay.html">AirPlay</a></li>
 <li class="toctree-l2"><a class="reference internal" href="airprint.html">AirPrint</a></li>
 <li class="toctree-l2"><a class="reference internal" href="applock.html">App Lock</a></li>
@@ -98,12 +103,15 @@
 <li class="toctree-l2"><a class="reference internal" href="certpkcs1.html">Certificate (PKCS#1)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certpkcs12.html">Certificate (PKCS#12)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certroot.html">Certificate (Root CA)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom.html">Custom Settings (MCX)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="domains.html">Domains</a></li>
 <li class="toctree-l2"><a class="reference internal" href="email.html">E-mail Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="enrollment.html">Enrollment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="exchange.html">Exchange</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fv2.html">FileVault 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="font.html">Font</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Global HTTP Proxy</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#keys">Keys</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#com.apple.proxy.http.global-ProxyType-auto">ProxyType</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#com.apple.proxy.http.global-ProxyServer-auto">ProxyServer</a></li>
@@ -118,23 +126,34 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="google.html">Google Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="identification.html">Identification</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ldap.html">LDAP Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mdm.html">MDM</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mobilepassword.html">Password Policy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passcode.html">Password Policy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="notification.html">Notification Settings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="osxserver.html">OSX Server Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="perappvpn.html">Per-App VPN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appmapping.html">App-to-Per-App VPN Mapping</a></li>
 <li class="toctree-l2"><a class="reference internal" href="defaults.html">Profile Defaults</a></li>
 <li class="toctree-l2"><a class="reference internal" href="profileremovalpassword.html">Profile Removal Password</a></li>
 <li class="toctree-l2"><a class="reference internal" href="restrictions.html">Restrictions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="scep.html">SCEP</a></li>
 <li class="toctree-l2"><a class="reference internal" href="shareddevice.html">Shared Device</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sharekit.html">ShareKit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sso.html">Single-Sign On</a></li>
 <li class="toctree-l2"><a class="reference internal" href="supervision.html">Supervision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="swupd.html">Software Update Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spctl.html">System Policy Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="systempolicy.html">System Policy (Gatekeeper)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sprule.html">System Policy Rule</a></li>
 <li class="toctree-l2"><a class="reference internal" href="vpn.html">VPN</a></li>
 <li class="toctree-l2"><a class="reference internal" href="webclip.html">WebClip</a></li>
 <li class="toctree-l2"><a class="reference internal" href="webcontentfilter.html">Web Content Filter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="wifi.html">Wi-Fi</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../macos/index.html">macOS Subsystem Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pdp/index.html">Profile Domain Plugins</a></li>
 </ul>
 
             
@@ -184,16 +203,35 @@
   <div class="section" id="global-http-proxy">
 <h1>Global HTTP Proxy<a class="headerlink" href="#global-http-proxy" title="Permalink to this headline">¶</a></h1>
 <p>This payload allows you to specify global HTTP proxy settings.</p>
-<p>There can only be one of this payload at any time. This payload can only be installed on a supervised device.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">If the ProxyType field is set to Auto and no ProxyPACURL value is specified,
 the device uses the web proxy autodiscovery protocol (WPAD) to discover proxies.</p>
 </div>
-<dl class="docutils">
-<dt>PayloadType</dt>
-<dd>com.apple.proxy.http.global</dd>
-</dl>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">PayloadType:</th><td class="field-body">com.apple.proxy.http.global</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Supervised Only:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">True</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">macOS:</th><td class="field-body">N/A</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">macOS Deprecated:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">N/A</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">iOS:</th><td class="field-body">N/A</td>
+</tr>
+<tr class="field-even field"><th class="field-name">iOS Deprecated:</th><td class="field-body">N/A</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Highlander:</th><td class="field-body">True</td>
+</tr>
+</tbody>
+</table>
 <table border="1" class="docutils">
 <colgroup>
 <col width="14%" />
@@ -211,91 +249,49 @@ the device uses the web proxy autodiscovery protocol (WPAD) to discover proxies.
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>PayloadDescription</td>
-<td>string</td>
-<td>Payload Description</td>
-<td>Description of the payload</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>PayloadDisplayName</td>
-<td>string</td>
-<td>Payload Display Name</td>
-<td>Name of the payload</td>
-<td>always</td>
-</tr>
-<tr class="row-even"><td>PayloadIdentifier</td>
-<td>string</td>
-<td>Payload Identifier</td>
-<td>A unique identifier for the payload, dot-delimited.  Usually root PayloadIdentifier+subidentifier</td>
-<td>always</td>
-</tr>
-<tr class="row-odd"><td>PayloadType</td>
-<td>string</td>
-<td>Payload Type</td>
-<td>The type of the payload, a reverse dns string</td>
-<td>always</td>
-</tr>
-<tr class="row-even"><td>PayloadUUID</td>
-<td>string</td>
-<td>Payload UUID</td>
-<td>Unique identifier for the payload (format 01234567-89AB-CDEF-0123-456789ABCDEF)</td>
-<td>always</td>
-</tr>
-<tr class="row-odd"><td>PayloadVersion</td>
-<td>integer</td>
-<td>Payload Version</td>
-<td>The version of the whole configuration profile.</td>
-<td>always</td>
-</tr>
-<tr class="row-even"><td>PayloadOrganization</td>
-<td>string</td>
-<td>Payload Organization</td>
-<td>This value describes the issuing organization of the profile, as displayed to the user</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>ProxyType</td>
+<tr class="row-even"><td>ProxyType</td>
 <td>string</td>
 <td>Proxy Type</td>
 <td>Proxy Type</td>
 <td>always</td>
 </tr>
-<tr class="row-even"><td>ProxyServer</td>
+<tr class="row-odd"><td>ProxyServer</td>
 <td>string</td>
 <td>Proxy Server</td>
 <td>Proxy Server</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>ProxyServerPort</td>
+<tr class="row-even"><td>ProxyServerPort</td>
 <td>integer</td>
 <td>Proxy Server Port</td>
 <td>Proxy Server Port</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>ProxyUsername</td>
+<tr class="row-odd"><td>ProxyUsername</td>
 <td>string</td>
 <td>Proxy Username</td>
 <td>Proxy Username</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>ProxyPassword</td>
+<tr class="row-even"><td>ProxyPassword</td>
 <td>string</td>
 <td>Proxy Password</td>
 <td>Proxy Password</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>ProxyPACURL</td>
+<tr class="row-odd"><td>ProxyPACURL</td>
 <td>string</td>
 <td>Proxy PAC URL</td>
 <td>Proxy PAC URL</td>
 <td>always</td>
 </tr>
-<tr class="row-odd"><td>ProxyPACFallbackAllowed</td>
+<tr class="row-even"><td>ProxyPACFallbackAllowed</td>
 <td>boolean</td>
 <td>Proxy PAC Fallback Allowed</td>
 <td>Proxy PAC Fallback Allowed</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>ProxyCaptiveLoginAllowed</td>
+<tr class="row-odd"><td>ProxyCaptiveLoginAllowed</td>
 <td>boolean</td>
 <td>Proxy Bypass Allowed</td>
 <td>Proxy Bypass Allowed</td>
@@ -303,6 +299,7 @@ the device uses the web proxy autodiscovery protocol (WPAD) to discover proxies.
 </tr>
 </tbody>
 </table>
+</div>
 <div class="section" id="keys">
 <h2>Keys<a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="com.apple.proxy.http.global-ProxyType-auto">
@@ -311,22 +308,31 @@ the device uses the web proxy autodiscovery protocol (WPAD) to discover proxies.
 <p>Proxy Type</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>string</td>
 <td>Manual</td>
 <td>always</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 </tr>
 </tbody>
@@ -343,20 +349,29 @@ the device uses the web proxy autodiscovery protocol (WPAD) to discover proxies.
 <p>Proxy Server</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
@@ -370,20 +385,29 @@ the device uses the web proxy autodiscovery protocol (WPAD) to discover proxies.
 <p>Proxy Server Port</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>integer</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
@@ -397,20 +421,29 @@ the device uses the web proxy autodiscovery protocol (WPAD) to discover proxies.
 <p>Proxy Username</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
@@ -424,20 +457,29 @@ the device uses the web proxy autodiscovery protocol (WPAD) to discover proxies.
 <p>Proxy Password</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
@@ -451,22 +493,31 @@ the device uses the web proxy autodiscovery protocol (WPAD) to discover proxies.
 <p>Proxy PAC URL</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>string</td>
 <td>N/A</td>
 <td>always</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 </tr>
 </tbody>
@@ -478,21 +529,30 @@ the device uses the web proxy autodiscovery protocol (WPAD) to discover proxies.
 <p>Proxy PAC Fallback Allowed</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>boolean</td>
 <td>False</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
 </tr>
@@ -505,21 +565,30 @@ the device uses the web proxy autodiscovery protocol (WPAD) to discover proxies.
 <p>Proxy Bypass Allowed</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>boolean</td>
 <td>False</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
 </tr>

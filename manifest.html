@@ -83,9 +83,45 @@
                 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="official.html">Official Links and Documentation</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Manifest File Format</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Manifest File Format</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#basic-keys">Basic Keys</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pfm-name">pfm_name</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pfm-description">pfm_description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pfm-title">pfm_title</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pfm-format-version">pfm_format_version</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pfm-version">pfm_version</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pfm-domain">pfm_domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pfm-subkeys">pfm_subkeys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pfm-type">pfm_type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pfm-default">pfm_default</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pfm-range-list">pfm_range_list</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pfm-format">pfm_format</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pfm-require">pfm_require</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pfm-exclude">pfm_exclude</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pfm-conditionals">pfm_conditionals</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#conditions">Conditions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pfm-target-conditions">pfm_target_conditions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pfm-target">pfm_target</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pfm-present">pfm_present</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pfm-contains-any">pfm_contains_any</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pfm-n-contains-any">pfm_n_contains_any</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1">pfm_range_list</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pfm-n-range-list">pfm_n_range_list</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="extmanifest.html">Extended Manifest Format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="payloads/index-common.html">Common Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="payloads/index-ios.html">iOS Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="payloads/index-macos.html">macOS Payloads</a></li>
 <li class="toctree-l1"><a class="reference internal" href="payloads/index.html">Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="macos/index.html">macOS Subsystem Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pdp/index.html">Profile Domain Plugins</a></li>
 </ul>
 
             
@@ -138,6 +174,207 @@ It also contains information about which keys are dependent on other parts of th
 <p>Some keys have been added for the newer configuration profile system as you can see from the manifests included with
 Apple Configurator 2.</p>
 <p>This document is a basic attempt to document the format. All of the payload documentation is generated from these files.</p>
+<div class="section" id="basic-keys">
+<h2>Basic Keys<a class="headerlink" href="#basic-keys" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="pfm-name">
+<h3>pfm_name<a class="headerlink" href="#pfm-name" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Type</dt>
+<dd>String</dd>
+</dl>
+<p>The name of the plist key. Does not appear at the root level.</p>
+</div>
+<div class="section" id="pfm-description">
+<h3>pfm_description<a class="headerlink" href="#pfm-description" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Type</dt>
+<dd>String</dd>
+</dl>
+<p>This key describes either the payload, or the purpose of the key it is associated with.</p>
+</div>
+<div class="section" id="pfm-title">
+<h3>pfm_title<a class="headerlink" href="#pfm-title" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Type</dt>
+<dd>String</dd>
+</dl>
+<p>The title of the key or payload, usually just a short name or title version of the key.</p>
+</div>
+<div class="section" id="pfm-format-version">
+<h3>pfm_format_version<a class="headerlink" href="#pfm-format-version" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Type</dt>
+<dd>Integer</dd>
+</dl>
+<p>The version of the pfm format in use, should usually be 1</p>
+</div>
+<div class="section" id="pfm-version">
+<h3>pfm_version<a class="headerlink" href="#pfm-version" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Type</dt>
+<dd>Integer</dd>
+</dl>
+<p>The version of this specific manifest.</p>
+</div>
+<div class="section" id="pfm-domain">
+<h3>pfm_domain<a class="headerlink" href="#pfm-domain" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Type</dt>
+<dd>String</dd>
+</dl>
+<p>At the top level this indicates the <strong>PayloadType</strong>.</p>
+</div>
+<div class="section" id="pfm-subkeys">
+<h3>pfm_subkeys<a class="headerlink" href="#pfm-subkeys" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Type</dt>
+<dd>Array of Dict</dd>
+</dl>
+<p>This key describes keys nested under the current key.</p>
+</div>
+<div class="section" id="pfm-type">
+<h3>pfm_type<a class="headerlink" href="#pfm-type" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Type</dt>
+<dd>String</dd>
+</dl>
+<p>The data type of the plist value associated with this key. Does not appear at the root level.</p>
+</div>
+<div class="section" id="pfm-default">
+<h3>pfm_default<a class="headerlink" href="#pfm-default" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Type</dt>
+<dd>Varies, depends on <strong>pfm_type</strong>.</dd>
+</dl>
+<p>The default value to suggest when creating new profiles. Can be a simple type or even a dict.</p>
+</div>
+<div class="section" id="pfm-range-list">
+<h3>pfm_range_list<a class="headerlink" href="#pfm-range-list" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Type</dt>
+<dd>Array of <strong>pfm_type</strong>.</dd>
+</dl>
+<p>A list of valid values.</p>
+</div>
+<div class="section" id="pfm-format">
+<h3>pfm_format<a class="headerlink" href="#pfm-format" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Type</dt>
+<dd>String</dd>
+</dl>
+<p>A regular expression that the value must match.</p>
+</div>
+<div class="section" id="pfm-require">
+<h3>pfm_require<a class="headerlink" href="#pfm-require" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Type</dt>
+<dd>String, one of &#8220;always&#8221;, &#8220;push&#8221;</dd>
+</dl>
+<p>Indicates whether this key is required to be present.</p>
+<ul class="simple">
+<li>Always means that the key is absolutely required.</li>
+<li><dl class="first docutils">
+<dt>Push seems to mean that the key will be required if the profile is being pushed. Example: if you omit a username or</dt>
+<dd>password you will be prompted to enter them interactively, but the profile may not be pushed.</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="pfm-exclude">
+<h3>pfm_exclude<a class="headerlink" href="#pfm-exclude" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Type</dt>
+<dd>Array of conditions dicts</dd>
+</dl>
+<p>Indicates the conditions where this key should not be required.
+The dict should contain a <a class="reference internal" href="#pfm-target-conditions">pfm_target_conditions</a>.</p>
+</div>
+<div class="section" id="pfm-conditionals">
+<h3>pfm_conditionals<a class="headerlink" href="#pfm-conditionals" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Type</dt>
+<dd>Array of conditions dicts</dd>
+</dl>
+<p>Indicates the conditions where this key WILL be enabled.
+The dict should contain a <a class="reference internal" href="#pfm-target-conditions">pfm_target_conditions</a>.</p>
+</div>
+</div>
+<div class="section" id="conditions">
+<h2>Conditions<a class="headerlink" href="#conditions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="pfm-target-conditions">
+<h3>pfm_target_conditions<a class="headerlink" href="#pfm-target-conditions" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Type</dt>
+<dd>Array of dicts</dd>
+</dl>
+<p>Specifies a key that this key depends on, and what the value should be to satisfy this condition.</p>
+<p>Example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">key</span><span class="o">&gt;</span><span class="n">pfm_target_conditions</span><span class="o">&lt;/</span><span class="n">key</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">array</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nb">dict</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">key</span><span class="o">&gt;</span><span class="n">pfm_target</span><span class="o">&lt;/</span><span class="n">key</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span><span class="n">DomainName</span><span class="o">&lt;/</span><span class="n">string</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">key</span><span class="o">&gt;</span><span class="n">pfm_present</span><span class="o">&lt;/</span><span class="n">key</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">false</span><span class="o">/&gt;</span>
+    <span class="o">&lt;/</span><span class="nb">dict</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">array</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>The value of <strong>pfm_target</strong> in this case refers to another key called <strong>DomainName</strong>.
+The condition, <strong>pfm_present</strong> says that this key must not be present to satisfy the condition.</p>
+<p>If this condition is a child of <a class="reference internal" href="#pfm-exclude">pfm_exclude</a> then the condition is &#8220;inverted&#8221;. The key will not be required unless
+this condition is not satisfied.</p>
+<div class="section" id="pfm-target">
+<h4>pfm_target<a class="headerlink" href="#pfm-target" title="Permalink to this headline">¶</a></h4>
+<dl class="docutils">
+<dt>Type</dt>
+<dd>String</dd>
+</dl>
+<p>This key is part of a set of conditions and specifies the target key to evaluate. For nested keys the key names can be
+separated by a dot &#8221;.&#8221;</p>
+</div>
+<div class="section" id="pfm-present">
+<h4>pfm_present<a class="headerlink" href="#pfm-present" title="Permalink to this headline">¶</a></h4>
+<dl class="docutils">
+<dt>Type</dt>
+<dd>Boolean</dd>
+</dl>
+<p>This rule evaluates whether the target key exists or not. If true, the target must be present.</p>
+</div>
+<div class="section" id="pfm-contains-any">
+<h4>pfm_contains_any<a class="headerlink" href="#pfm-contains-any" title="Permalink to this headline">¶</a></h4>
+<dl class="docutils">
+<dt>Type</dt>
+<dd>Array of target <strong>pfm_type</strong></dd>
+</dl>
+<p>This rule will pass if the target exists in any of the values listed in the array.</p>
+</div>
+<div class="section" id="pfm-n-contains-any">
+<h4>pfm_n_contains_any<a class="headerlink" href="#pfm-n-contains-any" title="Permalink to this headline">¶</a></h4>
+<dl class="docutils">
+<dt>Type</dt>
+<dd>Array of target <strong>pfm_type</strong></dd>
+</dl>
+<p>This rule will pass if the target doesn&#8217;t match any value listed in the array.</p>
+</div>
+<div class="section" id="id1">
+<h4>pfm_range_list<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<dl class="docutils">
+<dt>Type</dt>
+<dd>Array of target <strong>pfm_type</strong></dd>
+</dl>
+<p>This rule will pass if the value of the target matches the list.</p>
+</div>
+<div class="section" id="pfm-n-range-list">
+<h4>pfm_n_range_list<a class="headerlink" href="#pfm-n-range-list" title="Permalink to this headline">¶</a></h4>
+<dl class="docutils">
+<dt>Type</dt>
+<dd>Array of target <strong>pfm_type</strong></dd>
+</dl>
+<p>This rule will pass if the value of the target does not match the list.</p>
+</div>
+</div>
+</div>
 </div>
 
 

@@ -36,7 +36,7 @@
     <link rel="top" title="Configuration Profiles  documentation" href="../index.html"/>
         <link rel="up" title="Payloads" href="index.html"/>
         <link rel="next" title="Profile Removal Password" href="profileremovalpassword.html"/>
-        <link rel="prev" title="OSX Server Account" href="osxserver.html"/> 
+        <link rel="prev" title="Per-App VPN" href="perappvpn.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -86,7 +86,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../official.html">Official Links and Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../manifest.html">Manifest File Format</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../extmanifest.html">Extended Manifest Format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index-common.html">Common Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index-ios.html">iOS Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index-macos.html">macOS Payloads</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Payloads</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="activedirectory.html">Active Directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adcert.html">Active Directory Certificate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="airplay.html">AirPlay</a></li>
 <li class="toctree-l2"><a class="reference internal" href="airprint.html">AirPrint</a></li>
 <li class="toctree-l2"><a class="reference internal" href="applock.html">App Lock</a></li>
@@ -98,30 +103,46 @@
 <li class="toctree-l2"><a class="reference internal" href="certpkcs1.html">Certificate (PKCS#1)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certpkcs12.html">Certificate (PKCS#12)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certroot.html">Certificate (Root CA)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom.html">Custom Settings (MCX)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="domains.html">Domains</a></li>
 <li class="toctree-l2"><a class="reference internal" href="email.html">E-mail Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="enrollment.html">Enrollment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="exchange.html">Exchange</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fv2.html">FileVault 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="font.html">Font</a></li>
 <li class="toctree-l2"><a class="reference internal" href="globalproxy.html">Global HTTP Proxy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="google.html">Google Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="identification.html">Identification</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ldap.html">LDAP Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mdm.html">MDM</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mobilepassword.html">Password Policy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passcode.html">Password Policy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="notification.html">Notification Settings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="osxserver.html">OSX Server Account</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Profile Defaults</a></li>
+<li class="toctree-l2"><a class="reference internal" href="perappvpn.html">Per-App VPN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appmapping.html">App-to-Per-App VPN Mapping</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Profile Defaults</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="profileremovalpassword.html">Profile Removal Password</a></li>
 <li class="toctree-l2"><a class="reference internal" href="restrictions.html">Restrictions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="scep.html">SCEP</a></li>
 <li class="toctree-l2"><a class="reference internal" href="shareddevice.html">Shared Device</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sharekit.html">ShareKit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sso.html">Single-Sign On</a></li>
 <li class="toctree-l2"><a class="reference internal" href="supervision.html">Supervision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="swupd.html">Software Update Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spctl.html">System Policy Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="systempolicy.html">System Policy (Gatekeeper)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sprule.html">System Policy Rule</a></li>
 <li class="toctree-l2"><a class="reference internal" href="vpn.html">VPN</a></li>
 <li class="toctree-l2"><a class="reference internal" href="webclip.html">WebClip</a></li>
 <li class="toctree-l2"><a class="reference internal" href="webcontentfilter.html">Web Content Filter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="wifi.html">Wi-Fi</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../macos/index.html">macOS Subsystem Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pdp/index.html">Profile Domain Plugins</a></li>
 </ul>
 
             
@@ -170,10 +191,30 @@
             
   <div class="section" id="profile-defaults">
 <h1>Profile Defaults<a class="headerlink" href="#profile-defaults" title="Permalink to this headline">¶</a></h1>
-<dl class="docutils">
-<dt>PayloadType</dt>
-<dd>com.apple.defaults.managed</dd>
-</dl>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">PayloadType:</th><td class="field-body">com.apple.defaults.managed</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Supervised Only:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">N/A</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">macOS:</th><td class="field-body">N/A</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">macOS Deprecated:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">N/A</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">iOS:</th><td class="field-body">N/A</td>
+</tr>
+<tr class="field-even field"><th class="field-name">iOS Deprecated:</th><td class="field-body">N/A</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Highlander:</th><td class="field-body">N/A</td>
+</tr>
+</tbody>
+</table>
 <table border="1" class="docutils">
 <colgroup>
 <col width="14%" />
@@ -191,32 +232,9 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>PayloadIdentifier</td>
-<td>string</td>
-<td>Payload Identifier</td>
-<td>A unique identifier for the payload, dot-delimited.  Usually root PayloadIdentifier+subidentifier</td>
-<td>always</td>
-</tr>
-<tr class="row-odd"><td>PayloadType</td>
-<td>string</td>
-<td>Payload Type</td>
-<td>The type of the payload, a reverse dns string</td>
-<td>always</td>
-</tr>
-<tr class="row-even"><td>PayloadUUID</td>
-<td>string</td>
-<td>Payload UUID</td>
-<td>Unique identifier for the payload (format 01234567-89AB-CDEF-0123-456789ABCDEF)</td>
-<td>always</td>
-</tr>
-<tr class="row-odd"><td>PayloadVersion</td>
-<td>integer</td>
-<td>Payload Version</td>
-<td>The version of the whole configuration profile.</td>
-<td>always</td>
-</tr>
 </tbody>
 </table>
+</div>
 </div>
 
 
@@ -229,7 +247,7 @@
         <a href="profileremovalpassword.html" class="btn btn-neutral float-right" title="Profile Removal Password" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="osxserver.html" class="btn btn-neutral" title="OSX Server Account" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="perappvpn.html" class="btn btn-neutral" title="Per-App VPN" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

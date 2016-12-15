@@ -34,8 +34,8 @@
               href="../genindex.html"/>
         <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="Configuration Profiles  documentation" href="../index.html"/>
-        <link rel="next" title="AirPlay" href="airplay.html"/>
-        <link rel="prev" title="Extended Manifest Format" href="../extmanifest.html"/> 
+        <link rel="next" title="Active Directory Certificate" href="adcert.html"/>
+        <link rel="prev" title="System Policy (Gatekeeper)" href="systempolicy.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -85,7 +85,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../official.html">Official Links and Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../manifest.html">Manifest File Format</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../extmanifest.html">Extended Manifest Format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index-common.html">Common Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index-ios.html">iOS Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index-macos.html">macOS Payloads</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Payloads</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="activedirectory.html">Active Directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adcert.html">Active Directory Certificate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="airplay.html">AirPlay</a></li>
 <li class="toctree-l2"><a class="reference internal" href="airprint.html">AirPrint</a></li>
 <li class="toctree-l2"><a class="reference internal" href="applock.html">App Lock</a></li>
@@ -97,30 +102,43 @@
 <li class="toctree-l2"><a class="reference internal" href="certpkcs1.html">Certificate (PKCS#1)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certpkcs12.html">Certificate (PKCS#12)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certroot.html">Certificate (Root CA)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom.html">Custom Settings (MCX)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="domains.html">Domains</a></li>
 <li class="toctree-l2"><a class="reference internal" href="email.html">E-mail Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="enrollment.html">Enrollment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="exchange.html">Exchange</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fv2.html">FileVault 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="font.html">Font</a></li>
 <li class="toctree-l2"><a class="reference internal" href="globalproxy.html">Global HTTP Proxy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="google.html">Google Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="identification.html">Identification</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ldap.html">LDAP Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mdm.html">MDM</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mobilepassword.html">Password Policy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passcode.html">Password Policy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="notification.html">Notification Settings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="osxserver.html">OSX Server Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="perappvpn.html">Per-App VPN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appmapping.html">App-to-Per-App VPN Mapping</a></li>
 <li class="toctree-l2"><a class="reference internal" href="defaults.html">Profile Defaults</a></li>
 <li class="toctree-l2"><a class="reference internal" href="profileremovalpassword.html">Profile Removal Password</a></li>
 <li class="toctree-l2"><a class="reference internal" href="restrictions.html">Restrictions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="scep.html">SCEP</a></li>
 <li class="toctree-l2"><a class="reference internal" href="shareddevice.html">Shared Device</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sharekit.html">ShareKit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sso.html">Single-Sign On</a></li>
 <li class="toctree-l2"><a class="reference internal" href="supervision.html">Supervision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="swupd.html">Software Update Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spctl.html">System Policy Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="systempolicy.html">System Policy (Gatekeeper)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sprule.html">System Policy Rule</a></li>
 <li class="toctree-l2"><a class="reference internal" href="vpn.html">VPN</a></li>
 <li class="toctree-l2"><a class="reference internal" href="webclip.html">WebClip</a></li>
 <li class="toctree-l2"><a class="reference internal" href="webcontentfilter.html">Web Content Filter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="wifi.html">Wi-Fi</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../macos/index.html">macOS Subsystem Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pdp/index.html">Profile Domain Plugins</a></li>
 </ul>
 
             
@@ -170,55 +188,84 @@
 <div class="toctree-wrapper compound">
 <p class="caption"><span class="caption-text">Payloads:</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="activedirectory.html">Active Directory</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="activedirectory.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="activedirectory.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="adcert.html">Active Directory Certificate</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="adcert.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adcert.html#keys">Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adcert.html#links">Links</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="airplay.html">AirPlay</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="airplay.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="airplay.html#summary">Summary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="airplay.html#keys">Keys</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="airprint.html">AirPrint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="airprint.html">AirPrint</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="airprint.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="airprint.html#keys">Keys</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="applock.html">App Lock</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="applock.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="applock.html#summary">Summary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="applock.html#keys">Keys</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="caldav.html">CalDAV</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="caldav.html#summary">Summary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="caldav.html#keys">Keys</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="calendar.html">Calendar Subscription</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="calendar.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="calendar.html#summary">Summary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="calendar.html#keys">Keys</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="carddav.html">CardDAV</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="carddav.html#summary">Summary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="carddav.html#keys">Keys</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="cellular.html">Cellular</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cellular.html#summary">Summary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cellular.html#keys">Keys</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="certpem.html">Certificate (PEM)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="certpem.html#summary">Summary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certpem.html#keys">Keys</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="certpkcs1.html">Certificate (PKCS#1)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="certpkcs1.html#summary">Summary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certpkcs1.html#keys">Keys</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="certpkcs12.html">Certificate (PKCS#12)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="certpkcs12.html#summary">Summary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certpkcs12.html#keys">Keys</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="certroot.html">Certificate (Root CA)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="certroot.html#summary">Summary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certroot.html#keys">Keys</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="custom.html">Custom Settings (MCX)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="custom.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom.html#keys">Keys</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="domains.html">Domains</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="domains.html#summary">Summary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="domains.html#keys">Keys</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="email.html">E-mail Account</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="email.html#summary">Summary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="email.html#keys">Keys</a></li>
 </ul>
 </li>
@@ -227,55 +274,118 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="exchange.html">Exchange</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="exchange.html#summary">Summary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="exchange.html#keys">Keys</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="fv2.html">FileVault 2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fv2.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fv2.html#keys">Keys</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="font.html">Font</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="font.html#summary">Summary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="font.html#keys">Keys</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="globalproxy.html">Global HTTP Proxy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="globalproxy.html#summary">Summary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="globalproxy.html#keys">Keys</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="google.html">Google Account</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="google.html#summary">Summary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="google.html#keys">Keys</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="identification.html">Identification</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="identification.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="identification.html#keys">Keys</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="ldap.html">LDAP Account</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ldap.html#summary">Summary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ldap.html#keys">Keys</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="mdm.html">MDM</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mdm.html#summary">Summary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mdm.html#keys">Keys</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="mobilepassword.html">Password Policy</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="mobilepassword.html#keys">Keys</a></li>
+<li class="toctree-l1"><a class="reference internal" href="passcode.html">Password Policy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="passcode.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passcode.html#keys">Keys</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="notification.html">Notification Settings</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="notification.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notification.html#summary">Summary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="notification.html#keys">Keys</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="osxserver.html">OSX Server Account</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="osxserver.html#summary">Summary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="osxserver.html#keys">Keys</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="defaults.html">Profile Defaults</a></li>
-<li class="toctree-l1"><a class="reference internal" href="profileremovalpassword.html">Profile Removal Password</a></li>
+<li class="toctree-l1"><a class="reference internal" href="perappvpn.html">Per-App VPN</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="perappvpn.html#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="appmapping.html">App-to-Per-App VPN Mapping</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="appmapping.html#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="defaults.html">Profile Defaults</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="defaults.html#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="profileremovalpassword.html">Profile Removal Password</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="profileremovalpassword.html#summary">Summary</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="restrictions.html">Restrictions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="restrictions.html#summary">Summary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="restrictions.html#keys">Keys</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="scep.html">SCEP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scep.html">SCEP</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="scep.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scep.html#keys">Keys</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="shareddevice.html">Shared Device</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="shareddevice.html#summary">Summary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="shareddevice.html#keys">Keys</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="sharekit.html">ShareKit</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sharekit.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sharekit.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sso.html">Single-Sign On</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sso.html#keys">Keys</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="supervision.html">Supervision</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="supervision.html#summary">Summary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="supervision.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="swupd.html">Software Update Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spctl.html">System Policy Control</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="spctl.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spctl.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="systempolicy.html">System Policy (Gatekeeper)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="systempolicy.html#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sprule.html">System Policy Rule</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sprule.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sprule.html#keys">Keys</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="vpn.html">VPN</a><ul>
@@ -283,14 +393,17 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="webclip.html">WebClip</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="webclip.html#summary">Summary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="webclip.html#keys">Keys</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="webcontentfilter.html">Web Content Filter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="webcontentfilter.html#summary">Summary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="webcontentfilter.html#keys">Keys</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="wifi.html">Wi-Fi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="wifi.html#summary">Summary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="wifi.html#keys">Keys</a></li>
 </ul>
 </li>
@@ -305,10 +418,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="airplay.html" class="btn btn-neutral float-right" title="AirPlay" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="adcert.html" class="btn btn-neutral float-right" title="Active Directory Certificate" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../extmanifest.html" class="btn btn-neutral" title="Extended Manifest Format" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="systempolicy.html" class="btn btn-neutral" title="System Policy (Gatekeeper)" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

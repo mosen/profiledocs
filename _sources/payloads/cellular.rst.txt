@@ -9,10 +9,15 @@ Cellular payloads have two important installation requirements:
 - No more than one cellular payload can be installed at any time.
 - A cellular payload cannot be installed if an APN payload is already installed.
 
-This payload replaces the manifests/ac2/com.apple.managedCarrier payload, which is supported, but deprecated.
+This payload replaces the com.apple.managedCarrier payload, which is supported, but deprecated.
 
-- Supersedes ``manifests/ac2/com.apple.apn.managed`` (APN).
-- Supersedes ``manifests/ac2/com.apple.managedCarrier``
+- Supersedes ``com.apple.apn.managed`` (APN) which is used on iOS 6 and earlier.
+- Supersedes ``com.apple.managedCarrier``
+
+Summary
+-------
+
+.. pfmheader:: manifests/ac2/com.apple.cellular manifest.plist
 
 .. pfm:: manifests/ac2/com.apple.cellular manifest.plist
 
@@ -21,3 +26,6 @@ Keys
 
 .. pfmkey:: APNs manifests/ac2/com.apple.cellular manifest.plist
 .. pfmkey:: AttachAPN manifests/ac2/com.apple.cellular manifest.plist
+
+.. pfm:: manifests/ac2/com.apple.cellular manifest.plist
+   :key: AttachAPN

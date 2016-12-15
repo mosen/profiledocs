@@ -1,0 +1,842 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>FileVault 2 &mdash; Configuration Profiles  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Configuration Profiles  documentation" href="../index.html"/>
+        <link rel="up" title="macOS Payloads" href="index-macos.html"/>
+        <link rel="next" title="Identification" href="identification.html"/>
+        <link rel="prev" title="Custom Settings (MCX)" href="custom.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Configuration Profiles
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../official.html">Official Links and Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manifest.html">Manifest File Format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extmanifest.html">Extended Manifest Format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index-common.html">Common Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index-ios.html">iOS Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index-macos.html">macOS Payloads</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Payloads</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="activedirectory.html">Active Directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adcert.html">Active Directory Certificate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="airplay.html">AirPlay</a></li>
+<li class="toctree-l2"><a class="reference internal" href="airprint.html">AirPrint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="applock.html">App Lock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="caldav.html">CalDAV</a></li>
+<li class="toctree-l2"><a class="reference internal" href="calendar.html">Calendar Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="carddav.html">CardDAV</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cellular.html">Cellular</a></li>
+<li class="toctree-l2"><a class="reference internal" href="certpem.html">Certificate (PEM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="certpkcs1.html">Certificate (PKCS#1)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="certpkcs12.html">Certificate (PKCS#12)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="certroot.html">Certificate (Root CA)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom.html">Custom Settings (MCX)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="domains.html">Domains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="email.html">E-mail Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enrollment.html">Enrollment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exchange.html">Exchange</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">FileVault 2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#keys">Keys</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.MCX.FileVault2-Enable-auto">Enable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.MCX.FileVault2-Defer-auto">Defer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.MCX.FileVault2-UserEntersMissingInfo-auto">UserEntersMissingInfo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.MCX.FileVault2-UseRecoveryKey-auto">UseRecoveryKey</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.MCX.FileVault2-ShowRecoveryKey-auto">ShowRecoveryKey</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.MCX.FileVault2-OutputPath-auto">OutputPath</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.MCX.FileVault2-Certificate-auto">Certificate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.MCX.FileVault2-PayloadCertificateUUID-auto">PayloadCertificateUUID</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.MCX.FileVault2-Username-auto">Username</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.MCX.FileVault2-Password-auto">Password</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.MCX.FileVault2-UseKeychain-auto">UseKeychain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.MCX.FileVault2-DeferForceAtUserLoginMaxBypassAttempts-auto">DeferForceAtUserLoginMaxBypassAttempts</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="font.html">Font</a></li>
+<li class="toctree-l2"><a class="reference internal" href="globalproxy.html">Global HTTP Proxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="google.html">Google Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="identification.html">Identification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ldap.html">LDAP Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mdm.html">MDM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passcode.html">Password Policy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notification.html">Notification Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osxserver.html">OSX Server Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="perappvpn.html">Per-App VPN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appmapping.html">App-to-Per-App VPN Mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="defaults.html">Profile Defaults</a></li>
+<li class="toctree-l2"><a class="reference internal" href="profileremovalpassword.html">Profile Removal Password</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restrictions.html">Restrictions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scep.html">SCEP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shareddevice.html">Shared Device</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sharekit.html">ShareKit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sso.html">Single-Sign On</a></li>
+<li class="toctree-l2"><a class="reference internal" href="supervision.html">Supervision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="swupd.html">Software Update Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spctl.html">System Policy Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="systempolicy.html">System Policy (Gatekeeper)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sprule.html">System Policy Rule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vpn.html">VPN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webclip.html">WebClip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webcontentfilter.html">Web Content Filter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wifi.html">Wi-Fi</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../macos/index.html">macOS Subsystem Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pdp/index.html">Profile Domain Plugins</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Configuration Profiles</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index-macos.html">macOS Payloads</a> &raquo;</li>
+      
+    <li>FileVault 2</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/payloads/fv2.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="filevault-2">
+<h1>FileVault 2<a class="headerlink" href="#filevault-2" title="Permalink to this headline">¶</a></h1>
+<p>You can use FileVault 2 to perform full XTS-AES 128 encryption on the contents of a volume.
+Removal of the FileVault payload does not disable FileVault.</p>
+<p>A personal recovery user will normally be created unless the UseRecoveryKey key value is false.</p>
+<p>An institutional recovery key will be created only if either there is certificate data available in the Certificate key value,
+a specific certificate payload is referenced, or the UseKeychain key value is set to true and a valid FileVaultMaster.keychain file was created.</p>
+<p>In all cases, the certificate information must be set up properly for FileVault or it will be ignored and no institutional recovery key will be set up.</p>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">PayloadType:</th><td class="field-body">com.apple.MCX.FileVault2</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Supervised Only:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">N/A</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">macOS:</th><td class="field-body">10.9</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">macOS Deprecated:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">N/A</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">iOS:</th><td class="field-body">N/A</td>
+</tr>
+<tr class="field-even field"><th class="field-name">iOS Deprecated:</th><td class="field-body">N/A</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Highlander:</th><td class="field-body">N/A</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="43%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Title</th>
+<th class="head">Description</th>
+<th class="head">Required</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Enable</td>
+<td>boolean</td>
+<td>Enable FileVault 2</td>
+<td>Set to &#8216;On&#8217; to enable FileVault. Set to &#8216;Off&#8217; to disable FileVault. This value is required.</td>
+<td>always</td>
+</tr>
+<tr class="row-odd"><td>Defer</td>
+<td>boolean</td>
+<td>Defer enabling until logout</td>
+<td>Set to true to defer enabling FileVault until the designated user logs out. For details, see fdesetup(8). The person enabling FileVault must be either a local user or a mobile account user.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>UserEntersMissingInfo</td>
+<td>boolean</td>
+<td>User enters username and password</td>
+<td>Set to true for manual profile installs to prompt for missing user name or password fields.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>UseRecoveryKey</td>
+<td>boolean</td>
+<td>Create a personal recovery key</td>
+<td>Set to true to create a personal recovery key</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>ShowRecoveryKey</td>
+<td>boolean</td>
+<td>Show the personal recovery key</td>
+<td>Set to false to not display the personal recovery key to the user after FileVault is enabled</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>OutputPath</td>
+<td>string</td>
+<td>Recovery key path</td>
+<td>Path to the location where the recovery key and computer information plist will be stored.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>Certificate</td>
+<td>data</td>
+<td>Certificate</td>
+<td>DER-encoded certificate data if an institutional recovery key will be added.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>PayloadCertificateUUID</td>
+<td>string</td>
+<td>Recovery Key Certificate Payload</td>
+<td>UUID of the payload containing the asymmetric recovery key certificate payload.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>Username</td>
+<td>string</td>
+<td>Username</td>
+<td>User name of the Open Directory user that will be added to FileVault.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>Password</td>
+<td>string</td>
+<td>Password</td>
+<td>User password of the Open Directory user that will be added to FileVault. Use the UserEntersMissingInfo key if you want to prompt for this information.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>UseKeychain</td>
+<td>boolean</td>
+<td>Add institutional recovery key to keychain</td>
+<td>If set to true and no certificate information is provided in this payload, the keychain already created at /Library/Keychains/FileVaultMaster.keychain will be used when the institutional recovery key is added.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>DeferForceAtUserLoginMaxBypassAttempts</td>
+<td>integer</td>
+<td>Maximum number of times FileVault can be skipped</td>
+<td>When using the Defer option you can optionally set this key to the maximum number of times the user can bypass enabling FileVault before it will require that it be enabled before the user can log in. If set to 0, it will always prompt to enable FileVault until it is enabled, though it will allow you to bypass enabling it. Setting this key to –1 will disable this feature.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>DeferDontAskAtUserLogout</td>
+<td>integer</td>
+<td>Dont ask at logout</td>
+<td>When using the Defer option, set this key to true to not request enabling FileVault at user logout time.</td>
+<td>n/a</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="keys">
+<h2>Keys<a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="com.apple.MCX.FileVault2-Enable-auto">
+<h3>Enable<a class="headerlink" href="#com.apple.MCX.FileVault2-Enable-auto" title="Permalink to this headline">¶</a></h3>
+<p>Enable FileVault 2</p>
+<p>Set to &#8216;On&#8217; to enable FileVault. Set to &#8216;Off&#8217; to disable FileVault. This value is required.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>N/A</td>
+<td>always</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.MCX.FileVault2-Defer-auto">
+<h3>Defer<a class="headerlink" href="#com.apple.MCX.FileVault2-Defer-auto" title="Permalink to this headline">¶</a></h3>
+<p>Defer enabling until logout</p>
+<p>Set to true to defer enabling FileVault until the designated user logs out. For details, see fdesetup(8). The person enabling FileVault must be either a local user or a mobile account user.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.MCX.FileVault2-UserEntersMissingInfo-auto">
+<h3>UserEntersMissingInfo<a class="headerlink" href="#com.apple.MCX.FileVault2-UserEntersMissingInfo-auto" title="Permalink to this headline">¶</a></h3>
+<p>User enters username and password</p>
+<p>Set to true for manual profile installs to prompt for missing user name or password fields.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.MCX.FileVault2-UseRecoveryKey-auto">
+<h3>UseRecoveryKey<a class="headerlink" href="#com.apple.MCX.FileVault2-UseRecoveryKey-auto" title="Permalink to this headline">¶</a></h3>
+<p>Create a personal recovery key</p>
+<p>Set to true to create a personal recovery key</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.MCX.FileVault2-ShowRecoveryKey-auto">
+<h3>ShowRecoveryKey<a class="headerlink" href="#com.apple.MCX.FileVault2-ShowRecoveryKey-auto" title="Permalink to this headline">¶</a></h3>
+<p>Show the personal recovery key</p>
+<p>Set to false to not display the personal recovery key to the user after FileVault is enabled</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.MCX.FileVault2-OutputPath-auto">
+<h3>OutputPath<a class="headerlink" href="#com.apple.MCX.FileVault2-OutputPath-auto" title="Permalink to this headline">¶</a></h3>
+<p>Recovery key path</p>
+<p>Path to the location where the recovery key and computer information plist will be stored.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.MCX.FileVault2-Certificate-auto">
+<h3>Certificate<a class="headerlink" href="#com.apple.MCX.FileVault2-Certificate-auto" title="Permalink to this headline">¶</a></h3>
+<p>Certificate</p>
+<p>DER-encoded certificate data if an institutional recovery key will be added.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>data</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.MCX.FileVault2-PayloadCertificateUUID-auto">
+<h3>PayloadCertificateUUID<a class="headerlink" href="#com.apple.MCX.FileVault2-PayloadCertificateUUID-auto" title="Permalink to this headline">¶</a></h3>
+<p>Recovery Key Certificate Payload</p>
+<p>UUID of the payload containing the asymmetric recovery key certificate payload.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.MCX.FileVault2-Username-auto">
+<h3>Username<a class="headerlink" href="#com.apple.MCX.FileVault2-Username-auto" title="Permalink to this headline">¶</a></h3>
+<p>Username</p>
+<p>User name of the Open Directory user that will be added to FileVault.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.MCX.FileVault2-Password-auto">
+<h3>Password<a class="headerlink" href="#com.apple.MCX.FileVault2-Password-auto" title="Permalink to this headline">¶</a></h3>
+<p>Password</p>
+<p>User password of the Open Directory user that will be added to FileVault. Use the UserEntersMissingInfo key if you want to prompt for this information.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.MCX.FileVault2-UseKeychain-auto">
+<h3>UseKeychain<a class="headerlink" href="#com.apple.MCX.FileVault2-UseKeychain-auto" title="Permalink to this headline">¶</a></h3>
+<p>Add institutional recovery key to keychain</p>
+<p>If set to true and no certificate information is provided in this payload, the keychain already created at /Library/Keychains/FileVaultMaster.keychain will be used when the institutional recovery key is added.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.MCX.FileVault2-DeferForceAtUserLoginMaxBypassAttempts-auto">
+<h3>DeferForceAtUserLoginMaxBypassAttempts<a class="headerlink" href="#com.apple.MCX.FileVault2-DeferForceAtUserLoginMaxBypassAttempts-auto" title="Permalink to this headline">¶</a></h3>
+<p>Maximum number of times FileVault can be skipped</p>
+<p>When using the Defer option you can optionally set this key to the maximum number of times the user can bypass enabling FileVault before it will require that it be enabled before the user can log in. If set to 0, it will always prompt to enable FileVault until it is enabled, though it will allow you to bypass enabling it. Setting this key to –1 will disable this feature.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>integer</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>10.10.0</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="identification.html" class="btn btn-neutral float-right" title="Identification" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="custom.html" class="btn btn-neutral" title="Custom Settings (MCX)" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, MacAdmins Community.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

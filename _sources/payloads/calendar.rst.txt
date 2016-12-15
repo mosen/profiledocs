@@ -4,12 +4,13 @@ Calendar Subscription
 A calendar subscription payload adds a subscribed calendar to the user’s calendars list.
 The calendar subscription payload is not supported in macOS.
 
+Summary
+-------
+
+.. pfmheader:: manifests/ac2/com.apple.subscribedcalendar.account manifest.plist
+
 .. pfm:: manifests/ac2/com.apple.subscribedcalendar.account manifest.plist
 
-Requirements
-------------
-
-- iOS
 
 Keys
 ----

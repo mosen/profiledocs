@@ -86,7 +86,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../official.html">Official Links and Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../manifest.html">Manifest File Format</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../extmanifest.html">Extended Manifest Format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index-common.html">Common Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index-ios.html">iOS Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index-macos.html">macOS Payloads</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Payloads</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="activedirectory.html">Active Directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adcert.html">Active Directory Certificate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="airplay.html">AirPlay</a></li>
 <li class="toctree-l2"><a class="reference internal" href="airprint.html">AirPrint</a></li>
 <li class="toctree-l2"><a class="reference internal" href="applock.html">App Lock</a></li>
@@ -98,21 +103,27 @@
 <li class="toctree-l2"><a class="reference internal" href="certpkcs1.html">Certificate (PKCS#1)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certpkcs12.html">Certificate (PKCS#12)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certroot.html">Certificate (Root CA)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom.html">Custom Settings (MCX)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="domains.html">Domains</a></li>
 <li class="toctree-l2"><a class="reference internal" href="email.html">E-mail Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="enrollment.html">Enrollment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="exchange.html">Exchange</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fv2.html">FileVault 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="font.html">Font</a></li>
 <li class="toctree-l2"><a class="reference internal" href="globalproxy.html">Global HTTP Proxy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="google.html">Google Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="identification.html">Identification</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ldap.html">LDAP Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mdm.html">MDM</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mobilepassword.html">Password Policy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passcode.html">Password Policy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="notification.html">Notification Settings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="osxserver.html">OSX Server Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="perappvpn.html">Per-App VPN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appmapping.html">App-to-Per-App VPN Mapping</a></li>
 <li class="toctree-l2"><a class="reference internal" href="defaults.html">Profile Defaults</a></li>
 <li class="toctree-l2"><a class="reference internal" href="profileremovalpassword.html">Profile Removal Password</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Restrictions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#keys">Keys</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowAppInstallation-auto">allowAppInstallation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowUIAppInstallation-auto">allowUIAppInstallation</a></li>
@@ -195,13 +206,21 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="scep.html">SCEP</a></li>
 <li class="toctree-l2"><a class="reference internal" href="shareddevice.html">Shared Device</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sharekit.html">ShareKit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sso.html">Single-Sign On</a></li>
 <li class="toctree-l2"><a class="reference internal" href="supervision.html">Supervision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="swupd.html">Software Update Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spctl.html">System Policy Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="systempolicy.html">System Policy (Gatekeeper)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sprule.html">System Policy Rule</a></li>
 <li class="toctree-l2"><a class="reference internal" href="vpn.html">VPN</a></li>
 <li class="toctree-l2"><a class="reference internal" href="webclip.html">WebClip</a></li>
 <li class="toctree-l2"><a class="reference internal" href="webcontentfilter.html">Web Content Filter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="wifi.html">Wi-Fi</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../macos/index.html">macOS Subsystem Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pdp/index.html">Profile Domain Plugins</a></li>
 </ul>
 
             
@@ -249,11 +268,33 @@
            <div itemprop="articleBody">
             
   <div class="section" id="restrictions">
-<h1>Restrictions<a class="headerlink" href="#restrictions" title="Permalink to this headline">¶</a></h1>
-<dl class="docutils">
-<dt>PayloadType</dt>
-<dd>com.apple.applicationaccess</dd>
-</dl>
+<span id="payloadtype-com-apple-applicationaccess"></span><h1>Restrictions<a class="headerlink" href="#restrictions" title="Permalink to this headline">¶</a></h1>
+<p>A Restrictions payload allows the administrator to restrict the user from doing certain things with the device, such as using the camera.</p>
+<p>The Restrictions payload is supported in iOS; some keys are also supported in macOS, as noted below.</p>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">PayloadType:</th><td class="field-body">com.apple.applicationaccess</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Supervised Only:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">N/A</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">macOS:</th><td class="field-body">N/A</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">macOS Deprecated:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">N/A</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">iOS:</th><td class="field-body">N/A</td>
+</tr>
+<tr class="field-even field"><th class="field-name">iOS Deprecated:</th><td class="field-body">N/A</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Highlander:</th><td class="field-body">N/A</td>
+</tr>
+</tbody>
+</table>
 <table border="1" class="docutils">
 <colgroup>
 <col width="14%" />
@@ -271,88 +312,64 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>PayloadDescription</td>
-<td>string</td>
-<td>Payload Description</td>
-<td>Description of the payload</td>
+<tr class="row-even"><td>allowAccountModification</td>
+<td>boolean</td>
+<td>Allow user to modify accounts</td>
+<td>Allow user to modify accounts</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>PayloadDisplayName</td>
-<td>string</td>
-<td>Payload Display Name</td>
-<td>Name of the payload</td>
-<td>always</td>
-</tr>
-<tr class="row-even"><td>PayloadIdentifier</td>
-<td>string</td>
-<td>Payload Identifier</td>
-<td>A unique identifier for the payload, dot-delimited.  Usually root PayloadIdentifier+subidentifier</td>
-<td>always</td>
-</tr>
-<tr class="row-odd"><td>PayloadType</td>
-<td>string</td>
-<td>Payload Type</td>
-<td>The type of the payload, a reverse dns string</td>
-<td>always</td>
-</tr>
-<tr class="row-even"><td>PayloadUUID</td>
-<td>string</td>
-<td>Payload UUID</td>
-<td>Unique identifier for the payload (format 01234567-89AB-CDEF-0123-456789ABCDEF)</td>
-<td>always</td>
-</tr>
-<tr class="row-odd"><td>PayloadVersion</td>
-<td>integer</td>
-<td>Payload Version</td>
-<td>The version of the whole configuration profile.</td>
-<td>always</td>
-</tr>
-<tr class="row-even"><td>PayloadOrganization</td>
-<td>string</td>
-<td>Payload Organization</td>
-<td>This value describes the issuing organization of the profile, as displayed to the user</td>
+<tr class="row-odd"><td>allowAirDrop</td>
+<td>boolean</td>
+<td>Disable AirDrop</td>
+<td>Disable AirDrop if set to false</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>allowAppInstallation</td>
+<tr class="row-even"><td>allowAppInstallation</td>
 <td>boolean</td>
 <td>Allow App Installation from Apple Configurator and iTunes</td>
 <td>Allow only a connected Mac host to install applications</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>allowUIAppInstallation</td>
+<tr class="row-odd"><td>allowUIAppInstallation</td>
 <td>boolean</td>
 <td>Allow App Installation from App Store</td>
-<td>Allow the user to install applications</td>
+<td>When false, the App Store is disabled and its icon is removed from the Home screen. However, users may continue to use Host apps (iTunes, Configurator) to install or update their apps.</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>allowAutomaticAppDownloads</td>
+<tr class="row-even"><td>allowAutomaticAppDownloads</td>
 <td>boolean</td>
 <td>Allow Automatic App Downloads</td>
-<td>Allow automatic app downloads (Supervised only)</td>
+<td>If set to false, prevents automatic downloading of apps purchased on other devices. Does not affect updates to existing apps. Defaults to true</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>allowAppRemoval</td>
+<tr class="row-odd"><td>allowAppRemoval</td>
 <td>boolean</td>
 <td>Allow App Removal</td>
 <td>Allow the user to remove apps (Supervised only)</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>allowEnterpriseAppTrust</td>
+<tr class="row-even"><td>allowEnterpriseAppTrust</td>
 <td>boolean</td>
 <td>Allow Trusting Enterprise Apps</td>
-<td>Allow the user to trust enterprise apps</td>
+<td>If set to false removes the Trust Enterprise Developer button in Settings-&gt;General-&gt;Profiles Device Management, preventing apps from being provisioned by universal provisioning profiles. This restriction applies to free developer accounts but it does not apply to enterprise app developers who are trusted because their apps were pushed via MDM, nor does it revoke previously granted trust. Defaults to true.</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>allowCamera</td>
+<tr class="row-odd"><td>allowCamera</td>
 <td>boolean</td>
 <td>Allow Camera Use</td>
 <td>Allow the user to use the camera</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>allowExplicitContent</td>
+<tr class="row-even"><td>allowExplicitContent</td>
 <td>boolean</td>
 <td>Allow Explicit Content</td>
 <td>Allow user access of explicit content</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>allowFindMyFriendsModification</td>
+<td>boolean</td>
+<td>Allow Find My Friends changes</td>
+<td>If set to false, changes to Find My Friends are disabled.</td>
 <td>n/a</td>
 </tr>
 <tr class="row-even"><td>allowScreenShot</td>
@@ -364,7 +381,7 @@
 <tr class="row-odd"><td>allowRemoteScreenObservation</td>
 <td>boolean</td>
 <td>Allow Remote Screen Observation</td>
-<td>Allow Classroom or similar to observe the screen</td>
+<td>Allow Classroom or similar to observe the screen. This key should be nested beneath allowScreenShot as a sub-restriction. If allowScreenShot is set to false, it also prevents the Classroom app from observing remote screens.</td>
 <td>n/a</td>
 </tr>
 <tr class="row-even"><td>allowChat</td>
@@ -394,7 +411,7 @@
 <tr class="row-even"><td>allowRadioService</td>
 <td>boolean</td>
 <td>Allow iTunes Radio</td>
-<td>If set to false, iTunes Radio will be disabled in the Music app.</td>
+<td>If set to false, Apple Music Radio is disabled.</td>
 <td>n/a</td>
 </tr>
 <tr class="row-odd"><td>allowSharedStream</td>
@@ -418,97 +435,133 @@
 <tr class="row-even"><td>allowiTunes</td>
 <td>boolean</td>
 <td>Allow use of iTunes</td>
-<td>Allow the user to access and use iTunes</td>
+<td>When false, the iTunes Music Store is disabled and its icon is removed from the Home screen. Users cannot preview, purchase, or download content.</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>allowNews</td>
+<tr class="row-odd"><td>autonomousSingleAppModePermittedAppIDs</td>
+<td>array</td>
+<td>Allow apps to enter single app mode themselves.</td>
+<td>If present, allows apps identified by the bundle IDs listed in the array to autonomously enter Single App Mode.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>allowNews</td>
 <td>boolean</td>
 <td>Allow use of News</td>
 <td>Allow the user to access and use News</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>allowSafari</td>
+<tr class="row-odd"><td>allowSafari</td>
 <td>boolean</td>
 <td>Allow use of Safari</td>
 <td>Allow the user to use Safari</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>allowGameCenter</td>
+<tr class="row-even"><td>allowGameCenter</td>
 <td>boolean</td>
 <td>Allow Game Center</td>
 <td>Allow Game Center (Supervised only)</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>allowAddingGameCenterFriends</td>
+<tr class="row-odd"><td>allowAddingGameCenterFriends</td>
 <td>boolean</td>
 <td>Allow Adding Game Center Friends</td>
 <td>Allow the user to add Friends on Game Center</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>allowBluetoothModification</td>
+<tr class="row-even"><td>allowBluetoothModification</td>
 <td>boolean</td>
 <td>Allow modifying Bluetooth settings</td>
 <td>Allow modifying Bluetooth settings</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>allowAppCellularDataModification</td>
+<tr class="row-odd"><td>allowAppCellularDataModification</td>
 <td>boolean</td>
 <td>Allow Modifying Cellular Data Usage for Apps Settings</td>
 <td>Allow modifying cellular data usage for apps settings</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>allowDeviceNameModification</td>
+<tr class="row-even"><td>allowDeviceNameModification</td>
 <td>boolean</td>
 <td>Allow Modifying Device Name</td>
 <td>Allow modifying device name</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>allowPasscodeModification</td>
+<tr class="row-odd"><td>allowPasscodeModification</td>
 <td>boolean</td>
 <td>Allow Modifying Passcode</td>
-<td>Allow modifying passcode (Supervised only)</td>
+<td>If set to false, prevents the device passcode from being added, changed, or removed. Defaults to true. This restriction is ignored by shared iPads.</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>allowWallpaperModification</td>
+<tr class="row-even"><td>allowWallpaperModification</td>
 <td>boolean</td>
 <td>Allow Modifying Wallpaper</td>
 <td>Allow modifying Wallpaper (Supervised only)</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>allowEnablingRestrictions</td>
+<tr class="row-odd"><td>allowEnablingRestrictions</td>
 <td>boolean</td>
 <td>Allow Configuring Restrictions</td>
 <td>Allow configuring restrictions (Supervised only)</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>allowGlobalBackgroundFetchWhenRoaming</td>
+<tr class="row-even"><td>allowGlobalBackgroundFetchWhenRoaming</td>
 <td>boolean</td>
 <td>Allow Automatic Sync While Roaming</td>
 <td>Allow automatic sync while roaming</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>allowManagedAppsCloudSync</td>
+<tr class="row-odd"><td>allowManagedAppsCloudSync</td>
 <td>boolean</td>
 <td>Allow iCloud Sync for Managed Apps</td>
 <td>Allow iCloud sync for managed apps</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>allowEnterpriseBookBackup</td>
+<tr class="row-even"><td>allowEnterpriseBookBackup</td>
 <td>boolean</td>
 <td>Allow Enterprise Books Backup</td>
 <td>Allow enterprise books to be backed up</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>allowEnterpriseBookMetadataSync</td>
+<tr class="row-odd"><td>allowEnterpriseBookMetadataSync</td>
 <td>boolean</td>
 <td>Allow Enterprise Books Notes and Highlights Sync</td>
 <td>Allow enterprise books notes and highlights to be synced</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>allowInAppPurchases</td>
+<tr class="row-even"><td>allowInAppPurchases</td>
 <td>boolean</td>
 <td>Allow In App Purchases</td>
 <td>Allow the user to make purchases within applications</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>allowPodcasts</td>
+<td>boolean</td>
+<td>Allow Podcasts</td>
+<td>If set to false, disables podcasts. Defaults to true.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>allowLockScreenControlCenter</td>
+<td>boolean</td>
+<td>Allow Control Center on Lock Screen</td>
+<td>If false, prevents Control Center from appearing on the Lock screen.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>allowHostPairing</td>
+<td>boolean</td>
+<td>Allow pairing with any host</td>
+<td>If set to false, host pairing is disabled with the exception of the supervision host. If no supervision host certificate has been configured, all pairing is disabled. Host pairing lets the administrator control which devices an iOS 7 device can pair with.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>allowLockScreenNotificationsView</td>
+<td>boolean</td>
+<td>Allow notifications to be displayed on the lock screen</td>
+<td>If set to false, the Notifications view in Notification Center on the lock screen is disabled and users can’t receive notifications when the screen is locked.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>allowLockScreenTodayView</td>
+<td>boolean</td>
+<td>Allow Today view on the lock screen</td>
+<td>If set to false, the Today view in Notification Center on the lock screen is disabled.</td>
 <td>n/a</td>
 </tr>
 <tr class="row-even"><td>allowMultiplayerGaming</td>
@@ -529,40 +582,52 @@
 <td>Allow voice dialing while device is locked</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>forceEncryptedBackup</td>
+<tr class="row-odd"><td>allowYouTube</td>
+<td>boolean</td>
+<td>Allow YouTube App (iOS 6)</td>
+<td>When false, the YouTube application is disabled and its icon is removed from the Home screen.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>forceEncryptedBackup</td>
 <td>boolean</td>
 <td>Force Encrypted Backups</td>
 <td>Force encrypted backups</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>forceWatchWristDetection</td>
+<tr class="row-odd"><td>forceWatchWristDetection</td>
 <td>boolean</td>
 <td>Force Apple Watch Wrist Detection</td>
 <td>Force Apple Watch wrist detection</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>allowPairedWatch</td>
+<tr class="row-even"><td>allowPairedWatch</td>
 <td>boolean</td>
 <td>Allow Pairing With Apple Watch</td>
-<td>Allow pairing with Apple Watch</td>
+<td>If set to false, disables pairing with an Apple Watch. Any currently paired Apple Watch is unpaired and erased. Defaults to true.</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>allowEraseContentAndSettings</td>
+<tr class="row-odd"><td>allowEraseContentAndSettings</td>
 <td>boolean</td>
 <td>Allow Erase All Content and Settings</td>
 <td>Supervised only. If set to false, the user cannot choose the option &#8220;Erase All Content and Settings&#8221; in Settings &gt; General &gt; Reset</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>allowSpotlightInternetResults</td>
+<tr class="row-even"><td>allowSpotlightInternetResults</td>
 <td>boolean</td>
 <td>Allow Internet results in Spotlight</td>
 <td>If set to false, search results from the web will not be shown in Spotlight.</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>allowCloudDocumentSync</td>
+<tr class="row-odd"><td>allowCloudDocumentSync</td>
 <td>boolean</td>
 <td>Allow iCloud Document Sync</td>
-<td>Allow document syncing with iCloud</td>
+<td>Allow document syncing with iCloud. When false, disables document and key-value syncing to iCloud.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>allowCloudKeychainSync</td>
+<td>boolean</td>
+<td>Allow iCloud Keychain Sync</td>
+<td>Allow iCloud Keychain Sync</td>
 <td>n/a</td>
 </tr>
 <tr class="row-odd"><td>allowUntrustedTLSPrompt</td>
@@ -580,7 +645,7 @@
 <tr class="row-odd"><td>allowDiagnosticSubmissionModification</td>
 <td>boolean</td>
 <td>Allow modifying diagnostics settings</td>
-<td>Allow modifying diagnostics settings</td>
+<td>If set to false, the diagnostic submission and app analytics settings in the Diagnostics &amp; Usage pane in Settings cannot be modified</td>
 <td>n/a</td>
 </tr>
 <tr class="row-even"><td>allowPhotoStream</td>
@@ -597,8 +662,56 @@
 </tr>
 <tr class="row-even"><td>allowCloudBackup</td>
 <td>boolean</td>
-<td>Allow iClould Backup</td>
+<td>Allow iCloud Backup</td>
 <td>Allow backup using iCloud</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>allowCloudBTMM</td>
+<td>boolean</td>
+<td>Allow iCloud Back to my Mac</td>
+<td>Allow iCloud Back to my Mac</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>allowCloudFMM</td>
+<td>boolean</td>
+<td>Allow iCloud Find my Mac</td>
+<td>Allow iCloud Find my Mac</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>allowCloudBookmarks</td>
+<td>boolean</td>
+<td>Allow macOS iCloud Bookmark Sync</td>
+<td>Allow macOS iCloud Bookmark Sync</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>allowCloudMail</td>
+<td>boolean</td>
+<td>Allow macOS iCloud Mail Services</td>
+<td>Allow macOS iCloud Mail Services</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>allowCloudCalendar</td>
+<td>boolean</td>
+<td>Allow macOS iCloud Calendar Services</td>
+<td>Allow macOS iCloud Calendar Services</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>allowCloudReminders</td>
+<td>boolean</td>
+<td>Allow macOS iCloud Reminder Services</td>
+<td>Allow macOS iCloud Reminder Services</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>allowCloudAddressBook</td>
+<td>boolean</td>
+<td>Allow macOS iCloud Address Book Services</td>
+<td>Allow macOS iCloud Address Book Services</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>allowCloudNotes</td>
+<td>boolean</td>
+<td>Allow macOS iCloud Notes Services</td>
+<td>Allow macOS iCloud Notes Services</td>
 <td>n/a</td>
 </tr>
 <tr class="row-odd"><td>forceITunesStorePasswordEntry</td>
@@ -607,64 +720,88 @@
 <td>Require the user&#8217;s iTunes password to be entered for every purchase</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>ratingApps</td>
+<tr class="row-even"><td>forceLimitAdTracking</td>
+<td>boolean</td>
+<td>Limit Ad Tracking</td>
+<td>If true, limits ad tracking. Default is false.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>forceAirPlayOutgoingRequestsPairingPassword</td>
+<td>boolean</td>
+<td>AirPlay requests must use a pairing password</td>
+<td>If set to true, forces all devices receiving AirPlay requests from this device to use a pairing password.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>forceAirPlayIncomingRequestsPairingPassword</td>
+<td>boolean</td>
+<td>AirPlay requests incoming must use a pairing password</td>
+<td>If set to true, forces all devices sending AirPlay requests to this device to use a pairing password.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>ratingApps</td>
 <td>integer</td>
 <td>Apps Ranking Number</td>
 <td>Ranking number for apps</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>ratingMovies</td>
+<tr class="row-even"><td>ratingMovies</td>
 <td>integer</td>
 <td>Movies Ranking Number</td>
 <td>Ranking number for movies</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>ratingTVShows</td>
+<tr class="row-odd"><td>ratingTVShows</td>
 <td>integer</td>
 <td>TV Shows Ranking Number</td>
 <td>Ranking number for TV Shows</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>ratingRegion</td>
+<tr class="row-even"><td>ratingRegion</td>
 <td>string</td>
 <td>Region Code</td>
 <td>Two-character code for the region used to specify ratings</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>safariAcceptCookies</td>
+<tr class="row-odd"><td>safariAcceptCookies</td>
 <td>integer</td>
 <td>Accept Cookies in Safari</td>
 <td>Accept cookies: 0 - Never, 1 - From current website only (iOS 8) or visited sites (pre-iOS 8), 1.5 - From websites I visit, 2 - Always</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>safariAllowAutoFill</td>
+<tr class="row-even"><td>safariAllowAutoFill</td>
 <td>boolean</td>
 <td>Allow AutoFill in Safari</td>
 <td>Allow AutoFill in Safari</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>safariAllowJavaScript</td>
+<tr class="row-odd"><td>safariAllowJavaScript</td>
 <td>boolean</td>
 <td>Allow JavaScript</td>
 <td>Allow JavaScript in Safari</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>safariAllowPopups</td>
+<tr class="row-even"><td>safariAllowPopups</td>
 <td>boolean</td>
 <td>Allow Pop-ups</td>
 <td>Allow Pop-ups in Safari</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>safariForceFraudWarning</td>
+<tr class="row-odd"><td>safariForceFraudWarning</td>
 <td>boolean</td>
 <td>Enable Fraud Warning</td>
 <td>Enable fraud warning in Safari</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>allowAssistant</td>
+<tr class="row-even"><td>allowAssistant</td>
 <td>boolean</td>
 <td>Allow Siri</td>
 <td>Allow Siri</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>allowAssistantUserGeneratedContent</td>
+<td>boolean</td>
+<td>When false, prevents Siri from querying user-generated content from the web.</td>
+<td>When false, prevents Siri from querying user-generated content from the web.</td>
 <td>n/a</td>
 </tr>
 <tr class="row-even"><td>allowAssistantWhileLocked</td>
@@ -721,50 +858,57 @@
 <td>Enable allow open from managed to unmanaged</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>forceAirDropUnmanaged</td>
+<tr class="row-odd"><td>allowOTAPKIUpdates</td>
+<td>boolean</td>
+<td>Allow PKI Updates OTA</td>
+<td>If false, over-the-air PKI updates are disabled. Setting this restriction to false does not disable CRL and OCSP checks. Default is true.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>forceAirDropUnmanaged</td>
 <td>boolean</td>
 <td>Treat AirDrop as Unmanaged Destination</td>
 <td>Treat AirDrop as Unmanaged Destination</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>allowActivityContinuation</td>
+<tr class="row-odd"><td>allowActivityContinuation</td>
 <td>boolean</td>
 <td>Allow Handoff</td>
 <td>If set to false, Handoff will be disabled.</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>allowFingerprintForUnlock</td>
+<tr class="row-even"><td>allowFingerprintForUnlock</td>
 <td>boolean</td>
 <td>Allow Touch ID to Unlock Device</td>
 <td>Allow Touch ID to Unlock Device</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>allowFingerprintModification</td>
+<tr class="row-odd"><td>allowFingerprintModification</td>
 <td>boolean</td>
 <td>Allow Modifying Touch ID Fingerprints</td>
 <td>Allow modifying Touch ID fingerprints</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>allowNotificationsModification</td>
+<tr class="row-even"><td>allowNotificationsModification</td>
 <td>boolean</td>
 <td>Allow Modifying Notifications Settings</td>
 <td>Allow Modifying Notifications Settings</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>blacklistedAppBundleIDs</td>
+<tr class="row-odd"><td>blacklistedAppBundleIDs</td>
 <td>array</td>
 <td>Blacklisted Apps</td>
-<td>Blacklisted Apps</td>
+<td>If present, prevents bundle IDs listed in the array from being shown or launchable.</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>whitelistedAppBundleIDs</td>
+<tr class="row-even"><td>whitelistedAppBundleIDs</td>
 <td>array</td>
 <td>Whitelisted Apps</td>
-<td>Whitelisted Apps</td>
+<td>If present, allows only bundle IDs listed in the array from being shown or launchable.</td>
 <td>n/a</td>
 </tr>
 </tbody>
 </table>
+</div>
 <div class="section" id="keys">
 <h2>Keys<a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="com.apple.applicationaccess-allowAppInstallation-auto">
@@ -773,16 +917,22 @@
 <p>Allow only a connected Mac host to install applications</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -790,6 +940,9 @@
 <td>True</td>
 <td>N/A</td>
 <td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>True</td>
 </tr>
 </tbody>
 </table>
@@ -797,19 +950,25 @@
 <div class="section" id="com.apple.applicationaccess-allowUIAppInstallation-auto">
 <h3>allowUIAppInstallation<a class="headerlink" href="#com.apple.applicationaccess-allowUIAppInstallation-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow App Installation from App Store</p>
-<p>Allow the user to install applications</p>
+<p>When false, the App Store is disabled and its icon is removed from the Home screen. However, users may continue to use Host apps (iTunes, Configurator) to install or update their apps.</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -817,6 +976,9 @@
 <td>True</td>
 <td>N/A</td>
 <td>N/A</td>
+<td>9.0</td>
+<td>N/A</td>
+<td>True</td>
 </tr>
 </tbody>
 </table>
@@ -824,19 +986,25 @@
 <div class="section" id="com.apple.applicationaccess-allowAutomaticAppDownloads-auto">
 <h3>allowAutomaticAppDownloads<a class="headerlink" href="#com.apple.applicationaccess-allowAutomaticAppDownloads-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow Automatic App Downloads</p>
-<p>Allow automatic app downloads (Supervised only)</p>
+<p>If set to false, prevents automatic downloading of apps purchased on other devices. Does not affect updates to existing apps. Defaults to true</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -844,6 +1012,9 @@
 <td>True</td>
 <td>N/A</td>
 <td>N/A</td>
+<td>9.0</td>
+<td>N/A</td>
+<td>True</td>
 </tr>
 </tbody>
 </table>
@@ -854,16 +1025,22 @@
 <p>Allow the user to remove apps (Supervised only)</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -871,6 +1048,9 @@
 <td>True</td>
 <td>N/A</td>
 <td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>True</td>
 </tr>
 </tbody>
 </table>
@@ -878,24 +1058,33 @@
 <div class="section" id="com.apple.applicationaccess-allowEnterpriseAppTrust-auto">
 <h3>allowEnterpriseAppTrust<a class="headerlink" href="#com.apple.applicationaccess-allowEnterpriseAppTrust-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow Trusting Enterprise Apps</p>
-<p>Allow the user to trust enterprise apps</p>
+<p>If set to false removes the Trust Enterprise Developer button in Settings-&gt;General-&gt;Profiles Device Management, preventing apps from being provisioned by universal provisioning profiles. This restriction applies to free developer accounts but it does not apply to enterprise app developers who are trusted because their apps were pushed via MDM, nor does it revoke previously granted trust. Defaults to true.</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>boolean</td>
 <td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>9.0</td>
 <td>N/A</td>
 <td>N/A</td>
 </tr>
@@ -908,22 +1097,31 @@
 <p>Allow the user to use the camera</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>boolean</td>
 <td>True</td>
 <td>N/A</td>
+<td>N/A</td>
+<td>0.0</td>
+<td>10.11</td>
 <td>N/A</td>
 </tr>
 </tbody>
@@ -935,16 +1133,22 @@
 <p>Allow user access of explicit content</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -952,6 +1156,9 @@
 <td>True</td>
 <td>N/A</td>
 <td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>True</td>
 </tr>
 </tbody>
 </table>
@@ -962,21 +1169,30 @@
 <p>Allow the user to take screenshots or screen recordings</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>boolean</td>
 <td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
 </tr>
@@ -986,19 +1202,25 @@
 <div class="section" id="com.apple.applicationaccess-allowRemoteScreenObservation-auto">
 <h3>allowRemoteScreenObservation<a class="headerlink" href="#com.apple.applicationaccess-allowRemoteScreenObservation-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow Remote Screen Observation</p>
-<p>Allow Classroom or similar to observe the screen</p>
+<p>Allow Classroom or similar to observe the screen. This key should be nested beneath allowScreenShot as a sub-restriction. If allowScreenShot is set to false, it also prevents the Classroom app from observing remote screens.</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -1006,6 +1228,9 @@
 <td>True</td>
 <td>N/A</td>
 <td>N/A</td>
+<td>9.3</td>
+<td>N/A</td>
+<td>True</td>
 </tr>
 </tbody>
 </table>
@@ -1016,16 +1241,22 @@
 <p>Allow use of iMessage (Supervised only)</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -1033,6 +1264,9 @@
 <td>True</td>
 <td>N/A</td>
 <td>N/A</td>
+<td>6.0</td>
+<td>N/A</td>
+<td>True</td>
 </tr>
 </tbody>
 </table>
@@ -1043,16 +1277,22 @@
 <p>Supervised only. If set to false, iBookstore will be disabled.</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -1060,6 +1300,9 @@
 <td>True</td>
 <td>N/A</td>
 <td>N/A</td>
+<td>6.0</td>
+<td>N/A</td>
+<td>True</td>
 </tr>
 </tbody>
 </table>
@@ -1070,21 +1313,30 @@
 <p>Supervised only. If set to false, the user will not be able to download media from the iBookstore that is tagged as erotica.</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>boolean</td>
 <td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>6.0</td>
 <td>N/A</td>
 <td>N/A</td>
 </tr>
@@ -1097,16 +1349,22 @@
 <p>If set to false, Apple Music will be disabled in the Music app.</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -1114,6 +1372,9 @@
 <td>True</td>
 <td>N/A</td>
 <td>N/A</td>
+<td>9.3</td>
+<td>10.12</td>
+<td>True</td>
 </tr>
 </tbody>
 </table>
@@ -1121,19 +1382,25 @@
 <div class="section" id="com.apple.applicationaccess-allowRadioService-auto">
 <h3>allowRadioService<a class="headerlink" href="#com.apple.applicationaccess-allowRadioService-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow iTunes Radio</p>
-<p>If set to false, iTunes Radio will be disabled in the Music app.</p>
+<p>If set to false, Apple Music Radio is disabled.</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -1141,6 +1408,9 @@
 <td>True</td>
 <td>N/A</td>
 <td>N/A</td>
+<td>9.3</td>
+<td>N/A</td>
+<td>True</td>
 </tr>
 </tbody>
 </table>
@@ -1151,21 +1421,30 @@
 <p>If set to false, disabled Shared Stream.</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>boolean</td>
 <td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>6.0</td>
 <td>N/A</td>
 <td>N/A</td>
 </tr>
@@ -1178,21 +1457,30 @@
 <p>If set to false, Wallet notifications will not be shown on the lock screen.</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>boolean</td>
 <td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>6.0</td>
 <td>N/A</td>
 <td>N/A</td>
 </tr>
@@ -1205,16 +1493,22 @@
 <p>Supervised only. If set to false, the user is prohibited from installing configuration profiles and certificates interactively.</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -1222,6 +1516,9 @@
 <td>True</td>
 <td>N/A</td>
 <td>N/A</td>
+<td>6.0</td>
+<td>N/A</td>
+<td>True</td>
 </tr>
 </tbody>
 </table>
@@ -1229,19 +1526,25 @@
 <div class="section" id="com.apple.applicationaccess-allowiTunes-auto">
 <h3>allowiTunes<a class="headerlink" href="#com.apple.applicationaccess-allowiTunes-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow use of iTunes</p>
-<p>Allow the user to access and use iTunes</p>
+<p>When false, the iTunes Music Store is disabled and its icon is removed from the Home screen. Users cannot preview, purchase, or download content.</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -1249,6 +1552,9 @@
 <td>True</td>
 <td>N/A</td>
 <td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>True</td>
 </tr>
 </tbody>
 </table>
@@ -1259,16 +1565,22 @@
 <p>Allow the user to access and use News</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -1276,6 +1588,9 @@
 <td>True</td>
 <td>N/A</td>
 <td>N/A</td>
+<td>9.0</td>
+<td>N/A</td>
+<td>True</td>
 </tr>
 </tbody>
 </table>
@@ -1286,16 +1601,22 @@
 <p>Allow the user to use Safari</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -1303,6 +1624,9 @@
 <td>True</td>
 <td>N/A</td>
 <td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>True</td>
 </tr>
 </tbody>
 </table>
@@ -1313,21 +1637,30 @@
 <p>Allow Game Center (Supervised only)</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>boolean</td>
 <td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>6.0</td>
 <td>N/A</td>
 <td>N/A</td>
 </tr>
@@ -1340,16 +1673,22 @@
 <p>Allow the user to add Friends on Game Center</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -1357,6 +1696,9 @@
 <td>True</td>
 <td>N/A</td>
 <td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>True</td>
 </tr>
 </tbody>
 </table>
@@ -1367,16 +1709,22 @@
 <p>Allow modifying Bluetooth settings</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -1384,6 +1732,9 @@
 <td>True</td>
 <td>N/A</td>
 <td>N/A</td>
+<td>10.0</td>
+<td>N/A</td>
+<td>True</td>
 </tr>
 </tbody>
 </table>
@@ -1394,16 +1745,22 @@
 <p>Allow modifying cellular data usage for apps settings</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -1411,6 +1768,9 @@
 <td>True</td>
 <td>N/A</td>
 <td>N/A</td>
+<td>7.0</td>
+<td>N/A</td>
+<td>True</td>
 </tr>
 </tbody>
 </table>
@@ -1421,16 +1781,22 @@
 <p>Allow modifying device name</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -1438,6 +1804,9 @@
 <td>True</td>
 <td>N/A</td>
 <td>N/A</td>
+<td>9.0</td>
+<td>N/A</td>
+<td>True</td>
 </tr>
 </tbody>
 </table>
@@ -1445,19 +1814,25 @@
 <div class="section" id="com.apple.applicationaccess-allowPasscodeModification-auto">
 <h3>allowPasscodeModification<a class="headerlink" href="#com.apple.applicationaccess-allowPasscodeModification-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow Modifying Passcode</p>
-<p>Allow modifying passcode (Supervised only)</p>
+<p>If set to false, prevents the device passcode from being added, changed, or removed. Defaults to true. This restriction is ignored by shared iPads.</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -1465,6 +1840,9 @@
 <td>True</td>
 <td>N/A</td>
 <td>N/A</td>
+<td>9.0</td>
+<td>N/A</td>
+<td>True</td>
 </tr>
 </tbody>
 </table>
@@ -1475,16 +1853,22 @@
 <p>Allow modifying Wallpaper (Supervised only)</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -1492,6 +1876,9 @@
 <td>True</td>
 <td>N/A</td>
 <td>N/A</td>
+<td>9.0</td>
+<td>N/A</td>
+<td>True</td>
 </tr>
 </tbody>
 </table>
@@ -1502,16 +1889,22 @@
 <p>Allow configuring restrictions (Supervised only)</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -1519,6 +1912,9 @@
 <td>True</td>
 <td>N/A</td>
 <td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>True</td>
 </tr>
 </tbody>
 </table>
@@ -1529,21 +1925,30 @@
 <p>Allow automatic sync while roaming</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>boolean</td>
 <td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
 </tr>
@@ -1556,21 +1961,30 @@
 <p>Allow iCloud sync for managed apps</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>boolean</td>
 <td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
 </tr>
@@ -1583,21 +1997,30 @@
 <p>Allow enterprise books to be backed up</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>boolean</td>
 <td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
 </tr>
@@ -1610,21 +2033,30 @@
 <p>Allow enterprise books notes and highlights to be synced</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>boolean</td>
 <td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
 </tr>
@@ -1637,21 +2069,30 @@
 <p>Allow the user to make purchases within applications</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>boolean</td>
 <td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
 </tr>
@@ -1664,16 +2105,22 @@
 <p>Allow multiplayer gaming</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -1681,6 +2128,9 @@
 <td>True</td>
 <td>N/A</td>
 <td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>True</td>
 </tr>
 </tbody>
 </table>
@@ -1691,16 +2141,22 @@
 <p>Allow video conferencing</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -1708,6 +2164,9 @@
 <td>True</td>
 <td>N/A</td>
 <td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>True</td>
 </tr>
 </tbody>
 </table>
@@ -1718,21 +2177,30 @@
 <p>Allow voice dialing while device is locked</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>boolean</td>
 <td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
 </tr>
@@ -1745,21 +2213,30 @@
 <p>Force encrypted backups</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>boolean</td>
 <td>False</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
 </tr>
@@ -1772,21 +2249,30 @@
 <p>Force Apple Watch wrist detection</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>boolean</td>
 <td>False</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>8.2</td>
 <td>N/A</td>
 <td>N/A</td>
 </tr>
@@ -1796,24 +2282,33 @@
 <div class="section" id="com.apple.applicationaccess-allowPairedWatch-auto">
 <h3>allowPairedWatch<a class="headerlink" href="#com.apple.applicationaccess-allowPairedWatch-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow Pairing With Apple Watch</p>
-<p>Allow pairing with Apple Watch</p>
+<p>If set to false, disables pairing with an Apple Watch. Any currently paired Apple Watch is unpaired and erased. Defaults to true.</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>boolean</td>
 <td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>9.0</td>
 <td>N/A</td>
 <td>N/A</td>
 </tr>
@@ -1826,16 +2321,22 @@
 <p>Supervised only. If set to false, the user cannot choose the option &#8220;Erase All Content and Settings&#8221; in Settings &gt; General &gt; Reset</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -1843,6 +2344,9 @@
 <td>True</td>
 <td>N/A</td>
 <td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>True</td>
 </tr>
 </tbody>
 </table>
@@ -1853,16 +2357,22 @@
 <p>If set to false, search results from the web will not be shown in Spotlight.</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -1870,6 +2380,9 @@
 <td>True</td>
 <td>N/A</td>
 <td>N/A</td>
+<td>0.0</td>
+<td>10.11</td>
+<td>True</td>
 </tr>
 </tbody>
 </table>
@@ -1877,19 +2390,25 @@
 <div class="section" id="com.apple.applicationaccess-allowCloudDocumentSync-auto">
 <h3>allowCloudDocumentSync<a class="headerlink" href="#com.apple.applicationaccess-allowCloudDocumentSync-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow iCloud Document Sync</p>
-<p>Allow document syncing with iCloud</p>
+<p>Allow document syncing with iCloud. When false, disables document and key-value syncing to iCloud.</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -1897,6 +2416,9 @@
 <td>True</td>
 <td>N/A</td>
 <td>N/A</td>
+<td>5.0</td>
+<td>10.11</td>
+<td>True</td>
 </tr>
 </tbody>
 </table>
@@ -1907,21 +2429,30 @@
 <p>Allow user to accept untrusted TLS certificates</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>boolean</td>
 <td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>5.0</td>
 <td>N/A</td>
 <td>N/A</td>
 </tr>
@@ -1934,21 +2465,30 @@
 <p>Send diagnostic and usage reports to Apple</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>boolean</td>
 <td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>6.0</td>
 <td>N/A</td>
 <td>N/A</td>
 </tr>
@@ -1958,24 +2498,33 @@
 <div class="section" id="com.apple.applicationaccess-allowDiagnosticSubmissionModification-auto">
 <h3>allowDiagnosticSubmissionModification<a class="headerlink" href="#com.apple.applicationaccess-allowDiagnosticSubmissionModification-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow modifying diagnostics settings</p>
-<p>Allow modifying diagnostics settings</p>
+<p>If set to false, the diagnostic submission and app analytics settings in the Diagnostics &amp; Usage pane in Settings cannot be modified</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>boolean</td>
+<td>True</td>
 <td>N/A</td>
+<td>N/A</td>
+<td>9.3.2</td>
 <td>N/A</td>
 <td>N/A</td>
 </tr>
@@ -1988,21 +2537,30 @@
 <p>Allow Photo Stream to be used on the device</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>boolean</td>
 <td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>5.0</td>
 <td>N/A</td>
 <td>N/A</td>
 </tr>
@@ -2015,21 +2573,30 @@
 <p>Allow iCloud Photo Library to be used on the device</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>boolean</td>
 <td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>9.0</td>
 <td>N/A</td>
 <td>N/A</td>
 </tr>
@@ -2038,25 +2605,34 @@
 </div>
 <div class="section" id="com.apple.applicationaccess-allowCloudBackup-auto">
 <h3>allowCloudBackup<a class="headerlink" href="#com.apple.applicationaccess-allowCloudBackup-auto" title="Permalink to this headline">¶</a></h3>
-<p>Allow iClould Backup</p>
+<p>Allow iCloud Backup</p>
 <p>Allow backup using iCloud</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>boolean</td>
 <td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>5.0</td>
 <td>N/A</td>
 <td>N/A</td>
 </tr>
@@ -2069,21 +2645,30 @@
 <p>Require the user&#8217;s iTunes password to be entered for every purchase</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>boolean</td>
 <td>False</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>5.0</td>
 <td>N/A</td>
 <td>N/A</td>
 </tr>
@@ -2096,21 +2681,30 @@
 <p>Ranking number for apps</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>integer</td>
 <td>1000</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
 </tr>
@@ -2123,21 +2717,30 @@
 <p>Ranking number for movies</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>integer</td>
 <td>1000</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
 </tr>
@@ -2150,21 +2753,30 @@
 <p>Ranking number for TV Shows</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>integer</td>
 <td>1000</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
 </tr>
@@ -2177,20 +2789,29 @@
 <p>Two-character code for the region used to specify ratings</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
@@ -2216,21 +2837,30 @@
 <p>Accept cookies: 0 - Never, 1 - From current website only (iOS 8) or visited sites (pre-iOS 8), 1.5 - From websites I visit, 2 - Always</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>integer</td>
 <td>2</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
 </tr>
@@ -2250,21 +2880,30 @@
 <p>Allow AutoFill in Safari</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>boolean</td>
 <td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
 </tr>
@@ -2277,21 +2916,30 @@
 <p>Allow JavaScript in Safari</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>boolean</td>
 <td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
 </tr>
@@ -2304,21 +2952,30 @@
 <p>Allow Pop-ups in Safari</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>boolean</td>
 <td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
 </tr>
@@ -2331,21 +2988,30 @@
 <p>Enable fraud warning in Safari</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>boolean</td>
 <td>False</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
 </tr>
@@ -2358,21 +3024,30 @@
 <p>Allow Siri</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>boolean</td>
 <td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
 </tr>
@@ -2385,21 +3060,30 @@
 <p>Allow Siri while device is locked</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>boolean</td>
 <td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>5.1</td>
 <td>N/A</td>
 <td>N/A</td>
 </tr>
@@ -2412,16 +3096,22 @@
 <p>Enable Siri Profanity Filter (Supervised devices only)</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -2429,6 +3119,9 @@
 <td>False</td>
 <td>N/A</td>
 <td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>True</td>
 </tr>
 </tbody>
 </table>
@@ -2439,16 +3132,22 @@
 <p>Allow Predictive Keyboard (Supervised devices only)</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -2456,6 +3155,9 @@
 <td>True</td>
 <td>N/A</td>
 <td>N/A</td>
+<td>8.1.3</td>
+<td>N/A</td>
+<td>True</td>
 </tr>
 </tbody>
 </table>
@@ -2466,16 +3168,22 @@
 <p>Allow Keyboard Shortcuts (Supervised devices only)</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -2483,6 +3191,9 @@
 <td>True</td>
 <td>N/A</td>
 <td>N/A</td>
+<td>9.0</td>
+<td>N/A</td>
+<td>True</td>
 </tr>
 </tbody>
 </table>
@@ -2493,16 +3204,22 @@
 <p>Allow Auto Correction (Supervised devices only)</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -2510,6 +3227,9 @@
 <td>True</td>
 <td>N/A</td>
 <td>N/A</td>
+<td>8.1.3</td>
+<td>N/A</td>
+<td>True</td>
 </tr>
 </tbody>
 </table>
@@ -2520,16 +3240,22 @@
 <p>Allow Spell Check (Supervised devices only)</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -2537,6 +3263,9 @@
 <td>True</td>
 <td>N/A</td>
 <td>N/A</td>
+<td>8.1.3</td>
+<td>N/A</td>
+<td>True</td>
 </tr>
 </tbody>
 </table>
@@ -2547,22 +3276,31 @@
 <p>Allow Define (Supervised devices only)</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>boolean</td>
 <td>True</td>
 <td>N/A</td>
+<td>N/A</td>
+<td>8.1.3</td>
+<td>10.11.2</td>
 <td>N/A</td>
 </tr>
 </tbody>
@@ -2574,21 +3312,30 @@
 <p>Enable allow open from unmanaged to managed</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>boolean</td>
 <td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>7.0</td>
 <td>N/A</td>
 <td>N/A</td>
 </tr>
@@ -2601,21 +3348,30 @@
 <p>Enable allow open from managed to unmanaged</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>boolean</td>
 <td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>7.0</td>
 <td>N/A</td>
 <td>N/A</td>
 </tr>
@@ -2628,21 +3384,30 @@
 <p>Treat AirDrop as Unmanaged Destination</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>boolean</td>
 <td>False</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>9.0</td>
 <td>N/A</td>
 <td>N/A</td>
 </tr>
@@ -2655,21 +3420,30 @@
 <p>If set to false, Handoff will be disabled.</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>boolean</td>
 <td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
 </tr>
@@ -2682,21 +3456,30 @@
 <p>Allow Touch ID to Unlock Device</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>boolean</td>
 <td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>7.0</td>
 <td>N/A</td>
 <td>N/A</td>
 </tr>
@@ -2709,21 +3492,30 @@
 <p>Allow modifying Touch ID fingerprints</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>boolean</td>
 <td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
 </tr>
@@ -2736,16 +3528,22 @@
 <p>Allow Modifying Notifications Settings</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -2753,6 +3551,9 @@
 <td>True</td>
 <td>N/A</td>
 <td>N/A</td>
+<td>9.3</td>
+<td>N/A</td>
+<td>True</td>
 </tr>
 </tbody>
 </table>
@@ -2760,19 +3561,25 @@
 <div class="section" id="com.apple.applicationaccess-blacklistedAppBundleIDs-auto">
 <h3>blacklistedAppBundleIDs<a class="headerlink" href="#com.apple.applicationaccess-blacklistedAppBundleIDs-auto" title="Permalink to this headline">¶</a></h3>
 <p>Blacklisted Apps</p>
-<p>Blacklisted Apps</p>
+<p>If present, prevents bundle IDs listed in the array from being shown or launchable.</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -2780,6 +3587,9 @@
 <td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
+<td>9.3</td>
+<td>N/A</td>
+<td>True</td>
 </tr>
 </tbody>
 </table>
@@ -2787,19 +3597,25 @@
 <div class="section" id="com.apple.applicationaccess-whitelistedAppBundleIDs-auto">
 <h3>whitelistedAppBundleIDs<a class="headerlink" href="#com.apple.applicationaccess-whitelistedAppBundleIDs-auto" title="Permalink to this headline">¶</a></h3>
 <p>Whitelisted Apps</p>
-<p>Whitelisted Apps</p>
+<p>If present, allows only bundle IDs listed in the array from being shown or launchable.</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -2807,6 +3623,9 @@
 <td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
+<td>9.3</td>
+<td>N/A</td>
+<td>True</td>
 </tr>
 </tbody>
 </table>

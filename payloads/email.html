@@ -86,7 +86,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../official.html">Official Links and Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../manifest.html">Manifest File Format</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../extmanifest.html">Extended Manifest Format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index-common.html">Common Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index-ios.html">iOS Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index-macos.html">macOS Payloads</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Payloads</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="activedirectory.html">Active Directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adcert.html">Active Directory Certificate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="airplay.html">AirPlay</a></li>
 <li class="toctree-l2"><a class="reference internal" href="airprint.html">AirPrint</a></li>
 <li class="toctree-l2"><a class="reference internal" href="applock.html">App Lock</a></li>
@@ -98,8 +103,10 @@
 <li class="toctree-l2"><a class="reference internal" href="certpkcs1.html">Certificate (PKCS#1)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certpkcs12.html">Certificate (PKCS#12)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certroot.html">Certificate (Root CA)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom.html">Custom Settings (MCX)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="domains.html">Domains</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">E-mail Account</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#keys">Keys</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#com.apple.mail.managed-EmailAccountDescription-auto">EmailAccountDescription</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#com.apple.mail.managed-EmailAccountType-auto">EmailAccountType</a></li>
@@ -133,26 +140,38 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="enrollment.html">Enrollment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="exchange.html">Exchange</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fv2.html">FileVault 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="font.html">Font</a></li>
 <li class="toctree-l2"><a class="reference internal" href="globalproxy.html">Global HTTP Proxy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="google.html">Google Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="identification.html">Identification</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ldap.html">LDAP Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mdm.html">MDM</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mobilepassword.html">Password Policy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passcode.html">Password Policy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="notification.html">Notification Settings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="osxserver.html">OSX Server Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="perappvpn.html">Per-App VPN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appmapping.html">App-to-Per-App VPN Mapping</a></li>
 <li class="toctree-l2"><a class="reference internal" href="defaults.html">Profile Defaults</a></li>
 <li class="toctree-l2"><a class="reference internal" href="profileremovalpassword.html">Profile Removal Password</a></li>
 <li class="toctree-l2"><a class="reference internal" href="restrictions.html">Restrictions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="scep.html">SCEP</a></li>
 <li class="toctree-l2"><a class="reference internal" href="shareddevice.html">Shared Device</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sharekit.html">ShareKit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sso.html">Single-Sign On</a></li>
 <li class="toctree-l2"><a class="reference internal" href="supervision.html">Supervision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="swupd.html">Software Update Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spctl.html">System Policy Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="systempolicy.html">System Policy (Gatekeeper)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sprule.html">System Policy Rule</a></li>
 <li class="toctree-l2"><a class="reference internal" href="vpn.html">VPN</a></li>
 <li class="toctree-l2"><a class="reference internal" href="webclip.html">WebClip</a></li>
 <li class="toctree-l2"><a class="reference internal" href="webcontentfilter.html">Web Content Filter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="wifi.html">Wi-Fi</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../macos/index.html">macOS Subsystem Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pdp/index.html">Profile Domain Plugins</a></li>
 </ul>
 
             
@@ -202,10 +221,30 @@
   <div class="section" id="e-mail-account">
 <h1>E-mail Account<a class="headerlink" href="#e-mail-account" title="Permalink to this headline">¶</a></h1>
 <p>An email payload creates an email account on the device.</p>
-<dl class="docutils">
-<dt>PayloadType</dt>
-<dd>com.apple.mail.managed</dd>
-</dl>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">PayloadType:</th><td class="field-body">com.apple.mail.managed</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Supervised Only:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">N/A</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">macOS:</th><td class="field-body">N/A</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">macOS Deprecated:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">N/A</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">iOS:</th><td class="field-body">N/A</td>
+</tr>
+<tr class="field-even field"><th class="field-name">iOS Deprecated:</th><td class="field-body">N/A</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Highlander:</th><td class="field-body">N/A</td>
+</tr>
+</tbody>
+</table>
 <table border="1" class="docutils">
 <colgroup>
 <col width="14%" />
@@ -223,199 +262,157 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>PayloadDescription</td>
-<td>string</td>
-<td>Payload Description</td>
-<td>Description of the payload</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>PayloadDisplayName</td>
-<td>string</td>
-<td>Payload Display Name</td>
-<td>Name of the payload</td>
-<td>always</td>
-</tr>
-<tr class="row-even"><td>PayloadIdentifier</td>
-<td>string</td>
-<td>Payload Identifier</td>
-<td>A unique identifier for the payload, dot-delimited.  Usually root PayloadIdentifier+subidentifier</td>
-<td>always</td>
-</tr>
-<tr class="row-odd"><td>PayloadType</td>
-<td>string</td>
-<td>Payload Type</td>
-<td>The type of the payload, a reverse dns string</td>
-<td>always</td>
-</tr>
-<tr class="row-even"><td>PayloadUUID</td>
-<td>string</td>
-<td>Payload UUID</td>
-<td>Unique identifier for the payload (format 01234567-89AB-CDEF-0123-456789ABCDEF)</td>
-<td>always</td>
-</tr>
-<tr class="row-odd"><td>PayloadVersion</td>
-<td>integer</td>
-<td>Payload Version</td>
-<td>The version of the whole configuration profile.</td>
-<td>always</td>
-</tr>
-<tr class="row-even"><td>PayloadOrganization</td>
-<td>string</td>
-<td>Payload Organization</td>
-<td>This value describes the issuing organization of the profile, as displayed to the user</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>EmailAccountDescription</td>
+<tr class="row-even"><td>EmailAccountDescription</td>
 <td>string</td>
 <td>Account Description</td>
 <td>The display name of the account (e.g. &#8220;Company Mail Account&#8221;)</td>
 <td>always</td>
 </tr>
-<tr class="row-even"><td>EmailAccountType</td>
+<tr class="row-odd"><td>EmailAccountType</td>
 <td>string</td>
 <td>Account Type</td>
 <td>The protocol for accessing the email account</td>
 <td>always</td>
 </tr>
-<tr class="row-odd"><td>EmailAccountName</td>
+<tr class="row-even"><td>EmailAccountName</td>
 <td>string</td>
 <td>Account Name</td>
 <td>The display name of the user (e.g. &#8220;John Appleseed&#8221;)</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>EmailAddress</td>
+<tr class="row-odd"><td>EmailAddress</td>
 <td>string</td>
 <td>Email Address</td>
 <td>The address of the account (e.g. &#8220;john&#64;company.com&#8221;)</td>
 <td>push</td>
 </tr>
-<tr class="row-odd"><td>disableMailRecentsSyncing</td>
+<tr class="row-even"><td>disableMailRecentsSyncing</td>
 <td>boolean</td>
 <td>Disable Mail Recents Syncing</td>
 <td>If set to true, this account is excluded from address Recents syncing.</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>allowMailDrop</td>
+<tr class="row-odd"><td>allowMailDrop</td>
 <td>boolean</td>
 <td>Allow Mail Drop</td>
 <td>If set to true, this account is allowed to use Mail Drop.</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>PreventMove</td>
+<tr class="row-even"><td>PreventMove</td>
 <td>boolean</td>
 <td>Prevent Move</td>
 <td> If set to true, messages may not be moved out of this email account into another account.</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>PreventAppSheet</td>
+<tr class="row-odd"><td>PreventAppSheet</td>
 <td>boolean</td>
 <td>Prevent App Sheet</td>
 <td>If set to true, this account will not be available for sending mail in third party applications</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>SMIMEEnabled</td>
+<tr class="row-even"><td>SMIMEEnabled</td>
 <td>boolean</td>
 <td>S/MIME Enabled</td>
 <td>If set to true, this account will support S/MIME</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>SMIMEEnablePerMessageSwitch</td>
+<tr class="row-odd"><td>SMIMEEnablePerMessageSwitch</td>
 <td>boolean</td>
 <td>S/MIME Enable Per-Message Switch</td>
 <td>If set to true, enable the per-message encryption switch.</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>SMIMESigningCertificateUUID</td>
+<tr class="row-even"><td>SMIMESigningCertificateUUID</td>
 <td>string</td>
 <td>S/MIME Signing Certificate</td>
 <td>The PayloadUUID of the identity certificate used to sign messages sent from this account.</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>SMIMEEncryptionCertificateUUID</td>
+<tr class="row-odd"><td>SMIMEEncryptionCertificateUUID</td>
 <td>string</td>
 <td>S/MIME Encryption Certificate</td>
 <td>The PayloadUUID of the identity certificate used to decrypt messages coming into this account.</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>IncomingMailServerAuthentication</td>
+<tr class="row-even"><td>IncomingMailServerAuthentication</td>
 <td>string</td>
 <td>Incoming Mail Server Authentification</td>
 <td>The authentication method for the incoming mail server</td>
 <td>always</td>
 </tr>
-<tr class="row-even"><td>IncomingMailServerHostName</td>
+<tr class="row-odd"><td>IncomingMailServerHostName</td>
 <td>string</td>
 <td>Mail Server</td>
 <td>Hostname or IP Address</td>
 <td>always</td>
 </tr>
-<tr class="row-odd"><td>IncomingMailServerIMAPPathPrefix</td>
+<tr class="row-even"><td>IncomingMailServerIMAPPathPrefix</td>
 <td>string</td>
 <td>Path Prefix</td>
 <td>Path prefix for IMAP mail server</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>IncomingMailServerPortNumber</td>
+<tr class="row-odd"><td>IncomingMailServerPortNumber</td>
 <td>integer</td>
 <td>Port</td>
 <td>Port number for incoming mail</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>IncomingMailServerUseSSL</td>
+<tr class="row-even"><td>IncomingMailServerUseSSL</td>
 <td>boolean</td>
 <td>Use SSL</td>
 <td>Retrieve incoming mail through Secure Socket Layer</td>
 <td>always</td>
 </tr>
-<tr class="row-even"><td>IncomingMailServerUsername</td>
+<tr class="row-odd"><td>IncomingMailServerUsername</td>
 <td>string</td>
 <td>Username</td>
 <td>The username used to connect to the server for incoming mail</td>
 <td>push</td>
 </tr>
-<tr class="row-odd"><td>IncomingPassword</td>
+<tr class="row-even"><td>IncomingPassword</td>
 <td>string</td>
 <td>Password</td>
 <td>The password for the incoming mail server</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>OutgoingPassword</td>
+<tr class="row-odd"><td>OutgoingPassword</td>
 <td>string</td>
 <td>Password</td>
 <td>The password for the outgoing mail server</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>OutgoingPasswordSameAsIncomingPassword</td>
+<tr class="row-even"><td>OutgoingPasswordSameAsIncomingPassword</td>
 <td>boolean</td>
 <td>Outgoing Password Same As Incoming</td>
 <td>SMTP authentication uses the same password as POP/IMAP</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>OutgoingMailServerAuthentication</td>
+<tr class="row-odd"><td>OutgoingMailServerAuthentication</td>
 <td>string</td>
 <td>Authentication Type</td>
 <td>The authentication method for the outgoing mail server</td>
 <td>always</td>
 </tr>
-<tr class="row-odd"><td>OutgoingMailServerHostName</td>
+<tr class="row-even"><td>OutgoingMailServerHostName</td>
 <td>string</td>
 <td>Mail Server</td>
 <td>Hostname or IP address for outgoing mail</td>
 <td>always</td>
 </tr>
-<tr class="row-even"><td>OutgoingMailServerPortNumber</td>
+<tr class="row-odd"><td>OutgoingMailServerPortNumber</td>
 <td>integer</td>
 <td>Port</td>
 <td>The port number for outgoing mail</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>OutgoingMailServerUseSSL</td>
+<tr class="row-even"><td>OutgoingMailServerUseSSL</td>
 <td>boolean</td>
 <td>Use SSL</td>
 <td>Send outgoing mail through Secure Socket Layer</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>OutgoingMailServerUsername</td>
+<tr class="row-odd"><td>OutgoingMailServerUsername</td>
 <td>string</td>
 <td>Username</td>
 <td>The username used to connect to the server for outgoing mail</td>
@@ -423,6 +420,7 @@
 </tr>
 </tbody>
 </table>
+</div>
 <div class="section" id="keys">
 <h2>Keys<a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="com.apple.mail.managed-EmailAccountDescription-auto">
@@ -431,22 +429,31 @@
 <p>The display name of the account (e.g. &#8220;Company Mail Account&#8221;)</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>string</td>
 <td>N/A</td>
 <td>always</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 </tr>
 </tbody>
@@ -458,22 +465,31 @@
 <p>The protocol for accessing the email account</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>string</td>
 <td>EmailTypeIMAP</td>
 <td>always</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 </tr>
 </tbody>
@@ -490,20 +506,29 @@
 <p>The display name of the user (e.g. &#8220;John Appleseed&#8221;)</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
@@ -517,22 +542,31 @@
 <p>The address of the account (e.g. &#8220;john&#64;company.com&#8221;)</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>string</td>
 <td>N/A</td>
 <td>push</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 </tr>
 </tbody>
@@ -544,21 +578,30 @@
 <p>If set to true, this account is excluded from address Recents syncing.</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>boolean</td>
 <td>False</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
 </tr>
@@ -571,21 +614,30 @@
 <p>If set to true, this account is allowed to use Mail Drop.</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>boolean</td>
 <td>False</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
 </tr>
@@ -598,20 +650,29 @@
 <p> If set to true, messages may not be moved out of this email account into another account.</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>boolean</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
@@ -625,20 +686,29 @@
 <p>If set to true, this account will not be available for sending mail in third party applications</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>boolean</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
@@ -652,20 +722,29 @@
 <p>If set to true, this account will support S/MIME</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>boolean</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
@@ -679,21 +758,30 @@
 <p>If set to true, enable the per-message encryption switch.</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>boolean</td>
 <td>False</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
 </tr>
@@ -706,16 +794,22 @@
 <p>The PayloadUUID of the identity certificate used to sign messages sent from this account.</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -723,6 +817,9 @@
 <td>N/A</td>
 <td>N/A</td>
 <td>^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 </tr>
 </tbody>
 </table>
@@ -733,16 +830,22 @@
 <p>The PayloadUUID of the identity certificate used to decrypt messages coming into this account.</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -750,6 +853,9 @@
 <td>N/A</td>
 <td>N/A</td>
 <td>^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 </tr>
 </tbody>
 </table>
@@ -760,22 +866,31 @@
 <p>The authentication method for the incoming mail server</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>string</td>
 <td>EmailAuthPassword</td>
 <td>always</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 </tr>
 </tbody>
@@ -795,22 +910,31 @@
 <p>Hostname or IP Address</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>string</td>
 <td>N/A</td>
 <td>always</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 </tr>
 </tbody>
@@ -822,20 +946,29 @@
 <p>Path prefix for IMAP mail server</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
@@ -849,21 +982,30 @@
 <p>Port number for incoming mail</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>integer</td>
 <td>993</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
 </tr>
@@ -876,22 +1018,31 @@
 <p>Retrieve incoming mail through Secure Socket Layer</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>boolean</td>
 <td>True</td>
 <td>always</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 </tr>
 </tbody>
@@ -903,22 +1054,31 @@
 <p>The username used to connect to the server for incoming mail</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>string</td>
 <td>N/A</td>
 <td>push</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 </tr>
 </tbody>
@@ -930,20 +1090,29 @@
 <p>The password for the incoming mail server</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
@@ -957,20 +1126,29 @@
 <p>The password for the outgoing mail server</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
@@ -984,21 +1162,30 @@
 <p>SMTP authentication uses the same password as POP/IMAP</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>boolean</td>
 <td>False</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
 </tr>
@@ -1011,22 +1198,31 @@
 <p>The authentication method for the outgoing mail server</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>string</td>
 <td>EmailAuthPassword</td>
 <td>always</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 </tr>
 </tbody>
@@ -1046,22 +1242,31 @@
 <p>Hostname or IP address for outgoing mail</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>string</td>
 <td>N/A</td>
 <td>always</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 </tr>
 </tbody>
@@ -1073,21 +1278,30 @@
 <p>The port number for outgoing mail</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>integer</td>
 <td>587</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
 </tr>
@@ -1100,21 +1314,30 @@
 <p>Send outgoing mail through Secure Socket Layer</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>boolean</td>
 <td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
 </tr>
@@ -1127,22 +1350,31 @@
 <p>The username used to connect to the server for outgoing mail</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>string</td>
 <td>N/A</td>
 <td>push</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 </tr>
 </tbody>

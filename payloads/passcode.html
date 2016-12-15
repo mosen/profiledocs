@@ -34,9 +34,9 @@
               href="../genindex.html"/>
         <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="Configuration Profiles  documentation" href="../index.html"/>
-        <link rel="up" title="Payloads" href="index.html"/>
-        <link rel="next" title="Notification Settings" href="notification.html"/>
-        <link rel="prev" title="MDM" href="mdm.html"/> 
+        <link rel="up" title="Common Payloads" href="index-common.html"/>
+        <link rel="next" title="iOS Payloads" href="index-ios.html"/>
+        <link rel="prev" title="Common Payloads" href="index-common.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -86,7 +86,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../official.html">Official Links and Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../manifest.html">Manifest File Format</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../extmanifest.html">Extended Manifest Format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index-common.html">Common Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index-ios.html">iOS Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index-macos.html">macOS Payloads</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Payloads</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="activedirectory.html">Active Directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adcert.html">Active Directory Certificate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="airplay.html">AirPlay</a></li>
 <li class="toctree-l2"><a class="reference internal" href="airprint.html">AirPrint</a></li>
 <li class="toctree-l2"><a class="reference internal" href="applock.html">App Lock</a></li>
@@ -98,16 +103,20 @@
 <li class="toctree-l2"><a class="reference internal" href="certpkcs1.html">Certificate (PKCS#1)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certpkcs12.html">Certificate (PKCS#12)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certroot.html">Certificate (Root CA)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom.html">Custom Settings (MCX)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="domains.html">Domains</a></li>
 <li class="toctree-l2"><a class="reference internal" href="email.html">E-mail Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="enrollment.html">Enrollment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="exchange.html">Exchange</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fv2.html">FileVault 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="font.html">Font</a></li>
 <li class="toctree-l2"><a class="reference internal" href="globalproxy.html">Global HTTP Proxy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="google.html">Google Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="identification.html">Identification</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ldap.html">LDAP Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mdm.html">MDM</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Password Policy</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#keys">Keys</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#com.apple.mobiledevice.passwordpolicy-manualFetchingWhenRoaming-auto">manualFetchingWhenRoaming</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#com.apple.mobiledevice.passwordpolicy-allowSimple-auto">allowSimple</a></li>
@@ -126,18 +135,28 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="notification.html">Notification Settings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="osxserver.html">OSX Server Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="perappvpn.html">Per-App VPN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appmapping.html">App-to-Per-App VPN Mapping</a></li>
 <li class="toctree-l2"><a class="reference internal" href="defaults.html">Profile Defaults</a></li>
 <li class="toctree-l2"><a class="reference internal" href="profileremovalpassword.html">Profile Removal Password</a></li>
 <li class="toctree-l2"><a class="reference internal" href="restrictions.html">Restrictions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="scep.html">SCEP</a></li>
 <li class="toctree-l2"><a class="reference internal" href="shareddevice.html">Shared Device</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sharekit.html">ShareKit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sso.html">Single-Sign On</a></li>
 <li class="toctree-l2"><a class="reference internal" href="supervision.html">Supervision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="swupd.html">Software Update Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spctl.html">System Policy Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="systempolicy.html">System Policy (Gatekeeper)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sprule.html">System Policy Rule</a></li>
 <li class="toctree-l2"><a class="reference internal" href="vpn.html">VPN</a></li>
 <li class="toctree-l2"><a class="reference internal" href="webclip.html">WebClip</a></li>
 <li class="toctree-l2"><a class="reference internal" href="webcontentfilter.html">Web Content Filter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="wifi.html">Wi-Fi</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../macos/index.html">macOS Subsystem Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pdp/index.html">Profile Domain Plugins</a></li>
 </ul>
 
             
@@ -168,13 +187,13 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
-          <li><a href="index.html">Payloads</a> &raquo;</li>
+          <li><a href="index-common.html">Common Payloads</a> &raquo;</li>
       
     <li>Password Policy</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/payloads/mobilepassword.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/payloads/passcode.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -185,11 +204,35 @@
            <div itemprop="articleBody">
             
   <div class="section" id="password-policy">
-<h1>Password Policy<a class="headerlink" href="#password-policy" title="Permalink to this headline">¶</a></h1>
-<dl class="docutils">
-<dt>PayloadType</dt>
-<dd>com.apple.mobiledevice.passwordpolicy</dd>
-</dl>
+<span id="payloadtype-com-apple-mobiledevice-passwordpolicy"></span><h1>Password Policy<a class="headerlink" href="#password-policy" title="Permalink to this headline">¶</a></h1>
+<p>On iOS, the key names generally reflect the expected functionality.</p>
+<p>On macOS, these settings will affect the password policy of a directory node.
+Additionally, some settings are applied via plist <code class="docutils literal"><span class="pre">com.apple.screensaver</span></code>. Most keys are translated into policy
+settings, see <span class="xref std std-ref">pwpolicy</span> for more information.</p>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">PayloadType:</th><td class="field-body">com.apple.mobiledevice.passwordpolicy</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Supervised Only:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">N/A</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">macOS:</th><td class="field-body">N/A</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">macOS Deprecated:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">N/A</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">iOS:</th><td class="field-body">N/A</td>
+</tr>
+<tr class="field-even field"><th class="field-name">iOS Deprecated:</th><td class="field-body">N/A</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Highlander:</th><td class="field-body">N/A</td>
+</tr>
+</tbody>
+</table>
 <table border="1" class="docutils">
 <colgroup>
 <col width="14%" />
@@ -207,109 +250,67 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>PayloadDescription</td>
-<td>string</td>
-<td>Payload Description</td>
-<td>Description of the payload</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>PayloadDisplayName</td>
-<td>string</td>
-<td>Payload Display Name</td>
-<td>Name of the payload</td>
-<td>always</td>
-</tr>
-<tr class="row-even"><td>PayloadIdentifier</td>
-<td>string</td>
-<td>Payload Identifier</td>
-<td>A unique identifier for the payload, dot-delimited.  Usually root PayloadIdentifier+subidentifier</td>
-<td>always</td>
-</tr>
-<tr class="row-odd"><td>PayloadType</td>
-<td>string</td>
-<td>Payload Type</td>
-<td>The type of the payload, a reverse dns string</td>
-<td>always</td>
-</tr>
-<tr class="row-even"><td>PayloadUUID</td>
-<td>string</td>
-<td>Payload UUID</td>
-<td>Unique identifier for the payload (format 01234567-89AB-CDEF-0123-456789ABCDEF)</td>
-<td>always</td>
-</tr>
-<tr class="row-odd"><td>PayloadVersion</td>
-<td>integer</td>
-<td>Payload Version</td>
-<td>The version of the whole configuration profile.</td>
-<td>always</td>
-</tr>
-<tr class="row-even"><td>PayloadOrganization</td>
-<td>string</td>
-<td>Payload Organization</td>
-<td>This value describes the issuing organization of the profile, as displayed to the user</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>manualFetchingWhenRoaming</td>
+<tr class="row-even"><td>manualFetchingWhenRoaming</td>
 <td>boolean</td>
 <td>Manual Fetching When Roaming</td>
 <td>Deprecated. Use allowGlobalBackgroundFetchWhenRoaming in the Restrictions payload instead.</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>allowSimple</td>
+<tr class="row-odd"><td>allowSimple</td>
 <td>boolean</td>
 <td>Allow Simple Value</td>
 <td>Permit the use of repeating, ascending, and descending character sequences</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>forcePIN</td>
+<tr class="row-even"><td>forcePIN</td>
 <td>boolean</td>
 <td>Require Passcode on Device</td>
 <td>Enforce the use of a passcode before using the device</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>maxFailedAttempts</td>
+<tr class="row-odd"><td>maxFailedAttempts</td>
 <td>integer</td>
 <td>Maximum Number of Failed Attempts</td>
 <td>Number of passcode entry attempts allowed before all data on device will be erased</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>maxInactivity</td>
+<tr class="row-even"><td>maxInactivity</td>
 <td>integer</td>
 <td>Auto-Lock</td>
 <td>The number of minutes for which the device can be idle (without being unlocked by the user) before it gets locked by the system</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>maxPINAgeInDays</td>
+<tr class="row-odd"><td>maxPINAgeInDays</td>
 <td>integer</td>
 <td>Maximum Passcode Age</td>
 <td>The number of days for which the passcode can remain unchanged</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>minComplexChars</td>
+<tr class="row-even"><td>minComplexChars</td>
 <td>integer</td>
 <td>Minimum Number of Complex Characters</td>
 <td>Smallest number of non-alphanumeric characters allowed</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>minLength</td>
+<tr class="row-odd"><td>minLength</td>
 <td>integer</td>
 <td>Minimum Passcode Length</td>
 <td>Smallest allowable number of characters in passcode</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>requireAlphanumeric</td>
+<tr class="row-even"><td>requireAlphanumeric</td>
 <td>boolean</td>
 <td>Require Alphabetic Value</td>
 <td>Require passcodes to contain at least one letter</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>pinHistory</td>
+<tr class="row-odd"><td>pinHistory</td>
 <td>integer</td>
 <td>Passcode History</td>
 <td>Number of unique passcodes required between passcode reuse</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>maxGracePeriod</td>
+<tr class="row-even"><td>maxGracePeriod</td>
 <td>integer</td>
 <td>Grace Period for Device Lock</td>
 <td>The maximum grace period, in minutes, to unlock the phone without entering a passcode</td>
@@ -317,6 +318,7 @@
 </tr>
 </tbody>
 </table>
+</div>
 <div class="section" id="keys">
 <h2>Keys<a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="com.apple.mobiledevice.passwordpolicy-manualFetchingWhenRoaming-auto">
@@ -325,20 +327,29 @@
 <p>Deprecated. Use allowGlobalBackgroundFetchWhenRoaming in the Restrictions payload instead.</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>boolean</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
@@ -352,16 +363,22 @@
 <p>Permit the use of repeating, ascending, and descending character sequences</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -369,9 +386,17 @@
 <td>True</td>
 <td>N/A</td>
 <td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 </tr>
 </tbody>
 </table>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">A simple passcode is defined as containing repeated characters, or increasing/decreasing characters (such as 123 or CBA).
+Setting this value to false is synonymous to setting minComplexChars to &#8220;1&#8221;.</p>
 </div>
 <div class="section" id="com.apple.mobiledevice.passwordpolicy-forcePIN-auto">
 <h3>forcePIN<a class="headerlink" href="#com.apple.mobiledevice.passwordpolicy-forcePIN-auto" title="Permalink to this headline">¶</a></h3>
@@ -379,16 +404,22 @@
 <p>Enforce the use of a passcode before using the device</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -396,9 +427,17 @@
 <td>True</td>
 <td>N/A</td>
 <td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 </tr>
 </tbody>
 </table>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Determines whether the user is forced to set a PIN.
+Simply setting this value (and not others) forces the user to enter a passcode, without imposing a length or quality.</p>
 </div>
 <div class="section" id="com.apple.mobiledevice.passwordpolicy-maxFailedAttempts-auto">
 <h3>maxFailedAttempts<a class="headerlink" href="#com.apple.mobiledevice.passwordpolicy-maxFailedAttempts-auto" title="Permalink to this headline">¶</a></h3>
@@ -406,16 +445,22 @@
 <p>Number of passcode entry attempts allowed before all data on device will be erased</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -423,9 +468,17 @@
 <td>0</td>
 <td>N/A</td>
 <td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 </tr>
 </tbody>
 </table>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Allowed range [1...10]. Specifies the number of allowed failed attempts to enter the passcode at the device&#8217;s lock screen.
+Once this number is exceeded, the device is locked and must be connected to its designated iTunes in order to be unlocked.</p>
 </div>
 <div class="section" id="com.apple.mobiledevice.passwordpolicy-maxInactivity-auto">
 <h3>maxInactivity<a class="headerlink" href="#com.apple.mobiledevice.passwordpolicy-maxInactivity-auto" title="Permalink to this headline">¶</a></h3>
@@ -433,20 +486,29 @@
 <p>The number of minutes for which the device can be idle (without being unlocked by the user) before it gets locked by the system</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>integer</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
@@ -454,22 +516,36 @@
 </tbody>
 </table>
 </div>
+<p>Default Infinity. Specifies the number of minutes for which the device can be idle (without being unlocked by the user) before it gets locked by the system.
+Once this limit is reached, the device is locked and the passcode must be entered.</p>
+<p>In macOS, this translates to the key <strong>idleTime</strong> in <code class="docutils literal"><span class="pre">/Library/Managed</span> <span class="pre">Preferences/com.apple.screensaver.plist</span></code>, which
+is the number of seconds until the screen is locked.</p>
+<dl class="docutils">
+<dt>macOS</dt>
+<dd>10.9+, possibly earlier</dd>
+</dl>
 <div class="section" id="com.apple.mobiledevice.passwordpolicy-maxPINAgeInDays-auto">
 <h3>maxPINAgeInDays<a class="headerlink" href="#com.apple.mobiledevice.passwordpolicy-maxPINAgeInDays-auto" title="Permalink to this headline">¶</a></h3>
 <p>Maximum Passcode Age</p>
 <p>The number of days for which the passcode can remain unchanged</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -477,9 +553,26 @@
 <td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 </tr>
 </tbody>
 </table>
+</div>
+<p>Default Infinity. Specifies the number of days for which the passcode can remain unchanged.
+After this number of days, the user is forced to change the passcode before the device is unlocked.</p>
+<dl class="docutils">
+<dt>macOS</dt>
+<dd>10.9+</dd>
+<dt>macOS 10.9</dt>
+<dd>This translates into the pwpolicy global policy field maxMinutesUntilChangePassword</dd>
+<dt>macOS 10.10+</dt>
+<dd>This translates into an account policy containing the key <strong>policyAttributeExpiresEveryNDays</strong> equal to the maxInactivity value.</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Profile Manager lists the maximum PIN age for macOS to be 730 days.</p>
 </div>
 <div class="section" id="com.apple.mobiledevice.passwordpolicy-minComplexChars-auto">
 <h3>minComplexChars<a class="headerlink" href="#com.apple.mobiledevice.passwordpolicy-minComplexChars-auto" title="Permalink to this headline">¶</a></h3>
@@ -487,16 +580,22 @@
 <p>Smallest number of non-alphanumeric characters allowed</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -504,9 +603,29 @@
 <td>0</td>
 <td>N/A</td>
 <td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 </tr>
 </tbody>
 </table>
+</div>
+<p>Specifies the minimum number of complex characters that a passcode must contain.
+A &#8220;complex&#8221; character is a character other than a number or a letter, such as <code class="docutils literal"><span class="pre">&amp;%$#</span></code>.</p>
+<dl class="docutils">
+<dt>macOS</dt>
+<dd>10.10+</dd>
+<dt>macOS 10.10+</dt>
+<dd>This translates into an account policy that contains the rule <code class="docutils literal"><span class="pre">policyAttributePassword</span> <span class="pre">matches</span> <span class="pre">'(.*[^a-zA-Z0-9].*){3,}'</span></code>.
+The number 3 in the regex signifies the configured number of complex characters.</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This implies the setting <strong>allowSimple = FALSE</strong> if minComplexChars is &gt; 0</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Profile Manager lists the maximum as being 4</p>
 </div>
 <div class="section" id="com.apple.mobiledevice.passwordpolicy-minLength-auto">
 <h3>minLength<a class="headerlink" href="#com.apple.mobiledevice.passwordpolicy-minLength-auto" title="Permalink to this headline">¶</a></h3>
@@ -514,16 +633,22 @@
 <p>Smallest allowable number of characters in passcode</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -531,9 +656,25 @@
 <td>0</td>
 <td>N/A</td>
 <td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 </tr>
 </tbody>
 </table>
+</div>
+<p>Specifies the minimum overall length of the passcode.
+This parameter is independent of the also optional minComplexChars argument.</p>
+<dl class="docutils">
+<dt>macOS</dt>
+<dd>10.10+</dd>
+<dt>macOS 10.10+</dt>
+<dd>This translates into an account policy that contains the rule <code class="docutils literal"><span class="pre">policyAttributePassword</span> <span class="pre">matches</span> <span class="pre">'.{4,}'</span></code>.
+The number 4 in the regex signifies the number of characters required.</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Profile Manager lists the maximum as being 16</p>
 </div>
 <div class="section" id="com.apple.mobiledevice.passwordpolicy-requireAlphanumeric-auto">
 <h3>requireAlphanumeric<a class="headerlink" href="#com.apple.mobiledevice.passwordpolicy-requireAlphanumeric-auto" title="Permalink to this headline">¶</a></h3>
@@ -541,16 +682,22 @@
 <p>Require passcodes to contain at least one letter</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -558,26 +705,42 @@
 <td>False</td>
 <td>N/A</td>
 <td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 </tr>
 </tbody>
 </table>
 </div>
+<p>Specifies whether the user must enter alphabetic characters (&#8220;abcd&#8221;), or if numbers are sufficient.</p>
+<dl class="docutils">
+<dt>macOS</dt>
+<dd>10.10+</dd>
+<dt>macOS 10.10+</dt>
+<dd>This translates into an account policy that contains the rule <code class="docutils literal"><span class="pre">policyAttributePassword</span> <span class="pre">matches</span> <span class="pre">'^(?=.*[0-9])(?=.*[a-zA-Z]).+'</span></code>.</dd>
+</dl>
 <div class="section" id="com.apple.mobiledevice.passwordpolicy-pinHistory-auto">
 <h3>pinHistory<a class="headerlink" href="#com.apple.mobiledevice.passwordpolicy-pinHistory-auto" title="Permalink to this headline">¶</a></h3>
 <p>Passcode History</p>
 <p>Number of unique passcodes required between passcode reuse</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -585,26 +748,41 @@
 <td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 </tr>
 </tbody>
 </table>
 </div>
+<p>When the user changes the passcode, it has to be unique within the last N entries in the history.
+Minimum value is 1, maximum value is 50.</p>
+<dl class="docutils">
+<dt>macOS</dt>
+<dd>10.9+</dd>
+</dl>
 <div class="section" id="com.apple.mobiledevice.passwordpolicy-maxGracePeriod-auto">
 <h3>maxGracePeriod<a class="headerlink" href="#com.apple.mobiledevice.passwordpolicy-maxGracePeriod-auto" title="Permalink to this headline">¶</a></h3>
 <p>Grace Period for Device Lock</p>
 <p>The maximum grace period, in minutes, to unlock the phone without entering a passcode</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Type</th>
 <th class="head">Default</th>
 <th class="head">Required</th>
 <th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -612,9 +790,24 @@
 <td>-1</td>
 <td>N/A</td>
 <td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
 </tr>
 </tbody>
 </table>
+</div>
+<p>The maximum grace period, in minutes, to unlock the phone without entering a passcode.
+Default is 0, that is no grace period, which requires a passcode immediately.</p>
+<p>In macOS, this translates to the key <strong>askForPasswordDelay</strong> which is the number of seconds as an integer until you
+will need to unlock the account.</p>
+<dl class="docutils">
+<dt>macOS</dt>
+<dd>10.9+, Possibly earlier</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">allowFingerprintModification not documented in this manifest.</p>
 </div>
 </div>
 </div>
@@ -626,10 +819,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="notification.html" class="btn btn-neutral float-right" title="Notification Settings" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="index-ios.html" class="btn btn-neutral float-right" title="iOS Payloads" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="mdm.html" class="btn btn-neutral" title="MDM" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index-common.html" class="btn btn-neutral" title="Common Payloads" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
