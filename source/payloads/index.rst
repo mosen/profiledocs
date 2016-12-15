@@ -29,6 +29,7 @@ Payloads
     google.rst
     identification.rst
     ldap.rst
+    loginwindow.rst
     mdm.rst
     passcode.rst
     notification.rst
@@ -39,6 +40,7 @@ Payloads
     profileremovalpassword.rst
     restrictions.rst
     scep.rst
+    screensaver.rst
     shareddevice.rst
     sharekit.rst
     sso.rst

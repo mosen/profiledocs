@@ -36,6 +36,7 @@ Keys
 .. note:: Allowed range [1...10]. Specifies the number of allowed failed attempts to enter the passcode at the device's lock screen.
     Once this number is exceeded, the device is locked and must be connected to its designated iTunes in order to be unlocked.
 
+.. _payloadkey-com.apple.mobiledevice.passwordpolicy.maxInactivity:
 .. pfmkey:: maxInactivity manifests/ac2/com.apple.mobiledevice.passwordpolicy manifest.plist
 
 Default Infinity. Specifies the number of minutes for which the device can be idle (without being unlocked by the user) before it gets locked by the system.
