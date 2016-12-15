@@ -9,6 +9,10 @@ On macOS, these settings will affect the password policy of a directory node.
 Additionally, some settings are applied via plist ``com.apple.screensaver``. Most keys are translated into policy
 settings, see :ref:`pwpolicy` for more information.
 
+Summary
+-------
+
+.. pfmheader:: manifests/ac2/com.apple.mobiledevice.passwordpolicy manifest.plist
 .. pfm:: manifests/ac2/com.apple.mobiledevice.passwordpolicy manifest.plist
 
 Keys

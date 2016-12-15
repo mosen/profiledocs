@@ -3,6 +3,11 @@ CardDAV
 
 As of macOS v10.8 and later, this payload type supports obtaining CardDAVUsername and CardDAVPassword from an Identification Payload, if present.
 
+Summary
+-------
+
+.. pfmheader:: manifests/ac2/com.apple.carddav.account manifest.plist
+
 .. pfm:: manifests/ac2/com.apple.carddav.account manifest.plist
 
 Keys

@@ -1,9 +1,12 @@
 SCEP
 ====
 
+Summary
+-------
+
+.. pfmheader:: manifests/ac2/com.apple.security.scep manifest.plist
 .. pfm:: manifests/ac2/com.apple.security.scep manifest.plist
     :key: PayloadContent
-
 
 Keys
 ----

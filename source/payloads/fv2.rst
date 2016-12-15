@@ -1,7 +1,7 @@
 FileVault 2
 ===========
 
-In macOS 10.9, you can use FileVault 2 to perform full XTS-AES 128 encryption on the contents of a volume.
+You can use FileVault 2 to perform full XTS-AES 128 encryption on the contents of a volume.
 Removal of the FileVault payload does not disable FileVault.
 
 A personal recovery user will normally be created unless the UseRecoveryKey key value is false.
@@ -11,16 +11,11 @@ a specific certificate payload is referenced, or the UseKeychain key value is se
 
 In all cases, the certificate information must be set up properly for FileVault or it will be ignored and no institutional recovery key will be set up.
 
+Summary
+-------
 
+.. pfmheader:: manifests/manual/com.apple.MCX.FileVault2 manifest.plist
 .. pfm:: manifests/manual/com.apple.MCX.FileVault2 manifest.plist
-
-Requirements
-------------
-
-macOS
-    10.9+
-iOS
-    N/A
 
 Keys
 ----

@@ -9,6 +9,7 @@ macOS Payloads
     custom.rst
     fv2.rst
     identification.rst
+    appmapping.rst
     sharekit.rst
     spctl.rst
     sprule.rst

@@ -7,26 +7,17 @@ A Restrictions payload allows the administrator to restrict the user from doing 
 
 The Restrictions payload is supported in iOS; some keys are also supported in macOS, as noted below.
 
+Summary
+-------
+
+.. pfmheader:: manifests/manual/com.apple.applicationaccess manifest.plist
 .. pfm:: manifests/manual/com.apple.applicationaccess manifest.plist
 
 Keys
 ----
 
 .. pfmkey:: allowAppInstallation manifests/manual/com.apple.applicationaccess manifest.plist
-
-Supervised
-    YES
-
-.. tip:: This key is deprecated on unsupervised devices.
-
 .. pfmkey:: allowUIAppInstallation manifests/manual/com.apple.applicationaccess manifest.plist
-
-Supervised
-    YES
-
-iOS
-    9.0+
-
 .. pfmkey:: allowAutomaticAppDownloads manifests/manual/com.apple.applicationaccess manifest.plist
 .. pfmkey:: allowAppRemoval manifests/manual/com.apple.applicationaccess manifest.plist
 .. pfmkey:: allowEnterpriseAppTrust manifests/manual/com.apple.applicationaccess manifest.plist

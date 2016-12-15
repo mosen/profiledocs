@@ -7,15 +7,11 @@ This payload allows you to save names of the account user and prompt text. If le
 
 The Identification payload is not supported in iOS.
 
+Summary
+-------
+
+.. pfmheader:: manifests/manual/com.apple.configurationprofile.identification manifest.plist
 .. pfm:: manifests/manual/com.apple.configurationprofile.identification manifest.plist
-
-Requirements
-------------
-
-macOS
-    Any
-iOS
-    N/A
 
 Keys
 ----

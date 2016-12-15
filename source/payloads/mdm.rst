@@ -1,6 +1,12 @@
 MDM
 ===
 
+This payload, when installed, will attempt to enroll the device into an MDM server.
+
+Summary
+-------
+
+.. pfmheader:: manifests/ac2/com.apple.mdm manifest.plist
 .. pfm:: manifests/ac2/com.apple.mdm manifest.plist
 
 Keys

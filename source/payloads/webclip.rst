@@ -1,6 +1,10 @@
 WebClip
 =======
 
+Summary
+-------
+
+.. pfmheader:: manifests/ac2/com.apple.webClip.managed manifest.plist
 .. pfm:: manifests/ac2/com.apple.webClip.managed manifest.plist
 
 Keys

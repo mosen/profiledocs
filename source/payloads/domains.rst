@@ -1,6 +1,10 @@
 Domains
 =======
 
+Summary
+-------
+
+.. pfmheader:: manifests/ac2/com.apple.domains manifest.plist
 .. pfm:: manifests/ac2/com.apple.domains manifest.plist
 
 Keys

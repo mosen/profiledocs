@@ -3,6 +3,11 @@ CalDAV
 
 This payload configures a CalDAV account.
 
+Summary
+-------
+
+.. pfmheader:: manifests/ac2/com.apple.caldav.account manifest.plist
+
 .. pfm:: manifests/ac2/com.apple.caldav.account manifest.plist
 
 Keys

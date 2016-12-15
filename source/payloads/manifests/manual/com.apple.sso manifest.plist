@@ -12,6 +12,8 @@
         <integer>1</integer>
         <key>pfm_domain</key>
         <string>com.apple.sso</string>
+        <key>pfm_ios_min</key>
+        <string>7.0</string>
         <key>pfm_subkeys</key>
         <array>
             <dict>

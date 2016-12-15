@@ -4,22 +4,14 @@ Shared Device
 The Shared Device Configuration Payload allows admins to specify optional text displayed on the login window and
 lock screen (i.e. a "If Lost, Return To" message and Asset Tag Information).
 
-.. pfm:: manifests/ac2/com.apple.shareddeviceconfiguration manifest.plist
+Summary
+-------
 
-Requirements
-------------
-
-iOS
-    9.3+
-Supervised
-    YES
-Scope
-    System
-
-
+.. pfmheader:: manifests/manual/com.apple.shareddeviceconfiguration manifest.plist
+.. pfm:: manifests/manual/com.apple.shareddeviceconfiguration manifest.plist
 
 Keys
 ----
 
-.. pfmkey:: IfLostReturnToMessage manifests/ac2/com.apple.shareddeviceconfiguration manifest.plist
-.. pfmkey:: AssetTagInformation manifests/ac2/com.apple.shareddeviceconfiguration manifest.plist
+.. pfmkey:: IfLostReturnToMessage manifests/manual/com.apple.shareddeviceconfiguration manifest.plist
+.. pfmkey:: AssetTagInformation manifests/manual/com.apple.shareddeviceconfiguration manifest.plist

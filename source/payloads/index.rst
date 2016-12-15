@@ -33,6 +33,8 @@ Payloads
     passcode.rst
     notification.rst
     osxserver.rst
+    perappvpn.rst
+    appmapping.rst
     defaults.rst
     profileremovalpassword.rst
     restrictions.rst

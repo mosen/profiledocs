@@ -12,6 +12,8 @@
         <integer>1</integer>
         <key>pfm_domain</key>
         <string>com.apple.MCX.FileVault2</string>
+        <key>pfm_macos_min</key>
+        <string>10.9</string>
         <key>pfm_subkeys</key>
         <array>
             <dict>

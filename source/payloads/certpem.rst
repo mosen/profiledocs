@@ -3,6 +3,11 @@ Certificate (PEM)
 
 PEM-encoded certificate without private key. May contain root certificates.
 
+Summary
+-------
+
+.. pfmheader:: manifests/ac2/com.apple.security.pem manifest.plist
+
 .. pfm:: manifests/ac2/com.apple.security.pem manifest.plist
 
 Keys

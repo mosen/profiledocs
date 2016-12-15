@@ -10,6 +10,10 @@ Collection formats (.ttc or .otc) are not supported.
     Two fonts with the same PostScript name are considered to be the same font even if their contents differ.
     Installing two different fonts with the same PostScript name is not supported, and the resulting behavior is undefined.
 
+Summary
+-------
+
+.. pfmheader:: manifests/ac2/com.apple.font manifest.plist
 .. pfm:: manifests/ac2/com.apple.font manifest.plist
 
 Keys

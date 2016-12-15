@@ -3,6 +3,11 @@ Certificate (PKCS#1)
 
 DER-encoded certificate without private key. May contain root certificates.
 
+Summary
+-------
+
+.. pfmheader:: manifests/ac2/com.apple.security.pkcs1 manifest.plist
+
 .. pfm:: manifests/ac2/com.apple.security.pkcs1 manifest.plist
 
 Keys

@@ -1,19 +1,23 @@
 Notification Settings
 =====================
 
-It can contain only one payload, which must be installed on supervised devices. It is supported on the User Channel.
+It is supported on the User Channel.
 
 This payload specifies the restriction enforced notification settings for apps, using their bundle identifiers.
 
-.. pfm:: manifests/ac2/com.apple.notificationsettings manifest.plist
+Summary
+-------
 
-Requirements
-------------
-
-- iOS 9.3+
+.. pfmheader:: manifests/manual/com.apple.notificationsettings manifest.plist
+.. pfm:: manifests/manual/com.apple.notificationsettings manifest.plist
 
 Keys
 ----
 
-.. pfmkey:: NotificationSettings manifests/ac2/com.apple.notificationsettings manifest.plist
+.. pfmkey:: NotificationSettings manifests/manual/com.apple.notificationsettings manifest.plist
 
+Notification Settings Item
+""""""""""""""""""""""""""
+
+.. pfm:: manifests/manual/com.apple.notificationsettings manifest.plist
+    :key: NotificationSettings.NotificationSetting

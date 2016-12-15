@@ -1,13 +1,8 @@
 Single-Sign On
 ==============
 
+.. pfmheader:: manifests/manual/com.apple.sso manifest.plist
 .. pfm:: manifests/manual/com.apple.sso manifest.plist
-
-Requirements
-------------
-
-- iOS 7.0+
-
 
 Keys
 ----
