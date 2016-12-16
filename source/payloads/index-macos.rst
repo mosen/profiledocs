@@ -17,6 +17,7 @@ macOS Payloads
     sprule.rst
     systempolicy.rst
     systemconfiguration.rst
+    trackpad.rst
     userpreferences.rst
 
 

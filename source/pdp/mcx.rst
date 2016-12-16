@@ -18,12 +18,12 @@ Domains
 - com.apple.screensaver (:ref:`payloadtype-com.apple.screensaver`)
 - com.apple.appstore (:ref:`payloadtype-com.apple.appstore`)
 - com.apple.preference.security (:ref:`payloadtype-com.apple.preference.security`)
-- com.apple.trackpad
+- com.apple.trackpad (:ref:`payloadtype-com.apple.trackpad`)
 - com.apple.universalaccess
 - com.apple.gamed
 - com.apple.ShareKitHelper (:ref:`payloadtype-com.apple.ShareKitHelper`)
 - com.apple.ironwood.support
-- com.apple.proxy.http.global
+- com.apple.proxy.http.global (:ref:`payloadtype-com.apple.proxy.http.global`)
 - com.apple.desktop
 - com.apple.MCXRedirector
 - com.apple.MCX.TimeMachine
@@ -42,10 +42,10 @@ Domains
 - com.apple.finder
 - com.apple.DiscRecording
 - com.apple.systemuiserver
-- com.apple.loginwindow
+- com.apple.loginwindow (:ref:`payloadtype-com.apple.loginwindow`)
 - com.apple.applicationaccess.new
 - com.apple.MCX
-- com.apple.SoftwareUpdate
+- com.apple.SoftwareUpdate (:ref:`payloadtype-com.apple.SoftwareUpdate`)
 - com.apple.mcxprinting
 - com.apple.dashboard
 

@@ -1,3 +1,5 @@
+.. _payloadtype-com.apple.proxy.http.global:
+
 Global HTTP Proxy
 =================
 

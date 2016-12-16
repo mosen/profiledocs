@@ -27,6 +27,7 @@ Payloads
     exchange.rst
     fv2.rst
     font.rst
+    gamecenter.rst
     globalproxy.rst
     google.rst
     identification.rst
@@ -54,6 +55,7 @@ Payloads
     systemconfiguration.rst
     systempolicy.rst
     sprule.rst
+    trackpad.rst
     userpreferences.rst
     vpn.rst
     webclip.rst
