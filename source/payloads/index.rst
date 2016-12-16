@@ -18,6 +18,7 @@ Payloads
     certpkcs1.rst
     certpkcs12.rst
     certroot.rst
+    coremediaio.rst
     custom.rst
     domains.rst
     email.rst
@@ -41,14 +42,17 @@ Payloads
     restrictions.rst
     scep.rst
     screensaver.rst
+    setupassistant.rst
     shareddevice.rst
     sharekit.rst
     sso.rst
     supervision.rst
     swupd.rst
     spctl.rst
+    systemconfiguration.rst
     systempolicy.rst
     sprule.rst
+    userpreferences.rst
     vpn.rst
     webclip.rst
     webcontentfilter.rst

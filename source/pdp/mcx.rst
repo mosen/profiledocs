@@ -8,11 +8,11 @@ Domains
 -------
 
 - com.apple.Safari
-- com.apple.SystemConfiguration
-- com.apple.SetupAssistant.managed
-- com.apple.coremediaio.support
-- com.apple.preferences.users
-- com.apple.domains
+- com.apple.SystemConfiguration (:ref:`payloadtype-com.apple.SystemConfiguration`)
+- com.apple.SetupAssistant.managed (:ref:`payloadtype-com.apple.SetupAssistant.managed`)
+- com.apple.coremediaio.support (:ref:`payloadtype-com.apple.coremediaio.support`)
+- com.apple.preferences.users (:ref:`payloadtype-com.apple.preferences.users`)
+- com.apple.domains (:ref:`payloadtype-com.apple.domains`)
 - com.apple.airprint (:ref:`payloadtype-com.apple.airprint`)
 - com.apple.screensaver.user
 - com.apple.screensaver
