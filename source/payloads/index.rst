@@ -10,6 +10,7 @@ Payloads
     airplay.rst
     airprint.rst
     applock.rst
+    appstore.rst
     caldav.rst
     calendar.rst
     carddav.rst
@@ -42,6 +43,7 @@ Payloads
     restrictions.rst
     scep.rst
     screensaver.rst
+    securityui.rst
     setupassistant.rst
     shareddevice.rst
     sharekit.rst

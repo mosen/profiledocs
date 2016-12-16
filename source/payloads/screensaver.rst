@@ -1,3 +1,5 @@
+.. _payloadtype-com.apple.screensaver:
+
 Screen Saver
 ============
 
@@ -15,9 +17,14 @@ Keys
 .. pfmkey:: loginWindowIdleTime manifests/manual/com.apple.screensaver manifest.plist
 .. pfmkey:: idleTime manifests/manual/com.apple.screensaver manifest.plist
 
-.. warning:: Completely incompatible with :ref:`payloadkey-com.apple.mobiledevice.passwordpolicy.maxInactivity`
+.. warning:: Incompatible with :ref:`payloadkey-com.apple.mobiledevice.passwordpolicy.maxInactivity`
 
 
 .. pfmkey:: loginWindowModulePath manifests/manual/com.apple.screensaver manifest.plist
 
 .. pfmkey:: askForPassword manifests/manual/com.apple.screensaver manifest.plist
+
+.. pfmkey:: askForPasswordDelay manifests/manual/com.apple.screensaver manifest.plist
+
+.. warning:: Incompatible with :ref:`payloadkey-com.apple.mobiledevice.passwordpolicy.maxGracePeriod`
+

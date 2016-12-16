@@ -15,9 +15,9 @@ Domains
 - com.apple.domains (:ref:`payloadtype-com.apple.domains`)
 - com.apple.airprint (:ref:`payloadtype-com.apple.airprint`)
 - com.apple.screensaver.user
-- com.apple.screensaver
-- com.apple.appstore
-- com.apple.preference.security
+- com.apple.screensaver (:ref:`payloadtype-com.apple.screensaver`)
+- com.apple.appstore (:ref:`payloadtype-com.apple.appstore`)
+- com.apple.preference.security (:ref:`payloadtype-com.apple.preference.security`)
 - com.apple.trackpad
 - com.apple.universalaccess
 - com.apple.gamed
