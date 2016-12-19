@@ -35,15 +35,15 @@ Domains
 - com.apple.familycontrols.timelimits
 - com.apple.familycontrols.contentfilter
 - com.apple.systempreferences
-- com.apple.SubmitDiagInfo
-- com.apple.NetworkBrowser
+- com.apple.SubmitDiagInfo (:ref:`payloadtype-com.apple.SubmitDiagInfo`)
+- com.apple.NetworkBrowser (:ref:`payloadtype-com.apple.NetworkBrowser`)
 - loginwindow
 - com.apple.loginitems.managed
 - com.apple.finder
 - com.apple.DiscRecording
 - com.apple.systemuiserver
 - com.apple.loginwindow (:ref:`payloadtype-com.apple.loginwindow`)
-- com.apple.applicationaccess.new
+- com.apple.applicationaccess.new (:ref:`payloadtype-com.apple.applicationaccess.new`)
 - com.apple.MCX
 - com.apple.SoftwareUpdate (:ref:`payloadtype-com.apple.SoftwareUpdate`)
 - com.apple.mcxprinting

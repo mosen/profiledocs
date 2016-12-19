@@ -40,6 +40,7 @@ Payloads
     perappvpn.rst
     appmapping.rst
     defaults.rst
+    parentalcontrols.rst
     profileremovalpassword.rst
     restrictions.rst
     scep.rst
@@ -52,6 +53,7 @@ Payloads
     supervision.rst
     swupd.rst
     spctl.rst
+    submitdiag.rst
     systemconfiguration.rst
     systempolicy.rst
     sprule.rst
