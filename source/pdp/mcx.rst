@@ -41,10 +41,10 @@ Domains
 - com.apple.loginitems.managed
 - com.apple.finder
 - com.apple.DiscRecording
-- com.apple.systemuiserver
+- com.apple.systemuiserver (:ref:`payloadtype-com.apple.systemuiserver`)
 - com.apple.loginwindow (:ref:`payloadtype-com.apple.loginwindow`)
 - com.apple.applicationaccess.new (:ref:`payloadtype-com.apple.applicationaccess.new`)
-- com.apple.MCX
+- com.apple.MCX (:ref:`payloadtype-com.apple.MCX`)
 - com.apple.SoftwareUpdate (:ref:`payloadtype-com.apple.SoftwareUpdate`)
 - com.apple.mcxprinting (:ref:`payloadtype-com.apple.mcxprinting`)
 - com.apple.dashboard (:ref:`payloadtype-com.apple.dashboard`)

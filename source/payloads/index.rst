@@ -23,6 +23,7 @@ Payloads
     custom.rst
     dashwidgets.rst
     desktop.rst
+    discrecording.rst
     dock.rst
     domains.rst
     email.rst
@@ -40,6 +41,7 @@ Payloads
     loginwindow.rst
     mcxredirector.rst
     mdm.rst
+    mediaaccess.rst
     passcode.rst
     printing.rst
     networkbrowser.rst

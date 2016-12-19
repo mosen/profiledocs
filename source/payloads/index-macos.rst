@@ -10,6 +10,7 @@ macOS Payloads
     custom.rst
     dashwidgets.rst
     desktop.rst
+    discrecording.rst
     dock.rst
     energysaver.rst
     fv2.rst
@@ -17,6 +18,7 @@ macOS Payloads
     printing.rst
     appmapping.rst
     mcxredirector.rst
+    mediaaccess.rst
     setupassistant.rst
     sharekit.rst
     spctl.rst
