@@ -8,6 +8,7 @@ macOS Payloads
     activedirectory.rst
     coremediaio.rst
     custom.rst
+    desktop.rst
     fv2.rst
     identification.rst
     appmapping.rst

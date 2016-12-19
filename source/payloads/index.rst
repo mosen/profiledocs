@@ -21,6 +21,7 @@ Payloads
     certroot.rst
     coremediaio.rst
     custom.rst
+    desktop.rst
     domains.rst
     email.rst
     enrollment.rst
