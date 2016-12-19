@@ -24,8 +24,8 @@ Domains
 - com.apple.ShareKitHelper (:ref:`payloadtype-com.apple.ShareKitHelper`)
 - com.apple.ironwood.support
 - com.apple.proxy.http.global (:ref:`payloadtype-com.apple.proxy.http.global`)
-- com.apple.desktop
-- com.apple.MCXRedirector
+- com.apple.desktop (:ref:`payloadtype-com.apple.desktop`)
+- com.apple.MCXRedirector (:ref:`payloadtype-com.apple.MCXRedirector`)
 - com.apple.MCX.TimeMachine
 - com.apple.MCX.sidebar
 - com.apple.configurationprofile.identification (:ref:`payloadtype-com.apple.configurationprofile.identification`)
@@ -34,7 +34,7 @@ Domains
 - com.apple.familycontrols.timelimits.v2
 - com.apple.familycontrols.timelimits
 - com.apple.familycontrols.contentfilter
-- com.apple.systempreferences
+- com.apple.systempreferences (:ref:`payloadtype-com.apple.systempreferences`)
 - com.apple.SubmitDiagInfo (:ref:`payloadtype-com.apple.SubmitDiagInfo`)
 - com.apple.NetworkBrowser (:ref:`payloadtype-com.apple.NetworkBrowser`)
 - loginwindow

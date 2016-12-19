@@ -21,7 +21,9 @@ Payloads
     certroot.rst
     coremediaio.rst
     custom.rst
+    dashwidgets.rst
     desktop.rst
+    dock.rst
     domains.rst
     email.rst
     enrollment.rst
@@ -33,9 +35,13 @@ Payloads
     google.rst
     identification.rst
     ldap.rst
+    logging.rst
     loginwindow.rst
+    mcxredirector.rst
     mdm.rst
     passcode.rst
+    printing.rst
+    networkbrowser.rst
     notification.rst
     osxserver.rst
     perappvpn.rst
@@ -57,6 +63,7 @@ Payloads
     submitdiag.rst
     systemconfiguration.rst
     systempolicy.rst
+    sysprefs.rst
     sprule.rst
     trackpad.rst
     userpreferences.rst
