@@ -10,6 +10,7 @@ Payloads
     airplay.rst
     airprint.rst
     applock.rst
+    appstore.rst
     caldav.rst
     calendar.rst
     carddav.rst
@@ -18,35 +19,55 @@ Payloads
     certpkcs1.rst
     certpkcs12.rst
     certroot.rst
+    coremediaio.rst
     custom.rst
+    dashwidgets.rst
+    desktop.rst
+    dock.rst
     domains.rst
     email.rst
+    energysaver.rst
     enrollment.rst
     exchange.rst
     fv2.rst
     font.rst
+    gamecenter.rst
     globalproxy.rst
     google.rst
     identification.rst
     ldap.rst
+    logging.rst
+    loginwindow.rst
+    mcxredirector.rst
     mdm.rst
     passcode.rst
+    printing.rst
+    networkbrowser.rst
     notification.rst
     osxserver.rst
     perappvpn.rst
     appmapping.rst
     defaults.rst
+    parentalcontrols.rst
     profileremovalpassword.rst
     restrictions.rst
     scep.rst
+    screensaver.rst
+    securityui.rst
+    setupassistant.rst
     shareddevice.rst
     sharekit.rst
     sso.rst
     supervision.rst
     swupd.rst
     spctl.rst
+    submitdiag.rst
+    systemconfiguration.rst
     systempolicy.rst
+    sysprefs.rst
     sprule.rst
+    trackpad.rst
+    userpreferences.rst
     vpn.rst
     webclip.rst
     webcontentfilter.rst

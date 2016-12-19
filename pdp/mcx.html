@@ -36,7 +36,7 @@
     <link rel="top" title="Configuration Profiles  documentation" href="../index.html"/>
         <link rel="up" title="Profile Domain Plugins" href="index.html"/>
         <link rel="next" title="wifi" href="wifi.html"/>
-        <link rel="prev" title="Profile Domain Plugins" href="index.html"/> 
+        <link rel="prev" title="loginwindow" href="loginwindow.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -92,6 +92,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../payloads/index.html">Payloads</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../macos/index.html">macOS Subsystem Notes</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Profile Domain Plugins</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="dock.html">Dock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loginwindow.html">loginwindow</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">mcx</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#domains">Domains</a></li>
 </ul>
@@ -153,24 +155,24 @@ Some of these domains still seem to receive updates.</p>
 <h2>Domains<a class="headerlink" href="#domains" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>com.apple.Safari</li>
-<li>com.apple.SystemConfiguration</li>
-<li>com.apple.SetupAssistant.managed</li>
-<li>com.apple.coremediaio.support</li>
-<li>com.apple.preferences.users</li>
-<li>com.apple.domains</li>
+<li>com.apple.SystemConfiguration (<a class="reference internal" href="../payloads/systemconfiguration.html#payloadtype-com-apple-systemconfiguration"><span class="std std-ref">SystemConfiguration (Proxies)</span></a>)</li>
+<li>com.apple.SetupAssistant.managed (<a class="reference internal" href="../payloads/setupassistant.html#payloadtype-com-apple-setupassistant-managed"><span class="std std-ref">Setup Assistant</span></a>)</li>
+<li>com.apple.coremediaio.support (<a class="reference internal" href="../payloads/coremediaio.html#payloadtype-com-apple-coremediaio-support"><span class="std std-ref">Core Media IO (Camera)</span></a>)</li>
+<li>com.apple.preferences.users (<a class="reference internal" href="../payloads/userpreferences.html#payloadtype-com-apple-preferences-users"><span class="std std-ref">User Preferences (iCloud)</span></a>)</li>
+<li>com.apple.domains (<a class="reference internal" href="../payloads/domains.html#payloadtype-com-apple-domains"><span class="std std-ref">Domains</span></a>)</li>
 <li>com.apple.airprint (<a class="reference internal" href="../payloads/airprint.html#payloadtype-com-apple-airprint"><span class="std std-ref">AirPrint</span></a>)</li>
 <li>com.apple.screensaver.user</li>
-<li>com.apple.screensaver</li>
-<li>com.apple.appstore</li>
-<li>com.apple.preference.security</li>
-<li>com.apple.trackpad</li>
+<li>com.apple.screensaver (<a class="reference internal" href="../payloads/screensaver.html#payloadtype-com-apple-screensaver"><span class="std std-ref">Screen Saver</span></a>)</li>
+<li>com.apple.appstore (<a class="reference internal" href="../payloads/appstore.html#payloadtype-com-apple-appstore"><span class="std std-ref">App Store</span></a>)</li>
+<li>com.apple.preference.security (<a class="reference internal" href="../payloads/securityui.html#payloadtype-com-apple-preference-security"><span class="std std-ref">UI Security Preferences</span></a>)</li>
+<li>com.apple.trackpad (<a class="reference internal" href="../payloads/trackpad.html#payloadtype-com-apple-trackpad"><span class="std std-ref">TrackPad Settings</span></a>)</li>
 <li>com.apple.universalaccess</li>
 <li>com.apple.gamed</li>
 <li>com.apple.ShareKitHelper (<a class="reference internal" href="../payloads/sharekit.html#payloadtype-com-apple-sharekithelper"><span class="std std-ref">ShareKit</span></a>)</li>
 <li>com.apple.ironwood.support</li>
-<li>com.apple.proxy.http.global</li>
-<li>com.apple.desktop</li>
-<li>com.apple.MCXRedirector</li>
+<li>com.apple.proxy.http.global (<a class="reference internal" href="../payloads/globalproxy.html#payloadtype-com-apple-proxy-http-global"><span class="std std-ref">Global HTTP Proxy</span></a>)</li>
+<li>com.apple.desktop (<span class="xref std std-ref">payloadtype-com.apple.desktop</span>)</li>
+<li>com.apple.MCXRedirector (<a class="reference internal" href="../payloads/mcxredirector.html#payloadtype-com-apple-mcxredirector"><span class="std std-ref">Folder Redirection (MCX)</span></a>)</li>
 <li>com.apple.MCX.TimeMachine</li>
 <li>com.apple.MCX.sidebar</li>
 <li>com.apple.configurationprofile.identification (<a class="reference internal" href="../payloads/identification.html#payloadtype-com-apple-configurationprofile-identification"><span class="std std-ref">Identification</span></a>)</li>
@@ -179,20 +181,20 @@ Some of these domains still seem to receive updates.</p>
 <li>com.apple.familycontrols.timelimits.v2</li>
 <li>com.apple.familycontrols.timelimits</li>
 <li>com.apple.familycontrols.contentfilter</li>
-<li>com.apple.systempreferences</li>
-<li>com.apple.SubmitDiagInfo</li>
-<li>com.apple.NetworkBrowser</li>
+<li>com.apple.systempreferences (<span class="xref std std-ref">payloadtype-com.apple.systempreferences</span>)</li>
+<li>com.apple.SubmitDiagInfo (<a class="reference internal" href="../payloads/submitdiag.html#payloadtype-com-apple-submitdiaginfo"><span class="std std-ref">Submit Diagnostics</span></a>)</li>
+<li>com.apple.NetworkBrowser (<a class="reference internal" href="../payloads/networkbrowser.html#payloadtype-com-apple-networkbrowser"><span class="std std-ref">Network Browser (Finder)</span></a>)</li>
 <li>loginwindow</li>
 <li>com.apple.loginitems.managed</li>
 <li>com.apple.finder</li>
 <li>com.apple.DiscRecording</li>
 <li>com.apple.systemuiserver</li>
-<li>com.apple.loginwindow</li>
-<li>com.apple.applicationaccess.new</li>
+<li>com.apple.loginwindow (<a class="reference internal" href="../payloads/loginwindow.html#payloadtype-com-apple-loginwindow"><span class="std std-ref">Loginwindow</span></a>)</li>
+<li>com.apple.applicationaccess.new (<a class="reference internal" href="../payloads/parentalcontrols.html#payloadtype-com-apple-applicationaccess-new"><span class="std std-ref">Parental Controls</span></a>)</li>
 <li>com.apple.MCX</li>
-<li>com.apple.SoftwareUpdate</li>
-<li>com.apple.mcxprinting</li>
-<li>com.apple.dashboard</li>
+<li>com.apple.SoftwareUpdate (<a class="reference internal" href="../payloads/swupd.html#payloadtype-com-apple-softwareupdate"><span class="std std-ref">Software Update Server</span></a>)</li>
+<li>com.apple.mcxprinting (<a class="reference internal" href="../payloads/printing.html#payloadtype-com-apple-mcxprinting"><span class="std std-ref">Printing</span></a>)</li>
+<li>com.apple.dashboard (<a class="reference internal" href="../payloads/dashwidgets.html#payloadtype-com-apple-dashboard"><span class="std std-ref">Dashboard Widgets</span></a>)</li>
 </ul>
 </div>
 </div>
@@ -207,7 +209,7 @@ Some of these domains still seem to receive updates.</p>
         <a href="wifi.html" class="btn btn-neutral float-right" title="wifi" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="Profile Domain Plugins" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="loginwindow.html" class="btn btn-neutral" title="loginwindow" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

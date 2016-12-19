@@ -95,6 +95,7 @@
 <li class="toctree-l2"><a class="reference internal" href="airplay.html">AirPlay</a></li>
 <li class="toctree-l2"><a class="reference internal" href="airprint.html">AirPrint</a></li>
 <li class="toctree-l2"><a class="reference internal" href="applock.html">App Lock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appstore.html">App Store</a></li>
 <li class="toctree-l2"><a class="reference internal" href="caldav.html">CalDAV</a></li>
 <li class="toctree-l2"><a class="reference internal" href="calendar.html">Calendar Subscription</a></li>
 <li class="toctree-l2"><a class="reference internal" href="carddav.html">CardDAV</a></li>
@@ -103,6 +104,7 @@
 <li class="toctree-l2"><a class="reference internal" href="certpkcs1.html">Certificate (PKCS#1)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certpkcs12.html">Certificate (PKCS#12)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certroot.html">Certificate (Root CA)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coremediaio.html">Core Media IO (Camera)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="custom.html">Custom Settings (MCX)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="domains.html">Domains</a></li>
 <li class="toctree-l2"><a class="reference internal" href="email.html">E-mail Account</a></li>
@@ -114,6 +116,7 @@
 <li class="toctree-l2"><a class="reference internal" href="google.html">Google Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="identification.html">Identification</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ldap.html">LDAP Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loginwindow.html">Loginwindow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mdm.html">MDM</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Password Policy</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a></li>
@@ -141,14 +144,18 @@
 <li class="toctree-l2"><a class="reference internal" href="profileremovalpassword.html">Profile Removal Password</a></li>
 <li class="toctree-l2"><a class="reference internal" href="restrictions.html">Restrictions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="scep.html">SCEP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screensaver.html">Screen Saver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setupassistant.html">Setup Assistant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="shareddevice.html">Shared Device</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sharekit.html">ShareKit</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sso.html">Single-Sign On</a></li>
 <li class="toctree-l2"><a class="reference internal" href="supervision.html">Supervision</a></li>
 <li class="toctree-l2"><a class="reference internal" href="swupd.html">Software Update Server</a></li>
 <li class="toctree-l2"><a class="reference internal" href="spctl.html">System Policy Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="systemconfiguration.html">SystemConfiguration (Proxies)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="systempolicy.html">System Policy (Gatekeeper)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sprule.html">System Policy Rule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="userpreferences.html">User Preferences (iCloud)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="vpn.html">VPN</a></li>
 <li class="toctree-l2"><a class="reference internal" href="webclip.html">WebClip</a></li>
 <li class="toctree-l2"><a class="reference internal" href="webcontentfilter.html">Web Content Filter</a></li>
@@ -481,7 +488,7 @@ Simply setting this value (and not others) forces the user to enter a passcode, 
 Once this number is exceeded, the device is locked and must be connected to its designated iTunes in order to be unlocked.</p>
 </div>
 <div class="section" id="com.apple.mobiledevice.passwordpolicy-maxInactivity-auto">
-<h3>maxInactivity<a class="headerlink" href="#com.apple.mobiledevice.passwordpolicy-maxInactivity-auto" title="Permalink to this headline">¶</a></h3>
+<span id="payloadkey-com-apple-mobiledevice-passwordpolicy-maxinactivity"></span><h3>maxInactivity<a class="headerlink" href="#com.apple.mobiledevice.passwordpolicy-maxInactivity-auto" title="Permalink to this headline">¶</a></h3>
 <p>Auto-Lock</p>
 <p>The number of minutes for which the device can be idle (without being unlocked by the user) before it gets locked by the system</p>
 <table border="1" class="docutils">
@@ -762,7 +769,7 @@ Minimum value is 1, maximum value is 50.</p>
 <dd>10.9+</dd>
 </dl>
 <div class="section" id="com.apple.mobiledevice.passwordpolicy-maxGracePeriod-auto">
-<h3>maxGracePeriod<a class="headerlink" href="#com.apple.mobiledevice.passwordpolicy-maxGracePeriod-auto" title="Permalink to this headline">¶</a></h3>
+<span id="payloadkey-com-apple-mobiledevice-passwordpolicy-maxgraceperiod"></span><h3>maxGracePeriod<a class="headerlink" href="#com.apple.mobiledevice.passwordpolicy-maxGracePeriod-auto" title="Permalink to this headline">¶</a></h3>
 <p>Grace Period for Device Lock</p>
 <p>The maximum grace period, in minutes, to unlock the phone without entering a passcode</p>
 <table border="1" class="docutils">

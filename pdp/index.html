@@ -34,7 +34,7 @@
               href="../genindex.html"/>
         <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="Configuration Profiles  documentation" href="../index.html"/>
-        <link rel="next" title="mcx" href="mcx.html"/>
+        <link rel="next" title="Dock" href="dock.html"/>
         <link rel="prev" title="Password Policy" href="../macos/pwpolicy.html"/> 
 
   
@@ -91,6 +91,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../payloads/index.html">Payloads</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../macos/index.html">macOS Subsystem Notes</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Profile Domain Plugins</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dock.html">Dock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loginwindow.html">loginwindow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mcx.html">mcx</a></li>
 <li class="toctree-l2"><a class="reference internal" href="wifi.html">wifi</a></li>
 </ul>
@@ -143,10 +145,16 @@
 <h1>Profile Domain Plugins<a class="headerlink" href="#profile-domain-plugins" title="Permalink to this headline">¶</a></h1>
 <p>This is basically a list of <strong>.profileDomainPlugin</strong> plugins, which I&#8217;m currently using to document the responsiblity
 of each PayloadType.</p>
-<p>Profile domain plugins live in <code class="docutils literal"><span class="pre">/System/Library/CoreServices/ManagedClient.app/Contents/PlugIns</span></code>.</p>
+<p>Profile domain plugins live in <code class="docutils literal"><span class="pre">/System/Library/CoreServices/ManagedClient.app/Contents/PlugIns</span></code>. More recently
+as of Sierra some have been added to <code class="docutils literal"><span class="pre">/System/Library/ConfigurationProfiles/PlugIns</span></code>.</p>
 <div class="toctree-wrapper compound">
 <p class="caption"><span class="caption-text">Profile Domain Plugins:</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="dock.html">Dock</a></li>
+<li class="toctree-l1"><a class="reference internal" href="loginwindow.html">loginwindow</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="loginwindow.html#domains">Domains</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="mcx.html">mcx</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="mcx.html#domains">Domains</a></li>
 </ul>
@@ -166,7 +174,7 @@ of each PayloadType.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="mcx.html" class="btn btn-neutral float-right" title="mcx" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="dock.html" class="btn btn-neutral float-right" title="Dock" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../macos/pwpolicy.html" class="btn btn-neutral" title="Password Policy" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>

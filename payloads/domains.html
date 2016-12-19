@@ -95,6 +95,7 @@
 <li class="toctree-l2"><a class="reference internal" href="airplay.html">AirPlay</a></li>
 <li class="toctree-l2"><a class="reference internal" href="airprint.html">AirPrint</a></li>
 <li class="toctree-l2"><a class="reference internal" href="applock.html">App Lock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appstore.html">App Store</a></li>
 <li class="toctree-l2"><a class="reference internal" href="caldav.html">CalDAV</a></li>
 <li class="toctree-l2"><a class="reference internal" href="calendar.html">Calendar Subscription</a></li>
 <li class="toctree-l2"><a class="reference internal" href="carddav.html">CardDAV</a></li>
@@ -103,6 +104,7 @@
 <li class="toctree-l2"><a class="reference internal" href="certpkcs1.html">Certificate (PKCS#1)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certpkcs12.html">Certificate (PKCS#12)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certroot.html">Certificate (Root CA)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coremediaio.html">Core Media IO (Camera)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="custom.html">Custom Settings (MCX)</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Domains</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a></li>
@@ -112,6 +114,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#com.apple.domains-SafariPasswordAutoFillDomains-auto">SafariPasswordAutoFillDomains</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#links">Links</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="email.html">E-mail Account</a></li>
@@ -123,6 +126,7 @@
 <li class="toctree-l2"><a class="reference internal" href="google.html">Google Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="identification.html">Identification</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ldap.html">LDAP Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loginwindow.html">Loginwindow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mdm.html">MDM</a></li>
 <li class="toctree-l2"><a class="reference internal" href="passcode.html">Password Policy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="notification.html">Notification Settings</a></li>
@@ -133,14 +137,18 @@
 <li class="toctree-l2"><a class="reference internal" href="profileremovalpassword.html">Profile Removal Password</a></li>
 <li class="toctree-l2"><a class="reference internal" href="restrictions.html">Restrictions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="scep.html">SCEP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screensaver.html">Screen Saver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setupassistant.html">Setup Assistant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="shareddevice.html">Shared Device</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sharekit.html">ShareKit</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sso.html">Single-Sign On</a></li>
 <li class="toctree-l2"><a class="reference internal" href="supervision.html">Supervision</a></li>
 <li class="toctree-l2"><a class="reference internal" href="swupd.html">Software Update Server</a></li>
 <li class="toctree-l2"><a class="reference internal" href="spctl.html">System Policy Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="systemconfiguration.html">SystemConfiguration (Proxies)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="systempolicy.html">System Policy (Gatekeeper)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sprule.html">System Policy Rule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="userpreferences.html">User Preferences (iCloud)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="vpn.html">VPN</a></li>
 <li class="toctree-l2"><a class="reference internal" href="webclip.html">WebClip</a></li>
 <li class="toctree-l2"><a class="reference internal" href="webcontentfilter.html">Web Content Filter</a></li>
@@ -196,7 +204,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="domains">
-<h1>Domains<a class="headerlink" href="#domains" title="Permalink to this headline">¶</a></h1>
+<span id="payloadtype-com-apple-domains"></span><h1>Domains<a class="headerlink" href="#domains" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
 <table class="docutils field-list" frame="void" rules="none">
@@ -240,20 +248,20 @@
 <tbody valign="top">
 <tr class="row-even"><td>EmailDomains</td>
 <td>array</td>
-<td>Email Domains</td>
-<td>Array of email domains</td>
+<td>Unmarked Email Domains</td>
+<td>Any email address that does not have a suffix that matches one of the unmarked email domains specified by the key EmailDomains will be considered out-of-domain and will be highlighted as such in the Mail app.</td>
 <td>n/a</td>
 </tr>
 <tr class="row-odd"><td>WebDomains</td>
 <td>array</td>
-<td>Web Domains</td>
-<td>Array of web domains</td>
+<td>Managed Safari Web Domains</td>
+<td>Opening a document originating from a managed Safari web domain causes iOS to treat the document as managed for the purpose of Managed Open In.</td>
 <td>n/a</td>
 </tr>
 <tr class="row-even"><td>SafariPasswordAutoFillDomains</td>
 <td>array</td>
-<td>Password Autofill Domains</td>
-<td>Array of web domains</td>
+<td>Managed Safari Web Domains</td>
+<td>Users can save passwords in Safari only from URLs matching the patterns listed here.</td>
 <td>n/a</td>
 </tr>
 </tbody>
@@ -263,8 +271,8 @@
 <h2>Keys<a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="com.apple.domains-EmailDomains-auto">
 <h3>EmailDomains<a class="headerlink" href="#com.apple.domains-EmailDomains-auto" title="Permalink to this headline">¶</a></h3>
-<p>Email Domains</p>
-<p>Array of email domains</p>
+<p>Unmarked Email Domains</p>
+<p>Any email address that does not have a suffix that matches one of the unmarked email domains specified by the key EmailDomains will be considered out-of-domain and will be highlighted as such in the Mail app.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="14%" />
@@ -299,8 +307,8 @@
 </div>
 <div class="section" id="com.apple.domains-WebDomains-auto">
 <h3>WebDomains<a class="headerlink" href="#com.apple.domains-WebDomains-auto" title="Permalink to this headline">¶</a></h3>
-<p>Web Domains</p>
-<p>Array of web domains</p>
+<p>Managed Safari Web Domains</p>
+<p>Opening a document originating from a managed Safari web domain causes iOS to treat the document as managed for the purpose of Managed Open In.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="14%" />
@@ -335,8 +343,8 @@
 </div>
 <div class="section" id="com.apple.domains-SafariPasswordAutoFillDomains-auto">
 <h3>SafariPasswordAutoFillDomains<a class="headerlink" href="#com.apple.domains-SafariPasswordAutoFillDomains-auto" title="Permalink to this headline">¶</a></h3>
-<p>Password Autofill Domains</p>
-<p>Array of web domains</p>
+<p>Managed Safari Web Domains</p>
+<p>Users can save passwords in Safari only from URLs matching the patterns listed here.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="14%" />
@@ -362,13 +370,19 @@
 <td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
-<td>N/A</td>
+<td>9.3</td>
 <td>N/A</td>
 <td>N/A</td>
 </tr>
 </tbody>
 </table>
 </div>
+</div>
+<div class="section" id="links">
+<h2>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW252">Official</a>.</li>
+</ul>
 </div>
 </div>
 
