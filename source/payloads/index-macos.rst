@@ -11,6 +11,7 @@ macOS Payloads
     dashwidgets.rst
     desktop.rst
     dock.rst
+    energysaver.rst
     fv2.rst
     identification.rst
     printing.rst

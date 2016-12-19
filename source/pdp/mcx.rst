@@ -46,6 +46,6 @@ Domains
 - com.apple.applicationaccess.new (:ref:`payloadtype-com.apple.applicationaccess.new`)
 - com.apple.MCX
 - com.apple.SoftwareUpdate (:ref:`payloadtype-com.apple.SoftwareUpdate`)
-- com.apple.mcxprinting
-- com.apple.dashboard
+- com.apple.mcxprinting (:ref:`payloadtype-com.apple.mcxprinting`)
+- com.apple.dashboard (:ref:`payloadtype-com.apple.dashboard`)
 

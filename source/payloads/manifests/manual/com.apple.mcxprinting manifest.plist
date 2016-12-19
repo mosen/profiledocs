@@ -239,9 +239,11 @@
                                 <key>pfm_title</key>
                                 <string>Printer Options</string>
                                 <key>pfm_description</key>
-                                <string>Printer Options (?)</string>
+                                <string>Printer Options. A dict of key to value including options normally supplied to lpadmin</string>
                                 <key>pfm_type</key>
-                                <string>string</string>
+                                <string>dict</string>
+                                <key>pfm_default</key>
+                                <dict/>
                             </dict>
                         </array>
                     </dict>

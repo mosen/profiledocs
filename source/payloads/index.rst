@@ -26,6 +26,7 @@ Payloads
     dock.rst
     domains.rst
     email.rst
+    energysaver.rst
     enrollment.rst
     exchange.rst
     fv2.rst

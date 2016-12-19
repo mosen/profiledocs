@@ -1,3 +1,5 @@
+.. _payloadtype-com.apple.mcxprinting:
+
 Printing
 ========
 
@@ -35,3 +37,8 @@ Keys
 .. pfmkey:: FooterFontSize manifests/manual/com.apple.mcxprinting manifest.plist
 .. pfmkey:: FooterFontName manifests/manual/com.apple.mcxprinting manifest.plist
 
+
+Links
+-----
+
+- Setting print queue options (OUTDATED) `OS X Mavericks: Setting print queue authentication method via profile <https://support.apple.com/en-qa/HT200262>`_.
