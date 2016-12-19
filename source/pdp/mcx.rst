@@ -7,7 +7,7 @@ Some of these domains still seem to receive updates.
 Domains
 -------
 
-- com.apple.Safari
+- com.apple.Safari *only autofill enable/disable*
 - com.apple.SystemConfiguration (:ref:`payloadtype-com.apple.SystemConfiguration`)
 - com.apple.SetupAssistant.managed (:ref:`payloadtype-com.apple.SetupAssistant.managed`)
 - com.apple.coremediaio.support (:ref:`payloadtype-com.apple.coremediaio.support`)
@@ -40,7 +40,7 @@ Domains
 - loginwindow
 - com.apple.loginitems.managed
 - com.apple.finder
-- com.apple.DiscRecording
+- com.apple.DiscRecording (:ref:`payloadtype-com.apple.DiscRecording`)
 - com.apple.systemuiserver (:ref:`payloadtype-com.apple.systemuiserver`)
 - com.apple.loginwindow (:ref:`payloadtype-com.apple.loginwindow`)
 - com.apple.applicationaccess.new (:ref:`payloadtype-com.apple.applicationaccess.new`)
