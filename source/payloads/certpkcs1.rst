@@ -1,3 +1,5 @@
+.. _payloadtype-com.apple.security.pkcs1:
+
 Certificate (PKCS#1)
 ====================
 

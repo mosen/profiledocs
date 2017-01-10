@@ -12,7 +12,31 @@ as of Sierra some have been added to ``/System/Library/ConfigurationProfiles/Plu
     :maxdepth: 2
     :caption: Profile Domain Plugins:
 
+    adcertificate.rst
+    airplay.rst
+    assetcacheclient.rst
+    carddav.rst
+    certificate.rst
+    directorybinding.rst
     dock.rst
+    exchange.rst
+    filevault2.rst
+    firewall.rst
+    font.rst
+    ical.rst
+    ichat.rst
+    ldap.rst
+    logging.rst
     loginwindow.rst
+    mail.rst
     mcx.rst
+    mdm.rst
+    passcodepolicy.rst
+    restrictionsplugin.rst
+    systempolicy.rst
+    touchid.rst
+    vpn.rst
+    webclip.rst
     wifi.rst
+    xsanplugin.rst
+

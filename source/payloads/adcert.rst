@@ -1,3 +1,5 @@
+.. _payloadtype-com.apple.ADCertificate.managed:
+
 Active Directory Certificate
 ============================
 

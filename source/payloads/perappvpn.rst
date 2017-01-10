@@ -1,3 +1,5 @@
+.. _payloadtype-com.apple.vpn.managed.applayer:
+
 Per-App VPN
 ===========
 

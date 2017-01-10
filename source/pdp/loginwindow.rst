@@ -8,7 +8,7 @@ Also the payload domains ``loginwindow`` and ``com.apple.loginitems.managed`` ar
 Domains
 -------
 
-- com.apple.loginwindow
-- .GlobalPreferences
-- com.apple.screensaver
-- com.apple.mcxloginscripts
+- com.apple.loginwindow (:ref:`payloadtype-com.apple.loginwindow`)
+- .GlobalPreferences (:ref:`payloadtype-GlobalPreferences`)
+- com.apple.screensaver (:ref:`payloadtype-com.apple.screensaver`)
+- com.apple.mcxloginscripts (:ref:`payloadtype-com.apple.mcxloginscripts`)

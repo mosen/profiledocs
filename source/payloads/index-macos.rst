@@ -16,6 +16,7 @@ macOS Payloads
     firewall.rst
     fv2.rst
     identification.rst
+    loginitems.rst
     printing.rst
     appmapping.rst
     mcxredirector.rst

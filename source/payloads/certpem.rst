@@ -1,3 +1,5 @@
+.. _payloadtype-com.apple.security.pem:
+
 Certificate (PEM)
 =================
 

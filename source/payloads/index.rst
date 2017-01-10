@@ -40,6 +40,7 @@ Payloads
     identification.rst
     ldap.rst
     logging.rst
+    loginitems.rst
     loginwindow.rst
     mcxredirector.rst
     mdm.rst

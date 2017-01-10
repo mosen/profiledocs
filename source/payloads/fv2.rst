@@ -1,3 +1,5 @@
+.. _payloadtype-com.apple.MCX.FileVault2:
+
 FileVault 2
 ===========
 
