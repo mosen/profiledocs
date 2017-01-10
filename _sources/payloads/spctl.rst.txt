@@ -1,3 +1,5 @@
+.. _payloadtype-com.apple.systempolicy.control:
+
 System Policy Control
 =====================
 
@@ -16,3 +18,8 @@ Keys
 
 .. pfmkey:: EnableAssessment manifests/manual/com.apple.systempolicy.control manifest.plist
 .. pfmkey:: AllowIdentifiedDevelopers manifests/manual/com.apple.systempolicy.control manifest.plist
+
+Links
+-----
+
+- `Official Documentation <https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW21>`_.

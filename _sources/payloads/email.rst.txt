@@ -39,3 +39,8 @@ Keys
 .. pfmkey:: OutgoingMailServerPortNumber manifests/ac2/com.apple.mail.managed manifest.plist
 .. pfmkey:: OutgoingMailServerUseSSL manifests/ac2/com.apple.mail.managed manifest.plist
 .. pfmkey:: OutgoingMailServerUsername manifests/ac2/com.apple.mail.managed manifest.plist
+
+Links
+-----
+
+- `Official Documentation <https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW11>`_.

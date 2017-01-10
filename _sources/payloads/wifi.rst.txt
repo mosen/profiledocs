@@ -76,3 +76,8 @@ Keys
 .. pfmkey:: QoSMarkingPolicy manifests/ac2/com.apple.wifi.managed manifest.plist
 
 Available in iOS 10.0 and later. Not supported in macOS.
+
+Links
+-----
+
+- `Official Documentation <https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW30>`_.

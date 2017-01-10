@@ -21,3 +21,8 @@ Notification Settings Item
 
 .. pfm:: manifests/manual/com.apple.notificationsettings manifest.plist
     :key: NotificationSettings.NotificationSetting
+
+Links
+-----
+
+- `Official Documentation <https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW604>`_.

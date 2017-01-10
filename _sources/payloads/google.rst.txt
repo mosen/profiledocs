@@ -21,3 +21,9 @@ Keys
 .. pfmkey:: AccountDescription manifests/ac2/com.apple.google-oauth manifest.plist
 .. pfmkey:: AccountName manifests/ac2/com.apple.google-oauth manifest.plist
 .. pfmkey:: EmailAddress manifests/ac2/com.apple.google-oauth manifest.plist
+
+Links
+-----
+
+- `Official Documentation <https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW610>`_.
+

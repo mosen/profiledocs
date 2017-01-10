@@ -1,3 +1,5 @@
+.. _payloadtype-com.apple.carddav.account:
+
 CardDAV
 =======
 
@@ -24,3 +26,8 @@ Keys
 
 .. pfm:: manifests/ac2/com.apple.carddav.account manifest.plist
     :key: CommunicationServiceRules
+
+Links
+-----
+
+- `Official Documentation <https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW15>`_.

@@ -16,3 +16,8 @@ Keys
 .. pfmkey:: Password manifests/ac2/com.apple.osxserver.account manifest.plist
 .. pfmkey:: ConfiguredAccounts manifests/ac2/com.apple.osxserver.account manifest.plist
 
+Links
+-----
+
+- `Official Documentation <https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW152>`_.
+

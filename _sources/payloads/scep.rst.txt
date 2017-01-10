@@ -22,3 +22,8 @@ Keys
 .. pfmkey:: SubjectAltName manifests/ac2/com.apple.security.scep manifest.plist
 .. pfmkey:: Retries manifests/ac2/com.apple.security.scep manifest.plist
 .. pfmkey:: RetryDelay manifests/ac2/com.apple.security.scep manifest.plist
+
+Links
+-----
+
+- `Official Documentation <https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW18>`_.

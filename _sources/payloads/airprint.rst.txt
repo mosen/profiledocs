@@ -17,3 +17,8 @@ Keys
 ----
 
 .. pfmkey:: AirPrint manifests/manual/com.apple.airprint manifest.plist
+
+Links
+-----
+
+- `Official Documentation <https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW39>`_.

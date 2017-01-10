@@ -25,6 +25,8 @@ App Keys
 .. pfm:: manifests/ac2/com.apple.app.lock manifest.plist
    :key: App.Options
 
+Links
+-----
 
-
+- `Official Documentation <https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW35>`_.
 

@@ -7,7 +7,7 @@ Some of these domains still seem to receive updates.
 Domains
 -------
 
-- com.apple.Safari
+- com.apple.Safari *only autofill enable/disable*
 - com.apple.SystemConfiguration (:ref:`payloadtype-com.apple.SystemConfiguration`)
 - com.apple.SetupAssistant.managed (:ref:`payloadtype-com.apple.SetupAssistant.managed`)
 - com.apple.coremediaio.support (:ref:`payloadtype-com.apple.coremediaio.support`)
@@ -26,8 +26,8 @@ Domains
 - com.apple.proxy.http.global (:ref:`payloadtype-com.apple.proxy.http.global`)
 - com.apple.desktop (:ref:`payloadtype-com.apple.desktop`)
 - com.apple.MCXRedirector (:ref:`payloadtype-com.apple.MCXRedirector`)
-- com.apple.MCX.TimeMachine
-- com.apple.MCX.sidebar
+- com.apple.MCX.TimeMachine (:ref:`payloadtype-com.apple.MCX.TimeMachine`)
+- com.apple.MCX.sidebar (:ref:`payloadtype-com.apple.MCX.sidebar`)
 - com.apple.configurationprofile.identification (:ref:`payloadtype-com.apple.configurationprofile.identification`)
 - com.apple.ManagedClient.preferences (:ref:`payloadtype-com.apple.ManagedClient.preferences`)
 - com.apple.Dictionary
@@ -40,11 +40,11 @@ Domains
 - loginwindow
 - com.apple.loginitems.managed
 - com.apple.finder
-- com.apple.DiscRecording
-- com.apple.systemuiserver
+- com.apple.DiscRecording (:ref:`payloadtype-com.apple.DiscRecording`)
+- com.apple.systemuiserver (:ref:`payloadtype-com.apple.systemuiserver`)
 - com.apple.loginwindow (:ref:`payloadtype-com.apple.loginwindow`)
 - com.apple.applicationaccess.new (:ref:`payloadtype-com.apple.applicationaccess.new`)
-- com.apple.MCX
+- com.apple.MCX (:ref:`payloadtype-com.apple.MCX`)
 - com.apple.SoftwareUpdate (:ref:`payloadtype-com.apple.SoftwareUpdate`)
 - com.apple.mcxprinting (:ref:`payloadtype-com.apple.mcxprinting`)
 - com.apple.dashboard (:ref:`payloadtype-com.apple.dashboard`)

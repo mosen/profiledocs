@@ -23,23 +23,27 @@ Payloads
     custom.rst
     dashwidgets.rst
     desktop.rst
+    discrecording.rst
     dock.rst
     domains.rst
     email.rst
     energysaver.rst
     enrollment.rst
     exchange.rst
+    firewall.rst
     fv2.rst
     font.rst
     gamecenter.rst
     globalproxy.rst
     google.rst
+    homescreen.rst
     identification.rst
     ldap.rst
     logging.rst
     loginwindow.rst
     mcxredirector.rst
     mdm.rst
+    mediaaccess.rst
     passcode.rst
     printing.rst
     networkbrowser.rst
@@ -57,6 +61,7 @@ Payloads
     setupassistant.rst
     shareddevice.rst
     sharekit.rst
+    sidebar.rst
     sso.rst
     supervision.rst
     swupd.rst
@@ -66,6 +71,7 @@ Payloads
     systempolicy.rst
     sysprefs.rst
     sprule.rst
+    timemachine.rst
     trackpad.rst
     userpreferences.rst
     vpn.rst

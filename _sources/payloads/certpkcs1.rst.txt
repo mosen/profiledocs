@@ -16,3 +16,9 @@ Keys
 .. pfmkey:: PayloadCertificateFileName manifests/ac2/com.apple.security.pkcs1 manifest.plist
 .. pfmkey:: PayloadContent manifests/ac2/com.apple.security.pkcs1 manifest.plist
 .. pfmkey:: Password manifests/ac2/com.apple.security.pkcs1 manifest.plist
+
+
+Links
+-----
+
+- `Official Documentation <https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW248>`_.

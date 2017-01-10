@@ -25,3 +25,8 @@ Keys
 .. pfmkey:: ProxyPACURL manifests/manual/com.apple.proxy.http.global manifest.plist
 .. pfmkey:: ProxyPACFallbackAllowed manifests/manual/com.apple.proxy.http.global manifest.plist
 .. pfmkey:: ProxyCaptiveLoginAllowed manifests/manual/com.apple.proxy.http.global manifest.plist
+
+Links
+-----
+
+- `Official Documentation <https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW34>`_.

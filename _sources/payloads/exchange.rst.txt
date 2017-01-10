@@ -35,3 +35,8 @@ Keys
 .. pfmkey:: SMIMEEncryptionCertificateUUID manifests/ac2/com.apple.eas.account manifest.plist
 .. pfmkey:: disableMailRecentsSyncing manifests/ac2/com.apple.eas.account manifest.plist
 .. pfmkey:: CommunicationServiceRules manifests/ac2/com.apple.eas.account manifest.plist
+
+Links
+-----
+
+- `Official Documentation <https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW25>`_.

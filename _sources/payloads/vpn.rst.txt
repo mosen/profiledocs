@@ -60,3 +60,8 @@ VendorConfig Keys
 .. pfmkey:: DisconnectOnIdle manifests/ac2/com.apple.vpn.managed manifest.plist
 .. pfmkey:: DisconnectOnIdleTimer manifests/ac2/com.apple.vpn.managed manifest.plist
 
+Links
+-----
+
+- `Official Documentation <https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW27>`_.
+

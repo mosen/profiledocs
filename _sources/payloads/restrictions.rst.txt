@@ -91,3 +91,8 @@ Keys
 .. pfmkey:: allowNotificationsModification manifests/manual/com.apple.applicationaccess manifest.plist
 .. pfmkey:: blacklistedAppBundleIDs manifests/manual/com.apple.applicationaccess manifest.plist
 .. pfmkey:: whitelistedAppBundleIDs manifests/manual/com.apple.applicationaccess manifest.plist
+
+Links
+-----
+
+- `Official Documentation <https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW13>`_.
