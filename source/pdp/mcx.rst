@@ -26,8 +26,8 @@ Domains
 - com.apple.proxy.http.global (:ref:`payloadtype-com.apple.proxy.http.global`)
 - com.apple.desktop (:ref:`payloadtype-com.apple.desktop`)
 - com.apple.MCXRedirector (:ref:`payloadtype-com.apple.MCXRedirector`)
-- com.apple.MCX.TimeMachine
-- com.apple.MCX.sidebar
+- com.apple.MCX.TimeMachine (:ref:`payloadtype-com.apple.MCX.TimeMachine`)
+- com.apple.MCX.sidebar (:ref:`payloadtype-com.apple.MCX.sidebar`)
 - com.apple.configurationprofile.identification (:ref:`payloadtype-com.apple.configurationprofile.identification`)
 - com.apple.ManagedClient.preferences (:ref:`payloadtype-com.apple.ManagedClient.preferences`)
 - com.apple.Dictionary

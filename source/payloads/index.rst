@@ -59,6 +59,7 @@ Payloads
     setupassistant.rst
     shareddevice.rst
     sharekit.rst
+    sidebar.rst
     sso.rst
     supervision.rst
     swupd.rst
@@ -68,6 +69,7 @@ Payloads
     systempolicy.rst
     sysprefs.rst
     sprule.rst
+    timemachine.rst
     trackpad.rst
     userpreferences.rst
     vpn.rst

@@ -129,3 +129,8 @@ macOS
 
 .. note:: allowFingerprintModification not documented in this manifest.
 
+Links
+-----
+
+- `Official Documentation <https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW9>`_.
+

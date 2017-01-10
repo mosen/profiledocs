@@ -1,3 +1,5 @@
+.. _payloadtype-com.apple.systempolicy.managed:
+
 System Policy (Gatekeeper)
 ==========================
 
@@ -10,6 +12,11 @@ Summary
 
 .. pfmheader:: manifests/manual/com.apple.systempolicy.managed manifest.plist
 .. pfm:: manifests/manual/com.apple.systempolicy.managed manifest.plist
+
+Links
+-----
+
+- `Official Documentation <https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW23>`_.
 
 
 

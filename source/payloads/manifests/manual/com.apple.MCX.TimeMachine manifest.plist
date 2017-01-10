@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>pfm_description</key>
+        <string>Time Machine Settings</string>
+        <key>pfm_title</key>
+        <string>Time Machine Settings</string>
+        <key>pfm_format_version</key>
+        <integer>1</integer>
+        <key>pfm_version</key>
+        <integer>1</integer>
+        <key>pfm_domain</key>
+        <string>com.apple.MCX.TimeMachine</string>
+        <key>pfm_subkeys</key>
+        <array>
+            <dict>
+                <key>pfm_name</key>
+                <string>PayloadDescription</string>
+                <key>pfm_title</key>
+                <string>Payload Description</string>
+                <key>pfm_description</key>
+                <string>Description of the payload</string>
+                <key>pfm_type</key>
+                <string>string</string>
+                <key>pfm_default</key>
+                <string>Time Machine Settings</string>
+            </dict>
+            <dict>
+                <key>pfm_name</key>
+                <string>PayloadDisplayName</string>
+                <key>pfm_title</key>
+                <string>Payload Display Name</string>
+                <key>pfm_description</key>
+                <string>Name of the payload</string>
+                <key>pfm_type</key>
+                <string>string</string>
+                <key>pfm_default</key>
+                <string>Time Machine Settings</string>
+                <key>pfm_require</key>
+                <string>always</string>
+            </dict>
+            <dict>
+                <key>pfm_name</key>
+                <string>PayloadIdentifier</string>
+                <key>pfm_title</key>
+                <string>Payload Identifier</string>
+                <key>pfm_description</key>
+                <string>A unique identifier for the payload, dot-delimited.  Usually root PayloadIdentifier+subidentifier</string>
+                <key>pfm_type</key>
+                <string>string</string>
+                <key>pfm_default</key>
+                <string>com.apple.MCX.TimeMachine</string>
+                <key>pfm_require</key>
+                <string>always</string>
+            </dict>
+            <dict>
+                <key>pfm_name</key>
+                <string>PayloadType</string>
+                <key>pfm_title</key>
+                <string>Payload Type</string>
+                <key>pfm_description</key>
+                <string>The type of the payload, a reverse dns string</string>
+                <key>pfm_type</key>
+                <string>string</string>
+                <key>pfm_default</key>
+                <string>com.apple.MCX.TimeMachine</string>
+                <key>pfm_require</key>
+                <string>always</string>
+            </dict>
+            <dict>
+                <key>pfm_name</key>
+                <string>PayloadUUID</string>
+                <key>pfm_title</key>
+                <string>Payload UUID</string>
+                <key>pfm_description</key>
+                <string>Unique identifier for the payload (format 01234567-89AB-CDEF-0123-456789ABCDEF)</string>
+                <key>pfm_type</key>
+                <string>string</string>
+                <key>pfm_default</key>
+                <string></string>
+                <key>pfm_require</key>
+                <string>always</string>
+                <key>pfm_format</key>
+                <string>^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$</string>
+            </dict>
+            <dict>
+                <key>pfm_name</key>
+                <string>PayloadVersion</string>
+                <key>pfm_title</key>
+                <string>Payload Version</string>
+                <key>pfm_description</key>
+                <string>The version of the whole configuration profile.</string>
+                <key>pfm_type</key>
+                <string>integer</string>
+                <key>pfm_default</key>
+                <integer>1</integer>
+                <key>pfm_require</key>
+                <string>always</string>
+            </dict>
+            <dict>
+                <key>pfm_name</key>
+                <string>PayloadOrganization</string>
+                <key>pfm_title</key>
+                <string>Payload Organization</string>
+                <key>pfm_description</key>
+                <string>This value describes the issuing organization of the profile, as displayed to the user</string>
+                <key>pfm_type</key>
+                <string>string</string>
+            </dict>
+            <dict>
+                <key>pfm_description</key>
+                <string>Set Time Machine Backup Destination.  Set to the server address of the destination you would like to set.  Example:  afp://someserver.apple.com/Backups/.  Note that the sharepoint must be hosted on a server running Mac OS X 10.5 or higher and must have be enabled as a Time Machine backup destination.  Users must also have read/write access to the sharepoint.</string>
+                <key>pfm_name</key>
+                <string>BackupDestURL</string>
+                <key>pfm_title</key>
+                <string>Backup Destination</string>
+                <key>pfm_type</key>
+                <string>string</string>
+                <key>pfm_targets</key>
+                <array>
+                    <string>system-managed</string>
+                </array>
+                <key>pfm_default</key>
+                <string>afp://someserver.apple.com/Backups/</string>
+            </dict>
+            <dict>
+                <key>pfm_description</key>
+                <string>Set Time Machine to Back Up All Volumes.  Set to "True" to set the preference to backup all volumes.  Set to "False" to set the preference to backup the startup volume only.  Please note that the "Backup Destination" preference must also be set if using this preference.</string>
+                <key>pfm_name</key>
+                <string>BackupAllVolumes</string>
+                <key>pfm_title</key>
+                <string>Backup All Volumes</string>
+                <key>pfm_type</key>
+                <string>boolean</string>
+                <key>pfm_targets</key>
+                <array>
+                    <string>system-managed</string>
+                </array>
+                <key>pfm_default</key>
+                <false/>
+            </dict>
+            <dict>
+                <key>pfm_description</key>
+                <string>Set Time Machine preference to skip system file backup.  Set to "True" to skip system file backup.  This setting applies to 10.5 and higher.</string>
+                <key>pfm_name</key>
+                <string>BackupSkipSys</string>
+                <key>pfm_title</key>
+                <string>Skip System Files</string>
+                <key>pfm_type</key>
+                <string>boolean</string>
+                <key>pfm_targets</key>
+                <array>
+                    <string>system-managed</string>
+                </array>
+                <key>pfm_default</key>
+                <true/>
+            </dict>
+            <dict>
+                <key>pfm_description</key>
+                <string>Set Time Machine to Back Up Automatically.  Set to "True" to set the preference.  Please note that the "Backup Destination" preference must also be set if using this preference.</string>
+                <key>pfm_name</key>
+                <string>AutoBackup</string>
+                <key>pfm_title</key>
+                <string>Auto Backup</string>
+                <key>pfm_type</key>
+                <string>boolean</string>
+                <key>pfm_targets</key>
+                <array>
+                    <string>system-managed</string>
+                </array>
+                <key>pfm_default</key>
+                <true/>
+            </dict>
+            <dict>
+                <key>pfm_description</key>
+                <string>Unverified - Backup mobile users?</string>
+                <key>pfm_name</key>
+                <string>MobileBackups</string>
+                <key>pfm_title</key>
+                <string>MobileBackups</string>
+                <key>pfm_type</key>
+                <string>boolean</string>
+                <key>pfm_targets</key>
+                <array>
+                    <string>system-managed</string>
+                </array>
+                <key>pfm_default</key>
+                <true/>
+            </dict>
+            <dict>
+                <key>pfm_description</key>
+                <string>Set Time Machine per client backup limit (in MB).  Set to the number of maximum MB you would like to allow for each client.  Example:  5000.  This setting applies to 10.5 and higher.</string>
+                <key>pfm_name</key>
+                <string>BackupSizeMB</string>
+                <key>pfm_title</key>
+                <string>Backup Limit</string>
+                <key>pfm_type</key>
+                <string>integer</string>
+                <key>pfm_targets</key>
+                <array>
+                    <string>system-managed</string>
+                </array>
+                <key>pfm_default</key>
+                <integer>5000</integer>
+            </dict>
+            <dict>
+                <key>pfm_description</key>
+                <string>Unverified - BasePaths to back up</string>
+                <key>pfm_name</key>
+                <string>BasePaths</string>
+                <key>pfm_title</key>
+                <string>BasePaths</string>
+                <key>pfm_type</key>
+                <string>array</string>
+            </dict>
+            <dict>
+                <key>pfm_description</key>
+                <string>Unverified - SkipPaths, paths to skip</string>
+                <key>pfm_name</key>
+                <string>SkipPaths</string>
+                <key>pfm_title</key>
+                <string>SkipPaths</string>
+                <key>pfm_type</key>
+                <string>array</string>
+            </dict>
+        </array>
+    </dict>
+</plist>

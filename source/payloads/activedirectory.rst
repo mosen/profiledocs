@@ -58,3 +58,8 @@ Keys
 .. pfmkey:: ADRestrictDDNS manifests/manual/com.apple.DirectoryService.managed manifest.plist
 .. pfmkey:: ADTrustChangePassIntervalDaysFlag manifests/manual/com.apple.DirectoryService.managed manifest.plist
 .. pfmkey:: ADTrustChangePassIntervalDays manifests/manual/com.apple.DirectoryService.managed manifest.plist
+
+Links
+-----
+
+- `Official Documentation <https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW62>`_.

@@ -21,11 +21,13 @@ macOS Payloads
     mediaaccess.rst
     setupassistant.rst
     sharekit.rst
+    sidebar.rst
     spctl.rst
     sprule.rst
     systempolicy.rst
     systemconfiguration.rst
     sysprefs.rst
+    timemachine.rst
     trackpad.rst
     userpreferences.rst
 

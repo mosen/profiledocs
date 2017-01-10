@@ -21,3 +21,8 @@ Keys
 
 .. pfmkey:: Name manifests/ac2/com.apple.font manifest.plist
 .. pfmkey:: Font manifests/ac2/com.apple.font manifest.plist
+
+Links
+-----
+
+- `Official Documentation <https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW43>`_.

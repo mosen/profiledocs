@@ -21,3 +21,8 @@ Keys
 .. pfmkey:: UserName manifests/manual/com.apple.configurationprofile.identification manifest.plist
 .. pfmkey:: Password manifests/manual/com.apple.configurationprofile.identification manifest.plist
 .. pfmkey:: Prompt manifests/manual/com.apple.configurationprofile.identification manifest.plist
+
+Links
+-----
+
+- `Official Documentation <https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW10>`_.

@@ -1,3 +1,5 @@
+.. _payloadtype-com.apple.systempolicy.rule:
+
 System Policy Rule
 ==================
 
@@ -22,3 +24,8 @@ Keys
 .. pfmkey:: Comment manifests/manual/com.apple.systempolicy.rule manifest.plist
 .. pfmkey:: Expiration manifests/manual/com.apple.systempolicy.rule manifest.plist
 .. pfmkey:: OperationType manifests/manual/com.apple.systempolicy.rule manifest.plist
+
+Links
+-----
+
+- `Official Documentation <https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW22>`_.

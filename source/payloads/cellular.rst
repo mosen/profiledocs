@@ -1,3 +1,5 @@
+.. _payloadtype-com.apple.cellular:
+
 Cellular
 ========
 
@@ -29,3 +31,8 @@ Keys
 
 .. pfm:: manifests/ac2/com.apple.cellular manifest.plist
    :key: AttachAPN
+
+Links
+-----
+
+- `Official Documentation <https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW48>`_.

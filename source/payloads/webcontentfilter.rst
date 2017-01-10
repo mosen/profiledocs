@@ -24,3 +24,8 @@ Keys
 .. pfmkey:: Organization manifests/ac2/com.apple.webcontent-filter manifest.plist
 .. pfmkey:: FilterBrowsers manifests/ac2/com.apple.webcontent-filter manifest.plist
 .. pfmkey:: FilterSockets manifests/ac2/com.apple.webcontent-filter manifest.plist
+
+Links
+-----
+
+- `Official Documentation <https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW45>`_.
