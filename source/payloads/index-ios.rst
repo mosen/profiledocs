@@ -6,5 +6,6 @@ iOS Payloads
     :caption: iOS Payloads:
 
     cellular.rst
+    homescreen.rst
     shareddevice.rst
     sso.rst

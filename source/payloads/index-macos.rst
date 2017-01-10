@@ -13,6 +13,7 @@ macOS Payloads
     discrecording.rst
     dock.rst
     energysaver.rst
+    firewall.rst
     fv2.rst
     identification.rst
     printing.rst

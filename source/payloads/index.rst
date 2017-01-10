@@ -30,11 +30,13 @@ Payloads
     energysaver.rst
     enrollment.rst
     exchange.rst
+    firewall.rst
     fv2.rst
     font.rst
     gamecenter.rst
     globalproxy.rst
     google.rst
+    homescreen.rst
     identification.rst
     ldap.rst
     logging.rst
