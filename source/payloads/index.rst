@@ -41,7 +41,9 @@ Payloads
     ldap.rst
     logging.rst
     loginitems.rst
+    loginscripts.rst
     loginwindow.rst
+    loginwindow_gp.rst
     mcxredirector.rst
     mdm.rst
     mediaaccess.rst

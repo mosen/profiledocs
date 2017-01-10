@@ -17,6 +17,9 @@ macOS Payloads
     fv2.rst
     identification.rst
     loginitems.rst
+    loginscripts.rst
+    loginwindow.rst
+    loginwindow_gp.rst
     printing.rst
     appmapping.rst
     mcxredirector.rst
