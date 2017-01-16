@@ -1,3 +1,5 @@
+.. _payloadtype-com.apple.DirectoryService.managed:
+
 Active Directory
 ================
 

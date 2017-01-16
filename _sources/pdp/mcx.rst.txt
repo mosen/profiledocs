@@ -38,8 +38,8 @@ Domains
 - com.apple.SubmitDiagInfo (:ref:`payloadtype-com.apple.SubmitDiagInfo`)
 - com.apple.NetworkBrowser (:ref:`payloadtype-com.apple.NetworkBrowser`)
 - loginwindow
-- com.apple.loginitems.managed
-- com.apple.finder
+- com.apple.loginitems.managed (:ref:`payloadtype-com.apple.loginitems.managed`)
+- com.apple.finder (:ref:`payloadtype-com.apple.finder`)
 - com.apple.DiscRecording (:ref:`payloadtype-com.apple.DiscRecording`)
 - com.apple.systemuiserver (:ref:`payloadtype-com.apple.systemuiserver`)
 - com.apple.loginwindow (:ref:`payloadtype-com.apple.loginwindow`)

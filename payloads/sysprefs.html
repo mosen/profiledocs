@@ -35,7 +35,7 @@
         <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="Configuration Profiles  documentation" href="../index.html"/>
         <link rel="up" title="macOS Payloads" href="index-macos.html"/>
-        <link rel="next" title="TrackPad Settings" href="trackpad.html"/>
+        <link rel="next" title="Time Machine" href="timemachine.html"/>
         <link rel="prev" title="SystemConfiguration (Proxies)" href="systemconfiguration.html"/> 
 
   
@@ -108,21 +108,27 @@
 <li class="toctree-l2"><a class="reference internal" href="custom.html">Custom Settings (MCX)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dashwidgets.html">Dashboard Widgets</a></li>
 <li class="toctree-l2"><a class="reference internal" href="desktop.html">Desktop Picture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="discrecording.html">Disc Recording</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dock.html">Dock</a></li>
 <li class="toctree-l2"><a class="reference internal" href="domains.html">Domains</a></li>
 <li class="toctree-l2"><a class="reference internal" href="email.html">E-mail Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="energysaver.html">Energy Saver</a></li>
 <li class="toctree-l2"><a class="reference internal" href="enrollment.html">Enrollment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="exchange.html">Exchange</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firewall.html">Firewall</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fv2.html">FileVault 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="font.html">Font</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gamecenter.html">Game Center</a></li>
 <li class="toctree-l2"><a class="reference internal" href="globalproxy.html">Global HTTP Proxy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="google.html">Google Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="homescreen.html">Home Screen Layout</a></li>
 <li class="toctree-l2"><a class="reference internal" href="identification.html">Identification</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ldap.html">LDAP Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="logging.html">Unified Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loginitems.html">Login Items</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loginscripts.html">Login Scripts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="loginwindow.html">Loginwindow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loginwindow_gp.html">Loginwindow (GlobalPreferences)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mcxredirector.html">Folder Redirection (MCX)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mdm.html">MDM</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mediaaccess.html">Media Access (SystemUIServer)</a></li>
@@ -143,6 +149,7 @@
 <li class="toctree-l2"><a class="reference internal" href="setupassistant.html">Setup Assistant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="shareddevice.html">Shared Device</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sharekit.html">ShareKit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sidebar.html">Sidebar</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sso.html">Single-Sign On</a></li>
 <li class="toctree-l2"><a class="reference internal" href="supervision.html">Supervision</a></li>
 <li class="toctree-l2"><a class="reference internal" href="swupd.html">Software Update Server</a></li>
@@ -155,6 +162,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="sprule.html">System Policy Rule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="timemachine.html">Time Machine</a></li>
 <li class="toctree-l2"><a class="reference internal" href="trackpad.html">TrackPad Settings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="userpreferences.html">User Preferences (iCloud)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="vpn.html">VPN</a></li>
@@ -212,7 +220,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="system-preference-panes">
-<h1>System Preference Panes<a class="headerlink" href="#system-preference-panes" title="Permalink to this headline">¶</a></h1>
+<span id="payloadtype-com-apple-systempreferences"></span><h1>System Preference Panes<a class="headerlink" href="#system-preference-panes" title="Permalink to this headline">¶</a></h1>
+<p>System preferences panes may be Whitelisted (via <code class="docutils literal"><span class="pre">EnabledPreferencePanes</span></code>) or Blacklisted
+(via <code class="docutils literal"><span class="pre">DisabledPreferencePanes</span></code>) using this payload.</p>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
 <p class="last">This has been copied verbatim from MCX and the keys will need to be verified.</p>
@@ -291,7 +301,7 @@ Find the Preference Pane you would like to add, and find the Info.plist file wit
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="trackpad.html" class="btn btn-neutral float-right" title="TrackPad Settings" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="timemachine.html" class="btn btn-neutral float-right" title="Time Machine" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="systemconfiguration.html" class="btn btn-neutral" title="SystemConfiguration (Proxies)" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>

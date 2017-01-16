@@ -1,3 +1,5 @@
+.. _payloadtype-com.apple.mdm:
+
 MDM
 ===
 
@@ -19,4 +21,8 @@ Keys
 .. pfmkey:: CheckInURL manifests/ac2/com.apple.mdm manifest.plist
 .. pfmkey:: AccessRights manifests/ac2/com.apple.mdm manifest.plist
 .. pfmkey:: UseDevelopementAPNS manifests/ac2/com.apple.mdm manifest.plist
+
+Links
+-----
+
 

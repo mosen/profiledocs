@@ -35,8 +35,8 @@
         <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="Configuration Profiles  documentation" href="../index.html"/>
         <link rel="up" title="Profile Domain Plugins" href="index.html"/>
-        <link rel="next" title="wifi" href="wifi.html"/>
-        <link rel="prev" title="loginwindow" href="loginwindow.html"/> 
+        <link rel="next" title="MDM" href="mdm.html"/>
+        <link rel="prev" title="Mail" href="mail.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -92,13 +92,36 @@
 <li class="toctree-l1"><a class="reference internal" href="../payloads/index.html">Payloads</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../macos/index.html">macOS Subsystem Notes</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Profile Domain Plugins</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="adcertificate.html">ADCertificate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="airplay.html">AirPlay</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assetcacheclient.html">AssetCacheClient</a></li>
+<li class="toctree-l2"><a class="reference internal" href="carddav.html">CardDAV</a></li>
+<li class="toctree-l2"><a class="reference internal" href="certificate.html">Certificate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="directorybinding.html">Directory Binding</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dock.html">Dock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exchange.html">Exchange</a></li>
+<li class="toctree-l2"><a class="reference internal" href="filevault2.html">FileVault2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firewall.html">Firewall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="font.html">Font</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ical.html">iCal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ichat.html">iChat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ldap.html">LDAP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.html">Logging</a></li>
 <li class="toctree-l2"><a class="reference internal" href="loginwindow.html">loginwindow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mail.html">Mail</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">mcx</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#domains">Domains</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="mdm.html">MDM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passcodepolicy.html">PasscodePolicy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restrictionsplugin.html">RestrictionsPlugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="systempolicy.html">SystemPolicy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="touchid.html">TouchID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vpn.html">VPN_new</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webclip.html">WebClip</a></li>
 <li class="toctree-l2"><a class="reference internal" href="wifi.html">wifi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xsanplugin.html">xsanplugin</a></li>
 </ul>
 </li>
 </ul>
@@ -181,12 +204,12 @@ Some of these domains still seem to receive updates.</p>
 <li>com.apple.familycontrols.timelimits.v2</li>
 <li>com.apple.familycontrols.timelimits</li>
 <li>com.apple.familycontrols.contentfilter</li>
-<li>com.apple.systempreferences (<span class="xref std std-ref">payloadtype-com.apple.systempreferences</span>)</li>
+<li>com.apple.systempreferences (<a class="reference internal" href="../payloads/sysprefs.html#payloadtype-com-apple-systempreferences"><span class="std std-ref">System Preference Panes</span></a>)</li>
 <li>com.apple.SubmitDiagInfo (<a class="reference internal" href="../payloads/submitdiag.html#payloadtype-com-apple-submitdiaginfo"><span class="std std-ref">Submit Diagnostics</span></a>)</li>
 <li>com.apple.NetworkBrowser (<a class="reference internal" href="../payloads/networkbrowser.html#payloadtype-com-apple-networkbrowser"><span class="std std-ref">Network Browser (Finder)</span></a>)</li>
 <li>loginwindow</li>
-<li>com.apple.loginitems.managed</li>
-<li>com.apple.finder</li>
+<li>com.apple.loginitems.managed (<a class="reference internal" href="../payloads/loginitems.html#payloadtype-com-apple-loginitems-managed"><span class="std std-ref">Login Items</span></a>)</li>
+<li>com.apple.finder (<span class="xref std std-ref">payloadtype-com.apple.finder</span>)</li>
 <li>com.apple.DiscRecording (<a class="reference internal" href="../payloads/discrecording.html#payloadtype-com-apple-discrecording"><span class="std std-ref">Disc Recording</span></a>)</li>
 <li>com.apple.systemuiserver (<a class="reference internal" href="../payloads/mediaaccess.html#payloadtype-com-apple-systemuiserver"><span class="std std-ref">Media Access (SystemUIServer)</span></a>)</li>
 <li>com.apple.loginwindow (<a class="reference internal" href="../payloads/loginwindow.html#payloadtype-com-apple-loginwindow"><span class="std std-ref">Loginwindow</span></a>)</li>
@@ -206,10 +229,10 @@ Some of these domains still seem to receive updates.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="wifi.html" class="btn btn-neutral float-right" title="wifi" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="mdm.html" class="btn btn-neutral float-right" title="MDM" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="loginwindow.html" class="btn btn-neutral" title="loginwindow" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="mail.html" class="btn btn-neutral" title="Mail" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

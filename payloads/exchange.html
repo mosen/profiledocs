@@ -141,15 +141,20 @@
 <li class="toctree-l3"><a class="reference internal" href="#links">Links</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="firewall.html">Firewall</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fv2.html">FileVault 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="font.html">Font</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gamecenter.html">Game Center</a></li>
 <li class="toctree-l2"><a class="reference internal" href="globalproxy.html">Global HTTP Proxy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="google.html">Google Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="homescreen.html">Home Screen Layout</a></li>
 <li class="toctree-l2"><a class="reference internal" href="identification.html">Identification</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ldap.html">LDAP Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="logging.html">Unified Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loginitems.html">Login Items</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loginscripts.html">Login Scripts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="loginwindow.html">Loginwindow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loginwindow_gp.html">Loginwindow (GlobalPreferences)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mcxredirector.html">Folder Redirection (MCX)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mdm.html">MDM</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mediaaccess.html">Media Access (SystemUIServer)</a></li>
@@ -239,8 +244,8 @@
             
   <div class="section" id="exchange">
 <h1>Exchange<a class="headerlink" href="#exchange" title="Permalink to this headline">¶</a></h1>
-<p>In iOS, the Exchange payload is designated by specifying manifests/ac2/com.apple.eas.account as the PayloadType value. This payload configures an Exchange Active Sync account on the device.</p>
-<p>In macOS, the Exchange payload is designated by specifying manifests/ac2/com.apple.ews.account as the PayloadType value. This payload will configure an Exchange Web Services account for Contacts, Mail, Notes, Reminders, and Calendar.</p>
+<p>In iOS, the Exchange payload is designated by specifying <strong>com.apple.eas.account</strong> as the PayloadType value. This payload configures an Exchange Active Sync account on the device.</p>
+<p>In macOS, the Exchange payload is designated by specifying <strong>com.apple.ews.account</strong> as the PayloadType value. This payload will configure an Exchange Web Services account for Contacts, Mail, Notes, Reminders, and Calendar.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">As with VPN and Wi-Fi configurations, it is possible to associate an SCEP credential with an Exchange configuration via the PayloadCertificateUUID key.</p>

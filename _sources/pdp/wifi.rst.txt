@@ -10,7 +10,7 @@ Domains
 - com.apple.secondethernet.managed
 - com.apple.firstethernet.managed
 - com.apple.thirdactiveethernet.managed
-- com.apple.wifi.managed
+- com.apple.wifi.managed (`:ref:payloadtype-com.apple.wifi.managed`)
 - com.apple.builtinwireless.managed
 - com.apple.firstactiveethernet.managed
 - com.apple.secondactiveethernet.managed
