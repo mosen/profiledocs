@@ -29,6 +29,7 @@ Payloads
     email.rst
     energysaver.rst
     enrollment.rst
+    ethernet.rst
     exchange.rst
     firewall.rst
     fv2.rst
