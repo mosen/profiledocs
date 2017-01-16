@@ -32,6 +32,7 @@ Payloads
     exchange.rst
     firewall.rst
     fv2.rst
+    fv2redirect.rst
     font.rst
     gamecenter.rst
     globalproxy.rst

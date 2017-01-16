@@ -1,6 +1,9 @@
 AssetCacheClient
 ================
 
+Location
+    /System/Library/ConfigurationProfiles/PlugIns/AssetCacheClient.profileDomainPlugin
+
 Domains
 -------
 

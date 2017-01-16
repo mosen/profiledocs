@@ -14,10 +14,6 @@ Welcome to MacAdmins Profile Reference's documentation!
    manifest.rst
    extmanifest.rst
 
-   payloads/index-common.rst
-   payloads/index-ios.rst
-   payloads/index-macos.rst
-
    payloads/index.rst
 
    macos/index.rst
