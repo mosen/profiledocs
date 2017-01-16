@@ -1,3 +1,5 @@
+.. _payloadtype-com.apple.wifi.managed:
+
 Wi-Fi
 =====
 
@@ -8,72 +10,72 @@ Wi-Fi
 Summary
 -------
 
-.. pfmheader:: manifests/ac2/com.apple.wifi.managed manifest.plist
-.. pfm:: manifests/ac2/com.apple.wifi.managed manifest.plist
+.. pfmheader:: manifests/manual/com.apple.wifi.managed manifest.plist
+.. pfm:: manifests/manual/com.apple.wifi.managed manifest.plist
 
 Keys
 ----
 
-.. pfmkey:: SSID_STR manifests/ac2/com.apple.wifi.managed manifest.plist
+.. pfmkey:: SSID_STR manifests/manual/com.apple.wifi.managed manifest.plist
 
 - In iOS 7.0 and later, this is optional if a DomainName value is provided
 
-.. pfmkey:: HIDDEN_NETWORK manifests/ac2/com.apple.wifi.managed manifest.plist
-.. pfmkey:: AutoJoin manifests/ac2/com.apple.wifi.managed manifest.plist
+.. pfmkey:: HIDDEN_NETWORK manifests/manual/com.apple.wifi.managed manifest.plist
+.. pfmkey:: AutoJoin manifests/manual/com.apple.wifi.managed manifest.plist
+.. pfmkey:: CaptiveBypass manifests/manual/com.apple.wifi.managed manifest.plist
+.. pfmkey:: EncryptionType manifests/manual/com.apple.wifi.managed manifest.plist
+.. pfmkey:: Password manifests/manual/com.apple.wifi.managed manifest.plist
+.. pfmkey:: PayloadCertificateUUID manifests/manual/com.apple.wifi.managed manifest.plist
+.. pfmkey:: TLSCertificateRequired manifests/manual/com.apple.wifi.managed manifest.plist
 
-- Available in iOS 5.0 and later and in all versions of macOS.
+Keys (HotSpot)
+--------------
 
-.. pfmkey:: CaptiveBypass manifests/ac2/com.apple.wifi.managed manifest.plist
+.. pfmkey:: IsHotspot manifests/manual/com.apple.wifi.managed manifest.plist
+.. pfmkey:: DomainName manifests/manual/com.apple.wifi.managed manifest.plist
+.. pfmkey:: DisplayedOperatorName manifests/manual/com.apple.wifi.managed manifest.plist
+.. pfmkey:: ServiceProviderRoamingEnabled manifests/manual/com.apple.wifi.managed manifest.plist
+.. pfmkey:: RoamingConsortiumOIs manifests/manual/com.apple.wifi.managed manifest.plist
+.. pfmkey:: NAIRealmNames manifests/manual/com.apple.wifi.managed manifest.plist
+.. pfmkey:: MCCAndMNCs manifests/manual/com.apple.wifi.managed manifest.plist
 
-- Available in iOS 10.0 and later.
+Keys (802.1x)
+-------------
 
-.. pfmkey:: EncryptionType manifests/ac2/com.apple.wifi.managed manifest.plist
+.. pfmkey:: EAPClientConfiguration manifests/manual/com.apple.wifi.managed manifest.plist
+.. pfm:: manifests/manual/com.apple.wifi.managed manifest.plist
+    :key: EAPClientConfiguration
 
-- Key available in iOS 4.0 and later and in all versions of macOS. The None value is available in iOS 5.0 and later and the WPA2 value is available in iOS 8.0 and later.
+.. pfmkey:: EAPClientConfiguration:AcceptEAPTypes manifests/manual/com.apple.wifi.managed manifest.plist
+.. pfmkey:: EAPClientConfiguration:UserName manifests/manual/com.apple.wifi.managed manifest.plist
 
-.. pfmkey:: IsHotspot manifests/ac2/com.apple.wifi.managed manifest.plist
 
-- Available in iOS 7.0 and later and in macOS 10.9 and later.
+.. pfmkey:: EAPClientConfiguration:UserPassword manifests/manual/com.apple.wifi.managed manifest.plist
+.. pfmkey:: EAPClientConfiguration:OneTimeUserPassword manifests/manual/com.apple.wifi.managed manifest.plist
+.. pfmkey:: EAPClientConfiguration:PayloadCertificateAnchorUUID manifests/manual/com.apple.wifi.managed manifest.plist
+.. pfmkey:: EAPClientConfiguration:TLSTrustedServerNames manifests/manual/com.apple.wifi.managed manifest.plist
+.. pfmkey:: EAPClientConfiguration:TLSAllowTrustExceptions manifests/manual/com.apple.wifi.managed manifest.plist
+.. pfmkey:: EAPClientConfiguration:TTLSInnerAuthentication manifests/manual/com.apple.wifi.managed manifest.plist
+.. pfmkey:: EAPClientConfiguration:OuterIdentity manifests/manual/com.apple.wifi.managed manifest.plist
+.. pfmkey:: EAPClientConfiguration:EAPFASTUsePAC manifests/manual/com.apple.wifi.managed manifest.plist
+.. pfmkey:: EAPClientConfiguration:EAPFASTProvisionPAC manifests/manual/com.apple.wifi.managed manifest.plist
+.. pfmkey:: EAPClientConfiguration:EAPFASTProvisionPACAnonymously manifests/manual/com.apple.wifi.managed manifest.plist
 
-.. pfmkey:: DomainName manifests/ac2/com.apple.wifi.managed manifest.plist
+Keys (Proxy)
+------------
 
-- Available in iOS 7.0 and later and in macOS 10.9 and later.
+.. pfmkey:: ProxyType manifests/manual/com.apple.wifi.managed manifest.plist
+.. pfmkey:: ProxyServer manifests/manual/com.apple.wifi.managed manifest.plist
+.. pfmkey:: ProxyUsername manifests/manual/com.apple.wifi.managed manifest.plist
+.. pfmkey:: ProxyServerPort manifests/manual/com.apple.wifi.managed manifest.plist
+.. pfmkey:: ProxyPassword manifests/manual/com.apple.wifi.managed manifest.plist
+.. pfmkey:: ProxyPACURL manifests/manual/com.apple.wifi.managed manifest.plist
+.. pfmkey:: ProxyPACFallbackAllowed manifests/manual/com.apple.wifi.managed manifest.plist
 
-.. pfmkey:: DisplayedOperatorName manifests/ac2/com.apple.wifi.managed manifest.plist
+Keys (QoS)
+----------
 
-- Available in iOS 7.0 and later and in macOS 10.9 and later.
-
-.. pfmkey:: ServiceProviderRoamingEnabled manifests/ac2/com.apple.wifi.managed manifest.plist
-
-- Available in iOS 7.0 and later and in macOS 10.9 and later.
-
-.. pfmkey:: RoamingConsortiumOIs manifests/ac2/com.apple.wifi.managed manifest.plist
-
-- Available in iOS 7.0 and later and in macOS 10.9 and later.
-
-.. pfmkey:: NAIRealmNames manifests/ac2/com.apple.wifi.managed manifest.plist
-
-- Available in iOS 7.0 and later and in macOS 10.9 and later.
-
-.. pfmkey:: MCCAndMNCs manifests/ac2/com.apple.wifi.managed manifest.plist
-
-- Available in iOS 7.0 and later. This feature is not supported in macOS.
-
-.. pfmkey:: EAPClientConfiguration manifests/ac2/com.apple.wifi.managed manifest.plist
-.. pfmkey:: Password manifests/ac2/com.apple.wifi.managed manifest.plist
-.. pfmkey:: PayloadCertificateUUID manifests/ac2/com.apple.wifi.managed manifest.plist
-.. pfmkey:: TLSCertificateRequired manifests/ac2/com.apple.wifi.managed manifest.plist
-.. pfmkey:: ProxyType manifests/ac2/com.apple.wifi.managed manifest.plist
-
-- Available in iOS 5.0 and later and on all versions of macOS.
-
-.. pfmkey:: ProxyServer manifests/ac2/com.apple.wifi.managed manifest.plist
-.. pfmkey:: ProxyUsername manifests/ac2/com.apple.wifi.managed manifest.plist
-.. pfmkey:: ProxyServerPort manifests/ac2/com.apple.wifi.managed manifest.plist
-.. pfmkey:: ProxyPassword manifests/ac2/com.apple.wifi.managed manifest.plist
-.. pfmkey:: ProxyPACURL manifests/ac2/com.apple.wifi.managed manifest.plist
-.. pfmkey:: ProxyPACFallbackAllowed manifests/ac2/com.apple.wifi.managed manifest.plist
-.. pfmkey:: QoSMarkingPolicy manifests/ac2/com.apple.wifi.managed manifest.plist
+.. pfmkey:: QoSMarkingPolicy manifests/manual/com.apple.wifi.managed manifest.plist
 
 Available in iOS 10.0 and later. Not supported in macOS.
 
