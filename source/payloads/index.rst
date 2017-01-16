@@ -18,6 +18,7 @@ Payloads
     certpem.rst
     certpkcs1.rst
     certpkcs12.rst
+    certpref.rst
     certroot.rst
     coremediaio.rst
     custom.rst
@@ -40,6 +41,7 @@ Payloads
     google.rst
     homescreen.rst
     identification.rst
+    identpref.rst
     ldap.rst
     logging.rst
     loginitems.rst
