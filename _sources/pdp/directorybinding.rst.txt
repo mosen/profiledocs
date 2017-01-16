@@ -8,4 +8,4 @@ Location
 Domains
 -------
 
-- com.apple.DirectoryService.managed (`:ref:payloadtype-com.apple.DirectoryService.managed`)
+- com.apple.DirectoryService.managed (:ref:`payloadtype-com.apple.DirectoryService.managed`)

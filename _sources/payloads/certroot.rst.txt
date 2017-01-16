@@ -3,20 +3,20 @@
 Certificate (Root CA)
 =====================
 
-Alias for manifests/ac2/com.apple.security.pkcs1.
+Alias for :ref:`payloadtype-com.apple.security.pkcs1`.
 
 Summary
 -------
 
-.. pfmheader:: manifests/ac2/com.apple.security.root manifest.plist
-.. pfm:: manifests/ac2/com.apple.security.root manifest.plist
+.. pfmheader:: manifests/manual/com.apple.security.root manifest.plist
+.. pfm:: manifests/manual/com.apple.security.root manifest.plist
 
 Keys
 ----
 
-.. pfmkey:: PayloadCertificateFileName manifests/ac2/com.apple.security.root manifest.plist
-.. pfmkey:: PayloadContent manifests/ac2/com.apple.security.root manifest.plist
-.. pfmkey:: Password manifests/ac2/com.apple.security.root manifest.plist
+.. pfmkey:: PayloadCertificateFileName manifests/manual/com.apple.security.root manifest.plist
+.. pfmkey:: PayloadContent manifests/manual/com.apple.security.root manifest.plist
+.. pfmkey:: Password manifests/manual/com.apple.security.root manifest.plist
 
 Links
 -----

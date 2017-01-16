@@ -34,8 +34,8 @@
               href="../genindex.html"/>
         <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="Configuration Profiles  documentation" href="../index.html"/>
-        <link rel="next" title="Active Directory Certificate" href="adcert.html"/>
-        <link rel="prev" title="User Preferences (iCloud)" href="userpreferences.html"/> 
+        <link rel="next" title="Active Directory" href="activedirectory.html"/>
+        <link rel="prev" title="Extended Manifest Format" href="../extmanifest.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -85,9 +85,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../official.html">Official Links and Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../manifest.html">Manifest File Format</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../extmanifest.html">Extended Manifest Format</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index-common.html">Common Payloads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index-ios.html">iOS Payloads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index-macos.html">macOS Payloads</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Payloads</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="activedirectory.html">Active Directory</a></li>
 <li class="toctree-l2"><a class="reference internal" href="adcert.html">Active Directory Certificate</a></li>
@@ -102,6 +99,7 @@
 <li class="toctree-l2"><a class="reference internal" href="certpem.html">Certificate (PEM)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certpkcs1.html">Certificate (PKCS#1)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certpkcs12.html">Certificate (PKCS#12)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="certpref.html">Certificate Preference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certroot.html">Certificate (Root CA)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="coremediaio.html">Core Media IO (Camera)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="custom.html">Custom Settings (MCX)</a></li>
@@ -112,16 +110,19 @@
 <li class="toctree-l2"><a class="reference internal" href="domains.html">Domains</a></li>
 <li class="toctree-l2"><a class="reference internal" href="email.html">E-mail Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="energysaver.html">Energy Saver</a></li>
-<li class="toctree-l2"><a class="reference internal" href="enrollment.html">Enrollment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enrollment.html">Enrollment (Supervised)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ethernet.html">Ethernet 802.1x</a></li>
 <li class="toctree-l2"><a class="reference internal" href="exchange.html">Exchange</a></li>
 <li class="toctree-l2"><a class="reference internal" href="firewall.html">Firewall</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fv2.html">FileVault 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fv2redirect.html">FileVault Recovery Key Redirect</a></li>
 <li class="toctree-l2"><a class="reference internal" href="font.html">Font</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gamecenter.html">Game Center</a></li>
 <li class="toctree-l2"><a class="reference internal" href="globalproxy.html">Global HTTP Proxy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="google.html">Google Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="homescreen.html">Home Screen Layout</a></li>
 <li class="toctree-l2"><a class="reference internal" href="identification.html">Identification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="identpref.html">Identity Preference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ldap.html">LDAP Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="logging.html">Unified Logging</a></li>
 <li class="toctree-l2"><a class="reference internal" href="loginitems.html">Login Items</a></li>
@@ -295,6 +296,12 @@
 <li class="toctree-l2"><a class="reference internal" href="certpkcs12.html#links">Links</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="certpref.html">Certificate Preference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="certpref.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="certpref.html#keys">Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="certpref.html#links">Links</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="certroot.html">Certificate (Root CA)</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="certroot.html#summary">Summary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certroot.html#keys">Keys</a></li>
@@ -324,6 +331,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="dock.html">Dock</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="dock.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dock.html#keys">Keys</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="domains.html">Domains</a><ul>
@@ -343,8 +351,12 @@
 <li class="toctree-l2"><a class="reference internal" href="energysaver.html#keys">Keys</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="enrollment.html">Enrollment</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="enrollment.html">Enrollment (Supervised)</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="enrollment.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ethernet.html">Ethernet 802.1x</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ethernet.html#summary">Summary</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="exchange.html">Exchange</a><ul>
@@ -363,6 +375,12 @@
 <li class="toctree-l2"><a class="reference internal" href="fv2.html#summary">Summary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fv2.html#keys">Keys</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fv2.html#links">Links</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fv2redirect.html">FileVault Recovery Key Redirect</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fv2redirect.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fv2redirect.html#keys">Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fv2redirect.html#links">Links</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="font.html">Font</a><ul>
@@ -399,12 +417,19 @@
 <li class="toctree-l2"><a class="reference internal" href="identification.html#links">Links</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="identpref.html">Identity Preference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="identpref.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="identpref.html#links">Links</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="ldap.html">LDAP Account</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="ldap.html#summary">Summary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ldap.html#keys">Keys</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="logging.html">Unified Logging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="logging.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.html#keys">Keys</a></li>
 <li class="toctree-l2"><a class="reference internal" href="logging.html#notes">Notes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="logging.html#links">Links</a></li>
 </ul>
@@ -433,6 +458,7 @@
 <li class="toctree-l1"><a class="reference internal" href="mdm.html">MDM</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="mdm.html#summary">Summary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mdm.html#keys">Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mdm.html#access-rights">Access Rights</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mdm.html#links">Links</a></li>
 </ul>
 </li>
@@ -485,6 +511,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="parentalcontrols.html">Parental Controls</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="parentalcontrols.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parentalcontrols.html#keys">Keys</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="profileremovalpassword.html">Profile Removal Password</a><ul>
@@ -624,10 +651,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="adcert.html" class="btn btn-neutral float-right" title="Active Directory Certificate" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="activedirectory.html" class="btn btn-neutral float-right" title="Active Directory" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="userpreferences.html" class="btn btn-neutral" title="User Preferences (iCloud)" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../extmanifest.html" class="btn btn-neutral" title="Extended Manifest Format" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

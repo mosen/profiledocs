@@ -23,7 +23,7 @@ App Keys
    :key: App
 
 .. pfm:: manifests/ac2/com.apple.app.lock manifest.plist
-   :key: App.Options
+   :key: App:Options
 
 Links
 -----

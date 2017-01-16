@@ -36,7 +36,7 @@
     <link rel="top" title="Configuration Profiles  documentation" href="../index.html"/>
         <link rel="up" title="Payloads" href="index.html"/>
         <link rel="next" title="Certificate (PKCS#1)" href="certpkcs1.html"/>
-        <link rel="prev" title="CardDAV" href="carddav.html"/> 
+        <link rel="prev" title="Cellular" href="cellular.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -86,9 +86,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../official.html">Official Links and Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../manifest.html">Manifest File Format</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../extmanifest.html">Extended Manifest Format</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index-common.html">Common Payloads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index-ios.html">iOS Payloads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index-macos.html">macOS Payloads</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Payloads</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="activedirectory.html">Active Directory</a></li>
 <li class="toctree-l2"><a class="reference internal" href="adcert.html">Active Directory Certificate</a></li>
@@ -105,7 +102,6 @@
 <li class="toctree-l3"><a class="reference internal" href="#keys">Keys</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#com.apple.security.pem-PayloadCertificateFileName-auto">PayloadCertificateFileName</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#com.apple.security.pem-PayloadContent-auto">PayloadContent</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#com.apple.security.pem-Password-auto">Password</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#links">Links</a></li>
@@ -113,6 +109,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="certpkcs1.html">Certificate (PKCS#1)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certpkcs12.html">Certificate (PKCS#12)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="certpref.html">Certificate Preference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certroot.html">Certificate (Root CA)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="coremediaio.html">Core Media IO (Camera)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="custom.html">Custom Settings (MCX)</a></li>
@@ -123,16 +120,19 @@
 <li class="toctree-l2"><a class="reference internal" href="domains.html">Domains</a></li>
 <li class="toctree-l2"><a class="reference internal" href="email.html">E-mail Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="energysaver.html">Energy Saver</a></li>
-<li class="toctree-l2"><a class="reference internal" href="enrollment.html">Enrollment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enrollment.html">Enrollment (Supervised)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ethernet.html">Ethernet 802.1x</a></li>
 <li class="toctree-l2"><a class="reference internal" href="exchange.html">Exchange</a></li>
 <li class="toctree-l2"><a class="reference internal" href="firewall.html">Firewall</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fv2.html">FileVault 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fv2redirect.html">FileVault Recovery Key Redirect</a></li>
 <li class="toctree-l2"><a class="reference internal" href="font.html">Font</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gamecenter.html">Game Center</a></li>
 <li class="toctree-l2"><a class="reference internal" href="globalproxy.html">Global HTTP Proxy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="google.html">Google Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="homescreen.html">Home Screen Layout</a></li>
 <li class="toctree-l2"><a class="reference internal" href="identification.html">Identification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="identpref.html">Identity Preference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ldap.html">LDAP Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="logging.html">Unified Logging</a></li>
 <li class="toctree-l2"><a class="reference internal" href="loginitems.html">Login Items</a></li>
@@ -228,7 +228,7 @@
             
   <div class="section" id="certificate-pem">
 <span id="payloadtype-com-apple-security-pem"></span><h1>Certificate (PEM)<a class="headerlink" href="#certificate-pem" title="Permalink to this headline">¶</a></h1>
-<p>PEM-encoded certificate without private key. May contain root certificates.</p>
+<p>PEM-encoded certificate (.cer) without private key. May contain root certificates.</p>
 <div class="section" id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
 <table class="docutils field-list" frame="void" rules="none">
@@ -278,8 +278,8 @@
 </tr>
 <tr class="row-odd"><td>PayloadContent</td>
 <td>data</td>
-<td>Payload Certificate Filename</td>
-<td>The filename for the certificate</td>
+<td>Certificate Data</td>
+<td>PEM-encoded certificate without private key. May contain root certificates.</td>
 <td>always</td>
 </tr>
 <tr class="row-even"><td>Password</td>
@@ -331,8 +331,8 @@
 </div>
 <div class="section" id="com.apple.security.pem-PayloadContent-auto">
 <h3>PayloadContent<a class="headerlink" href="#com.apple.security.pem-PayloadContent-auto" title="Permalink to this headline">¶</a></h3>
-<p>Payload Certificate Filename</p>
-<p>The filename for the certificate</p>
+<p>Certificate Data</p>
+<p>PEM-encoded certificate without private key. May contain root certificates.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="14%" />
@@ -365,42 +365,6 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="com.apple.security.pem-Password-auto">
-<h3>Password<a class="headerlink" href="#com.apple.security.pem-Password-auto" title="Permalink to this headline">¶</a></h3>
-<p>Password</p>
-<p>Password protecting the PKCS12 file.</p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Type</th>
-<th class="head">Default</th>
-<th class="head">Required</th>
-<th class="head">Regex</th>
-<th class="head">iOS</th>
-<th class="head">macOS</th>
-<th class="head">Supervised</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>string</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>N/A</td>
-</tr>
-</tbody>
-</table>
-</div>
 </div>
 <div class="section" id="links">
 <h2>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
@@ -420,7 +384,7 @@
         <a href="certpkcs1.html" class="btn btn-neutral float-right" title="Certificate (PKCS#1)" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="carddav.html" class="btn btn-neutral" title="CardDAV" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="cellular.html" class="btn btn-neutral" title="Cellular" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

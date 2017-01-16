@@ -3,21 +3,22 @@
 Certificate (PEM)
 =================
 
-PEM-encoded certificate without private key. May contain root certificates.
+PEM-encoded certificate (.cer) without private key. May contain root certificates.
 
 Summary
 -------
 
-.. pfmheader:: manifests/ac2/com.apple.security.pem manifest.plist
+.. pfmheader:: manifests/manual/com.apple.security.pem manifest.plist
 
-.. pfm:: manifests/ac2/com.apple.security.pem manifest.plist
+.. pfm:: manifests/manual/com.apple.security.pem manifest.plist
 
 Keys
 ----
 
-.. pfmkey:: PayloadCertificateFileName manifests/ac2/com.apple.security.pem manifest.plist
-.. pfmkey:: PayloadContent manifests/ac2/com.apple.security.pem manifest.plist
-.. pfmkey:: Password manifests/ac2/com.apple.security.pem manifest.plist
+.. pfmkey:: PayloadCertificateFileName manifests/manual/com.apple.security.pem manifest.plist
+.. pfmkey:: PayloadContent manifests/manual/com.apple.security.pem manifest.plist
+
+
 
 Links
 -----

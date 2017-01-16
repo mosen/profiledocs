@@ -35,7 +35,7 @@
         <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="Configuration Profiles  documentation" href="../index.html"/>
         <link rel="up" title="Payloads" href="index.html"/>
-        <link rel="next" title="MDM" href="mdm.html"/>
+        <link rel="next" title="Login Items" href="loginitems.html"/>
         <link rel="prev" title="LDAP Account" href="ldap.html"/> 
 
   
@@ -86,9 +86,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../official.html">Official Links and Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../manifest.html">Manifest File Format</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../extmanifest.html">Extended Manifest Format</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index-common.html">Common Payloads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index-ios.html">iOS Payloads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index-macos.html">macOS Payloads</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Payloads</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="activedirectory.html">Active Directory</a></li>
 <li class="toctree-l2"><a class="reference internal" href="adcert.html">Active Directory Certificate</a></li>
@@ -103,6 +100,7 @@
 <li class="toctree-l2"><a class="reference internal" href="certpem.html">Certificate (PEM)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certpkcs1.html">Certificate (PKCS#1)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certpkcs12.html">Certificate (PKCS#12)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="certpref.html">Certificate Preference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certroot.html">Certificate (Root CA)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="coremediaio.html">Core Media IO (Camera)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="custom.html">Custom Settings (MCX)</a></li>
@@ -113,18 +111,27 @@
 <li class="toctree-l2"><a class="reference internal" href="domains.html">Domains</a></li>
 <li class="toctree-l2"><a class="reference internal" href="email.html">E-mail Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="energysaver.html">Energy Saver</a></li>
-<li class="toctree-l2"><a class="reference internal" href="enrollment.html">Enrollment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enrollment.html">Enrollment (Supervised)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ethernet.html">Ethernet 802.1x</a></li>
 <li class="toctree-l2"><a class="reference internal" href="exchange.html">Exchange</a></li>
 <li class="toctree-l2"><a class="reference internal" href="firewall.html">Firewall</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fv2.html">FileVault 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fv2redirect.html">FileVault Recovery Key Redirect</a></li>
 <li class="toctree-l2"><a class="reference internal" href="font.html">Font</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gamecenter.html">Game Center</a></li>
 <li class="toctree-l2"><a class="reference internal" href="globalproxy.html">Global HTTP Proxy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="google.html">Google Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="homescreen.html">Home Screen Layout</a></li>
 <li class="toctree-l2"><a class="reference internal" href="identification.html">Identification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="identpref.html">Identity Preference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ldap.html">LDAP Account</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Unified Logging</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#keys">Keys</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.system.logging-Subsystems-auto">Subsystems</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#default-options">Default Options</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#notes">Notes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#links">Links</a></li>
 </ul>
@@ -221,9 +228,382 @@
            <div itemprop="articleBody">
             
   <div class="section" id="unified-logging">
-<h1>Unified Logging<a class="headerlink" href="#unified-logging" title="Permalink to this headline">¶</a></h1>
-<p>Configure log levels for unified logging.
-Keys correspond to the directories under <code class="docutils literal"><span class="pre">/Library/Preferences/Logging</span></code>.</p>
+<span id="payloadtype-com-apple-system-logging"></span><h1>Unified Logging<a class="headerlink" href="#unified-logging" title="Permalink to this headline">¶</a></h1>
+<p>The unified logging payload allows you to configure logging levels by Subsystem (bundle ID), Process or for the System
+as a whole. It also allows you to configure a different log level for persistent logs.</p>
+<p>Also see the <em class="manpage">log(1)</em> man page for more information about the configuration.</p>
+<p>Keys correspond to the directories under <code class="docutils literal"><span class="pre">/Library/Preferences/Logging</span></code>.</p>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">PayloadType:</th><td class="field-body">com.apple.system.logging</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Supervised Only:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">N/A</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">macOS:</th><td class="field-body">10.12</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">macOS Deprecated:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">N/A</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">iOS:</th><td class="field-body">N/A</td>
+</tr>
+<tr class="field-even field"><th class="field-name">iOS Deprecated:</th><td class="field-body">N/A</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Highlander:</th><td class="field-body">N/A</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="43%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Title</th>
+<th class="head">Description</th>
+<th class="head">Required</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Processes</td>
+<td>dict</td>
+<td>Processes</td>
+<td>Configure Process Logging</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>Subsystems</td>
+<td>dict</td>
+<td>Subsystems</td>
+<td>Configure Subsystem Logging</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>System</td>
+<td>dict</td>
+<td>System</td>
+<td>Configure System Logging</td>
+<td>n/a</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="keys">
+<h2>Keys<a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Only the keys for Subsystems are shown because the other types adhere to the same structure.</p>
+</div>
+<div class="section" id="com.apple.system.logging-Subsystems-auto">
+<h3>Subsystems<a class="headerlink" href="#com.apple.system.logging-Subsystems-auto" title="Permalink to this headline">¶</a></h3>
+<p>Subsystems</p>
+<p>Configure Subsystem Logging</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>dict</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>This dict contains one key by default called <code class="docutils literal"><span class="pre">DEFAULT-OPTIONS</span></code> which is applied when no logging category is matched.
+The format of this dict is as below:</p>
+<div class="section" id="default-options">
+<h3>Default Options<a class="headerlink" href="#default-options" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="43%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Title</th>
+<th class="head">Description</th>
+<th class="head">Required</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Level</td>
+<td>dict</td>
+<td>Minimum Level</td>
+<td>Configures minimum logging level and persistence level</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>Default-Privacy-Setting</td>
+<td>string</td>
+<td>Sensitive Data Logging Settings</td>
+<td>Changes how variables eg string substitutions are formatted in the log</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>TTL</td>
+<td>dict</td>
+<td>Log entry time to live by level</td>
+<td>Changes how long a log entry will remain before being removed</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>Propagate-with-Activity</td>
+<td>boolean</td>
+<td>Messages attached to the activity tree</td>
+<td>Messages are attached to the activity tree in Console and crash dumps</td>
+<td>n/a</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="com.apple.system.logging-Level-auto">
+<h4>Level<a class="headerlink" href="#com.apple.system.logging-Level-auto" title="Permalink to this headline">¶</a></h4>
+<p>Minimum Level</p>
+<p>Configures minimum logging level and persistence level</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>dict</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="43%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Title</th>
+<th class="head">Description</th>
+<th class="head">Required</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Enable</td>
+<td>string</td>
+<td>Minimum log level enabled</td>
+<td>The minimum log level that will be enabled. Messages sent through NSLog are at the Default level. The default value of this is inherited from the System setting.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>Persist</td>
+<td>string</td>
+<td>Minimum log level to persist</td>
+<td>The minimum log level that will be persisted. Messages sent through NSLog are at the Default level. The default value of this is inherited from the System setting.</td>
+<td>n/a</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="com.apple.system.logging-Default-Privacy-Setting-auto">
+<h4>Default-Privacy-Setting<a class="headerlink" href="#com.apple.system.logging-Default-Privacy-Setting-auto" title="Permalink to this headline">¶</a></h4>
+<p>Sensitive Data Logging Settings</p>
+<p>Changes how variables eg string substitutions are formatted in the log</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<h4>Valid Choices<a class="headerlink" href="#com.apple.system.logging-Default-Privacy-Setting-auto" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>Inherit</li>
+<li>Public</li>
+<li>Private</li>
+</ul>
+</div>
+<div class="section" id="com.apple.system.logging-TTL-auto">
+<h4>TTL<a class="headerlink" href="#com.apple.system.logging-TTL-auto" title="Permalink to this headline">¶</a></h4>
+<p>Log entry time to live by level</p>
+<p>Changes how long a log entry will remain before being removed</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>dict</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="43%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Title</th>
+<th class="head">Description</th>
+<th class="head">Required</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Default</td>
+<td>integer</td>
+<td>Default</td>
+<td>Default Log Level TTL in days</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>Debug</td>
+<td>integer</td>
+<td>Debug</td>
+<td>Debug Log Level TTL in days</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>Info</td>
+<td>integer</td>
+<td>Info</td>
+<td>Info Log Level TTL in days</td>
+<td>n/a</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="com.apple.system.logging-Propagate-with-Activity-auto">
+<h4>Propagate-with-Activity<a class="headerlink" href="#com.apple.system.logging-Propagate-with-Activity-auto" title="Permalink to this headline">¶</a></h4>
+<p>Messages attached to the activity tree</p>
+<p>Messages are attached to the activity tree in Console and crash dumps</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
 <div class="section" id="notes">
 <h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
@@ -242,7 +622,7 @@ Keys correspond to the directories under <code class="docutils literal"><span cl
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="mdm.html" class="btn btn-neutral float-right" title="MDM" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="loginitems.html" class="btn btn-neutral float-right" title="Login Items" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="ldap.html" class="btn btn-neutral" title="LDAP Account" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>

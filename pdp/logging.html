@@ -86,9 +86,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../official.html">Official Links and Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../manifest.html">Manifest File Format</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../extmanifest.html">Extended Manifest Format</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../payloads/index-common.html">Common Payloads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../payloads/index-ios.html">iOS Payloads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../payloads/index-macos.html">macOS Payloads</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../payloads/index.html">Payloads</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../macos/index.html">macOS Subsystem Notes</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Profile Domain Plugins</a><ul class="current">
@@ -106,7 +103,10 @@
 <li class="toctree-l2"><a class="reference internal" href="ical.html">iCal</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ichat.html">iChat</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ldap.html">LDAP</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Logging</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Logging</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#domains">Domains</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="loginwindow.html">loginwindow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mail.html">Mail</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mcx.html">mcx</a></li>
@@ -169,6 +169,17 @@
             
   <div class="section" id="logging">
 <h1>Logging<a class="headerlink" href="#logging" title="Permalink to this headline">¶</a></h1>
+<p>The logging plugin manages settings for the Unified logging system.</p>
+<dl class="docutils">
+<dt>Location</dt>
+<dd>/System/Library/ConfigurationProfiles/PlugIns/Logging.profileDomainPlugin</dd>
+</dl>
+<div class="section" id="domains">
+<h2>Domains<a class="headerlink" href="#domains" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>com.apple.system.logging (<a class="reference internal" href="../payloads/logging.html#payloadtype-com-apple-system-logging"><span class="std std-ref">Unified Logging</span></a>)</li>
+</ul>
+</div>
 </div>
 
 

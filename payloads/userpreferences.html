@@ -34,8 +34,8 @@
               href="../genindex.html"/>
         <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="Configuration Profiles  documentation" href="../index.html"/>
-        <link rel="up" title="macOS Payloads" href="index-macos.html"/>
-        <link rel="next" title="Payloads" href="index.html"/>
+        <link rel="up" title="Payloads" href="index.html"/>
+        <link rel="next" title="VPN" href="vpn.html"/>
         <link rel="prev" title="TrackPad Settings" href="trackpad.html"/> 
 
   
@@ -86,9 +86,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../official.html">Official Links and Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../manifest.html">Manifest File Format</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../extmanifest.html">Extended Manifest Format</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index-common.html">Common Payloads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index-ios.html">iOS Payloads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index-macos.html">macOS Payloads</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Payloads</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="activedirectory.html">Active Directory</a></li>
 <li class="toctree-l2"><a class="reference internal" href="adcert.html">Active Directory Certificate</a></li>
@@ -103,6 +100,7 @@
 <li class="toctree-l2"><a class="reference internal" href="certpem.html">Certificate (PEM)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certpkcs1.html">Certificate (PKCS#1)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certpkcs12.html">Certificate (PKCS#12)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="certpref.html">Certificate Preference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certroot.html">Certificate (Root CA)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="coremediaio.html">Core Media IO (Camera)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="custom.html">Custom Settings (MCX)</a></li>
@@ -113,16 +111,19 @@
 <li class="toctree-l2"><a class="reference internal" href="domains.html">Domains</a></li>
 <li class="toctree-l2"><a class="reference internal" href="email.html">E-mail Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="energysaver.html">Energy Saver</a></li>
-<li class="toctree-l2"><a class="reference internal" href="enrollment.html">Enrollment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enrollment.html">Enrollment (Supervised)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ethernet.html">Ethernet 802.1x</a></li>
 <li class="toctree-l2"><a class="reference internal" href="exchange.html">Exchange</a></li>
 <li class="toctree-l2"><a class="reference internal" href="firewall.html">Firewall</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fv2.html">FileVault 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fv2redirect.html">FileVault Recovery Key Redirect</a></li>
 <li class="toctree-l2"><a class="reference internal" href="font.html">Font</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gamecenter.html">Game Center</a></li>
 <li class="toctree-l2"><a class="reference internal" href="globalproxy.html">Global HTTP Proxy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="google.html">Google Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="homescreen.html">Home Screen Layout</a></li>
 <li class="toctree-l2"><a class="reference internal" href="identification.html">Identification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="identpref.html">Identity Preference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ldap.html">LDAP Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="logging.html">Unified Logging</a></li>
 <li class="toctree-l2"><a class="reference internal" href="loginitems.html">Login Items</a></li>
@@ -203,7 +204,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
-          <li><a href="index-macos.html">macOS Payloads</a> &raquo;</li>
+          <li><a href="index.html">Payloads</a> &raquo;</li>
       
     <li>User Preferences (iCloud)</li>
       <li class="wy-breadcrumbs-aside">
@@ -229,6 +230,53 @@ More testing is required.</p>
 </div>
 <div class="section" id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">PayloadType:</th><td class="field-body">com.apple.preferences.users</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Supervised Only:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">N/A</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">macOS:</th><td class="field-body">N/A</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">macOS Deprecated:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">N/A</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">iOS:</th><td class="field-body">N/A</td>
+</tr>
+<tr class="field-even field"><th class="field-name">iOS Deprecated:</th><td class="field-body">N/A</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Highlander:</th><td class="field-body">N/A</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="43%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Title</th>
+<th class="head">Description</th>
+<th class="head">Required</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>DisableUsingiCloudPassword</td>
+<td>boolean</td>
+<td>Disable Using iCloud Password</td>
+<td>Disable Using iCloud Password (Undocumented)</td>
+<td>n/a</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 
@@ -239,7 +287,7 @@ More testing is required.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="index.html" class="btn btn-neutral float-right" title="Payloads" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="vpn.html" class="btn btn-neutral float-right" title="VPN" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="trackpad.html" class="btn btn-neutral" title="TrackPad Settings" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>

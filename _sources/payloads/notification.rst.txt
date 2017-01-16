@@ -20,7 +20,7 @@ Notification Settings Item
 """"""""""""""""""""""""""
 
 .. pfm:: manifests/manual/com.apple.notificationsettings manifest.plist
-    :key: NotificationSettings.NotificationSetting
+    :key: NotificationSettings:NotificationSetting
 
 Links
 -----

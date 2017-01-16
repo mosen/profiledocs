@@ -86,9 +86,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../official.html">Official Links and Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../manifest.html">Manifest File Format</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../extmanifest.html">Extended Manifest Format</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index-common.html">Common Payloads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index-ios.html">iOS Payloads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index-macos.html">macOS Payloads</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Payloads</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="activedirectory.html">Active Directory</a></li>
 <li class="toctree-l2"><a class="reference internal" href="adcert.html">Active Directory Certificate</a></li>
@@ -113,6 +110,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="certpkcs12.html">Certificate (PKCS#12)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="certpref.html">Certificate Preference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certroot.html">Certificate (Root CA)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="coremediaio.html">Core Media IO (Camera)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="custom.html">Custom Settings (MCX)</a></li>
@@ -123,16 +121,19 @@
 <li class="toctree-l2"><a class="reference internal" href="domains.html">Domains</a></li>
 <li class="toctree-l2"><a class="reference internal" href="email.html">E-mail Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="energysaver.html">Energy Saver</a></li>
-<li class="toctree-l2"><a class="reference internal" href="enrollment.html">Enrollment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enrollment.html">Enrollment (Supervised)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ethernet.html">Ethernet 802.1x</a></li>
 <li class="toctree-l2"><a class="reference internal" href="exchange.html">Exchange</a></li>
 <li class="toctree-l2"><a class="reference internal" href="firewall.html">Firewall</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fv2.html">FileVault 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fv2redirect.html">FileVault Recovery Key Redirect</a></li>
 <li class="toctree-l2"><a class="reference internal" href="font.html">Font</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gamecenter.html">Game Center</a></li>
 <li class="toctree-l2"><a class="reference internal" href="globalproxy.html">Global HTTP Proxy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="google.html">Google Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="homescreen.html">Home Screen Layout</a></li>
 <li class="toctree-l2"><a class="reference internal" href="identification.html">Identification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="identpref.html">Identity Preference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ldap.html">LDAP Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="logging.html">Unified Logging</a></li>
 <li class="toctree-l2"><a class="reference internal" href="loginitems.html">Login Items</a></li>
@@ -228,7 +229,7 @@
             
   <div class="section" id="certificate-pkcs-1">
 <span id="payloadtype-com-apple-security-pkcs1"></span><h1>Certificate (PKCS#1)<a class="headerlink" href="#certificate-pkcs-1" title="Permalink to this headline">¶</a></h1>
-<p>DER-encoded certificate without private key. May contain root certificates.</p>
+<p>DER-encoded certificate (.cer) without private key. May contain root certificates.</p>
 <div class="section" id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
 <table class="docutils field-list" frame="void" rules="none">
@@ -278,8 +279,8 @@
 </tr>
 <tr class="row-odd"><td>PayloadContent</td>
 <td>data</td>
-<td>Payload Certificate Filename</td>
-<td>The filename for the certificate</td>
+<td>Certificate Data</td>
+<td>DER-encoded certificate without private key. May contain root certificates.</td>
 <td>always</td>
 </tr>
 <tr class="row-even"><td>Password</td>
@@ -331,8 +332,8 @@
 </div>
 <div class="section" id="com.apple.security.pkcs1-PayloadContent-auto">
 <h3>PayloadContent<a class="headerlink" href="#com.apple.security.pkcs1-PayloadContent-auto" title="Permalink to this headline">¶</a></h3>
-<p>Payload Certificate Filename</p>
-<p>The filename for the certificate</p>
+<p>Certificate Data</p>
+<p>DER-encoded certificate without private key. May contain root certificates.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="14%" />

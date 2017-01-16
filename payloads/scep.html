@@ -86,9 +86,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../official.html">Official Links and Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../manifest.html">Manifest File Format</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../extmanifest.html">Extended Manifest Format</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index-common.html">Common Payloads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index-ios.html">iOS Payloads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index-macos.html">macOS Payloads</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Payloads</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="activedirectory.html">Active Directory</a></li>
 <li class="toctree-l2"><a class="reference internal" href="adcert.html">Active Directory Certificate</a></li>
@@ -103,6 +100,7 @@
 <li class="toctree-l2"><a class="reference internal" href="certpem.html">Certificate (PEM)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certpkcs1.html">Certificate (PKCS#1)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certpkcs12.html">Certificate (PKCS#12)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="certpref.html">Certificate Preference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certroot.html">Certificate (Root CA)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="coremediaio.html">Core Media IO (Camera)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="custom.html">Custom Settings (MCX)</a></li>
@@ -113,16 +111,19 @@
 <li class="toctree-l2"><a class="reference internal" href="domains.html">Domains</a></li>
 <li class="toctree-l2"><a class="reference internal" href="email.html">E-mail Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="energysaver.html">Energy Saver</a></li>
-<li class="toctree-l2"><a class="reference internal" href="enrollment.html">Enrollment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enrollment.html">Enrollment (Supervised)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ethernet.html">Ethernet 802.1x</a></li>
 <li class="toctree-l2"><a class="reference internal" href="exchange.html">Exchange</a></li>
 <li class="toctree-l2"><a class="reference internal" href="firewall.html">Firewall</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fv2.html">FileVault 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fv2redirect.html">FileVault Recovery Key Redirect</a></li>
 <li class="toctree-l2"><a class="reference internal" href="font.html">Font</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gamecenter.html">Game Center</a></li>
 <li class="toctree-l2"><a class="reference internal" href="globalproxy.html">Global HTTP Proxy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="google.html">Google Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="homescreen.html">Home Screen Layout</a></li>
 <li class="toctree-l2"><a class="reference internal" href="identification.html">Identification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="identpref.html">Identity Preference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ldap.html">LDAP Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="logging.html">Unified Logging</a></li>
 <li class="toctree-l2"><a class="reference internal" href="loginitems.html">Login Items</a></li>
@@ -145,7 +146,20 @@
 <li class="toctree-l2"><a class="reference internal" href="restrictions.html">Restrictions</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">SCEP</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#keys">Keys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#keys">Keys</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.security.scep-URL-auto">URL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.security.scep-Name-auto">Name</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.security.scep-Subject-auto">Subject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.security.scep-Challenge-auto">Challenge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.security.scep-Keysize-auto">Keysize</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.security.scep-CAFingerprint-auto">CAFingerprint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.security.scep-KeyType-auto">KeyType</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.security.scep-KeyUsage-auto">KeyUsage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.security.scep-SubjectAltName-auto">SubjectAltName</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.security.scep-Retries-auto">Retries</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.security.scep-RetryDelay-auto">RetryDelay</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#links">Links</a></li>
 </ul>
 </li>
@@ -223,6 +237,11 @@
             
   <div class="section" id="scep">
 <span id="payloadtype-com-apple-security-scep"></span><h1>SCEP<a class="headerlink" href="#scep" title="Permalink to this headline">¶</a></h1>
+<p>An SCEP payload automates the request of a client certificate from an SCEP server.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">GetCACaps is mentioned in the documentation but not included in this manifest.</p>
+</div>
 <div class="section" id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
 <table class="docutils field-list" frame="void" rules="none">
@@ -300,13 +319,13 @@
 <td>Enter hex string to be used as a fingerprint or create fingerprint from Certificate</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>Key Type</td>
+<tr class="row-even"><td>KeyType</td>
 <td>string</td>
 <td>Key Type</td>
 <td>Key Type</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>Key Usage</td>
+<tr class="row-odd"><td>KeyUsage</td>
 <td>integer</td>
 <td>Key Usage</td>
 <td>A bitmask indicating the use of the ky. 1 - signing, 4 - encryption, 5 - signing and encryption</td>
@@ -335,6 +354,414 @@
 </div>
 <div class="section" id="keys">
 <h2>Keys<a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="com.apple.security.scep-URL-auto">
+<h3>URL<a class="headerlink" href="#com.apple.security.scep-URL-auto" title="Permalink to this headline">¶</a></h3>
+<p>URL</p>
+<p>The base URL for the SCEP server</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>always</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.security.scep-Name-auto">
+<h3>Name<a class="headerlink" href="#com.apple.security.scep-Name-auto" title="Permalink to this headline">¶</a></h3>
+<p>Name</p>
+<p>The name of the instance: CA-IDENT</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Optional. Any string that is understood by the SCEP server. For example, it could be a domain name like example.org.
+If a certificate authority has multiple CA certificates this field can be used to distinguish which is required.</p>
+<div class="section" id="com.apple.security.scep-Subject-auto">
+<h3>Subject<a class="headerlink" href="#com.apple.security.scep-Subject-auto" title="Permalink to this headline">¶</a></h3>
+<p>Subject</p>
+<p>Representation of a X.500 name</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>array</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Optional. The representation of a X.500 name represented as an array of OID and value.
+For example, /C=US/O=Apple Inc./CN=foo/1.2.5.3=bar, which would translate to:</p>
+<blockquote>
+<div>[ [ [&#8220;C&#8221;, &#8220;US&#8221;] ], [ [&#8220;O&#8221;, &#8220;Apple Inc.&#8221;] ], ..., [ [ &#8220;1.2.5.3&#8221;, &#8220;bar&#8221; ] ] ]</div></blockquote>
+<p>OIDs can be represented as dotted numbers, with shortcuts for country (C), locality (L), state (ST), organization (O), organizational unit (OU), and common name (CN).</p>
+<div class="section" id="com.apple.security.scep-Challenge-auto">
+<h3>Challenge<a class="headerlink" href="#com.apple.security.scep-Challenge-auto" title="Permalink to this headline">¶</a></h3>
+<p>Challenge</p>
+<p>Used as the pre-shared secret for automatic enrollment</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.security.scep-Keysize-auto">
+<h3>Keysize<a class="headerlink" href="#com.apple.security.scep-Keysize-auto" title="Permalink to this headline">¶</a></h3>
+<p>Key Size</p>
+<p>Key size in bits</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>integer</td>
+<td>1024</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<h3>Valid Choices<a class="headerlink" href="#com.apple.security.scep-Keysize-auto" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>1024</li>
+<li>2048</li>
+</ul>
+</div>
+<div class="section" id="com.apple.security.scep-CAFingerprint-auto">
+<h3>CAFingerprint<a class="headerlink" href="#com.apple.security.scep-CAFingerprint-auto" title="Permalink to this headline">¶</a></h3>
+<p>Fingerprint</p>
+<p>Enter hex string to be used as a fingerprint or create fingerprint from Certificate</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>data</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.security.scep-KeyType-auto">
+<h3>KeyType<a class="headerlink" href="#com.apple.security.scep-KeyType-auto" title="Permalink to this headline">¶</a></h3>
+<p>Key Type</p>
+<p>Key Type</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>RSA</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.security.scep-KeyUsage-auto">
+<h3>KeyUsage<a class="headerlink" href="#com.apple.security.scep-KeyUsage-auto" title="Permalink to this headline">¶</a></h3>
+<p>Key Usage</p>
+<p>A bitmask indicating the use of the ky. 1 - signing, 4 - encryption, 5 - signing and encryption</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>integer</td>
+<td>0</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>4.0</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.security.scep-SubjectAltName-auto">
+<h3>SubjectAltName<a class="headerlink" href="#com.apple.security.scep-SubjectAltName-auto" title="Permalink to this headline">¶</a></h3>
+<p>Subject Alt Name</p>
+<p>Specifies the Subject Alt Name for the certificate</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>dictionary</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.security.scep-Retries-auto">
+<h3>Retries<a class="headerlink" href="#com.apple.security.scep-Retries-auto" title="Permalink to this headline">¶</a></h3>
+<p>Retries</p>
+<p>The number of times the device should retry if the server sends a PENDING response</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>integer</td>
+<td>3</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.security.scep-RetryDelay-auto">
+<h3>RetryDelay<a class="headerlink" href="#com.apple.security.scep-RetryDelay-auto" title="Permalink to this headline">¶</a></h3>
+<p>Retry Delay</p>
+<p>The number of seconds to wait between subsequent retries. The first retry is attempted without this delay</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>integer</td>
+<td>10</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 <div class="section" id="links">
 <h2>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>

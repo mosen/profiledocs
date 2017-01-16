@@ -35,8 +35,8 @@
         <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="Configuration Profiles  documentation" href="../index.html"/>
         <link rel="up" title="Payloads" href="index.html"/>
-        <link rel="next" title="Network Browser (Finder)" href="networkbrowser.html"/>
-        <link rel="prev" title="Unified Logging" href="logging.html"/> 
+        <link rel="next" title="Media Access (SystemUIServer)" href="mediaaccess.html"/>
+        <link rel="prev" title="Folder Redirection (MCX)" href="mcxredirector.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -86,9 +86,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../official.html">Official Links and Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../manifest.html">Manifest File Format</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../extmanifest.html">Extended Manifest Format</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index-common.html">Common Payloads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index-ios.html">iOS Payloads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index-macos.html">macOS Payloads</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Payloads</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="activedirectory.html">Active Directory</a></li>
 <li class="toctree-l2"><a class="reference internal" href="adcert.html">Active Directory Certificate</a></li>
@@ -103,6 +100,7 @@
 <li class="toctree-l2"><a class="reference internal" href="certpem.html">Certificate (PEM)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certpkcs1.html">Certificate (PKCS#1)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certpkcs12.html">Certificate (PKCS#12)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="certpref.html">Certificate Preference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certroot.html">Certificate (Root CA)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="coremediaio.html">Core Media IO (Camera)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="custom.html">Custom Settings (MCX)</a></li>
@@ -113,16 +111,19 @@
 <li class="toctree-l2"><a class="reference internal" href="domains.html">Domains</a></li>
 <li class="toctree-l2"><a class="reference internal" href="email.html">E-mail Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="energysaver.html">Energy Saver</a></li>
-<li class="toctree-l2"><a class="reference internal" href="enrollment.html">Enrollment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enrollment.html">Enrollment (Supervised)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ethernet.html">Ethernet 802.1x</a></li>
 <li class="toctree-l2"><a class="reference internal" href="exchange.html">Exchange</a></li>
 <li class="toctree-l2"><a class="reference internal" href="firewall.html">Firewall</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fv2.html">FileVault 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fv2redirect.html">FileVault Recovery Key Redirect</a></li>
 <li class="toctree-l2"><a class="reference internal" href="font.html">Font</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gamecenter.html">Game Center</a></li>
 <li class="toctree-l2"><a class="reference internal" href="globalproxy.html">Global HTTP Proxy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="google.html">Google Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="homescreen.html">Home Screen Layout</a></li>
 <li class="toctree-l2"><a class="reference internal" href="identification.html">Identification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="identpref.html">Identity Preference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ldap.html">LDAP Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="logging.html">Unified Logging</a></li>
 <li class="toctree-l2"><a class="reference internal" href="loginitems.html">Login Items</a></li>
@@ -136,12 +137,15 @@
 <li class="toctree-l4"><a class="reference internal" href="#com.apple.mdm-IdentityCertificateUUID-auto">IdentityCertificateUUID</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#com.apple.mdm-Topic-auto">Topic</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#com.apple.mdm-ServerURL-auto">ServerURL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.mdm-ServerCapabilities-auto">ServerCapabilities</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#com.apple.mdm-SignMessage-auto">SignMessage</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#com.apple.mdm-CheckInURL-auto">CheckInURL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.mdm-CheckOutWhenRemoved-auto">CheckOutWhenRemoved</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#com.apple.mdm-AccessRights-auto">AccessRights</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#com.apple.mdm-UseDevelopementAPNS-auto">UseDevelopementAPNS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.mdm-UseDevelopmentAPNS-auto">UseDevelopmentAPNS</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#access-rights">Access Rights</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#links">Links</a></li>
 </ul>
 </li>
@@ -292,28 +296,41 @@
 <td>The URL that the device will contact to retrieve device management instructions.</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>SignMessage</td>
+<tr class="row-odd"><td>ServerCapabilities</td>
+<td>array</td>
+<td>Server Capabilities</td>
+<td>Optional. An array of strings indicating server capabilities. If the server manages OS X devices or a shared iPad, this field is mandatory and must contain the value com.apple.mdm.per-user-connections. This indicates that the server supports both device and user connections.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>SignMessage</td>
 <td>boolean</td>
 <td>Sign Message</td>
 <td>If set, each message coming from the device will carry the additional HTTP header Mdm-Signature</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>CheckInURL</td>
+<tr class="row-odd"><td>CheckInURL</td>
 <td>string</td>
 <td>Check In URL</td>
 <td>The URL that the device will use to check in during installation. If this URL is not given, the ServerURL will be used for both purposes.</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>AccessRights</td>
+<tr class="row-even"><td>AccessRights</td>
 <td>integer</td>
 <td>Access Rights</td>
 <td>Logical OR of several bit-flags. If 2 is specified, then 1 must also be specified. If 128 is specified, then 64 must also be specified.</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>UseDevelopementAPNS</td>
+<tr class="row-odd"><td>CheckOutWhenRemoved</td>
 <td>boolean</td>
-<td>Use Developement APNS</td>
-<td>If set, will use the developement APNS servers. Otherwise, the device will use the production servers.</td>
+<td>Check Out when removed</td>
+<td>If true, the device attempts to send a CheckOut message to the check-in server when the profile is removed. Defaults to false.
+				Note: OS X v10.8 acts as though this setting is always true.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>UseDevelopmentAPNS</td>
+<td>boolean</td>
+<td>Use Development APNS</td>
+<td>If set, will use the development APNS servers. Otherwise, the device will use the production servers.</td>
 <td>n/a</td>
 </tr>
 </tbody>
@@ -429,6 +446,47 @@
 </tbody>
 </table>
 </div>
+<p>Must begin with the <a class="reference external" href="https://">https://</a> URL scheme, and may contain a port number (:1234, for example).</p>
+<div class="section" id="com.apple.mdm-ServerCapabilities-auto">
+<h3>ServerCapabilities<a class="headerlink" href="#com.apple.mdm-ServerCapabilities-auto" title="Permalink to this headline">¶</a></h3>
+<p>Server Capabilities</p>
+<p>Optional. An array of strings indicating server capabilities. If the server manages OS X devices or a shared iPad, this field is mandatory and must contain the value com.apple.mdm.per-user-connections. This indicates that the server supports both device and user connections.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>array</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<h3>Valid Choices<a class="headerlink" href="#com.apple.mdm-ServerCapabilities-auto" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>com.apple.mdm.per-user-connections</li>
+</ul>
+</div>
 <div class="section" id="com.apple.mdm-SignMessage-auto">
 <h3>SignMessage<a class="headerlink" href="#com.apple.mdm-SignMessage-auto" title="Permalink to this headline">¶</a></h3>
 <p>Sign Message</p>
@@ -501,6 +559,43 @@
 </tbody>
 </table>
 </div>
+<div class="section" id="com.apple.mdm-CheckOutWhenRemoved-auto">
+<h3>CheckOutWhenRemoved<a class="headerlink" href="#com.apple.mdm-CheckOutWhenRemoved-auto" title="Permalink to this headline">¶</a></h3>
+<p>Check Out when removed</p>
+<p>If true, the device attempts to send a CheckOut message to the check-in server when the profile is removed. Defaults to false.
+				Note: OS X v10.8 acts as though this setting is always true.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>5.0</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="section" id="com.apple.mdm-AccessRights-auto">
 <h3>AccessRights<a class="headerlink" href="#com.apple.mdm-AccessRights-auto" title="Permalink to this headline">¶</a></h3>
 <p>Access Rights</p>
@@ -537,10 +632,10 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="com.apple.mdm-UseDevelopementAPNS-auto">
-<h3>UseDevelopementAPNS<a class="headerlink" href="#com.apple.mdm-UseDevelopementAPNS-auto" title="Permalink to this headline">¶</a></h3>
-<p>Use Developement APNS</p>
-<p>If set, will use the developement APNS servers. Otherwise, the device will use the production servers.</p>
+<div class="section" id="com.apple.mdm-UseDevelopmentAPNS-auto">
+<h3>UseDevelopmentAPNS<a class="headerlink" href="#com.apple.mdm-UseDevelopmentAPNS-auto" title="Permalink to this headline">¶</a></h3>
+<p>Use Development APNS</p>
+<p>If set, will use the development APNS servers. Otherwise, the device will use the production servers.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="14%" />
@@ -574,8 +669,31 @@
 </table>
 </div>
 </div>
+<div class="section" id="access-rights">
+<h2>Access Rights<a class="headerlink" href="#access-rights" title="Permalink to this headline">¶</a></h2>
+<p>MDM Access Rights can be constructed from a bitmask by ORing the following values:</p>
+<ul class="simple">
+<li>1: Allow inspection of installed configuration profiles.</li>
+<li>2: Allow installation and removal of configuration profiles.</li>
+<li>4: Allow device lock and passcode removal.</li>
+<li>8: Allow device erase.</li>
+<li>16: Allow query of Device Information (device capacity, serial number).</li>
+<li>32: Allow query of Network Information (phone/SIM numbers, MAC addresses).</li>
+<li>64: Allow inspection of installed provisioning profiles.</li>
+<li>128: Allow installation and removal of provisioning profiles.</li>
+<li>256: Allow inspection of installed applications.</li>
+<li>512: Allow restriction-related queries.</li>
+<li>1024: Allow security-related queries.</li>
+<li>2048: Allow manipulation of settings. Availability: Available in iOS 5.0 and later. Available in OS X 10.9 for certain commands.</li>
+<li>4096: Allow app management. Availability: Available in iOS 5.0 and later. Available in OS X 10.9 for certain commands.</li>
+</ul>
+<p>May not be zero. If 2 is specified, 1 must also be specified. If 128 is specified, 64 must also be specified.</p>
+</div>
 <div class="section" id="links">
 <h2>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://developer.apple.com/library/prerelease/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW50">Structure of MDM Payloads</a>.</li>
+</ul>
 </div>
 </div>
 
@@ -586,10 +704,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="networkbrowser.html" class="btn btn-neutral float-right" title="Network Browser (Finder)" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="mediaaccess.html" class="btn btn-neutral float-right" title="Media Access (SystemUIServer)" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="logging.html" class="btn btn-neutral" title="Unified Logging" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="mcxredirector.html" class="btn btn-neutral" title="Folder Redirection (MCX)" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
