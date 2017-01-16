@@ -8,7 +8,7 @@ It should not be confused with the standard VPN payload, described in :ref:`payl
 
 The Per-App VPN payload supports all of the keys described in :ref:`payloadtype-com.apple.vpn.managed` plus the following additional keys
 
-.. todo:: Copy VPN payload keys into the per app vpn manifest.
+.. note:: Copy VPN payload keys into the per app vpn manifest.
 
 Summary
 -------

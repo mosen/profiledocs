@@ -26,7 +26,7 @@ Keys
     :key: UserPrinterList
 
 .. pfm:: manifests/manual/com.apple.mcxprinting manifest.plist
-    :key: UserPrinterList.QueueName
+    :key: UserPrinterList:QueueName
 
 .. pfmkey:: RequireAdminToAddPrinters manifests/manual/com.apple.mcxprinting manifest.plist
 .. pfmkey:: AllowLocalPrinters manifests/manual/com.apple.mcxprinting manifest.plist

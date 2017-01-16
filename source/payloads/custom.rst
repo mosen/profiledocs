@@ -20,5 +20,5 @@ PayloadContent Keys
 """""""""""""""""""
 
 .. pfm:: manifests/manual/com.apple.ManagedClient.preferences manifest.plist
-   :key: PayloadContent.PreferenceDomainHere
+   :key: PayloadContent:PreferenceDomainHere
 

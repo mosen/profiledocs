@@ -12,6 +12,15 @@ Summary
 Keys
 ----
 
+Icon Dictionary
+^^^^^^^^^^^^^^^
+
+.. pfm:: manifests/manual/com.apple.homescreenlayout manifest.plist
+    :key: Dock:DockItem
+
+
+.. pfmkey:: Dock:DockItem:Type manifests/manual/com.apple.homescreenlayout manifest.plist
+
 Links
 -----
 

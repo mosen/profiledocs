@@ -1,7 +1,7 @@
 Profile Defaults
 ================
 
-.. todo:: Originates from AC2 and may not actually be a payload
+.. note:: Originates from AC2 and may not actually be a payload
 
 Summary
 -------
