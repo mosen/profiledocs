@@ -7,4 +7,4 @@ Location
 Domains
 -------
 
-- com.apple.mobiledevice.passwordpolicy (`:ref:payloadtype-com.apple.mobiledevice.passwordpolicy`)
+- com.apple.mobiledevice.passwordpolicy (:ref:`payloadtype-com.apple.mobiledevice.passwordpolicy`)

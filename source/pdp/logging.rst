@@ -9,4 +9,4 @@ Location
 Domains
 -------
 
-- com.apple.system.logging (`:ref:payloadtype-com.apple.system.logging`)
+- com.apple.system.logging (:ref:`payloadtype-com.apple.system.logging`)

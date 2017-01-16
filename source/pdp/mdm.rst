@@ -7,4 +7,4 @@ Location
 Domains
 -------
 
-- com.apple.mdm (`:ref:payloadtype-com.apple.mdm`)
+- com.apple.mdm (:ref:`payloadtype-com.apple.mdm`)

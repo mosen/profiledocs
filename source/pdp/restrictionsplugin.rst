@@ -7,5 +7,5 @@ Location
 Domains
 -------
 
-- com.apple.applicationaccess (`:ref:payloadtype-com.apple.applicationaccess`)
+- com.apple.applicationaccess (:ref:`payloadtype-com.apple.applicationaccess`)
 

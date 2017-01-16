@@ -3,7 +3,7 @@
 Certificate (Root CA)
 =====================
 
-Alias for `:ref:payloadtype-com.apple.security.pkcs1`.
+Alias for :ref:`payloadtype-com.apple.security.pkcs1`.
 
 Summary
 -------
