@@ -4,6 +4,7 @@ Custom Settings (MCX)
 =====================
 
 This is a catch-all payload for writing defaults in any given preference domain.
+It is the macOS equivalent of :ref:`payloadtype-com.apple.defaults.managed`.
 
 Summary
 -------

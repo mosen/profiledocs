@@ -17,13 +17,22 @@ Keys
 .. pfmkey:: App manifests/ac2/com.apple.app.lock manifest.plist
 
 App Keys
-""""""""
+^^^^^^^^
 
 .. pfm:: manifests/ac2/com.apple.app.lock manifest.plist
    :key: App
 
+Options
+^^^^^^^
+
 .. pfm:: manifests/ac2/com.apple.app.lock manifest.plist
    :key: App:Options
+
+User Enabled Options
+^^^^^^^^^^^^^^^^^^^^
+
+.. pfm:: manifests/ac2/com.apple.app.lock manifest.plist
+   :key: App:UserEnabledOptions
 
 Links
 -----
