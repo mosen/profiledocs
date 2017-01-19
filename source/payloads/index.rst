@@ -27,6 +27,7 @@ Payloads
     discrecording.rst
     dock.rst
     domains.rst
+    education.rst
     email.rst
     energysaver.rst
     enrollment.rst
