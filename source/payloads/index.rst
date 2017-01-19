@@ -62,6 +62,8 @@ Payloads
     appmapping.rst
     defaults.rst
     parentalcontrols.rst
+    parental-timelimits.rst
+    parental-contentfilter.rst
     profileremovalpassword.rst
     restrictions.rst
     scep.rst

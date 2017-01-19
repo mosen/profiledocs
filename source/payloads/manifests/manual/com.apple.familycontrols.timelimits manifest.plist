@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>pfm_description</key>
+        <string>Parental Controls - Time Limits</string>
+        <key>pfm_title</key>
+        <string>Parental Controls - Time Limits</string>
+        <key>pfm_format_version</key>
+        <integer>1</integer>
+        <key>pfm_version</key>
+        <integer>1</integer>
+        <key>pfm_domain</key>
+        <string>com.apple.familycontrols.timelimits</string>
+        <key>pfm_subkeys</key>
+        <array>
+            <dict>
+                <key>pfm_name</key>
+                <string>PayloadDescription</string>
+                <key>pfm_title</key>
+                <string>Payload Description</string>
+                <key>pfm_description</key>
+                <string>Description of the payload</string>
+                <key>pfm_type</key>
+                <string>string</string>
+                <key>pfm_default</key>
+                <string>Parental Controls - Time Limits</string>
+            </dict>
+            <dict>
+                <key>pfm_name</key>
+                <string>PayloadDisplayName</string>
+                <key>pfm_title</key>
+                <string>Payload Display Name</string>
+                <key>pfm_description</key>
+                <string>Name of the payload</string>
+                <key>pfm_type</key>
+                <string>string</string>
+                <key>pfm_default</key>
+                <string>Parental Controls - Time Limits</string>
+                <key>pfm_require</key>
+                <string>always</string>
+            </dict>
+            <dict>
+                <key>pfm_name</key>
+                <string>PayloadIdentifier</string>
+                <key>pfm_title</key>
+                <string>Payload Identifier</string>
+                <key>pfm_description</key>
+                <string>A unique identifier for the payload, dot-delimited.  Usually root PayloadIdentifier+subidentifier</string>
+                <key>pfm_type</key>
+                <string>string</string>
+                <key>pfm_default</key>
+                <string>com.apple.familycontrols.timelimits</string>
+                <key>pfm_require</key>
+                <string>always</string>
+            </dict>
+            <dict>
+                <key>pfm_name</key>
+                <string>PayloadType</string>
+                <key>pfm_title</key>
+                <string>Payload Type</string>
+                <key>pfm_description</key>
+                <string>The type of the payload, a reverse dns string</string>
+                <key>pfm_type</key>
+                <string>string</string>
+                <key>pfm_default</key>
+                <string>com.apple.familycontrols.timelimits</string>
+                <key>pfm_require</key>
+                <string>always</string>
+            </dict>
+            <dict>
+                <key>pfm_name</key>
+                <string>PayloadUUID</string>
+                <key>pfm_title</key>
+                <string>Payload UUID</string>
+                <key>pfm_description</key>
+                <string>Unique identifier for the payload (format 01234567-89AB-CDEF-0123-456789ABCDEF)</string>
+                <key>pfm_type</key>
+                <string>string</string>
+                <key>pfm_default</key>
+                <string></string>
+                <key>pfm_require</key>
+                <string>always</string>
+                <key>pfm_format</key>
+                <string>^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$</string>
+            </dict>
+            <dict>
+                <key>pfm_name</key>
+                <string>PayloadVersion</string>
+                <key>pfm_title</key>
+                <string>Payload Version</string>
+                <key>pfm_description</key>
+                <string>The version of the whole configuration profile.</string>
+                <key>pfm_type</key>
+                <string>integer</string>
+                <key>pfm_default</key>
+                <integer>1</integer>
+                <key>pfm_require</key>
+                <string>always</string>
+            </dict>
+            <dict>
+                <key>pfm_name</key>
+                <string>PayloadOrganization</string>
+                <key>pfm_title</key>
+                <string>Payload Organization</string>
+                <key>pfm_description</key>
+                <string>This value describes the issuing organization of the profile, as displayed to the user</string>
+                <key>pfm_type</key>
+                <string>string</string>
+            </dict>
+            <dict>
+                <key>pfm_name</key>
+                <string>familyControlsEnabled</string>
+                <key>pfm_title</key>
+                <string>Family Controls Enabled</string>
+                <key>pfm_description</key>
+                <string>Family Controls Enabled (Enforce Time Limits)</string>
+                <key>pfm_type</key>
+                <string>boolean</string>
+            </dict>
+            <dict>
+                <key>pfm_name</key>
+                <string>limits-list</string>
+                <key>pfm_title</key>
+                <string>Time Limits</string>
+                <key>pfm_description</key>
+                <string>Time Limits</string>
+                <key>pfm_type</key>
+                <string>array</string>
+                <key>pfm_subkeys</key>
+                <array>
+                    <dict>
+                        <key>pfm_name</key>
+                        <string>limits-list-item</string>
+                        <key>pfm_title</key>
+                        <string>Time Limit Item</string>
+                        <key>pfm_description</key>
+                        <string>Time Limit Item</string>
+                        <key>pfm_type</key>
+                        <string>dict</string>
+                        <key>pfm_subkeys</key>
+                        <array>
+                            <dict>
+                                <key>pfm_name</key>
+                                <string>allowancesActive</string>
+                                <key>pfm_title</key>
+                                <string>Time Allowances Active</string>
+                                <key>pfm_description</key>
+                                <string>Time allowances such as the maximum number of hours per day are active.</string>
+                                <key>pfm_type</key>
+                                <string>boolean</string>
+                            </dict>
+                            <dict>
+                                <key>pfm_name</key>
+                                <string>groupID</string>
+                                <key>pfm_title</key>
+                                <string>Group ID</string>
+                                <key>pfm_description</key>
+                                <string>The group that this limit applies to. __COMPUTER__ is a special item that applies to all accounts on the computer.</string>
+                                <key>pfm_type</key>
+                                <string>string</string>
+                            </dict>
+                            <dict>
+                                <key>pfm_name</key>
+                                <string>itemType</string>
+                                <key>pfm_title</key>
+                                <string>Item Type</string>
+                                <key>pfm_description</key>
+                                <string>Item Type.</string>
+                                <key>pfm_type</key>
+                                <string>string</string>
+                                <key>pfm_default</key>
+                                <string>com.apple.familycontrols.timelimits.computer</string>
+                            </dict>
+                            <dict>
+                                <key>pfm_name</key>
+                                <string>name</string>
+                                <key>pfm_title</key>
+                                <string>Name</string>
+                                <key>pfm_description</key>
+                                <string>Name</string>
+                                <key>pfm_type</key>
+                                <string>string</string>
+                                <key>pfm_default</key>
+                                <string>Computer</string>
+                            </dict>
+                            <dict>
+                                <key>pfm_name</key>
+                                <string>allowances</string>
+                                <key>pfm_title</key>
+                                <string>Time Allowances</string>
+                                <key>pfm_description</key>
+                                <string>The maximum amount of usage allowed in given time periods</string>
+                                <key>pfm_type</key>
+                                <string>array</string>
+                                <key>pfm_subkeys</key>
+                                <array>
+                                    <dict>
+                                        <key>pfm_name</key>
+                                        <string>allowances-item</string>
+                                        <key>pfm_title</key>
+                                        <string>Allowances Item</string>
+                                        <key>pfm_description</key>
+                                        <string>Allowances Item</string>
+                                        <key>pfm_type</key>
+                                        <string>dict</string>
+                                        <key>pfm_subkeys</key>
+                                        <array>
+                                            <dict>
+                                                <key>pfm_name</key>
+                                                <string>fromDay</string>
+                                                <key>pfm_title</key>
+                                                <string>From day of week</string>
+                                                <key>pfm_description</key>
+                                                <string>Day of week, zero-indexed eg. 0 = Monday, 6 = Sunday</string>
+                                                <key>pfm_type</key>
+                                                <string>integer</string>
+                                            </dict>
+                                            <dict>
+                                                <key>pfm_name</key>
+                                                <string>toDay</string>
+                                                <key>pfm_title</key>
+                                                <string>To day of week</string>
+                                                <key>pfm_description</key>
+                                                <string>Day of week, zero-indexed eg. 0 = Monday, 6 = Sunday</string>
+                                                <key>pfm_type</key>
+                                                <string>integer</string>
+                                            </dict>
+                                            <dict>
+                                                <key>pfm_name</key>
+                                                <string>span</string>
+                                                <key>pfm_title</key>
+                                                <string>span</string>
+                                                <key>pfm_description</key>
+                                                <string>span(?) default 0</string>
+                                                <key>pfm_type</key>
+                                                <string>integer</string>
+                                            </dict>
+                                            <dict>
+                                                <key>pfm_name</key>
+                                                <string>timeLimitSeconds</string>
+                                                <key>pfm_title</key>
+                                                <string>Time Limit (Seconds)</string>
+                                                <key>pfm_description</key>
+                                                <string>Time limit in seconds eg. 10800 = 4 hours</string>
+                                                <key>pfm_type</key>
+                                                <string>integer</string>
+                                            </dict>
+                                        </array>
+                                    </dict>
+                                </array>
+                            </dict>
+                            <dict>
+                                <key>pfm_name</key>
+                                <string>curfews</string>
+                                <key>pfm_title</key>
+                                <string>Curfews</string>
+                                <key>pfm_description</key>
+                                <string>Time ranges where the computer may not be used</string>
+                                <key>pfm_type</key>
+                                <string>dict</string>
+                                <key>pfm_subkeys</key>
+                                <array>
+                                    <dict>
+                                        <key>pfm_name</key>
+                                        <string>monday</string>
+                                        <key>pfm_title</key>
+                                        <string>Monday Curfew</string>
+                                        <key>pfm_description</key>
+                                        <string>Monday Curfew</string>
+                                        <key>pfm_type</key>
+                                        <string>array</string>
+                                        <key>pfm_subkeys</key>
+                                        <array>
+                                            <dict>
+                                                <key>pfm_name</key>
+                                                <string>CurfewItem</string>
+                                                <key>pfm_title</key>
+                                                <string>Curfew Item</string>
+                                                <key>pfm_description</key>
+                                                <string>Curfew Item</string>
+                                                <key>pfm_type</key>
+                                                <string>dict</string>
+                                                <key>pfm_subkeys</key>
+                                                <array>
+                                                    <dict>
+                                                        <key>pfm_name</key>
+                                                        <string>start</string>
+                                                        <key>pfm_title</key>
+                                                        <string>Start Time</string>
+                                                        <key>pfm_description</key>
+                                                        <string>Start time when computer usage is disallowed, in 24 hour format eg 23:59:59</string>
+                                                        <key>pfm_type</key>
+                                                        <string>string</string>
+                                                    </dict>
+                                                    <dict>
+                                                        <key>pfm_name</key>
+                                                        <string>end</string>
+                                                        <key>pfm_title</key>
+                                                        <string>End Time</string>
+                                                        <key>pfm_description</key>
+                                                        <string>End time when computer usage is disallowed, in 24 hour format eg 23:59:59</string>
+                                                        <key>pfm_type</key>
+                                                        <string>string</string>
+                                                    </dict>
+                                                </array>
+                                            </dict>
+                                        </array>
+                                    </dict>
+                                    <dict>
+                                        <key>pfm_name</key>
+                                        <string>tuesday</string>
+                                        <key>pfm_title</key>
+                                        <string>Tuesday Curfew</string>
+                                        <key>pfm_description</key>
+                                        <string>Tuesday Curfew</string>
+                                        <key>pfm_type</key>
+                                        <string>array</string>
+                                    </dict>
+                                    <dict>
+                                        <key>pfm_name</key>
+                                        <string>wednesday</string>
+                                        <key>pfm_title</key>
+                                        <string>Wednesday Curfew</string>
+                                        <key>pfm_description</key>
+                                        <string>Wednesday Curfew</string>
+                                        <key>pfm_type</key>
+                                        <string>array</string>
+                                    </dict>
+                                    <dict>
+                                        <key>pfm_name</key>
+                                        <string>thursday</string>
+                                        <key>pfm_title</key>
+                                        <string>Thursday Curfew</string>
+                                        <key>pfm_description</key>
+                                        <string>Thursday Curfew</string>
+                                        <key>pfm_type</key>
+                                        <string>array</string>
+                                    </dict>
+                                    <dict>
+                                        <key>pfm_name</key>
+                                        <string>friday</string>
+                                        <key>pfm_title</key>
+                                        <string>Friday Curfew</string>
+                                        <key>pfm_description</key>
+                                        <string>Friday Curfew</string>
+                                        <key>pfm_type</key>
+                                        <string>array</string>
+                                    </dict>
+                                    <dict>
+                                        <key>pfm_name</key>
+                                        <string>saturday</string>
+                                        <key>pfm_title</key>
+                                        <string>Saturday Curfew</string>
+                                        <key>pfm_description</key>
+                                        <string>Saturday Curfew</string>
+                                        <key>pfm_type</key>
+                                        <string>array</string>
+                                    </dict>
+                                    <dict>
+                                        <key>pfm_name</key>
+                                        <string>sunday</string>
+                                        <key>pfm_title</key>
+                                        <string>Sunday Curfew</string>
+                                        <key>pfm_description</key>
+                                        <string>Sunday Curfew</string>
+                                        <key>pfm_type</key>
+                                        <string>array</string>
+                                    </dict>
+                                </array>
+                            </dict>
+                        </array>
+                    </dict>
+                </array>
+            </dict>
+        </array>
+    </dict>
+</plist>
