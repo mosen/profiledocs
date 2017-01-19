@@ -1,12 +1,17 @@
-Profile Defaults
-================
+.. _payloadtype-com.apple.defaults.managed:
 
-.. note:: Originates from AC2 and may not actually be a payload
+iOS Defaults
+============
+
+This profile sets the contents of a plist in a specified preference domain on iOS.
+*Verification Needed*
+
+It is the iOS equivalent of :ref:`payloadtype-com.apple.ManagedClient.preferences`.
 
 Summary
 -------
 
-.. pfmheader:: manifests/ac2/com.apple.defaults.managed manifest.plist
+.. pfmheader:: manifests/manual/com.apple.defaults.managed manifest.plist
 
-.. pfm:: manifests/ac2/com.apple.defaults.managed manifest.plist
+.. pfm:: manifests/manual/com.apple.defaults.managed manifest.plist
 

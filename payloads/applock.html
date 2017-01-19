@@ -87,6 +87,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../manifest.html">Manifest File Format</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../extmanifest.html">Extended Manifest Format</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Payloads</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="accessibility.html">Accessibility</a></li>
 <li class="toctree-l2"><a class="reference internal" href="activedirectory.html">Active Directory</a></li>
 <li class="toctree-l2"><a class="reference internal" href="adcert.html">Active Directory Certificate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="airplay.html">AirPlay</a></li>
@@ -96,6 +97,8 @@
 <li class="toctree-l3"><a class="reference internal" href="#keys">Keys</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#com.apple.app.lock-App-auto">App</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#app-keys">App Keys</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#options">Options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#user-enabled-options">User Enabled Options</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#links">Links</a></li>
@@ -118,6 +121,7 @@
 <li class="toctree-l2"><a class="reference internal" href="discrecording.html">Disc Recording</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dock.html">Dock</a></li>
 <li class="toctree-l2"><a class="reference internal" href="domains.html">Domains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="education.html">Education Payload</a></li>
 <li class="toctree-l2"><a class="reference internal" href="email.html">E-mail Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="energysaver.html">Energy Saver</a></li>
 <li class="toctree-l2"><a class="reference internal" href="enrollment.html">Enrollment (Supervised)</a></li>
@@ -149,8 +153,10 @@
 <li class="toctree-l2"><a class="reference internal" href="osxserver.html">OSX Server Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="perappvpn.html">Per-App VPN</a></li>
 <li class="toctree-l2"><a class="reference internal" href="appmapping.html">App-to-Per-App VPN Mapping</a></li>
-<li class="toctree-l2"><a class="reference internal" href="defaults.html">Profile Defaults</a></li>
+<li class="toctree-l2"><a class="reference internal" href="defaults.html">iOS Defaults</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parentalcontrols.html">Parental Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parental-timelimits.html">Parental Controls - Time Limits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parental-contentfilter.html">Parental Controls - Content Filter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="profileremovalpassword.html">Profile Removal Password</a></li>
 <li class="toctree-l2"><a class="reference internal" href="restrictions.html">Restrictions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="scep.html">SCEP</a></li>
@@ -172,6 +178,7 @@
 <li class="toctree-l2"><a class="reference internal" href="timemachine.html">Time Machine</a></li>
 <li class="toctree-l2"><a class="reference internal" href="trackpad.html">TrackPad Settings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="userpreferences.html">User Preferences (iCloud)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="voicedictation.html">Voice Dictation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="vpn.html">VPN</a></li>
 <li class="toctree-l2"><a class="reference internal" href="webclip.html">WebClip</a></li>
 <li class="toctree-l2"><a class="reference internal" href="webcontentfilter.html">Web Content Filter</a></li>
@@ -357,6 +364,9 @@ By installing an app lock payload, the device is locked to a single application 
 </tr>
 </tbody>
 </table>
+</div>
+<div class="section" id="options">
+<h3>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="14%" />
@@ -444,6 +454,52 @@ By installing an app lock payload, the device is locked to a single application 
 <td>boolean</td>
 <td>Enable Mono Audio</td>
 <td>Enable Mono Audio</td>
+<td>n/a</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="user-enabled-options">
+<h3>User Enabled Options<a class="headerlink" href="#user-enabled-options" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="43%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Title</th>
+<th class="head">Description</th>
+<th class="head">Required</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>VoiceOver</td>
+<td>boolean</td>
+<td>Voice Over</td>
+<td>Allow user to enable Voice Over</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>Zoom</td>
+<td>boolean</td>
+<td>Zoom</td>
+<td>Allow user to enable Zoom</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>InvertColors</td>
+<td>boolean</td>
+<td>Invert Colors</td>
+<td>Allow user to enable Inverted Colors</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>AssistiveTouch</td>
+<td>boolean</td>
+<td>Assistive Touch</td>
+<td>Allow user to enable Assistive Touch</td>
 <td>n/a</td>
 </tr>
 </tbody>

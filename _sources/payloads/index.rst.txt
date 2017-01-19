@@ -5,6 +5,7 @@ Payloads
     :maxdepth: 2
     :caption: Payloads:
 
+    accessibility.rst
     activedirectory.rst
     adcert.rst
     airplay.rst
@@ -27,6 +28,7 @@ Payloads
     discrecording.rst
     dock.rst
     domains.rst
+    education.rst
     email.rst
     energysaver.rst
     enrollment.rst
@@ -60,6 +62,8 @@ Payloads
     appmapping.rst
     defaults.rst
     parentalcontrols.rst
+    parental-timelimits.rst
+    parental-contentfilter.rst
     profileremovalpassword.rst
     restrictions.rst
     scep.rst
@@ -81,6 +85,7 @@ Payloads
     timemachine.rst
     trackpad.rst
     userpreferences.rst
+    voicedictation.rst
     vpn.rst
     webclip.rst
     webcontentfilter.rst

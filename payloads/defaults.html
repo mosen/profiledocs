@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Profile Defaults &mdash; Configuration Profiles  documentation</title>
+  <title>iOS Defaults &mdash; Configuration Profiles  documentation</title>
   
 
   
@@ -87,6 +87,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../manifest.html">Manifest File Format</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../extmanifest.html">Extended Manifest Format</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Payloads</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="accessibility.html">Accessibility</a></li>
 <li class="toctree-l2"><a class="reference internal" href="activedirectory.html">Active Directory</a></li>
 <li class="toctree-l2"><a class="reference internal" href="adcert.html">Active Directory Certificate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="airplay.html">AirPlay</a></li>
@@ -109,6 +110,7 @@
 <li class="toctree-l2"><a class="reference internal" href="discrecording.html">Disc Recording</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dock.html">Dock</a></li>
 <li class="toctree-l2"><a class="reference internal" href="domains.html">Domains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="education.html">Education Payload</a></li>
 <li class="toctree-l2"><a class="reference internal" href="email.html">E-mail Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="energysaver.html">Energy Saver</a></li>
 <li class="toctree-l2"><a class="reference internal" href="enrollment.html">Enrollment (Supervised)</a></li>
@@ -140,11 +142,13 @@
 <li class="toctree-l2"><a class="reference internal" href="osxserver.html">OSX Server Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="perappvpn.html">Per-App VPN</a></li>
 <li class="toctree-l2"><a class="reference internal" href="appmapping.html">App-to-Per-App VPN Mapping</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Profile Defaults</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">iOS Defaults</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="parentalcontrols.html">Parental Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parental-timelimits.html">Parental Controls - Time Limits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parental-contentfilter.html">Parental Controls - Content Filter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="profileremovalpassword.html">Profile Removal Password</a></li>
 <li class="toctree-l2"><a class="reference internal" href="restrictions.html">Restrictions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="scep.html">SCEP</a></li>
@@ -166,6 +170,7 @@
 <li class="toctree-l2"><a class="reference internal" href="timemachine.html">Time Machine</a></li>
 <li class="toctree-l2"><a class="reference internal" href="trackpad.html">TrackPad Settings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="userpreferences.html">User Preferences (iCloud)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="voicedictation.html">Voice Dictation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="vpn.html">VPN</a></li>
 <li class="toctree-l2"><a class="reference internal" href="webclip.html">WebClip</a></li>
 <li class="toctree-l2"><a class="reference internal" href="webcontentfilter.html">Web Content Filter</a></li>
@@ -206,7 +211,7 @@
       
           <li><a href="index.html">Payloads</a> &raquo;</li>
       
-    <li>Profile Defaults</li>
+    <li>iOS Defaults</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -220,12 +225,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="profile-defaults">
-<h1>Profile Defaults<a class="headerlink" href="#profile-defaults" title="Permalink to this headline">¶</a></h1>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Originates from AC2 and may not actually be a payload</p>
-</div>
+  <div class="section" id="ios-defaults">
+<span id="payloadtype-com-apple-defaults-managed"></span><h1>iOS Defaults<a class="headerlink" href="#ios-defaults" title="Permalink to this headline">¶</a></h1>
+<p>This profile sets the contents of a plist in a specified preference domain on iOS.
+<em>Verification Needed</em></p>
+<p>It is the iOS equivalent of <a class="reference internal" href="custom.html#payloadtype-com-apple-managedclient-preferences"><span class="std std-ref">Custom Settings (MCX)</span></a>.</p>
 <div class="section" id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
 <table class="docutils field-list" frame="void" rules="none">
@@ -267,6 +271,18 @@
 </tr>
 </thead>
 <tbody valign="top">
+<tr class="row-even"><td>DefaultsDomainName</td>
+<td>string</td>
+<td>Defaults Domain</td>
+<td>The app bundle ID reverse domain for default settings.</td>
+<td>always</td>
+</tr>
+<tr class="row-odd"><td>DefaultsData</td>
+<td>dict</td>
+<td>Defaults Data</td>
+<td>The dictionary structure that will be set as the preferences content under the mobile user.</td>
+<td>always</td>
+</tr>
 </tbody>
 </table>
 </div>
