@@ -19,8 +19,8 @@ Domains
 - com.apple.appstore (:ref:`payloadtype-com.apple.appstore`)
 - com.apple.preference.security (:ref:`payloadtype-com.apple.preference.security`)
 - com.apple.trackpad (:ref:`payloadtype-com.apple.trackpad`)
-- com.apple.universalaccess
-- com.apple.gamed
+- com.apple.universalaccess (:ref:`payloadtype-com.apple.universalaccess`)
+- com.apple.gamed (:ref:`payloadtype-com.apple.gamed`)
 - com.apple.ShareKitHelper (:ref:`payloadtype-com.apple.ShareKitHelper`)
 - com.apple.ironwood.support
 - com.apple.proxy.http.global (:ref:`payloadtype-com.apple.proxy.http.global`)

@@ -5,6 +5,7 @@ Payloads
     :maxdepth: 2
     :caption: Payloads:
 
+    accessibility.rst
     activedirectory.rst
     adcert.rst
     airplay.rst
@@ -82,6 +83,7 @@ Payloads
     timemachine.rst
     trackpad.rst
     userpreferences.rst
+    voicedictation.rst
     vpn.rst
     webclip.rst
     webcontentfilter.rst
