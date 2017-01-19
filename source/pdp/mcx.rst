@@ -22,7 +22,7 @@ Domains
 - com.apple.universalaccess (:ref:`payloadtype-com.apple.universalaccess`)
 - com.apple.gamed (:ref:`payloadtype-com.apple.gamed`)
 - com.apple.ShareKitHelper (:ref:`payloadtype-com.apple.ShareKitHelper`)
-- com.apple.ironwood.support
+- com.apple.ironwood.support (:ref:`payloadtype-com.apple.ironwood.support`)
 - com.apple.proxy.http.global (:ref:`payloadtype-com.apple.proxy.http.global`)
 - com.apple.desktop (:ref:`payloadtype-com.apple.desktop`)
 - com.apple.MCXRedirector (:ref:`payloadtype-com.apple.MCXRedirector`)
