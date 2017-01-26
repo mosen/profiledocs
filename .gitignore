@@ -3,3 +3,6 @@ build
 venv
 .idea
 pm2pfm
+*.iml
+config.py
+.DS_Store

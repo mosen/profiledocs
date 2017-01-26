@@ -1,0 +1,1632 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>IKEv2 &mdash; Configuration Profiles  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="Configuration Profiles  documentation" href="../../index.html"/>
+        <link rel="up" title="VPN" href="../vpn.html"/>
+        <link rel="next" title="IPSec" href="ipsec.html"/>
+        <link rel="prev" title="EAP" href="eap.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Configuration Profiles
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html#submitting-an-error">Submitting an error</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html#writing-documentation">Writing Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../official.html">Official Links and Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manifest.html">Manifest File Format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extmanifest.html">Extended Manifest Format</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Payloads</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../accessibility.html">Accessibility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../activedirectory.html">Active Directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../adcert.html">Active Directory Certificate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../airplay.html">AirPlay</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../airprint.html">AirPrint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../applock.html">App Lock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appstore.html">App Store</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../assetcache.html">AssetCache Client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../caldav.html">CalDAV</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calendar.html">Calendar Subscription</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../carddav.html">CardDAV</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cellular.html">Cellular</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../certpem.html">Certificate (PEM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../certpkcs1.html">Certificate (PKCS#1)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../certpkcs12.html">Certificate (PKCS#12)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../certpref.html">Certificate Preference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../certroot.html">Certificate (Root CA)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../coremediaio.html">Core Media IO (Camera)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../custom.html">Custom Settings (MCX)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dashwidgets.html">Dashboard Widgets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../desktop.html">Desktop Picture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../discrecording.html">Disc Recording</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dock.html">Dock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../domains.html">Domains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../education.html">Education Payload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../email.html">E-mail Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../energysaver.html">Energy Saver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../enrollment.html">Enrollment (Supervised)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ethernet.html">Ethernet 802.1x</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exchange.html">Exchange</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../firewall.html">Firewall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fv2.html">FileVault 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fv2redirect.html">FileVault Recovery Key Redirect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../font.html">Font</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gamecenter.html">Game Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../globalproxy.html">Global HTTP Proxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../google.html">Google Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../homescreen.html">Home Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../identification.html">Identification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../identpref.html">Identity Preference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ldap.html">LDAP Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../logging.html">Unified Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../loginitems.html">Login Items</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../loginscripts.html">Login Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../loginwindow.html">Loginwindow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../loginwindow_gp.html">Loginwindow (GlobalPreferences)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mcxredirector.html">Folder Redirection (MCX)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mdm.html">MDM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mediaaccess.html">Media Access (SystemUIServer)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../passcode.html">Password Policy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../printing.html">Printing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../networkbrowser.html">Network Browser (Finder)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../notification.html">Notification Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../osxserver.html">OSX Server Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../perappvpn.html">Per-App VPN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appmapping.html">App-to-Per-App VPN Mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../defaults.html">iOS Defaults</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../parentalcontrols.html">Parental Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../parental-timelimits.html">Parental Controls - Time Limits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../parental-contentfilter.html">Parental Controls - Content Filter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../profileremovalpassword.html">Profile Removal Password</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../restrictions.html">Restrictions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../scep.html">SCEP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../screensaver.html">Screen Saver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../securityui.html">UI Security Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setupassistant.html">Setup Assistant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shareddevice.html">Shared Device</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sharekit.html">ShareKit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sidebar.html">Sidebar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sso.html">Single-Sign On</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../supervision.html">Supervision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../swupd.html">Software Update Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../spctl.html">System Policy Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../submitdiag.html">Submit Diagnostics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../systemconfiguration.html">SystemConfiguration (Proxies)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../systempolicy.html">System Policy (Gatekeeper)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sysprefs.html">System Preference Panes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sprule.html">System Policy Rule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../timemachine.html">Time Machine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../touchid.html">Touch ID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../trackpad.html">TrackPad Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../userpreferences.html">User Preferences (iCloud)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../voicedictation.html">Voice Dictation</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../vpn.html">VPN</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../vpn.html#keys">Keys</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../vpn.html#com.apple.vpn.managed-UserDefinedName-auto">UserDefinedName</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../vpn.html#com.apple.vpn.managed-VPNType-auto">VPNType</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../vpn.html#com.apple.vpn.managed-VPNSubType-auto">VPNSubType</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../vpn.html#com.apple.vpn.managed-DisconnectOnIdle-auto">DisconnectOnIdle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../vpn.html#com.apple.vpn.managed-DisconnectOnIdleTimer-auto">DisconnectOnIdleTimer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../vpn.html#com.apple.vpn.managed-AlwaysOn-auto">AlwaysOn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="eap.html">EAP</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">IKEv2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ipsec.html">IPSec</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ipv4.html">IPv4</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ppp.html">PPP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="proxies.html">Proxies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="vendorconfig.html">VendorConfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="vpn.html">VPN</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../vpn.html#links">Links</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../webclip.html">WebClip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../webcontentfilter.html">Web Content Filter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wifi.html">Wi-Fi</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../macos/index.html">macOS Subsystem Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pdp/index.html">Profile Domain Plugins</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Configuration Profiles</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Payloads</a> &raquo;</li>
+      
+          <li><a href="../vpn.html">VPN</a> &raquo;</li>
+      
+    <li>IKEv2</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/payloads/vpn/ikev2.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ikev2">
+<span id="vpn-ikev2"></span><h1>IKEv2<a class="headerlink" href="#ikev2" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="com.apple.vpn.managed-IKEv2-auto">
+<h3>IKEv2<a class="headerlink" href="#com.apple.vpn.managed-IKEv2-auto" title="Permalink to this headline">¶</a></h3>
+<p>IKEv2</p>
+<p>IKEv2 settings</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>dictionary</td>
+<td>{&#8216;UseConfigurationAttributeInternalIPSubnet&#8217;: 0, &#8216;IKESecurityAssociationParameters&#8217;: {&#8216;EncryptionAlgorithm&#8217;: &#8216;3DES&#8217;, &#8216;LifeTimeInMinutes&#8217;: 1440, &#8216;DiffieHellmanGroup&#8217;: 14, &#8216;IntegrityAlgorithm&#8217;: &#8216;SHA1-96&#8217;}, &#8216;EnableCertificateRevocationCheck&#8217;: 0, &#8216;EnablePFS&#8217;: 0, &#8216;DeadPeerDetectionRate&#8217;: &#8216;Medium&#8217;, &#8216;DisableRedirect&#8217;: 0, &#8216;DisableMOBIKE&#8217;: 0, &#8216;ChildSecurityAssociationParameters&#8217;: {&#8216;EncryptionAlgorithm&#8217;: &#8216;3DES&#8217;, &#8216;LifeTimeInMinutes&#8217;: 1440, &#8216;DiffieHellmanGroup&#8217;: 14, &#8216;IntegrityAlgorithm&#8217;: &#8216;SHA1-96&#8217;}, &#8216;AuthenticationMethod&#8217;: &#8216;SharedSecret&#8217;}</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="43%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Title</th>
+<th class="head">Description</th>
+<th class="head">Required</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>RemoteAddress</td>
+<td>string</td>
+<td>RemoteAddress</td>
+<td> IP address or hostname of the VPN server</td>
+<td>always</td>
+</tr>
+<tr class="row-odd"><td>LocalIdentifier</td>
+<td>string</td>
+<td>LocalIdentifier</td>
+<td>Identifier of the IKEv2 client</td>
+<td>always</td>
+</tr>
+<tr class="row-even"><td>RemoteIdentifier</td>
+<td>string</td>
+<td>RemoteIdentifier</td>
+<td>Remote Identifier of the IKEv2 client</td>
+<td>always</td>
+</tr>
+<tr class="row-odd"><td>AuthenticationMethod</td>
+<td>string</td>
+<td>AuthenticationMethod</td>
+<td>AuthenticationMethod of the IKEv2 client</td>
+<td>always</td>
+</tr>
+<tr class="row-even"><td>PayloadCertificateUUID</td>
+<td>string</td>
+<td>PayloadCertificateUUID</td>
+<td>The UUID of the identity certificate as the account credential</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>SharedSecret</td>
+<td>string</td>
+<td>SharedSecret</td>
+<td>Value for IKE authentication</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>ExtendedAuthEnabled</td>
+<td>integer</td>
+<td>ExtendedAuthEnabled</td>
+<td>Set to 1 to enable extended authentication (EAP)</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>AuthName</td>
+<td>string</td>
+<td>AuthName</td>
+<td>Username used for authentication</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>DisableRedirect</td>
+<td>integer</td>
+<td>Disable Redirect</td>
+<td>Set to 1 to disable IKEv2 redirect</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>DisableMOBIKE</td>
+<td>integer</td>
+<td>Disable Mobility and Multihoming</td>
+<td>Set to 1 to disable MOBIKE negotiation in IKEv2</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>UseConfigurationAttributeInternalIPSubnet</td>
+<td>integer</td>
+<td>Use IPv4 / IPv6 Internal Subnet Attributes</td>
+<td>Set to 1 to indicate if negotiation should use IKEv2 Configuration Attribute INTERNAL_IP4_SUBNET and INTERNAL_IP6_SUBNET.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>EnablePFS</td>
+<td>integer</td>
+<td>Enable perfect forward secrecy</td>
+<td>Set to 1 to enable Perfect Forward Secrecy for IKEv2 connections</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>ServerAddresses</td>
+<td>array</td>
+<td>An array of DNS server IP address strings</td>
+<td>An array of DNS server IP address strings (IPv4 or IPv6)</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>SearchDomains</td>
+<td>array</td>
+<td>A list of domain strings used to fully qualify single-label host names.</td>
+<td>A list of domain strings used to fully qualify single-label host names.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>DomainName</td>
+<td>string</td>
+<td>The primary domain of the tunnel</td>
+<td>The primary domain of the tunnel</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>SupplementalMatchDomains</td>
+<td>array</td>
+<td>A list of domain strings used to determine which DNS queries will use the DNS resolver settings contained in ServerAddresses.</td>
+<td>A list of domain strings used to determine which DNS queries will use the DNS resolver settings contained in ServerAddresses.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>EnableCertificateRevocationCheck</td>
+<td>integer</td>
+<td>Enable certificate revocation check</td>
+<td>Set to 1 to enable certificate revocation check for IKEv2 connections</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>AuthPassword</td>
+<td>string</td>
+<td>AuthPassword</td>
+<td>Password used for authentication</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>DeadPeerDetectionRate</td>
+<td>string</td>
+<td>Dead Peer Detection Rate</td>
+<td>Dead peer detection rate</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>CertificateType</td>
+<td>string</td>
+<td>Certificate Type</td>
+<td>Type of the certificate; defaults to RSA</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>ServerCertificateIssuerCommonName</td>
+<td>string</td>
+<td>ServerCertificateIssuerCommonName</td>
+<td>Common Name of the server certificate issuer</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>ServerCertificateCommonName</td>
+<td>string</td>
+<td>ServerCertificateCommonName</td>
+<td>Common name of the server certificate</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>NATKeepAliveOffloadEnable</td>
+<td>integer</td>
+<td>NAT Keepalive offload for Always On VPN IKEv2 connections</td>
+<td>Set to 1 to enable or 0 to disable NAT Keepalive offload for Always On VPN IKEv2 connections</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>NATKeepAliveInterval</td>
+<td>integer</td>
+<td>NAT Keepalive interval for Always On VPN IKEv2 connections</td>
+<td>NAT Keepalive interval for Always On VPN IKEv2 connections</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>IKESecurityAssociationParameters</td>
+<td>dictionary</td>
+<td>IKESecurityAssociationParameters</td>
+<td>Applies to child Security Association</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>ChildSecurityAssociationParameters</td>
+<td>dictionary</td>
+<td>ChildSecurityAssociationParameters</td>
+<td>Applies to child Security Association</td>
+<td>n/a</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="keys">
+<h2>Keys<a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="com.apple.vpn.managed-RemoteAddress-auto">
+<h3>RemoteAddress<a class="headerlink" href="#com.apple.vpn.managed-RemoteAddress-auto" title="Permalink to this headline">¶</a></h3>
+<p>RemoteAddress</p>
+<p> IP address or hostname of the VPN server</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>always</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.vpn.managed-LocalIdentifier-auto">
+<h3>LocalIdentifier<a class="headerlink" href="#com.apple.vpn.managed-LocalIdentifier-auto" title="Permalink to this headline">¶</a></h3>
+<p>LocalIdentifier</p>
+<p>Identifier of the IKEv2 client</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>always</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Identifier of the IKEv2 client in one of the following formats:</p>
+<ul class="simple">
+<li>FQDN</li>
+<li>UserFQDN</li>
+<li>Address</li>
+<li>ASN1DN</li>
+</ul>
+<div class="section" id="com.apple.vpn.managed-RemoteIdentifier-auto">
+<h3>RemoteIdentifier<a class="headerlink" href="#com.apple.vpn.managed-RemoteIdentifier-auto" title="Permalink to this headline">¶</a></h3>
+<p>RemoteIdentifier</p>
+<p>Remote Identifier of the IKEv2 client</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>always</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Identifier of the IKEv2 client in one of the following formats:</p>
+<ul class="simple">
+<li>FQDN</li>
+<li>UserFQDN</li>
+<li>Address</li>
+<li>ASN1DN</li>
+</ul>
+<div class="section" id="com.apple.vpn.managed-AuthenticationMethod-auto">
+<h3>AuthenticationMethod<a class="headerlink" href="#com.apple.vpn.managed-AuthenticationMethod-auto" title="Permalink to this headline">¶</a></h3>
+<p>AuthenticationMethod</p>
+<p>AuthenticationMethod of the IKEv2 client</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>always</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<h3>Valid Choices<a class="headerlink" href="#com.apple.vpn.managed-AuthenticationMethod-auto" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>SharedSecret</li>
+<li>Certificate</li>
+<li>None</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">To enable EAP-only authentication, the authentication method should be set to <em>None</em> and the <em>ExtendedAuthEnabled</em> key
+should be set to 1. If this key is set to <em>None</em> and the <em>ExtendedAuthEnabled</em> key is not set, the authentication
+configuration defaults to <em>SharedSecret</em>.</p>
+</div>
+<div class="section" id="com.apple.vpn.managed-PayloadCertificateUUID-auto">
+<h3>PayloadCertificateUUID<a class="headerlink" href="#com.apple.vpn.managed-PayloadCertificateUUID-auto" title="Permalink to this headline">¶</a></h3>
+<p>PayloadCertificateUUID</p>
+<p>The UUID of the identity certificate as the account credential</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>If the value of AuthenticationMethod is Certificate, this certificate is sent out for IKEv2 machine authentication.
+If extended authentication (EAP) is used, it is sent out for EAP-TLS authentication.</p>
+<div class="section" id="com.apple.vpn.managed-SharedSecret-auto">
+<h3>SharedSecret<a class="headerlink" href="#com.apple.vpn.managed-SharedSecret-auto" title="Permalink to this headline">¶</a></h3>
+<p>SharedSecret</p>
+<p>Value for IKE authentication</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>If AuthenticationMethod is SharedSecret, this value is used for IKE authentication.</p>
+<div class="section" id="com.apple.vpn.managed-ExtendedAuthEnabled-auto">
+<h3>ExtendedAuthEnabled<a class="headerlink" href="#com.apple.vpn.managed-ExtendedAuthEnabled-auto" title="Permalink to this headline">¶</a></h3>
+<p>ExtendedAuthEnabled</p>
+<p>Set to 1 to enable extended authentication (EAP)</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>integer</td>
+<td>0</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.vpn.managed-AuthName-auto">
+<h3>AuthName<a class="headerlink" href="#com.apple.vpn.managed-AuthName-auto" title="Permalink to this headline">¶</a></h3>
+<p>AuthName</p>
+<p>Username used for authentication</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.vpn.managed-DisableRedirect-auto">
+<h3>DisableRedirect<a class="headerlink" href="#com.apple.vpn.managed-DisableRedirect-auto" title="Permalink to this headline">¶</a></h3>
+<p>Disable Redirect</p>
+<p>Set to 1 to disable IKEv2 redirect</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>integer</td>
+<td>0</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.vpn.managed-DisableMOBIKE-auto">
+<h3>DisableMOBIKE<a class="headerlink" href="#com.apple.vpn.managed-DisableMOBIKE-auto" title="Permalink to this headline">¶</a></h3>
+<p>Disable Mobility and Multihoming</p>
+<p>Set to 1 to disable MOBIKE negotiation in IKEv2</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>integer</td>
+<td>0</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.vpn.managed-UseConfigurationAttributeInternalIPSubnet-auto">
+<h3>UseConfigurationAttributeInternalIPSubnet<a class="headerlink" href="#com.apple.vpn.managed-UseConfigurationAttributeInternalIPSubnet-auto" title="Permalink to this headline">¶</a></h3>
+<p>Use IPv4 / IPv6 Internal Subnet Attributes</p>
+<p>Set to 1 to indicate if negotiation should use IKEv2 Configuration Attribute INTERNAL_IP4_SUBNET and INTERNAL_IP6_SUBNET.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>integer</td>
+<td>0</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.vpn.managed-EnablePFS-auto">
+<h3>EnablePFS<a class="headerlink" href="#com.apple.vpn.managed-EnablePFS-auto" title="Permalink to this headline">¶</a></h3>
+<p>Enable perfect forward secrecy</p>
+<p>Set to 1 to enable Perfect Forward Secrecy for IKEv2 connections</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>integer</td>
+<td>0</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.vpn.managed-ServerAddresses-auto">
+<h3>ServerAddresses<a class="headerlink" href="#com.apple.vpn.managed-ServerAddresses-auto" title="Permalink to this headline">¶</a></h3>
+<p>An array of DNS server IP address strings</p>
+<p>An array of DNS server IP address strings (IPv4 or IPv6)</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>array</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>10.0</td>
+<td>10.12</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.vpn.managed-SearchDomains-auto">
+<h3>SearchDomains<a class="headerlink" href="#com.apple.vpn.managed-SearchDomains-auto" title="Permalink to this headline">¶</a></h3>
+<p>A list of domain strings used to fully qualify single-label host names.</p>
+<p>A list of domain strings used to fully qualify single-label host names.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>array</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>10.0</td>
+<td>10.12</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.vpn.managed-DomainName-auto">
+<h3>DomainName<a class="headerlink" href="#com.apple.vpn.managed-DomainName-auto" title="Permalink to this headline">¶</a></h3>
+<p>The primary domain of the tunnel</p>
+<p>The primary domain of the tunnel</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>10.0</td>
+<td>10.12</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.vpn.managed-SupplementalMatchDomains-auto">
+<h3>SupplementalMatchDomains<a class="headerlink" href="#com.apple.vpn.managed-SupplementalMatchDomains-auto" title="Permalink to this headline">¶</a></h3>
+<p>A list of domain strings used to determine which DNS queries will use the DNS resolver settings contained in ServerAddresses.</p>
+<p>A list of domain strings used to determine which DNS queries will use the DNS resolver settings contained in ServerAddresses.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>array</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>10.0</td>
+<td>10.12</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>This key is used to create a split DNS configuration where only hosts in certain domains are resolved
+using the tunnel’s DNS resolver. Hosts not in one of the domains in this list are resolved using the system’s default resolver.</p>
+<p>If SupplementalMatchDomains contains the empty string it becomes the default domain.
+This is how a split-tunnel configuration can direct all DNS queries first to the VPN DNS servers before
+the primary DNS servers.</p>
+<p>If the VPN tunnel becomes the network’s default route, the servers listed in <em>ServerAddresses</em> become the default
+resolver and the <em>SupplementalMatchDomains</em> list is ignored.</p>
+<div class="section" id="com.apple.vpn.managed-EnableCertificateRevocationCheck-auto">
+<h3>EnableCertificateRevocationCheck<a class="headerlink" href="#com.apple.vpn.managed-EnableCertificateRevocationCheck-auto" title="Permalink to this headline">¶</a></h3>
+<p>Enable certificate revocation check</p>
+<p>Set to 1 to enable certificate revocation check for IKEv2 connections</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>integer</td>
+<td>0</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.vpn.managed-AuthPassword-auto">
+<h3>AuthPassword<a class="headerlink" href="#com.apple.vpn.managed-AuthPassword-auto" title="Permalink to this headline">¶</a></h3>
+<p>AuthPassword</p>
+<p>Password used for authentication</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.vpn.managed-DeadPeerDetectionRate-auto">
+<h3>DeadPeerDetectionRate<a class="headerlink" href="#com.apple.vpn.managed-DeadPeerDetectionRate-auto" title="Permalink to this headline">¶</a></h3>
+<p>Dead Peer Detection Rate</p>
+<p>Dead peer detection rate</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>Medium</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<h3>Valid Choices<a class="headerlink" href="#com.apple.vpn.managed-DeadPeerDetectionRate-auto" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>None</li>
+<li>Low</li>
+<li>Medium</li>
+<li>High</li>
+</ul>
+</div>
+<dl class="docutils">
+<dt>None</dt>
+<dd>Disabled</dd>
+<dt>Low</dt>
+<dd><em>keepalive</em> sent every 30 minutes</dd>
+<dt>Medium</dt>
+<dd><em>keepalive</em> sent every 10 minutes</dd>
+<dt>High</dt>
+<dd><em>keepalive</em> sent every 1 minute</dd>
+</dl>
+<div class="section" id="com.apple.vpn.managed-CertificateType-auto">
+<h3>CertificateType<a class="headerlink" href="#com.apple.vpn.managed-CertificateType-auto" title="Permalink to this headline">¶</a></h3>
+<p>Certificate Type</p>
+<p>Type of the certificate; defaults to RSA</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.vpn.managed-ServerCertificateIssuerCommonName-auto">
+<h3>ServerCertificateIssuerCommonName<a class="headerlink" href="#com.apple.vpn.managed-ServerCertificateIssuerCommonName-auto" title="Permalink to this headline">¶</a></h3>
+<p>ServerCertificateIssuerCommonName</p>
+<p>Common Name of the server certificate issuer</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>If set, this field will cause IKE to send a certificate request based on this certificate issuer to the server.</p>
+<p>This key is required if both the CertificateType key is included and the ExtendedAuthEnabled key is set to 1.</p>
+<div class="section" id="com.apple.vpn.managed-ServerCertificateCommonName-auto">
+<h3>ServerCertificateCommonName<a class="headerlink" href="#com.apple.vpn.managed-ServerCertificateCommonName-auto" title="Permalink to this headline">¶</a></h3>
+<p>ServerCertificateCommonName</p>
+<p>Common name of the server certificate</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>This name is used to validate the certificate sent by the IKE server.
+If not set, the Remote Identifier will be used to validate the certificate.</p>
+<div class="section" id="com.apple.vpn.managed-NATKeepAliveOffloadEnable-auto">
+<h3>NATKeepAliveOffloadEnable<a class="headerlink" href="#com.apple.vpn.managed-NATKeepAliveOffloadEnable-auto" title="Permalink to this headline">¶</a></h3>
+<p>NAT Keepalive offload for Always On VPN IKEv2 connections</p>
+<p>Set to 1 to enable or 0 to disable NAT Keepalive offload for Always On VPN IKEv2 connections</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>integer</td>
+<td>1</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Keepalive packets are sent by the device to maintain NAT mappings for IKEv2 connections that have a NAT on the path.
+Keepalive packets are sent at regular interval when the device is awake.
+If <em>NATKeepAliveOffloadEnable</em> is set to 1, Keepalive packets will be offloaded to hardware while the device is asleep.
+NAT Keepalive offload has an impact on the battery life since extra workload is added during sleep.
+The default interval for the Keepalive offload packets is 20 seconds over WiFi and 110 seconds over Cellular interface.
+The default NAT Keepalive works well on networks with small NAT mapping timeouts but imposes a potential battery impact.
+If a network is known to have larger NAT mapping timeouts, larger Keepalive intervals may be safely used to minimize
+battery impact.</p>
+<p>The Keepalive interval can be modified by setting the <em>NATKeepAliveInterval</em> key.</p>
+<div class="section" id="com.apple.vpn.managed-NATKeepAliveInterval-auto">
+<h3>NATKeepAliveInterval<a class="headerlink" href="#com.apple.vpn.managed-NATKeepAliveInterval-auto" title="Permalink to this headline">¶</a></h3>
+<p>NAT Keepalive interval for Always On VPN IKEv2 connections</p>
+<p>NAT Keepalive interval for Always On VPN IKEv2 connections</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>integer</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>This value controls the interval over which Keepalive offload packets are sent by the device.
+The minimum value is 20 seconds.</p>
+<p>If no key is specified, the default is 20 seconds over WiFi and 110 seconds over a Cellular interface.</p>
+<div class="section" id="com.apple.vpn.managed-IKESecurityAssociationParameters-auto">
+<h3>IKESecurityAssociationParameters<a class="headerlink" href="#com.apple.vpn.managed-IKESecurityAssociationParameters-auto" title="Permalink to this headline">¶</a></h3>
+<p>IKESecurityAssociationParameters</p>
+<p>Applies to child Security Association</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>dictionary</td>
+<td>{&#8216;EncryptionAlgorithm&#8217;: &#8216;3DES&#8217;, &#8216;LifeTimeInMinutes&#8217;: 1440, &#8216;DiffieHellmanGroup&#8217;: 14, &#8216;IntegrityAlgorithm&#8217;: &#8216;SHA-96&#8217;}</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="43%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Title</th>
+<th class="head">Description</th>
+<th class="head">Required</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>EncryptionAlgorithm</td>
+<td>string</td>
+<td>EncryptionAlgorithm</td>
+<td>EncryptionAlgorithm</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>IntegrityAlgorithm</td>
+<td>string</td>
+<td>IntegrityAlgorithm</td>
+<td>IntegrityAlgorithm</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>DiffieHellmanGroup</td>
+<td>integer</td>
+<td>DiffieHellmanGroup</td>
+<td>DiffieHellmanGroup</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>LifeTimeInMinutes</td>
+<td>integer</td>
+<td>LifeTimeInMinutes</td>
+<td>LifeTimeInMinutes</td>
+<td>n/a</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="com.apple.vpn.managed-ChildSecurityAssociationParameters-auto">
+<h3>ChildSecurityAssociationParameters<a class="headerlink" href="#com.apple.vpn.managed-ChildSecurityAssociationParameters-auto" title="Permalink to this headline">¶</a></h3>
+<p>ChildSecurityAssociationParameters</p>
+<p>Applies to child Security Association</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>dictionary</td>
+<td>{&#8216;EncryptionAlgorithm&#8217;: &#8216;3DES&#8217;, &#8216;LifeTimeInMinutes&#8217;: 1440, &#8216;DiffieHellmanGroup&#8217;: 14, &#8216;IntegrityAlgorithm&#8217;: &#8216;SHA-96&#8217;}</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="43%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Title</th>
+<th class="head">Description</th>
+<th class="head">Required</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>EncryptionAlgorithm</td>
+<td>string</td>
+<td>EncryptionAlgorithm</td>
+<td>EncryptionAlgorithm</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>IntegrityAlgorithm</td>
+<td>string</td>
+<td>IntegrityAlgorithm</td>
+<td>IntegrityAlgorithm</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>DiffieHellmanGroup</td>
+<td>integer</td>
+<td>DiffieHellmanGroup</td>
+<td>DiffieHellmanGroup</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>LifeTimeInMinutes</td>
+<td>integer</td>
+<td>LifeTimeInMinutes</td>
+<td>LifeTimeInMinutes</td>
+<td>n/a</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ipsec.html" class="btn btn-neutral float-right" title="IPSec" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="eap.html" class="btn btn-neutral" title="EAP" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, MacAdmins Community.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
