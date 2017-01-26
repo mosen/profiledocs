@@ -7,3 +7,4 @@ Location
 Domains
 -------
 
+- com.apple.touchidpolicy (:ref:`com.apple.touchidpolicy`)
