@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>MultipleSessionEnabled</key>
+			<false/>
+			<key>PayloadDescription</key>
+			<string>Loginwindow GlobalPreferences</string>
+			<key>PayloadDisplayName</key>
+			<string>Loginwindow GlobalPreferences</string>
+			<key>PayloadIdentifier</key>
+			<string>GlobalPreferences</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>.GlobalPreferences</string>
+			<key>PayloadUUID</key>
+			<string></string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>com.apple.autologout.AutoLogOutDelay</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Example: Loginwindow GlobalPreferences</string>
+	<key>PayloadDisplayName</key>
+	<string>Example: Loginwindow GlobalPreferences</string>
+	<key>PayloadIdentifier</key>
+	<string>.GlobalPreferences.example</string>
+	<key>PayloadOrganization</key>
+	<string>Example Organization</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>0b5b7de6-a484-4f08-927d-520b9ae43a32</string>
+</dict>
+</plist>

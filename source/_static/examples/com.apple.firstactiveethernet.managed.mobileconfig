@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>EAPClientConfiguration</key>
+			<dict>
+			</dict>
+			<key>Password</key>
+			<string></string>
+			<key>PayloadCertificateUUID</key>
+			<string></string>
+			<key>PayloadDescription</key>
+			<string>802.1x Ethernet Settings</string>
+			<key>PayloadDisplayName</key>
+			<string>802.1x Ethernet Settings</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.firstactiveethernet.managed</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>com.apple.firstactiveethernet.managed</string>
+			<key>PayloadUUID</key>
+			<string></string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>ProxyPACFallbackAllowed</key>
+			<false/>
+			<key>ProxyPACURL</key>
+			<string></string>
+			<key>ProxyPassword</key>
+			<string></string>
+			<key>ProxyServer</key>
+			<string></string>
+			<key>ProxyServerPort</key>
+			<integer>0</integer>
+			<key>ProxyType</key>
+			<string>None</string>
+			<key>ProxyUsername</key>
+			<string></string>
+			<key>QoSMarkingPolicy</key>
+			<dict>
+			</dict>
+			<key>TLSCertificateRequired</key>
+			<false/>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Example: Use this section to define 802.1x Ethernet settings</string>
+	<key>PayloadDisplayName</key>
+	<string>Example: 802.1x Ethernet Settings</string>
+	<key>PayloadIdentifier</key>
+	<string>com.apple.firstactiveethernet.managed.example</string>
+	<key>PayloadOrganization</key>
+	<string>Example Organization</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>63337d47-6795-4661-b0c0-1b94b4815e0a</string>
+</dict>
+</plist>

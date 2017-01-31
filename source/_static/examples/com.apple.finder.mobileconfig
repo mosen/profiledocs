@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>PayloadDescription</key>
+			<string>Finder Settings</string>
+			<key>PayloadDisplayName</key>
+			<string>Finder Settings</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.finder</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>com.apple.finder</string>
+			<key>PayloadUUID</key>
+			<string></string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>ProhibitBurn</key>
+			<false/>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Example: Finder Settings</string>
+	<key>PayloadDisplayName</key>
+	<string>Example: Finder Settings</string>
+	<key>PayloadIdentifier</key>
+	<string>com.apple.finder.example</string>
+	<key>PayloadOrganization</key>
+	<string>Example Organization</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>2a2a666b-8f3c-4c95-9c5a-46d374225e1d</string>
+</dict>
+</plist>
