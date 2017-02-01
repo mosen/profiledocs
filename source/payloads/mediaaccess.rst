@@ -16,5 +16,8 @@ Keys
 
 .. pfmkey:: logout-eject manifests/manual/com.apple.systemuiserver manifest.plist
 .. pfmkey:: mount-controls manifests/manual/com.apple.systemuiserver manifest.plist
+
 .. pfm:: manifests/manual/com.apple.systemuiserver manifest.plist
     :key: mount-controls
+
+.. pfmkey:: unmount-controls manifests/manual/com.apple.systemuiserver manifest.plist

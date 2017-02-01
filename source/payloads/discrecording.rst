@@ -3,7 +3,7 @@
 Disc Recording
 ==============
 
-Enable or disable support for Disc Recording.
+Disc burning restrictions require both Disc Burning and Finder payloads :ref:`payloadtype-com.apple.finder`, key: ProhibitBurn.
 
 Summary
 -------
