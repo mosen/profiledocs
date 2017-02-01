@@ -3,15 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>pfm_description</key>
-	<string>Use this section to define settings for a pem certificate.</string>
+	<string>Use this section to define settings for configuration access to CalDAV servers.</string>
 	<key>pfm_title</key>
-	<string>Certificate</string>
+	<string>CalDAV</string>
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_version</key>
 	<integer>1</integer>
 	<key>pfm_domain</key>
-	<string>com.apple.security.pem</string>
+	<string>com.apple.caldav.account</string>
 	<key>pfm_subkeys</key>
 	<array>
 		<dict>
@@ -24,7 +24,7 @@
 			<key>pfm_type</key>
 			<string>string</string>
 			<key>pfm_default</key>
-			<string>Adds a PEM-formatted certificate</string>
+			<string>Configures a CalDAV account</string>
 		</dict>
 		<dict>
 			<key>pfm_name</key>
@@ -36,7 +36,7 @@
 			<key>pfm_type</key>
 			<string>string</string>
 			<key>pfm_default</key>
-			<string>Certificate</string>
+			<string>CalDAV</string>
 			<key>pfm_require</key>
 			<string>always</string>
 		</dict>
@@ -50,7 +50,7 @@
 			<key>pfm_type</key>
 			<string>string</string>
 			<key>pfm_default</key>
-			<string>com.apple.security.pem</string>
+			<string>com.apple.caldav.account</string>
 			<key>pfm_require</key>
 			<string>always</string>
 		</dict>
@@ -64,7 +64,7 @@
 			<key>pfm_type</key>
 			<string>string</string>
 			<key>pfm_default</key>
-			<string>com.apple.security.pem</string>
+			<string>com.apple.caldav.account</string>
 			<key>pfm_require</key>
 			<string>always</string>
 		</dict>
@@ -110,33 +110,87 @@
 		</dict>
 		<dict>
 			<key>pfm_name</key>
-			<string>PayloadCertificateFileName</string>
+			<string>CalDAVAccountDescription</string>
 			<key>pfm_title</key>
-			<string>Payload Certificate Filename</string>
+			<string>Account Description</string>
 			<key>pfm_description</key>
-			<string>The filename for the certificate</string>
+			<string>The display name of the account (e.g. &quot;Company CalDAV Account&quot;)</string>
 			<key>pfm_type</key>
 			<string>string</string>
+			<key>pfm_default</key>
+			<string>My CalDAV Account</string>
 		</dict>
 		<dict>
 			<key>pfm_name</key>
-			<string>PayloadContent</string>
+			<string>CalDAVPort</string>
 			<key>pfm_title</key>
-			<string>Certificate Data</string>
+			<string>Port Number</string>
 			<key>pfm_description</key>
-			<string>Mandatory. The base64 representation of the payload with a line length of 52.</string>
+			<string>The port on which to connect to the server</string>
 			<key>pfm_type</key>
-			<string>data</string>
+			<string>integer</string>
+			<key>pfm_default</key>
+			<integer>443</integer>
+			<key>pfm_range_min</key>
+			<integer>0</integer>
+			<key>pfm_range_max</key>
+			<integer>65535</integer>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>CalDAVHostName</string>
+			<key>pfm_title</key>
+			<string>Account Hostname</string>
+			<key>pfm_description</key>
+			<string>The CalDAV server hostname or IP address</string>
+			<key>pfm_type</key>
+			<string>string</string>
 			<key>pfm_require</key>
 			<string>always</string>
 		</dict>
 		<dict>
 			<key>pfm_name</key>
-			<string>Password</string>
+			<string>CalDAVUseSSL</string>
 			<key>pfm_title</key>
-			<string>Password</string>
+			<string>Use SSL</string>
 			<key>pfm_description</key>
-			<string>Password protecting the PKCS12 file.</string>
+			<string>Enable Secure Socket Layer communication with CalDAV server</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_require</key>
+			<string>always</string>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>CalDAVPrincipalURL</string>
+			<key>pfm_title</key>
+			<string>Principal URL</string>
+			<key>pfm_description</key>
+			<string>The base URL to the user&apos;s calendar</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>CalDAVUsername</string>
+			<key>pfm_title</key>
+			<string>Account Username</string>
+			<key>pfm_description</key>
+			<string>The CalDAV username</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_require</key>
+			<string>push</string>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>CalDAVPassword</string>
+			<key>pfm_title</key>
+			<string>Account Password</string>
+			<key>pfm_description</key>
+			<string>The CalDAV password</string>
 			<key>pfm_type</key>
 			<string>string</string>
 		</dict>

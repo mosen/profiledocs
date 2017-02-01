@@ -86,6 +86,26 @@ Type
 
 The default value to suggest when creating new profiles. Can be a simple type or even a dict.
 
+pfm_targets
+^^^^^^^^^^^
+
+Type
+    Array of String
+
+This key appears in the older MCX manifest style but not in AC 2. It seems to describe the scopes where the
+payload will be valid.
+
+Valid values are:
+
+- user
+- user-managed
+- system
+- system-managed
+
+The ``-managed`` suffix seems to infer that the key will be *FORCED*.
+
+.. note:: Needs clarification
+
 pfm_range_list
 ^^^^^^^^^^^^^^
 
@@ -211,6 +231,45 @@ Type
     Array of target **pfm_type**
 
 This rule will pass if the value of the target does not match the list.
+
+Union Policies
+--------------
+
+The ``union policy`` type appears in older MCX style manifests.
+
+pfm_upk_input_keys
+^^^^^^^^^^^^^^^^^^
+
+Type
+    Array of key names which will be processed to produce an output key
+
+Usually refers to a key name with a ``-Raw`` suffix that will be processed to produce the actual key.
+
+pfm_upk_output_name
+^^^^^^^^^^^^^^^^^^^
+
+Type
+    String describing the name of the key after processing.
+
+pfm_upk_output_type
+^^^^^^^^^^^^^^^^^^^
+
+Type
+    Normal **pfm_type** that will be generated
+
+pfm_remove_duplicates
+^^^^^^^^^^^^^^^^^^^^^
+
+pfm_repetition_min
+^^^^^^^^^^^^^^^^^^
+
+Type
+    Integer representing the minimum number of times this key needs to appear.
+
+
+Prior to pfm_require this was used to specify optional and required keys.
+
+
 
 
 

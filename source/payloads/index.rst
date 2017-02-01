@@ -22,6 +22,7 @@ Payloads
     certpkcs12.rst
     certpref.rst
     certroot.rst
+    conference.rst
     coremediaio.rst
     custom.rst
     dashwidgets.rst

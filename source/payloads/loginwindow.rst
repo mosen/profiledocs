@@ -8,11 +8,44 @@ the loginwindow display.
 
 Profile Manager only displays a fraction of the keys that may actually be used.
 
-.. warning:: This manifest has been pulled from MCX and may not be up to date. Testing is in progress
-
 Summary
 -------
 
-.. pfmheader:: manifests/manual/com.apple.loginwindow.manifest.plist
-.. pfm:: manifests/manual/com.apple.loginwindow.manifest.plist
+.. pfmheader:: /_static/manifests/com.apple.loginwindow manifest.plist
+.. pfm:: /_static/manifests/com.apple.loginwindow manifest.plist
+
+Keys
+----
+
+.. pfmkey:: SHOWFULLNAME /_static/manifests/com.apple.loginwindow manifest.plist
+.. pfmkey:: HideLocalUsers /_static/manifests/com.apple.loginwindow manifest.plist
+.. pfmkey:: IncludeNetworkUser /_static/manifests/com.apple.loginwindow manifest.plist
+.. pfmkey:: HideAdminUsers /_static/manifests/com.apple.loginwindow manifest.plist
+.. pfmkey:: SHOWOTHERUSERS_MANAGED /_static/manifests/com.apple.loginwindow manifest.plist
+.. pfmkey:: AdminHostInfo /_static/manifests/com.apple.loginwindow manifest.plist
+.. pfmkey:: AllowList /_static/manifests/com.apple.loginwindow manifest.plist
+.. pfmkey:: DenyList /_static/manifests/com.apple.loginwindow manifest.plist
+.. pfmkey:: HideMobileAccounts /_static/manifests/com.apple.loginwindow manifest.plist
+.. pfmkey:: ShutDownDisabled /_static/manifests/com.apple.loginwindow manifest.plist
+.. pfmkey:: RestartDisabled /_static/manifests/com.apple.loginwindow manifest.plist
+.. pfmkey:: SleepDisabled /_static/manifests/com.apple.loginwindow manifest.plist
+.. pfmkey:: DisableConsoleAccess /_static/manifests/com.apple.loginwindow manifest.plist
+.. pfmkey:: LoginwindowText /_static/manifests/com.apple.loginwindow manifest.plist
+.. pfmkey:: ShutDownDisabledWhileLoggedIn /_static/manifests/com.apple.loginwindow manifest.plist
+.. pfmkey:: RestartDisabledWhileLoggedIn /_static/manifests/com.apple.loginwindow manifest.plist
+.. pfmkey:: PowerOffDisabledWhileLoggedIn /_static/manifests/com.apple.loginwindow manifest.plist
+.. pfmkey:: DisableLoginItemsSuppression /_static/manifests/com.apple.loginwindow manifest.plist
+
+
+Untested
+^^^^^^^^
+
+- RetriesUntilHint
+- com.apple.login.mcx.DisableAutoLoginClient
+- UseComputerNameForComputerRecordName
+- EnableExternalAccounts
+- LocalUserLoginEnabled
+- LocalUsersHaveWorkgroups
+- FlattenUserWorkgroups
+- CombineUserWorkgroups
 
