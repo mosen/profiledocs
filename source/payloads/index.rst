@@ -74,12 +74,14 @@ Payloads
     shareddevice.rst
     sharekit.rst
     sidebar.rst
+    smartcard.rst
     sso.rst
     supervision.rst
     swupd.rst
     spctl.rst
     submitdiag.rst
     systemconfiguration.rst
+    systemmigration.rst
     systempolicy.rst
     sysprefs.rst
     sprule.rst

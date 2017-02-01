@@ -91,6 +91,8 @@ Keys
 .. pfmkey:: allowNotificationsModification manifests/manual/com.apple.applicationaccess manifest.plist
 .. pfmkey:: blacklistedAppBundleIDs manifests/manual/com.apple.applicationaccess manifest.plist
 .. pfmkey:: whitelistedAppBundleIDs manifests/manual/com.apple.applicationaccess manifest.plist
+.. pfmkey:: allowAutoUnlock manifests/manual/com.apple.applicationaccess manifest.plist
+.. pfmkey:: allowCloudDesktopAndDocuments manifests/manual/com.apple.applicationaccess manifest.plist
 
 Links
 -----
