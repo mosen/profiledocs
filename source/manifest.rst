@@ -60,7 +60,8 @@ pfm_domain
 Type
     String
 
-At the top level this indicates the **PayloadType**.
+This should now be equal to the **PayloadType**.
+This was previously used to indicate the preference domain in MCX manifests.
 
 pfm_subkeys
 ^^^^^^^^^^^
@@ -70,6 +71,9 @@ Type
 
 This key describes keys nested under the current key.
 
+- If the current key is of type **array**, the first subkey item describes the format of each array item.
+- If the current key is of type **dictionary**, the subkeys are treated as dictionary members.
+
 pfm_type
 ^^^^^^^^
 
@@ -78,33 +82,24 @@ Type
 
 The data type of the plist value associated with this key. Does not appear at the root level.
 
+- boolean
+- integer
+- real
+- string
+- array
+- dictionary
+- data
+- date
+
 pfm_default
 ^^^^^^^^^^^
 
 Type
     Varies, depends on **pfm_type**.
 
-The default value to suggest when creating new profiles. Can be a simple type or even a dict.
+The default value to suggest when creating new profiles.
+If the **pfm_type** is array or dict it can contain an entire structured value.
 
-pfm_targets
-^^^^^^^^^^^
-
-Type
-    Array of String
-
-This key appears in the older MCX manifest style but not in AC 2. It seems to describe the scopes where the
-payload will be valid.
-
-Valid values are:
-
-- user
-- user-managed
-- system
-- system-managed
-
-The ``-managed`` suffix seems to infer that the key will be *FORCED*.
-
-.. note:: Needs clarification
 
 pfm_range_list
 ^^^^^^^^^^^^^^
@@ -113,6 +108,18 @@ Type
     Array of **pfm_type**.
 
 A list of valid values.
+
+pfm_range_min
+^^^^^^^^^^^^^
+
+Type
+    **Integer** or **Real** minimum value (if **pfm_type** is integer or real)
+
+pfm_range_max
+^^^^^^^^^^^^^
+
+Type
+    **Integer** or **Real** maximum value (if **pfm_type** is integer or real)
 
 pfm_format
 ^^^^^^^^^^
@@ -131,8 +138,24 @@ Type
 Indicates whether this key is required to be present.
 
 - Always means that the key is absolutely required.
-- Push seems to mean that the key will be required if the profile is being pushed. Example: if you omit a username or
-    password you will be prompted to enter them interactively, but the profile may not be pushed.
+- Push means the profile will require user interaction to install if this key is omitted. If attempting to install
+    automatically, the profile installation will fail.
+
+pfm_repetition_min
+^^^^^^^^^^^^^^^^^^
+
+Type
+    Integer representing the minimum number of times this key needs to appear.
+
+
+Prior to pfm_require this was used to specify optional and required keys.
+It is still in use for array pairs such as com.apple.security.scep ``Subject``.
+
+pfm_repetition_max
+^^^^^^^^^^^^^^^^^^
+
+Type
+    Integer representing the maximum number of times this key can to appear.
 
 
 pfm_exclude
@@ -152,6 +175,26 @@ Type
 
 Indicates the conditions where this key WILL be enabled.
 The dict should contain a `pfm_target_conditions`_.
+
+pfm_targets (MCX)
+^^^^^^^^^^^^^^^^^
+
+Type
+    Array of String
+
+This key appears in the older MCX manifest style but not in AC 2. It seems to describe the scopes where the
+payload will be valid.
+
+Valid values are:
+
+- user
+- user-managed
+- system
+- system-managed
+
+The ``-managed`` suffix seems to infer that the key will be *FORCED*.
+
+.. note:: Needs clarification
 
 Conditions
 ----------
@@ -232,8 +275,8 @@ Type
 
 This rule will pass if the value of the target does not match the list.
 
-Union Policies
---------------
+Union Policies (MCX)
+--------------------
 
 The ``union policy`` type appears in older MCX style manifests.
 
@@ -259,15 +302,6 @@ Type
 
 pfm_remove_duplicates
 ^^^^^^^^^^^^^^^^^^^^^
-
-pfm_repetition_min
-^^^^^^^^^^^^^^^^^^
-
-Type
-    Integer representing the minimum number of times this key needs to appear.
-
-
-Prior to pfm_require this was used to specify optional and required keys.
 
 
 
