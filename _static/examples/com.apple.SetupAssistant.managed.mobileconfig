@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>PayloadDescription</key>
+			<string>Setup Assistant Payload</string>
+			<key>PayloadDisplayName</key>
+			<string>Setup Assistant Payload</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.SetupAssistant.managed</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>com.apple.SetupAssistant.managed</string>
+			<key>PayloadUUID</key>
+			<string></string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>SkipCloudSetup</key>
+			<false/>
+			<key>SkipSiriSetup</key>
+			<false/>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Example: Setup Assistant Payload</string>
+	<key>PayloadDisplayName</key>
+	<string>Example: Setup Assistant Payload</string>
+	<key>PayloadIdentifier</key>
+	<string>com.apple.SetupAssistant.managed.example</string>
+	<key>PayloadOrganization</key>
+	<string>Example Organization</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>97b38fe9-e9b5-4c9c-95b6-8cf1f3acb919</string>
+</dict>
+</plist>

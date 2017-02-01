@@ -12,6 +12,7 @@ Payloads
     airprint.rst
     applock.rst
     appstore.rst
+    assetcache.rst
     caldav.rst
     calendar.rst
     carddav.rst
@@ -73,16 +74,19 @@ Payloads
     shareddevice.rst
     sharekit.rst
     sidebar.rst
+    smartcard.rst
     sso.rst
     supervision.rst
     swupd.rst
     spctl.rst
     submitdiag.rst
     systemconfiguration.rst
+    systemmigration.rst
     systempolicy.rst
     sysprefs.rst
     sprule.rst
     timemachine.rst
+    touchid.rst
     trackpad.rst
     userpreferences.rst
     voicedictation.rst

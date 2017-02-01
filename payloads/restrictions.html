@@ -83,6 +83,9 @@
             
                 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html#submitting-an-error">Submitting an error</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html#writing-documentation">Writing Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../official.html">Official Links and Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../manifest.html">Manifest File Format</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../extmanifest.html">Extended Manifest Format</a></li>
@@ -94,6 +97,7 @@
 <li class="toctree-l2"><a class="reference internal" href="airprint.html">AirPrint</a></li>
 <li class="toctree-l2"><a class="reference internal" href="applock.html">App Lock</a></li>
 <li class="toctree-l2"><a class="reference internal" href="appstore.html">App Store</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assetcache.html">AssetCache Client</a></li>
 <li class="toctree-l2"><a class="reference internal" href="caldav.html">CalDAV</a></li>
 <li class="toctree-l2"><a class="reference internal" href="calendar.html">Calendar Subscription</a></li>
 <li class="toctree-l2"><a class="reference internal" href="carddav.html">CardDAV</a></li>
@@ -225,6 +229,8 @@
 <li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowNotificationsModification-auto">allowNotificationsModification</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-blacklistedAppBundleIDs-auto">blacklistedAppBundleIDs</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-whitelistedAppBundleIDs-auto">whitelistedAppBundleIDs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowAutoUnlock-auto">allowAutoUnlock</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowCloudDesktopAndDocuments-auto">allowCloudDesktopAndDocuments</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#links">Links</a></li>
@@ -237,16 +243,19 @@
 <li class="toctree-l2"><a class="reference internal" href="shareddevice.html">Shared Device</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sharekit.html">ShareKit</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sidebar.html">Sidebar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="smartcard.html">Smart Card</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sso.html">Single-Sign On</a></li>
 <li class="toctree-l2"><a class="reference internal" href="supervision.html">Supervision</a></li>
 <li class="toctree-l2"><a class="reference internal" href="swupd.html">Software Update Server</a></li>
 <li class="toctree-l2"><a class="reference internal" href="spctl.html">System Policy Control</a></li>
 <li class="toctree-l2"><a class="reference internal" href="submitdiag.html">Submit Diagnostics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="systemconfiguration.html">SystemConfiguration (Proxies)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="systemmigration.html">System Migration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="systempolicy.html">System Policy (Gatekeeper)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sysprefs.html">System Preference Panes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sprule.html">System Policy Rule</a></li>
 <li class="toctree-l2"><a class="reference internal" href="timemachine.html">Time Machine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="touchid.html">Touch ID</a></li>
 <li class="toctree-l2"><a class="reference internal" href="trackpad.html">TrackPad Settings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="userpreferences.html">User Preferences (iCloud)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="voicedictation.html">Voice Dictation</a></li>
@@ -941,6 +950,18 @@
 <td>array</td>
 <td>Whitelisted Apps</td>
 <td>If present, allows only bundle IDs listed in the array from being shown or launchable.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>allowAutoUnlock</td>
+<td>boolean</td>
+<td>Allow macOS auto unlock</td>
+<td>If set to false, disallows macOS auto unlock. Defaults to true.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>allowCloudDesktopAndDocuments</td>
+<td>boolean</td>
+<td>Allow cloud desktop and documents</td>
+<td>If set to false, disallows macOS cloud desktop and document services. Defaults to true.</td>
 <td>n/a</td>
 </tr>
 </tbody>
@@ -3663,6 +3684,78 @@
 <td>9.3</td>
 <td>N/A</td>
 <td>True</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowAutoUnlock-auto">
+<h3>allowAutoUnlock<a class="headerlink" href="#com.apple.applicationaccess-allowAutoUnlock-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow macOS auto unlock</p>
+<p>If set to false, disallows macOS auto unlock. Defaults to true.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>10.12</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowCloudDesktopAndDocuments-auto">
+<h3>allowCloudDesktopAndDocuments<a class="headerlink" href="#com.apple.applicationaccess-allowCloudDesktopAndDocuments-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow cloud desktop and documents</p>
+<p>If set to false, disallows macOS cloud desktop and document services. Defaults to true.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>10.12.4</td>
+<td>N/A</td>
 </tr>
 </tbody>
 </table>

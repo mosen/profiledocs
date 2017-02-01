@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>PayloadDescription</key>
+			<string>Parental Controls Content Filter</string>
+			<key>PayloadDisplayName</key>
+			<string>Parental Controls Content Filter</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.familycontrols.contentfilter</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>com.apple.familycontrols.contentfilter</string>
+			<key>PayloadUUID</key>
+			<string></string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>filterBlacklist</key>
+			<array>
+			</array>
+			<key>filterWhitelist</key>
+			<array>
+			</array>
+			<key>restrictWeb</key>
+			<false/>
+			<key>siteWhitelist</key>
+			<array>
+			</array>
+			<key>useContentFilter</key>
+			<false/>
+			<key>whitelistEnabled</key>
+			<false/>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Example: Parental Controls Content Filter</string>
+	<key>PayloadDisplayName</key>
+	<string>Example: Parental Controls Content Filter</string>
+	<key>PayloadIdentifier</key>
+	<string>com.apple.familycontrols.contentfilter.example</string>
+	<key>PayloadOrganization</key>
+	<string>Example Organization</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>410025d5-6aeb-43d9-9263-cf435ba4c192</string>
+</dict>
+</plist>

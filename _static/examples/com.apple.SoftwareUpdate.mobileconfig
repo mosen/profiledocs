@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>AllowPreReleaseInstallation</key>
+			<true/>
+			<key>CatalogURL</key>
+			<string></string>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Example: Managed Client settings for Software Update</string>
+	<key>PayloadDisplayName</key>
+	<string>Example: Software Update</string>
+	<key>PayloadIdentifier</key>
+	<string>com.apple.SoftwareUpdate.example</string>
+	<key>PayloadOrganization</key>
+	<string>Example Organization</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>c07dc076-ab82-4c39-b18d-88a2b99efb13</string>
+</dict>
+</plist>

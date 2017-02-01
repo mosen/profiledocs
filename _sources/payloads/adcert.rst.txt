@@ -2,6 +2,7 @@
 
 Active Directory Certificate
 ============================
+:download:`Template <../_static/examples/com.apple.ADCertificate.managed.mobileconfig>`
 
 You can request a certificate from a Microsoft Certificate Authority (CA) using DCE/RPC and the
 Active Directory Certificate profile payload instructions detailed at https://support.apple.com/kb/HT5357.

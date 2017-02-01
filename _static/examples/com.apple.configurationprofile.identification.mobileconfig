@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>AuthMethod</key>
+			<string>Password</string>
+			<key>EmailAddress</key>
+			<string></string>
+			<key>FullName</key>
+			<string></string>
+			<key>Password</key>
+			<string></string>
+			<key>PayloadDescription</key>
+			<string>Identification Payload</string>
+			<key>PayloadDisplayName</key>
+			<string>Identification Payload</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.configurationprofile.identification</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>com.apple.configurationprofile.identification</string>
+			<key>PayloadUUID</key>
+			<string></string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>Prompt</key>
+			<string></string>
+			<key>PromptMessage</key>
+			<string></string>
+			<key>UserName</key>
+			<string></string>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Example: Identification Payload</string>
+	<key>PayloadDisplayName</key>
+	<string>Example: Identification</string>
+	<key>PayloadIdentifier</key>
+	<string>com.apple.configurationprofile.identification.example</string>
+	<key>PayloadOrganization</key>
+	<string>Example Organization</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>6212dde8-28f4-42e2-a251-62031185ec0e</string>
+</dict>
+</plist>

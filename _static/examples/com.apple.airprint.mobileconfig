@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>AirPrint</key>
+			<array>
+				<dict>
+					<key>Identifier</key>
+					<dict>
+					</dict>
+				</dict>
+			</array>
+			<key>PayloadDescription</key>
+			<string>Configures AirPrint settings</string>
+			<key>PayloadDisplayName</key>
+			<string>AirPrint</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.airprint</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>com.apple.airprint</string>
+			<key>PayloadUUID</key>
+			<string></string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Example: Use this section to define settings for AirPrint.</string>
+	<key>PayloadDisplayName</key>
+	<string>Example: AirPrint</string>
+	<key>PayloadIdentifier</key>
+	<string>com.apple.airprint.example</string>
+	<key>PayloadOrganization</key>
+	<string>Example Organization</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>6d2a1691-c600-42a6-be7e-2cf8e0800e1e</string>
+</dict>
+</plist>

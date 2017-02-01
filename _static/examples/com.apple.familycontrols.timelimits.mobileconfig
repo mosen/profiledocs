@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>PayloadDescription</key>
+			<string>Parental Controls - Time Limits</string>
+			<key>PayloadDisplayName</key>
+			<string>Parental Controls - Time Limits</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.familycontrols.timelimits</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>com.apple.familycontrols.timelimits</string>
+			<key>PayloadUUID</key>
+			<string></string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>familyControlsEnabled</key>
+			<false/>
+			<key>limits-list</key>
+			<array>
+				<dict>
+					<key>limits-list-item</key>
+					<dict>
+					</dict>
+				</dict>
+			</array>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Example: Parental Controls - Time Limits</string>
+	<key>PayloadDisplayName</key>
+	<string>Example: Parental Controls - Time Limits</string>
+	<key>PayloadIdentifier</key>
+	<string>com.apple.familycontrols.timelimits.example</string>
+	<key>PayloadOrganization</key>
+	<string>Example Organization</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>bac6c2c3-0202-4ff5-80e5-6c7edb7ef7c2</string>
+</dict>
+</plist>

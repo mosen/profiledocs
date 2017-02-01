@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>EmailDomains</key>
+			<array>
+				<dict>
+					<key>EmailDomainItem</key>
+					<string></string>
+				</dict>
+			</array>
+			<key>PayloadDescription</key>
+			<string>Domains Payload</string>
+			<key>PayloadDisplayName</key>
+			<string>Domains Payload</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.domains</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>com.apple.domains</string>
+			<key>PayloadUUID</key>
+			<string></string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>SafariPasswordAutoFillDomains</key>
+			<array>
+				<dict>
+					<key>SafariPasswordAutoFillDomainItem</key>
+					<string></string>
+				</dict>
+			</array>
+			<key>WebDomains</key>
+			<array>
+				<dict>
+					<key>WebDomainItem</key>
+					<string></string>
+				</dict>
+			</array>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Example: This payload defines domains that are under an enterprises management</string>
+	<key>PayloadDisplayName</key>
+	<string>Example: Domains Payload</string>
+	<key>PayloadIdentifier</key>
+	<string>com.apple.domains.example</string>
+	<key>PayloadOrganization</key>
+	<string>Example Organization</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>64b7c003-0f20-4776-b791-d28d7a397d99</string>
+</dict>
+</plist>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>Departments</key>
+			<array>
+				<dict>
+					<key>DepartmentItem</key>
+					<dict>
+					</dict>
+				</dict>
+			</array>
+			<key>DeviceGroups</key>
+			<array>
+				<dict>
+					<key>DeviceGroupItem</key>
+					<dict>
+					</dict>
+				</dict>
+			</array>
+			<key>Groups</key>
+			<array>
+				<dict>
+					<key>GroupItem</key>
+					<dict>
+					</dict>
+				</dict>
+			</array>
+			<key>LeaderPayloadCertificateAnchorUUID</key>
+			<array>
+				<dict>
+					<key>LeaderPayloadCertificateAnchorUUIDItem</key>
+					<string></string>
+				</dict>
+			</array>
+			<key>MemberPayloadCertificateAnchorUUID</key>
+			<array>
+				<dict>
+					<key>MemberPayloadCertificateAnchorUUIDItem</key>
+					<string></string>
+				</dict>
+			</array>
+			<key>OrganizationName</key>
+			<string></string>
+			<key>OrganizationUUID</key>
+			<string></string>
+			<key>PayloadCertificateUUID</key>
+			<string></string>
+			<key>PayloadDescription</key>
+			<string>Education Configuration Payload</string>
+			<key>PayloadDisplayName</key>
+			<string>Education Configuration Payload</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.education</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>com.apple.education</string>
+			<key>PayloadUUID</key>
+			<string></string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>UserIdentifier</key>
+			<string></string>
+			<key>Users</key>
+			<array>
+				<dict>
+					<key>UserItem</key>
+					<dict>
+					</dict>
+				</dict>
+			</array>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Example: Education Configuration Payload</string>
+	<key>PayloadDisplayName</key>
+	<string>Example: Education Configuration Payload</string>
+	<key>PayloadIdentifier</key>
+	<string>com.apple.education.example</string>
+	<key>PayloadOrganization</key>
+	<string>Example Organization</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>83dc0977-b2d4-4faa-ad7b-ab36f7f17d9b</string>
+</dict>
+</plist>

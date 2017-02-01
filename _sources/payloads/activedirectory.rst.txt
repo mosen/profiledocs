@@ -2,6 +2,7 @@
 
 Active Directory
 ================
+:download:`Template <../_static/examples/com.apple.DirectoryService.managed.mobileconfig>`
 
 Join an active directory domain.
 

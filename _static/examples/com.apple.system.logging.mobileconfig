@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>PayloadDescription</key>
+			<string>Unified Logging Configuration</string>
+			<key>PayloadDisplayName</key>
+			<string>Unified Logging Configuration</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.system.logging</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>com.apple.system.logging</string>
+			<key>PayloadUUID</key>
+			<string></string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>Processes</key>
+			<dict>
+			</dict>
+			<key>Subsystems</key>
+			<dict>
+			</dict>
+			<key>System</key>
+			<dict>
+			</dict>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Example: Unified Logging Configuration</string>
+	<key>PayloadDisplayName</key>
+	<string>Example: Unified Logging Configuration</string>
+	<key>PayloadIdentifier</key>
+	<string>com.apple.system.logging.example</string>
+	<key>PayloadOrganization</key>
+	<string>Example Organization</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>722c691a-510c-4196-b285-bb6ed22c01dc</string>
+</dict>
+</plist>

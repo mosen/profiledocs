@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>DestroyFVKeyOnStandby</key>
+			<false/>
+			<key>PayloadDescription</key>
+			<string>Energy Saver Settings</string>
+			<key>PayloadDisplayName</key>
+			<string>Energy Saver Settings</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.MCX</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>com.apple.MCX</string>
+			<key>PayloadUUID</key>
+			<string></string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>SleepDisabled</key>
+			<false/>
+			<key>com.apple.EnergySaver.desktop.ACPower</key>
+			<dict>
+			</dict>
+			<key>com.apple.EnergySaver.desktop.ACPower-ProfileNumber</key>
+			<integer>0</integer>
+			<key>com.apple.EnergySaver.desktop.Schedule</key>
+			<dict>
+			</dict>
+			<key>com.apple.EnergySaver.portable.ACPower</key>
+			<dict>
+			</dict>
+			<key>com.apple.EnergySaver.portable.ACPower-ProfileNumber</key>
+			<integer>0</integer>
+			<key>com.apple.EnergySaver.portable.BatteryPower</key>
+			<dict>
+			</dict>
+			<key>com.apple.EnergySaver.portable.BatteryPower-ProfileNumber</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Example: Energy Saver Settings</string>
+	<key>PayloadDisplayName</key>
+	<string>Example: Energy Saver Settings</string>
+	<key>PayloadIdentifier</key>
+	<string>com.apple.MCX.example</string>
+	<key>PayloadOrganization</key>
+	<string>Example Organization</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>5f922117-33f9-483f-bada-29b37cbdc913</string>
+</dict>
+</plist>

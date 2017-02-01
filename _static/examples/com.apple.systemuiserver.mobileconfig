@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>PayloadDescription</key>
+			<string>Media Access (SystemUIServer)</string>
+			<key>PayloadDisplayName</key>
+			<string>Media Access (SystemUIServer)</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.systemuiserver</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>com.apple.systemuiserver</string>
+			<key>PayloadUUID</key>
+			<string></string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>logout-eject</key>
+			<string>all-media</string>
+			<key>mount-controls</key>
+			<dict>
+			</dict>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Example: Media Access (SystemUIServer)</string>
+	<key>PayloadDisplayName</key>
+	<string>Example: Media Access</string>
+	<key>PayloadIdentifier</key>
+	<string>com.apple.systemuiserver.example</string>
+	<key>PayloadOrganization</key>
+	<string>Example Organization</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>2c02e842-b416-42e7-9ea7-f903c876c36f</string>
+</dict>
+</plist>

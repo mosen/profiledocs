@@ -1,7 +1,5 @@
-.. MacAdmins Profile Reference documentation master file, created by
-   sphinx-quickstart on Sun Dec 11 00:35:56 2016.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+.. MacAdmins Profile Reference documentation master file
+
 
 Welcome to MacAdmins Profile Reference's documentation!
 =======================================================
@@ -10,6 +8,7 @@ Welcome to MacAdmins Profile Reference's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   contributing.rst
    official.rst
    manifest.rst
    extmanifest.rst

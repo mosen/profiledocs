@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>Certificate</key>
+			<string>Base64EncodedDataHere==</string>
+			<key>Defer</key>
+			<false/>
+			<key>DeferDontAskAtUserLogout</key>
+			<integer>0</integer>
+			<key>DeferForceAtUserLoginMaxBypassAttempts</key>
+			<integer>0</integer>
+			<key>Enable</key>
+			<false/>
+			<key>OutputPath</key>
+			<string></string>
+			<key>Password</key>
+			<string></string>
+			<key>PayloadCertificateUUID</key>
+			<string></string>
+			<key>PayloadDescription</key>
+			<string>FileVault 2</string>
+			<key>PayloadDisplayName</key>
+			<string>FileVault 2</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.MCX.FileVault2</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>com.apple.MCX.FileVault2</string>
+			<key>PayloadUUID</key>
+			<string></string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>ShowRecoveryKey</key>
+			<true/>
+			<key>UseKeychain</key>
+			<false/>
+			<key>UseRecoveryKey</key>
+			<true/>
+			<key>UserEntersMissingInfo</key>
+			<false/>
+			<key>Username</key>
+			<string></string>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Example: FileVault 2</string>
+	<key>PayloadDisplayName</key>
+	<string>Example: FileVault 2</string>
+	<key>PayloadIdentifier</key>
+	<string>com.apple.MCX.FileVault2.example</string>
+	<key>PayloadOrganization</key>
+	<string>Example Organization</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>5f791394-3584-43c6-9081-11a2bbd7515a</string>
+</dict>
+</plist>
