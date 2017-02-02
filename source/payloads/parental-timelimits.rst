@@ -8,32 +8,27 @@ This payload controls time allowances and curfews as shown in the Parental Contr
 Summary
 -------
 
-.. pfmheader:: manifests/manual/com.apple.familycontrols.timelimits manifest.plist
-.. pfm:: manifests/manual/com.apple.familycontrols.timelimits manifest.plist
+.. pfmheader:: /_static/manifests/com.apple.familycontrols.timelimits.v2 manifest.plist
+.. pfm:: /_static/manifests/com.apple.familycontrols.timelimits.v2 manifest.plist
 
 Keys
 ----
 
-.. pfmkey:: familyControlsEnabled manifests/manual/com.apple.familycontrols.timelimits manifest.plist
-.. pfmkey:: limits-list manifests/manual/com.apple.familycontrols.timelimits manifest.plist
-
-Time Limits Item
-^^^^^^^^^^^^^^^^
-
-.. pfm:: manifests/manual/com.apple.familycontrols.timelimits manifest.plist
-    :key: limits-list:limits-list-item
+.. pfmkey:: familyControlsEnabled /_static/manifests/com.apple.familycontrols.timelimits.v2 manifest.plist
 
 
-Allowances Item
-^^^^^^^^^^^^^^^
+limits-list
+^^^^^^^^^^^
 
-.. pfm:: manifests/manual/com.apple.familycontrols.timelimits manifest.plist
-    :key: limits-list:limits-list-item:allowances:allowances-item
+Allowances and Curfews by weekday or weekend.
+
+.. pfm:: /_static/manifests/com.apple.familycontrols.timelimits.v2 manifest.plist
+    :key: limits-list
 
 
-Curfews
-^^^^^^^
+Each of these keys contains a dictionary in the following format:
 
-.. pfm:: manifests/manual/com.apple.familycontrols.timelimits manifest.plist
-    :key: limits-list:limits-list-item:curfews
+.. pfm:: /_static/manifests/com.apple.familycontrols.timelimits.v2 manifest.plist
+    :key: limits-list:weekday-allowance
+
 
