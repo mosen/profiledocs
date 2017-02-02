@@ -2,6 +2,7 @@
 
 Certificate (PKCS#12)
 =====================
+:download:`Template <../_static/examples/com.apple.security.pkcs12.mobileconfig>`
 
 Password-protected identity certificate (.p12). Only one certificate may be included.
 

@@ -2,6 +2,7 @@
 
 Restrictions
 ============
+:download:`Template <../_static/examples/com.apple.applicationaccess.mobileconfig>`
 
 A Restrictions payload allows the administrator to restrict the user from doing certain things with the device, such as using the camera.
 

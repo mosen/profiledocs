@@ -19,6 +19,8 @@ Welcome to MacAdmins Profile Reference's documentation!
 
    pdp/index.rst
 
+   glossary.rst
+
 
 Indices and tables
 ==================
@@ -26,3 +28,4 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+

@@ -2,6 +2,7 @@
 
 App Store
 =========
+:download:`Template <../_static/examples/com.apple.appstore.mobileconfig>`
 
 Establishes macOS AppStore restrictions and is supported on the User channel.
 
