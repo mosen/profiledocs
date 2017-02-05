@@ -36,11 +36,11 @@ Commands::
 In macOS 10.12 you can configure the logging subsystem via a configuration profile (as above) or by using the :command:`log`
 utility like so::
 
-    log config --subsystem com.apple.ManagedClient --mode level:debug persist:debug
+    sudo log config --subsystem com.apple.ManagedClient --mode="level:debug,persist:debug"
 
 You will probably want to reset this back to normal so that debug logs are not persisted like so::
 
-    log config --subsystem com.apple.ManagedClient --reset
+    sudo log config --subsystem com.apple.ManagedClient --reset
     
 
 

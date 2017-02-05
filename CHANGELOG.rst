@@ -20,4 +20,11 @@ official documentation.
 - com.apple.webcontent-filter changed the structure of WhitelistedBookmarks
 - Add description of com.apple.webcontent-filter to heading.
 
+2017-02-06
+----------
+
+- Add troubleshooting section.
+- Add troubleshooting - logging
+- Add troubleshooting - mdmclient command reference.
+
 
