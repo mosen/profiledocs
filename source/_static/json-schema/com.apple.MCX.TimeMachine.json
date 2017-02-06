@@ -1,0 +1,80 @@
+{
+    "$schema": "http://json-schema.org/schema#", 
+    "type": "object", 
+    "properties": {
+        "PayloadUUID": {
+            "default": "", 
+            "pattern": "^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$", 
+            "type": "string", 
+            "description": "Unique identifier for the payload (format 01234567-89AB-CDEF-0123-456789ABCDEF)"
+        }, 
+        "PayloadDescription": {
+            "default": "Time Machine Settings", 
+            "type": "string", 
+            "description": "Description of the payload"
+        }, 
+        "BackupSizeMB": {
+            "default": 5000, 
+            "type": "number", 
+            "description": "Set Time Machine per client backup limit (in MB).  Set to the number of maximum MB you would like to allow for each client.  Example:  5000.  This setting applies to 10.5 and higher."
+        }, 
+        "PayloadOrganization": {
+            "type": "string", 
+            "description": "This value describes the issuing organization of the profile, as displayed to the user"
+        }, 
+        "MobileBackups": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Unverified - Backup mobile users?"
+        }, 
+        "PayloadIdentifier": {
+            "default": "com.apple.MCX.TimeMachine", 
+            "type": "string", 
+            "description": "A unique identifier for the payload, dot-delimited.  Usually root PayloadIdentifier+subidentifier"
+        }, 
+        "PayloadDisplayName": {
+            "default": "Time Machine Settings", 
+            "type": "string", 
+            "description": "Name of the payload"
+        }, 
+        "BackupDestURL": {
+            "default": "afp://someserver.apple.com/Backups/", 
+            "type": "string", 
+            "description": "Set Time Machine Backup Destination.  Set to the server address of the destination you would like to set.  Example:  afp://someserver.apple.com/Backups/.  Note that the sharepoint must be hosted on a server running Mac OS X 10.5 or higher and must have be enabled as a Time Machine backup destination.  Users must also have read/write access to the sharepoint."
+        }, 
+        "PayloadType": {
+            "default": "com.apple.MCX.TimeMachine", 
+            "type": "string", 
+            "description": "The type of the payload, a reverse dns string"
+        }, 
+        "BackupAllVolumes": {
+            "default": false, 
+            "type": "boolean", 
+            "description": "Set Time Machine to Back Up All Volumes.  Set to \"True\" to set the preference to backup all volumes.  Set to \"False\" to set the preference to backup the startup volume only.  Please note that the \"Backup Destination\" preference must also be set if using this preference."
+        }, 
+        "AutoBackup": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Set Time Machine to Back Up Automatically.  Set to \"True\" to set the preference.  Please note that the \"Backup Destination\" preference must also be set if using this preference."
+        }, 
+        "PayloadVersion": {
+            "default": 1, 
+            "type": "number", 
+            "description": "The version of the whole configuration profile."
+        }, 
+        "SkipPaths": {
+            "type": "array", 
+            "description": "Unverified - SkipPaths, paths to skip"
+        }, 
+        "BasePaths": {
+            "type": "array", 
+            "description": "Unverified - BasePaths to back up"
+        }, 
+        "BackupSkipSys": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Set Time Machine preference to skip system file backup.  Set to \"True\" to skip system file backup.  This setting applies to 10.5 and higher."
+        }
+    }, 
+    "title": "com.apple.MCX.TimeMachine"
+}

@@ -1,0 +1,132 @@
+{
+    "$schema": "http://json-schema.org/schema#", 
+    "type": "object", 
+    "properties": {
+        "PayloadUUID": {
+            "default": "", 
+            "pattern": "^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$", 
+            "type": "string", 
+            "description": "Unique identifier for the payload (format 01234567-89AB-CDEF-0123-456789ABCDEF)"
+        }, 
+        "PayloadDescription": {
+            "default": "Printer Settings", 
+            "type": "string", 
+            "description": "Description of the payload"
+        }, 
+        "RequireAdminToPrintLocally": {
+            "type": "boolean", 
+            "description": "Require an administrator password to print to locally connected printers"
+        }, 
+        "FooterFontName": {
+            "default": "Courier", 
+            "type": "string", 
+            "description": "The name of the font to use for the footer eg. Courier"
+        }, 
+        "PrintFooter": {
+            "type": "boolean", 
+            "description": "Print a page footer including the user name and date"
+        }, 
+        "PrintMACAddress": {
+            "type": "boolean", 
+            "description": "Include the MAC address of the user's computer in the footer"
+        }, 
+        "PayloadOrganization": {
+            "type": "string", 
+            "description": "This value describes the issuing organization of the profile, as displayed to the user"
+        }, 
+        "PayloadIdentifier": {
+            "default": "com.apple.mcxprinting", 
+            "type": "string", 
+            "description": "A unique identifier for the payload, dot-delimited.  Usually root PayloadIdentifier+subidentifier"
+        }, 
+        "PayloadDisplayName": {
+            "default": "Printer Settings", 
+            "type": "string", 
+            "description": "Name of the payload"
+        }, 
+        "PayloadType": {
+            "default": "com.apple.mcxprinting", 
+            "type": "string", 
+            "description": "The type of the payload, a reverse dns string"
+        }, 
+        "DefaultPrinter": {
+            "type": "dict", 
+            "description": "Default Printer Configuration", 
+            "properties": {
+                "DisplayName": {
+                    "type": "string", 
+                    "description": "The display name of the Default Printer"
+                }, 
+                "DeviceURI": {
+                    "type": "string", 
+                    "description": "The device URI of the Default Printer"
+                }
+            }
+        }, 
+        "UserPrinterList": {
+            "type": "dict", 
+            "description": "A list of printers to manage. The PPD software must already exist on the target", 
+            "properties": {
+                "QueueName": {
+                    "type": "dict", 
+                    "description": "The queue name of the printer, must not include spaces or special characters. Not shown to the user.", 
+                    "properties": {
+                        "PPDURL": {
+                            "type": "string", 
+                            "description": "The path to the PPD file. Local file URLs should be prefixed with file://localhost/"
+                        }, 
+                        "DisplayName": {
+                            "type": "string", 
+                            "description": "The display name shown to the user when choosing a printer."
+                        }, 
+                        "Option": {
+                            "default": {}, 
+                            "type": "dict", 
+                            "description": "Printer Options. A dict of key to value including options normally supplied to lpadmin"
+                        }, 
+                        "Location": {
+                            "type": "string", 
+                            "description": "The printer location"
+                        }, 
+                        "Model": {
+                            "type": "string", 
+                            "description": "The printer model usually corresponding to the PPD model name eg 2nd column of `lpinfo -m`."
+                        }, 
+                        "PrinterLocked": {
+                            "default": false, 
+                            "type": "boolean", 
+                            "description": "The printer requires an administrator password"
+                        }, 
+                        "DeviceURI": {
+                            "type": "string", 
+                            "description": "The printer device URI, as would be passed to CUPS eg. lpd://printer.name/queue"
+                        }
+                    }
+                }
+            }
+        }, 
+        "PayloadVersion": {
+            "default": 1, 
+            "type": "number", 
+            "description": "The version of the whole configuration profile."
+        }, 
+        "AllowLocalPrinters": {
+            "type": "boolean", 
+            "description": "Allow printers that connect directly to user's computer"
+        }, 
+        "ShowOnlyManagedPrinters": {
+            "type": "boolean", 
+            "description": "Only show printers managed by profiles"
+        }, 
+        "RequireAdminToAddPrinters": {
+            "type": "boolean", 
+            "description": "Only administrators may modify the printer list"
+        }, 
+        "FooterFontSize": {
+            "default": "7", 
+            "type": "string", 
+            "description": "The font size (in points) of the footer"
+        }
+    }, 
+    "title": "com.apple.mcxprinting"
+}

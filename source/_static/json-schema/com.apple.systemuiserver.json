@@ -1,0 +1,260 @@
+{
+    "$schema": "http://json-schema.org/schema#", 
+    "type": "object", 
+    "properties": {
+        "PayloadUUID": {
+            "default": "", 
+            "pattern": "^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$", 
+            "type": "string", 
+            "description": "Unique identifier for the payload (format 01234567-89AB-CDEF-0123-456789ABCDEF)"
+        }, 
+        "PayloadDescription": {
+            "default": "Media Access (SystemUIServer)", 
+            "type": "string", 
+            "description": "Description of the payload"
+        }, 
+        "unmount-controls": {
+            "type": "dict", 
+            "description": "Media type dictionary to control volume unmounting.", 
+            "properties": {
+                "bd": {
+                    "enum": [
+                        "authenticate", 
+                        "deny"
+                    ], 
+                    "type": "array", 
+                    "description": "Access to Bluray Discs."
+                }, 
+                "harddisk-external": {
+                    "enum": [
+                        "authenticate", 
+                        "deny"
+                    ], 
+                    "type": "array", 
+                    "description": "Internally installed SD-Cards and USB flash drives are included in the harddisk-external category.\n                            This key is the default for media types that don\u2019t fall into other categories."
+                }, 
+                "dvdram": {
+                    "enum": [
+                        "authenticate", 
+                        "deny"
+                    ], 
+                    "type": "array", 
+                    "description": "Access to DVD-RAM."
+                }, 
+                "harddisk-internal": {
+                    "enum": [
+                        "authenticate", 
+                        "deny"
+                    ], 
+                    "type": "array", 
+                    "description": "Access to internal hard disks."
+                }, 
+                "dvd": {
+                    "enum": [
+                        "authenticate", 
+                        "deny"
+                    ], 
+                    "type": "array", 
+                    "description": "Access to DVDs."
+                }, 
+                "blankdvd": {
+                    "enum": [
+                        "authenticate", 
+                        "deny"
+                    ], 
+                    "type": "array", 
+                    "description": "Access to blank DVDs."
+                }, 
+                "cd": {
+                    "enum": [
+                        "authenticate", 
+                        "deny"
+                    ], 
+                    "type": "array", 
+                    "description": "Access to CDs."
+                }, 
+                "disk-image": {
+                    "enum": [
+                        "authenticate", 
+                        "deny"
+                    ], 
+                    "type": "array", 
+                    "description": "Access to disk images."
+                }, 
+                "all-media": {
+                    "default": "", 
+                    "type": "string", 
+                    "description": "Access to all media. Unused; set to empty string."
+                }, 
+                "blankcd": {
+                    "enum": [
+                        "authenticate", 
+                        "deny"
+                    ], 
+                    "type": "array", 
+                    "description": "Access to blank CDs."
+                }, 
+                "blankbd": {
+                    "enum": [
+                        "authenticate", 
+                        "deny"
+                    ], 
+                    "type": "array", 
+                    "description": "Access to blank Blurays."
+                }
+            }
+        }, 
+        "mount-controls": {
+            "type": "dict", 
+            "description": "Media type dictionary to control volume mounting.", 
+            "properties": {
+                "bd": {
+                    "enum": [
+                        "authenticate", 
+                        "read-only", 
+                        "deny", 
+                        "eject"
+                    ], 
+                    "type": "array", 
+                    "description": "Access to Bluray Discs."
+                }, 
+                "harddisk-external": {
+                    "enum": [
+                        "authenticate", 
+                        "read-only", 
+                        "deny", 
+                        "eject"
+                    ], 
+                    "type": "array", 
+                    "description": "Internally installed SD-Cards and USB flash drives are included in the harddisk-external category.\n                            This key is the default for media types that don\u2019t fall into other categories."
+                }, 
+                "dvdram": {
+                    "enum": [
+                        "authenticate", 
+                        "read-only", 
+                        "deny", 
+                        "eject"
+                    ], 
+                    "type": "array", 
+                    "description": "Access to DVD-RAM."
+                }, 
+                "harddisk-internal": {
+                    "enum": [
+                        "authenticate", 
+                        "read-only", 
+                        "deny", 
+                        "eject"
+                    ], 
+                    "type": "array", 
+                    "description": "Access to internal hard disks."
+                }, 
+                "dvd": {
+                    "enum": [
+                        "authenticate", 
+                        "read-only", 
+                        "deny", 
+                        "eject"
+                    ], 
+                    "type": "array", 
+                    "description": "Access to DVDs."
+                }, 
+                "blankdvd": {
+                    "enum": [
+                        "authenticate", 
+                        "read-only", 
+                        "deny", 
+                        "eject"
+                    ], 
+                    "type": "array", 
+                    "description": "Access to blank DVDs."
+                }, 
+                "cd": {
+                    "enum": [
+                        "authenticate", 
+                        "read-only", 
+                        "deny", 
+                        "eject"
+                    ], 
+                    "type": "array", 
+                    "description": "Access to CDs."
+                }, 
+                "disk-image": {
+                    "enum": [
+                        "authenticate", 
+                        "read-only", 
+                        "deny", 
+                        "eject"
+                    ], 
+                    "type": "array", 
+                    "description": "Access to disk images."
+                }, 
+                "all-media": {
+                    "default": "", 
+                    "type": "string", 
+                    "description": "Access to all media. Unused; set to empty string."
+                }, 
+                "blankcd": {
+                    "enum": [
+                        "authenticate", 
+                        "read-only", 
+                        "deny", 
+                        "eject"
+                    ], 
+                    "type": "array", 
+                    "description": "Access to blank CDs."
+                }, 
+                "blankbd": {
+                    "enum": [
+                        "authenticate", 
+                        "read-only", 
+                        "deny", 
+                        "eject"
+                    ], 
+                    "type": "array", 
+                    "description": "Access to blank Blurays."
+                }
+            }
+        }, 
+        "PayloadOrganization": {
+            "type": "string", 
+            "description": "This value describes the issuing organization of the profile, as displayed to the user"
+        }, 
+        "PayloadIdentifier": {
+            "default": "com.apple.systemuiserver", 
+            "type": "string", 
+            "description": "A unique identifier for the payload, dot-delimited.  Usually root PayloadIdentifier+subidentifier"
+        }, 
+        "PayloadDisplayName": {
+            "default": "Media Access (SystemUIServer)", 
+            "type": "string", 
+            "description": "Name of the payload"
+        }, 
+        "PayloadType": {
+            "default": "com.apple.systemuiserver", 
+            "type": "string", 
+            "description": "The type of the payload, a reverse dns string"
+        }, 
+        "PayloadVersion": {
+            "default": 1, 
+            "type": "number", 
+            "description": "The version of the whole configuration profile."
+        }, 
+        "logout-eject": {
+            "type": "object", 
+            "description": "Media type dictionary to define volumes to eject when the user logs out", 
+            "properties": {
+                "cd": {
+                    "enum": [
+                        "authenticate", 
+                        "read-only", 
+                        "deny", 
+                        "eject"
+                    ], 
+                    "type": "array", 
+                    "description": "CD Actions"
+                }
+            }
+        }
+    }, 
+    "title": "com.apple.systemuiserver"
+}
