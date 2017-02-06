@@ -27,6 +27,7 @@ Payloads
     custom.rst
     dashwidgets.rst
     desktop.rst
+    dictionary.rst
     discrecording.rst
     dock.rst
     domains.rst
@@ -36,6 +37,7 @@ Payloads
     enrollment.rst
     ethernet.rst
     exchange.rst
+    finderburn.rst
     firewall.rst
     fv2.rst
     fv2redirect.rst

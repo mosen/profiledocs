@@ -42,22 +42,22 @@ MCXDockSpecialFolders can contain any of the valid mcxfolderflag values
 Each item in static-others is a dictionary containing the following keys:
 
 .. pfm:: /_static/manifests/com.apple.dock manifest.plist
-    :key: DocItems-Raw:doctile
+    :key: static-others:doctile
 
 **tile-data**
 
 .. pfm:: /_static/manifests/com.apple.dock manifest.plist
-    :key: DocItems-Raw:doctile:tile-data
+    :key: static-others:doctile:tile-data
 
 **file-data**
 
 .. pfm:: /_static/manifests/com.apple.dock manifest.plist
-    :key: DocItems-Raw:doctile:tile-data:file-data
+    :key: static-others:doctile:tile-data:file-data
 
 **url**
 
 .. pfm:: /_static/manifests/com.apple.dock manifest.plist
-    :key: DocItems-Raw:doctile:tile-data:url
+    :key: static-others:doctile:tile-data:url
 
 .. pfmkey:: static-apps /_static/manifests/com.apple.dock manifest.plist
 

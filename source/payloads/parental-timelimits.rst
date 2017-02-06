@@ -1,4 +1,4 @@
-.. _payloadtype-com.apple.familycontrols.timelimits:
+.. _payloadtype-com.apple.familycontrols.timelimits.v2:
 
 Parental Controls - Time Limits
 ===============================

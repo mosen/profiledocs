@@ -7,4 +7,4 @@ Location
 Domains
 -------
 
-- com.apple.touchidpolicy (:ref:`com.apple.touchidpolicy`)
+- com.apple.touchidpolicy (:ref:`payloadtype-com.apple.touchidpolicy`)
