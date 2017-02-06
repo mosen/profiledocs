@@ -15,9 +15,13 @@ Welcome to MacAdmins Profile Reference's documentation!
 
    payloads/index.rst
 
+   troubleshooting/index.rst
+
    macos/index.rst
 
    pdp/index.rst
+
+   glossary.rst
 
 
 Indices and tables
@@ -26,3 +30,4 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+

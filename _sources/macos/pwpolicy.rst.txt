@@ -1,4 +1,4 @@
-.. pwpolicy:
+.. _pwpolicy:
 
 Password Policy
 ===============

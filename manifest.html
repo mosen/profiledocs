@@ -98,10 +98,15 @@
 <li class="toctree-l3"><a class="reference internal" href="#pfm-type">pfm_type</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pfm-default">pfm_default</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pfm-range-list">pfm_range_list</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pfm-range-min">pfm_range_min</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pfm-range-max">pfm_range_max</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pfm-format">pfm_format</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pfm-require">pfm_require</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pfm-repetition-min">pfm_repetition_min</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pfm-repetition-max">pfm_repetition_max</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pfm-exclude">pfm_exclude</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pfm-conditionals">pfm_conditionals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pfm-targets-mcx">pfm_targets (MCX)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#conditions">Conditions</a><ul>
@@ -116,12 +121,21 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#union-policies-mcx">Union Policies (MCX)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pfm-upk-input-keys">pfm_upk_input_keys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pfm-upk-output-name">pfm_upk_output_name</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pfm-upk-output-type">pfm_upk_output_type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pfm-remove-duplicates">pfm_remove_duplicates</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="extmanifest.html">Extended Manifest Format</a></li>
 <li class="toctree-l1"><a class="reference internal" href="payloads/index.html">Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting/index.html">Troubleshooting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="macos/index.html">macOS Subsystem Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pdp/index.html">Profile Domain Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
 </ul>
 
             
@@ -222,7 +236,8 @@ Apple Configurator 2.</p>
 <dt>Type</dt>
 <dd>String</dd>
 </dl>
-<p>At the top level this indicates the <strong>PayloadType</strong>.</p>
+<p>This should now be equal to the <strong>PayloadType</strong>.
+This was previously used to indicate the preference domain in MCX manifests.</p>
 </div>
 <div class="section" id="pfm-subkeys">
 <h3>pfm_subkeys<a class="headerlink" href="#pfm-subkeys" title="Permalink to this headline">¶</a></h3>
@@ -231,6 +246,10 @@ Apple Configurator 2.</p>
 <dd>Array of Dict</dd>
 </dl>
 <p>This key describes keys nested under the current key.</p>
+<ul class="simple">
+<li>If the current key is of type <strong>array</strong>, the first subkey item describes the format of each array item.</li>
+<li>If the current key is of type <strong>dictionary</strong>, the subkeys are treated as dictionary members.</li>
+</ul>
 </div>
 <div class="section" id="pfm-type">
 <h3>pfm_type<a class="headerlink" href="#pfm-type" title="Permalink to this headline">¶</a></h3>
@@ -239,6 +258,16 @@ Apple Configurator 2.</p>
 <dd>String</dd>
 </dl>
 <p>The data type of the plist value associated with this key. Does not appear at the root level.</p>
+<ul class="simple">
+<li>boolean</li>
+<li>integer</li>
+<li>real</li>
+<li>string</li>
+<li>array</li>
+<li>dictionary</li>
+<li>data</li>
+<li>date</li>
+</ul>
 </div>
 <div class="section" id="pfm-default">
 <h3>pfm_default<a class="headerlink" href="#pfm-default" title="Permalink to this headline">¶</a></h3>
@@ -246,7 +275,8 @@ Apple Configurator 2.</p>
 <dt>Type</dt>
 <dd>Varies, depends on <strong>pfm_type</strong>.</dd>
 </dl>
-<p>The default value to suggest when creating new profiles. Can be a simple type or even a dict.</p>
+<p>The default value to suggest when creating new profiles.
+If the <strong>pfm_type</strong> is array or dict it can contain an entire structured value.</p>
 </div>
 <div class="section" id="pfm-range-list">
 <h3>pfm_range_list<a class="headerlink" href="#pfm-range-list" title="Permalink to this headline">¶</a></h3>
@@ -255,6 +285,20 @@ Apple Configurator 2.</p>
 <dd>Array of <strong>pfm_type</strong>.</dd>
 </dl>
 <p>A list of valid values.</p>
+</div>
+<div class="section" id="pfm-range-min">
+<h3>pfm_range_min<a class="headerlink" href="#pfm-range-min" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Type</dt>
+<dd><strong>Integer</strong> or <strong>Real</strong> minimum value (if <strong>pfm_type</strong> is integer or real)</dd>
+</dl>
+</div>
+<div class="section" id="pfm-range-max">
+<h3>pfm_range_max<a class="headerlink" href="#pfm-range-max" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Type</dt>
+<dd><strong>Integer</strong> or <strong>Real</strong> maximum value (if <strong>pfm_type</strong> is integer or real)</dd>
+</dl>
 </div>
 <div class="section" id="pfm-format">
 <h3>pfm_format<a class="headerlink" href="#pfm-format" title="Permalink to this headline">¶</a></h3>
@@ -274,11 +318,27 @@ Apple Configurator 2.</p>
 <ul class="simple">
 <li>Always means that the key is absolutely required.</li>
 <li><dl class="first docutils">
-<dt>Push seems to mean that the key will be required if the profile is being pushed. Example: if you omit a username or</dt>
-<dd>password you will be prompted to enter them interactively, but the profile may not be pushed.</dd>
+<dt>Push means the profile will require user interaction to install if this key is omitted. If attempting to install</dt>
+<dd>automatically, the profile installation will fail.</dd>
 </dl>
 </li>
 </ul>
+</div>
+<div class="section" id="pfm-repetition-min">
+<h3>pfm_repetition_min<a class="headerlink" href="#pfm-repetition-min" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Type</dt>
+<dd>Integer representing the minimum number of times this key needs to appear.</dd>
+</dl>
+<p>Prior to pfm_require this was used to specify optional and required keys.
+It is still in use for array pairs such as com.apple.security.scep <code class="docutils literal"><span class="pre">Subject</span></code>.</p>
+</div>
+<div class="section" id="pfm-repetition-max">
+<h3>pfm_repetition_max<a class="headerlink" href="#pfm-repetition-max" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Type</dt>
+<dd>Integer representing the maximum number of times this key can to appear.</dd>
+</dl>
 </div>
 <div class="section" id="pfm-exclude">
 <h3>pfm_exclude<a class="headerlink" href="#pfm-exclude" title="Permalink to this headline">¶</a></h3>
@@ -297,6 +357,27 @@ The dict should contain a <a class="reference internal" href="#pfm-target-condit
 </dl>
 <p>Indicates the conditions where this key WILL be enabled.
 The dict should contain a <a class="reference internal" href="#pfm-target-conditions">pfm_target_conditions</a>.</p>
+</div>
+<div class="section" id="pfm-targets-mcx">
+<h3>pfm_targets (MCX)<a class="headerlink" href="#pfm-targets-mcx" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Type</dt>
+<dd>Array of String</dd>
+</dl>
+<p>This key appears in the older MCX manifest style but not in AC 2. It seems to describe the scopes where the
+payload will be valid.</p>
+<p>Valid values are:</p>
+<ul class="simple">
+<li>user</li>
+<li>user-managed</li>
+<li>system</li>
+<li>system-managed</li>
+</ul>
+<p>The <code class="docutils literal"><span class="pre">-managed</span></code> suffix seems to infer that the key will be <em>FORCED</em>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Needs clarification</p>
+</div>
 </div>
 </div>
 <div class="section" id="conditions">
@@ -373,6 +454,35 @@ separated by a dot &#8221;.&#8221;</p>
 </dl>
 <p>This rule will pass if the value of the target does not match the list.</p>
 </div>
+</div>
+</div>
+<div class="section" id="union-policies-mcx">
+<h2>Union Policies (MCX)<a class="headerlink" href="#union-policies-mcx" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal"><span class="pre">union</span> <span class="pre">policy</span></code> type appears in older MCX style manifests.</p>
+<div class="section" id="pfm-upk-input-keys">
+<h3>pfm_upk_input_keys<a class="headerlink" href="#pfm-upk-input-keys" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Type</dt>
+<dd>Array of key names which will be processed to produce an output key</dd>
+</dl>
+<p>Usually refers to a key name with a <code class="docutils literal"><span class="pre">-Raw</span></code> suffix that will be processed to produce the actual key.</p>
+</div>
+<div class="section" id="pfm-upk-output-name">
+<h3>pfm_upk_output_name<a class="headerlink" href="#pfm-upk-output-name" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Type</dt>
+<dd>String describing the name of the key after processing.</dd>
+</dl>
+</div>
+<div class="section" id="pfm-upk-output-type">
+<h3>pfm_upk_output_type<a class="headerlink" href="#pfm-upk-output-type" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Type</dt>
+<dd>Normal <strong>pfm_type</strong> that will be generated</dd>
+</dl>
+</div>
+<div class="section" id="pfm-remove-duplicates">
+<h3>pfm_remove_duplicates<a class="headerlink" href="#pfm-remove-duplicates" title="Permalink to this headline">¶</a></h3>
 </div>
 </div>
 </div>

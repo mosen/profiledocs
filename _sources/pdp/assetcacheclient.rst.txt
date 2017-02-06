@@ -7,5 +7,5 @@ Location
 Domains
 -------
 
-- com.apple.assetcache.client.osx.profile.plugin (:ref:`com.apple.assetcache.client.osx.profile.plugin`)
+- com.apple.assetcache.client.osx.profile.plugin (:ref:`payloadtype-com.apple.assetcache.client.osx.profile.plugin`)
 

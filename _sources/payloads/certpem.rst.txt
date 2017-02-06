@@ -2,6 +2,7 @@
 
 Certificate (PEM)
 =================
+:download:`Template <../_static/examples/com.apple.security.pem.mobileconfig>`
 
 PEM-encoded certificate (.cer) without private key. May contain root certificates.
 

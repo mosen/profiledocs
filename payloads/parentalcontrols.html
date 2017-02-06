@@ -107,10 +107,12 @@
 <li class="toctree-l2"><a class="reference internal" href="certpkcs12.html">Certificate (PKCS#12)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certpref.html">Certificate Preference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certroot.html">Certificate (Root CA)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conference.html">Conference Room Display</a></li>
 <li class="toctree-l2"><a class="reference internal" href="coremediaio.html">Core Media IO (Camera)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="custom.html">Custom Settings (MCX)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dashwidgets.html">Dashboard Widgets</a></li>
 <li class="toctree-l2"><a class="reference internal" href="desktop.html">Desktop Picture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dictionary.html">Dictionary (Parental Controls)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="discrecording.html">Disc Recording</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dock.html">Dock</a></li>
 <li class="toctree-l2"><a class="reference internal" href="domains.html">Domains</a></li>
@@ -120,6 +122,7 @@
 <li class="toctree-l2"><a class="reference internal" href="enrollment.html">Enrollment (Supervised)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ethernet.html">Ethernet 802.1x</a></li>
 <li class="toctree-l2"><a class="reference internal" href="exchange.html">Exchange</a></li>
+<li class="toctree-l2"><a class="reference internal" href="finderburn.html">Finder (Disc Burning)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="firewall.html">Firewall</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fv2.html">FileVault 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fv2redirect.html">FileVault Recovery Key Redirect</a></li>
@@ -191,8 +194,10 @@
 <li class="toctree-l2"><a class="reference internal" href="wifi.html">Wi-Fi</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">Troubleshooting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../macos/index.html">macOS Subsystem Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pdp/index.html">Profile Domain Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
 </ul>
 
             
@@ -284,26 +289,26 @@
 <tbody valign="top">
 <tr class="row-even"><td>familyControlsEnabled</td>
 <td>boolean</td>
-<td></td>
-<td></td>
+<td>Enable application access restrictions</td>
+<td>Required. Set to true to enable application access restrictions.</td>
 <td>n/a</td>
 </tr>
 <tr class="row-odd"><td>whiteList</td>
 <td>array</td>
 <td>Application Whitelist</td>
-<td>Application Whitelist</td>
+<td>Optional. Allowed processes.</td>
 <td>n/a</td>
 </tr>
 <tr class="row-even"><td>pathWhiteList</td>
 <td>array</td>
 <td>Whitelisted Applications By Path</td>
-<td>The listed paths are whitelisted for application launch</td>
+<td>Optional. Paths to allowed processes.</td>
 <td>n/a</td>
 </tr>
 <tr class="row-odd"><td>pathBlackList</td>
 <td>array</td>
 <td>Blacklisted Applications By Path</td>
-<td>The listed paths are blacklisted for application launch</td>
+<td>Optional. Paths to disallowed processes.</td>
 <td>n/a</td>
 </tr>
 </tbody>
@@ -313,8 +318,8 @@
 <h2>Keys<a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="com.apple.applicationaccess.new-familyControlsEnabled-auto">
 <h3>familyControlsEnabled<a class="headerlink" href="#com.apple.applicationaccess.new-familyControlsEnabled-auto" title="Permalink to this headline">¶</a></h3>
-<p></p>
-<p></p>
+<p>Enable application access restrictions</p>
+<p>Required. Set to true to enable application access restrictions.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="14%" />
@@ -350,7 +355,7 @@
 <div class="section" id="com.apple.applicationaccess.new-whiteList-auto">
 <h3>whiteList<a class="headerlink" href="#com.apple.applicationaccess.new-whiteList-auto" title="Permalink to this headline">¶</a></h3>
 <p>Application Whitelist</p>
-<p>Application Whitelist</p>
+<p>Optional. Allowed processes.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="14%" />
@@ -386,7 +391,7 @@
 <div class="section" id="com.apple.applicationaccess.new-pathWhiteList-auto">
 <h3>pathWhiteList<a class="headerlink" href="#com.apple.applicationaccess.new-pathWhiteList-auto" title="Permalink to this headline">¶</a></h3>
 <p>Whitelisted Applications By Path</p>
-<p>The listed paths are whitelisted for application launch</p>
+<p>Optional. Paths to allowed processes.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="14%" />
@@ -422,7 +427,7 @@
 <div class="section" id="com.apple.applicationaccess.new-pathBlackList-auto">
 <h3>pathBlackList<a class="headerlink" href="#com.apple.applicationaccess.new-pathBlackList-auto" title="Permalink to this headline">¶</a></h3>
 <p>Blacklisted Applications By Path</p>
-<p>The listed paths are blacklisted for application launch</p>
+<p>Optional. Paths to disallowed processes.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="14%" />

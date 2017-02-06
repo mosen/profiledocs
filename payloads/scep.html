@@ -107,10 +107,12 @@
 <li class="toctree-l2"><a class="reference internal" href="certpkcs12.html">Certificate (PKCS#12)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certpref.html">Certificate Preference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certroot.html">Certificate (Root CA)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conference.html">Conference Room Display</a></li>
 <li class="toctree-l2"><a class="reference internal" href="coremediaio.html">Core Media IO (Camera)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="custom.html">Custom Settings (MCX)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dashwidgets.html">Dashboard Widgets</a></li>
 <li class="toctree-l2"><a class="reference internal" href="desktop.html">Desktop Picture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dictionary.html">Dictionary (Parental Controls)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="discrecording.html">Disc Recording</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dock.html">Dock</a></li>
 <li class="toctree-l2"><a class="reference internal" href="domains.html">Domains</a></li>
@@ -120,6 +122,7 @@
 <li class="toctree-l2"><a class="reference internal" href="enrollment.html">Enrollment (Supervised)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ethernet.html">Ethernet 802.1x</a></li>
 <li class="toctree-l2"><a class="reference internal" href="exchange.html">Exchange</a></li>
+<li class="toctree-l2"><a class="reference internal" href="finderburn.html">Finder (Disc Burning)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="firewall.html">Firewall</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fv2.html">FileVault 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fv2redirect.html">FileVault Recovery Key Redirect</a></li>
@@ -168,6 +171,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#com.apple.security.scep-RetryDelay-auto">RetryDelay</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#substitution-variables">Substitution Variables</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#links">Links</a></li>
 </ul>
 </li>
@@ -199,8 +203,10 @@
 <li class="toctree-l2"><a class="reference internal" href="wifi.html">Wi-Fi</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">Troubleshooting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../macos/index.html">macOS Subsystem Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pdp/index.html">Profile Domain Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
 </ul>
 
             
@@ -304,13 +310,13 @@
 <tr class="row-odd"><td>Name</td>
 <td>string</td>
 <td>Name</td>
-<td>The name of the instance: CA-IDENT</td>
+<td>Optional. Any string that is understood by the SCEP server. For example, it could be a domain name like example.org. If a certificate authority has multiple CA certificates this field can be used to distinguish which is required.</td>
 <td>n/a</td>
 </tr>
 <tr class="row-even"><td>Subject</td>
 <td>array</td>
 <td>Subject</td>
-<td>Representation of a X.500 name</td>
+<td>The representation of a X.500 name represented as an array of OID and value. OIDs can be represented as dotted numbers, with shortcuts for country (C), locality (L), state (ST), organization (O), organizational unit (OU), and common name (CN).</td>
 <td>n/a</td>
 </tr>
 <tr class="row-odd"><td>Challenge</td>
@@ -328,13 +334,13 @@
 <tr class="row-odd"><td>CAFingerprint</td>
 <td>data</td>
 <td>Fingerprint</td>
-<td>Enter hex string to be used as a fingerprint or create fingerprint from Certificate</td>
+<td>Optional. The fingerprint of the Certificate Authority certificate.</td>
 <td>n/a</td>
 </tr>
 <tr class="row-even"><td>KeyType</td>
 <td>string</td>
 <td>Key Type</td>
-<td>Key Type</td>
+<td>Optional. Currently always &#8220;RSA&#8221;.</td>
 <td>n/a</td>
 </tr>
 <tr class="row-odd"><td>KeyUsage</td>
@@ -359,6 +365,12 @@
 <td>integer</td>
 <td>Retry Delay</td>
 <td>The number of seconds to wait between subsequent retries. The first retry is attempted without this delay</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>GetCACaps</td>
+<td>dictionary</td>
+<td>Custom GetCACaps Response</td>
+<td>If you add a dictionary with the key GetCACaps, the device uses the strings you provide as the authoritative source of information about the capabilities of your CA.</td>
 <td>n/a</td>
 </tr>
 </tbody>
@@ -405,7 +417,7 @@
 <div class="section" id="com.apple.security.scep-Name-auto">
 <h3>Name<a class="headerlink" href="#com.apple.security.scep-Name-auto" title="Permalink to this headline">¶</a></h3>
 <p>Name</p>
-<p>The name of the instance: CA-IDENT</p>
+<p>Optional. Any string that is understood by the SCEP server. For example, it could be a domain name like example.org. If a certificate authority has multiple CA certificates this field can be used to distinguish which is required.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="14%" />
@@ -443,7 +455,7 @@ If a certificate authority has multiple CA certificates this field can be used t
 <div class="section" id="com.apple.security.scep-Subject-auto">
 <h3>Subject<a class="headerlink" href="#com.apple.security.scep-Subject-auto" title="Permalink to this headline">¶</a></h3>
 <p>Subject</p>
-<p>Representation of a X.500 name</p>
+<p>The representation of a X.500 name represented as an array of OID and value. OIDs can be represented as dotted numbers, with shortcuts for country (C), locality (L), state (ST), organization (O), organizational unit (OU), and common name (CN).</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="14%" />
@@ -561,7 +573,7 @@ For example, /C=US/O=Apple Inc./CN=foo/1.2.5.3=bar, which would translate to:</p
 <div class="section" id="com.apple.security.scep-CAFingerprint-auto">
 <h3>CAFingerprint<a class="headerlink" href="#com.apple.security.scep-CAFingerprint-auto" title="Permalink to this headline">¶</a></h3>
 <p>Fingerprint</p>
-<p>Enter hex string to be used as a fingerprint or create fingerprint from Certificate</p>
+<p>Optional. The fingerprint of the Certificate Authority certificate.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="14%" />
@@ -597,7 +609,7 @@ For example, /C=US/O=Apple Inc./CN=foo/1.2.5.3=bar, which would translate to:</p
 <div class="section" id="com.apple.security.scep-KeyType-auto">
 <h3>KeyType<a class="headerlink" href="#com.apple.security.scep-KeyType-auto" title="Permalink to this headline">¶</a></h3>
 <p>Key Type</p>
-<p>Key Type</p>
+<p>Optional. Currently always &#8220;RSA&#8221;.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="14%" />
@@ -629,6 +641,10 @@ For example, /C=US/O=Apple Inc./CN=foo/1.2.5.3=bar, which would translate to:</p
 </tr>
 </tbody>
 </table>
+<h3>Valid Choices<a class="headerlink" href="#com.apple.security.scep-KeyType-auto" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>RSA</li>
+</ul>
 </div>
 <div class="section" id="com.apple.security.scep-KeyUsage-auto">
 <h3>KeyUsage<a class="headerlink" href="#com.apple.security.scep-KeyUsage-auto" title="Permalink to this headline">¶</a></h3>
@@ -774,6 +790,41 @@ For example, /C=US/O=Apple Inc./CN=foo/1.2.5.3=bar, which would translate to:</p
 </tbody>
 </table>
 </div>
+</div>
+<div class="section" id="substitution-variables">
+<h2>Substitution Variables<a class="headerlink" href="#substitution-variables" title="Permalink to this headline">¶</a></h2>
+<p>The values of these can be obtained by running (in a Terminal window):</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">libexec</span><span class="o">/</span><span class="n">mdmclient</span> <span class="n">dumpSCEPVars</span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">%AD_ComputerID%</span></code></dt>
+<dd>computername$</dd>
+<dt><code class="docutils literal"><span class="pre">%AD_ComputerName%</span></code></dt>
+<dd>computername</dd>
+<dt><code class="docutils literal"><span class="pre">%AD_Domain%</span></code></dt>
+<dd>CONTOSO</dd>
+<dt><code class="docutils literal"><span class="pre">%AD_DomainForestName%</span></code></dt>
+<dd>contoso.com</dd>
+<dt><code class="docutils literal"><span class="pre">%AD_DomainGUID%</span></code></dt>
+<dd>&lt;GUID value&gt;</dd>
+<dt><code class="docutils literal"><span class="pre">%AD_DomainNameDNS%</span></code></dt>
+<dd>contoso.com</dd>
+<dt><code class="docutils literal"><span class="pre">%AD_KerberosID%</span></code></dt>
+<dd><a class="reference external" href="mailto:computer$&#37;&#52;&#48;AD&#46;DOMAIN">computer$<span>&#64;</span>AD<span>&#46;</span>DOMAIN</a></dd>
+<dt><code class="docutils literal"><span class="pre">%ComputerName%</span></code></dt>
+<dd>computer</dd>
+<dt><code class="docutils literal"><span class="pre">%HardwareUUID%</span></code></dt>
+<dd>&lt;Hardware unique UUID&gt;</dd>
+<dt><code class="docutils literal"><span class="pre">%HostName%</span></code></dt>
+<dd>computer.local</dd>
+<dt><code class="docutils literal"><span class="pre">%LocalHostName%</span></code></dt>
+<dd>computername</dd>
+<dt><code class="docutils literal"><span class="pre">%MACAddress%</span></code></dt>
+<dd>ethernet mac address</dd>
+<dt><code class="docutils literal"><span class="pre">%SerialNumber%</span></code></dt>
+<dd>mac serial number</dd>
+</dl>
 </div>
 <div class="section" id="links">
 <h2>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>

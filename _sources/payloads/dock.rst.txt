@@ -1,69 +1,80 @@
 Dock
 ====
 
-.. warning:: These manifest keys have been imported from MCX, they have not yet been verified.
+The Dock payload is supported on the user channel and, except for AllowDockFixupOverride, on all version of macOS.
+The key ``AllowDockFixupOverride`` is supported on macOS 10.12 and later.
 
 Summary
 -------
 
-.. pfmheader:: manifests/manual/com.apple.dock manifest.plist
-.. pfm:: manifests/manual/com.apple.dock manifest.plist
+.. pfmheader:: /_static/manifests/com.apple.dock manifest.plist
+.. pfm:: /_static/manifests/com.apple.dock manifest.plist
 
 Keys
 ----
 
-.. pfmkey:: autohide manifests/manual/com.apple.dock manifest.plist
-.. pfmkey:: launchanim manifests/manual/com.apple.dock manifest.plist
-.. pfmkey:: magnify manifests/manual/com.apple.dock manifest.plist
-.. pfmkey:: mineffect manifests/manual/com.apple.dock manifest.plist
-.. pfmkey:: orientation manifests/manual/com.apple.dock manifest.plist
-.. pfmkey:: show-process-indicators manifests/manual/com.apple.dock manifest.plist
-.. pfmkey:: AllowDockFixupOverride manifests/manual/com.apple.dock manifest.plist
-.. pfmkey:: tilesize manifests/manual/com.apple.dock manifest.plist
-.. pfmkey:: static-only manifests/manual/com.apple.dock manifest.plist
-.. pfmkey:: static-apps manifests/manual/com.apple.dock manifest.plist
+.. pfmkey:: orientation /_static/manifests/com.apple.dock manifest.plist
+.. pfmkey:: position-immutable /_static/manifests/com.apple.dock manifest.plist
+.. pfmkey:: autohide /_static/manifests/com.apple.dock manifest.plist
+.. pfmkey:: autohide-immutable /_static/manifests/com.apple.dock manifest.plist
+.. pfmkey:: minimize-to-application /_static/manifests/com.apple.dock manifest.plist
+.. pfmkey:: minimize-to-application-immutable /_static/manifests/com.apple.dock manifest.plist
+.. pfmkey:: magnification /_static/manifests/com.apple.dock manifest.plist
+.. pfmkey:: magnify-immutable /_static/manifests/com.apple.dock manifest.plist
+.. pfmkey:: largesize /_static/manifests/com.apple.dock manifest.plist
+.. pfmkey:: magsize-immutable /_static/manifests/com.apple.dock manifest.plist
+.. pfmkey:: show-process-indicators /_static/manifests/com.apple.dock manifest.plist
+.. pfmkey:: launchanim /_static/manifests/com.apple.dock manifest.plist
+.. pfmkey:: launchanim-immutable /_static/manifests/com.apple.dock manifest.plist
+.. pfmkey:: mineffect /_static/manifests/com.apple.dock manifest.plist
+.. pfmkey:: mineffect-immutable /_static/manifests/com.apple.dock manifest.plist
+.. pfmkey:: tilesize /_static/manifests/com.apple.dock manifest.plist
+.. pfmkey:: size-immutable /_static/manifests/com.apple.dock manifest.plist
 
-Each item in static-apps is a dictionary containing the following keys:
+MCXDockSpecialFolders can contain any of the valid mcxfolderflag values
+.. pfmkey:: MCXDockSpecialFolders:mcxfolderflag /_static/manifests/com.apple.dock manifest.plist
 
-.. pfm:: manifests/manual/com.apple.dock manifest.plist
-    :key: AppItems-Raw:apptile
+.. pfmkey:: AllowDockFixupOverride /_static/manifests/com.apple.dock manifest.plist
 
-**tile-data**
-
-.. pfm:: manifests/manual/com.apple.dock manifest.plist
-    :key: AppItems-Raw:apptile:tile-data
-
-**file-data**
-
-.. pfm:: manifests/manual/com.apple.dock manifest.plist
-    :key: AppItems-Raw:apptile:tile-data:file-data
-
-
-.. pfmkey:: static-others manifests/manual/com.apple.dock manifest.plist
+.. pfmkey:: static-only /_static/manifests/com.apple.dock manifest.plist
+.. pfmkey:: static-others /_static/manifests/com.apple.dock manifest.plist
 
 Each item in static-others is a dictionary containing the following keys:
 
-.. pfm:: manifests/manual/com.apple.dock manifest.plist
-    :key: DocItems-Raw:doctile
+.. pfm:: /_static/manifests/com.apple.dock manifest.plist
+    :key: static-others:doctile
 
 **tile-data**
 
-.. pfm:: manifests/manual/com.apple.dock manifest.plist
-    :key: DocItems-Raw:doctile:tile-data
+.. pfm:: /_static/manifests/com.apple.dock manifest.plist
+    :key: static-others:doctile:tile-data
 
 **file-data**
 
-.. pfm:: manifests/manual/com.apple.dock manifest.plist
-    :key: DocItems-Raw:doctile:tile-data:file-data
+.. pfm:: /_static/manifests/com.apple.dock manifest.plist
+    :key: static-others:doctile:tile-data:file-data
 
 **url**
 
-.. pfm:: manifests/manual/com.apple.dock manifest.plist
-    :key: DocItems-Raw:doctile:tile-data:url
+.. pfm:: /_static/manifests/com.apple.dock manifest.plist
+    :key: static-others:doctile:tile-data:url
 
+.. pfmkey:: static-apps /_static/manifests/com.apple.dock manifest.plist
 
-.. pfmkey:: MCXDockSpecialFolders manifests/manual/com.apple.dock manifest.plist
+Each item in static-apps is a dictionary containing the following keys:
 
-MCXDockSpecialFolders can contain any of the valid mcxfolderflag values
+.. pfm:: /_static/manifests/com.apple.dock manifest.plist
+    :key: static-apps:apptile
 
-.. pfmkey:: MCXDockSpecialFolders:mcxfolderflag manifests/manual/com.apple.dock manifest.plist
+**tile-data**
+
+.. pfm:: /_static/manifests/com.apple.dock manifest.plist
+    :key: static-apps:apptile:tile-data
+
+**file-data**
+
+.. pfm:: /_static/manifests/com.apple.dock manifest.plist
+    :key: static-apps:apptile:tile-data:file-data
+
+.. pfmkey:: contents-immutable /_static/manifests/com.apple.dock manifest.plist
+

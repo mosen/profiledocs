@@ -2,6 +2,7 @@
 
 Certificate (PKCS#1)
 ====================
+:download:`Template <../_static/examples/com.apple.security.pkcs1.mobileconfig>`
 
 DER-encoded certificate (.cer) without private key. May contain root certificates.
 

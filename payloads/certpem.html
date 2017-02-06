@@ -116,10 +116,12 @@
 <li class="toctree-l2"><a class="reference internal" href="certpkcs12.html">Certificate (PKCS#12)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certpref.html">Certificate Preference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certroot.html">Certificate (Root CA)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conference.html">Conference Room Display</a></li>
 <li class="toctree-l2"><a class="reference internal" href="coremediaio.html">Core Media IO (Camera)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="custom.html">Custom Settings (MCX)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dashwidgets.html">Dashboard Widgets</a></li>
 <li class="toctree-l2"><a class="reference internal" href="desktop.html">Desktop Picture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dictionary.html">Dictionary (Parental Controls)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="discrecording.html">Disc Recording</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dock.html">Dock</a></li>
 <li class="toctree-l2"><a class="reference internal" href="domains.html">Domains</a></li>
@@ -129,6 +131,7 @@
 <li class="toctree-l2"><a class="reference internal" href="enrollment.html">Enrollment (Supervised)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ethernet.html">Ethernet 802.1x</a></li>
 <li class="toctree-l2"><a class="reference internal" href="exchange.html">Exchange</a></li>
+<li class="toctree-l2"><a class="reference internal" href="finderburn.html">Finder (Disc Burning)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="firewall.html">Firewall</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fv2.html">FileVault 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fv2redirect.html">FileVault Recovery Key Redirect</a></li>
@@ -190,8 +193,10 @@
 <li class="toctree-l2"><a class="reference internal" href="wifi.html">Wi-Fi</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">Troubleshooting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../macos/index.html">macOS Subsystem Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pdp/index.html">Profile Domain Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
 </ul>
 
             
@@ -240,6 +245,7 @@
             
   <div class="section" id="certificate-pem">
 <span id="payloadtype-com-apple-security-pem"></span><h1>Certificate (PEM)<a class="headerlink" href="#certificate-pem" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference download internal" href="../_downloads/com.apple.security.pem.mobileconfig" download=""><code class="xref download docutils literal"><span class="pre">Template</span></code></a></p>
 <p>PEM-encoded certificate (.cer) without private key. May contain root certificates.</p>
 <div class="section" id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
@@ -291,7 +297,7 @@
 <tr class="row-odd"><td>PayloadContent</td>
 <td>data</td>
 <td>Certificate Data</td>
-<td>PEM-encoded certificate without private key. May contain root certificates.</td>
+<td>Mandatory. The base64 representation of the payload with a line length of 52.</td>
 <td>always</td>
 </tr>
 <tr class="row-even"><td>Password</td>
@@ -344,7 +350,7 @@
 <div class="section" id="com.apple.security.pem-PayloadContent-auto">
 <h3>PayloadContent<a class="headerlink" href="#com.apple.security.pem-PayloadContent-auto" title="Permalink to this headline">¶</a></h3>
 <p>Certificate Data</p>
-<p>PEM-encoded certificate without private key. May contain root certificates.</p>
+<p>Mandatory. The base64 representation of the payload with a line length of 52.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="14%" />
