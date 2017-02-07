@@ -1,0 +1,100 @@
+{
+    "$schema": "http://json-schema.org/schema#", 
+    "type": "object", 
+    "properties": {
+        "PayloadUUID": {
+            "default": "", 
+            "pattern": "^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$", 
+            "type": "string", 
+            "description": "Unique identifier for the payload (format 01234567-89AB-CDEF-0123-456789ABCDEF)"
+        }, 
+        "UserName": {
+            "type": "string", 
+            "description": "The user name with which to authenticate to the certificate server"
+        }, 
+        "PayloadDescription": {
+            "default": "Requests an Active Directory certificate", 
+            "type": "string", 
+            "description": "Description of the payload"
+        }, 
+        "KeyIsExtractable": {
+            "default": false, 
+            "type": "boolean", 
+            "description": "Allow admin to export private key from the keychain"
+        }, 
+        "Description": {
+            "type": "string", 
+            "description": "The description of the certificate request as shown in the certificate selector of other payloads such as VPN and Network"
+        }, 
+        "CertificateAuthority": {
+            "type": "string", 
+            "description": "Name of the CA. This value is determined from the Common Name (CN) of the Active Directory entry: CN=(your CA name), CN='Certification Authorities', CN='Public Key Services', CN='Services', or CN='Configuration', (your base Domain Name)."
+        }, 
+        "AllowAllAppsAccess": {
+            "default": false, 
+            "type": "boolean", 
+            "description": "Allow all apps to access the certificate in the keychain"
+        }, 
+        "PayloadOrganization": {
+            "type": "string", 
+            "description": "This value describes the issuing organization of the profile, as displayed to the user"
+        }, 
+        "PayloadIdentifier": {
+            "default": "com.apple.ADCertificate.managed", 
+            "type": "string", 
+            "description": "A unique identifier for the payload, dot-delimited.  Usually root PayloadIdentifier+subidentifier"
+        }, 
+        "PayloadDisplayName": {
+            "default": "AD Certificate", 
+            "type": "string", 
+            "description": "Name of the payload"
+        }, 
+        "CertTemplate": {
+            "default": "User", 
+            "type": "string", 
+            "description": "Template Name as it appears in the General tab of the template\u2019s object in the Certificate Templates\u2019 Microsoft Management Console snap-in component."
+        }, 
+        "PayloadType": {
+            "default": "com.apple.ADCertificate.managed", 
+            "type": "string", 
+            "description": "The type of the payload, a reverse dns string"
+        }, 
+        "CertificateAcquisitionMechanism": {
+            "enum": [
+                "RPC", 
+                "HTTP"
+            ], 
+            "type": "string", 
+            "description": "Most commonly RPC. If using Web enrollment, HTTP."
+        }, 
+        "Keysize": {
+            "default": 2048, 
+            "type": "number", 
+            "description": "The RSA key size for the Certificate Signing Request (CSR)."
+        }, 
+        "PromptForCredentials": {
+            "default": false, 
+            "type": "boolean", 
+            "description": "Prompt the user for credentials.  This setting is not supported for pushed profiles"
+        }, 
+        "PayloadVersion": {
+            "default": 1, 
+            "type": "number", 
+            "description": "The version of the whole configuration profile."
+        }, 
+        "CertificateRenewalTimeInterval": {
+            "default": 14, 
+            "type": "number", 
+            "description": "The number of days before the certificate expires at which to start showing the expiration notification"
+        }, 
+        "Password": {
+            "type": "string", 
+            "description": "The password with which to authenticate to the certificate server"
+        }, 
+        "CertServer": {
+            "type": "string", 
+            "description": "Fully qualified host name of the Active Directory issuing CA."
+        }
+    }, 
+    "title": "com.apple.ADCertificate.managed"
+}

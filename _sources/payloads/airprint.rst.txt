@@ -2,6 +2,7 @@
 
 AirPrint
 ========
+:download:`Template <../_static/examples/com.apple.airprint.mobileconfig>`
 
 The AirPrint payload adds AirPrint printers to the user’s AirPrint printer list. This makes it easier to support environments where the printers and the devices are on different subnets.
 
@@ -17,6 +18,11 @@ Keys
 ----
 
 .. pfmkey:: AirPrint manifests/manual/com.apple.airprint manifest.plist
+
+AirPrint items are in the following format:
+
+.. pfm:: manifests/manual/com.apple.airprint manifest.plist
+    :key: AirPrint:Identifier
 
 Links
 -----

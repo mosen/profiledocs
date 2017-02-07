@@ -1,0 +1,75 @@
+{
+    "$schema": "http://json-schema.org/schema#", 
+    "type": "object", 
+    "properties": {
+        "PayloadUUID": {
+            "default": "", 
+            "pattern": "^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$", 
+            "type": "string", 
+            "description": "Unique identifier for the payload (format 01234567-89AB-CDEF-0123-456789ABCDEF)"
+        }, 
+        "PayloadDescription": {
+            "default": "Configures a CalDAV account", 
+            "type": "string", 
+            "description": "Description of the payload"
+        }, 
+        "CalDAVAccountDescription": {
+            "default": "My CalDAV Account", 
+            "type": "string", 
+            "description": "The display name of the account (e.g. \"Company CalDAV Account\")"
+        }, 
+        "PayloadOrganization": {
+            "type": "string", 
+            "description": "This value describes the issuing organization of the profile, as displayed to the user"
+        }, 
+        "PayloadIdentifier": {
+            "default": "com.apple.caldav.account", 
+            "type": "string", 
+            "description": "A unique identifier for the payload, dot-delimited.  Usually root PayloadIdentifier+subidentifier"
+        }, 
+        "PayloadDisplayName": {
+            "default": "CalDAV", 
+            "type": "string", 
+            "description": "Name of the payload"
+        }, 
+        "CalDAVHostName": {
+            "type": "string", 
+            "description": "The CalDAV server hostname or IP address"
+        }, 
+        "PayloadType": {
+            "default": "com.apple.caldav.account", 
+            "type": "string", 
+            "description": "The type of the payload, a reverse dns string"
+        }, 
+        "PayloadVersion": {
+            "default": 1, 
+            "type": "number", 
+            "description": "The version of the whole configuration profile."
+        }, 
+        "CalDAVPassword": {
+            "type": "string", 
+            "description": "The CalDAV password"
+        }, 
+        "CalDAVPort": {
+            "default": 443, 
+            "minimum": 0, 
+            "type": "number", 
+            "description": "The port on which to connect to the server", 
+            "maximum": 65535
+        }, 
+        "CalDAVUsername": {
+            "type": "string", 
+            "description": "The CalDAV username"
+        }, 
+        "CalDAVUseSSL": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Enable Secure Socket Layer communication with CalDAV server"
+        }, 
+        "CalDAVPrincipalURL": {
+            "type": "string", 
+            "description": "The base URL to the user's calendar"
+        }
+    }, 
+    "title": "com.apple.caldav.account"
+}

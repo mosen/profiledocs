@@ -8,9 +8,10 @@
 			<key>AppLayerVPNMapping</key>
 			<array>
 				<dict>
-					<key>AppLayerVPNMappingItem</key>
-					<dict>
-					</dict>
+					<key>Identifier</key>
+					<string></string>
+					<key>VPNUUID</key>
+					<string></string>
 				</dict>
 			</array>
 			<key>PayloadDescription</key>
@@ -40,6 +41,6 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>3955cd53-ccb6-43b3-a544-7a591021613e</string>
+	<string>059cfaf2-69ea-48d4-bb0f-458818215f6d</string>
 </dict>
 </plist>

@@ -24,6 +24,32 @@
 			</dict>
 			<key>Subsystems</key>
 			<dict>
+				<key>subsystemDomain</key>
+				<dict>
+					<key>DEFAULT-OPTIONS</key>
+					<dict>
+						<key>Default-Privacy-Setting</key>
+						<string>Inherit</string>
+						<key>Level</key>
+						<dict>
+							<key>Enable</key>
+							<string>Inherit</string>
+							<key>Persist</key>
+							<string>Inherit</string>
+						</dict>
+						<key>Propagate-with-Activity</key>
+						<false/>
+						<key>TTL</key>
+						<dict>
+							<key>Debug</key>
+							<integer>0</integer>
+							<key>Default</key>
+							<integer>0</integer>
+							<key>Info</key>
+							<integer>0</integer>
+						</dict>
+					</dict>
+				</dict>
 			</dict>
 			<key>System</key>
 			<dict>
@@ -41,6 +67,6 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>722c691a-510c-4196-b285-bb6ed22c01dc</string>
+	<string>40d769f9-b028-4c82-9ae5-1bfb8d135779</string>
 </dict>
 </plist>

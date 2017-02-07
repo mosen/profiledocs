@@ -41,6 +41,8 @@
 			<true/>
 			<key>allowAutoCorrection</key>
 			<true/>
+			<key>allowAutoUnlock</key>
+			<true/>
 			<key>allowAutomaticAppDownloads</key>
 			<true/>
 			<key>allowBluetoothModification</key>
@@ -62,6 +64,8 @@
 			<key>allowCloudBookmarks</key>
 			<true/>
 			<key>allowCloudCalendar</key>
+			<true/>
+			<key>allowCloudDesktopAndDocuments</key>
 			<true/>
 			<key>allowCloudDocumentSync</key>
 			<true/>
@@ -179,17 +183,11 @@
 			<true/>
 			<key>autonomousSingleAppModePermittedAppIDs</key>
 			<array>
-				<dict>
-					<key>SingleAppModePermittedAppIDItem</key>
-					<string></string>
-				</dict>
+				<string></string>
 			</array>
 			<key>blacklistedAppBundleIDs</key>
 			<array>
-				<dict>
-					<key>appBundleID</key>
-					<string></string>
-				</dict>
+				<string></string>
 			</array>
 			<key>forceAirDropUnmanaged</key>
 			<false/>
@@ -227,10 +225,7 @@
 			<false/>
 			<key>whitelistedAppBundleIDs</key>
 			<array>
-				<dict>
-					<key>appBundleID</key>
-					<string></string>
-				</dict>
+				<string></string>
 			</array>
 		</dict>
 	</array>
@@ -245,6 +240,6 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>2ca88d23-b193-477e-8e59-d77967afca4a</string>
+	<string>8bce4a89-6ad1-44c1-b876-98ed3194a659</string>
 </dict>
 </plist>

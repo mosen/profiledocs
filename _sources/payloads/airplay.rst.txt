@@ -2,22 +2,23 @@
 
 AirPlay
 =======
+:download:`Template <../_static/examples/com.apple.airplay.mobileconfig>`
 
 Whitelist AirPlay destinations
 
 Summary
 -------
 
-.. pfmheader:: manifests/ac2/com.apple.airplay manifest.plist
+.. pfmheader:: /_static/manifests/com.apple.airplay manifest.plist
 
-.. pfm:: manifests/ac2/com.apple.airplay manifest.plist
+.. pfm:: /_static/manifests/com.apple.airplay manifest.plist
 
 Keys
 ----
 
-.. pfmkey:: Whitelist manifests/ac2/com.apple.airplay manifest.plist
+.. pfmkey:: Whitelist /_static/manifests/com.apple.airplay manifest.plist
 
-.. pfmkey:: Passwords manifests/ac2/com.apple.airplay manifest.plist
+.. pfmkey:: Passwords /_static/manifests/com.apple.airplay manifest.plist
 
 Links
 -----

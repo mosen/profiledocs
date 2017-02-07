@@ -110,7 +110,7 @@
 <li class="toctree-l2"><a class="reference internal" href="conference.html">Conference Room Display</a></li>
 <li class="toctree-l2"><a class="reference internal" href="coremediaio.html">Core Media IO (Camera)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="custom.html">Custom Settings (MCX)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dashwidgets.html">Dashboard Widgets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dashwidgets.html">Parental Control Dashboard Payload</a></li>
 <li class="toctree-l2"><a class="reference internal" href="desktop.html">Desktop Picture</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dictionary.html">Dictionary (Parental Controls)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="discrecording.html">Disc Recording</a></li>
@@ -130,7 +130,7 @@
 <li class="toctree-l2"><a class="reference internal" href="fv2.html">FileVault 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fv2redirect.html">FileVault Recovery Key Redirect</a></li>
 <li class="toctree-l2"><a class="reference internal" href="font.html">Font</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gamecenter.html">Game Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gamecenter.html">Parental Control - Game Center</a></li>
 <li class="toctree-l2"><a class="reference internal" href="globalproxy.html">Global HTTP Proxy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="google.html">Google Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="homescreen.html">Home Screen Layout</a></li>
@@ -238,7 +238,8 @@
            <div itemprop="articleBody">
             
   <div class="section" id="ethernet-802-1x">
-<h1>Ethernet 802.1x<a class="headerlink" href="#ethernet-802-1x" title="Permalink to this headline">¶</a></h1>
+<span id="payloadtype-com-apple-firstactiveethernet-managed"></span><h1>Ethernet 802.1x<a class="headerlink" href="#ethernet-802-1x" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference download internal" href="../_downloads/com.apple.firstactiveethernet.managed.mobileconfig" download=""><code class="xref download docutils literal"><span class="pre">Template</span></code></a></p>
 <p>The 802.1x Ethernet payload is designated by specifying one of the following as the PayloadType value:</p>
 <ul class="simple">
 <li>com.apple.firstactiveethernet.managed [default]</li>
@@ -248,10 +249,10 @@
 <li>com.apple.thirdactiveethernet.managed</li>
 <li>com.apple.thirdethernet.managed</li>
 </ul>
-<p>Payloads with “active” in their name apply to Ethernet interfaces that are working at the time of profile installation.
-If there is no active Ethernet interface working, the com.apple.firstactiveethernet.managed payload will configure
+<p>Payloads with <strong>active</strong> in their name apply to Ethernet interfaces that are working at the time of profile installation.
+If there is no active Ethernet interface working, the <code class="docutils literal"><span class="pre">com.apple.firstactiveethernet.managed</span></code> payload will configure
 the interface with the highest service order priority.</p>
-<p>Payloads without “active” in the name apply to Ethernet interfaces according to service order regardless of whether
+<p>Payloads without <strong>active</strong> in the name apply to Ethernet interfaces according to service order regardless of whether
 the interface is working or not.</p>
 <div class="section" id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>

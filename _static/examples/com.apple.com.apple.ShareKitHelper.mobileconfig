@@ -21,17 +21,11 @@
 			<integer>1</integer>
 			<key>SHKAllowedShareServices</key>
 			<array>
-				<dict>
-					<key>SHKAllowedShareServicesItem</key>
-					<string>com.apple.share.AirDrop</string>
-				</dict>
+				<string>com.apple.share.AirDrop</string>
 			</array>
 			<key>SHKDeniedShareServices</key>
 			<array>
-				<dict>
-					<key>SHKDeniedShareServicesItem</key>
-					<string>com.apple.share.AirDrop</string>
-				</dict>
+				<string>com.apple.share.AirDrop</string>
 			</array>
 		</dict>
 	</array>
@@ -46,6 +40,6 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>f435723c-b35a-449e-9536-fa5e0f1f95dc</string>
+	<string>df480a47-b492-41d7-80c3-0e3bdffd7c6f</string>
 </dict>
 </plist>

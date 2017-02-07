@@ -2,6 +2,7 @@
 
 Identification
 ==============
+:download:`Template <../_static/examples/com.apple.configurationprofile.identification.mobileconfig>`
 
 This payload allows you to save names of the account user and prompt text. If left blank, the user has to provide this information when he or she installs the profile.
 

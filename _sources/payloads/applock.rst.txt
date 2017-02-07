@@ -1,5 +1,8 @@
+.. _payloadtype-com.apple.app.lock:
+
 App Lock
 ========
+:download:`Template <../_static/examples/com.apple.app.lock.mobileconfig>`
 
 Only one of this payload type can be installed at any time. This payload can be installed only on a Supervised device.
 By installing an app lock payload, the device is locked to a single application until the payload is removed.
@@ -14,7 +17,6 @@ Summary
 -------
 
 .. pfmheader:: manifests/manual/com.apple.app.lock manifest.plist
-
 .. pfm:: manifests/manual/com.apple.app.lock manifest.plist
 
 Keys

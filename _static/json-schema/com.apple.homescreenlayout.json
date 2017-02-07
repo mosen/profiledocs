@@ -1,0 +1,102 @@
+{
+    "$schema": "http://json-schema.org/schema#", 
+    "type": "object", 
+    "properties": {
+        "PayloadUUID": {
+            "default": "", 
+            "pattern": "^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$", 
+            "type": "string", 
+            "description": "Unique identifier for the payload (format 01234567-89AB-CDEF-0123-456789ABCDEF)"
+        }, 
+        "PayloadDescription": {
+            "default": "Home Screen Layout", 
+            "type": "string", 
+            "description": "Description of the payload"
+        }, 
+        "Dock": {
+            "items": {
+                "type": "object", 
+                "description": "An item in the dock", 
+                "properties": {
+                    "DisplayName": {
+                        "type": "string", 
+                        "description": "Human-readable string to be shown to the user."
+                    }, 
+                    "Type": {
+                        "enum": [
+                            "Application", 
+                            "Folder"
+                        ], 
+                        "type": "string", 
+                        "description": "Type of the item to add"
+                    }, 
+                    "Pages": {
+                        "type": "array", 
+                        "description": "Optional. An array of dictionaries, each of which must conform to the icon dictionary format."
+                    }, 
+                    "BundleID": {
+                        "type": "string", 
+                        "description": "Required if App type. The bundle identifier of the app."
+                    }
+                }
+            }, 
+            "type": "array", 
+            "description": "Optional. An array of dictionaries, each of which must conform to the icon dictionary format."
+        }, 
+        "PayloadOrganization": {
+            "type": "string", 
+            "description": "This value describes the issuing organization of the profile, as displayed to the user"
+        }, 
+        "PayloadIdentifier": {
+            "default": "com.apple.homescreenlayout", 
+            "type": "string", 
+            "description": "A unique identifier for the payload, dot-delimited.  Usually root PayloadIdentifier+subidentifier"
+        }, 
+        "PayloadDisplayName": {
+            "default": "Home Screen Layout", 
+            "type": "string", 
+            "description": "Name of the payload"
+        }, 
+        "PayloadType": {
+            "default": "com.apple.homescreenlayout", 
+            "type": "string", 
+            "description": "The type of the payload, a reverse dns string"
+        }, 
+        "PayloadVersion": {
+            "default": 1, 
+            "type": "number", 
+            "description": "The version of the whole configuration profile."
+        }, 
+        "Pages": {
+            "items": {
+                "type": "object", 
+                "description": "An item in the dock", 
+                "properties": {
+                    "DisplayName": {
+                        "type": "string", 
+                        "description": "Human-readable string to be shown to the user."
+                    }, 
+                    "Type": {
+                        "enum": [
+                            "Application", 
+                            "Folder"
+                        ], 
+                        "type": "string", 
+                        "description": "Type of the item to add"
+                    }, 
+                    "Pages": {
+                        "type": "array", 
+                        "description": "Optional. An array of dictionaries, each of which must conform to the icon dictionary format."
+                    }, 
+                    "BundleID": {
+                        "type": "string", 
+                        "description": "Required if App type. The bundle identifier of the app."
+                    }
+                }
+            }, 
+            "type": "array", 
+            "description": "Optional. An array of dictionaries, each of which must conform to the icon dictionary format."
+        }
+    }, 
+    "title": "com.apple.homescreenlayout"
+}

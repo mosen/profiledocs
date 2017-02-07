@@ -1,0 +1,62 @@
+{
+    "$schema": "http://json-schema.org/schema#", 
+    "type": "object", 
+    "properties": {
+        "PayloadUUID": {
+            "default": "", 
+            "pattern": "^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$", 
+            "type": "string", 
+            "description": "Unique identifier for the payload (format 01234567-89AB-CDEF-0123-456789ABCDEF)"
+        }, 
+        "restrict-store-disable-app-adoption": {
+            "type": "boolean", 
+            "description": "Disable App Adoption by users"
+        }, 
+        "PayloadDescription": {
+            "default": "App Store", 
+            "type": "string", 
+            "description": "Description of the payload"
+        }, 
+        "DisableSoftwareUpdateNotifications": {
+            "type": "boolean", 
+            "description": "Disable software update notifications"
+        }, 
+        "PayloadOrganization": {
+            "type": "string", 
+            "description": "This value describes the issuing organization of the profile, as displayed to the user"
+        }, 
+        "PayloadIdentifier": {
+            "default": "com.apple.appstore", 
+            "type": "string", 
+            "description": "A unique identifier for the payload, dot-delimited.  Usually root PayloadIdentifier+subidentifier"
+        }, 
+        "PayloadDisplayName": {
+            "default": "App Store", 
+            "type": "string", 
+            "description": "Name of the payload"
+        }, 
+        "PayloadType": {
+            "default": "com.apple.appstore", 
+            "type": "string", 
+            "description": "The type of the payload, a reverse dns string"
+        }, 
+        "restrict-store-mdm-install-softwareupdate-only": {
+            "type": "boolean", 
+            "description": "Restrict app installations to MDM-installed apps and software updates"
+        }, 
+        "PayloadVersion": {
+            "default": 1, 
+            "type": "number", 
+            "description": "The version of the whole configuration profile."
+        }, 
+        "restrict-store-softwareupdate-only": {
+            "type": "boolean", 
+            "description": "Restrict app installations to software updates only"
+        }, 
+        "restrict-store-require-admin-to-install": {
+            "type": "boolean", 
+            "description": "Restrict app installations to admin users"
+        }
+    }, 
+    "title": "com.apple.appstore"
+}

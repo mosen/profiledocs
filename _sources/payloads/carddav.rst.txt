@@ -8,23 +8,23 @@ As of macOS v10.8 and later, this payload type supports obtaining CardDAVUsernam
 Summary
 -------
 
-.. pfmheader:: manifests/ac2/com.apple.carddav.account manifest.plist
+.. pfmheader:: /_static/manifests/com.apple.carddav.account manifest.plist
 
-.. pfm:: manifests/ac2/com.apple.carddav.account manifest.plist
+.. pfm:: /_static/manifests/com.apple.carddav.account manifest.plist
 
 Keys
 ----
 
-.. pfmkey:: CardDAVAccountDescription manifests/ac2/com.apple.carddav.account manifest.plist
-.. pfmkey:: CardDAVPort manifests/ac2/com.apple.carddav.account manifest.plist
-.. pfmkey:: CardDAVHostName manifests/ac2/com.apple.carddav.account manifest.plist
-.. pfmkey:: CardDAVUseSSL manifests/ac2/com.apple.carddav.account manifest.plist
-.. pfmkey:: CardDAVPrincipalURL manifests/ac2/com.apple.carddav.account manifest.plist
-.. pfmkey:: CardDAVUsername manifests/ac2/com.apple.carddav.account manifest.plist
-.. pfmkey:: CardDAVPassword manifests/ac2/com.apple.carddav.account manifest.plist
-.. pfmkey:: CommunicationServiceRules manifests/ac2/com.apple.carddav.account manifest.plist
+.. pfmkey:: CardDAVAccountDescription /_static/manifests/com.apple.carddav.account manifest.plist
+.. pfmkey:: CardDAVPort /_static/manifests/com.apple.carddav.account manifest.plist
+.. pfmkey:: CardDAVHostName /_static/manifests/com.apple.carddav.account manifest.plist
+.. pfmkey:: CardDAVUseSSL /_static/manifests/com.apple.carddav.account manifest.plist
+.. pfmkey:: CardDAVPrincipalURL /_static/manifests/com.apple.carddav.account manifest.plist
+.. pfmkey:: CardDAVUsername /_static/manifests/com.apple.carddav.account manifest.plist
+.. pfmkey:: CardDAVPassword /_static/manifests/com.apple.carddav.account manifest.plist
+.. pfmkey:: CommunicationServiceRules /_static/manifests/com.apple.carddav.account manifest.plist
 
-.. pfm:: manifests/ac2/com.apple.carddav.account manifest.plist
+.. pfm:: /_static/manifests/com.apple.carddav.account manifest.plist
     :key: CommunicationServiceRules
 
 Links

@@ -1,0 +1,248 @@
+{
+    "$schema": "http://json-schema.org/schema#", 
+    "type": "object", 
+    "properties": {
+        "UserName": {
+            "type": "string", 
+            "description": "User name of the account used to join the domain."
+        }, 
+        "ADAllowMultiDomainAuthFlag": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Enable ADAllowMultiDomainAuth Key"
+        }, 
+        "ADNamespace": {
+            "default": "domain", 
+            "enum": [
+                "domain", 
+                "forest"
+            ], 
+            "type": "string", 
+            "description": "Set primary user account naming convention: \"forest\" or \"domain\""
+        }, 
+        "PayloadIdentifier": {
+            "default": "com.apple.DirectoryService.managed", 
+            "type": "string", 
+            "description": "A unique identifier for the payload, dot-delimited.  Usually root PayloadIdentifier+subidentifier"
+        }, 
+        "PayloadDisplayName": {
+            "default": "Active Directory Payload", 
+            "type": "string", 
+            "description": "Name of the payload"
+        }, 
+        "ADForceHomeLocalFlag": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Enable ADForceHomeLocal Flag"
+        }, 
+        "ADPacketEncryptFlag": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Enable ADPacketEncrypt Key"
+        }, 
+        "ADMapGGIDAttributeFlag": {
+            "default": false, 
+            "type": "boolean", 
+            "description": "Enable ADMapGGIDAttribute Key"
+        }, 
+        "PayloadOrganization": {
+            "type": "string", 
+            "description": "This value describes the issuing organization of the profile, as displayed to the user"
+        }, 
+        "ADMountStyle": {
+            "default": "smb", 
+            "enum": [
+                "afp", 
+                "smb"
+            ], 
+            "type": "string", 
+            "description": "Network protocol to be used to mount home directory."
+        }, 
+        "ADDomainAdminGroupListFlag": {
+            "default": false, 
+            "type": "boolean", 
+            "description": "Enable ADDomainAdminGroupList Key"
+        }, 
+        "ADMapUIDAttributeFlag": {
+            "default": false, 
+            "type": "boolean", 
+            "description": "Enable ADMapUIDAttribute Key"
+        }, 
+        "ADMapGIDAttribute": {
+            "type": "string", 
+            "description": "Map user GID to attribute"
+        }, 
+        "ADRestrictDDNSFlag": {
+            "default": false, 
+            "type": "boolean", 
+            "description": "Enable ADRestrictDDNS Key"
+        }, 
+        "HostName": {
+            "type": "string", 
+            "description": "The Active Directory domain to join."
+        }, 
+        "ADWarnUserBeforeCreatingMAFlag": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Enable ADWarnUserBeforeCreatingMA Flag"
+        }, 
+        "ClientID": {
+            "type": "string", 
+            "description": "The directory server client ID."
+        }, 
+        "ADDomainAdminGroupList": {
+            "items": {
+                "type": "string", 
+                "description": "An active directory group"
+            }, 
+            "type": "array", 
+            "description": "Allow administration by specified Active Directory groups."
+        }, 
+        "PayloadType": {
+            "default": "com.apple.DirectoryService.managed", 
+            "type": "string", 
+            "description": "The type of the payload, a reverse dns string"
+        }, 
+        "ADPreferredDCServerFlag": {
+            "default": false, 
+            "type": "boolean", 
+            "description": "Enable ADPreferredDCServer Key"
+        }, 
+        "ADPreferredDCServer": {
+            "type": "string", 
+            "description": "Preferred domain server"
+        }, 
+        "ADMapGIDAttributeFlag": {
+            "default": false, 
+            "type": "boolean", 
+            "description": "Enable ADMapGIDAttribute Key"
+        }, 
+        "ADNamespaceFlag": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Enable ADNamespace Key"
+        }, 
+        "Password": {
+            "type": "string", 
+            "description": "Password of the account used to join the domain."
+        }, 
+        "ADRestrictDDNS": {
+            "items": {
+                "type": "string", 
+                "description": "An interface name which is allowed to make DDNS updates"
+            }, 
+            "type": "array", 
+            "description": "Restrict Dynamic DNS updates to the specified interfaces (e.g. en0, en1, etc)."
+        }, 
+        "ADDefaultUserShellFlag": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Enable ADDefaultUserShell Key"
+        }, 
+        "ADPacketSignFlag": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Enable ADPacketSign Key"
+        }, 
+        "ADCreateMobileAccountAtLogin": {
+            "default": false, 
+            "type": "boolean", 
+            "description": "Create mobile account at login."
+        }, 
+        "ADMapUIDAttribute": {
+            "type": "string", 
+            "description": "Map UID to attribute"
+        }, 
+        "ADOrganizationalUnit": {
+            "type": "string", 
+            "description": "The organizational unit (OU) where the joining computer object is added."
+        }, 
+        "ADPacketEncrypt": {
+            "default": "allow", 
+            "enum": [
+                "allow", 
+                "disable", 
+                "require", 
+                "ssl"
+            ], 
+            "type": "string", 
+            "description": "Packet encryption"
+        }, 
+        "ADAllowMultiDomainAuth": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Allow authentication from any domain in the forest"
+        }, 
+        "ADTrustChangePassIntervalDaysFlag": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Enable ADTrustChangePassIntervalDays Key"
+        }, 
+        "ADMapGGIDAttribute": {
+            "type": "string", 
+            "description": "Map group GID to attribute"
+        }, 
+        "ADUseWindowsUNCPath": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Use UNC path from Active Directory to derive network home location"
+        }, 
+        "ADDefaultUserShell": {
+            "default": "/bin/bash", 
+            "type": "string", 
+            "description": "Default user shell"
+        }, 
+        "PayloadUUID": {
+            "default": "", 
+            "pattern": "^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$", 
+            "type": "string", 
+            "description": "Unique identifier for the payload (format 01234567-89AB-CDEF-0123-456789ABCDEF)"
+        }, 
+        "ADTrustChangePassIntervalDays": {
+            "default": 14, 
+            "type": "number", 
+            "description": "How often to change computer trust account password in days"
+        }, 
+        "PayloadDescription": {
+            "default": "Active Directory Payload", 
+            "type": "string", 
+            "description": "Description of the payload"
+        }, 
+        "ADForceHomeLocal": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Force local home directory on startup disk"
+        }, 
+        "ADPacketSign": {
+            "default": "allow", 
+            "enum": [
+                "allow", 
+                "disable", 
+                "require"
+            ], 
+            "type": "string", 
+            "description": "Packet signing"
+        }, 
+        "ADWarnUserBeforeCreatingMA": {
+            "default": false, 
+            "type": "boolean", 
+            "description": "Require confirmation before creating mobile account"
+        }, 
+        "PayloadVersion": {
+            "default": 1, 
+            "type": "number", 
+            "description": "The version of the whole configuration profile."
+        }, 
+        "ADUseWindowsUNCPathFlag": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Enable ADUseWindowsUNCPath Flag"
+        }, 
+        "ADCreateMobileAccountAtLoginFlag": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Enable ADCreateMobileAccountAtLogin Flag"
+        }
+    }, 
+    "title": "com.apple.DirectoryService.managed"
+}

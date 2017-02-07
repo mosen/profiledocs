@@ -2,6 +2,9 @@
 
 Dictionary (Parental Controls)
 ==============================
+:download:`Template <../_static/examples/com.apple.Dictionary.mobileconfig>`
+
+The Parental Control Dictionary payload enables the restrictions defined in the device’s Parental Controls Dictionary.
 
 Summary
 -------

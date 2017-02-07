@@ -23,10 +23,7 @@
 			<integer>1</integer>
 			<key>SafariDomains</key>
 			<array>
-				<dict>
-					<key>SafariDomainsItem</key>
-					<string></string>
-				</dict>
+				<string></string>
 			</array>
 			<key>VPNUUID</key>
 			<string></string>
@@ -43,6 +40,6 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>3041dfd7-6f4e-45fd-8347-d778e820320c</string>
+	<string>92db5343-b5b9-4278-99ef-ae96b5d1430e</string>
 </dict>
 </plist>

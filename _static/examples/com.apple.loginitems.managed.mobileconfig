@@ -8,9 +8,16 @@
 			<key>AutoLaunchedApplicationDictionary-managed</key>
 			<array>
 				<dict>
-					<key>AutoLaunchedApplicationItem</key>
-					<dict>
-					</dict>
+					<key>AuthenticateAsLoginUserShortName</key>
+					<false/>
+					<key>Hide</key>
+					<false/>
+					<key>MCX-NetworkHomeDirectoryItem</key>
+					<false/>
+					<key>Path</key>
+					<string></string>
+					<key>URL</key>
+					<string></string>
 				</dict>
 			</array>
 			<key>DisableLoginItemsSuppression</key>
@@ -42,6 +49,6 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>091743be-0347-466a-aadf-457127164aa3</string>
+	<string>b480f936-7fe5-4238-9976-2f131719a63b</string>
 </dict>
 </plist>

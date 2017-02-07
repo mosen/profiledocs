@@ -29,6 +29,12 @@
 			<false/>
 			<key>siteWhitelist</key>
 			<array>
+				<dict>
+					<key>address</key>
+					<string></string>
+					<key>pageTitle</key>
+					<string></string>
+				</dict>
 			</array>
 			<key>useContentFilter</key>
 			<false/>
@@ -47,6 +53,6 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>410025d5-6aeb-43d9-9263-cf435ba4c192</string>
+	<string>520b3814-d9f4-4456-9641-8c0b350a70ce</string>
 </dict>
 </plist>

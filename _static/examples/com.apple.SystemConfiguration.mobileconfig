@@ -21,6 +21,28 @@
 			<integer>1</integer>
 			<key>Proxies</key>
 			<dict>
+				<key>ExceptionsList</key>
+				<array>
+					<string></string>
+				</array>
+				<key>FTPEnable</key>
+				<integer>0</integer>
+				<key>GopherEnable</key>
+				<integer>0</integer>
+				<key>HTTPEnable</key>
+				<integer>0</integer>
+				<key>HTTPPort</key>
+				<integer>80</integer>
+				<key>HTTPProxy</key>
+				<string></string>
+				<key>HTTPSEnable</key>
+				<integer>0</integer>
+				<key>ProxyAutoConfigEnable</key>
+				<integer>0</integer>
+				<key>RTSPEnable</key>
+				<integer>0</integer>
+				<key>SOCKSEnable</key>
+				<integer>0</integer>
 			</dict>
 		</dict>
 	</array>
@@ -35,6 +57,6 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>78a91770-b7fa-4f90-b536-181013e5ccc8</string>
+	<string>c9cdf1c4-f897-4f73-9d86-325bcfc73aa8</string>
 </dict>
 </plist>

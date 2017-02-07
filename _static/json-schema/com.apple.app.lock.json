@@ -1,0 +1,166 @@
+{
+    "$schema": "http://json-schema.org/schema#", 
+    "type": "object", 
+    "properties": {
+        "PayloadUUID": {
+            "default": "", 
+            "pattern": "^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$", 
+            "type": "string", 
+            "description": "Unique identifier for the payload (format 01234567-89AB-CDEF-0123-456789ABCDEF)"
+        }, 
+        "PayloadDescription": {
+            "default": "App Lock", 
+            "type": "string", 
+            "description": "Description of the payload"
+        }, 
+        "App": {
+            "default": {
+                "UserEnabledOptions": {
+                    "AssistiveTouch": false, 
+                    "VoiceOver": false, 
+                    "InvertColors": false, 
+                    "Zoom": false
+                }, 
+                "Options": {
+                    "DisableDeviceRotation": false, 
+                    "DisableAutoLock": false, 
+                    "EnableVoiceOver": false, 
+                    "EnableMonoAudio": false, 
+                    "EnableAssistiveTouch": false, 
+                    "DisableRingerSwitch": false, 
+                    "EnableSpeakSelection": false, 
+                    "DisableSleepWakeButton": false, 
+                    "DisableVolumeButtons": false, 
+                    "EnableZoom": false, 
+                    "DisableTouch": false, 
+                    "EnableInvertColors": false
+                }
+            }, 
+            "type": "object", 
+            "description": "Dictionary containing the app identifier", 
+            "properties": {
+                "UserEnabledOptions": {
+                    "type": "object", 
+                    "description": "App Lock User Enabled Options Dictionary", 
+                    "properties": {
+                        "AssistiveTouch": {
+                            "default": false, 
+                            "type": "boolean", 
+                            "description": "Allow user to enable Assistive Touch"
+                        }, 
+                        "VoiceOver": {
+                            "default": false, 
+                            "type": "boolean", 
+                            "description": "Allow user to enable Voice Over"
+                        }, 
+                        "InvertColors": {
+                            "default": false, 
+                            "type": "boolean", 
+                            "description": "Allow user to enable Inverted Colors"
+                        }, 
+                        "Zoom": {
+                            "default": false, 
+                            "type": "boolean", 
+                            "description": "Allow user to enable Zoom"
+                        }
+                    }
+                }, 
+                "Identifier": {
+                    "type": "string", 
+                    "description": "App identifier"
+                }, 
+                "Options": {
+                    "type": "object", 
+                    "description": "App Lock Options Dictionary", 
+                    "properties": {
+                        "DisableDeviceRotation": {
+                            "default": false, 
+                            "type": "boolean", 
+                            "description": "Disable Device Rotation"
+                        }, 
+                        "DisableAutoLock": {
+                            "default": false, 
+                            "type": "boolean", 
+                            "description": "Disable Auto Lock"
+                        }, 
+                        "EnableVoiceOver": {
+                            "default": false, 
+                            "type": "boolean", 
+                            "description": "Enable Voice Over"
+                        }, 
+                        "EnableMonoAudio": {
+                            "default": false, 
+                            "type": "boolean", 
+                            "description": "Enable Mono Audio"
+                        }, 
+                        "EnableAssistiveTouch": {
+                            "default": false, 
+                            "type": "boolean", 
+                            "description": "Enable Assistive Touch"
+                        }, 
+                        "DisableRingerSwitch": {
+                            "default": false, 
+                            "type": "boolean", 
+                            "description": "Disable Ringer Switch"
+                        }, 
+                        "EnableSpeakSelection": {
+                            "default": false, 
+                            "type": "boolean", 
+                            "description": "Enable Speak Selection"
+                        }, 
+                        "DisableSleepWakeButton": {
+                            "default": false, 
+                            "type": "boolean", 
+                            "description": "Disable Sleep Wake Button"
+                        }, 
+                        "DisableVolumeButtons": {
+                            "default": false, 
+                            "type": "boolean", 
+                            "description": "Disable Volume Buttons"
+                        }, 
+                        "EnableZoom": {
+                            "default": false, 
+                            "type": "boolean", 
+                            "description": "Enable Zoom"
+                        }, 
+                        "DisableTouch": {
+                            "default": false, 
+                            "type": "boolean", 
+                            "description": "Disable Touch Screen"
+                        }, 
+                        "EnableInvertColors": {
+                            "default": false, 
+                            "type": "boolean", 
+                            "description": "Enable Inverted Colors"
+                        }
+                    }
+                }
+            }
+        }, 
+        "PayloadOrganization": {
+            "type": "string", 
+            "description": "This value describes the issuing organization of the profile, as displayed to the user"
+        }, 
+        "PayloadIdentifier": {
+            "default": "com.apple.app.lock", 
+            "type": "string", 
+            "description": "A unique identifier for the payload, dot-delimited.  Usually root PayloadIdentifier+subidentifier"
+        }, 
+        "PayloadDisplayName": {
+            "default": "App Lock", 
+            "type": "string", 
+            "description": "Name of the payload"
+        }, 
+        "PayloadType": {
+            "default": "com.apple.app.lock", 
+            "type": "string", 
+            "description": "The type of the payload, a reverse dns string"
+        }, 
+        "PayloadVersion": {
+            "default": 1, 
+            "type": "number", 
+            "description": "The version of the whole configuration profile."
+        }
+    }, 
+    "title": "com.apple.app.lock"
+}

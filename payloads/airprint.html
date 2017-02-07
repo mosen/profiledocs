@@ -118,7 +118,7 @@
 <li class="toctree-l2"><a class="reference internal" href="conference.html">Conference Room Display</a></li>
 <li class="toctree-l2"><a class="reference internal" href="coremediaio.html">Core Media IO (Camera)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="custom.html">Custom Settings (MCX)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dashwidgets.html">Dashboard Widgets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dashwidgets.html">Parental Control Dashboard Payload</a></li>
 <li class="toctree-l2"><a class="reference internal" href="desktop.html">Desktop Picture</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dictionary.html">Dictionary (Parental Controls)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="discrecording.html">Disc Recording</a></li>
@@ -135,7 +135,7 @@
 <li class="toctree-l2"><a class="reference internal" href="fv2.html">FileVault 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fv2redirect.html">FileVault Recovery Key Redirect</a></li>
 <li class="toctree-l2"><a class="reference internal" href="font.html">Font</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gamecenter.html">Game Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gamecenter.html">Parental Control - Game Center</a></li>
 <li class="toctree-l2"><a class="reference internal" href="globalproxy.html">Global HTTP Proxy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="google.html">Google Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="homescreen.html">Home Screen Layout</a></li>
@@ -244,6 +244,7 @@
             
   <div class="section" id="airprint">
 <span id="payloadtype-com-apple-airprint"></span><h1>AirPrint<a class="headerlink" href="#airprint" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference download internal" href="../_downloads/com.apple.airprint.mobileconfig" download=""><code class="xref download docutils literal"><span class="pre">Template</span></code></a></p>
 <p>The AirPrint payload adds AirPrint printers to the user’s AirPrint printer list. This makes it easier to support environments where the printers and the devices are on different subnets.</p>
 <div class="section" id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
@@ -289,7 +290,7 @@
 <tr class="row-even"><td>AirPrint</td>
 <td>array</td>
 <td>Air print</td>
-<td>List of printers</td>
+<td>An array of AirPrint printers that should always be shown.</td>
 <td>n/a</td>
 </tr>
 </tbody>
@@ -300,7 +301,7 @@
 <div class="section" id="com.apple.airprint-AirPrint-auto">
 <h3>AirPrint<a class="headerlink" href="#com.apple.airprint-AirPrint-auto" title="Permalink to this headline">¶</a></h3>
 <p>Air print</p>
-<p>List of printers</p>
+<p>An array of AirPrint printers that should always be shown.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="14%" />
@@ -333,6 +334,38 @@
 </tbody>
 </table>
 </div>
+<p>AirPrint items are in the following format:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="43%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Title</th>
+<th class="head">Description</th>
+<th class="head">Required</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>IPAddress</td>
+<td>string</td>
+<td>IP Address</td>
+<td>The IP Address of the AirPrint destination.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>ResourcePath</td>
+<td>string</td>
+<td>Resource Path</td>
+<td>The Resource Path associated with the printer. This corresponds to the rp parameter of the _ipps.tcp Bonjour record. For example: printers/Canon_MG5300_series</td>
+<td>n/a</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="section" id="links">
 <h2>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>

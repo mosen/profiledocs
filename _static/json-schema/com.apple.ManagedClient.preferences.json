@@ -1,0 +1,87 @@
+{
+    "$schema": "http://json-schema.org/schema#", 
+    "type": "object", 
+    "properties": {
+        "PayloadUUID": {
+            "default": "", 
+            "pattern": "^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$", 
+            "type": "string", 
+            "description": "Unique identifier for the payload (format 01234567-89AB-CDEF-0123-456789ABCDEF)"
+        }, 
+        "PayloadDescription": {
+            "default": "FileVault 2", 
+            "type": "string", 
+            "description": "Description of the payload"
+        }, 
+        "PayloadContent": {
+            "type": "dict", 
+            "description": "An array of PayloadContent describing individual preferences", 
+            "properties": {
+                "PreferenceDomainHere": {
+                    "type": "dict", 
+                    "description": "The preference domain that will be modified by this setting.", 
+                    "properties": {
+                        "Forced": {
+                            "items": {
+                                "type": "dict", 
+                                "description": "A dictionary that describes settings that are forced", 
+                                "properties": {
+                                    "mcx_preference_settings": {
+                                        "type": "dict", 
+                                        "description": "A dict containing preferences that will be enforced"
+                                    }
+                                }
+                            }, 
+                            "type": "array", 
+                            "description": "Forced, which corresponds to the old MCX 'Always' setting. The setting is always managed"
+                        }, 
+                        "Set-Once": {
+                            "items": {
+                                "type": "dict", 
+                                "description": "A dictionary that describes settings that are set once", 
+                                "properties": {
+                                    "mcx_data_timestamp": {
+                                        "type": "string", 
+                                        "description": "A timestamp that is used to determine whether the setting has been applied once", 
+                                        "format": "date-time"
+                                    }, 
+                                    "mcx_preference_settings": {
+                                        "type": "dict", 
+                                        "description": "A dict containing preferences that will be enforced"
+                                    }
+                                }
+                            }, 
+                            "type": "array", 
+                            "description": "Set Once, which corresponds to the old MCX 'Often' or 'Once' setting. The setting is once or sometimes managed. 'Often' has been deprecated."
+                        }
+                    }
+                }
+            }
+        }, 
+        "PayloadOrganization": {
+            "type": "string", 
+            "description": "This value describes the issuing organization of the profile, as displayed to the user"
+        }, 
+        "PayloadIdentifier": {
+            "default": "com.apple.MCX.FileVault2", 
+            "type": "string", 
+            "description": "A unique identifier for the payload, dot-delimited.  Usually root PayloadIdentifier+subidentifier"
+        }, 
+        "PayloadDisplayName": {
+            "default": "FileVault 2", 
+            "type": "string", 
+            "description": "Name of the payload"
+        }, 
+        "PayloadType": {
+            "default": "com.apple.MCX.FileVault2", 
+            "type": "string", 
+            "description": "The type of the payload, a reverse dns string"
+        }, 
+        "PayloadVersion": {
+            "default": 1, 
+            "type": "number", 
+            "description": "The version of the whole configuration profile."
+        }
+    }, 
+    "title": "com.apple.ManagedClient.preferences"
+}

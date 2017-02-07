@@ -1,5 +1,8 @@
+.. _payloadtype-com.apple.font:
+
 Font
 ====
+:download:`Template <../_static/examples/com.apple.font.mobileconfig>`
 
 A Font payload lets you add an additional font to an iOS device.
 
@@ -13,14 +16,14 @@ Collection formats (.ttc or .otc) are not supported.
 Summary
 -------
 
-.. pfmheader:: manifests/ac2/com.apple.font manifest.plist
-.. pfm:: manifests/ac2/com.apple.font manifest.plist
+.. pfmheader:: /_static/manifests/com.apple.font manifest.plist
+.. pfm:: /_static/manifests/com.apple.font manifest.plist
 
 Keys
 ----
 
-.. pfmkey:: Name manifests/ac2/com.apple.font manifest.plist
-.. pfmkey:: Font manifests/ac2/com.apple.font manifest.plist
+.. pfmkey:: Name /_static/manifests/com.apple.font manifest.plist
+.. pfmkey:: Font /_static/manifests/com.apple.font manifest.plist
 
 Links
 -----

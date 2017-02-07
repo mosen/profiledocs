@@ -1,0 +1,58 @@
+{
+    "$schema": "http://json-schema.org/schema#", 
+    "type": "object", 
+    "properties": {
+        "PayloadUUID": {
+            "default": "", 
+            "pattern": "^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$", 
+            "type": "string", 
+            "description": "Unique identifier for the payload (format 01234567-89AB-CDEF-0123-456789ABCDEF)"
+        }, 
+        "PayloadDescription": {
+            "default": "GameKit Payload", 
+            "type": "string", 
+            "description": "Description of the payload"
+        }, 
+        "GKFeatureMultiplayerGamingAllowed": {
+            "type": "boolean", 
+            "description": "Optional. Set to false to disable multiplayer gaming."
+        }, 
+        "GKFeatureGameCenterAllowed": {
+            "type": "boolean", 
+            "description": "Optional. Set to false to disable Game Center."
+        }, 
+        "GKFeatureAddingGameCenterFriendsAllowed": {
+            "type": "boolean", 
+            "description": "Optional. Set to false to disable adding Game Center friends."
+        }, 
+        "PayloadOrganization": {
+            "type": "string", 
+            "description": "This value describes the issuing organization of the profile, as displayed to the user"
+        }, 
+        "PayloadIdentifier": {
+            "default": "com.apple.gamed", 
+            "type": "string", 
+            "description": "A unique identifier for the payload, dot-delimited.  Usually root PayloadIdentifier+subidentifier"
+        }, 
+        "PayloadDisplayName": {
+            "default": "GameKit Payload", 
+            "type": "string", 
+            "description": "Name of the payload"
+        }, 
+        "GKFeatureAccountModificationAllowed": {
+            "type": "boolean", 
+            "description": "Optional. Set to false to disable account modifications."
+        }, 
+        "PayloadType": {
+            "default": "com.apple.gamed", 
+            "type": "string", 
+            "description": "The type of the payload, a reverse dns string"
+        }, 
+        "PayloadVersion": {
+            "default": 1, 
+            "type": "number", 
+            "description": "The version of the whole configuration profile."
+        }
+    }, 
+    "title": "com.apple.gamed"
+}

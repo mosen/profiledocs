@@ -2,6 +2,7 @@
 
 CalDAV
 ======
+:download:`Template <../_static/examples/com.apple.caldav.account.mobileconfig>`
 
 This payload configures a CalDAV account.
 
@@ -9,7 +10,6 @@ Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.caldav.account manifest.plist
-
 .. pfm:: /_static/manifests/com.apple.caldav.account manifest.plist
 
 Keys
