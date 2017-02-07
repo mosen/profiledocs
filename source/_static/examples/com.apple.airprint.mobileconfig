@@ -8,6 +8,10 @@
 			<key>AirPrint</key>
 			<array>
 				<dict>
+					<key>IPAddress</key>
+					<string></string>
+					<key>ResourcePath</key>
+					<string></string>
 				</dict>
 			</array>
 			<key>PayloadDescription</key>
@@ -37,6 +41,6 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>fbbf8188-8a69-45ea-857e-45bcc67bd872</string>
+	<string>f5a554be-149f-4596-8904-2ca6e97d59b5</string>
 </dict>
 </plist>

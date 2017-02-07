@@ -3,19 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>pfm_description</key>
-	<string>Use this section to define settings for AirPrint.</string>
+	<string>Use this section to define settings for configuration access to CardDAV servers.</string>
 	<key>pfm_title</key>
-	<string>AirPrint</string>
+	<string>CardDAV</string>
 	<key>pfm_format_version</key>
 	<integer>1</integer>
 	<key>pfm_version</key>
 	<integer>1</integer>
 	<key>pfm_domain</key>
-	<string>com.apple.airprint</string>
-	<key>pfm_ios_min</key>
-	<string>7.0</string>
-	<key>pfm_macos_min</key>
-	<string>10.10</string>
+	<string>com.apple.carddav.account</string>
 	<key>pfm_subkeys</key>
 	<array>
 		<dict>
@@ -28,7 +24,7 @@
 			<key>pfm_type</key>
 			<string>string</string>
 			<key>pfm_default</key>
-			<string>Configures AirPrint settings</string>
+			<string>Configures a CardDAV account</string>
 		</dict>
 		<dict>
 			<key>pfm_name</key>
@@ -40,7 +36,7 @@
 			<key>pfm_type</key>
 			<string>string</string>
 			<key>pfm_default</key>
-			<string>AirPrint</string>
+			<string>CardDAV</string>
 			<key>pfm_require</key>
 			<string>always</string>
 		</dict>
@@ -54,7 +50,7 @@
 			<key>pfm_type</key>
 			<string>string</string>
 			<key>pfm_default</key>
-			<string>com.apple.airprint</string>
+			<string>com.apple.carddav.account</string>
 			<key>pfm_require</key>
 			<string>always</string>
 		</dict>
@@ -68,7 +64,7 @@
 			<key>pfm_type</key>
 			<string>string</string>
 			<key>pfm_default</key>
-			<string>com.apple.airprint</string>
+			<string>com.apple.carddav.account</string>
 			<key>pfm_require</key>
 			<string>always</string>
 		</dict>
@@ -114,47 +110,125 @@
 		</dict>
 		<dict>
 			<key>pfm_name</key>
-			<string>AirPrint</string>
+			<string>CardDAVAccountDescription</string>
 			<key>pfm_title</key>
-			<string>Air print</string>
+			<string>Account Description</string>
 			<key>pfm_description</key>
-			<string>An array of AirPrint printers that should always be shown.</string>
+			<string>The display name of the account (e.g. &quot;Company CardDAV Account&quot;)</string>
 			<key>pfm_type</key>
-			<string>array</string>
+			<string>string</string>
+			<key>pfm_default</key>
+			<string>My CardDAV Account</string>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>CardDAVPort</string>
+			<key>pfm_title</key>
+			<string>Port Number</string>
+			<key>pfm_description</key>
+			<string>The port number to connect to the CardDAV server</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_default</key>
+			<integer>443</integer>
+			<key>pfm_range_min</key>
+			<integer>0</integer>
+			<key>pfm_range_max</key>
+			<integer>65535</integer>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>CardDAVHostName</string>
+			<key>pfm_title</key>
+			<string>Account Hostname</string>
+			<key>pfm_description</key>
+			<string>The CardDAV server hostname or IP address</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_require</key>
+			<string>always</string>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>CardDAVUseSSL</string>
+			<key>pfm_title</key>
+			<string>Use SSL</string>
+			<key>pfm_description</key>
+			<string>Enable Secure Socket Layer communication with CardDAV server</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_require</key>
+			<string>always</string>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>CardDAVPrincipalURL</string>
+			<key>pfm_title</key>
+			<string>Principal URL</string>
+			<key>pfm_description</key>
+			<string>The Principal URL for the CardDAV account</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>CardDAVUsername</string>
+			<key>pfm_title</key>
+			<string>Account Username</string>
+			<key>pfm_description</key>
+			<string>The CardDAV username</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_require</key>
+			<string>push</string>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>CardDAVPassword</string>
+			<key>pfm_title</key>
+			<string>Account Password</string>
+			<key>pfm_description</key>
+			<string>The CardDAV password</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>CommunicationServiceRules</string>
+			<key>pfm_title</key>
+			<string>Communication Service Rules</string>
+			<key>pfm_description</key>
+			<string></string>
+			<key>pfm_type</key>
+			<string>dictionary</string>
 			<key>pfm_subkeys</key>
 			<array>
 				<dict>
-					<key>pfm_title</key>
-					<string>AirPrint Printer</string>
 					<key>pfm_name</key>
-					<string>Identifier</string>
+					<string>DefaultServiceHandlers</string>
+					<key>pfm_title</key>
+					<string>Default Service Handlers</string>
 					<key>pfm_description</key>
-					<string>AirPrint Printer</string>
+					<string></string>
 					<key>pfm_type</key>
 					<string>dictionary</string>
 					<key>pfm_subkeys</key>
 					<array>
 						<dict>
 							<key>pfm_name</key>
-							<string>IPAddress</string>
+							<string>AudioCall</string>
 							<key>pfm_title</key>
-							<string>IP Address</string>
+							<string>App for audio calls</string>
 							<key>pfm_description</key>
-							<string>The IP Address of the AirPrint destination.</string>
-							<key>pfm_type</key>
-							<string>string</string>
-						</dict>
-						<dict>
-							<key>pfm_name</key>
-							<string>ResourcePath</string>
-							<key>pfm_title</key>
-							<string>Resource Path</string>
-							<key>pfm_description</key>
-							<string>The Resource Path associated with the printer. This corresponds to the rp parameter of the _ipps.tcp Bonjour record. For example: printers/Canon_MG5300_series</string>
+							<string></string>
 							<key>pfm_type</key>
 							<string>string</string>
 						</dict>
 					</array>
+					<key>pfm_required</key>
+					<true/>
 				</dict>
 			</array>
 		</dict>

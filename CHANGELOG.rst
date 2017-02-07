@@ -27,4 +27,11 @@ official documentation.
 - Add troubleshooting - logging
 - Add troubleshooting - mdmclient command reference.
 
+2017-02-07
+----------
+
+- Regenerate templates so that array item examples are shown correctly.
+- Add more template download links to payloads from A-I (Identification Payload).
+- Fix format of AirPrint printer items (was missing dictionary keys)
+
 

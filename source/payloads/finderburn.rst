@@ -3,6 +3,8 @@
 Finder (Disc Burning)
 =====================
 
+Finder Disc Burning Restrictions.
+
 Summary
 -------
 

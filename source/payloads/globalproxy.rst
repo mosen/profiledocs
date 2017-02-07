@@ -2,6 +2,7 @@
 
 Global HTTP Proxy
 =================
+:download:`Template <../_static/examples/com.apple.proxy.http.global.mobileconfig>`
 
 This payload allows you to specify global HTTP proxy settings.
 

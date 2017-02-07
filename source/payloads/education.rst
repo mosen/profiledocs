@@ -1,5 +1,8 @@
+.. _payloadtype-com.apple.education:
+
 Education Payload
 =================
+:download:`Template <../_static/examples/com.apple.education.mobileconfig>`
 
 The Education Configuration Payload defines the users, groups, and departments within an educational organization.
 
