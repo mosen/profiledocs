@@ -7,6 +7,46 @@
 		<dict>
 			<key>App</key>
 			<dict>
+				<key>Identifier</key>
+				<string></string>
+				<key>Options</key>
+				<dict>
+					<key>DisableAutoLock</key>
+					<false/>
+					<key>DisableDeviceRotation</key>
+					<false/>
+					<key>DisableRingerSwitch</key>
+					<false/>
+					<key>DisableSleepWakeButton</key>
+					<false/>
+					<key>DisableTouch</key>
+					<false/>
+					<key>DisableVolumeButtons</key>
+					<false/>
+					<key>EnableAssistiveTouch</key>
+					<false/>
+					<key>EnableInvertColors</key>
+					<false/>
+					<key>EnableMonoAudio</key>
+					<false/>
+					<key>EnableSpeakSelection</key>
+					<false/>
+					<key>EnableVoiceOver</key>
+					<false/>
+					<key>EnableZoom</key>
+					<false/>
+				</dict>
+				<key>UserEnabledOptions</key>
+				<dict>
+					<key>AssistiveTouch</key>
+					<false/>
+					<key>InvertColors</key>
+					<false/>
+					<key>VoiceOver</key>
+					<false/>
+					<key>Zoom</key>
+					<false/>
+				</dict>
 			</dict>
 			<key>PayloadDescription</key>
 			<string>App Lock</string>
@@ -35,6 +75,6 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>35150063-b42b-4e36-9cf7-1ab8775a4715</string>
+	<string>6431ac34-70a9-4f0c-b21f-b8d99db9fcca</string>
 </dict>
 </plist>

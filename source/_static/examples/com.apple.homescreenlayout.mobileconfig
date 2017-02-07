@@ -8,17 +8,29 @@
 			<key>Dock</key>
 			<array>
 				<dict>
-					<key>DockItem</key>
-					<dict>
-					</dict>
+					<key>BundleID</key>
+					<string></string>
+					<key>DisplayName</key>
+					<string></string>
+					<key>Pages</key>
+					<array>
+					</array>
+					<key>Type</key>
+					<string>Application</string>
 				</dict>
 			</array>
 			<key>Pages</key>
 			<array>
 				<dict>
-					<key>DockItem</key>
-					<dict>
-					</dict>
+					<key>BundleID</key>
+					<string></string>
+					<key>DisplayName</key>
+					<string></string>
+					<key>Pages</key>
+					<array>
+					</array>
+					<key>Type</key>
+					<string>Application</string>
 				</dict>
 			</array>
 			<key>PayloadDescription</key>
@@ -48,6 +60,6 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>9d56103a-7a7b-4a2e-8a6b-397c48e67b69</string>
+	<string>10c85a46-4222-47eb-a309-b6a0b627f6a7</string>
 </dict>
 </plist>

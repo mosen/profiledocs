@@ -23,24 +23,19 @@
 			<false/>
 			<key>pathBlackList</key>
 			<array>
-				<dict>
-					<key>pathBlackListItem</key>
-					<string></string>
-				</dict>
+				<string></string>
 			</array>
 			<key>pathWhiteList</key>
 			<array>
-				<dict>
-					<key>pathWhiteListItem</key>
-					<string></string>
-				</dict>
+				<string></string>
 			</array>
 			<key>whiteList</key>
 			<array>
 				<dict>
-					<key>whiteListItem</key>
-					<dict>
-					</dict>
+					<key>bundleID</key>
+					<string></string>
+					<key>displayName</key>
+					<string></string>
 				</dict>
 			</array>
 		</dict>
@@ -56,6 +51,6 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>67758688-1f2d-4e37-b7ee-589152f06245</string>
+	<string>4bd6c6dc-e9f5-4add-967f-fdba3ba55149</string>
 </dict>
 </plist>

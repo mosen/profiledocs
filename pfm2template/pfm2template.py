@@ -4,7 +4,22 @@
 import plistlib
 import uuid
 import os.path
+import logging
 from optparse import OptionParser
+
+logger = logging.getLogger(__name__)
+
+def generate_payload(data, result):
+    """Generate top-level payload keys"""
+    result['PayloadType'] = 'Configuration'
+    result['PayloadOrganization'] = 'Example Organization'
+    result['PayloadUUID'] = str(uuid.uuid4())
+    result['PayloadIdentifier'] = '{}.example'.format(data.get('pfm_domain', 'domain.undefined'))
+    result['PayloadDisplayName'] = 'Example: {}'.format(data.get('pfm_title'), 'No Title')
+    result['PayloadDescription'] = 'Example: {}'.format(data.get('pfm_description'), 'No Description')
+    result['PayloadContent'] = [{}]
+    generate(data['pfm_subkeys'], result['PayloadContent'][0])
+
 
 def generate_dict(data, result):
     if 'pfm_version' in data:  # Probably a top level dict
@@ -64,22 +79,52 @@ def generate_list(data, result):
                     item.get('pfm_range_list'),
                 )
 
+def generate_pfm_item(data, result):
+    """Generate a plist key/value pair from a pfm item i.e an item in the schema that has at least a pfm_name."""
+    logger.debug("generating kv pair for property: {}".format(data['pfm_name']))
+
+    if data['pfm_name'] in result:
+        raise Exception('Already in properties dict: {}'.format(data['pfm_name']))
+
+    if 'pfm_subkeys' in data:
+        if data.get('pfm_type', None) == 'array':
+
+            # Have to discard the pfm_name in the items sub schema
+
+            item = {}
+            generate(data['pfm_subkeys'][0], item)
+            name, value = item.items()[0]
+
+            result[data['pfm_name']] = [value]
+        else:
+            result[data['pfm_name']] = {}
+            generate(data['pfm_subkeys'], result[data['pfm_name']])
+    else:
+        result[data['pfm_name']] = pfm_value(
+            data['pfm_type'], data.get('pfm_default', None), data.get('pfm_range_list', None))
+
 
 def generate(data, result):
-    """Generate a data structure based upon the given manifest fragment"""
+    """Generate a JSON Schema object as a dict from a parsed plist manifest given as a dict"""
+    logger.debug("generate()")
+
     if isinstance(data, dict):
-        generate_dict(data, result)
-    if isinstance(data, list):
-        generate_list(data, result)
+        if 'pfm_name' in data:
+            logging.debug("generate pfm dict: {}".format(data['pfm_name']))
+            return generate_pfm_item(data, result)
+        elif 'pfm_version' in data:  # probably top level dict
+            logging.debug("generate pfm header")
+            generate_payload(data, result)
+        else:
+            logger.debug("generate non pfm dict")
+    elif isinstance(data, list):
+        logger.debug("generating list")
+        for item in data:
+            generate(item, result)
+    else:
+        logger.debug("unhandled type")
 
-
-
-def generateProfile(path):
-    """Generate an empty plist based upon the path given to a manifest."""
-    plist = plistlib.readPlist(path)
-    result = {}
-    generate(plist, result)
-    return result, plist['pfm_domain']
+    return None
 
 
 if __name__ == "__main__":
@@ -90,8 +135,20 @@ if __name__ == "__main__":
 
     (options, args) = parser.parse_args()
 
-    if len(args) == 1 and options.output:
-        result, domain = generateProfile(args[0])
+    ch = logging.StreamHandler()
+    logger.addHandler(ch)
+    logger.setLevel(logging.DEBUG)
+
+    plist = plistlib.readPlist(args[-1])
+    domain = plist['pfm_domain']
+
+    result = {}
+    generate(plist, result)
+
+    if options.output:
         plistlib.writePlist(result, os.path.join(options.output, '{}.mobileconfig'.format(domain)))
     else:
-        print('not enough arguments')
+        from pprint import pprint
+        pprint(result)
+
+

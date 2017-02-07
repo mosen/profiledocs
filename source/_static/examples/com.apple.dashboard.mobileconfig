@@ -2,33 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>PayloadContent</key>
-	<array>
-		<dict>
-			<key>whiteList</key>
-			<array>
-				<dict>
-					<key>ID</key>
-					<string></string>
-					<key>mcx_DisplayName</key>
-					<string></string>
-				</dict>
-			</array>
-			<key>whiteListEnabled</key>
-			<false/>
-		</dict>
-	</array>
-	<key>PayloadDescription</key>
-	<string>Example: Dashboard preferences.</string>
-	<key>PayloadDisplayName</key>
-	<string>Example: Dashboard</string>
-	<key>PayloadIdentifier</key>
-	<string>com.apple.dashboard.example</string>
-	<key>PayloadOrganization</key>
-	<string>Example Organization</string>
-	<key>PayloadType</key>
-	<string>Configuration</string>
-	<key>PayloadUUID</key>
-	<string>8f78e08c-6ffe-4761-adf0-7fe612d4e2e5</string>
+	<key>dashboard</key>
+	<dict>
+		<key>whiteList</key>
+		<array>
+			<string></string>
+		</array>
+		<key>whiteListEnabled</key>
+		<false/>
+	</dict>
 </dict>
 </plist>

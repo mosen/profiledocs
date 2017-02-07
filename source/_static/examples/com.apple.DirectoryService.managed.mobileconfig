@@ -19,10 +19,7 @@
 			<true/>
 			<key>ADDomainAdminGroupList</key>
 			<array>
-				<dict>
-					<key>ADDomainAdminGroupListItem</key>
-					<string></string>
-				</dict>
+				<string></string>
 			</array>
 			<key>ADDomainAdminGroupListFlag</key>
 			<false/>
@@ -64,10 +61,7 @@
 			<false/>
 			<key>ADRestrictDDNS</key>
 			<array>
-				<dict>
-					<key>ADRestrictDDNSItem</key>
-					<string></string>
-				</dict>
+				<string></string>
 			</array>
 			<key>ADRestrictDDNSFlag</key>
 			<false/>
@@ -118,6 +112,6 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>b314e654-646b-4322-a6cb-7754143835e8</string>
+	<string>c80b0eca-99fa-40e2-99a5-c1879db07bdd</string>
 </dict>
 </plist>

@@ -20,16 +20,66 @@
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>logout-eject</key>
-			<string>all-media</string>
+			<dict>
+				<key>cd</key>
+				<string>authenticate</string>
+			</dict>
 			<key>mount-controls</key>
 			<dict>
+				<key>all-media</key>
+				<string></string>
+				<key>bd</key>
+				<string>authenticate</string>
+				<key>blankbd</key>
+				<string>authenticate</string>
+				<key>blankcd</key>
+				<string>authenticate</string>
+				<key>blankdvd</key>
+				<string>authenticate</string>
+				<key>cd</key>
+				<string>authenticate</string>
+				<key>disk-image</key>
+				<string>authenticate</string>
+				<key>dvd</key>
+				<string>authenticate</string>
+				<key>dvdram</key>
+				<string>authenticate</string>
+				<key>harddisk-external</key>
+				<string>authenticate</string>
+				<key>harddisk-internal</key>
+				<string>authenticate</string>
+			</dict>
+			<key>unmount-controls</key>
+			<dict>
+				<key>all-media</key>
+				<string></string>
+				<key>bd</key>
+				<string>authenticate</string>
+				<key>blankbd</key>
+				<string>authenticate</string>
+				<key>blankcd</key>
+				<string>authenticate</string>
+				<key>blankdvd</key>
+				<string>authenticate</string>
+				<key>cd</key>
+				<string>authenticate</string>
+				<key>disk-image</key>
+				<string>authenticate</string>
+				<key>dvd</key>
+				<string>authenticate</string>
+				<key>dvdram</key>
+				<string>authenticate</string>
+				<key>harddisk-external</key>
+				<string>authenticate</string>
+				<key>harddisk-internal</key>
+				<string>authenticate</string>
 			</dict>
 		</dict>
 	</array>
 	<key>PayloadDescription</key>
-	<string>Example: Media Access (SystemUIServer)</string>
+	<string>Example: Allowed Media Payload</string>
 	<key>PayloadDisplayName</key>
-	<string>Example: Media Access</string>
+	<string>Example: Allowed Media Payload</string>
 	<key>PayloadIdentifier</key>
 	<string>com.apple.systemuiserver.example</string>
 	<key>PayloadOrganization</key>
@@ -37,6 +87,6 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>2c02e842-b416-42e7-9ea7-f903c876c36f</string>
+	<string>44032baa-ad53-43b9-b395-97021bec5f69</string>
 </dict>
 </plist>

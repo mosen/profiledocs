@@ -7,6 +7,38 @@
 		<dict>
 			<key>EAPClientConfiguration</key>
 			<dict>
+				<key>AcceptEAPTypes</key>
+				<array>
+					<integer>13</integer>
+				</array>
+				<key>EAPFASTProvisionPAC</key>
+				<false/>
+				<key>EAPFASTProvisionPACAnonymously</key>
+				<false/>
+				<key>EAPFASTUsePAC</key>
+				<false/>
+				<key>EAPSIMNumberOfRANDs</key>
+				<integer>3</integer>
+				<key>OneTimeUserPassword</key>
+				<false/>
+				<key>OuterIdentity</key>
+				<string></string>
+				<key>PayloadCertificateAnchorUUID</key>
+				<array>
+					<string></string>
+				</array>
+				<key>TLSAllowTrustExceptions</key>
+				<false/>
+				<key>TLSTrustedServerNames</key>
+				<array>
+					<string></string>
+				</array>
+				<key>TTLSInnerAuthentication</key>
+				<string>PAP</string>
+				<key>UserName</key>
+				<string></string>
+				<key>UserPassword</key>
+				<string></string>
 			</dict>
 			<key>Password</key>
 			<string></string>
@@ -42,6 +74,14 @@
 			<string></string>
 			<key>QoSMarkingPolicy</key>
 			<dict>
+				<key>QoSMarkingAppleAudioVideoCalls</key>
+				<true/>
+				<key>QoSMarkingEnabled</key>
+				<true/>
+				<key>QoSMarkingWhitelistedAppIdentifiers</key>
+				<array>
+					<string></string>
+				</array>
 			</dict>
 			<key>TLSCertificateRequired</key>
 			<false/>
@@ -58,6 +98,6 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>63337d47-6795-4661-b0c0-1b94b4815e0a</string>
+	<string>a99bf788-2df6-459b-a71b-cad896ec46a8</string>
 </dict>
 </plist>

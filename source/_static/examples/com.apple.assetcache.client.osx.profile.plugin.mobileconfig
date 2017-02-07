@@ -22,9 +22,12 @@
 			<key>PublicIPAddressRanges</key>
 			<array>
 				<dict>
-					<key>PublicIPAddressRangesItem</key>
-					<dict>
-					</dict>
+					<key>first</key>
+					<string></string>
+					<key>last</key>
+					<string></string>
+					<key>type</key>
+					<string>IPv4</string>
 				</dict>
 			</array>
 		</dict>
@@ -40,6 +43,6 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>9ff3837b-a797-4138-9d4a-e826a92333dd</string>
+	<string>e6c32466-cb91-4d5d-aa32-2bab186de73f</string>
 </dict>
 </plist>

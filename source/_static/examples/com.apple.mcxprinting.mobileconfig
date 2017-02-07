@@ -9,6 +9,10 @@
 			<false/>
 			<key>DefaultPrinter</key>
 			<dict>
+				<key>DeviceURI</key>
+				<string></string>
+				<key>DisplayName</key>
+				<string></string>
 			</dict>
 			<key>FooterFontName</key>
 			<string>Courier</string>
@@ -40,6 +44,24 @@
 			<false/>
 			<key>UserPrinterList</key>
 			<dict>
+				<key>QueueName</key>
+				<dict>
+					<key>DeviceURI</key>
+					<string></string>
+					<key>DisplayName</key>
+					<string></string>
+					<key>Location</key>
+					<string></string>
+					<key>Model</key>
+					<string></string>
+					<key>Option</key>
+					<dict>
+					</dict>
+					<key>PPDURL</key>
+					<string></string>
+					<key>PrinterLocked</key>
+					<false/>
+				</dict>
 			</dict>
 		</dict>
 	</array>
@@ -54,6 +76,6 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>32f89aca-3ffc-4144-87ae-c840723f2e9f</string>
+	<string>d36d24a0-c814-457a-bab5-7d35a826ad48</string>
 </dict>
 </plist>

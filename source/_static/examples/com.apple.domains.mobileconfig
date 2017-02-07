@@ -7,10 +7,7 @@
 		<dict>
 			<key>EmailDomains</key>
 			<array>
-				<dict>
-					<key>EmailDomainItem</key>
-					<string></string>
-				</dict>
+				<string></string>
 			</array>
 			<key>PayloadDescription</key>
 			<string>Domains Payload</string>
@@ -28,17 +25,11 @@
 			<integer>1</integer>
 			<key>SafariPasswordAutoFillDomains</key>
 			<array>
-				<dict>
-					<key>SafariPasswordAutoFillDomainItem</key>
-					<string></string>
-				</dict>
+				<string></string>
 			</array>
 			<key>WebDomains</key>
 			<array>
-				<dict>
-					<key>WebDomainItem</key>
-					<string></string>
-				</dict>
+				<string></string>
 			</array>
 		</dict>
 	</array>
@@ -53,6 +44,6 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>64b7c003-0f20-4776-b791-d28d7a397d99</string>
+	<string>1a2f3ff9-341d-42a1-8c55-a078ddbf7cb0</string>
 </dict>
 </plist>

@@ -15,6 +15,38 @@
 			<string></string>
 			<key>EAPClientConfiguration</key>
 			<dict>
+				<key>AcceptEAPTypes</key>
+				<array>
+					<integer>13</integer>
+				</array>
+				<key>EAPFASTProvisionPAC</key>
+				<false/>
+				<key>EAPFASTProvisionPACAnonymously</key>
+				<false/>
+				<key>EAPFASTUsePAC</key>
+				<false/>
+				<key>EAPSIMNumberOfRANDs</key>
+				<integer>3</integer>
+				<key>OneTimeUserPassword</key>
+				<false/>
+				<key>OuterIdentity</key>
+				<string></string>
+				<key>PayloadCertificateAnchorUUID</key>
+				<array>
+					<string></string>
+				</array>
+				<key>TLSAllowTrustExceptions</key>
+				<false/>
+				<key>TLSTrustedServerNames</key>
+				<array>
+					<string></string>
+				</array>
+				<key>TTLSInnerAuthentication</key>
+				<string>PAP</string>
+				<key>UserName</key>
+				<string></string>
+				<key>UserPassword</key>
+				<string></string>
 			</dict>
 			<key>EncryptionType</key>
 			<string>WEP</string>
@@ -24,17 +56,11 @@
 			<false/>
 			<key>MCCAndMNCs</key>
 			<array>
-				<dict>
-					<key>MCCAndMNC</key>
-					<string></string>
-				</dict>
+				<string></string>
 			</array>
 			<key>NAIRealmNames</key>
 			<array>
-				<dict>
-					<key>NAIRealmName</key>
-					<string></string>
-				</dict>
+				<string></string>
 			</array>
 			<key>NONEXISTENT</key>
 			<string></string>
@@ -72,13 +98,18 @@
 			<string></string>
 			<key>QoSMarkingPolicy</key>
 			<dict>
+				<key>QoSMarkingAppleAudioVideoCalls</key>
+				<true/>
+				<key>QoSMarkingEnabled</key>
+				<true/>
+				<key>QoSMarkingWhitelistedAppIdentifiers</key>
+				<array>
+					<string></string>
+				</array>
 			</dict>
 			<key>RoamingConsortiumOIs</key>
 			<array>
-				<dict>
-					<key>RoamingConsortiumOI</key>
-					<string></string>
-				</dict>
+				<string></string>
 			</array>
 			<key>SSID_STR</key>
 			<string></string>
@@ -99,6 +130,6 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>e5e2d89b-dca2-499c-9617-ea7d884c5723</string>
+	<string>166c25a2-2302-4643-96a6-faceb7f9fa09</string>
 </dict>
 </plist>

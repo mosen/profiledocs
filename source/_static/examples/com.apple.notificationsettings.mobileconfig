@@ -8,9 +8,20 @@
 			<key>NotificationSettings</key>
 			<array>
 				<dict>
-					<key>NotificationSetting</key>
-					<dict>
-					</dict>
+					<key>AlertType</key>
+					<integer>1</integer>
+					<key>BadgesEnabled</key>
+					<true/>
+					<key>BundleIdentifier</key>
+					<string></string>
+					<key>NotificationsEnabled</key>
+					<true/>
+					<key>ShowInLockScreen</key>
+					<true/>
+					<key>ShowInNotificationCenter</key>
+					<true/>
+					<key>SoundsEnabled</key>
+					<true/>
 				</dict>
 			</array>
 			<key>PayloadDescription</key>
@@ -40,6 +51,6 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>b5b4c553-ba99-4794-95ca-9eb29142d1ea</string>
+	<string>bdc8d30c-aa8c-436d-90a5-205dafe2bda9</string>
 </dict>
 </plist>

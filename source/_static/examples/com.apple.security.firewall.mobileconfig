@@ -8,9 +8,10 @@
 			<key>Applications</key>
 			<array>
 				<dict>
-					<key>ApplicationItem</key>
-					<dict>
-					</dict>
+					<key>Allowed</key>
+					<false/>
+					<key>BundleID</key>
+					<string></string>
 				</dict>
 			</array>
 			<key>BlockAllIncoming</key>
@@ -46,6 +47,6 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>d477182f-e282-495d-814d-dc164480e4be</string>
+	<string>b58ec8cb-72eb-4dea-858d-cc590198099c</string>
 </dict>
 </plist>

@@ -8,9 +8,10 @@
 			<key>Passwords</key>
 			<array>
 				<dict>
-					<key>PasswordItem</key>
-					<dict>
-					</dict>
+					<key>DeviceName</key>
+					<string></string>
+					<key>Password</key>
+					<string></string>
 				</dict>
 			</array>
 			<key>PayloadDescription</key>
@@ -30,9 +31,8 @@
 			<key>Whitelist</key>
 			<array>
 				<dict>
-					<key>WhitelistItem</key>
-					<dict>
-					</dict>
+					<key>DeviceID</key>
+					<string></string>
 				</dict>
 			</array>
 		</dict>
@@ -48,6 +48,6 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>fd1d3841-ea25-4a98-bffe-763e4ff7df1e</string>
+	<string>690efd24-1173-4327-be21-676e099e0839</string>
 </dict>
 </plist>

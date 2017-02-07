@@ -7,6 +7,46 @@
 		<dict>
 			<key>PayloadContent</key>
 			<dict>
+				<key>CAFingerprint</key>
+				<string>Base64EncodedDataHere==</string>
+				<key>Challenge</key>
+				<string></string>
+				<key>GetCACaps</key>
+				<dict>
+				</dict>
+				<key>KeyType</key>
+				<string>RSA</string>
+				<key>KeyUsage</key>
+				<integer>0</integer>
+				<key>Keysize</key>
+				<integer>1024</integer>
+				<key>Name</key>
+				<string></string>
+				<key>Retries</key>
+				<integer>3</integer>
+				<key>RetryDelay</key>
+				<integer>10</integer>
+				<key>Subject</key>
+				<array>
+					<array>
+						<array>
+							<string></string>
+						</array>
+					</array>
+				</array>
+				<key>SubjectAltName</key>
+				<dict>
+					<key>dNSName</key>
+					<string></string>
+					<key>ntPrincipalName</key>
+					<string></string>
+					<key>rfc822Name</key>
+					<string></string>
+					<key>uniformResourceIdentifier</key>
+					<string></string>
+				</dict>
+				<key>URL</key>
+				<string></string>
 			</dict>
 			<key>PayloadDescription</key>
 			<string>Configures SCEP settings</string>
@@ -35,6 +75,6 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>3eb55ab0-ad1c-40a5-9def-9296ebb45c1a</string>
+	<string>8e8f212b-16b9-4d4f-84ed-52479872e251</string>
 </dict>
 </plist>

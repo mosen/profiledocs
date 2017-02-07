@@ -8,40 +8,56 @@
 			<key>Departments</key>
 			<array>
 				<dict>
-					<key>DepartmentItem</key>
-					<dict>
-					</dict>
+					<key>GroupBeaconIDs</key>
+					<array>
+					</array>
+					<key>Name</key>
+					<string></string>
 				</dict>
 			</array>
 			<key>DeviceGroups</key>
 			<array>
 				<dict>
-					<key>DeviceGroupItem</key>
-					<dict>
-					</dict>
+					<key>Identifier</key>
+					<string></string>
+					<key>Name</key>
+					<string></string>
+					<key>SerialNumbers</key>
+					<array>
+					</array>
 				</dict>
 			</array>
 			<key>Groups</key>
 			<array>
 				<dict>
-					<key>GroupItem</key>
-					<dict>
-					</dict>
+					<key>BeaconID</key>
+					<integer>0</integer>
+					<key>ConfigurationSource</key>
+					<string></string>
+					<key>Description</key>
+					<string></string>
+					<key>DeviceGroupIdentifiers</key>
+					<array>
+					</array>
+					<key>ImageURL</key>
+					<string></string>
+					<key>LeaderIdentifiers</key>
+					<array>
+					</array>
+					<key>MemberIdentifiers</key>
+					<array>
+					</array>
+					<key>Name</key>
+					<string></string>
 				</dict>
 			</array>
 			<key>LeaderPayloadCertificateAnchorUUID</key>
 			<array>
-				<dict>
-					<key>LeaderPayloadCertificateAnchorUUIDItem</key>
-					<string></string>
-				</dict>
+				<string></string>
 			</array>
 			<key>MemberPayloadCertificateAnchorUUID</key>
 			<array>
-				<dict>
-					<key>MemberPayloadCertificateAnchorUUIDItem</key>
-					<string></string>
-				</dict>
+				<string></string>
 			</array>
 			<key>OrganizationName</key>
 			<string></string>
@@ -68,9 +84,22 @@
 			<key>Users</key>
 			<array>
 				<dict>
-					<key>UserItem</key>
-					<dict>
-					</dict>
+					<key>AppleID</key>
+					<string></string>
+					<key>FamilyName</key>
+					<string></string>
+					<key>FullScreenImageURL</key>
+					<string></string>
+					<key>GivenName</key>
+					<string></string>
+					<key>Identifier</key>
+					<string></string>
+					<key>ImageURL</key>
+					<string></string>
+					<key>Name</key>
+					<string></string>
+					<key>PasscodeType</key>
+					<string>complex</string>
 				</dict>
 			</array>
 		</dict>
@@ -86,6 +115,6 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>83dc0977-b2d4-4faa-ad7b-ab36f7f17d9b</string>
+	<string>be41af0a-86d0-476c-8de3-80687d4bfe22</string>
 </dict>
 </plist>

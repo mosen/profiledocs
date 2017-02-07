@@ -25,19 +25,67 @@
 			<false/>
 			<key>com.apple.EnergySaver.desktop.ACPower</key>
 			<dict>
+				<key>Automatic Restart On Power Loss</key>
+				<integer>0</integer>
+				<key>Disk Sleep Timer-boolean</key>
+				<false/>
+				<key>Display Sleep Timer</key>
+				<integer>0</integer>
+				<key>System Sleep Timer</key>
+				<integer>0</integer>
+				<key>Wake On LAN</key>
+				<integer>0</integer>
 			</dict>
 			<key>com.apple.EnergySaver.desktop.ACPower-ProfileNumber</key>
 			<integer>0</integer>
 			<key>com.apple.EnergySaver.desktop.Schedule</key>
 			<dict>
+				<key>RepeatingPowerOff</key>
+				<dict>
+					<key>eventtype</key>
+					<string>wake</string>
+					<key>time</key>
+					<integer>1200</integer>
+					<key>weekdays</key>
+					<integer>31</integer>
+				</dict>
+				<key>RepeatingPowerOn</key>
+				<dict>
+					<key>eventtype</key>
+					<string>wake</string>
+					<key>time</key>
+					<integer>1200</integer>
+					<key>weekdays</key>
+					<integer>31</integer>
+				</dict>
 			</dict>
 			<key>com.apple.EnergySaver.portable.ACPower</key>
 			<dict>
+				<key>Automatic Restart On Power Loss</key>
+				<integer>0</integer>
+				<key>Disk Sleep Timer-boolean</key>
+				<false/>
+				<key>Display Sleep Timer</key>
+				<integer>0</integer>
+				<key>System Sleep Timer</key>
+				<integer>0</integer>
+				<key>Wake On LAN</key>
+				<integer>0</integer>
 			</dict>
 			<key>com.apple.EnergySaver.portable.ACPower-ProfileNumber</key>
 			<integer>0</integer>
 			<key>com.apple.EnergySaver.portable.BatteryPower</key>
 			<dict>
+				<key>Automatic Restart On Power Loss</key>
+				<integer>0</integer>
+				<key>Disk Sleep Timer-boolean</key>
+				<false/>
+				<key>Display Sleep Timer</key>
+				<integer>0</integer>
+				<key>System Sleep Timer</key>
+				<integer>0</integer>
+				<key>Wake On LAN</key>
+				<integer>0</integer>
 			</dict>
 			<key>com.apple.EnergySaver.portable.BatteryPower-ProfileNumber</key>
 			<integer>0</integer>
@@ -54,6 +102,6 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>5f922117-33f9-483f-bada-29b37cbdc913</string>
+	<string>c76a2b1c-0db6-4e94-9b44-6a39d8c7733f</string>
 </dict>
 </plist>

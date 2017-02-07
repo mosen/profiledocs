@@ -8,9 +8,6 @@
 			<key>AirPrint</key>
 			<array>
 				<dict>
-					<key>Identifier</key>
-					<dict>
-					</dict>
 				</dict>
 			</array>
 			<key>PayloadDescription</key>
@@ -40,6 +37,6 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>6d2a1691-c600-42a6-be7e-2cf8e0800e1e</string>
+	<string>fbbf8188-8a69-45ea-857e-45bcc67bd872</string>
 </dict>
 </plist>
