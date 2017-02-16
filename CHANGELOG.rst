@@ -34,4 +34,9 @@ official documentation.
 - Add more template download links to payloads from A-I (Identification Payload).
 - Fix format of AirPrint printer items (was missing dictionary keys)
 
+2017-02-16
+----------
+
+- Expand TimeMachine detail and add example.
+
 
