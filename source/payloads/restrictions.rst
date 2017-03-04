@@ -2,6 +2,7 @@
 
 Restrictions
 ============
+:download:`Template <../_static/examples/com.apple.applicationaccess.mobileconfig>`
 
 A Restrictions payload allows the administrator to restrict the user from doing certain things with the device, such as using the camera.
 
@@ -91,6 +92,8 @@ Keys
 .. pfmkey:: allowNotificationsModification manifests/manual/com.apple.applicationaccess manifest.plist
 .. pfmkey:: blacklistedAppBundleIDs manifests/manual/com.apple.applicationaccess manifest.plist
 .. pfmkey:: whitelistedAppBundleIDs manifests/manual/com.apple.applicationaccess manifest.plist
+.. pfmkey:: allowAutoUnlock manifests/manual/com.apple.applicationaccess manifest.plist
+.. pfmkey:: allowCloudDesktopAndDocuments manifests/manual/com.apple.applicationaccess manifest.plist
 
 Links
 -----

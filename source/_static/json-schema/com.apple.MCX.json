@@ -1,0 +1,200 @@
+{
+    "$schema": "http://json-schema.org/schema#", 
+    "type": "object", 
+    "properties": {
+        "PayloadUUID": {
+            "default": "", 
+            "pattern": "^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$", 
+            "type": "string", 
+            "description": "Unique identifier for the payload (format 01234567-89AB-CDEF-0123-456789ABCDEF)"
+        }, 
+        "PayloadDescription": {
+            "default": "Energy Saver Settings", 
+            "type": "string", 
+            "description": "Description of the payload"
+        }, 
+        "com.apple.EnergySaver.portable.ACPower": {
+            "type": "dict", 
+            "description": "Managed settings for the portable AC power energy profile", 
+            "properties": {
+                "Wake On LAN": {
+                    "type": "number", 
+                    "description": "Wake On LAN, 0 - disabled"
+                }, 
+                "Automatic Restart On Power Loss": {
+                    "type": "number", 
+                    "description": "0 - do not restart on power loss"
+                }, 
+                "System Sleep Timer": {
+                    "type": "number", 
+                    "description": "System Sleep Timer, in minutes. 0 - never sleep"
+                }, 
+                "Disk Sleep Timer-boolean": {
+                    "type": "boolean", 
+                    "description": "Put hard disks to sleep when possible"
+                }, 
+                "Display Sleep Timer": {
+                    "type": "number", 
+                    "description": "Display Sleep Timer, in minutes. 0 - never sleep"
+                }
+            }
+        }, 
+        "com.apple.EnergySaver.portable.BatteryPower": {
+            "type": "dict", 
+            "description": "Managed settings for the portable battery power energy profile", 
+            "properties": {
+                "Wake On LAN": {
+                    "type": "number", 
+                    "description": "Wake On LAN, 0 - disabled"
+                }, 
+                "Automatic Restart On Power Loss": {
+                    "type": "number", 
+                    "description": "0 - do not restart on power loss"
+                }, 
+                "System Sleep Timer": {
+                    "type": "number", 
+                    "description": "System Sleep Timer, in minutes. 0 - never sleep"
+                }, 
+                "Disk Sleep Timer-boolean": {
+                    "type": "boolean", 
+                    "description": "Put hard disks to sleep when possible"
+                }, 
+                "Display Sleep Timer": {
+                    "type": "number", 
+                    "description": "Display Sleep Timer, in minutes. 0 - never sleep"
+                }
+            }
+        }, 
+        "com.apple.EnergySaver.portable.ACPower-ProfileNumber": {
+            "type": "number", 
+            "description": "Energy Saver Profile (-1 for none?)"
+        }, 
+        "SleepDisabled": {
+            "type": "boolean", 
+            "description": "Key needs verification"
+        }, 
+        "PayloadOrganization": {
+            "type": "string", 
+            "description": "This value describes the issuing organization of the profile, as displayed to the user"
+        }, 
+        "DestroyFVKeyOnStandby": {
+            "type": "boolean", 
+            "description": "Destroy FileVault key on standby"
+        }, 
+        "PayloadIdentifier": {
+            "default": "com.apple.MCX", 
+            "type": "string", 
+            "description": "A unique identifier for the payload, dot-delimited.  Usually root PayloadIdentifier+subidentifier"
+        }, 
+        "PayloadDisplayName": {
+            "default": "Energy Saver Settings", 
+            "type": "string", 
+            "description": "Name of the payload"
+        }, 
+        "PayloadType": {
+            "default": "com.apple.MCX", 
+            "type": "string", 
+            "description": "The type of the payload, a reverse dns string"
+        }, 
+        "com.apple.EnergySaver.desktop.ACPower": {
+            "type": "dict", 
+            "description": "Managed settings for the desktop energy profile", 
+            "properties": {
+                "Wake On LAN": {
+                    "type": "number", 
+                    "description": "Wake On LAN, 0 - disabled"
+                }, 
+                "Automatic Restart On Power Loss": {
+                    "type": "number", 
+                    "description": "0 - do not restart on power loss"
+                }, 
+                "System Sleep Timer": {
+                    "type": "number", 
+                    "description": "System Sleep Timer, in minutes. 0 - never sleep"
+                }, 
+                "Disk Sleep Timer-boolean": {
+                    "type": "boolean", 
+                    "description": "Put hard disks to sleep when possible"
+                }, 
+                "Display Sleep Timer": {
+                    "type": "number", 
+                    "description": "Display Sleep Timer, in minutes. 0 - never sleep"
+                }
+            }
+        }, 
+        "PayloadVersion": {
+            "default": 1, 
+            "type": "number", 
+            "description": "The version of the whole configuration profile."
+        }, 
+        "com.apple.EnergySaver.desktop.Schedule": {
+            "type": "dict", 
+            "description": "Use this key to manage scheduled power on and power off events", 
+            "properties": {
+                "RepeatingPowerOn": {
+                    "type": "dict", 
+                    "description": "Use this key to describe a repeating start up/wake time", 
+                    "properties": {
+                        "eventtype": {
+                            "enum": [
+                                "wake", 
+                                "wakepoweron", 
+                                "sleep", 
+                                "shutdown", 
+                                "restart"
+                            ], 
+                            "type": "string", 
+                            "description": "The type of action to take at the scheduled time"
+                        }, 
+                        "weekdays": {
+                            "default": 31, 
+                            "type": "number", 
+                            "description": "The days on which the scheduled event occurs. TODO: needs more format description"
+                        }, 
+                        "time": {
+                            "default": 1200, 
+                            "type": "number", 
+                            "description": "The time of day to perform the action as an int offset added to the scheduled day(s) eg 1200 for 12 hours"
+                        }
+                    }
+                }, 
+                "RepeatingPowerOff": {
+                    "type": "dict", 
+                    "description": "Use this key to describe a repeating shut down, sleep or restart", 
+                    "properties": {
+                        "eventtype": {
+                            "enum": [
+                                "wake", 
+                                "wakepoweron", 
+                                "sleep", 
+                                "shutdown", 
+                                "restart"
+                            ], 
+                            "type": "string", 
+                            "description": "The type of action to take at the scheduled time"
+                        }, 
+                        "weekdays": {
+                            "default": 31, 
+                            "type": "number", 
+                            "description": "The days on which the scheduled event occurs. TODO: needs more format description"
+                        }, 
+                        "time": {
+                            "default": 1200, 
+                            "type": "number", 
+                            "description": "The time of day to perform the action as an int offset added to the scheduled day(s) eg 1200 for 12 hours"
+                        }
+                    }
+                }
+            }
+        }, 
+        "com.apple.EnergySaver.desktop.ACPower-ProfileNumber": {
+            "type": "number", 
+            "description": "Desktop Energy Saver Profile (-1 for none?)"
+        }, 
+        "com.apple.EnergySaver.portable.BatteryPower-ProfileNumber": {
+            "type": "number", 
+            "description": "Energy Saver Profile (-1 for none?)"
+        }
+    }, 
+    "title": "com.apple.MCX"
+}

@@ -1,0 +1,77 @@
+{
+    "$schema": "http://json-schema.org/schema#", 
+    "type": "object", 
+    "properties": {
+        "PayloadUUID": {
+            "default": "", 
+            "pattern": "^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$", 
+            "type": "string", 
+            "description": "Unique identifier for the payload (format 01234567-89AB-CDEF-0123-456789ABCDEF)"
+        }, 
+        "PayloadDescription": {
+            "default": "Login Items", 
+            "type": "string", 
+            "description": "Description of the payload"
+        }, 
+        "DisableLoginItemsSuppression": {
+            "type": "boolean", 
+            "description": "Disable shift to suppress login items"
+        }, 
+        "PayloadOrganization": {
+            "type": "string", 
+            "description": "This value describes the issuing organization of the profile, as displayed to the user"
+        }, 
+        "PayloadIdentifier": {
+            "default": "com.apple.loginitems.managed", 
+            "type": "string", 
+            "description": "A unique identifier for the payload, dot-delimited.  Usually root PayloadIdentifier+subidentifier"
+        }, 
+        "PayloadDisplayName": {
+            "default": "Login Items", 
+            "type": "string", 
+            "description": "Name of the payload"
+        }, 
+        "PayloadType": {
+            "default": "com.apple.loginitems.managed", 
+            "type": "string", 
+            "description": "The type of the payload, a reverse dns string"
+        }, 
+        "AutoLaunchedApplicationDictionary-managed": {
+            "items": {
+                "type": "object", 
+                "description": "Automatically Launched Login Item", 
+                "properties": {
+                    "URL": {
+                        "type": "string", 
+                        "description": "URL to mount in the form scheme://mount.point/Share"
+                    }, 
+                    "Path": {
+                        "type": "string", 
+                        "description": "Path to the application bundle to launch"
+                    }, 
+                    "AuthenticateAsLoginUserShortName": {
+                        "type": "boolean", 
+                        "description": "Authenticate to the URL with the current users short name. Required if URL is specified, but not for Path"
+                    }, 
+                    "Hide": {
+                        "default": false, 
+                        "type": "boolean", 
+                        "description": "Hide application at launch"
+                    }, 
+                    "MCX-NetworkHomeDirectoryItem": {
+                        "type": "boolean", 
+                        "description": "Mount network home"
+                    }
+                }
+            }, 
+            "type": "array", 
+            "description": "Automatically launch these applications at login"
+        }, 
+        "PayloadVersion": {
+            "default": 1, 
+            "type": "number", 
+            "description": "The version of the whole configuration profile."
+        }
+    }, 
+    "title": "com.apple.loginitems.managed"
+}

@@ -1,9 +1,10 @@
 .. _payloadtype-com.apple.dashboard:
 
-Dashboard Widgets
-=================
+Parental Control Dashboard Payload
+==================================
+:download:`Template <../_static/examples/com.apple.dashboard.mobileconfig>`
 
-.. warning:: Keys have been verified but functionality has not
+The Parental Control Dashboard payload is used to define a white list of dashboard widgets.
 
 Summary
 -------

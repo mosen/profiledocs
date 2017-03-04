@@ -41,6 +41,53 @@ OIDs can be represented as dotted numbers, with shortcuts for country (C), local
 .. pfmkey:: PayloadContent:Retries manifests/manual/com.apple.security.scep manifest.plist
 .. pfmkey:: PayloadContent:RetryDelay manifests/manual/com.apple.security.scep manifest.plist
 
+Substitution Variables
+----------------------
+
+The values of these can be obtained by running (in a Terminal window)::
+
+    /usr/libexec/mdmclient dumpSCEPVars
+
+
+``%AD_ComputerID%``
+    computername$
+
+``%AD_ComputerName%``
+    computername
+
+``%AD_Domain%``
+    CONTOSO
+
+``%AD_DomainForestName%``
+    contoso.com
+
+``%AD_DomainGUID%``
+    <GUID value>
+
+``%AD_DomainNameDNS%``
+    contoso.com
+
+``%AD_KerberosID%``
+    computer$@AD.DOMAIN
+
+``%ComputerName%``
+    computer
+
+``%HardwareUUID%``
+    <Hardware unique UUID>
+
+``%HostName%``
+    computer.local
+
+``%LocalHostName%``
+    computername
+
+``%MACAddress%``
+    ethernet mac address
+
+``%SerialNumber%``
+    mac serial number
+
 Links
 -----
 

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>AllowLocalPrinters</key>
+			<false/>
+			<key>DefaultPrinter</key>
+			<dict>
+				<key>DeviceURI</key>
+				<string></string>
+				<key>DisplayName</key>
+				<string></string>
+			</dict>
+			<key>FooterFontName</key>
+			<string>Courier</string>
+			<key>FooterFontSize</key>
+			<string>7</string>
+			<key>PayloadDescription</key>
+			<string>Printer Settings</string>
+			<key>PayloadDisplayName</key>
+			<string>Printer Settings</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.mcxprinting</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>com.apple.mcxprinting</string>
+			<key>PayloadUUID</key>
+			<string></string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>PrintFooter</key>
+			<false/>
+			<key>PrintMACAddress</key>
+			<false/>
+			<key>RequireAdminToAddPrinters</key>
+			<false/>
+			<key>RequireAdminToPrintLocally</key>
+			<false/>
+			<key>ShowOnlyManagedPrinters</key>
+			<false/>
+			<key>UserPrinterList</key>
+			<dict>
+				<key>QueueName</key>
+				<dict>
+					<key>DeviceURI</key>
+					<string></string>
+					<key>DisplayName</key>
+					<string></string>
+					<key>Location</key>
+					<string></string>
+					<key>Model</key>
+					<string></string>
+					<key>Option</key>
+					<dict>
+					</dict>
+					<key>PPDURL</key>
+					<string></string>
+					<key>PrinterLocked</key>
+					<false/>
+				</dict>
+			</dict>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Example: Printer Settings</string>
+	<key>PayloadDisplayName</key>
+	<string>Example: Printers</string>
+	<key>PayloadIdentifier</key>
+	<string>com.apple.mcxprinting.example</string>
+	<key>PayloadOrganization</key>
+	<string>Example Organization</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>3278f316-fc13-493b-91b1-eff82354e8ff</string>
+</dict>
+</plist>

@@ -31,8 +31,8 @@ Domains
 - com.apple.configurationprofile.identification (:ref:`payloadtype-com.apple.configurationprofile.identification`)
 - com.apple.ManagedClient.preferences (:ref:`payloadtype-com.apple.ManagedClient.preferences`)
 - com.apple.Dictionary (:ref:`payloadtype-com.apple.Dictionary`)
-- com.apple.familycontrols.timelimits.v2
-- com.apple.familycontrols.timelimits (:ref:`payloadtype-com.apple.familycontrols.timelimits`)
+- com.apple.familycontrols.timelimits.v2 (:ref:`payloadtype-com.apple.familycontrols.timelimits.v2`)
+- com.apple.familycontrols.timelimits
 - com.apple.familycontrols.contentfilter (:ref:`payloadtype-com.apple.familycontrols.contentfilter`)
 - com.apple.systempreferences (:ref:`payloadtype-com.apple.systempreferences`)
 - com.apple.SubmitDiagInfo (:ref:`payloadtype-com.apple.SubmitDiagInfo`)

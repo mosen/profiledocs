@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>PayloadDescription</key>
+			<string>Media Access (SystemUIServer)</string>
+			<key>PayloadDisplayName</key>
+			<string>Media Access (SystemUIServer)</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.systemuiserver</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>com.apple.systemuiserver</string>
+			<key>PayloadUUID</key>
+			<string></string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>logout-eject</key>
+			<dict>
+				<key>cd</key>
+				<string>authenticate</string>
+			</dict>
+			<key>mount-controls</key>
+			<dict>
+				<key>all-media</key>
+				<string></string>
+				<key>bd</key>
+				<string>authenticate</string>
+				<key>blankbd</key>
+				<string>authenticate</string>
+				<key>blankcd</key>
+				<string>authenticate</string>
+				<key>blankdvd</key>
+				<string>authenticate</string>
+				<key>cd</key>
+				<string>authenticate</string>
+				<key>disk-image</key>
+				<string>authenticate</string>
+				<key>dvd</key>
+				<string>authenticate</string>
+				<key>dvdram</key>
+				<string>authenticate</string>
+				<key>harddisk-external</key>
+				<string>authenticate</string>
+				<key>harddisk-internal</key>
+				<string>authenticate</string>
+			</dict>
+			<key>unmount-controls</key>
+			<dict>
+				<key>all-media</key>
+				<string></string>
+				<key>bd</key>
+				<string>authenticate</string>
+				<key>blankbd</key>
+				<string>authenticate</string>
+				<key>blankcd</key>
+				<string>authenticate</string>
+				<key>blankdvd</key>
+				<string>authenticate</string>
+				<key>cd</key>
+				<string>authenticate</string>
+				<key>disk-image</key>
+				<string>authenticate</string>
+				<key>dvd</key>
+				<string>authenticate</string>
+				<key>dvdram</key>
+				<string>authenticate</string>
+				<key>harddisk-external</key>
+				<string>authenticate</string>
+				<key>harddisk-internal</key>
+				<string>authenticate</string>
+			</dict>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Example: Allowed Media Payload</string>
+	<key>PayloadDisplayName</key>
+	<string>Example: Allowed Media Payload</string>
+	<key>PayloadIdentifier</key>
+	<string>com.apple.systemuiserver.example</string>
+	<key>PayloadOrganization</key>
+	<string>Example Organization</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>24046652-eff6-43cd-8fb4-a6fe0b00c206</string>
+</dict>
+</plist>

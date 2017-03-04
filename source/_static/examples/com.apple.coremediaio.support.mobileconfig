@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>Device Access Allowed</key>
+			<false/>
+			<key>PayloadDescription</key>
+			<string>Setup Assistant Payload</string>
+			<key>PayloadDisplayName</key>
+			<string>Setup Assistant Payload</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.coremediaio.support</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>com.apple.coremediaio.support</string>
+			<key>PayloadUUID</key>
+			<string></string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Example: Core Media IO Payload (Camera)</string>
+	<key>PayloadDisplayName</key>
+	<string>Example: Core Media IO Payload (Camera)</string>
+	<key>PayloadIdentifier</key>
+	<string>com.apple.coremediaio.support.example</string>
+	<key>PayloadOrganization</key>
+	<string>Example Organization</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>4cc73f4f-91ad-4951-a162-ca51c1e90797</string>
+</dict>
+</plist>

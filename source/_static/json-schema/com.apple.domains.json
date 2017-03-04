@@ -1,0 +1,66 @@
+{
+    "$schema": "http://json-schema.org/schema#", 
+    "type": "object", 
+    "properties": {
+        "PayloadUUID": {
+            "default": "", 
+            "pattern": "^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$", 
+            "type": "string", 
+            "description": "Unique identifier for the payload (format 01234567-89AB-CDEF-0123-456789ABCDEF)"
+        }, 
+        "PayloadDescription": {
+            "default": "Domains Payload", 
+            "type": "string", 
+            "description": "Description of the payload"
+        }, 
+        "EmailDomains": {
+            "items": {
+                "type": "string", 
+                "description": "An email address lacking a suffix that matches any of these strings will be considered out-of-domain"
+            }, 
+            "type": "array", 
+            "description": "Any email address that does not have a suffix that matches one of the unmarked email domains specified by the key EmailDomains will be considered out-of-domain and will be highlighted as such in the Mail app."
+        }, 
+        "PayloadOrganization": {
+            "type": "string", 
+            "description": "This value describes the issuing organization of the profile, as displayed to the user"
+        }, 
+        "PayloadIdentifier": {
+            "default": "com.apple.domains", 
+            "type": "string", 
+            "description": "A unique identifier for the payload, dot-delimited.  Usually root PayloadIdentifier+subidentifier"
+        }, 
+        "PayloadDisplayName": {
+            "default": "Domains Payload", 
+            "type": "string", 
+            "description": "Name of the payload"
+        }, 
+        "PayloadType": {
+            "default": "com.apple.domains", 
+            "type": "string", 
+            "description": "The type of the payload, a reverse dns string"
+        }, 
+        "WebDomains": {
+            "items": {
+                "type": "string", 
+                "description": "URLs matching the patterns listed here will be considered managed. Not supported in macOS"
+            }, 
+            "type": "array", 
+            "description": "Opening a document originating from a managed Safari web domain causes iOS to treat the document as managed for the purpose of Managed Open In."
+        }, 
+        "PayloadVersion": {
+            "default": 1, 
+            "type": "number", 
+            "description": "The version of the whole configuration profile."
+        }, 
+        "SafariPasswordAutoFillDomains": {
+            "items": {
+                "type": "string", 
+                "description": "Users can save passwords in Safari only from URLs matching the patterns listed here"
+            }, 
+            "type": "array", 
+            "description": "Users can save passwords in Safari only from URLs matching the patterns listed here."
+        }
+    }, 
+    "title": "com.apple.domains"
+}

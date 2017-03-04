@@ -9,19 +9,19 @@ The calendar subscription payload is not supported in macOS.
 Summary
 -------
 
-.. pfmheader:: manifests/ac2/com.apple.subscribedcalendar.account manifest.plist
+.. pfmheader:: /_static/manifests/com.apple.subscribedcalendar.account manifest.plist
 
-.. pfm:: manifests/ac2/com.apple.subscribedcalendar.account manifest.plist
+.. pfm:: /_static/manifests/com.apple.subscribedcalendar.account manifest.plist
 
 
 Keys
 ----
 
-.. pfmkey:: SubCalAccountDescription manifests/ac2/com.apple.subscribedcalendar.account manifest.plist
-.. pfmkey:: SubCalAccountHostName manifests/ac2/com.apple.subscribedcalendar.account manifest.plist
-.. pfmkey:: SubCalAccountPassword manifests/ac2/com.apple.subscribedcalendar.account manifest.plist
-.. pfmkey:: SubCalAccountUsername manifests/ac2/com.apple.subscribedcalendar.account manifest.plist
-.. pfmkey:: SubCalAccountUseSSL manifests/ac2/com.apple.subscribedcalendar.account manifest.plist
+.. pfmkey:: SubCalAccountDescription /_static/manifests/com.apple.subscribedcalendar.account manifest.plist
+.. pfmkey:: SubCalAccountHostName /_static/manifests/com.apple.subscribedcalendar.account manifest.plist
+.. pfmkey:: SubCalAccountPassword /_static/manifests/com.apple.subscribedcalendar.account manifest.plist
+.. pfmkey:: SubCalAccountUsername /_static/manifests/com.apple.subscribedcalendar.account manifest.plist
+.. pfmkey:: SubCalAccountUseSSL /_static/manifests/com.apple.subscribedcalendar.account manifest.plist
 
 Links
 -----

@@ -1,0 +1,944 @@
+{
+    "$schema": "http://json-schema.org/schema#", 
+    "type": "object", 
+    "properties": {
+        "PayloadUUID": {
+            "default": "", 
+            "pattern": "^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$", 
+            "type": "string", 
+            "description": "Unique identifier for the payload (format 01234567-89AB-CDEF-0123-456789ABCDEF)"
+        }, 
+        "IKEv2": {
+            "default": {
+                "UseConfigurationAttributeInternalIPSubnet": 0, 
+                "IKESecurityAssociationParameters": {
+                    "EncryptionAlgorithm": "3DES", 
+                    "LifeTimeInMinutes": 1440, 
+                    "DiffieHellmanGroup": 14, 
+                    "IntegrityAlgorithm": "SHA1-96"
+                }, 
+                "EnableCertificateRevocationCheck": 0, 
+                "EnablePFS": 0, 
+                "DeadPeerDetectionRate": "Medium", 
+                "DisableRedirect": 0, 
+                "DisableMOBIKE": 0, 
+                "ChildSecurityAssociationParameters": {
+                    "EncryptionAlgorithm": "3DES", 
+                    "LifeTimeInMinutes": 1440, 
+                    "DiffieHellmanGroup": 14, 
+                    "IntegrityAlgorithm": "SHA1-96"
+                }, 
+                "AuthenticationMethod": "SharedSecret"
+            }, 
+            "type": "object", 
+            "description": "IKEv2 settings", 
+            "properties": {
+                "UseConfigurationAttributeInternalIPSubnet": {
+                    "default": 0, 
+                    "type": "number", 
+                    "description": "Set to 1 to indicate if negotiation should use IKEv2 Configuration Attribute INTERNAL_IP4_SUBNET and INTERNAL_IP6_SUBNET."
+                }, 
+                "ExtendedAuthEnabled": {
+                    "default": 0, 
+                    "type": "number", 
+                    "description": "Set to 1 to enable extended authentication (EAP)"
+                }, 
+                "SupplementalMatchDomainsNoSearch": {
+                    "default": 0, 
+                    "minimum": 0, 
+                    "type": "number", 
+                    "description": "Optional. Whether (0) or not (1) the domains in the SupplementalMatchDomains list should be appended to the resolver\u2019s list of search domains. Default is 0.", 
+                    "maximum": 1
+                }, 
+                "DomainName": {
+                    "type": "string", 
+                    "description": "The primary domain of the tunnel"
+                }, 
+                "ServerAddresses": {
+                    "type": "array", 
+                    "description": "An array of DNS server IP address strings (IPv4 or IPv6)"
+                }, 
+                "DisableRedirect": {
+                    "default": 0, 
+                    "type": "number", 
+                    "description": "Set to 1 to disable IKEv2 redirect"
+                }, 
+                "NATKeepAliveOffloadEnable": {
+                    "default": 1, 
+                    "type": "number", 
+                    "description": "Set to 1 to enable or 0 to disable NAT Keepalive offload for Always On VPN IKEv2 connections"
+                }, 
+                "DisableMOBIKE": {
+                    "default": 0, 
+                    "type": "number", 
+                    "description": "Set to 1 to disable MOBIKE negotiation in IKEv2"
+                }, 
+                "AuthName": {
+                    "type": "string", 
+                    "description": "Username used for authentication"
+                }, 
+                "IKESecurityAssociationParameters": {
+                    "default": {
+                        "EncryptionAlgorithm": "3DES", 
+                        "LifeTimeInMinutes": 1440, 
+                        "DiffieHellmanGroup": 14, 
+                        "IntegrityAlgorithm": "SHA-96"
+                    }, 
+                    "type": "object", 
+                    "description": "Applies to child Security Association", 
+                    "properties": {
+                        "EncryptionAlgorithm": {
+                            "type": "string", 
+                            "description": "EncryptionAlgorithm"
+                        }, 
+                        "LifeTimeInMinutes": {
+                            "type": "number", 
+                            "description": "LifeTimeInMinutes"
+                        }, 
+                        "DiffieHellmanGroup": {
+                            "type": "number", 
+                            "description": "DiffieHellmanGroup"
+                        }, 
+                        "IntegrityAlgorithm": {
+                            "type": "string", 
+                            "description": "IntegrityAlgorithm"
+                        }
+                    }
+                }, 
+                "DeadPeerDetectionRate": {
+                    "default": "Medium", 
+                    "enum": [
+                        "None", 
+                        "Low", 
+                        "Medium", 
+                        "High"
+                    ], 
+                    "type": "string", 
+                    "description": "Dead peer detection rate"
+                }, 
+                "ServerCertificateCommonName": {
+                    "type": "string", 
+                    "description": "Common name of the server certificate"
+                }, 
+                "RemoteIdentifier": {
+                    "type": "string", 
+                    "description": "Remote Identifier of the IKEv2 client"
+                }, 
+                "PayloadCertificateUUID": {
+                    "type": "string", 
+                    "description": "The UUID of the identity certificate as the account credential"
+                }, 
+                "AuthPassword": {
+                    "type": "string", 
+                    "description": "Password used for authentication"
+                }, 
+                "SearchDomains": {
+                    "type": "array", 
+                    "description": "A list of domain strings used to fully qualify single-label host names."
+                }, 
+                "RemoteAddress": {
+                    "type": "string", 
+                    "description": " IP address or hostname of the VPN server"
+                }, 
+                "EnableCertificateRevocationCheck": {
+                    "default": 0, 
+                    "type": "number", 
+                    "description": "Optional. Set to 1 to enable a certificate revocation check for IKEv2 connections. This is a best-effort revocation check; server response timeouts will not cause it to fail."
+                }, 
+                "ServerCertificateIssuerCommonName": {
+                    "type": "string", 
+                    "description": "Common Name of the server certificate issuer"
+                }, 
+                "CertificateType": {
+                    "type": "string", 
+                    "description": "Type of the certificate; defaults to RSA"
+                }, 
+                "NATKeepAliveInterval": {
+                    "type": "number", 
+                    "description": "NAT Keepalive interval for Always On VPN IKEv2 connections"
+                }, 
+                "EnablePFS": {
+                    "default": 0, 
+                    "type": "number", 
+                    "description": "Set to 1 to enable Perfect Forward Secrecy for IKEv2 connections"
+                }, 
+                "LocalIdentifier": {
+                    "type": "string", 
+                    "description": "Identifier of the IKEv2 client"
+                }, 
+                "ChildSecurityAssociationParameters": {
+                    "default": {
+                        "EncryptionAlgorithm": "3DES", 
+                        "LifeTimeInMinutes": 1440, 
+                        "DiffieHellmanGroup": 14, 
+                        "IntegrityAlgorithm": "SHA-96"
+                    }, 
+                    "type": "object", 
+                    "description": "Applies to child Security Association", 
+                    "properties": {
+                        "EncryptionAlgorithm": {
+                            "type": "string", 
+                            "description": "EncryptionAlgorithm"
+                        }, 
+                        "LifeTimeInMinutes": {
+                            "type": "number", 
+                            "description": "LifeTimeInMinutes"
+                        }, 
+                        "DiffieHellmanGroup": {
+                            "type": "number", 
+                            "description": "DiffieHellmanGroup"
+                        }, 
+                        "IntegrityAlgorithm": {
+                            "type": "string", 
+                            "description": "IntegrityAlgorithm"
+                        }
+                    }
+                }, 
+                "SupplementalMatchDomains": {
+                    "type": "array", 
+                    "description": "A list of domain strings used to determine which DNS queries will use the DNS resolver settings contained in ServerAddresses."
+                }, 
+                "AuthenticationMethod": {
+                    "enum": [
+                        "SharedSecret", 
+                        "Certificate", 
+                        "None"
+                    ], 
+                    "type": "string", 
+                    "description": "AuthenticationMethod of the IKEv2 client"
+                }, 
+                "SharedSecret": {
+                    "type": "string", 
+                    "description": "Value for IKE authentication"
+                }
+            }
+        }, 
+        "PayloadDescription": {
+            "default": "Configures VPN settings", 
+            "type": "string", 
+            "description": "Description of the payload"
+        }, 
+        "VPN": {
+            "default": {
+                "AuthenticationMethod": "Password"
+            }, 
+            "type": "object", 
+            "description": "VPN Settings", 
+            "properties": {
+                "OnDemandEnabled": {
+                    "enum": [
+                        0, 
+                        1
+                    ], 
+                    "type": "number", 
+                    "description": "Enable VPN On Demand"
+                }, 
+                "OnDemandMatchDomainsNever": {
+                    "items": {
+                        "type": "string", 
+                        "description": "Match domain or host"
+                    }, 
+                    "type": "array", 
+                    "description": ""
+                }, 
+                "DisconnectOnIdleTimer": {
+                    "type": "number", 
+                    "description": "Length of time to wait before disconnecting an on demand connection"
+                }, 
+                "RemoteAddress": {
+                    "type": "string", 
+                    "description": "Hostname or IP address for server"
+                }, 
+                "OnDemandRules": {
+                    "items": {
+                        "type": "object", 
+                        "description": "An On Demand rule", 
+                        "properties": {
+                            "Action": {
+                                "enum": [
+                                    "Allow", 
+                                    "Ignore", 
+                                    "Connect", 
+                                    "Disconnect"
+                                ], 
+                                "type": "string", 
+                                "description": "On Demand Action"
+                            }, 
+                            "DNSDomainMatch": {
+                                "items": {
+                                    "type": "string", 
+                                    "description": "A DNS address. May include wildcards"
+                                }, 
+                                "type": "array", 
+                                "description": "An array of DNS addresses"
+                            }, 
+                            "URLStringProbe": {
+                                "type": "string", 
+                                "description": "A test URL"
+                            }, 
+                            "DNSServerAddressMatch": {
+                                "items": {
+                                    "type": "string", 
+                                    "description": "A DNS server address. May include wildcards"
+                                }, 
+                                "type": "array", 
+                                "description": "An array of DNS Server Addresses"
+                            }
+                        }
+                    }, 
+                    "type": "array", 
+                    "description": "An array of dictionaries defining On Demand Rules"
+                }, 
+                "OnDemandMatchDomainsOnRetry": {
+                    "items": {
+                        "type": "string", 
+                        "description": "Match domain or host"
+                    }, 
+                    "type": "array", 
+                    "description": ""
+                }, 
+                "OnDemandMatchDomainsAlways": {
+                    "items": {
+                        "type": "string", 
+                        "description": "Match domain or host"
+                    }, 
+                    "type": "array", 
+                    "description": ""
+                }, 
+                "DisconnectOnIdle": {
+                    "enum": [
+                        0, 
+                        1
+                    ], 
+                    "type": "number", 
+                    "description": "Disconnect after an on demand connection idles"
+                }, 
+                "AuthName": {
+                    "type": "string", 
+                    "description": "The VPN account username"
+                }, 
+                "AuthenticationMethod": {
+                    "enum": [
+                        "Password", 
+                        "Certificate", 
+                        "Password+Certificate"
+                    ], 
+                    "type": "string", 
+                    "description": "Authentication method. Either shared secret or certificate"
+                }, 
+                "PayloadCertificateUUID": {
+                    "type": "string", 
+                    "description": "The UUID of the certificate to use for account credentials"
+                }, 
+                "AuthPassword": {
+                    "type": "string", 
+                    "description": "The VPN user password"
+                }
+            }
+        }, 
+        "VPNSubType": {
+            "type": "string", 
+            "description": "If VPNType is \"VPN\" this field will be an identifier for a vendor specified configuration dictionary"
+        }, 
+        "VPNType": {
+            "default": "L2TP", 
+            "enum": [
+                "L2TP", 
+                "PPTP", 
+                "IPSec", 
+                "VPN", 
+                "IKEv2", 
+                "AlwaysOn"
+            ], 
+            "type": "string", 
+            "description": "Determines the settings available for this VPN payload"
+        }, 
+        "VendorConfig": {
+            "default": {}, 
+            "type": "object", 
+            "description": "A vendor specific configuration dictionary", 
+            "properties": {
+                "Role": {
+                    "type": "string", 
+                    "description": "Role to select when connecting to the server. Valid only for Juniper SSL"
+                }, 
+                "Realm": {
+                    "type": "string", 
+                    "description": "Realm to connect to on the server"
+                }, 
+                "LoginGroupOrDomain": {
+                    "type": "string", 
+                    "description": "Login Group or Domain"
+                }, 
+                "Group": {
+                    "type": "string", 
+                    "description": "Group to connect to on the head end. Valid only for Cisco AnyConnect"
+                }
+            }
+        }, 
+        "DisconnectOnIdleTimer": {
+            "type": "number", 
+            "description": "DisconnectOnIdleTimer"
+        }, 
+        "PayloadOrganization": {
+            "type": "string", 
+            "description": "This value describes the issuing organization of the profile, as displayed to the user"
+        }, 
+        "PayloadIdentifier": {
+            "default": "com.apple.vpn.managed", 
+            "type": "string", 
+            "description": "A unique identifier for the payload, dot-delimited.  Usually root PayloadIdentifier+subidentifier"
+        }, 
+        "PayloadDisplayName": {
+            "default": "VPN", 
+            "type": "string", 
+            "description": "Name of the payload"
+        }, 
+        "PayloadType": {
+            "default": "com.apple.vpn.managed", 
+            "type": "string", 
+            "description": "The type of the payload, a reverse dns string"
+        }, 
+        "PPP": {
+            "default": {}, 
+            "type": "object", 
+            "description": "PPP Settings", 
+            "properties": {
+                "CCPMPPE128Enabled": {
+                    "enum": [
+                        0, 
+                        1
+                    ], 
+                    "type": "number", 
+                    "description": "Enables encryption on the connection. If this key and CCPEnabled are true, represents automatic encryption level\n"
+                }, 
+                "CommRemoteAddress": {
+                    "type": "string", 
+                    "description": "IP address or hostname of VPN server"
+                }, 
+                "TokenCard": {
+                    "type": "boolean", 
+                    "description": "Use a token card such as an RSA SecurID card for connecting"
+                }, 
+                "AuthProtocol": {
+                    "items": {
+                        "enum": [
+                            "EAP"
+                        ], 
+                        "type": "string", 
+                        "description": "String inside Auth Protocol array. If present, must be \"EAP\""
+                    }, 
+                    "type": "array", 
+                    "description": "Only present if RSA SecurID is being used, in which case it has one string entry: EAP"
+                }, 
+                "CCPMPPE40Enabled": {
+                    "enum": [
+                        0, 
+                        1
+                    ], 
+                    "type": "number", 
+                    "description": "Enables encryption on the connection. If this key and CCPEnabled are true, represents maximum encryption level\n"
+                }, 
+                "AuthName": {
+                    "type": "string", 
+                    "description": "The VPN account username"
+                }, 
+                "CCPEnabled": {
+                    "enum": [
+                        0, 
+                        1
+                    ], 
+                    "type": "number", 
+                    "description": "Enables encryption on the connection. If this key and CCPMPPE40Enabled are true, represents automatic encryption level; if this key and CCPMPPE128Enabled are true, represents maximum encryption level. If no encryption is used, then none of the CCP keys are true.\n"
+                }, 
+                "AuthPassword": {
+                    "type": "string", 
+                    "description": "The VPN user password"
+                }, 
+                "AuthEAPPlugins": {
+                    "items": {
+                        "enum": [
+                            "EAP-RSA", 
+                            "EAP-TLS", 
+                            "EAP-KRB"
+                        ], 
+                        "type": "string", 
+                        "description": "String inside EAP Plugins array. If present, must be \"EAP-RSA\""
+                    }, 
+                    "type": "array", 
+                    "description": "Only present if RSA SecurID is being used, in which case it has one string entry: EAP-RSA"
+                }
+            }
+        }, 
+        "IPv4": {
+            "default": {
+                "OverridePrimary": 0
+            }, 
+            "type": "object", 
+            "description": "Dictionary containing IPv4 settings", 
+            "properties": {
+                "OverridePrimary": {
+                    "default": 0, 
+                    "enum": [
+                        0, 
+                        1
+                    ], 
+                    "type": "number", 
+                    "description": "If set, all network traffic is sent over the VPN interface"
+                }
+            }
+        }, 
+        "DisconnectOnIdle": {
+            "default": 0, 
+            "type": "number", 
+            "description": "DisconnectOnIdle"
+        }, 
+        "PayloadVersion": {
+            "default": 1, 
+            "type": "number", 
+            "description": "The version of the whole configuration profile."
+        }, 
+        "EAP": {
+            "type": "object", 
+            "description": "Dictionary containing EAP settings", 
+            "properties": {}
+        }, 
+        "UserDefinedName": {
+            "type": "string", 
+            "description": "Description of the VPN connection displayed on the device"
+        }, 
+        "Proxies": {
+            "default": {
+                "HTTPSEnable": 0, 
+                "HTTPEnable": 0
+            }, 
+            "type": "object", 
+            "description": "Proxies", 
+            "properties": {
+                "ProxyAutoDiscoveryEnable": {
+                    "default": 1, 
+                    "enum": [
+                        0, 
+                        1
+                    ], 
+                    "type": "number", 
+                    "description": ""
+                }, 
+                "HTTPProxyUsername": {
+                    "type": "string", 
+                    "description": ""
+                }, 
+                "HTTPSEnable": {
+                    "enum": [
+                        0, 
+                        1
+                    ], 
+                    "type": "number", 
+                    "description": ""
+                }, 
+                "HTTPEnable": {
+                    "enum": [
+                        0, 
+                        1
+                    ], 
+                    "type": "number", 
+                    "description": ""
+                }, 
+                "HTTPPort": {
+                    "minimum": 0, 
+                    "type": "number", 
+                    "description": "", 
+                    "maximum": 65535
+                }, 
+                "HTTPProxyPassword": {
+                    "type": "string", 
+                    "description": ""
+                }, 
+                "ProxyAutoConfigURLString": {
+                    "type": "string", 
+                    "description": ""
+                }, 
+                "HTTPSPort": {
+                    "minimum": 0, 
+                    "type": "number", 
+                    "description": "", 
+                    "maximum": 65535
+                }, 
+                "HTTPProxy": {
+                    "type": "string", 
+                    "description": "Proxy URL"
+                }, 
+                "ProxyAutoConfigEnable": {
+                    "enum": [
+                        0, 
+                        1
+                    ], 
+                    "type": "number", 
+                    "description": ""
+                }, 
+                "HTTPSProxy": {
+                    "type": "string", 
+                    "description": ""
+                }
+            }
+        }, 
+        "AlwaysOn": {
+            "default": {
+                "AllowedCaptiveNetworkPlugins": [], 
+                "ServiceExceptions": [], 
+                "TunnelConfigurations": [
+                    {
+                        "UseConfigurationAttributeInternalIPSubnet": 0, 
+                        "IKESecurityAssociationParameters": {
+                            "EncryptionAlgorithm": "3DES", 
+                            "LifeTimeInMinutes": 1440, 
+                            "DiffieHellmanGroup": 14, 
+                            "IntegrityAlgorithm": "SHA1-96"
+                        }, 
+                        "EnableCertificateRevocationCheck": 0, 
+                        "NATKeepAliveInterval": 110, 
+                        "ProtocolType": "IKEv2", 
+                        "Interfaces": [
+                            "Cellular"
+                        ], 
+                        "EnablePFS": 0, 
+                        "DeadPeerDetectionRate": "Medium", 
+                        "DisableRedirect": 0, 
+                        "NATKeepAliveOffloadEnable": 1, 
+                        "DisableMOBIKE": 0, 
+                        "ChildSecurityAssociationParameters": {
+                            "EncryptionAlgorithm": "3DES", 
+                            "LifeTimeInMinutes": 1440, 
+                            "DiffieHellmanGroup": 14, 
+                            "IntegrityAlgorithm": "SHA1-96"
+                        }, 
+                        "AuthenticationMethod": "SharedSecret"
+                    }, 
+                    {
+                        "UseConfigurationAttributeInternalIPSubnet": 0, 
+                        "IKESecurityAssociationParameters": {
+                            "EncryptionAlgorithm": "3DES", 
+                            "LifeTimeInMinutes": 1440, 
+                            "DiffieHellmanGroup": 14, 
+                            "IntegrityAlgorithm": "SHA1-96"
+                        }, 
+                        "EnableCertificateRevocationCheck": 0, 
+                        "NATKeepAliveInterval": 20, 
+                        "ProtocolType": "IKEv2", 
+                        "Interfaces": [
+                            "WiFi"
+                        ], 
+                        "EnablePFS": 0, 
+                        "DeadPeerDetectionRate": "Medium", 
+                        "DisableRedirect": 0, 
+                        "NATKeepAliveOffloadEnable": 1, 
+                        "DisableMOBIKE": 0, 
+                        "ChildSecurityAssociationParameters": {
+                            "EncryptionAlgorithm": "3DES", 
+                            "LifeTimeInMinutes": 1440, 
+                            "DiffieHellmanGroup": 14, 
+                            "IntegrityAlgorithm": "SHA1-96"
+                        }, 
+                        "AuthenticationMethod": "SharedSecret"
+                    }
+                ]
+            }, 
+            "type": "object", 
+            "description": "Always On settings", 
+            "properties": {
+                "TunnelConfigurations": {
+                    "items": {
+                        "type": "object", 
+                        "description": "An item in theTunnelConfigurations array describing an individual configuration", 
+                        "properties": {
+                            "UseConfigurationAttributeInternalIPSubnet": {
+                                "default": 0, 
+                                "type": "number", 
+                                "description": "Set to 1 to indicate if negotiation should use IKEv2 Configuration Attribute INTERNAL_IP4_SUBNET and INTERNAL_IP6_SUBNET."
+                            }, 
+                            "ChildSecurityAssociationParameters": {
+                                "default": {
+                                    "EncryptionAlgorithm": "AES-256", 
+                                    "LifeTimeInMinutes": 1440, 
+                                    "DiffieHellmanGroup": 14, 
+                                    "IntegrityAlgorithm": "SHA2-256"
+                                }, 
+                                "type": "object", 
+                                "description": "Applies to child Security Association", 
+                                "properties": {
+                                    "EncryptionAlgorithm": {
+                                        "type": "string", 
+                                        "description": "EncryptionAlgorithm"
+                                    }, 
+                                    "LifeTimeInMinutes": {
+                                        "type": "number", 
+                                        "description": "LifeTimeInMinutes"
+                                    }, 
+                                    "DiffieHellmanGroup": {
+                                        "type": "number", 
+                                        "description": "DiffieHellmanGroup"
+                                    }, 
+                                    "IntegrityAlgorithm": {
+                                        "type": "string", 
+                                        "description": "IntegrityAlgorithm"
+                                    }
+                                }
+                            }, 
+                            "ExtendedAuthEnabled": {
+                                "default": 0, 
+                                "type": "number", 
+                                "description": "Set to 1 to enable extended authentication (EAP)"
+                            }, 
+                            "IKESecurityAssociationParameters": {
+                                "default": {
+                                    "EncryptionAlgorithm": "AES-256", 
+                                    "LifeTimeInMinutes": 1440, 
+                                    "DiffieHellmanGroup": 14, 
+                                    "IntegrityAlgorithm": "SHA2-256"
+                                }, 
+                                "type": "object", 
+                                "description": "Applies to child Security Association", 
+                                "properties": {
+                                    "EncryptionAlgorithm": {
+                                        "type": "string", 
+                                        "description": "EncryptionAlgorithm"
+                                    }, 
+                                    "LifeTimeInMinutes": {
+                                        "type": "number", 
+                                        "description": "LifeTimeInMinutes"
+                                    }, 
+                                    "DiffieHellmanGroup": {
+                                        "type": "number", 
+                                        "description": "DiffieHellmanGroup"
+                                    }, 
+                                    "IntegrityAlgorithm": {
+                                        "type": "string", 
+                                        "description": "IntegrityAlgorithm"
+                                    }
+                                }
+                            }, 
+                            "EnableCertificateRevocationCheck": {
+                                "default": 0, 
+                                "type": "number", 
+                                "description": "Set to 1 to enable certificate revocation check for IKEv2 connections"
+                            }, 
+                            "NATKeepAliveInterval": {
+                                "default": 20, 
+                                "type": "number", 
+                                "description": "NAT Keepalive interval for Always-on VPN IKEv2 connections. This value controls the interval over which Keepalive offload packets are sent by the device. The minimum value is 20 seconds. If no key is specified, the default is 20 seconds over Wi-Fi and 110 seconds over Cellular interface."
+                            }, 
+                            "RemoteAddress": {
+                                "type": "string", 
+                                "description": " IP address or hostname of the VPN server"
+                            }, 
+                            "ServerCertificateCommonName": {
+                                "type": "string", 
+                                "description": "Common Name of the server certificate"
+                            }, 
+                            "EnablePFS": {
+                                "default": 0, 
+                                "type": "number", 
+                                "description": "Set to 1 to enable Perfect Forward Secrecy for IKEv2 connections"
+                            }, 
+                            "DeadPeerDetectionRate": {
+                                "default": "Low", 
+                                "type": "string", 
+                                "description": "Dead peer detection rate; defaults to Medium"
+                            }, 
+                            "LocalIdentifier": {
+                                "type": "string", 
+                                "description": "Identifier of the IKEv2 client"
+                            }, 
+                            "AuthName": {
+                                "type": "string", 
+                                "description": "Username used for authentication"
+                            }, 
+                            "DisableRedirect": {
+                                "default": 0, 
+                                "type": "number", 
+                                "description": "Set to 1 to disable IKEv2 redirect"
+                            }, 
+                            "NATKeepAliveOffloadEnable": {
+                                "default": 1, 
+                                "type": "number", 
+                                "description": "Set to 1 to enable NAT Keepalive offload for Always-on VPN IKEv2 connections"
+                            }, 
+                            "DisableMOBIKE": {
+                                "default": 0, 
+                                "type": "number", 
+                                "description": "Set to 1 to disable MOBIKE negotiation in IKEv2"
+                            }, 
+                            "RemoteIdentifier": {
+                                "type": "string", 
+                                "description": "Remote Identifier of the IKEv2 client"
+                            }, 
+                            "ServerCertificateIssuerCommonName": {
+                                "type": "string", 
+                                "description": "Common Name of the server certificate issuer"
+                            }, 
+                            "AuthenticationMethod": {
+                                "type": "string", 
+                                "description": "AuthenticationMethod of the IKEv2 client"
+                            }, 
+                            "PayloadCertificateUUID": {
+                                "type": "string", 
+                                "description": "The UUID of the identity certificate as the account credential"
+                            }, 
+                            "AuthPassword": {
+                                "type": "string", 
+                                "description": "Password used for authentication"
+                            }, 
+                            "SharedSecret": {
+                                "type": "string", 
+                                "description": "Value for IKE authentication"
+                            }
+                        }
+                    }, 
+                    "type": "array", 
+                    "description": "This array contains an arbitrary number of TunnelConfigurations"
+                }
+            }
+        }, 
+        "IPSec": {
+            "default": {
+                "AuthenticationMethod": "SharedSecret", 
+                "LocalIdentifierType": "KeyID"
+            }, 
+            "type": "object", 
+            "description": "Dictionary containing IPSec settings", 
+            "properties": {
+                "OnDemandRules": {
+                    "items": {
+                        "type": "object", 
+                        "description": "An On Demand rule", 
+                        "properties": {
+                            "Action": {
+                                "enum": [
+                                    "Allow", 
+                                    "Ignore", 
+                                    "Connect", 
+                                    "Disconnect"
+                                ], 
+                                "type": "string", 
+                                "description": "On Demand Action"
+                            }, 
+                            "DNSDomainMatch": {
+                                "items": {
+                                    "type": "string", 
+                                    "description": "A DNS address. May include wildcards"
+                                }, 
+                                "type": "array", 
+                                "description": "An array of DNS addresses"
+                            }, 
+                            "URLStringProbe": {
+                                "type": "string", 
+                                "description": "A test URL"
+                            }, 
+                            "DNSServerAddressMatch": {
+                                "items": {
+                                    "type": "string", 
+                                    "description": "A DNS server address. May include wildcards"
+                                }, 
+                                "type": "array", 
+                                "description": "An array of DNS Server Addresses"
+                            }
+                        }
+                    }, 
+                    "type": "array", 
+                    "description": "An array of dictionaries defining On Demand Rules"
+                }, 
+                "OnDemandEnabled": {
+                    "enum": [
+                        0, 
+                        1
+                    ], 
+                    "type": "number", 
+                    "description": "Enable VPN On Demand"
+                }, 
+                "OnDemandMatchDomainsNever": {
+                    "items": {
+                        "type": "string", 
+                        "description": "Match domain or host"
+                    }, 
+                    "type": "array", 
+                    "description": ""
+                }, 
+                "XAuthPassword": {
+                    "type": "string", 
+                    "description": "Password for VPN account"
+                }, 
+                "RemoteAddress": {
+                    "type": "string", 
+                    "description": "IP address or hostname of the VPN server"
+                }, 
+                "LocalIdentifierType": {
+                    "enum": [
+                        "KeyID"
+                    ], 
+                    "type": "string", 
+                    "description": "Present only if AuthenticationMethod = SharedSecret. Must be \"KeyID\""
+                }, 
+                "XAuthEnabled": {
+                    "enum": [
+                        0, 
+                        1
+                    ], 
+                    "type": "number", 
+                    "description": "1 if XAUTH is ON, 0 if XAUTH is OFF"
+                }, 
+                "XAuthName": {
+                    "type": "string", 
+                    "description": "Username for VPN account"
+                }, 
+                "LocalIdentifier": {
+                    "type": "string", 
+                    "description": "The name of the group to use. If Hybrid Authentication is used, the string must end with \"[hybrid]\""
+                }, 
+                "OnDemandMatchDomainsOnRetry": {
+                    "items": {
+                        "type": "string", 
+                        "description": "Match domain or host"
+                    }, 
+                    "type": "array", 
+                    "description": ""
+                }, 
+                "OnDemandMatchDomainsAlways": {
+                    "items": {
+                        "type": "string", 
+                        "description": "Match domain or host"
+                    }, 
+                    "type": "array", 
+                    "description": ""
+                }, 
+                "XAuthPasswordEncryption": {
+                    "enum": [
+                        "Prompt"
+                    ], 
+                    "type": "string", 
+                    "description": "String value is either \"Prompt\" or not present"
+                }, 
+                "PromptForVPNPIN": {
+                    "type": "boolean", 
+                    "description": "If set, user will be prompted for a PIN when connecting"
+                }, 
+                "AuthenticationMethod": {
+                    "enum": [
+                        "SharedSecret", 
+                        "Certificate"
+                    ], 
+                    "type": "string", 
+                    "description": "Authentication method. Either shared secret or certificate"
+                }, 
+                "PayloadCertificateUUID": {
+                    "type": "string", 
+                    "description": "The UUID of the certificate to use for account credentials"
+                }, 
+                "SharedSecret": {
+                    "type": "string", 
+                    "description": "The shared secret for this VPN account"
+                }
+            }
+        }
+    }, 
+    "title": "com.apple.vpn.managed"
+}

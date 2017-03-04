@@ -3,7 +3,7 @@
 Touch ID
 ========
 
-.. todo:: Key functionality still needs verification
+.. note:: TODO Key functionality still needs verification
 
 Summary
 -------

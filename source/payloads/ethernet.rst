@@ -1,5 +1,8 @@
+.. _payloadtype-com.apple.firstactiveethernet.managed:
+
 Ethernet 802.1x
 ===============
+:download:`Template <../_static/examples/com.apple.firstactiveethernet.managed.mobileconfig>`
 
 The 802.1x Ethernet payload is designated by specifying one of the following as the PayloadType value:
 
@@ -10,12 +13,15 @@ The 802.1x Ethernet payload is designated by specifying one of the following as 
 - com.apple.thirdactiveethernet.managed
 - com.apple.thirdethernet.managed
 
-Payloads with “active” in their name apply to Ethernet interfaces that are working at the time of profile installation.
-If there is no active Ethernet interface working, the com.apple.firstactiveethernet.managed payload will configure
+Payloads with **active** in their name apply to Ethernet interfaces that are working at the time of profile installation.
+If there is no active Ethernet interface working, the ``com.apple.firstactiveethernet.managed`` payload will configure
 the interface with the highest service order priority.
 
-Payloads without “active” in the name apply to Ethernet interfaces according to service order regardless of whether
+Payloads without **active** in the name apply to Ethernet interfaces according to service order regardless of whether
 the interface is working or not.
+
+.. warning:: If you change the active ethernet interface after the profile is installed, it will not apply to the
+    newly active interface.
 
 Summary
 -------

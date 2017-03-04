@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>AutoBackup</key>
+			<true/>
+			<key>BackupAllVolumes</key>
+			<false/>
+			<key>BackupDestURL</key>
+			<string>afp://someserver.apple.com/Backups/</string>
+			<key>BackupSizeMB</key>
+			<integer>5000</integer>
+			<key>BackupSkipSys</key>
+			<true/>
+			<key>BasePaths</key>
+			<array>
+			</array>
+			<key>MobileBackups</key>
+			<true/>
+			<key>PayloadDescription</key>
+			<string>Time Machine Settings</string>
+			<key>PayloadDisplayName</key>
+			<string>Time Machine Settings</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.MCX.TimeMachine</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>com.apple.MCX.TimeMachine</string>
+			<key>PayloadUUID</key>
+			<string></string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>SkipPaths</key>
+			<array>
+			</array>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Example: Time Machine Settings</string>
+	<key>PayloadDisplayName</key>
+	<string>Example: Time Machine Settings</string>
+	<key>PayloadIdentifier</key>
+	<string>com.apple.MCX.TimeMachine.example</string>
+	<key>PayloadOrganization</key>
+	<string>Example Organization</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>7a4a56fa-5521-4183-a716-f5cf48ae6a56</string>
+</dict>
+</plist>

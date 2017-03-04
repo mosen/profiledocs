@@ -1,0 +1,82 @@
+{
+    "$schema": "http://json-schema.org/schema#", 
+    "type": "object", 
+    "properties": {
+        "PayloadUUID": {
+            "default": "", 
+            "pattern": "^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$", 
+            "type": "string", 
+            "description": "Unique identifier for the payload (format 01234567-89AB-CDEF-0123-456789ABCDEF)"
+        }, 
+        "PayloadDescription": {
+            "default": "Single Sign-On Account Payload", 
+            "type": "string", 
+            "description": "Description of the payload"
+        }, 
+        "Name": {
+            "type": "string", 
+            "description": "Human-readable name for the account."
+        }, 
+        "Kerberos": {
+            "default": {}, 
+            "type": "object", 
+            "description": "Kerberos-related information.", 
+            "properties": {
+                "Realm": {
+                    "type": "string", 
+                    "description": "The Kerberos realm name. This value should be properly capitalized."
+                }, 
+                "URLPrefixMatches": {
+                    "items": {
+                        "type": "string", 
+                        "description": "Each entry in the URLPrefixMatches array must contain a URL prefix. Only URLs that begin with one of the strings in this account are allowed to access the Kerberos ticket."
+                    }, 
+                    "type": "array", 
+                    "description": "List of URLs prefixes that must be matched to use this account for Kerberos authentication over HTTP. Note that the URL postfixes must match as well."
+                }, 
+                "AppIdentifierMatches": {
+                    "items": {
+                        "type": "string", 
+                        "description": "Exact or partial bundle ID match using the wildcard character eg com.apple.*"
+                    }, 
+                    "type": "array", 
+                    "description": "List of app identifiers that are allowed to use this login. If this field missing, this login matches all app identifiers."
+                }, 
+                "PayloadCertificateUUID": {
+                    "pattern": "^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$", 
+                    "type": "string", 
+                    "description": "The PayloadUUID of an identity certificate payload that can be used to renew the Kerberos credential without user interaction.\n                            The certificate payload must have either the com.apple.security.pkcs12 or com.apple.security.scep payload type.\n                            Both the Single Sign On payload and the identity certificate payload must be included in the same configuration profile"
+                }, 
+                "PrincipalName": {
+                    "type": "string", 
+                    "description": "The Kerberos principal name. If not provided, the user is prompted for one during profile installation. This field must be provided for MDM installation."
+                }
+            }
+        }, 
+        "PayloadOrganization": {
+            "type": "string", 
+            "description": "This value describes the issuing organization of the profile, as displayed to the user"
+        }, 
+        "PayloadIdentifier": {
+            "default": "com.apple.sso", 
+            "type": "string", 
+            "description": "A unique identifier for the payload, dot-delimited.  Usually root PayloadIdentifier+subidentifier"
+        }, 
+        "PayloadDisplayName": {
+            "default": "Single Sign-On Account Payload", 
+            "type": "string", 
+            "description": "Name of the payload"
+        }, 
+        "PayloadType": {
+            "default": "com.apple.sso", 
+            "type": "string", 
+            "description": "The type of the payload, a reverse dns string"
+        }, 
+        "PayloadVersion": {
+            "default": 1, 
+            "type": "number", 
+            "description": "The version of the whole configuration profile."
+        }
+    }, 
+    "title": "com.apple.sso"
+}

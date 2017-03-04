@@ -22,10 +22,12 @@ Payloads
     certpkcs12.rst
     certpref.rst
     certroot.rst
+    conference.rst
     coremediaio.rst
     custom.rst
     dashwidgets.rst
     desktop.rst
+    dictionary.rst
     discrecording.rst
     dock.rst
     domains.rst
@@ -35,6 +37,7 @@ Payloads
     enrollment.rst
     ethernet.rst
     exchange.rst
+    finderburn.rst
     firewall.rst
     fv2.rst
     fv2redirect.rst
@@ -74,12 +77,14 @@ Payloads
     shareddevice.rst
     sharekit.rst
     sidebar.rst
+    smartcard.rst
     sso.rst
     supervision.rst
     swupd.rst
     spctl.rst
     submitdiag.rst
     systemconfiguration.rst
+    systemmigration.rst
     systempolicy.rst
     sysprefs.rst
     sprule.rst

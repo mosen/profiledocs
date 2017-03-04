@@ -2,6 +2,7 @@
 
 FileVault Recovery Key Redirect
 ===============================
+:download:`Template <../_static/examples/com.apple.security.FDERecoveryRedirect.mobileconfig>`
 
 FileVault full-volume encryption (FDE) recovery keys are, by default, sent to Apple if the user requests it.
 With this key, you can redirect those recovery keys to a corporate server.

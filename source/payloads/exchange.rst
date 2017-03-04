@@ -1,3 +1,5 @@
+.. _payloadtype-com.apple.eas.account:
+
 Exchange
 ========
 
@@ -10,31 +12,31 @@ In macOS, the Exchange payload is designated by specifying **com.apple.ews.accou
 Summary
 -------
 
-.. pfmheader:: manifests/ac2/com.apple.eas.account manifest.plist
-.. pfm:: manifests/ac2/com.apple.eas.account manifest.plist
+.. pfmheader:: /_static/manifests/com.apple.eas.account manifest.plist
+.. pfm:: /_static/manifests/com.apple.eas.account manifest.plist
 
 Keys
 ----
 
-.. pfmkey:: Certificate manifests/ac2/com.apple.eas.account manifest.plist
-.. pfmkey:: CertificateName manifests/ac2/com.apple.eas.account manifest.plist
-.. pfmkey:: CertificatePassword manifests/ac2/com.apple.eas.account manifest.plist
-.. pfmkey:: PayloadCertificateUUID manifests/ac2/com.apple.eas.account manifest.plist
-.. pfmkey:: Host manifests/ac2/com.apple.eas.account manifest.plist
-.. pfmkey:: MailNumberOfPastDaysToSync manifests/ac2/com.apple.eas.account manifest.plist
-.. pfmkey:: SSL manifests/ac2/com.apple.eas.account manifest.plist
-.. pfmkey:: EmailAddress manifests/ac2/com.apple.eas.account manifest.plist
-.. pfmkey:: UserName manifests/ac2/com.apple.eas.account manifest.plist
-.. pfmkey:: Password manifests/ac2/com.apple.eas.account manifest.plist
-.. pfmkey:: PreventMove manifests/ac2/com.apple.eas.account manifest.plist
-.. pfmkey:: PreventAppSheet manifests/ac2/com.apple.eas.account manifest.plist
-.. pfmkey:: allowMailDrop manifests/ac2/com.apple.eas.account manifest.plist
-.. pfmkey:: SMIMEEnabled manifests/ac2/com.apple.eas.account manifest.plist
-.. pfmkey:: SMIMEEnablePerMessageSwitch manifests/ac2/com.apple.eas.account manifest.plist
-.. pfmkey:: SMIMESigningCertificateUUID manifests/ac2/com.apple.eas.account manifest.plist
-.. pfmkey:: SMIMEEncryptionCertificateUUID manifests/ac2/com.apple.eas.account manifest.plist
-.. pfmkey:: disableMailRecentsSyncing manifests/ac2/com.apple.eas.account manifest.plist
-.. pfmkey:: CommunicationServiceRules manifests/ac2/com.apple.eas.account manifest.plist
+.. pfmkey:: Certificate /_static/manifests/com.apple.eas.account manifest.plist
+.. pfmkey:: CertificateName /_static/manifests/com.apple.eas.account manifest.plist
+.. pfmkey:: CertificatePassword /_static/manifests/com.apple.eas.account manifest.plist
+.. pfmkey:: PayloadCertificateUUID /_static/manifests/com.apple.eas.account manifest.plist
+.. pfmkey:: Host /_static/manifests/com.apple.eas.account manifest.plist
+.. pfmkey:: MailNumberOfPastDaysToSync /_static/manifests/com.apple.eas.account manifest.plist
+.. pfmkey:: SSL /_static/manifests/com.apple.eas.account manifest.plist
+.. pfmkey:: EmailAddress /_static/manifests/com.apple.eas.account manifest.plist
+.. pfmkey:: UserName /_static/manifests/com.apple.eas.account manifest.plist
+.. pfmkey:: Password /_static/manifests/com.apple.eas.account manifest.plist
+.. pfmkey:: PreventMove /_static/manifests/com.apple.eas.account manifest.plist
+.. pfmkey:: PreventAppSheet /_static/manifests/com.apple.eas.account manifest.plist
+.. pfmkey:: allowMailDrop /_static/manifests/com.apple.eas.account manifest.plist
+.. pfmkey:: SMIMEEnabled /_static/manifests/com.apple.eas.account manifest.plist
+.. pfmkey:: SMIMEEnablePerMessageSwitch /_static/manifests/com.apple.eas.account manifest.plist
+.. pfmkey:: SMIMESigningCertificateUUID /_static/manifests/com.apple.eas.account manifest.plist
+.. pfmkey:: SMIMEEncryptionCertificateUUID /_static/manifests/com.apple.eas.account manifest.plist
+.. pfmkey:: disableMailRecentsSyncing /_static/manifests/com.apple.eas.account manifest.plist
+.. pfmkey:: CommunicationServiceRules /_static/manifests/com.apple.eas.account manifest.plist
 
 Links
 -----

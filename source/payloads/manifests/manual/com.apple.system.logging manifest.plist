@@ -118,7 +118,7 @@
                 <key>pfm_description</key>
                 <string>Configure Process Logging</string>
                 <key>pfm_type</key>
-                <string>dict</string>
+                <string>dictionary</string>
             </dict>
             <dict>
                 <key>pfm_name</key>
@@ -128,7 +128,7 @@
                 <key>pfm_description</key>
                 <string>Configure Subsystem Logging</string>
                 <key>pfm_type</key>
-                <string>dict</string>
+                <string>dictionary</string>
                 <key>pfm_subkeys</key>
                 <array>
                     <dict>
@@ -139,7 +139,7 @@
                         <key>pfm_description</key>
                         <string>A subsystem is your apps bundle ID or is explicitly set through the os_log_create function. Wildcards are not accepted</string>
                         <key>pfm_type</key>
-                        <string>dict</string>
+                        <string>dictionary</string>
                         <key>pfm_subkeys</key>
                         <array>
                             <dict>
@@ -150,7 +150,7 @@
                                 <key>pfm_description</key>
                                 <string>Default logging settings for logs that have no category set.</string>
                                 <key>pfm_type</key>
-                                <string>dict</string>
+                                <string>dictionary</string>
                                 <key>pfm_subkeys</key>
                                 <array>
                                     <dict>
@@ -161,7 +161,7 @@
                                         <key>pfm_description</key>
                                         <string>Configures minimum logging level and persistence level</string>
                                         <key>pfm_type</key>
-                                        <string>dict</string>
+                                        <string>dictionary</string>
                                         <key>pfm_subkeys</key>
                                         <array>
                                             <dict>
@@ -228,7 +228,7 @@
                                         <key>pfm_description</key>
                                         <string>Changes how long a log entry will remain before being removed</string>
                                         <key>pfm_type</key>
-                                        <string>dict</string>
+                                        <string>dictionary</string>
                                         <key>pfm_subkeys</key>
                                         <array>
                                             <dict>
@@ -287,7 +287,7 @@
                 <key>pfm_description</key>
                 <string>Configure System Logging</string>
                 <key>pfm_type</key>
-                <string>dict</string>
+                <string>dictionary</string>
             </dict>
         </array>
     </dict>

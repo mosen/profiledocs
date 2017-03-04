@@ -4,7 +4,7 @@ Cellular
 ========
 
 A cellular payload configures cellular network settings on the device.
-It is not supported on macOS. On iOS 7 and later, a cellular payload is designated by specifying manifests/ac2/com.apple.cellular as the PayloadType value.
+It is not supported on macOS. On iOS 7 and later, a cellular payload is designated by specifying **com.apple.cellular** as the PayloadType value.
 
 Cellular payloads have two important installation requirements:
 
@@ -19,17 +19,17 @@ This payload replaces the com.apple.managedCarrier payload, which is supported, 
 Summary
 -------
 
-.. pfmheader:: manifests/ac2/com.apple.cellular manifest.plist
+.. pfmheader:: /_static/manifests/com.apple.cellular manifest.plist
 
-.. pfm:: manifests/ac2/com.apple.cellular manifest.plist
+.. pfm:: /_static/manifests/com.apple.cellular manifest.plist
 
 Keys
 ----
 
-.. pfmkey:: APNs manifests/ac2/com.apple.cellular manifest.plist
-.. pfmkey:: AttachAPN manifests/ac2/com.apple.cellular manifest.plist
+.. pfmkey:: APNs /_static/manifests/com.apple.cellular manifest.plist
+.. pfmkey:: AttachAPN /_static/manifests/com.apple.cellular manifest.plist
 
-.. pfm:: manifests/ac2/com.apple.cellular manifest.plist
+.. pfm:: /_static/manifests/com.apple.cellular manifest.plist
    :key: AttachAPN
 
 Links

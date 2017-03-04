@@ -2,6 +2,7 @@
 
 Firewall
 ========
+:download:`Template <../_static/examples/com.apple.security.firewall.mobileconfig>`
 
 Available in macOS 10.12 and later. A Firewall payload manages the Application Firewall settings accessible in the Security Preferences pane. Note these restrictions:
 

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>AllowAllAppsAccess</key>
+			<false/>
+			<key>CertServer</key>
+			<string></string>
+			<key>CertTemplate</key>
+			<string>User</string>
+			<key>CertificateAcquisitionMechanism</key>
+			<string>RPC</string>
+			<key>CertificateAuthority</key>
+			<string></string>
+			<key>CertificateRenewalTimeInterval</key>
+			<integer>14</integer>
+			<key>Description</key>
+			<string></string>
+			<key>KeyIsExtractable</key>
+			<false/>
+			<key>Keysize</key>
+			<integer>2048</integer>
+			<key>Password</key>
+			<string></string>
+			<key>PayloadDescription</key>
+			<string>Requests an Active Directory certificate</string>
+			<key>PayloadDisplayName</key>
+			<string>AD Certificate</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.ADCertificate.managed</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>com.apple.ADCertificate.managed</string>
+			<key>PayloadUUID</key>
+			<string></string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>PromptForCredentials</key>
+			<false/>
+			<key>UserName</key>
+			<string></string>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Example: Active Directory Certificate Profile Payload</string>
+	<key>PayloadDisplayName</key>
+	<string>Example: AD Certificate</string>
+	<key>PayloadIdentifier</key>
+	<string>com.apple.ADCertificate.managed.example</string>
+	<key>PayloadOrganization</key>
+	<string>Example Organization</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>3da012d6-9b32-43b6-a7c0-ead3e814ac2f</string>
+</dict>
+</plist>

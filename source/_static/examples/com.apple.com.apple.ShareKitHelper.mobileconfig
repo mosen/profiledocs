@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>PayloadDescription</key>
+			<string>ShareKit Payload</string>
+			<key>PayloadDisplayName</key>
+			<string>ShareKit Payload</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.com.apple.ShareKitHelper</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>com.apple.com.apple.ShareKitHelper</string>
+			<key>PayloadUUID</key>
+			<string></string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>SHKAllowedShareServices</key>
+			<array>
+				<string>com.apple.share.AirDrop</string>
+			</array>
+			<key>SHKDeniedShareServices</key>
+			<array>
+				<string>com.apple.share.AirDrop</string>
+			</array>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Example: ShareKit Payload</string>
+	<key>PayloadDisplayName</key>
+	<string>Example: ShareKit Payload</string>
+	<key>PayloadIdentifier</key>
+	<string>com.apple.com.apple.ShareKitHelper.example</string>
+	<key>PayloadOrganization</key>
+	<string>Example Organization</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>df480a47-b492-41d7-80c3-0e3bdffd7c6f</string>
+</dict>
+</plist>

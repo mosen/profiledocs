@@ -46,7 +46,7 @@ MDM Access Rights can be constructed from a bitmask by ORing the following value
 - 1024: Allow security-related queries.
 - 2048: Allow manipulation of settings. Availability: Available in iOS 5.0 and later. Available in OS X 10.9 for certain commands.
 - 4096: Allow app management. Availability: Available in iOS 5.0 and later. Available in OS X 10.9 for certain commands.
-May not be zero. If 2 is specified, 1 must also be specified. If 128 is specified, 64 must also be specified.
+    May not be zero. If 2 is specified, 1 must also be specified. If 128 is specified, 64 must also be specified.
 
 Links
 -----

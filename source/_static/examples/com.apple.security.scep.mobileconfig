@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>PayloadContent</key>
+			<dict>
+				<key>CAFingerprint</key>
+				<string>Base64EncodedDataHere==</string>
+				<key>Challenge</key>
+				<string></string>
+				<key>GetCACaps</key>
+				<dict>
+				</dict>
+				<key>KeyType</key>
+				<string>RSA</string>
+				<key>KeyUsage</key>
+				<integer>0</integer>
+				<key>Keysize</key>
+				<integer>1024</integer>
+				<key>Name</key>
+				<string></string>
+				<key>Retries</key>
+				<integer>3</integer>
+				<key>RetryDelay</key>
+				<integer>10</integer>
+				<key>Subject</key>
+				<array>
+					<array>
+						<array>
+							<string></string>
+						</array>
+					</array>
+				</array>
+				<key>SubjectAltName</key>
+				<dict>
+					<key>dNSName</key>
+					<string></string>
+					<key>ntPrincipalName</key>
+					<string></string>
+					<key>rfc822Name</key>
+					<string></string>
+					<key>uniformResourceIdentifier</key>
+					<string></string>
+				</dict>
+				<key>URL</key>
+				<string></string>
+			</dict>
+			<key>PayloadDescription</key>
+			<string>Configures SCEP settings</string>
+			<key>PayloadDisplayName</key>
+			<string>SCEP</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.security.scep</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>com.apple.security.scep</string>
+			<key>PayloadUUID</key>
+			<string></string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Example: Use this section to define settings for configuration access to SCEP servers.</string>
+	<key>PayloadDisplayName</key>
+	<string>Example: SCEP</string>
+	<key>PayloadIdentifier</key>
+	<string>com.apple.security.scep.example</string>
+	<key>PayloadOrganization</key>
+	<string>Example Organization</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>7ff4393f-5568-4724-b785-963be5678d14</string>
+</dict>
+</plist>

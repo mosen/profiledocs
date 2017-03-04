@@ -2,6 +2,7 @@
 
 Energy Saver
 ============
+:download:`Template <../_static/examples/com.apple.MCX.mobileconfig>`
 
 This payload describes Energy Saver / Power Management settings.
 For more information on the individual settings you can also consult the :command:`pmset(1)` tool.

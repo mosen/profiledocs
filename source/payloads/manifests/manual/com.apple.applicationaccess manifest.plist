@@ -960,6 +960,8 @@
 			<true/>
 			<key>pfm_ios_min</key>
 			<string>9.0</string>
+			<key>pfm_macos_min</key>
+			<string>10.12</string>
 		</dict>
 		<dict>
 			<key>pfm_name</key>
@@ -1209,7 +1211,7 @@
 			<key>pfm_description</key>
 			<string>Accept cookies: 0 - Never, 1 - From current website only (iOS 8) or visited sites (pre-iOS 8), 1.5 - From websites I visit, 2 - Always</string>
 			<key>pfm_type</key>
-			<string>integer</string>
+			<string>real</string>
 			<key>pfm_range_list</key>
 			<array>
 				<integer>0</integer>
@@ -1485,6 +1487,8 @@
 			<true/>
 			<key>pfm_ios_min</key>
 			<string>7.0</string>
+			<key>pfm_macos_min</key>
+			<string>10.12.4</string>
 		</dict>
 		<dict>
 			<key>pfm_name</key>
@@ -1572,6 +1576,34 @@
                 </dict>
             </array>
         </dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>allowAutoUnlock</string>
+			<key>pfm_title</key>
+			<string>Allow macOS auto unlock</string>
+			<key>pfm_description</key>
+			<string>If set to false, disallows macOS auto unlock. Defaults to true.</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_macos_min</key>
+			<string>10.12</string>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>allowCloudDesktopAndDocuments</string>
+			<key>pfm_title</key>
+			<string>Allow cloud desktop and documents</string>
+			<key>pfm_description</key>
+			<string>If set to false, disallows macOS cloud desktop and document services. Defaults to true.</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+			<key>pfm_default</key>
+			<true/>
+			<key>pfm_macos_min</key>
+			<string>10.12.4</string>
+		</dict>
     </array>
 </dict>
 </plist>
