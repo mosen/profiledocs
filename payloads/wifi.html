@@ -1157,25 +1157,31 @@ and CoreWLAN will only return AirPort devices.</p>
 <td>If TTLS, PEAP, or EAP-FAST is used, this string is used instead of the user&#8217;s identity outside the encrypted tunnel. This value can be used to mask the true identity of the person using the network</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>EAPFASTUsePAC</td>
+<tr class="row-odd"><td>SystemModeCredentialsSource</td>
+<td>string</td>
+<td>System Profile Credentials Source</td>
+<td>Use an alternate set of credentials when in System mode (AKA not a loginwindow profile). This can be used to tell EAPOLClient to use the computer password in a bound active directory scenario for authentication.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>EAPFASTUsePAC</td>
 <td>boolean</td>
 <td>Use PAC</td>
 <td>If set, the device will use an existing PAC if it&#8217;s present. Otherwise the server must present its identity using a certificate</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>EAPFASTProvisionPAC</td>
+<tr class="row-odd"><td>EAPFASTProvisionPAC</td>
 <td>boolean</td>
 <td>Provision PAC</td>
 <td>If set, provisions the device </td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>EAPFASTProvisionPACAnonymously</td>
+<tr class="row-even"><td>EAPFASTProvisionPACAnonymously</td>
 <td>boolean</td>
 <td>Provision PAC Anonymously</td>
 <td>If set, provisions the device anonymously. Note that there are known man-in-the-middle attacks for anonymous provisioning</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>EAPSIMNumberOfRANDs</td>
+<tr class="row-odd"><td>EAPSIMNumberOfRANDs</td>
 <td>integer</td>
 <td>Allow Two RANDs</td>
 <td>The minimum number of RAND values accepted from the server. 3 is the default, and 2 is allowed, but offers less security. For use with EAP-SIM only.</td>

@@ -20,6 +20,9 @@ the interface with the highest service order priority.
 Payloads without **active** in the name apply to Ethernet interfaces according to service order regardless of whether
 the interface is working or not.
 
+.. warning:: If you change the active ethernet interface after the profile is installed, it will not apply to the
+    newly active interface.
+
 Summary
 -------
 
