@@ -57,6 +57,7 @@ Keys (802.1x)
 .. pfmkey:: EAPClientConfiguration:TLSAllowTrustExceptions manifests/manual/com.apple.wifi.managed manifest.plist
 .. pfmkey:: EAPClientConfiguration:TTLSInnerAuthentication manifests/manual/com.apple.wifi.managed manifest.plist
 .. pfmkey:: EAPClientConfiguration:OuterIdentity manifests/manual/com.apple.wifi.managed manifest.plist
+.. pfmkey:: EAPClientConfiguration:SystemModeCredentialsSource manifests/manual/com.apple.wifi.managed manifest.plist
 .. pfmkey:: EAPClientConfiguration:EAPFASTUsePAC manifests/manual/com.apple.wifi.managed manifest.plist
 .. pfmkey:: EAPClientConfiguration:EAPFASTProvisionPAC manifests/manual/com.apple.wifi.managed manifest.plist
 .. pfmkey:: EAPClientConfiguration:EAPFASTProvisionPACAnonymously manifests/manual/com.apple.wifi.managed manifest.plist

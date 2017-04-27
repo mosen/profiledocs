@@ -172,6 +172,11 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#substitution-variables">Substitution Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#unified-logging">Unified Logging</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#scep-networking">SCEP Networking</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#certificate-payload-plugin">Certificate Payload Plugin</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#links">Links</a></li>
 </ul>
 </li>
@@ -825,6 +830,35 @@ For example, /C=US/O=Apple Inc./CN=foo/1.2.5.3=bar, which would translate to:</p
 <dt><code class="docutils literal"><span class="pre">%SerialNumber%</span></code></dt>
 <dd>mac serial number</dd>
 </dl>
+</div>
+<div class="section" id="unified-logging">
+<h2>Unified Logging<a class="headerlink" href="#unified-logging" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="scep-networking">
+<h3>SCEP Networking<a class="headerlink" href="#scep-networking" title="Permalink to this headline">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Console:</th><td class="field-body"><code class="docutils literal"><span class="pre">subsystem:com.apple.SCEP</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">CLI:</th><td class="field-body"><code class="docutils literal"><span class="pre">log</span> <span class="pre">show</span> <span class="pre">--info</span> <span class="pre">--debug</span> <span class="pre">--predicate</span> <span class="pre">'subsystem</span> <span class="pre">==</span> <span class="pre">&quot;com.apple.SCEP&quot;'</span> <span class="pre">--last</span> <span class="pre">1h</span></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="certificate-payload-plugin">
+<h3>Certificate Payload Plugin<a class="headerlink" href="#certificate-payload-plugin" title="Permalink to this headline">¶</a></h3>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Console:</th><td class="field-body"><code class="docutils literal"><span class="pre">subsystem:com.apple.ManagedClient</span> <span class="pre">library:Certificate</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">CLI:</th><td class="field-body"><code class="docutils literal"><span class="pre">log</span> <span class="pre">show</span> <span class="pre">--info</span> <span class="pre">--debug</span> <span class="pre">--predicate</span> <span class="pre">'(subsystem</span> <span class="pre">==</span> <span class="pre">&quot;com.apple.ManagedClient&quot;)</span> <span class="pre">&amp;&amp;</span> <span class="pre">(senderImagePath</span> <span class="pre">ENDSWITH</span> <span class="pre">&quot;Certificate&quot;)'</span> <span class="pre">--last</span> <span class="pre">1h</span></code></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 <div class="section" id="links">
 <h2>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>

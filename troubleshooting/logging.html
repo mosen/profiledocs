@@ -95,6 +95,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#push-notifications">Push Notifications</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#mdm-debugging">MDM Debugging</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#mcx">MCX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#unified-logging-predicates">Unified Logging Predicates</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="mdmclient.html">mdmclient</a></li>
@@ -199,6 +200,25 @@ utility like so:</p>
 <span class="n">sudo</span> <span class="n">defaults</span> <span class="n">write</span> <span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Preferences</span><span class="o">/</span><span class="n">com</span><span class="o">.</span><span class="n">apple</span><span class="o">.</span><span class="n">MCXDebug</span> <span class="n">collateLogs</span> <span class="mi">1</span>
 </pre></div>
 </div>
+</div>
+<div class="section" id="unified-logging-predicates">
+<h2>Unified Logging Predicates<a class="headerlink" href="#unified-logging-predicates" title="Permalink to this headline">¶</a></h2>
+<p>Various predicates can be directly entered into the <em>Console.app</em> and saved.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Sometimes if you search by process name, you get a lot of noise. Example: searching for <strong>mdmclient</strong> forces
+you to wade through a ton of push service notifications.</p>
+</div>
+<p>Some useful predicates:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">subsystem:com.apple.ManagedClient</span></code> Messages in this category cover a broad range of profile installation messages.</li>
+<li><code class="docutils literal"><span class="pre">subsystem:com.apple.securityd</span></code> Interactions with the keychain</li>
+<li><code class="docutils literal"><span class="pre">category:SCEP.fw</span></code> SCEP network requests only (no warnings on signature verification etc).</li>
+</ul>
+<p>Payload specific combinations:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">subsystem:com.apple.ManagedClient</span> <span class="pre">library:Certificate</span></code> Certificate payload messages</li>
+</ul>
 </div>
 </div>
 

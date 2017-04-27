@@ -215,6 +215,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#com.apple.wifi.managed-TLSAllowTrustExceptions-auto">TLSAllowTrustExceptions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#com.apple.wifi.managed-TTLSInnerAuthentication-auto">TTLSInnerAuthentication</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#com.apple.wifi.managed-OuterIdentity-auto">OuterIdentity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.wifi.managed-SystemModeCredentialsSource-auto">SystemModeCredentialsSource</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#com.apple.wifi.managed-EAPFASTUsePAC-auto">EAPFASTUsePAC</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#com.apple.wifi.managed-EAPFASTProvisionPAC-auto">EAPFASTProvisionPAC</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#com.apple.wifi.managed-EAPFASTProvisionPACAnonymously-auto">EAPFASTProvisionPACAnonymously</a></li>
@@ -1520,6 +1521,46 @@ and CoreWLAN will only return AirPort devices.</p>
 </tr>
 </tbody>
 </table>
+</div>
+<div class="section" id="com.apple.wifi.managed-SystemModeCredentialsSource-auto">
+<h3>SystemModeCredentialsSource<a class="headerlink" href="#com.apple.wifi.managed-SystemModeCredentialsSource-auto" title="Permalink to this headline">¶</a></h3>
+<p>System Profile Credentials Source</p>
+<p>Use an alternate set of credentials when in System mode (AKA not a loginwindow profile). This can be used to tell EAPOLClient to use the computer password in a bound active directory scenario for authentication.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<h3>Valid Choices<a class="headerlink" href="#com.apple.wifi.managed-SystemModeCredentialsSource-auto" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>ActiveDirectory</li>
+</ul>
 </div>
 <div class="section" id="com.apple.wifi.managed-EAPFASTUsePAC-auto">
 <h3>EAPFASTUsePAC<a class="headerlink" href="#com.apple.wifi.managed-EAPFASTUsePAC-auto" title="Permalink to this headline">¶</a></h3>
