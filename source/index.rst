@@ -15,6 +15,8 @@ Welcome to MacAdmins Profile Reference's documentation!
 
    payloads/index.rst
 
+   mcx/index.rst
+
    troubleshooting/index.rst
 
    macos/index.rst
