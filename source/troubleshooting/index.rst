@@ -8,4 +8,6 @@ Troubleshooting
 
     logging.rst
     mdmclient.rst
+    apns.rst
+
 
