@@ -146,6 +146,8 @@
                 <key>pfm_subkeys</key>
                 <array>
                     <dict>
+                        <key>pfm_name</key>
+                        <string>customBaseURLItem</string>
                         <key>pfm_type</key>
                         <string>string</string>
                     </dict>
