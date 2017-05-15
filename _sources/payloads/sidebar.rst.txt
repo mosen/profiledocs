@@ -2,6 +2,7 @@
 
 Sidebar
 =======
+:download:`Template <../_static/examples/com.apple.MCX.sidebar.mobileconfig>`
 
 Summary
 -------
@@ -16,3 +17,10 @@ Keys
 .. pfmkey:: shouldAddUserHome manifests/manual/com.apple.MCX.sidebar manifest.plist
 .. pfmkey:: hideiCloudDrive manifests/manual/com.apple.MCX.sidebar manifest.plist
 .. pfmkey:: customBaseURLs manifests/manual/com.apple.MCX.sidebar manifest.plist
+.. pfmkey:: SidebarDestination manifests/manual/com.apple.MCX.sidebar manifest.plist
+
+Custom URLs
+^^^^^^^^^^^
+
+.. pfm:: manifests/manual/com.apple.MCX.sidebar manifest.plist
+    :key: customBaseURLs

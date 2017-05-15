@@ -1,0 +1,297 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Microsoft OneDrive &mdash; Configuration Profiles  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Configuration Profiles  documentation" href="../index.html"/>
+        <link rel="up" title="Custom Settings" href="index.html"/>
+        <link rel="next" title="Troubleshooting" href="../troubleshooting/index.html"/>
+        <link rel="prev" title="Touch Bar (Control Strip)" href="controlstrip.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Configuration Profiles
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html#submitting-an-error">Submitting an error</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html#writing-documentation">Writing Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../official.html">Official Links and Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manifest.html">Manifest File Format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extmanifest.html">Extended Manifest Format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../payloads/index.html">Payloads</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Custom Settings</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="chrome.html">Google Chrome</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controlstrip.html">Touch Bar (Control Strip)</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Microsoft OneDrive</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#links">Links</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../macos/index.html">macOS Subsystem Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pdp/index.html">Profile Domain Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Configuration Profiles</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Custom Settings</a> &raquo;</li>
+      
+    <li>Microsoft OneDrive</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/mcx/onedrive.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="microsoft-onedrive">
+<h1>Microsoft OneDrive<a class="headerlink" href="#microsoft-onedrive" title="Permalink to this headline">¶</a></h1>
+<p>These are custom settings and must be placed in a <code class="docutils literal"><span class="pre">com.apple.ManagedClient.preferences</span></code> payload.</p>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="43%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Title</th>
+<th class="head">Description</th>
+<th class="head">Required</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>DisablePersonalSync</td>
+<td>boolean</td>
+<td>Disable personal OneDrive accounts</td>
+<td>Blocks users from signing in and syncing files in personal OneDrive accounts.
+                                                            If this key is set after a user has set up sync with a personal account, the user will be signed out.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>AutomaticUploadBandwidthPercentage</td>
+<td>integer</td>
+<td>Percentage of local bandwidth used</td>
+<td>This parameter determines the percentage of local upload bandwidth that the sync client can use. Accepted values are from 1 through 99.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>HideDockIcon</td>
+<td>boolean</td>
+<td>Hide the OneDrive dock icon when running</td>
+<td>When set to true, this parameter hides the OneDrive dock icon even when the application is running.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>IsBusinessProvisioned</td>
+<td>boolean</td>
+<td>IsBusinessProvisioned</td>
+<td></td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>DefaultToBusinessFRE</td>
+<td>boolean</td>
+<td>Default to OneDrive Business</td>
+<td>Default to OneDrive Business instead of OneDrive Personal</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>EnableAddAccounts</td>
+<td>boolean</td>
+<td>Allow users to add accounts to OneDrive</td>
+<td>Allow users to add accounts to OneDrive</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>Tenants</td>
+<td>dict</td>
+<td>Specify default location by tenant</td>
+<td>Specifies the default location of the OneDrive folder for each tenant</td>
+<td>n/a</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="links">
+<h2>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://support.office.com/en-us/article/Configure-the-new-OneDrive-sync-client-on-macOS-eadddc4e-edc0-4982-9f50-2aef5038c307">Official Documentation</a>.</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../troubleshooting/index.html" class="btn btn-neutral float-right" title="Troubleshooting" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="controlstrip.html" class="btn btn-neutral" title="Touch Bar (Control Strip)" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, MacAdmins Community.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

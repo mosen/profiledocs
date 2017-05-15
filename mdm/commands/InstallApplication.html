@@ -87,6 +87,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../manifest.html">Manifest File Format</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../extmanifest.html">Extended Manifest Format</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../payloads/index.html">Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mcx/index.html">Custom Settings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">Troubleshooting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../macos/index.html">macOS Subsystem Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../pdp/index.html">Profile Domain Plugins</a></li>
@@ -141,7 +142,51 @@
 <h2>Caveats<a class="headerlink" href="#caveats" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>It is impossible to know whether the installation succeeded or failed.</li>
+<li>If storedownloadd fails, it blocks all further application installs <a class="reference external" href="https://openradar.appspot.com/26517261">OpenRADAR</a>. courtesy of bruienne.</li>
 </ul>
+</div>
+<div class="section" id="simultaneous-downloads">
+<h2>Simultaneous Downloads<a class="headerlink" href="#simultaneous-downloads" title="Permalink to this headline">¶</a></h2>
+<p>Groob writes:</p>
+<p>An <code class="docutils literal"><span class="pre">InstallApplication</span></code> command consists of two parts. A manifest plist and a signed pkg that the manifest points to.
+Once the MDM server queues an <code class="docutils literal"><span class="pre">InstallApplication</span></code>, the mdmclient process will defer the download to storedownloadd which does the following:</p>
+<ol class="arabic simple">
+<li>Sends &#8220;Acknowledged&#8221; or &#8220;NotNow&#8221; to the MDM server.</li>
+<li>Uses HTTP GET request to fetch the manifest.</li>
+<li>Caches the manifest locally. future requests skip step 1 and use the local cache.
+(I haven&#8217;t done any investigation into how the cache is invalidated, but that&#8217;s not important here.</li>
+</ol>
+<p>What&#8217;s important is that there are two initial requests for a single InstallApplication command.
+- uses HTTP GET request to download the .pkg
+- installs the pkg.
+We can observe this action in the logs:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># client log</span>
+<span class="mi">2017</span><span class="o">-</span><span class="mi">04</span><span class="o">-</span><span class="mi">29</span> <span class="mi">21</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mf">02.362540</span><span class="o">-</span><span class="mi">0400</span> <span class="mh">0x4f27</span>     <span class="n">Default</span>     <span class="mh">0x0</span>                  <span class="mi">616</span>    <span class="n">mdmclient</span><span class="p">:</span> <span class="p">[</span><span class="n">com</span><span class="o">.</span><span class="n">apple</span><span class="o">.</span><span class="n">ManagedClient</span><span class="o">.</span><span class="n">InstallApplication</span><span class="p">]</span> <span class="n">Scheduled</span> <span class="n">InstallApplication</span> <span class="n">from</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">dev</span><span class="o">.</span><span class="n">micromdm</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">repo</span><span class="o">/</span><span class="n">munkitools</span><span class="o">.</span><span class="n">plist</span>
+<span class="mi">2017</span><span class="o">-</span><span class="mi">04</span><span class="o">-</span><span class="mi">29</span> <span class="mi">21</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mf">03.892894</span><span class="o">-</span><span class="mi">0400</span> <span class="mh">0x4f83</span>     <span class="n">Default</span>     <span class="mh">0x0</span>                  <span class="mi">621</span>    <span class="n">storedownloadd</span><span class="p">:</span> <span class="p">(</span><span class="n">StoreFoundation</span><span class="p">)</span> <span class="p">[</span><span class="n">com</span><span class="o">.</span><span class="n">apple</span><span class="o">.</span><span class="n">commerce</span><span class="o">.</span><span class="n">CKLegacy</span><span class="p">]</span> <span class="n">ISStoreURLOperation</span><span class="p">:</span> <span class="n">Starting</span> <span class="n">URL</span> <span class="n">operation</span> <span class="k">with</span> <span class="n">url</span><span class="o">=</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">dev</span><span class="o">.</span><span class="n">micromdm</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">repo</span><span class="o">/</span><span class="n">munkitools</span><span class="o">.</span><span class="n">pkg</span> <span class="o">/</span> <span class="n">bagKey</span><span class="o">=</span><span class="p">(</span><span class="n">null</span><span class="p">)</span>
+
+<span class="c1"># server log</span>
+<span class="mf">10.0</span><span class="o">.</span><span class="mf">0.1</span> <span class="o">-</span> <span class="o">-</span> <span class="p">[</span><span class="mi">01</span><span class="o">/</span><span class="n">May</span><span class="o">/</span><span class="mi">2017</span><span class="p">:</span><span class="mi">15</span><span class="p">:</span><span class="mi">34</span><span class="p">:</span><span class="mi">58</span> <span class="o">+</span><span class="mi">0000</span><span class="p">]</span> <span class="s2">&quot;GET /repo/munkitools.plist HTTP/1.1&quot;</span> <span class="mi">200</span> <span class="mi">754</span> <span class="s2">&quot;&quot;</span> <span class="s2">&quot;MacAppStore/2.2 (Macintosh; OS X 10.12.3;</span>
+<span class="mi">16</span><span class="n">D30</span><span class="p">)</span> <span class="n">AppleWebKit</span><span class="o">/</span><span class="mf">2602.4</span><span class="o">.</span><span class="mi">8</span><span class="s2">&quot;</span>
+<span class="mf">10.0</span><span class="o">.</span><span class="mf">0.1</span> <span class="o">-</span> <span class="o">-</span> <span class="p">[</span><span class="mi">01</span><span class="o">/</span><span class="n">May</span><span class="o">/</span><span class="mi">2017</span><span class="p">:</span><span class="mi">15</span><span class="p">:</span><span class="mi">34</span><span class="p">:</span><span class="mi">59</span> <span class="o">+</span><span class="mi">0000</span><span class="p">]</span> <span class="s2">&quot;GET /repo/munkitools.pkg HTTP/1.1&quot;</span> <span class="mi">200</span> <span class="mi">730798</span> <span class="s2">&quot;&quot;</span> <span class="s2">&quot;MacAppStore/2.2 (Macintosh; OS X 10.</span>
+</pre></div>
+</div>
+<p>The Problem:</p>
+<p>Queueing one <code class="docutils literal"><span class="pre">InstallApplication</span></code> command before the previous one completes will most likely cause only one install to actually succeed.
+Here&#8217;s what I&#8217;m seeing in the logs:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># acknowledged two scheduled IA commands</span>
+<span class="n">connected</span> <span class="n">udid</span><span class="o">=</span><span class="mi">4</span><span class="n">A7A3EC2</span><span class="o">-</span><span class="mi">6755</span><span class="o">-</span><span class="mi">4113</span><span class="o">-</span><span class="n">A5AF</span><span class="o">-</span><span class="n">AC10574D953A</span> <span class="nb">type</span><span class="o">=</span><span class="n">InstallApplication</span><span class="p">,</span> <span class="n">status</span><span class="o">=</span><span class="n">Acknowledged</span>
+<span class="n">connected</span> <span class="n">udid</span><span class="o">=</span><span class="mi">4</span><span class="n">A7A3EC2</span><span class="o">-</span><span class="mi">6755</span><span class="o">-</span><span class="mi">4113</span><span class="o">-</span><span class="n">A5AF</span><span class="o">-</span><span class="n">AC10574D953A</span> <span class="nb">type</span><span class="o">=</span><span class="n">InstallApplication</span><span class="p">,</span> <span class="n">status</span><span class="o">=</span><span class="n">Acknowledged</span>
+
+<span class="c1">#</span>
+<span class="mf">10.0</span><span class="o">.</span><span class="mf">0.1</span> <span class="o">-</span> <span class="o">-</span> <span class="p">[</span><span class="mi">01</span><span class="o">/</span><span class="n">May</span><span class="o">/</span><span class="mi">2017</span><span class="p">:</span><span class="mi">15</span><span class="p">:</span><span class="mi">34</span><span class="p">:</span><span class="mi">58</span> <span class="o">+</span><span class="mi">0000</span><span class="p">]</span> <span class="s2">&quot;GET /repo/package-A.plist HTTP/1.1&quot;</span> <span class="mi">200</span> <span class="mi">758</span> <span class="s2">&quot;&quot;</span> <span class="s2">&quot;MacAppStore/2.2 (Macintosh; OS X 10.12.3; 16D30) AppleWebKit/2602.4.8&quot;</span>
+<span class="mf">10.0</span><span class="o">.</span><span class="mf">0.1</span> <span class="o">-</span> <span class="o">-</span> <span class="p">[</span><span class="mi">01</span><span class="o">/</span><span class="n">May</span><span class="o">/</span><span class="mi">2017</span><span class="p">:</span><span class="mi">15</span><span class="p">:</span><span class="mi">34</span><span class="p">:</span><span class="mi">58</span> <span class="o">+</span><span class="mi">0000</span><span class="p">]</span> <span class="s2">&quot;GET /repo/package-B.plist HTTP/1.1&quot;</span> <span class="mi">200</span> <span class="mi">754</span> <span class="s2">&quot;&quot;</span> <span class="s2">&quot;MacAppStore/2.2 (Macintosh; OS X 10.12.3; 16D30) AppleWebKit/2602.4.8&quot;</span>
+<span class="mf">10.0</span><span class="o">.</span><span class="mf">0.1</span> <span class="o">-</span> <span class="o">-</span> <span class="p">[</span><span class="mi">01</span><span class="o">/</span><span class="n">May</span><span class="o">/</span><span class="mi">2017</span><span class="p">:</span><span class="mi">15</span><span class="p">:</span><span class="mi">34</span><span class="p">:</span><span class="mi">59</span> <span class="o">+</span><span class="mi">0000</span><span class="p">]</span> <span class="s2">&quot;GET /repo/package-A.pkg HTTP/1.1&quot;</span> <span class="mi">200</span> <span class="mi">730798</span> <span class="s2">&quot;&quot;</span> <span class="s2">&quot;MacAppStore/2.2 (Macintosh; OS X 10.</span>
+<span class="c1"># and done. package-B.pkg is never downloaded.</span>
+</pre></div>
+</div>
+<p>The storedownloadd is scheduled to download two or more applications, but it ends up losing track of things and only downloads one.
+This problem doesn&#8217;t happen if both installs are being repeated and the plist is not being downloaded.
+The problem also doesn&#8217;t happen if the <code class="docutils literal"><span class="pre">InstallApplication</span></code> commands are spaced out such that the first install is completed before the second one starts.</p>
 </div>
 <div class="section" id="os-specific-notes">
 <h2>OS Specific Notes<a class="headerlink" href="#os-specific-notes" title="Permalink to this headline">¶</a></h2>
@@ -162,6 +207,7 @@
 <h2>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><a class="reference external" href="https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW52">Official Documentation</a>.</li>
+<li><a class="reference external" href="https://github.com/micromdm/micromdm/issues/151#issuecomment-298535040">MicroMDM Issue #151 groob</a>.</li>
 </ul>
 </div>
 </div>
