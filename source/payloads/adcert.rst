@@ -37,6 +37,7 @@ Links
 -----
 
 - `macmules blog: OSX & AD CERTIFICATE REQUESTS, SOME TIPS <https://macmule.com/2015/09/06/osx-ad-certificate-requests-some-tips/>`_.
+- `Certificate Renewal Behaviour <https://support.apple.com/en-us/HT204446>`_.
 
 Troubleshooting
 ---------------
@@ -48,4 +49,6 @@ Uninstall Behaviour
 -------------------
 
 - The certificate is not revoked upon uninstallation.
+- The certificate is not removed from keychain, but the private key IS removed. The private key is named after the issuing host.
+
 
