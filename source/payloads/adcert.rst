@@ -28,10 +28,24 @@ Keys
 .. pfmkey:: UserName manifests/manual/com.apple.ADCertificate.managed manifest.plist
 .. pfmkey:: Password manifests/manual/com.apple.ADCertificate.managed manifest.plist
 .. pfmkey:: PromptForCredentials manifests/manual/com.apple.ADCertificate.managed manifest.plist
+
+.. warning:: PromptForCredentials seems to have no effect on manually installed profiles. They still ask for credentials.
+
 .. pfmkey:: AllowAllAppsAccess manifests/manual/com.apple.ADCertificate.managed manifest.plist
 
 Links
 -----
 
 - `macmules blog: OSX & AD CERTIFICATE REQUESTS, SOME TIPS <https://macmule.com/2015/09/06/osx-ad-certificate-requests-some-tips/>`_.
+
+Troubleshooting
+---------------
+
+- If you request a `User` certificate but the payload is in the `System` PayloadScope, the User certificate will be requested as the
+  computer account. Normally the certificate policy will deny this, so check that you have the correct scope.
+
+Uninstall Behaviour
+-------------------
+
+- The certificate is not revoked upon uninstallation.
 
