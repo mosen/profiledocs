@@ -88,7 +88,24 @@ The values of these can be obtained by running (in a Terminal window)::
 ``%SerialNumber%``
     mac serial number
 
+Unified Logging
+---------------
+
+SCEP Networking
+^^^^^^^^^^^^^^^
+
+:Console: ``subsystem:com.apple.SCEP``
+:CLI: ``log show --info --debug --predicate 'subsystem == "com.apple.SCEP"' --last 1h``
+
+Certificate Payload Plugin
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+:Console: ``subsystem:com.apple.ManagedClient library:Certificate``
+:CLI: ``log show --info --debug --predicate '(subsystem == "com.apple.ManagedClient") && (senderImagePath ENDSWITH "Certificate")' --last 1h``
+
+
 Links
 -----
 
 - `Official Documentation <https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW18>`_.
+- `Certificate Renewal Behaviour <https://support.apple.com/en-us/HT204446>`_.

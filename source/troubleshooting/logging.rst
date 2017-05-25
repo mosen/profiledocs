@@ -55,3 +55,23 @@ Commands::
 
     sudo defaults write /Library/Preferences/com.apple.MCXDebug debugOutput -2
     sudo defaults write /Library/Preferences/com.apple.MCXDebug collateLogs 1
+
+
+Unified Logging Predicates
+--------------------------
+
+Various predicates can be directly entered into the *Console.app* and saved.
+
+.. note:: Sometimes if you search by process name, you get a lot of noise. Example: searching for **mdmclient** forces
+    you to wade through a ton of push service notifications.
+
+Some useful predicates:
+
+- ``subsystem:com.apple.ManagedClient`` Messages in this category cover a broad range of profile installation messages.
+- ``subsystem:com.apple.securityd`` Interactions with the keychain
+- ``category:SCEP.fw`` SCEP network requests only (no warnings on signature verification etc).
+
+Payload specific combinations:
+
+- ``subsystem:com.apple.ManagedClient library:Certificate`` Certificate payload messages
+

@@ -14,6 +14,7 @@ Welcome to MacAdmins Profile Reference's documentation!
    extmanifest.rst
 
    payloads/index.rst
+   mcx/index.rst
 
    troubleshooting/index.rst
 
