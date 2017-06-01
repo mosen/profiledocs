@@ -140,7 +140,7 @@
             </dict>
             <dict>
                 <key>pfm_description</key>
-                <string>Base URLs to custom locations.</string>
+                <string>Base URLs to custom locations. Array of string URIs</string>
                 <key>pfm_name</key>
                 <string>customBaseURLs</string>
                 <key>pfm_subkeys</key>
@@ -168,9 +168,11 @@
                 <key>pfm_title</key>
                 <string>Maybe after before of custom urls</string>
                 <key>pfm_description</key>
-                <string>Unknown, Maybe after before of custom urls</string>
+                <string>Destination of sidebar item</string>
                 <key>pfm_type</key>
                 <string>string</string>
+                <key>pfm_default</key>
+                <string>Favorites</string>
             </dict>
         </array>
     </dict>

@@ -1,27 +1,14 @@
-.. _payloadtype-com.apple.ManagedClient.preferences:
+.. _payloadtype-anything:
 
-Custom Settings (MCX)
-=====================
+Custom Settings
+===============
 
-This is a catch-all payload for writing defaults in any given preference domain.
-It is the macOS equivalent of :ref:`payloadtype-com.apple.defaults.managed`.
+A preference may be managed by using the bundle id name as the value of the **PayloadType** variable.
 
-Summary
--------
+You may append ``.ByHost`` to manage the preference as a ByHost preference. The MCX post composite step will automatically
+apply the managed preference as a ByHost preference if this string is present.
 
-.. pfmheader:: manifests/manual/com.apple.ManagedClient.preferences manifest.plist
-.. pfm:: manifests/manual/com.apple.ManagedClient.preferences manifest.plist
-
-Keys
-----
-
-.. pfmkey:: PayloadContent manifests/manual/com.apple.ManagedClient.preferences manifest.plist
-
-PayloadContent Keys
-"""""""""""""""""""
-
-.. pfm:: manifests/manual/com.apple.ManagedClient.preferences manifest.plist
-   :key: PayloadContent:PreferenceDomainHere
+-[MCX_PostComposite postCompositeByHost:userHome:]:
 
 
 Forced

@@ -4,6 +4,8 @@ mcx
 The mcx plugin takes care of a bunch of "legacy" profile domains that seem to be ported over from 10.6.
 Some of these domains still seem to receive updates.
 
+.. note:: The actual implementations of these are part of ManagedClient
+
 Domains
 -------
 

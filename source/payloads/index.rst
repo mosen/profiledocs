@@ -24,7 +24,7 @@ Payloads
     certroot.rst
     conference.rst
     coremediaio.rst
-    custom.rst
+    legacy_custom.rst
     dashwidgets.rst
     desktop.rst
     dictionary.rst

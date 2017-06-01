@@ -42,6 +42,9 @@ Links
 Troubleshooting
 ---------------
 
+.. warning:: As of approx 10.12.4 you can no longer select a transport. And you will not be able to install the payload
+    if the client is not bound to a directory.
+
 - If you request a `User` certificate but the payload is in the `System` PayloadScope, the User certificate will be requested as the
   computer account. Normally the certificate policy will deny this, so check that you have the correct scope.
 

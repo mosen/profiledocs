@@ -4,8 +4,7 @@ Sidebar
 =======
 :download:`Template <../_static/examples/com.apple.MCX.sidebar.mobileconfig>`
 
-.. warning:: This seems to be deprecated and will not work. Only the code to display payload detail in the profiles
-    window remains.
+.. warning:: This seems to be deprecated? calls LSSharedFileList
 
 Summary
 -------
