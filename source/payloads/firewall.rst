@@ -8,7 +8,10 @@ Available in macOS 10.12 and later. A Firewall payload manages the Application F
 
 - The payload must exist in a system-scoped profile.
 - If more than one profile contains this payload, the most restrictive union of settings will be used.
-- The "Automatically allow signed downloaded software" and "Automatically allow built-in software" options are not supported, but both will be forced **ON** when this payload is present.
+
+.. warning:: Apple claims that:
+    The "Automatically allow signed downloaded software" and "Automatically allow built-in software" options are not supported, but both will be forced **ON** when this payload is present.
+    However those options are not changed when the payload is installed. Only the UI is greyed out.
 
 Summary
 -------
