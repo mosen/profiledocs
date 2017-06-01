@@ -30,6 +30,7 @@ Domains
 - com.apple.MCX.sidebar (:ref:`payloadtype-com.apple.MCX.sidebar`)
 - com.apple.configurationprofile.identification (:ref:`payloadtype-com.apple.configurationprofile.identification`)
 - com.apple.ManagedClient.preferences (:ref:`payloadtype-com.apple.ManagedClient.preferences`)
+    .. note:: Although the MCX plugin handles ManagedClient.preferences it is actually a NOP. The handling is done in ManagedClient.
 - com.apple.Dictionary (:ref:`payloadtype-com.apple.Dictionary`)
 - com.apple.familycontrols.timelimits.v2 (:ref:`payloadtype-com.apple.familycontrols.timelimits.v2`)
 - com.apple.familycontrols.timelimits
