@@ -125,6 +125,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../finderburn.html">Finder (Disc Burning)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../firewall.html">Firewall</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../fv2.html">FileVault 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fvescrow.html">FileVault Recovery Key Escrow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../fv2redirect.html">FileVault Recovery Key Redirect</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../font.html">Font</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../gamecenter.html">Parental Control - Game Center</a></li>
@@ -1342,6 +1343,90 @@ resolver and the <em>SupplementalMatchDomains</em> list is ignored.</p>
 </div>
 <p>This name is used to validate the certificate sent by the IKE server.
 If not set, the Remote Identifier will be used to validate the certificate.</p>
+<div class="section" id="com.apple.vpn.managed-TLSMinimumVersion-auto">
+<h3>TLSMinimumVersion<a class="headerlink" href="#com.apple.vpn.managed-TLSMinimumVersion-auto" title="Permalink to this headline">¶</a></h3>
+<p>TLSMinimumVersion</p>
+<p>The minimum TLS version to be used with EAP-TLS authentication. Value may be 1.0, 1.1, or 1.2. If no value is specified, the default minimum is 1.0.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>1.0</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>10.11</td>
+<td>10.13</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<h3>Valid Choices<a class="headerlink" href="#com.apple.vpn.managed-TLSMinimumVersion-auto" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>1.0</li>
+<li>1.1</li>
+<li>1.2</li>
+</ul>
+</div>
+<div class="section" id="com.apple.vpn.managed-TLSMaximumVersion-auto">
+<h3>TLSMaximumVersion<a class="headerlink" href="#com.apple.vpn.managed-TLSMaximumVersion-auto" title="Permalink to this headline">¶</a></h3>
+<p>TLSMaximumVersion</p>
+<p>The maximum TLS version to be used with EAP-TLS authentication. Value may be 1.0, 1.1, or 1.2. If no value is specified, the default maximum is 1.2.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>1.2</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>10.11</td>
+<td>10.13</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<h3>Valid Choices<a class="headerlink" href="#com.apple.vpn.managed-TLSMaximumVersion-auto" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>1.0</li>
+<li>1.1</li>
+<li>1.2</li>
+</ul>
+</div>
 <div class="section" id="com.apple.vpn.managed-NATKeepAliveOffloadEnable-auto">
 <h3>NATKeepAliveOffloadEnable<a class="headerlink" href="#com.apple.vpn.managed-NATKeepAliveOffloadEnable-auto" title="Permalink to this headline">¶</a></h3>
 <p>NAT Keepalive offload for Always On VPN IKEv2 connections</p>

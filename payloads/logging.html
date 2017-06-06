@@ -125,6 +125,7 @@
 <li class="toctree-l2"><a class="reference internal" href="finderburn.html">Finder (Disc Burning)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="firewall.html">Firewall</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fv2.html">FileVault 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fvescrow.html">FileVault Recovery Key Escrow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fv2redirect.html">FileVault Recovery Key Redirect</a></li>
 <li class="toctree-l2"><a class="reference internal" href="font.html">Font</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gamecenter.html">Parental Control - Game Center</a></li>
@@ -588,6 +589,79 @@ The format of this dict is as below:</p>
 <h4>Propagate-with-Activity<a class="headerlink" href="#com.apple.system.logging-Propagate-with-Activity-auto" title="Permalink to this headline">¶</a></h4>
 <p>Messages attached to the activity tree</p>
 <p>Messages are attached to the activity tree in Console and crash dumps</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.system.logging-CategoryName-auto">
+<h4>CategoryName<a class="headerlink" href="#com.apple.system.logging-CategoryName-auto" title="Permalink to this headline">¶</a></h4>
+<p>Category Logging Options</p>
+<p>Default logging settings for the category specified by (CategoryName). This dictionary takes the same format as DEFAULT-OPTIONS.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>dictionary</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.system.logging-Enable-Oversize-Messages-auto">
+<h4>Enable-Oversize-Messages<a class="headerlink" href="#com.apple.system.logging-Enable-Oversize-Messages-auto" title="Permalink to this headline">¶</a></h4>
+<p>Enable Oversize Messages</p>
+<p>Enables large messages in the log. This WILL have
+                            a detrimental effect on performance.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="14%" />
