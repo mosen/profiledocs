@@ -109,7 +109,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../certroot.html">Certificate (Root CA)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../conference.html">Conference Room Display</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../coremediaio.html">Core Media IO (Camera)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../custom.html">Custom Settings (MCX)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../legacy_custom.html">Legacy Custom Settings (MCX)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../dashwidgets.html">Parental Control Dashboard Payload</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../desktop.html">Desktop Picture</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../dictionary.html">Dictionary (Parental Controls)</a></li>
@@ -450,6 +450,18 @@
 <td>string</td>
 <td>ServerCertificateCommonName</td>
 <td>Common name of the server certificate</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>TLSMinimumVersion</td>
+<td>string</td>
+<td>TLSMinimumVersion</td>
+<td>The minimum TLS version to be used with EAP-TLS authentication. Value may be 1.0, 1.1, or 1.2. If no value is specified, the default minimum is 1.0.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>TLSMaximumVersion</td>
+<td>string</td>
+<td>TLSMaximumVersion</td>
+<td>The maximum TLS version to be used with EAP-TLS authentication. Value may be 1.0, 1.1, or 1.2. If no value is specified, the default maximum is 1.2.</td>
 <td>n/a</td>
 </tr>
 <tr class="row-odd"><td>NATKeepAliveOffloadEnable</td>

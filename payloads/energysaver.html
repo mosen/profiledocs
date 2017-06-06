@@ -109,7 +109,7 @@
 <li class="toctree-l2"><a class="reference internal" href="certroot.html">Certificate (Root CA)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="conference.html">Conference Room Display</a></li>
 <li class="toctree-l2"><a class="reference internal" href="coremediaio.html">Core Media IO (Camera)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom.html">Custom Settings (MCX)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="legacy_custom.html">Legacy Custom Settings (MCX)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dashwidgets.html">Parental Control Dashboard Payload</a></li>
 <li class="toctree-l2"><a class="reference internal" href="desktop.html">Desktop Picture</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dictionary.html">Dictionary (Parental Controls)</a></li>
@@ -297,55 +297,97 @@ For more information on the individual settings you can also consult the <strong
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>DestroyFVKeyOnStandby</td>
+<tr class="row-even"><td>timeZone</td>
+<td>string</td>
+<td>Timezone</td>
+<td>Name of timezone, as found in /usr/share/zoneinfo. Basically relinks /etc/localtime but does not show in UI</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>timeServer</td>
+<td>string</td>
+<td>NTP Servers</td>
+<td>NTP Servers, separated by a comma. Appends to /etc/ntp.conf</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>EnableGuestAccount</td>
+<td>boolean</td>
+<td>Enable Guest</td>
+<td>Enable Guest</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>DisableGuestAccount</td>
+<td>boolean</td>
+<td>Enable Guest</td>
+<td>Enable Guest</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>DisableGuestSharedFolders</td>
+<td>boolean</td>
+<td>Enable Guest</td>
+<td>Enable Guest</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>forceInternetSharingOff</td>
+<td>boolean</td>
+<td>Enable Guest</td>
+<td>Enable Guest</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>DisableLocationServices</td>
+<td>boolean</td>
+<td>Enable Guest</td>
+<td>Enable Guest</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>DestroyFVKeyOnStandby</td>
 <td>boolean</td>
 <td>Destroy FileVault key on standby</td>
 <td>Destroy FileVault key on standby</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>SleepDisabled</td>
+<tr class="row-even"><td>SleepDisabled</td>
 <td>boolean</td>
 <td>Disable Sleep</td>
 <td>Key needs verification</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>com.apple.EnergySaver.desktop.ACPower-ProfileNumber</td>
+<tr class="row-odd"><td>com.apple.EnergySaver.desktop.ACPower-ProfileNumber</td>
 <td>integer</td>
 <td>Desktop Energy Saver Profile</td>
 <td>Desktop Energy Saver Profile (-1 for none?)</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>com.apple.EnergySaver.portable.ACPower-ProfileNumber</td>
+<tr class="row-even"><td>com.apple.EnergySaver.portable.ACPower-ProfileNumber</td>
 <td>integer</td>
 <td>Portable AC Power Energy Saver Profile</td>
 <td>Energy Saver Profile (-1 for none?)</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>com.apple.EnergySaver.portable.BatteryPower-ProfileNumber</td>
+<tr class="row-odd"><td>com.apple.EnergySaver.portable.BatteryPower-ProfileNumber</td>
 <td>integer</td>
 <td>Portable on Battery Power Energy Saver Profile</td>
 <td>Energy Saver Profile (-1 for none?)</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>com.apple.EnergySaver.desktop.ACPower</td>
+<tr class="row-even"><td>com.apple.EnergySaver.desktop.ACPower</td>
 <td>dict</td>
 <td>Desktop Energy Saver Settings</td>
 <td>Managed settings for the desktop energy profile</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>com.apple.EnergySaver.portable.ACPower</td>
+<tr class="row-odd"><td>com.apple.EnergySaver.portable.ACPower</td>
 <td>dict</td>
 <td>Desktop Energy Saver Settings</td>
 <td>Managed settings for the portable AC power energy profile</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>com.apple.EnergySaver.portable.BatteryPower</td>
+<tr class="row-even"><td>com.apple.EnergySaver.portable.BatteryPower</td>
 <td>dict</td>
 <td>Desktop Energy Saver Settings</td>
 <td>Managed settings for the portable battery power energy profile</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>com.apple.EnergySaver.desktop.Schedule</td>
+<tr class="row-odd"><td>com.apple.EnergySaver.desktop.Schedule</td>
 <td>dict</td>
 <td>Power Schedule</td>
 <td>Use this key to manage scheduled power on and power off events</td>

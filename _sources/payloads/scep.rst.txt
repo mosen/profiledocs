@@ -108,3 +108,4 @@ Links
 -----
 
 - `Official Documentation <https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW18>`_.
+- `Certificate Renewal Behaviour <https://support.apple.com/en-us/HT204446>`_.

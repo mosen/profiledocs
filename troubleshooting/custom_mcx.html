@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Touch Bar (Control Strip) &mdash; Configuration Profiles  documentation</title>
+  <title>Custom MCX Sequence &mdash; Configuration Profiles  documentation</title>
   
 
   
@@ -33,10 +33,7 @@
         <link rel="index" title="Index"
               href="../genindex.html"/>
         <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="Configuration Profiles  documentation" href="../index.html"/>
-        <link rel="up" title="Custom Settings" href="index.html"/>
-        <link rel="next" title="Microsoft Office 2016" href="office2016.html"/>
-        <link rel="prev" title="Google Chrome" href="chrome.html"/> 
+    <link rel="top" title="Configuration Profiles  documentation" href="../index.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -82,7 +79,7 @@
             
             
                 <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../contributing.html#submitting-an-error">Submitting an error</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../contributing.html#writing-documentation">Writing Documentation</a></li>
@@ -90,20 +87,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../manifest.html">Manifest File Format</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../extmanifest.html">Extended Manifest Format</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../payloads/index.html">Payloads</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Custom Settings</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="chrome.html">Google Chrome</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Touch Bar (Control Strip)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#keys">Keys</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#minicustomized">MiniCustomized</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="office2016.html">Microsoft Office 2016</a></li>
-<li class="toctree-l2"><a class="reference internal" href="onedrive.html">Microsoft OneDrive</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mcx/index.html">Custom Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Troubleshooting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../macos/index.html">macOS Subsystem Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pdp/index.html">Profile Domain Plugins</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
@@ -137,13 +122,11 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
-          <li><a href="index.html">Custom Settings</a> &raquo;</li>
-      
-    <li>Touch Bar (Control Strip)</li>
+    <li>Custom MCX Sequence</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/mcx/controlstrip.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/troubleshooting/custom_mcx.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -153,42 +136,50 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="touch-bar-control-strip">
-<h1>Touch Bar (Control Strip)<a class="headerlink" href="#touch-bar-control-strip" title="Permalink to this headline">¶</a></h1>
-<dl class="docutils">
-<dt>Domain</dt>
-<dd>com.apple.controlstrip</dd>
-</dl>
-<div class="section" id="keys">
-<h2>Keys<a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="minicustomized">
-<h3>MiniCustomized<a class="headerlink" href="#minicustomized" title="Permalink to this headline">¶</a></h3>
-<p>This key can be used to customise the touch bar layout.</p>
-<p>It is an array containing bundle IDs for each button that should be available.</p>
-<p>Choices:</p>
-<ul class="simple">
-<li>com.apple.system.do-not-disturb</li>
-<li>com.apple.system.media-play-pause</li>
-<li>com.apple.system.sleep</li>
-<li>com.apple.system.screen-lock</li>
+  <div class="section" id="custom-mcx-sequence">
+<h1>Custom MCX Sequence<a class="headerlink" href="#custom-mcx-sequence" title="Permalink to this headline">¶</a></h1>
+<p>Custom MCX Settings are applied via ManagedClient itself, not a payload domain plugin.</p>
+<p><code class="docutils literal"><span class="pre">-</span> <span class="pre">[MCXD_MCX</span> <span class="pre">loadConfigDataFromCoreData:withCompositorDict:withUserState:]</span></code></p>
+<p>-&gt;</p>
+<p><code class="docutils literal"><span class="pre">-</span> <span class="pre">[MCX_ConfigPayload</span> <span class="pre">createMCXSettingsArrays]</span></code></p>
+<ul>
+<li><dl class="first docutils">
+<dt>call <code class="docutils literal"><span class="pre">payloadApplicationDomain</span></code> to retrieve the domain this setting applies to.</dt>
+<dd><ul class="first last simple">
+<li>This checks that there is only a single MCX domain. If more than 1, we bail.</li>
+<li>TODO: follow up on domain translation</li>
 </ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">check the payload content for legacy settings, if it is legacy then this message should be logged:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">MCX_ConfigPayload</span><span class="o">.</span><span class="n">hasLegacySettings</span> <span class="o">=</span> <span class="o">%</span><span class="n">d</span>
+</pre></div>
 </div>
-</div>
+</li>
+<li><dl class="first docutils">
+<dt>If the payload key points to an array, then it is not considered to be legacy settings, otherwise if it is a dict,</dt>
+<dd><p class="first last">continue on.</p>
+</dd>
+</dl>
+</li>
+<li><p class="first">Check the <code class="docutils literal"><span class="pre">mcx_preference_settings</span></code> key in each item.</p>
+</li>
+<li><p class="first">If this contains <code class="docutils literal"><span class="pre">ByHost</span></code> or <code class="docutils literal"><span class="pre">Set-Once</span></code>, then there are some separate keys to consider.</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">mcx_application_data</span></code>.</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">mcx_precedence</span></code>.</p>
+</li>
+<li><p class="first">Tries to create the property list. I assume in managed preferences</p>
+</li>
+</ul>
 </div>
 
 
            </div>
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="office2016.html" class="btn btn-neutral float-right" title="Microsoft Office 2016" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="chrome.html" class="btn btn-neutral" title="Google Chrome" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>

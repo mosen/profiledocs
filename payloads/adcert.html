@@ -109,6 +109,8 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#links">Links</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#uninstall-behaviour">Uninstall Behaviour</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="airplay.html">AirPlay</a></li>
@@ -127,7 +129,7 @@
 <li class="toctree-l2"><a class="reference internal" href="certroot.html">Certificate (Root CA)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="conference.html">Conference Room Display</a></li>
 <li class="toctree-l2"><a class="reference internal" href="coremediaio.html">Core Media IO (Camera)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom.html">Custom Settings (MCX)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="legacy_custom.html">Legacy Custom Settings (MCX)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dashwidgets.html">Parental Control Dashboard Payload</a></li>
 <li class="toctree-l2"><a class="reference internal" href="desktop.html">Desktop Picture</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dictionary.html">Dictionary (Parental Controls)</a></li>
@@ -741,6 +743,10 @@ Active Directory Certificate profile payload instructions detailed at <a class="
 </tbody>
 </table>
 </div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">PromptForCredentials seems to have no effect on manually installed profiles. They still ask for credentials.</p>
+</div>
 <div class="section" id="com.apple.ADCertificate.managed-AllowAllAppsAccess-auto">
 <h3>AllowAllAppsAccess<a class="headerlink" href="#com.apple.ADCertificate.managed-AllowAllAppsAccess-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow access to all apps</p>
@@ -782,6 +788,26 @@ Active Directory Certificate profile payload instructions detailed at <a class="
 <h2>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><a class="reference external" href="https://macmule.com/2015/09/06/osx-ad-certificate-requests-some-tips/">macmules blog: OSX &amp; AD CERTIFICATE REQUESTS, SOME TIPS</a>.</li>
+<li><a class="reference external" href="https://support.apple.com/en-us/HT204446">Certificate Renewal Behaviour</a>.</li>
+</ul>
+</div>
+<div class="section" id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">As of approx 10.12.4 you can no longer select a transport. And you will not be able to install the payload
+if the client is not bound to a directory.</p>
+</div>
+<ul class="simple">
+<li>If you request a <cite>User</cite> certificate but the payload is in the <cite>System</cite> PayloadScope, the User certificate will be requested as the
+computer account. Normally the certificate policy will deny this, so check that you have the correct scope.</li>
+</ul>
+</div>
+<div class="section" id="uninstall-behaviour">
+<h2>Uninstall Behaviour<a class="headerlink" href="#uninstall-behaviour" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>The certificate is not revoked upon uninstallation.</li>
+<li>The certificate is not removed from keychain, but the private key IS removed. The private key is named after the issuing host.</li>
 </ul>
 </div>
 </div>

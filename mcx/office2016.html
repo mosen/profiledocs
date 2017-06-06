@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Touch Bar (Control Strip) &mdash; Configuration Profiles  documentation</title>
+  <title>Microsoft Office 2016 &mdash; Configuration Profiles  documentation</title>
   
 
   
@@ -35,8 +35,8 @@
         <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="Configuration Profiles  documentation" href="../index.html"/>
         <link rel="up" title="Custom Settings" href="index.html"/>
-        <link rel="next" title="Microsoft Office 2016" href="office2016.html"/>
-        <link rel="prev" title="Google Chrome" href="chrome.html"/> 
+        <link rel="next" title="Microsoft OneDrive" href="onedrive.html"/>
+        <link rel="prev" title="Touch Bar (Control Strip)" href="controlstrip.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -92,14 +92,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../payloads/index.html">Payloads</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Custom Settings</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="chrome.html">Google Chrome</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Touch Bar (Control Strip)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#keys">Keys</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#minicustomized">MiniCustomized</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controlstrip.html">Touch Bar (Control Strip)</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Microsoft Office 2016</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#links">Links</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="office2016.html">Microsoft Office 2016</a></li>
 <li class="toctree-l2"><a class="reference internal" href="onedrive.html">Microsoft OneDrive</a></li>
 </ul>
 </li>
@@ -139,11 +137,11 @@
       
           <li><a href="index.html">Custom Settings</a> &raquo;</li>
       
-    <li>Touch Bar (Control Strip)</li>
+    <li>Microsoft Office 2016</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/mcx/controlstrip.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/mcx/office2016.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -153,26 +151,79 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="touch-bar-control-strip">
-<h1>Touch Bar (Control Strip)<a class="headerlink" href="#touch-bar-control-strip" title="Permalink to this headline">¶</a></h1>
-<dl class="docutils">
-<dt>Domain</dt>
-<dd>com.apple.controlstrip</dd>
-</dl>
-<div class="section" id="keys">
-<h2>Keys<a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="minicustomized">
-<h3>MiniCustomized<a class="headerlink" href="#minicustomized" title="Permalink to this headline">¶</a></h3>
-<p>This key can be used to customise the touch bar layout.</p>
-<p>It is an array containing bundle IDs for each button that should be available.</p>
-<p>Choices:</p>
-<ul class="simple">
-<li>com.apple.system.do-not-disturb</li>
-<li>com.apple.system.media-play-pause</li>
-<li>com.apple.system.sleep</li>
-<li>com.apple.system.screen-lock</li>
-</ul>
+  <div class="section" id="microsoft-office-2016">
+<h1>Microsoft Office 2016<a class="headerlink" href="#microsoft-office-2016" title="Permalink to this headline">¶</a></h1>
+<p>These are custom settings and must be placed in a <code class="docutils literal"><span class="pre">com.apple.ManagedClient.preferences</span></code> payload.</p>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="43%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Title</th>
+<th class="head">Description</th>
+<th class="head">Required</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>kCUIThemePreferencesThemeKeyPath</td>
+<td>integer</td>
+<td>Colorful Theme</td>
+<td>Sets Office theme: 0 - Colorful, 1 - Classic</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>OfficeActivationEmailAddress</td>
+<td>string</td>
+<td>Set Belongs to field</td>
+<td>Sets value of &#8216;Belongs to&#8217; field in the About Box. This happens automatically on 15.33+ installs</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>DefaultsToLocalOpenSave</td>
+<td>boolean</td>
+<td>Save/Open defaults to &#8216;On my Mac&#8217;</td>
+<td>When set to true will force the open/save panel to ‘On my Mac’ instead of &#8216;Online Locations&#8217;</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>ShowWhatsNewOnLaunch</td>
+<td>boolean</td>
+<td>Show &#8216;Whats New&#8217; dialog on launch</td>
+<td>Replaces the &#8216;OUIWhatsNewShownItemIds&#8217; key as a single place to remove all &#8220;What&#8217;s new&#8221; messages for all suite apps:
+                                                            Word, PowerPoint, Excel, Outlook, and OneNote. In build 170420 and later.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>VisualBasicMacroExecutionState</td>
+<td>string</td>
+<td>VisualBasic Macro security level</td>
+<td>Sets the VisualBasic Macro security level. Valid values: DisabledWithoutWarnings, DisabledWithWarnings, EnabledWithWarnings</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>msoridEnableLogging</td>
+<td>integer</td>
+<td>authentication logging</td>
+<td>Set to 1 to increase logging levels for authentication requests</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>msoridDefaultMinimumSeverity</td>
+<td>integer</td>
+<td>msoridDefaultMinimumSeverity</td>
+<td>Set value to 200 if msoridEnableLogging is enabled</td>
+<td>n/a</td>
+</tr>
+</tbody>
+</table>
 </div>
+<div class="section" id="links">
+<h2>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://derflounder.wordpress.com/2017/04/17/office-2016-defaultstolocalopensave-setting-change-as-of-office-2016-15-33-x/">Der Flounder (Regarding defaults to local open/save)</a>.</li>
+</ul>
 </div>
 </div>
 
@@ -183,10 +234,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="office2016.html" class="btn btn-neutral float-right" title="Microsoft Office 2016" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="onedrive.html" class="btn btn-neutral float-right" title="Microsoft OneDrive" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="chrome.html" class="btn btn-neutral" title="Google Chrome" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="controlstrip.html" class="btn btn-neutral" title="Touch Bar (Control Strip)" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

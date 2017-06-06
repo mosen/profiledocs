@@ -109,7 +109,7 @@
 <li class="toctree-l2"><a class="reference internal" href="certroot.html">Certificate (Root CA)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="conference.html">Conference Room Display</a></li>
 <li class="toctree-l2"><a class="reference internal" href="coremediaio.html">Core Media IO (Camera)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom.html">Custom Settings (MCX)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="legacy_custom.html">Legacy Custom Settings (MCX)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dashwidgets.html">Parental Control Dashboard Payload</a></li>
 <li class="toctree-l2"><a class="reference internal" href="desktop.html">Desktop Picture</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dictionary.html">Dictionary (Parental Controls)</a></li>
@@ -247,8 +247,13 @@
 <ul class="simple">
 <li>The payload must exist in a system-scoped profile.</li>
 <li>If more than one profile contains this payload, the most restrictive union of settings will be used.</li>
-<li>The &#8220;Automatically allow signed downloaded software&#8221; and &#8220;Automatically allow built-in software&#8221; options are not supported, but both will be forced <strong>ON</strong> when this payload is present.</li>
 </ul>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Apple claims that:
+The &#8220;Automatically allow signed downloaded software&#8221; and &#8220;Automatically allow built-in software&#8221; options are not supported, but both will be forced <strong>ON</strong> when this payload is present.
+However those options are not changed when the payload is installed. Only the UI is greyed out.</p>
+</div>
 <div class="section" id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
 <table class="docutils field-list" frame="void" rules="none">

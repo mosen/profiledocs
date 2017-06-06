@@ -109,7 +109,7 @@
 <li class="toctree-l2"><a class="reference internal" href="certroot.html">Certificate (Root CA)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="conference.html">Conference Room Display</a></li>
 <li class="toctree-l2"><a class="reference internal" href="coremediaio.html">Core Media IO (Camera)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom.html">Custom Settings (MCX)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="legacy_custom.html">Legacy Custom Settings (MCX)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dashwidgets.html">Parental Control Dashboard Payload</a></li>
 <li class="toctree-l2"><a class="reference internal" href="desktop.html">Desktop Picture</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dictionary.html">Dictionary (Parental Controls)</a></li>
@@ -250,6 +250,10 @@
   <div class="section" id="sidebar">
 <span id="payloadtype-com-apple-mcx-sidebar"></span><h1>Sidebar<a class="headerlink" href="#sidebar" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference download internal" href="../_downloads/com.apple.MCX.sidebar.mobileconfig" download=""><code class="xref download docutils literal"><span class="pre">Template</span></code></a></p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This seems to be deprecated? calls LSSharedFileList</p>
+</div>
 <div class="section" id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
 <table class="docutils field-list" frame="void" rules="none">
@@ -312,13 +316,13 @@
 <tr class="row-odd"><td>customBaseURLs</td>
 <td>array</td>
 <td>Custom URLs</td>
-<td>Base URLs to custom locations.</td>
+<td>Base URLs to custom locations. Array of string URIs</td>
 <td>n/a</td>
 </tr>
 <tr class="row-even"><td>SidebarDestination</td>
 <td>string</td>
 <td>Maybe after before of custom urls</td>
-<td>Unknown, Maybe after before of custom urls</td>
+<td>Destination of sidebar item</td>
 <td>n/a</td>
 </tr>
 </tbody>
@@ -437,7 +441,7 @@
 <div class="section" id="com.apple.MCX.sidebar-customBaseURLs-auto">
 <h3>customBaseURLs<a class="headerlink" href="#com.apple.MCX.sidebar-customBaseURLs-auto" title="Permalink to this headline">¶</a></h3>
 <p>Custom URLs</p>
-<p>Base URLs to custom locations.</p>
+<p>Base URLs to custom locations. Array of string URIs</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="14%" />
@@ -473,7 +477,7 @@
 <div class="section" id="com.apple.MCX.sidebar-SidebarDestination-auto">
 <h3>SidebarDestination<a class="headerlink" href="#com.apple.MCX.sidebar-SidebarDestination-auto" title="Permalink to this headline">¶</a></h3>
 <p>Maybe after before of custom urls</p>
-<p>Unknown, Maybe after before of custom urls</p>
+<p>Destination of sidebar item</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="14%" />
@@ -496,7 +500,7 @@
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>string</td>
-<td>N/A</td>
+<td>Favorites</td>
 <td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
