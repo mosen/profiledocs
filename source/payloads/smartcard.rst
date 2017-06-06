@@ -17,6 +17,7 @@ Keys
 .. pfmkey:: UserPairing /_static/manifests/com.apple.smartcard manifest.plist
 .. pfmkey:: allowSmartCard /_static/manifests/com.apple.smartcard manifest.plist
 .. pfmkey:: checkCertificateTrust /_static/manifests/com.apple.smartcard manifest.plist
+.. pfmkey:: oneCardPerUser /_static/manifests/com.apple.smartcard manifest.plist
 
 Links
 -----
