@@ -44,6 +44,10 @@ Default Options
 
 .. pfmkey:: Subsystems:subsystemDomain:DEFAULT-OPTIONS:Propagate-with-Activity manifests/manual/com.apple.system.logging manifest.plist
 
+.. pfmkey:: Subsystems:CategoryName manifests/manual/com.apple.system.logging manifest.plist
+
+.. pfmkey:: Subsystems:Enable-Oversize-Messages manifests/manual/com.apple.system.logging manifest.plist
+
 Notes
 -----
 

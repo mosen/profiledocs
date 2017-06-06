@@ -101,6 +101,10 @@ This key is required if both the CertificateType key is included and the Extende
 This name is used to validate the certificate sent by the IKE server.
 If not set, the Remote Identifier will be used to validate the certificate.
 
+.. pfmkey:: IKEv2:TLSMinimumVersion /_static/manifests/com.apple.vpn.managed manifest.plist
+.. pfmkey:: IKEv2:TLSMaximumVersion /_static/manifests/com.apple.vpn.managed manifest.plist
+
+
 .. pfmkey:: IKEv2:NATKeepAliveOffloadEnable /_static/manifests/com.apple.vpn.managed manifest.plist
 
 Keepalive packets are sent by the device to maintain NAT mappings for IKEv2 connections that have a NAT on the path.
