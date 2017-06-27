@@ -1,0 +1,18 @@
+@startuml
+
+database "/var/db/ConfigurationProfiles/Store" {
+    [CoreData]
+}
+
+package "Privileged" {
+
+[MIGCoreDataServer] -- [CoreData]
+() XPC
+XPC -- [MIGCoreDataServer]
+}
+
+package "ConfigurationProfiles.framework" {
+    [CPProfileManager] -- XPC
+}
+
+@enduml
