@@ -47,6 +47,8 @@ You will probably want to reset this back to normal so that debug logs are not p
 MCX
 ---
 
+.. note:: Some parts of ManagedClient don't use Unified Logging so you'll probably need to enable this also.
+
 Log Location
     /Library/Logs/ManagedClient/ManagedClient.log
 

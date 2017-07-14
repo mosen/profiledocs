@@ -1,8 +1,8 @@
 InstallApplication
 ==================
 
-Caveats
--------
+Caveats (10.12)
+---------------
 
 - It is impossible to know whether the installation succeeded or failed.
 - If storedownloadd fails, it blocks all further application installs `OpenRADAR <https://openradar.appspot.com/26517261>`_. courtesy of bruienne.

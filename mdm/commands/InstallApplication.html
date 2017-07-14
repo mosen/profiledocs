@@ -33,7 +33,10 @@
         <link rel="index" title="Index"
               href="../../genindex.html"/>
         <link rel="search" title="Search" href="../../search.html"/>
-    <link rel="top" title="Configuration Profiles  documentation" href="../../index.html"/> 
+    <link rel="top" title="Configuration Profiles  documentation" href="../../index.html"/>
+        <link rel="up" title="MDM Commands" href="index.html"/>
+        <link rel="next" title="ScheduleOSUpdate" href="ScheduleOSUpdate.html"/>
+        <link rel="prev" title="MDM Commands" href="index.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -79,7 +82,7 @@
             
             
                 <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../contributing.html#submitting-an-error">Submitting an error</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../contributing.html#writing-documentation">Writing Documentation</a></li>
@@ -87,8 +90,23 @@
 <li class="toctree-l1"><a class="reference internal" href="../../manifest.html">Manifest File Format</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../extmanifest.html">Extended Manifest Format</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../payloads/index.html">Payloads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../mcx/index.html">Custom Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../custom/index.html">Custom Settings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">Troubleshooting</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">MDM Commands</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">InstallApplication</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#caveats-10-12">Caveats (10.12)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#simultaneous-downloads">Simultaneous Downloads</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#os-specific-notes">OS Specific Notes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">10.12.0 - 10.12.3</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#x">10.11.x</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#links">Links</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ScheduleOSUpdate.html">ScheduleOSUpdate</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../macos/index.html">macOS Subsystem Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../pdp/index.html">Profile Domain Plugins</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary.html">Glossary</a></li>
@@ -122,6 +140,8 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../../index.html">Docs</a> &raquo;</li>
       
+          <li><a href="index.html">MDM Commands</a> &raquo;</li>
+      
     <li>InstallApplication</li>
       <li class="wy-breadcrumbs-aside">
         
@@ -138,8 +158,8 @@
             
   <div class="section" id="installapplication">
 <h1>InstallApplication<a class="headerlink" href="#installapplication" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="caveats">
-<h2>Caveats<a class="headerlink" href="#caveats" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="caveats-10-12">
+<h2>Caveats (10.12)<a class="headerlink" href="#caveats-10-12" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>It is impossible to know whether the installation succeeded or failed.</li>
 <li>If storedownloadd fails, it blocks all further application installs <a class="reference external" href="https://openradar.appspot.com/26517261">OpenRADAR</a>. courtesy of bruienne.</li>
@@ -216,6 +236,15 @@ The problem also doesn&#8217;t happen if the <code class="docutils literal"><spa
            </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ScheduleOSUpdate.html" class="btn btn-neutral float-right" title="ScheduleOSUpdate" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="MDM Commands" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

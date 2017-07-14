@@ -87,8 +87,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../manifest.html">Manifest File Format</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../extmanifest.html">Extended Manifest Format</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../payloads/index.html">Payloads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../mcx/index.html">Custom Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../custom/index.html">Custom Settings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mdm/commands/index.html">MDM Commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../macos/index.html">macOS Subsystem Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../pdp/index.html">Profile Domain Plugins</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary.html">Glossary</a></li>
@@ -136,92 +137,58 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <ul>
-<li><p class="first">MCNewPasswordPolicyPayloadHandler</p>
-</li>
-<li><p class="first">MCNewPayloadHandler</p>
-</li>
-<li><p class="first">MCEDUClassroomPayloadHandler</p>
-</li>
-<li><p class="first">MCNetworkUsageRulesPayloadHandler</p>
-</li>
-<li><p class="first">MCNewEmailAccountPayloadHandler</p>
-</li>
-<li><p class="first">MCNewWebClipPayloadHandler</p>
-</li>
-<li><p class="first">MCNewPlainCertificatePayloadHandler</p>
-</li>
-<li><p class="first">MCACAccountPayloadHandler</p>
-</li>
-<li><p class="first">MCNewMDMPayloadHandler</p>
-</li>
-<li><p class="first">MCNewAPNPayloadHandler</p>
-</li>
-<li><p class="first">MCNewDefaultsPayloadHandler</p>
-</li>
-<li><p class="first">MCHomeScreenLayoutPayloadHandler</p>
-</li>
-<li><p class="first">MCNewWiFiPayloadHandler</p>
-</li>
-<li><p class="first">MCNotificationSettingsPayloadHandler</p>
-</li>
-<li><p class="first">MCNewSubCalAccountPayloadHandler</p>
-</li>
-<li><p class="first">MCNewCalDAVAccountPayloadHandler</p>
-</li>
-<li><p class="first">MCNewLDAPAccountPayloadHandler</p>
-</li>
-<li><p class="first">MCNewCardDAVAccountPayloadHandler</p>
-</li>
-<li><p class="first">MCNewEASAccountPayloadHandler</p>
-</li>
-<li><p class="first">MCNewSCEPPayloadHandler</p>
-</li>
-<li><p class="first">MCNewCertificatePayloadHandler</p>
-</li>
-<li><p class="first">MCOSXServerAccountPayloadHandler</p>
-</li>
-<li><p class="first">MCNewRestrictionsPayloadHandler</p>
-</li>
-<li><p class="first">MCNewWAPIIdentityCertificatePayloadHandler</p>
-</li>
-<li><p class="first">MCNewChaperonePayloadHandler</p>
-</li>
-<li><p class="first">MCSharedDeviceConfigurationPayloadHandler</p>
-</li>
-<li><p class="first">MCNewGlobalHTTPProxyPayloadHandler</p>
-</li>
-<li><p class="first">MCAppWhitelistPayloadHandler</p>
-</li>
-<li><p class="first">MCGmailAccountPayloadHandler</p>
-</li>
-<li><p class="first">MCAirPlayPayloadHandler</p>
-</li>
-<li><p class="first">MCVPNPayloadHandlerBase</p>
-</li>
-<li><p class="first">MCCellularPayloadHandler</p>
-</li>
-<li><p class="first">MCSingleSignOnPayloadHandler</p>
-</li>
-<li><p class="first">MCWebContentFilterPayloadHandler</p>
-</li>
-<li><p class="first">MCFontPayloadHandler</p>
-</li>
-<li><p class="first">MCLoggingPayloadHandler</p>
-<blockquote>
-<div><p>&#64;protocol Payload
-- handlerWithProfileHandler:(ProfileHandler <a href="#id1"><span class="problematic" id="id2">*</span></a>)handler;
-&#64;end</p>
-<p>&#64;protocol PayloadHandler
-- isInstalled;
-- remove;
-- setAside;
-- unsetAside;
-- installWithInstaller:options:interactionClient:outError:(NSError <a href="#id3"><span class="problematic" id="id4">**</span></a>)err;
-&#64;end</p>
-</div></blockquote>
-</li>
+  <ul class="simple">
+<li>MCNewPasswordPolicyPayloadHandler</li>
+<li>MCNewPayloadHandler</li>
+<li>MCEDUClassroomPayloadHandler</li>
+<li>MCNetworkUsageRulesPayloadHandler</li>
+<li>MCNewEmailAccountPayloadHandler</li>
+<li>MCNewWebClipPayloadHandler</li>
+<li>MCNewPlainCertificatePayloadHandler</li>
+<li>MCACAccountPayloadHandler</li>
+<li>MCNewMDMPayloadHandler</li>
+<li>MCNewAPNPayloadHandler</li>
+<li>MCNewDefaultsPayloadHandler</li>
+<li>MCHomeScreenLayoutPayloadHandler</li>
+<li>MCNewWiFiPayloadHandler</li>
+<li>MCNotificationSettingsPayloadHandler</li>
+<li>MCNewSubCalAccountPayloadHandler</li>
+<li>MCNewCalDAVAccountPayloadHandler</li>
+<li>MCNewLDAPAccountPayloadHandler</li>
+<li>MCNewCardDAVAccountPayloadHandler</li>
+<li>MCNewEASAccountPayloadHandler</li>
+<li>MCNewSCEPPayloadHandler</li>
+<li>MCNewCertificatePayloadHandler</li>
+<li>MCOSXServerAccountPayloadHandler</li>
+<li>MCNewRestrictionsPayloadHandler</li>
+<li>MCNewWAPIIdentityCertificatePayloadHandler</li>
+<li>MCNewChaperonePayloadHandler</li>
+<li>MCSharedDeviceConfigurationPayloadHandler</li>
+<li>MCNewGlobalHTTPProxyPayloadHandler</li>
+<li>MCAppWhitelistPayloadHandler</li>
+<li>MCGmailAccountPayloadHandler</li>
+<li>MCAirPlayPayloadHandler</li>
+<li>MCVPNPayloadHandlerBase</li>
+<li>MCCellularPayloadHandler</li>
+<li>MCSingleSignOnPayloadHandler</li>
+<li>MCWebContentFilterPayloadHandler</li>
+<li>MCFontPayloadHandler</li>
+<li>MCLoggingPayloadHandler</li>
 </ul>
+<p>example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nd">@protocol</span> <span class="n">Payload</span>
+<span class="o">-</span> <span class="n">handlerWithProfileHandler</span><span class="p">:(</span><span class="n">ProfileHandler</span> <span class="o">*</span><span class="p">)</span><span class="n">handler</span><span class="p">;</span>
+<span class="nd">@end</span>
+
+<span class="nd">@protocol</span> <span class="n">PayloadHandler</span>
+<span class="o">-</span> <span class="n">isInstalled</span><span class="p">;</span>
+<span class="o">-</span> <span class="n">remove</span><span class="p">;</span>
+<span class="o">-</span> <span class="n">setAside</span><span class="p">;</span>
+<span class="o">-</span> <span class="n">unsetAside</span><span class="p">;</span>
+<span class="o">-</span> <span class="n">installWithInstaller</span><span class="p">:</span><span class="n">options</span><span class="p">:</span><span class="n">interactionClient</span><span class="p">:</span><span class="n">outError</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">**</span><span class="p">)</span><span class="n">err</span><span class="p">;</span>
+<span class="nd">@end</span>
+</pre></div>
+</div>
 
 
            </div>
