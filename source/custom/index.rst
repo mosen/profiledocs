@@ -7,6 +7,7 @@ Custom Settings
 
     chrome.rst
     controlstrip.rst
+    ibooks
     office2016
     onedrive
 
