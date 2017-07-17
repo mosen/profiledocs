@@ -14,8 +14,8 @@ It is supported on the User Channel.
 Summary
 -------
 
-.. pfmheader:: manifests/manual/com.apple.homescreenlayout manifest.plist
-.. pfm:: manifests/manual/com.apple.homescreenlayout manifest.plist
+.. pfmheader:: /_static/manifests/com.apple.homescreenlayout manifest.plist
+.. pfm:: /_static/manifests/com.apple.homescreenlayout manifest.plist
 
 Keys
 ----
@@ -23,11 +23,11 @@ Keys
 Icon Dictionary
 ^^^^^^^^^^^^^^^
 
-.. pfm:: manifests/manual/com.apple.homescreenlayout manifest.plist
+.. pfm:: /_static/manifests/com.apple.homescreenlayout manifest.plist
     :key: Dock:DockItem
 
 
-.. pfmkey:: Dock:DockItem:Type manifests/manual/com.apple.homescreenlayout manifest.plist
+.. pfmkey:: Dock:DockItem:Type /_static/manifests/com.apple.homescreenlayout manifest.plist
 
 Links
 -----

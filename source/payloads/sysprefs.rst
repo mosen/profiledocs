@@ -11,8 +11,8 @@ System preferences panes may be Whitelisted (via ``EnabledPreferencePanes``) or 
 Summary
 -------
 
-.. pfmheader:: manifests/manual/com.apple.systempreferences manifest.plist
-.. pfm:: manifests/manual/com.apple.systempreferences manifest.plist
+.. pfmheader:: /_static/manifests/com.apple.systempreferences manifest.plist
+.. pfm:: /_static/manifests/com.apple.systempreferences manifest.plist
 
 Bugs
 ----

@@ -12,6 +12,6 @@ This payload sets up macOS Desktop settings and restrictions. It is supported on
 Summary
 -------
 
-.. pfmheader:: manifests/manual/com.apple.desktop manifest.plist
-.. pfm:: manifests/manual/com.apple.desktop manifest.plist
+.. pfmheader:: /_static/manifests/com.apple.desktop manifest.plist
+.. pfm:: /_static/manifests/com.apple.desktop manifest.plist
 

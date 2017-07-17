@@ -6,6 +6,6 @@ Submit Diagnostics
 Summary
 -------
 
-.. pfmheader:: manifests/manual/com.apple.SubmitDiagInfo manifest.plist
-.. pfm:: manifests/manual/com.apple.SubmitDiagInfo manifest.plist
+.. pfmheader:: /_static/manifests/com.apple.SubmitDiagInfo manifest.plist
+.. pfm:: /_static/manifests/com.apple.SubmitDiagInfo manifest.plist
 

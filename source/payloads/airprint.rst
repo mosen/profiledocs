@@ -9,19 +9,19 @@ The AirPrint payload adds AirPrint printers to the user’s AirPrint printer lis
 Summary
 -------
 
-.. pfmheader::  manifests/manual/com.apple.airprint manifest.plist
+.. pfmheader::  /_static/manifests/com.apple.airprint manifest.plist
 
-.. pfm:: manifests/manual/com.apple.airprint manifest.plist
+.. pfm:: /_static/manifests/com.apple.airprint manifest.plist
 
 
 Keys
 ----
 
-.. pfmkey:: AirPrint manifests/manual/com.apple.airprint manifest.plist
+.. pfmkey:: AirPrint /_static/manifests/com.apple.airprint manifest.plist
 
 AirPrint items are in the following format:
 
-.. pfm:: manifests/manual/com.apple.airprint manifest.plist
+.. pfm:: /_static/manifests/com.apple.airprint manifest.plist
     :key: AirPrint:Identifier
 
 Links

@@ -9,7 +9,7 @@ The Parental Control Dashboard payload is used to define a white list of dashboa
 Summary
 -------
 
-.. pfmheader:: manifests/manual/com.apple.dashboard manifest.plist
-.. pfm:: manifests/manual/com.apple.dashboard manifest.plist
+.. pfmheader:: /_static/manifests/com.apple.dashboard manifest.plist
+.. pfm:: /_static/manifests/com.apple.dashboard manifest.plist
 
 

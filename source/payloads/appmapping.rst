@@ -7,8 +7,8 @@ App-to-Per-App VPN Mapping
 Summary
 -------
 
-.. pfmheader:: manifests/manual/com.apple.vpn.managed.appmapping manifest.plist
-.. pfm:: manifests/manual/com.apple.vpn.managed.appmapping manifest.plist
+.. pfmheader:: /_static/manifests/com.apple.vpn.managed.appmapping manifest.plist
+.. pfm:: /_static/manifests/com.apple.vpn.managed.appmapping manifest.plist
 
 Links
 -----

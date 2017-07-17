@@ -10,28 +10,28 @@ Active Directory Certificate profile payload instructions detailed at https://su
 Summary
 -------
 
-.. pfmheader:: manifests/manual/com.apple.ADCertificate.managed manifest.plist
+.. pfmheader:: /_static/manifests/com.apple.ADCertificate.managed manifest.plist
 
-.. pfm:: manifests/manual/com.apple.ADCertificate.managed manifest.plist
+.. pfm:: /_static/manifests/com.apple.ADCertificate.managed manifest.plist
 
 
 Keys
 ----
 
-.. pfmkey:: Description manifests/manual/com.apple.ADCertificate.managed manifest.plist
-.. pfmkey:: CertServer manifests/manual/com.apple.ADCertificate.managed manifest.plist
-.. pfmkey:: CertTemplate manifests/manual/com.apple.ADCertificate.managed manifest.plist
-.. pfmkey:: CertificateAuthority manifests/manual/com.apple.ADCertificate.managed manifest.plist
-.. pfmkey:: CertificateAcquisitionMechanism manifests/manual/com.apple.ADCertificate.managed manifest.plist
-.. pfmkey:: CertificateRenewalTimeInterval manifests/manual/com.apple.ADCertificate.managed manifest.plist
-.. pfmkey:: Keysize manifests/manual/com.apple.ADCertificate.managed manifest.plist
-.. pfmkey:: UserName manifests/manual/com.apple.ADCertificate.managed manifest.plist
-.. pfmkey:: Password manifests/manual/com.apple.ADCertificate.managed manifest.plist
-.. pfmkey:: PromptForCredentials manifests/manual/com.apple.ADCertificate.managed manifest.plist
+.. pfmkey:: Description /_static/manifests/com.apple.ADCertificate.managed manifest.plist
+.. pfmkey:: CertServer /_static/manifests/com.apple.ADCertificate.managed manifest.plist
+.. pfmkey:: CertTemplate /_static/manifests/com.apple.ADCertificate.managed manifest.plist
+.. pfmkey:: CertificateAuthority /_static/manifests/com.apple.ADCertificate.managed manifest.plist
+.. pfmkey:: CertificateAcquisitionMechanism /_static/manifests/com.apple.ADCertificate.managed manifest.plist
+.. pfmkey:: CertificateRenewalTimeInterval /_static/manifests/com.apple.ADCertificate.managed manifest.plist
+.. pfmkey:: Keysize /_static/manifests/com.apple.ADCertificate.managed manifest.plist
+.. pfmkey:: UserName /_static/manifests/com.apple.ADCertificate.managed manifest.plist
+.. pfmkey:: Password /_static/manifests/com.apple.ADCertificate.managed manifest.plist
+.. pfmkey:: PromptForCredentials /_static/manifests/com.apple.ADCertificate.managed manifest.plist
 
 .. warning:: PromptForCredentials seems to have no effect on manually installed profiles. They still ask for credentials.
 
-.. pfmkey:: AllowAllAppsAccess manifests/manual/com.apple.ADCertificate.managed manifest.plist
+.. pfmkey:: AllowAllAppsAccess /_static/manifests/com.apple.ADCertificate.managed manifest.plist
 
 Links
 -----

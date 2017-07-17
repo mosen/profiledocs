@@ -11,17 +11,17 @@ The Identification payload is not supported in iOS.
 Summary
 -------
 
-.. pfmheader:: manifests/manual/com.apple.configurationprofile.identification manifest.plist
-.. pfm:: manifests/manual/com.apple.configurationprofile.identification manifest.plist
+.. pfmheader:: /_static/manifests/com.apple.configurationprofile.identification manifest.plist
+.. pfm:: /_static/manifests/com.apple.configurationprofile.identification manifest.plist
 
 Keys
 ----
 
-.. pfmkey:: FullName manifests/manual/com.apple.configurationprofile.identification manifest.plist
-.. pfmkey:: EmailAddress manifests/manual/com.apple.configurationprofile.identification manifest.plist
-.. pfmkey:: UserName manifests/manual/com.apple.configurationprofile.identification manifest.plist
-.. pfmkey:: Password manifests/manual/com.apple.configurationprofile.identification manifest.plist
-.. pfmkey:: Prompt manifests/manual/com.apple.configurationprofile.identification manifest.plist
+.. pfmkey:: FullName /_static/manifests/com.apple.configurationprofile.identification manifest.plist
+.. pfmkey:: EmailAddress /_static/manifests/com.apple.configurationprofile.identification manifest.plist
+.. pfmkey:: UserName /_static/manifests/com.apple.configurationprofile.identification manifest.plist
+.. pfmkey:: Password /_static/manifests/com.apple.configurationprofile.identification manifest.plist
+.. pfmkey:: Prompt /_static/manifests/com.apple.configurationprofile.identification manifest.plist
 
 Links
 -----

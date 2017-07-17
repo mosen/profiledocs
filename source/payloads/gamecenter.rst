@@ -9,5 +9,5 @@ The Parental Control Game Center payload restricts Game Center options on the de
 Summary
 -------
 
-.. pfmheader:: manifests/manual/com.apple.gamed manifest.plist
-.. pfm:: manifests/manual/com.apple.gamed manifest.plist
+.. pfmheader:: /_static/manifests/com.apple.gamed manifest.plist
+.. pfm:: /_static/manifests/com.apple.gamed manifest.plist

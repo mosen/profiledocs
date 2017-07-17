@@ -10,14 +10,14 @@ This payload must only exist in a device profile. If the payload is present in a
 Summary
 -------
 
-.. pfmheader:: manifests/manual/com.apple.systempolicy.control manifest.plist
-.. pfm:: manifests/manual/com.apple.systempolicy.control manifest.plist
+.. pfmheader:: /_static/manifests/com.apple.systempolicy.control manifest.plist
+.. pfm:: /_static/manifests/com.apple.systempolicy.control manifest.plist
 
 Keys
 ----
 
-.. pfmkey:: EnableAssessment manifests/manual/com.apple.systempolicy.control manifest.plist
-.. pfmkey:: AllowIdentifiedDevelopers manifests/manual/com.apple.systempolicy.control manifest.plist
+.. pfmkey:: EnableAssessment /_static/manifests/com.apple.systempolicy.control manifest.plist
+.. pfmkey:: AllowIdentifiedDevelopers /_static/manifests/com.apple.systempolicy.control manifest.plist
 
 Links
 -----

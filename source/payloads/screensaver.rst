@@ -8,23 +8,23 @@ Screen Saver
 Summary
 -------
 
-.. pfmheader:: manifests/manual/com.apple.screensaver manifest.plist
-.. pfm:: manifests/manual/com.apple.screensaver manifest.plist
+.. pfmheader:: /_static/manifests/com.apple.screensaver manifest.plist
+.. pfm:: /_static/manifests/com.apple.screensaver manifest.plist
 
 Keys
 ----
 
-.. pfmkey:: loginWindowIdleTime manifests/manual/com.apple.screensaver manifest.plist
-.. pfmkey:: idleTime manifests/manual/com.apple.screensaver manifest.plist
+.. pfmkey:: loginWindowIdleTime /_static/manifests/com.apple.screensaver manifest.plist
+.. pfmkey:: idleTime /_static/manifests/com.apple.screensaver manifest.plist
 
 .. warning:: Incompatible with :ref:`payloadkey-com.apple.mobiledevice.passwordpolicy.maxInactivity`
 
 
-.. pfmkey:: loginWindowModulePath manifests/manual/com.apple.screensaver manifest.plist
+.. pfmkey:: loginWindowModulePath /_static/manifests/com.apple.screensaver manifest.plist
 
-.. pfmkey:: askForPassword manifests/manual/com.apple.screensaver manifest.plist
+.. pfmkey:: askForPassword /_static/manifests/com.apple.screensaver manifest.plist
 
-.. pfmkey:: askForPasswordDelay manifests/manual/com.apple.screensaver manifest.plist
+.. pfmkey:: askForPasswordDelay /_static/manifests/com.apple.screensaver manifest.plist
 
 .. warning:: Incompatible with :ref:`payloadkey-com.apple.mobiledevice.passwordpolicy.maxGracePeriod`
 

@@ -9,17 +9,17 @@ Time machine settings.
 Summary
 -------
 
-.. pfmheader:: manifests/manual/com.apple.MCX.TimeMachine manifest.plist
-.. pfm:: manifests/manual/com.apple.MCX.TimeMachine manifest.plist
+.. pfmheader:: /_static/manifests/com.apple.MCX.TimeMachine manifest.plist
+.. pfm:: /_static/manifests/com.apple.MCX.TimeMachine manifest.plist
 
 Keys
 ----
 
-.. pfmkey:: BackupDestURL manifests/manual/com.apple.MCX.TimeMachine manifest.plist
-.. pfmkey:: BackupAllVolumes manifests/manual/com.apple.MCX.TimeMachine manifest.plist
-.. pfmkey:: BackupSkipSys manifests/manual/com.apple.MCX.TimeMachine manifest.plist
-.. pfmkey:: AutoBackup manifests/manual/com.apple.MCX.TimeMachine manifest.plist
-.. pfmkey:: MobileBackups manifests/manual/com.apple.MCX.TimeMachine manifest.plist
-.. pfmkey:: BackupSizeMB manifests/manual/com.apple.MCX.TimeMachine manifest.plist
-.. pfmkey:: BasePaths manifests/manual/com.apple.MCX.TimeMachine manifest.plist
-.. pfmkey:: SkipPaths manifests/manual/com.apple.MCX.TimeMachine manifest.plist
+.. pfmkey:: BackupDestURL /_static/manifests/com.apple.MCX.TimeMachine manifest.plist
+.. pfmkey:: BackupAllVolumes /_static/manifests/com.apple.MCX.TimeMachine manifest.plist
+.. pfmkey:: BackupSkipSys /_static/manifests/com.apple.MCX.TimeMachine manifest.plist
+.. pfmkey:: AutoBackup /_static/manifests/com.apple.MCX.TimeMachine manifest.plist
+.. pfmkey:: MobileBackups /_static/manifests/com.apple.MCX.TimeMachine manifest.plist
+.. pfmkey:: BackupSizeMB /_static/manifests/com.apple.MCX.TimeMachine manifest.plist
+.. pfmkey:: BasePaths /_static/manifests/com.apple.MCX.TimeMachine manifest.plist
+.. pfmkey:: SkipPaths /_static/manifests/com.apple.MCX.TimeMachine manifest.plist

@@ -11,5 +11,5 @@ More testing is required.
 Summary
 -------
 
-.. pfmheader:: manifests/manual/com.apple.preferences.users manifest.plist
-.. pfm:: manifests/manual/com.apple.preferences.users manifest.plist
+.. pfmheader:: /_static/manifests/com.apple.preferences.users manifest.plist
+.. pfm:: /_static/manifests/com.apple.preferences.users manifest.plist

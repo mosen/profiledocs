@@ -22,15 +22,15 @@ If needed, the configuration profile can include an additional certificate to se
 Summary
 -------
 
-.. pfmheader:: manifests/manual/com.apple.security.FDERecoveryRedirect manifest.plist
-.. pfm:: manifests/manual/com.apple.security.FDERecoveryRedirect manifest.plist
+.. pfmheader:: /_static/manifests/com.apple.security.FDERecoveryRedirect manifest.plist
+.. pfm:: /_static/manifests/com.apple.security.FDERecoveryRedirect manifest.plist
 
 Keys
 ----
 
-.. pfmkey:: RedirectURL manifests/manual/com.apple.security.FDERecoveryRedirect manifest.plist
+.. pfmkey:: RedirectURL /_static/manifests/com.apple.security.FDERecoveryRedirect manifest.plist
 
-.. pfmkey:: EncryptCertPayloadUUID manifests/manual/com.apple.security.FDERecoveryRedirect manifest.plist
+.. pfmkey:: EncryptCertPayloadUUID /_static/manifests/com.apple.security.FDERecoveryRedirect manifest.plist
 
 Links
 -----

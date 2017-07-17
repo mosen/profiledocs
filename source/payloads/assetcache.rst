@@ -9,6 +9,6 @@ AssetCache Client
 Summary
 -------
 
-.. pfmheader:: manifests/manual/com.apple.assetcache.client.osx.profile.plugin manifest.plist
-.. pfm:: manifests/manual/com.apple.assetcache.client.osx.profile.plugin manifest.plist
+.. pfmheader:: /_static/manifests/com.apple.assetcache.client.osx.profile.plugin manifest.plist
+.. pfm:: /_static/manifests/com.apple.assetcache.client.osx.profile.plugin manifest.plist
 

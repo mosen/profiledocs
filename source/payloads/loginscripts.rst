@@ -8,5 +8,5 @@ Login Scripts
 Summary
 -------
 
-.. pfmheader:: manifests/manual/com.apple.mcxloginscripts manifest.plist
-.. pfm:: manifests/manual/com.apple.mcxloginscripts manifest.plist
+.. pfmheader:: /_static/manifests/com.apple.mcxloginscripts manifest.plist
+.. pfm:: /_static/manifests/com.apple.mcxloginscripts manifest.plist

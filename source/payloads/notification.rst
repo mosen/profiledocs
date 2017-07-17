@@ -8,18 +8,18 @@ This payload specifies the restriction enforced notification settings for apps, 
 Summary
 -------
 
-.. pfmheader:: manifests/manual/com.apple.notificationsettings manifest.plist
-.. pfm:: manifests/manual/com.apple.notificationsettings manifest.plist
+.. pfmheader:: /_static/manifests/com.apple.notificationsettings manifest.plist
+.. pfm:: /_static/manifests/com.apple.notificationsettings manifest.plist
 
 Keys
 ----
 
-.. pfmkey:: NotificationSettings manifests/manual/com.apple.notificationsettings manifest.plist
+.. pfmkey:: NotificationSettings /_static/manifests/com.apple.notificationsettings manifest.plist
 
 Notification Settings Item
 """"""""""""""""""""""""""
 
-.. pfm:: manifests/manual/com.apple.notificationsettings manifest.plist
+.. pfm:: /_static/manifests/com.apple.notificationsettings manifest.plist
     :key: NotificationSettings:NotificationSetting
 
 Links

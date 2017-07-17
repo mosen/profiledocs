@@ -26,5 +26,5 @@ the interface is working or not.
 Summary
 -------
 
-.. pfmheader:: manifests/manual/com.apple.firstactiveethernet.managed manifest.plist
-.. pfm:: manifests/manual/com.apple.firstactiveethernet.managed manifest.plist
+.. pfmheader:: /_static/manifests/com.apple.firstactiveethernet.managed manifest.plist
+.. pfm:: /_static/manifests/com.apple.firstactiveethernet.managed manifest.plist

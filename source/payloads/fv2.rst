@@ -17,24 +17,24 @@ In all cases, the certificate information must be set up properly for FileVault 
 Summary
 -------
 
-.. pfmheader:: manifests/manual/com.apple.MCX.FileVault2 manifest.plist
-.. pfm:: manifests/manual/com.apple.MCX.FileVault2 manifest.plist
+.. pfmheader:: /_static/manifests/com.apple.MCX.FileVault2 manifest.plist
+.. pfm:: /_static/manifests/com.apple.MCX.FileVault2 manifest.plist
 
 Keys
 ----
 
-.. pfmkey:: Enable manifests/manual/com.apple.MCX.FileVault2 manifest.plist
-.. pfmkey:: Defer manifests/manual/com.apple.MCX.FileVault2 manifest.plist
-.. pfmkey:: UserEntersMissingInfo manifests/manual/com.apple.MCX.FileVault2 manifest.plist
-.. pfmkey:: UseRecoveryKey manifests/manual/com.apple.MCX.FileVault2 manifest.plist
-.. pfmkey:: ShowRecoveryKey manifests/manual/com.apple.MCX.FileVault2 manifest.plist
-.. pfmkey:: OutputPath manifests/manual/com.apple.MCX.FileVault2 manifest.plist
-.. pfmkey:: Certificate manifests/manual/com.apple.MCX.FileVault2 manifest.plist
-.. pfmkey:: PayloadCertificateUUID manifests/manual/com.apple.MCX.FileVault2 manifest.plist
-.. pfmkey:: Username manifests/manual/com.apple.MCX.FileVault2 manifest.plist
-.. pfmkey:: Password manifests/manual/com.apple.MCX.FileVault2 manifest.plist
-.. pfmkey:: UseKeychain manifests/manual/com.apple.MCX.FileVault2 manifest.plist
-.. pfmkey:: DeferForceAtUserLoginMaxBypassAttempts manifests/manual/com.apple.MCX.FileVault2 manifest.plist
+.. pfmkey:: Enable /_static/manifests/com.apple.MCX.FileVault2 manifest.plist
+.. pfmkey:: Defer /_static/manifests/com.apple.MCX.FileVault2 manifest.plist
+.. pfmkey:: UserEntersMissingInfo /_static/manifests/com.apple.MCX.FileVault2 manifest.plist
+.. pfmkey:: UseRecoveryKey /_static/manifests/com.apple.MCX.FileVault2 manifest.plist
+.. pfmkey:: ShowRecoveryKey /_static/manifests/com.apple.MCX.FileVault2 manifest.plist
+.. pfmkey:: OutputPath /_static/manifests/com.apple.MCX.FileVault2 manifest.plist
+.. pfmkey:: Certificate /_static/manifests/com.apple.MCX.FileVault2 manifest.plist
+.. pfmkey:: PayloadCertificateUUID /_static/manifests/com.apple.MCX.FileVault2 manifest.plist
+.. pfmkey:: Username /_static/manifests/com.apple.MCX.FileVault2 manifest.plist
+.. pfmkey:: Password /_static/manifests/com.apple.MCX.FileVault2 manifest.plist
+.. pfmkey:: UseKeychain /_static/manifests/com.apple.MCX.FileVault2 manifest.plist
+.. pfmkey:: DeferForceAtUserLoginMaxBypassAttempts /_static/manifests/com.apple.MCX.FileVault2 manifest.plist
 
 Links
 -----

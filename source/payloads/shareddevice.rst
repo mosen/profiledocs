@@ -7,11 +7,11 @@ lock screen (i.e. a "If Lost, Return To" message and Asset Tag Information).
 Summary
 -------
 
-.. pfmheader:: manifests/manual/com.apple.shareddeviceconfiguration manifest.plist
-.. pfm:: manifests/manual/com.apple.shareddeviceconfiguration manifest.plist
+.. pfmheader:: /_static/manifests/com.apple.shareddeviceconfiguration manifest.plist
+.. pfm:: /_static/manifests/com.apple.shareddeviceconfiguration manifest.plist
 
 Keys
 ----
 
-.. pfmkey:: IfLostReturnToMessage manifests/manual/com.apple.shareddeviceconfiguration manifest.plist
-.. pfmkey:: AssetTagInformation manifests/manual/com.apple.shareddeviceconfiguration manifest.plist
+.. pfmkey:: IfLostReturnToMessage /_static/manifests/com.apple.shareddeviceconfiguration manifest.plist
+.. pfmkey:: AssetTagInformation /_static/manifests/com.apple.shareddeviceconfiguration manifest.plist

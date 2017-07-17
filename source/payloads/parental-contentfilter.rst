@@ -14,8 +14,8 @@ As with the System Preference pane you can use two approaches:
 Summary
 -------
 
-.. pfmheader:: manifests/manual/com.apple.familycontrols.contentfilter manifest.plist
-.. pfm:: manifests/manual/com.apple.familycontrols.contentfilter manifest.plist
+.. pfmheader:: /_static/manifests/com.apple.familycontrols.contentfilter manifest.plist
+.. pfm:: /_static/manifests/com.apple.familycontrols.contentfilter manifest.plist
 
 Keys
 ----

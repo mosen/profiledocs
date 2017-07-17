@@ -16,8 +16,8 @@ Available in macOS 10.12 and later. A Firewall payload manages the Application F
 Summary
 -------
 
-.. pfmheader:: manifests/manual/com.apple.security.firewall manifest.plist
-.. pfm:: manifests/manual/com.apple.security.firewall manifest.plist
+.. pfmheader:: /_static/manifests/com.apple.security.firewall manifest.plist
+.. pfm:: /_static/manifests/com.apple.security.firewall manifest.plist
 
 Keys
 ----

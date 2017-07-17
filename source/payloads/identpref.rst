@@ -11,8 +11,8 @@ See also :ref:`payloadtype-com.apple.security.certificatepreference` for setting
 Summary
 -------
 
-.. pfmheader:: manifests/manual/com.apple.security.identitypreference manifest.plist
-.. pfm:: manifests/manual/com.apple.security.identitypreference manifest.plist
+.. pfmheader:: /_static/manifests/com.apple.security.identitypreference manifest.plist
+.. pfm:: /_static/manifests/com.apple.security.identitypreference manifest.plist
 
 Links
 -----

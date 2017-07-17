@@ -39,14 +39,14 @@ com.apple.share.LinkedIn.post
 Summary
 -------
 
-.. pfmheader:: manifests/manual/com.apple.ShareKitHelper manifest.plist
-.. pfm:: manifests/manual/com.apple.ShareKitHelper manifest.plist
+.. pfmheader:: /_static/manifests/com.apple.ShareKitHelper manifest.plist
+.. pfm:: /_static/manifests/com.apple.ShareKitHelper manifest.plist
 
 Keys
 ----
 
-.. pfmkey:: SHKAllowedShareServices manifests/manual/com.apple.ShareKitHelper manifest.plist
-.. pfmkey:: SHKDeniedShareServices manifests/manual/com.apple.ShareKitHelper manifest.plist
+.. pfmkey:: SHKAllowedShareServices /_static/manifests/com.apple.ShareKitHelper manifest.plist
+.. pfmkey:: SHKDeniedShareServices /_static/manifests/com.apple.ShareKitHelper manifest.plist
 
 Links
 -----

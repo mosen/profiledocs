@@ -10,5 +10,5 @@ The ``GlobalPreferences`` payload is used to enable Fast user switching and to s
 Summary
 -------
 
-.. pfmheader:: manifests/manual/GlobalPreferences manifest.plist
-.. pfm:: manifests/manual/GlobalPreferences manifest.plist
+.. pfmheader:: /_static/manifests/GlobalPreferences manifest.plist
+.. pfm:: /_static/manifests/GlobalPreferences manifest.plist

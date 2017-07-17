@@ -10,8 +10,8 @@ This payload allows control to disable the Finder’s contextual menu that allow
 Summary
 -------
 
-.. pfmheader:: manifests/manual/com.apple.systempolicy.managed manifest.plist
-.. pfm:: manifests/manual/com.apple.systempolicy.managed manifest.plist
+.. pfmheader:: /_static/manifests/com.apple.systempolicy.managed manifest.plist
+.. pfm:: /_static/manifests/com.apple.systempolicy.managed manifest.plist
 
 Links
 -----

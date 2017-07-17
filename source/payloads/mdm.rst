@@ -8,24 +8,24 @@ This payload, when installed, will attempt to enroll the device into an MDM serv
 Summary
 -------
 
-.. pfmheader:: manifests/manual/com.apple.mdm manifest.plist
-.. pfm:: manifests/manual/com.apple.mdm manifest.plist
+.. pfmheader:: /_static/manifests/com.apple.mdm manifest.plist
+.. pfm:: /_static/manifests/com.apple.mdm manifest.plist
 
 Keys
 ----
 
-.. pfmkey:: IdentityCertificateUUID manifests/manual/com.apple.mdm manifest.plist
-.. pfmkey:: Topic manifests/manual/com.apple.mdm manifest.plist
-.. pfmkey:: ServerURL manifests/manual/com.apple.mdm manifest.plist
+.. pfmkey:: IdentityCertificateUUID /_static/manifests/com.apple.mdm manifest.plist
+.. pfmkey:: Topic /_static/manifests/com.apple.mdm manifest.plist
+.. pfmkey:: ServerURL /_static/manifests/com.apple.mdm manifest.plist
 
 Must begin with the https:// URL scheme, and may contain a port number (:1234, for example).
 
-.. pfmkey:: ServerCapabilities manifests/manual/com.apple.mdm manifest.plist
-.. pfmkey:: SignMessage manifests/manual/com.apple.mdm manifest.plist
-.. pfmkey:: CheckInURL manifests/manual/com.apple.mdm manifest.plist
-.. pfmkey:: CheckOutWhenRemoved manifests/manual/com.apple.mdm manifest.plist
-.. pfmkey:: AccessRights manifests/manual/com.apple.mdm manifest.plist
-.. pfmkey:: UseDevelopmentAPNS manifests/manual/com.apple.mdm manifest.plist
+.. pfmkey:: ServerCapabilities /_static/manifests/com.apple.mdm manifest.plist
+.. pfmkey:: SignMessage /_static/manifests/com.apple.mdm manifest.plist
+.. pfmkey:: CheckInURL /_static/manifests/com.apple.mdm manifest.plist
+.. pfmkey:: CheckOutWhenRemoved /_static/manifests/com.apple.mdm manifest.plist
+.. pfmkey:: AccessRights /_static/manifests/com.apple.mdm manifest.plist
+.. pfmkey:: UseDevelopmentAPNS /_static/manifests/com.apple.mdm manifest.plist
 
 
 Access Rights

@@ -8,16 +8,16 @@ Control access to mount/eject external media.
 Summary
 -------
 
-.. pfmheader:: manifests/manual/com.apple.systemuiserver manifest.plist
-.. pfm:: manifests/manual/com.apple.systemuiserver manifest.plist
+.. pfmheader:: /_static/manifests/com.apple.systemuiserver manifest.plist
+.. pfm:: /_static/manifests/com.apple.systemuiserver manifest.plist
 
 Keys
 ----
 
-.. pfmkey:: logout-eject manifests/manual/com.apple.systemuiserver manifest.plist
-.. pfmkey:: mount-controls manifests/manual/com.apple.systemuiserver manifest.plist
+.. pfmkey:: logout-eject /_static/manifests/com.apple.systemuiserver manifest.plist
+.. pfmkey:: mount-controls /_static/manifests/com.apple.systemuiserver manifest.plist
 
-.. pfm:: manifests/manual/com.apple.systemuiserver manifest.plist
+.. pfm:: /_static/manifests/com.apple.systemuiserver manifest.plist
     :key: mount-controls
 
-.. pfmkey:: unmount-controls manifests/manual/com.apple.systemuiserver manifest.plist
+.. pfmkey:: unmount-controls /_static/manifests/com.apple.systemuiserver manifest.plist

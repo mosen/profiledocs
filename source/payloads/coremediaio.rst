@@ -10,5 +10,5 @@ It is probably wiser to use the more modern Restrictions payload unless supervis
 Summary
 -------
 
-.. pfmheader:: manifests/manual/com.apple.coremediaio.support manifest.plist
-.. pfm:: manifests/manual/com.apple.coremediaio.support manifest.plist
+.. pfmheader:: /_static/manifests/com.apple.coremediaio.support manifest.plist
+.. pfm:: /_static/manifests/com.apple.coremediaio.support manifest.plist

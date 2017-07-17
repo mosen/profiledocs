@@ -16,8 +16,8 @@ The home button is disabled, and the device returns to the specified application
 Summary
 -------
 
-.. pfmheader:: manifests/manual/com.apple.app.lock manifest.plist
-.. pfm:: manifests/manual/com.apple.app.lock manifest.plist
+.. pfmheader:: /_static/manifests/com.apple.app.lock manifest.plist
+.. pfm:: /_static/manifests/com.apple.app.lock manifest.plist
 
 Keys
 ----
