@@ -5,38 +5,7 @@ The ``mdmclient`` binary ships with the operating system and is located in ``/us
 
 Several subcommands are available, some related to troubleshooting MDM.
 
-- airplay
-- agent
-- cleanconfigprofile
-- cloudconfig
-- daemon
-- dep
-- dep nag
-- dumpSCEPVars
-- encrypt
-- installedProfiles
-- InstallSystemProfile
-- InstallUserProfile
-- logevents
-- mcx_userlogin
-- MDMSim
-- mdmsim
-- nop
-- preLoginCheckin
-- QueryAppInstallation
-- QueryCertificates
-- QueryDeviceInformation
-- QueryInstalledApps
-- QueryInstalledProfiles
-- QueryNetworkInformation
-- QuerySecurityInfo
-- removeSystemProfile
-- removeUserProfile
-- rundaemon
-- stripCMS
-- test
-- testFDEKeyRotation
-- testNSXPC
+.. contents:: Commands
 
 Common Flags
 ------------
@@ -140,6 +109,16 @@ Return information that would normally be returned to the MDM in a ``SecurityInf
 Commands for simulating DEP
 ---------------------------
 
+cloudconfig
+^^^^^^^^^^^
+
+- Unverified
+
+dep
+^^^
+
+- Unverified
+
 dep nag
 ^^^^^^^
 
@@ -164,6 +143,16 @@ agent
 
 Start XPC service ``com.apple.mdmclient.agent``.
 
+cleanconfigprofile
+^^^^^^^^^^^^^^^^^^
+
+- Unverified
+
+dumpPlugInKitSettings (10.13)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+List registered extensions by their extension point (category), such as sharing, quicklook, network extensions etc.
+
 dumpSessions (Unverified)
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -184,6 +173,11 @@ dumpSCEPVars
 
 This command will show you what the substitution variable values for the SCEP payload will be.
 
+logplugins (10.13)
+^^^^^^^^^^^^^^^^^^
+
+This command outputs a list of payload domain plugins and information provided by them as a delegate.
+
 mdmsim (Unverified)
 ^^^^^^^^^^^^^^^^^^^
 
@@ -202,6 +196,9 @@ mcx_userlogin
 
 Takes a plist from STDIN.
 
+daemon
+^^^^^^
+
 rundaemon
 ^^^^^^^^^
 
@@ -211,5 +208,35 @@ installedProfiles
 ^^^^^^^^^^^^^^^^^
 
 Similar to ``QueryInstalledProfiles`` but takes a **System** or **User** scope option.
+
+InstallSystemProfile
+^^^^^^^^^^^^^^^^^^^^
+
+InstallUserProfile
+^^^^^^^^^^^^^^^^^^
+
+logevents
+^^^^^^^^^
+
+nop
+^^^
+
+preLoginCheckin
+^^^^^^^^^^^^^^^
+
+removeSystemProfile
+^^^^^^^^^^^^^^^^^^^
+
+removeUserProfile
+^^^^^^^^^^^^^^^^^
+
+stripCMS
+^^^^^^^^
+
+test
+^^^^
+
+testFDEKeyRotation
+^^^^^^^^^^^^^^^^^^
 
 
