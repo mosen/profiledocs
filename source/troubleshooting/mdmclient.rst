@@ -117,7 +117,7 @@ cloudconfig
 dep
 ^^^
 
-- Unverified
+- This is a subcommand and may have several other commands, other than `nag`.
 
 dep nag
 ^^^^^^^
@@ -217,6 +217,8 @@ InstallUserProfile
 
 logevents
 ^^^^^^^^^
+
+Display a list of XPC events at both the computer and user level.
 
 nop
 ^^^
