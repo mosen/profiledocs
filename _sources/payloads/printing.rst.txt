@@ -9,33 +9,33 @@ user may print.
 Summary
 -------
 
-.. pfmheader:: manifests/manual/com.apple.mcxprinting manifest.plist
-.. pfm:: manifests/manual/com.apple.mcxprinting manifest.plist
+.. pfmheader:: /_static/manifests/com.apple.mcxprinting manifest.plist
+.. pfm:: /_static/manifests/com.apple.mcxprinting manifest.plist
 
 Keys
 ----
 
-.. pfmkey:: DefaultPrinter manifests/manual/com.apple.mcxprinting manifest.plist
-.. pfm:: manifests/manual/com.apple.mcxprinting manifest.plist
+.. pfmkey:: DefaultPrinter /_static/manifests/com.apple.mcxprinting manifest.plist
+.. pfm:: /_static/manifests/com.apple.mcxprinting manifest.plist
     :key: DefaultPrinter
 
 
-.. pfmkey:: UserPrinterList manifests/manual/com.apple.mcxprinting manifest.plist
+.. pfmkey:: UserPrinterList /_static/manifests/com.apple.mcxprinting manifest.plist
 
-.. pfm:: manifests/manual/com.apple.mcxprinting manifest.plist
+.. pfm:: /_static/manifests/com.apple.mcxprinting manifest.plist
     :key: UserPrinterList
 
-.. pfm:: manifests/manual/com.apple.mcxprinting manifest.plist
+.. pfm:: /_static/manifests/com.apple.mcxprinting manifest.plist
     :key: UserPrinterList:QueueName
 
-.. pfmkey:: RequireAdminToAddPrinters manifests/manual/com.apple.mcxprinting manifest.plist
-.. pfmkey:: AllowLocalPrinters manifests/manual/com.apple.mcxprinting manifest.plist
-.. pfmkey:: RequireAdminToPrintLocally manifests/manual/com.apple.mcxprinting manifest.plist
-.. pfmkey:: ShowOnlyManagedPrinters manifests/manual/com.apple.mcxprinting manifest.plist
-.. pfmkey:: PrintFooter manifests/manual/com.apple.mcxprinting manifest.plist
-.. pfmkey:: PrintMACAddress manifests/manual/com.apple.mcxprinting manifest.plist
-.. pfmkey:: FooterFontSize manifests/manual/com.apple.mcxprinting manifest.plist
-.. pfmkey:: FooterFontName manifests/manual/com.apple.mcxprinting manifest.plist
+.. pfmkey:: RequireAdminToAddPrinters /_static/manifests/com.apple.mcxprinting manifest.plist
+.. pfmkey:: AllowLocalPrinters /_static/manifests/com.apple.mcxprinting manifest.plist
+.. pfmkey:: RequireAdminToPrintLocally /_static/manifests/com.apple.mcxprinting manifest.plist
+.. pfmkey:: ShowOnlyManagedPrinters /_static/manifests/com.apple.mcxprinting manifest.plist
+.. pfmkey:: PrintFooter /_static/manifests/com.apple.mcxprinting manifest.plist
+.. pfmkey:: PrintMACAddress /_static/manifests/com.apple.mcxprinting manifest.plist
+.. pfmkey:: FooterFontSize /_static/manifests/com.apple.mcxprinting manifest.plist
+.. pfmkey:: FooterFontName /_static/manifests/com.apple.mcxprinting manifest.plist
 
 
 Links

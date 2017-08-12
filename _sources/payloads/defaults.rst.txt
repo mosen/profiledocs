@@ -11,7 +11,7 @@ It is the iOS equivalent of :ref:`payloadtype-com.apple.ManagedClient.preference
 Summary
 -------
 
-.. pfmheader:: manifests/manual/com.apple.defaults.managed manifest.plist
+.. pfmheader:: /_static/manifests/com.apple.defaults.managed manifest.plist
 
-.. pfm:: manifests/manual/com.apple.defaults.managed manifest.plist
+.. pfm:: /_static/manifests/com.apple.defaults.managed manifest.plist
 

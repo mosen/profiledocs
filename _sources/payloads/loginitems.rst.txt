@@ -12,7 +12,7 @@ that the loginwindow domain applies at the system level only - *NEEDS VERIFICATI
 Summary
 -------
 
-.. pfmheader:: manifests/manual/com.apple.loginitems.managed manifest.plist
-.. pfm:: manifests/manual/com.apple.loginitems.managed manifest.plist
+.. pfmheader:: /_static/manifests/com.apple.loginitems.managed manifest.plist
+.. pfm:: /_static/manifests/com.apple.loginitems.managed manifest.plist
 
 

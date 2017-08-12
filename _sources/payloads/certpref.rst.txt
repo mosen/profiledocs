@@ -2,6 +2,7 @@
 
 Certificate Preference
 ======================
+:download:`Template <../_static/examples/com.apple.security.certificatepreference.mobileconfig>`
 
 A Certificate Preference payload lets you identify a Certificate Preference item in the user's keychain that references
 a certificate payload included in the same profile. It can only appear in a user profile, not a device profile.
@@ -15,8 +16,8 @@ See also :ref:`payloadtype-com.apple.security.identitypreference` for setting up
 Summary
 -------
 
-.. pfmheader:: manifests/manual/com.apple.security.certificatepreference manifest.plist
-.. pfm:: manifests/manual/com.apple.security.certificatepreference manifest.plist
+.. pfmheader:: /_static/manifests/com.apple.security.certificatepreference manifest.plist
+.. pfm:: /_static/manifests/com.apple.security.certificatepreference manifest.plist
 
 Keys
 ----

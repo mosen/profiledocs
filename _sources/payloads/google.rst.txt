@@ -1,5 +1,8 @@
+.. _payloadtype-com.apple.google-oauth:
+
 Google Account
 ==============
+:download:`Template <../_static/examples/com.apple.google-oauth.mobileconfig>`
 
 You can install multiple Google payloads.
 
@@ -12,15 +15,15 @@ payload has been successfully installed.
 Summary
 -------
 
-.. pfmheader:: manifests/ac2/com.apple.google-oauth manifest.plist
-.. pfm:: manifests/ac2/com.apple.google-oauth manifest.plist
+.. pfmheader:: /_static/manifests/com.apple.google-oauth manifest.plist
+.. pfm:: /_static/manifests/com.apple.google-oauth manifest.plist
 
 Keys
 ----
 
-.. pfmkey:: AccountDescription manifests/ac2/com.apple.google-oauth manifest.plist
-.. pfmkey:: AccountName manifests/ac2/com.apple.google-oauth manifest.plist
-.. pfmkey:: EmailAddress manifests/ac2/com.apple.google-oauth manifest.plist
+.. pfmkey:: AccountDescription /_static/manifests/com.apple.google-oauth manifest.plist
+.. pfmkey:: AccountName /_static/manifests/com.apple.google-oauth manifest.plist
+.. pfmkey:: EmailAddress /_static/manifests/com.apple.google-oauth manifest.plist
 
 Links
 -----

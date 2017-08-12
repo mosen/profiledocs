@@ -20,7 +20,7 @@ There doesn't seem to be any keys that deal with:
 Summary
 -------
 
-.. pfmheader:: manifests/manual/com.apple.SystemConfiguration manifest.plist
-.. pfm:: manifests/manual/com.apple.SystemConfiguration manifest.plist
+.. pfmheader:: /_static/manifests/com.apple.SystemConfiguration manifest.plist
+.. pfm:: /_static/manifests/com.apple.SystemConfiguration manifest.plist
 
 

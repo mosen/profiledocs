@@ -107,10 +107,12 @@
 <li class="toctree-l2"><a class="reference internal" href="certpkcs12.html">Certificate (PKCS#12)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certpref.html">Certificate Preference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certroot.html">Certificate (Root CA)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conference.html">Conference Room Display</a></li>
 <li class="toctree-l2"><a class="reference internal" href="coremediaio.html">Core Media IO (Camera)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom.html">Custom Settings (MCX)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dashwidgets.html">Dashboard Widgets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="legacy_custom.html">Legacy Custom Settings (MCX)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dashwidgets.html">Parental Control Dashboard Payload</a></li>
 <li class="toctree-l2"><a class="reference internal" href="desktop.html">Desktop Picture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dictionary.html">Dictionary (Parental Controls)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="discrecording.html">Disc Recording</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dock.html">Dock</a></li>
 <li class="toctree-l2"><a class="reference internal" href="domains.html">Domains</a></li>
@@ -127,7 +129,8 @@
 <li class="toctree-l4"><a class="reference internal" href="#com.apple.MCX-com.apple.EnergySaver.desktop.ACPower-auto">com.apple.EnergySaver.desktop.ACPower</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#com.apple.MCX-com.apple.EnergySaver.portable.ACPower-auto">com.apple.EnergySaver.portable.ACPower</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#com.apple.MCX-com.apple.EnergySaver.portable.BatteryPower-auto">com.apple.EnergySaver.portable.BatteryPower</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#com.apple.MCX-com.apple.EnergySaver.desktop.Schedule-auto">com.apple.EnergySaver.desktop.Schedule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#power-settings-dict">Power Settings Dict</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#schedule">Schedule</a></li>
 </ul>
 </li>
 </ul>
@@ -135,11 +138,13 @@
 <li class="toctree-l2"><a class="reference internal" href="enrollment.html">Enrollment (Supervised)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ethernet.html">Ethernet 802.1x</a></li>
 <li class="toctree-l2"><a class="reference internal" href="exchange.html">Exchange</a></li>
+<li class="toctree-l2"><a class="reference internal" href="finderburn.html">Finder (Disc Burning)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="firewall.html">Firewall</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fv2.html">FileVault 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fvescrow.html">FileVault Recovery Key Escrow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fv2redirect.html">FileVault Recovery Key Redirect</a></li>
 <li class="toctree-l2"><a class="reference internal" href="font.html">Font</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gamecenter.html">Game Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gamecenter.html">Parental Control - Game Center</a></li>
 <li class="toctree-l2"><a class="reference internal" href="globalproxy.html">Global HTTP Proxy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="google.html">Google Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="homescreen.html">Home Screen Layout</a></li>
@@ -174,12 +179,14 @@
 <li class="toctree-l2"><a class="reference internal" href="shareddevice.html">Shared Device</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sharekit.html">ShareKit</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sidebar.html">Sidebar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="smartcard.html">Smart Card</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sso.html">Single-Sign On</a></li>
 <li class="toctree-l2"><a class="reference internal" href="supervision.html">Supervision</a></li>
 <li class="toctree-l2"><a class="reference internal" href="swupd.html">Software Update Server</a></li>
 <li class="toctree-l2"><a class="reference internal" href="spctl.html">System Policy Control</a></li>
 <li class="toctree-l2"><a class="reference internal" href="submitdiag.html">Submit Diagnostics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="systemconfiguration.html">SystemConfiguration (Proxies)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="systemmigration.html">System Migration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="systempolicy.html">System Policy (Gatekeeper)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sysprefs.html">System Preference Panes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sprule.html">System Policy Rule</a></li>
@@ -194,8 +201,12 @@
 <li class="toctree-l2"><a class="reference internal" href="wifi.html">Wi-Fi</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../custom/index.html">Custom Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mdm/commands/index.html">MDM Commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../macos/index.html">macOS Subsystem Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pdp/index.html">Profile Domain Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
 </ul>
 
             
@@ -244,6 +255,7 @@
             
   <div class="section" id="energy-saver">
 <span id="payloadtype-com-apple-mcx"></span><h1>Energy Saver<a class="headerlink" href="#energy-saver" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference download internal" href="../_downloads/com.apple.MCX.mobileconfig" download=""><code class="xref download docutils literal"><span class="pre">Template</span></code></a></p>
 <p>This payload describes Energy Saver / Power Management settings.
 For more information on the individual settings you can also consult the <strong class="command">pmset(1)</strong> tool.</p>
 <div class="section" id="summary">
@@ -287,55 +299,97 @@ For more information on the individual settings you can also consult the <strong
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>DestroyFVKeyOnStandby</td>
+<tr class="row-even"><td>timeZone</td>
+<td>string</td>
+<td>Timezone</td>
+<td>Name of timezone, as found in /usr/share/zoneinfo. Basically relinks /etc/localtime but does not show in UI</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>timeServer</td>
+<td>string</td>
+<td>NTP Servers</td>
+<td>NTP Servers, separated by a comma. Appends to /etc/ntp.conf</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>EnableGuestAccount</td>
+<td>boolean</td>
+<td>Enable Guest</td>
+<td>Enable Guest</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>DisableGuestAccount</td>
+<td>boolean</td>
+<td>Enable Guest</td>
+<td>Enable Guest</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>DisableGuestSharedFolders</td>
+<td>boolean</td>
+<td>Enable Guest</td>
+<td>Enable Guest</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>forceInternetSharingOff</td>
+<td>boolean</td>
+<td>Enable Guest</td>
+<td>Enable Guest</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>DisableLocationServices</td>
+<td>boolean</td>
+<td>Enable Guest</td>
+<td>Enable Guest</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>DestroyFVKeyOnStandby</td>
 <td>boolean</td>
 <td>Destroy FileVault key on standby</td>
 <td>Destroy FileVault key on standby</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>SleepDisabled</td>
+<tr class="row-even"><td>SleepDisabled</td>
 <td>boolean</td>
 <td>Disable Sleep</td>
 <td>Key needs verification</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>com.apple.EnergySaver.desktop.ACPower-ProfileNumber</td>
+<tr class="row-odd"><td>com.apple.EnergySaver.desktop.ACPower-ProfileNumber</td>
 <td>integer</td>
 <td>Desktop Energy Saver Profile</td>
 <td>Desktop Energy Saver Profile (-1 for none?)</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>com.apple.EnergySaver.portable.ACPower-ProfileNumber</td>
+<tr class="row-even"><td>com.apple.EnergySaver.portable.ACPower-ProfileNumber</td>
 <td>integer</td>
 <td>Portable AC Power Energy Saver Profile</td>
 <td>Energy Saver Profile (-1 for none?)</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>com.apple.EnergySaver.portable.BatteryPower-ProfileNumber</td>
+<tr class="row-odd"><td>com.apple.EnergySaver.portable.BatteryPower-ProfileNumber</td>
 <td>integer</td>
 <td>Portable on Battery Power Energy Saver Profile</td>
 <td>Energy Saver Profile (-1 for none?)</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>com.apple.EnergySaver.desktop.ACPower</td>
+<tr class="row-even"><td>com.apple.EnergySaver.desktop.ACPower</td>
 <td>dict</td>
 <td>Desktop Energy Saver Settings</td>
 <td>Managed settings for the desktop energy profile</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>com.apple.EnergySaver.portable.ACPower</td>
+<tr class="row-odd"><td>com.apple.EnergySaver.portable.ACPower</td>
 <td>dict</td>
 <td>Desktop Energy Saver Settings</td>
 <td>Managed settings for the portable AC power energy profile</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>com.apple.EnergySaver.portable.BatteryPower</td>
+<tr class="row-even"><td>com.apple.EnergySaver.portable.BatteryPower</td>
 <td>dict</td>
 <td>Desktop Energy Saver Settings</td>
 <td>Managed settings for the portable battery power energy profile</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>com.apple.EnergySaver.desktop.Schedule</td>
+<tr class="row-odd"><td>com.apple.EnergySaver.desktop.Schedule</td>
 <td>dict</td>
 <td>Power Schedule</td>
 <td>Use this key to manage scheduled power on and power off events</td>
@@ -634,8 +688,62 @@ For more information on the individual settings you can also consult the <strong
 </tbody>
 </table>
 </div>
+<div class="section" id="power-settings-dict">
+<h3>Power Settings Dict<a class="headerlink" href="#power-settings-dict" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="43%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Title</th>
+<th class="head">Description</th>
+<th class="head">Required</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Automatic Restart On Power Loss</td>
+<td>integer</td>
+<td>Automatic Restart On Power Loss</td>
+<td>0 - do not restart on power loss</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>System Sleep Timer</td>
+<td>integer</td>
+<td>System Sleep Timer</td>
+<td>System Sleep Timer, in minutes. 0 - never sleep</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>Display Sleep Timer</td>
+<td>integer</td>
+<td>Display Sleep Timer</td>
+<td>Display Sleep Timer, in minutes. 0 - never sleep</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>Wake On LAN</td>
+<td>integer</td>
+<td>Wake On LAN</td>
+<td>Wake On LAN, 0 - disabled</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>Disk Sleep Timer-boolean</td>
+<td>boolean</td>
+<td>Put disks to sleep</td>
+<td>Put hard disks to sleep when possible</td>
+<td>n/a</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="schedule">
+<h3>Schedule<a class="headerlink" href="#schedule" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="com.apple.MCX-com.apple.EnergySaver.desktop.Schedule-auto">
-<h3>com.apple.EnergySaver.desktop.Schedule<a class="headerlink" href="#com.apple.MCX-com.apple.EnergySaver.desktop.Schedule-auto" title="Permalink to this headline">¶</a></h3>
+<h4>com.apple.EnergySaver.desktop.Schedule<a class="headerlink" href="#com.apple.MCX-com.apple.EnergySaver.desktop.Schedule-auto" title="Permalink to this headline">¶</a></h4>
 <p>Power Schedule</p>
 <p>Use this key to manage scheduled power on and power off events</p>
 <table border="1" class="docutils">
@@ -666,6 +774,112 @@ For more information on the individual settings you can also consult the <strong
 <td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="43%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Title</th>
+<th class="head">Description</th>
+<th class="head">Required</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>RepeatingPowerOn</td>
+<td>dict</td>
+<td>Start up or wake time</td>
+<td>Use this key to describe a repeating start up/wake time</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>RepeatingPowerOff</td>
+<td>dict</td>
+<td>Shut down, sleep or restart time</td>
+<td>Use this key to describe a repeating shut down, sleep or restart</td>
+<td>n/a</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="43%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Title</th>
+<th class="head">Description</th>
+<th class="head">Required</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>eventtype</td>
+<td>string</td>
+<td>The action to take</td>
+<td>The type of action to take at the scheduled time</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>time</td>
+<td>integer</td>
+<td>Time of day</td>
+<td>The time of day to perform the action as an int offset added to the scheduled day(s) eg 1200 for 12 hours</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>weekdays</td>
+<td>integer</td>
+<td>Days to execute</td>
+<td>The days on which the scheduled event occurs. TODO: needs more format description</td>
+<td>n/a</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="43%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Title</th>
+<th class="head">Description</th>
+<th class="head">Required</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>eventtype</td>
+<td>string</td>
+<td>The action to take</td>
+<td>The type of action to take at the scheduled time</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>time</td>
+<td>integer</td>
+<td>Time of day</td>
+<td>The time of day to perform the action as an int offset added to the scheduled day(s) eg 1200 for 12 hours</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>weekdays</td>
+<td>integer</td>
+<td>Days to execute</td>
+<td>The days on which the scheduled event occurs. TODO: needs more format description</td>
+<td>n/a</td>
 </tr>
 </tbody>
 </table>

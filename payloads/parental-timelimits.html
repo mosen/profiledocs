@@ -107,10 +107,12 @@
 <li class="toctree-l2"><a class="reference internal" href="certpkcs12.html">Certificate (PKCS#12)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certpref.html">Certificate Preference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certroot.html">Certificate (Root CA)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conference.html">Conference Room Display</a></li>
 <li class="toctree-l2"><a class="reference internal" href="coremediaio.html">Core Media IO (Camera)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom.html">Custom Settings (MCX)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dashwidgets.html">Dashboard Widgets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="legacy_custom.html">Legacy Custom Settings (MCX)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dashwidgets.html">Parental Control Dashboard Payload</a></li>
 <li class="toctree-l2"><a class="reference internal" href="desktop.html">Desktop Picture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dictionary.html">Dictionary (Parental Controls)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="discrecording.html">Disc Recording</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dock.html">Dock</a></li>
 <li class="toctree-l2"><a class="reference internal" href="domains.html">Domains</a></li>
@@ -120,11 +122,13 @@
 <li class="toctree-l2"><a class="reference internal" href="enrollment.html">Enrollment (Supervised)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ethernet.html">Ethernet 802.1x</a></li>
 <li class="toctree-l2"><a class="reference internal" href="exchange.html">Exchange</a></li>
+<li class="toctree-l2"><a class="reference internal" href="finderburn.html">Finder (Disc Burning)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="firewall.html">Firewall</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fv2.html">FileVault 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fvescrow.html">FileVault Recovery Key Escrow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fv2redirect.html">FileVault Recovery Key Redirect</a></li>
 <li class="toctree-l2"><a class="reference internal" href="font.html">Font</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gamecenter.html">Game Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gamecenter.html">Parental Control - Game Center</a></li>
 <li class="toctree-l2"><a class="reference internal" href="globalproxy.html">Global HTTP Proxy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="google.html">Google Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="homescreen.html">Home Screen Layout</a></li>
@@ -151,11 +155,8 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Parental Controls - Time Limits</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#keys">Keys</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#com.apple.familycontrols.timelimits-familyControlsEnabled-auto">familyControlsEnabled</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#com.apple.familycontrols.timelimits-limits-list-auto">limits-list</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#time-limits-item">Time Limits Item</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#allowances-item">Allowances Item</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#curfews">Curfews</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.familycontrols.timelimits.v2-familyControlsEnabled-auto">familyControlsEnabled</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#limits-list">limits-list</a></li>
 </ul>
 </li>
 </ul>
@@ -170,12 +171,14 @@
 <li class="toctree-l2"><a class="reference internal" href="shareddevice.html">Shared Device</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sharekit.html">ShareKit</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sidebar.html">Sidebar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="smartcard.html">Smart Card</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sso.html">Single-Sign On</a></li>
 <li class="toctree-l2"><a class="reference internal" href="supervision.html">Supervision</a></li>
 <li class="toctree-l2"><a class="reference internal" href="swupd.html">Software Update Server</a></li>
 <li class="toctree-l2"><a class="reference internal" href="spctl.html">System Policy Control</a></li>
 <li class="toctree-l2"><a class="reference internal" href="submitdiag.html">Submit Diagnostics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="systemconfiguration.html">SystemConfiguration (Proxies)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="systemmigration.html">System Migration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="systempolicy.html">System Policy (Gatekeeper)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sysprefs.html">System Preference Panes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sprule.html">System Policy Rule</a></li>
@@ -190,8 +193,12 @@
 <li class="toctree-l2"><a class="reference internal" href="wifi.html">Wi-Fi</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../custom/index.html">Custom Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mdm/commands/index.html">MDM Commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../macos/index.html">macOS Subsystem Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pdp/index.html">Profile Domain Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
 </ul>
 
             
@@ -239,7 +246,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="parental-controls-time-limits">
-<span id="payloadtype-com-apple-familycontrols-timelimits"></span><h1>Parental Controls - Time Limits<a class="headerlink" href="#parental-controls-time-limits" title="Permalink to this headline">¶</a></h1>
+<span id="payloadtype-com-apple-familycontrols-timelimits-v2"></span><h1>Parental Controls - Time Limits<a class="headerlink" href="#parental-controls-time-limits" title="Permalink to this headline">¶</a></h1>
 <p>This payload controls time allowances and curfews as shown in the Parental Controls system preference pane.</p>
 <div class="section" id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
@@ -247,7 +254,7 @@
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">PayloadType:</th><td class="field-body">com.apple.familycontrols.timelimits</td>
+<tr class="field-odd field"><th class="field-name">PayloadType:</th><td class="field-body">com.apple.familycontrols.timelimits.v2</td>
 </tr>
 <tr class="field-even field"><th class="field-name" colspan="2">Supervised Only:</th></tr>
 <tr class="field-even field"><td>&nbsp;</td><td class="field-body">N/A</td>
@@ -285,13 +292,13 @@
 <tr class="row-even"><td>familyControlsEnabled</td>
 <td>boolean</td>
 <td>Family Controls Enabled</td>
-<td>Family Controls Enabled (Enforce Time Limits)</td>
-<td>n/a</td>
+<td>Required. Set to true to use time limits.</td>
+<td>always</td>
 </tr>
 <tr class="row-odd"><td>limits-list</td>
-<td>array</td>
+<td>dictionary</td>
 <td>Time Limits</td>
-<td>Time Limits</td>
+<td>Required if familyControlsEnabled is true. Time limits settings.</td>
 <td>n/a</td>
 </tr>
 </tbody>
@@ -299,10 +306,10 @@
 </div>
 <div class="section" id="keys">
 <h2>Keys<a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="com.apple.familycontrols.timelimits-familyControlsEnabled-auto">
-<h3>familyControlsEnabled<a class="headerlink" href="#com.apple.familycontrols.timelimits-familyControlsEnabled-auto" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="com.apple.familycontrols.timelimits.v2-familyControlsEnabled-auto">
+<h3>familyControlsEnabled<a class="headerlink" href="#com.apple.familycontrols.timelimits.v2-familyControlsEnabled-auto" title="Permalink to this headline">¶</a></h3>
 <p>Family Controls Enabled</p>
-<p>Family Controls Enabled (Enforce Time Limits)</p>
+<p>Required. Set to true to use time limits.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="14%" />
@@ -326,43 +333,7 @@
 <tbody valign="top">
 <tr class="row-even"><td>boolean</td>
 <td>N/A</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>N/A</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="com.apple.familycontrols.timelimits-limits-list-auto">
-<h3>limits-list<a class="headerlink" href="#com.apple.familycontrols.timelimits-limits-list-auto" title="Permalink to this headline">¶</a></h3>
-<p>Time Limits</p>
-<p>Time Limits</p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Type</th>
-<th class="head">Default</th>
-<th class="head">Required</th>
-<th class="head">Regex</th>
-<th class="head">iOS</th>
-<th class="head">macOS</th>
-<th class="head">Supervised</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>array</td>
-<td>N/A</td>
-<td>N/A</td>
+<td>always</td>
 <td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
@@ -371,8 +342,9 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="time-limits-item">
-<h3>Time Limits Item<a class="headerlink" href="#time-limits-item" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="limits-list">
+<h3>limits-list<a class="headerlink" href="#limits-list" title="Permalink to this headline">¶</a></h3>
+<p>Allowances and Curfews by weekday or weekend.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="14%" />
@@ -390,150 +362,78 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>allowancesActive</td>
+<tr class="row-even"><td>weekday-allowance</td>
+<td>dictionary</td>
+<td>Weekday allowance settings</td>
+<td>Weekday allowance settings</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>weekday-curfew</td>
+<td>dictionary</td>
+<td>Weekday curfew settings</td>
+<td>Weekday curfew settings</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>weekend-allowance</td>
+<td>dictionary</td>
+<td>Weekend allowance settings</td>
+<td>Weekend allowance settings</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>weekend-curfew</td>
+<td>dictionary</td>
+<td>Weekend curfew settings</td>
+<td>Weekend curfew settings</td>
+<td>n/a</td>
+</tr>
+</tbody>
+</table>
+<p>Each of these keys contains a dictionary in the following format:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="43%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Title</th>
+<th class="head">Description</th>
+<th class="head">Required</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>enabled</td>
 <td>boolean</td>
-<td>Time Allowances Active</td>
-<td>Time allowances such as the maximum number of hours per day are active.</td>
-<td>n/a</td>
+<td>Setting Enabled</td>
+<td>Required. Set to true to enable these settings.</td>
+<td>always</td>
 </tr>
-<tr class="row-odd"><td>groupID</td>
+<tr class="row-odd"><td>rangeType</td>
+<td>integer</td>
+<td>Range Type</td>
+<td>Required. Type of day range: 0 = weekday, 1 = weekend.</td>
+<td>always</td>
+</tr>
+<tr class="row-even"><td>start</td>
 <td>string</td>
-<td>Group ID</td>
-<td>The group that this limit applies to. __COMPUTER__ is a special item that applies to all accounts on the computer.</td>
+<td>Start time</td>
+<td>Optional. Curfew start time in the format %d:%d:%d.</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>itemType</td>
+<tr class="row-odd"><td>end</td>
 <td>string</td>
-<td>Item Type</td>
-<td>Item Type.</td>
+<td>End time</td>
+<td>Optional. Curfew end time in the format %d:%d:%d.</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>name</td>
-<td>string</td>
-<td>Name</td>
-<td>Name</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>allowances</td>
-<td>array</td>
-<td>Time Allowances</td>
-<td>The maximum amount of usage allowed in given time periods</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>curfews</td>
-<td>dict</td>
-<td>Curfews</td>
-<td>Time ranges where the computer may not be used</td>
-<td>n/a</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="allowances-item">
-<h3>Allowances Item<a class="headerlink" href="#allowances-item" title="Permalink to this headline">¶</a></h3>
-<table border="1" class="docutils">
-<colgroup>
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="43%" />
-<col width="14%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Name</th>
-<th class="head">Type</th>
-<th class="head">Title</th>
-<th class="head">Description</th>
-<th class="head">Required</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>fromDay</td>
+<tr class="row-even"><td>secondsPerDay</td>
 <td>integer</td>
-<td>From day of week</td>
-<td>Day of week, zero-indexed eg. 0 = Monday, 6 = Sunday</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>toDay</td>
-<td>integer</td>
-<td>To day of week</td>
-<td>Day of week, zero-indexed eg. 0 = Monday, 6 = Sunday</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>span</td>
-<td>integer</td>
-<td>span</td>
-<td>span(?) default 0</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>timeLimitSeconds</td>
-<td>integer</td>
-<td>Time Limit (Seconds)</td>
-<td>Time limit in seconds eg. 10800 = 4 hours</td>
-<td>n/a</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="curfews">
-<h3>Curfews<a class="headerlink" href="#curfews" title="Permalink to this headline">¶</a></h3>
-<table border="1" class="docutils">
-<colgroup>
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="43%" />
-<col width="14%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Name</th>
-<th class="head">Type</th>
-<th class="head">Title</th>
-<th class="head">Description</th>
-<th class="head">Required</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>monday</td>
-<td>array</td>
-<td>Monday Curfew</td>
-<td>Monday Curfew</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>tuesday</td>
-<td>array</td>
-<td>Tuesday Curfew</td>
-<td>Tuesday Curfew</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>wednesday</td>
-<td>array</td>
-<td>Wednesday Curfew</td>
-<td>Wednesday Curfew</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>thursday</td>
-<td>array</td>
-<td>Thursday Curfew</td>
-<td>Thursday Curfew</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>friday</td>
-<td>array</td>
-<td>Friday Curfew</td>
-<td>Friday Curfew</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>saturday</td>
-<td>array</td>
-<td>Saturday Curfew</td>
-<td>Saturday Curfew</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>sunday</td>
-<td>array</td>
-<td>Sunday Curfew</td>
-<td>Sunday Curfew</td>
+<td>Seconds per day</td>
+<td>Optional. Seconds for that day for allowance.</td>
 <td>n/a</td>
 </tr>
 </tbody>

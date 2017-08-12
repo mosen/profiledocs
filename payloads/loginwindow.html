@@ -107,10 +107,12 @@
 <li class="toctree-l2"><a class="reference internal" href="certpkcs12.html">Certificate (PKCS#12)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certpref.html">Certificate Preference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certroot.html">Certificate (Root CA)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conference.html">Conference Room Display</a></li>
 <li class="toctree-l2"><a class="reference internal" href="coremediaio.html">Core Media IO (Camera)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom.html">Custom Settings (MCX)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dashwidgets.html">Dashboard Widgets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="legacy_custom.html">Legacy Custom Settings (MCX)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dashwidgets.html">Parental Control Dashboard Payload</a></li>
 <li class="toctree-l2"><a class="reference internal" href="desktop.html">Desktop Picture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dictionary.html">Dictionary (Parental Controls)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="discrecording.html">Disc Recording</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dock.html">Dock</a></li>
 <li class="toctree-l2"><a class="reference internal" href="domains.html">Domains</a></li>
@@ -120,11 +122,13 @@
 <li class="toctree-l2"><a class="reference internal" href="enrollment.html">Enrollment (Supervised)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ethernet.html">Ethernet 802.1x</a></li>
 <li class="toctree-l2"><a class="reference internal" href="exchange.html">Exchange</a></li>
+<li class="toctree-l2"><a class="reference internal" href="finderburn.html">Finder (Disc Burning)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="firewall.html">Firewall</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fv2.html">FileVault 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fvescrow.html">FileVault Recovery Key Escrow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fv2redirect.html">FileVault Recovery Key Redirect</a></li>
 <li class="toctree-l2"><a class="reference internal" href="font.html">Font</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gamecenter.html">Game Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gamecenter.html">Parental Control - Game Center</a></li>
 <li class="toctree-l2"><a class="reference internal" href="globalproxy.html">Global HTTP Proxy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="google.html">Google Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="homescreen.html">Home Screen Layout</a></li>
@@ -136,6 +140,29 @@
 <li class="toctree-l2"><a class="reference internal" href="loginscripts.html">Login Scripts</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Loginwindow</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#keys">Keys</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.loginwindow-SHOWFULLNAME-auto">SHOWFULLNAME</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.loginwindow-HideLocalUsers-auto">HideLocalUsers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.loginwindow-IncludeNetworkUser-auto">IncludeNetworkUser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.loginwindow-HideAdminUsers-auto">HideAdminUsers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.loginwindow-SHOWOTHERUSERS_MANAGED-auto">SHOWOTHERUSERS_MANAGED</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.loginwindow-AdminHostInfo-auto">AdminHostInfo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.loginwindow-AllowList-auto">AllowList</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.loginwindow-DenyList-auto">DenyList</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.loginwindow-HideMobileAccounts-auto">HideMobileAccounts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.loginwindow-ShutDownDisabled-auto">ShutDownDisabled</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.loginwindow-RestartDisabled-auto">RestartDisabled</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.loginwindow-SleepDisabled-auto">SleepDisabled</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.loginwindow-DisableConsoleAccess-auto">DisableConsoleAccess</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.loginwindow-LoginwindowText-auto">LoginwindowText</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.loginwindow-ShutDownDisabledWhileLoggedIn-auto">ShutDownDisabledWhileLoggedIn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.loginwindow-RestartDisabledWhileLoggedIn-auto">RestartDisabledWhileLoggedIn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.loginwindow-PowerOffDisabledWhileLoggedIn-auto">PowerOffDisabledWhileLoggedIn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.loginwindow-DisableLoginItemsSuppression-auto">DisableLoginItemsSuppression</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.loginwindow-DisableFDEAutoLogin-auto">DisableFDEAutoLogin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#untested">Untested</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="loginwindow_gp.html">Loginwindow (GlobalPreferences)</a></li>
@@ -162,12 +189,14 @@
 <li class="toctree-l2"><a class="reference internal" href="shareddevice.html">Shared Device</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sharekit.html">ShareKit</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sidebar.html">Sidebar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="smartcard.html">Smart Card</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sso.html">Single-Sign On</a></li>
 <li class="toctree-l2"><a class="reference internal" href="supervision.html">Supervision</a></li>
 <li class="toctree-l2"><a class="reference internal" href="swupd.html">Software Update Server</a></li>
 <li class="toctree-l2"><a class="reference internal" href="spctl.html">System Policy Control</a></li>
 <li class="toctree-l2"><a class="reference internal" href="submitdiag.html">Submit Diagnostics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="systemconfiguration.html">SystemConfiguration (Proxies)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="systemmigration.html">System Migration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="systempolicy.html">System Policy (Gatekeeper)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sysprefs.html">System Preference Panes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sprule.html">System Policy Rule</a></li>
@@ -182,8 +211,12 @@
 <li class="toctree-l2"><a class="reference internal" href="wifi.html">Wi-Fi</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../custom/index.html">Custom Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mdm/commands/index.html">MDM Commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../macos/index.html">macOS Subsystem Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pdp/index.html">Profile Domain Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
 </ul>
 
             
@@ -235,10 +268,6 @@
 <p>The com.apple.loginwindow payload, which is actually a different piece of code to the loginwindow payload, controls
 the loginwindow display.</p>
 <p>Profile Manager only displays a fraction of the keys that may actually be used.</p>
-<div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">This manifest has been pulled from MCX and may not be up to date. Testing is in progress</p>
-</div>
 <div class="section" id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
 <table class="docutils field-list" frame="void" rules="none">
@@ -280,30 +309,6 @@ the loginwindow display.</p>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>RestartDisabledWhileLoggedIn</td>
-<td>boolean</td>
-<td>Disable Restart Apple Menu Item</td>
-<td>Disables the &#8220;Restart&#8221; option when users are logged in.  Set to &#8220;True&#8221; to set the preference.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>ShutDownDisabledWhileLoggedIn</td>
-<td>boolean</td>
-<td>Disable Shutdown Apple Menu Item</td>
-<td>Disables the &#8220;Shutdown&#8221; option when users are logged in.  Set to &#8220;True&#8221; to set the preference.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>AdminHostInfo</td>
-<td>string</td>
-<td>Heading</td>
-<td>Set the default heading of the Login Window.  Example values include:  &#8220;HostName&#8221;, &#8220;SystemVersion&#8221;, &#8220;SystemBuild&#8221;, &#8220;SerialNumber&#8221;, &#8220;IPAddress&#8221;, &#8220;DSStatus&#8221;, &#8220;Time&#8221;.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>LoginwindowText</td>
-<td>string</td>
-<td>Login Window Text</td>
-<td>Set custom text at the Login Window.</td>
-<td>n/a</td>
-</tr>
 <tr class="row-even"><td>SHOWFULLNAME</td>
 <td>boolean</td>
 <td>Display Mode</td>
@@ -313,31 +318,55 @@ the loginwindow display.</p>
 <tr class="row-odd"><td>HideLocalUsers</td>
 <td>boolean</td>
 <td>Hide Local Users</td>
-<td>Set the login window to hide local users.  Display mode must be set to display &#8220;List of Users&#8221; for this preference to take effect.  Set to &#8220;True&#8221; to set the preference.</td>
+<td>When showing a user list, set to true to show only network and system users.</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>HideMobileAccounts</td>
-<td>boolean</td>
-<td>Hide Mobile Accounts</td>
-<td>Set the login window to hide mobile accounts.  Display mode must be set to display &#8220;List of Users&#8221; for this preference to take effect.  Set to &#8220;True&#8221; to set the preference.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>IncludeNetworkUser</td>
+<tr class="row-even"><td>IncludeNetworkUser</td>
 <td>boolean</td>
 <td>Show Network Accounts</td>
 <td>Set the login window to show network accounts.  Display mode must be set to display &#8220;List of Users&#8221; for this preference to take effect.  Set to &#8220;True&#8221; to set the preference.</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>HideAdminUsers</td>
+<tr class="row-odd"><td>HideAdminUsers</td>
 <td>boolean</td>
 <td>Hide Admin Accounts</td>
 <td>Set the login window to hide admin accounts.  Display mode must be set to display &#8220;List of Users&#8221; for this preference to take effect.  Set to &#8220;True&#8221; to set the preference.</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>SHOWOTHERUSERS_MANAGED</td>
+<tr class="row-even"><td>SHOWOTHERUSERS_MANAGED</td>
 <td>boolean</td>
 <td>Hide Other Accounts</td>
 <td>Set the login window to hide the option to login as &#8220;other&#8221; account.  Display mode must be set to display &#8220;List of Users&#8221; for this preference to take effect.  Set to &#8220;False&#8221; to set the preference.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>AdminHostInfo</td>
+<td>string</td>
+<td>Heading</td>
+<td>Set the default heading of the Login Window.  Example values include:  &#8220;HostName&#8221;, &#8220;SystemVersion&#8221;, &#8220;SystemBuild&#8221;, &#8220;SerialNumber&#8221;, &#8220;IPAddress&#8221;, &#8220;DSStatus&#8221;, &#8220;Time&#8221;.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>AllowList</td>
+<td>array</td>
+<td>Allowed Users or Groups</td>
+<td>User or group GUIDs of users that are allowed to log in. An asterisk &#8216;*&#8217; string specifies all users or groups.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>DenyList</td>
+<td>array</td>
+<td>Denied Users or Groups</td>
+<td>User or group GUIDs of users that cannot log in. This list takes priority over the list in the AllowList key.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>HideMobileAccounts</td>
+<td>boolean</td>
+<td>Hide Mobile Accounts</td>
+<td>If set to true, mobile account users will not be visible in a user list. In some cases mobile users will show up as network users.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>ShutDownDisabled</td>
+<td>boolean</td>
+<td>Hide Shut Down Button</td>
+<td>If set to true, the Shut Down button item will be hidden.</td>
 <td>n/a</td>
 </tr>
 <tr class="row-even"><td>RestartDisabled</td>
@@ -346,122 +375,756 @@ the loginwindow display.</p>
 <td>Set the option to hide the Restart button from the login window.  Set to &#8220;True&#8221; to set the preference.</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>ShutDownDisabled</td>
+<tr class="row-odd"><td>SleepDisabled</td>
 <td>boolean</td>
-<td>Hide Shut Down Button</td>
-<td>Set the option to hide the Shut Down button from the login window.  Set to &#8220;True&#8221; to set the preference.</td>
+<td>Hide Sleep Button</td>
+<td>If set to true, the Sleep button item will be hidden.</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>PowerOffDisabled</td>
-<td>boolean</td>
-<td>Disable Power Off</td>
-<td>Disables the &#8220;Shutdown&#8221;, &#8220;Restart&#8221;, and &#8220;Sleep&#8221; buttons from the login window.  Set to &#8220;True&#8221; to set the preference.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>RetriesUntilHint</td>
-<td>integer</td>
-<td>Retries Until Hint</td>
-<td>Set the number of retries before showing a password hint, if password hints are set.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>com.apple.login.mcx.DisableAutoLoginClient</td>
-<td>boolean</td>
-<td>Disable Auto Login</td>
-<td>Disables Automatic Login.  Set to &#8220;True&#8221; to set the preference.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>DisableConsoleAccess</td>
+<tr class="row-even"><td>DisableConsoleAccess</td>
 <td>boolean</td>
 <td>Disable Console Access</td>
 <td>Disables the ability for a user to access the console by typing &#8220;&gt;console&#8221; for a username at the login window.  Set to &#8220;True&#8221; to set the preference.</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>UseComputerNameForComputerRecordName</td>
+<tr class="row-odd"><td>LoginwindowText</td>
+<td>string</td>
+<td>Login Window Text</td>
+<td>Text to display in the login window.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>ShutDownDisabledWhileLoggedIn</td>
 <td>boolean</td>
-<td>Set Computer Name</td>
-<td>Set the computer name to the computer record name in the directory server.  Set to &#8220;True&#8221; to set the preference.  Please note this preference applies only to Mac OS X 10.5 and later.</td>
+<td>Disable Shutdown Apple Menu Item</td>
+<td>Disables the &#8220;Shutdown&#8221; option when users are logged in.  Set to &#8220;True&#8221; to set the preference.</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>EnableExternalAccounts</td>
+<tr class="row-odd"><td>RestartDisabledWhileLoggedIn</td>
 <td>boolean</td>
-<td>Enable External Accounts</td>
-<td>Enable external accounts.  Set to &#8220;True&#8221; to set the preference.  Please note this preference applies only to Mac OS X 10.5 and later.</td>
+<td>Disable Restart Apple Menu Item</td>
+<td>Disables the &#8220;Restart&#8221; option when users are logged in.  Set to &#8220;True&#8221; to set the preference.</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>LocalUserLoginEnabled</td>
+<tr class="row-even"><td>PowerOffDisabledWhileLoggedIn</td>
 <td>boolean</td>
-<td>Disable Local User Login</td>
-<td>Disable local user account login.  Set to &#8220;False&#8221; to set the preference.  Please note that local administrators may always log in.</td>
+<td>Disable Power Off Apple Menu Item</td>
+<td>If set to true, the Power Off menu item will be disabled when the user is logged in.</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>AllowList-UPK</td>
-<td>union policy</td>
-<td>Allowed Users and Groups Union Policy</td>
-<td>Allowed users and groups union policy keys.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>AllowList-Raw</td>
-<td>array</td>
-<td>Allowed Users or Groups</td>
-<td>Allow user login for only allow certain users or groups.  The GUID of each user or group must be specified for the scoping to work properly.   To find the GUID of a user, run the command:
-
-                    dscl /Search read /Users/username GeneratedUID
-
-                    To find the GUID of a group, run the command:
-
-                    dscl /Search read /Groups/groupname GeneratedUID
-
-                    Deny Entries take precedence over Allow entries. Entry order is ignored.  Please note that this preference applies only to Mac OS X 10.5 and later.
-                </td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>DenyList-UPK</td>
-<td>union policy</td>
-<td>Denied Users or Groups Union Policy</td>
-<td>Denied users or groups union policy keys.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>DenyList-Raw</td>
-<td>array</td>
-<td>Denied Users or Groups</td>
-<td>Deny user login for certain users or groups.  The GUID of each user or group must be specified for the scoping to work properly.   To find the GUID of a user, run the command:
-
-                    dscl /Search read /Users/username GeneratedUID
-
-                    To find the GUID of a group, run the command:
-
-                    dscl /Search read /Groups/groupname GeneratedUID
-
-                    Deny Entries take precedence over Allow entries. Entry order is ignored.  Please note that this preference applies only to Mac OS X 10.5 and later.
-                </td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>LocalUsersHaveWorkgroups</td>
+<tr class="row-odd"><td>DisableLoginItemsSuppression</td>
 <td>boolean</td>
-<td>Local Users May Use Workgroup Settings</td>
-<td>Allow local users to use available workgroup settings.  Set to &#8220;True&#8221; to set the preference.  Please note that this preference applies only to Mac OS X 10.4 and later.</td>
+<td>Disable Login Items Suppression</td>
+<td>If set to true, the user is prevented from disabling login item launching using the Shift key.</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>FlattenUserWorkgroups</td>
+<tr class="row-even"><td>DisableFDEAutoLogin</td>
 <td>boolean</td>
-<td>Ignore Workgroup Nesting</td>
-<td>Ignore nested group membership preferences.  Set to &#8220;True&#8221; to set the preference.  Please note that this preference applies only to Mac OS X 10.5 and later.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>CombineUserWorkgroups</td>
-<td>boolean</td>
-<td>Combine Available Workgroup Settings</td>
-<td>Combine Available Workgroup Settings.  Set to &#8220;True&#8221; to set the preference.  Please note that this preference applies only to Mac OS X 10.5 and later.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>AlwaysShowWorkgroupDialog</td>
-<td>boolean</td>
-<td>Always Show Workgroup Dialog</td>
-<td>Always show the workgroup dialog at user login.  Set to &#8220;True&#8221; to set the preference.  Please note that this preference applies only to Mac OS X 10.5 and later.</td>
+<td>Disable automatic login</td>
+<td>Disable automatic login if FileVault is enabled, so that both an EFI Login and loginwindow password are required</td>
 <td>n/a</td>
 </tr>
 </tbody>
 </table>
+</div>
+<div class="section" id="keys">
+<h2>Keys<a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="com.apple.loginwindow-SHOWFULLNAME-auto">
+<h3>SHOWFULLNAME<a class="headerlink" href="#com.apple.loginwindow-SHOWFULLNAME-auto" title="Permalink to this headline">¶</a></h3>
+<p>Display Mode</p>
+<p>Set the login window to display name and password text boxes for user login or a list of users.  Set to &#8220;True&#8221; to display username and password text boxes.  Set to &#8220;False&#8221; to display a list of users.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.loginwindow-HideLocalUsers-auto">
+<h3>HideLocalUsers<a class="headerlink" href="#com.apple.loginwindow-HideLocalUsers-auto" title="Permalink to this headline">¶</a></h3>
+<p>Hide Local Users</p>
+<p>When showing a user list, set to true to show only network and system users.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.loginwindow-IncludeNetworkUser-auto">
+<h3>IncludeNetworkUser<a class="headerlink" href="#com.apple.loginwindow-IncludeNetworkUser-auto" title="Permalink to this headline">¶</a></h3>
+<p>Show Network Accounts</p>
+<p>Set the login window to show network accounts.  Display mode must be set to display &#8220;List of Users&#8221; for this preference to take effect.  Set to &#8220;True&#8221; to set the preference.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.loginwindow-HideAdminUsers-auto">
+<h3>HideAdminUsers<a class="headerlink" href="#com.apple.loginwindow-HideAdminUsers-auto" title="Permalink to this headline">¶</a></h3>
+<p>Hide Admin Accounts</p>
+<p>Set the login window to hide admin accounts.  Display mode must be set to display &#8220;List of Users&#8221; for this preference to take effect.  Set to &#8220;True&#8221; to set the preference.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.loginwindow-SHOWOTHERUSERS_MANAGED-auto">
+<h3>SHOWOTHERUSERS_MANAGED<a class="headerlink" href="#com.apple.loginwindow-SHOWOTHERUSERS_MANAGED-auto" title="Permalink to this headline">¶</a></h3>
+<p>Hide Other Accounts</p>
+<p>Set the login window to hide the option to login as &#8220;other&#8221; account.  Display mode must be set to display &#8220;List of Users&#8221; for this preference to take effect.  Set to &#8220;False&#8221; to set the preference.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>False</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.loginwindow-AdminHostInfo-auto">
+<h3>AdminHostInfo<a class="headerlink" href="#com.apple.loginwindow-AdminHostInfo-auto" title="Permalink to this headline">¶</a></h3>
+<p>Heading</p>
+<p>Set the default heading of the Login Window.  Example values include:  &#8220;HostName&#8221;, &#8220;SystemVersion&#8221;, &#8220;SystemBuild&#8221;, &#8220;SerialNumber&#8221;, &#8220;IPAddress&#8221;, &#8220;DSStatus&#8221;, &#8220;Time&#8221;.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>HostName</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.loginwindow-AllowList-auto">
+<h3>AllowList<a class="headerlink" href="#com.apple.loginwindow-AllowList-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allowed Users or Groups</p>
+<p>User or group GUIDs of users that are allowed to log in. An asterisk &#8216;*&#8217; string specifies all users or groups.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>array</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.loginwindow-DenyList-auto">
+<h3>DenyList<a class="headerlink" href="#com.apple.loginwindow-DenyList-auto" title="Permalink to this headline">¶</a></h3>
+<p>Denied Users or Groups</p>
+<p>User or group GUIDs of users that cannot log in. This list takes priority over the list in the AllowList key.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>array</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.loginwindow-HideMobileAccounts-auto">
+<h3>HideMobileAccounts<a class="headerlink" href="#com.apple.loginwindow-HideMobileAccounts-auto" title="Permalink to this headline">¶</a></h3>
+<p>Hide Mobile Accounts</p>
+<p>If set to true, mobile account users will not be visible in a user list. In some cases mobile users will show up as network users.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.loginwindow-ShutDownDisabled-auto">
+<h3>ShutDownDisabled<a class="headerlink" href="#com.apple.loginwindow-ShutDownDisabled-auto" title="Permalink to this headline">¶</a></h3>
+<p>Hide Shut Down Button</p>
+<p>If set to true, the Shut Down button item will be hidden.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.loginwindow-RestartDisabled-auto">
+<h3>RestartDisabled<a class="headerlink" href="#com.apple.loginwindow-RestartDisabled-auto" title="Permalink to this headline">¶</a></h3>
+<p>Hide Restart Button</p>
+<p>Set the option to hide the Restart button from the login window.  Set to &#8220;True&#8221; to set the preference.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.loginwindow-SleepDisabled-auto">
+<h3>SleepDisabled<a class="headerlink" href="#com.apple.loginwindow-SleepDisabled-auto" title="Permalink to this headline">¶</a></h3>
+<p>Hide Sleep Button</p>
+<p>If set to true, the Sleep button item will be hidden.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.loginwindow-DisableConsoleAccess-auto">
+<h3>DisableConsoleAccess<a class="headerlink" href="#com.apple.loginwindow-DisableConsoleAccess-auto" title="Permalink to this headline">¶</a></h3>
+<p>Disable Console Access</p>
+<p>Disables the ability for a user to access the console by typing &#8220;&gt;console&#8221; for a username at the login window.  Set to &#8220;True&#8221; to set the preference.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.loginwindow-LoginwindowText-auto">
+<h3>LoginwindowText<a class="headerlink" href="#com.apple.loginwindow-LoginwindowText-auto" title="Permalink to this headline">¶</a></h3>
+<p>Login Window Text</p>
+<p>Text to display in the login window.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.loginwindow-ShutDownDisabledWhileLoggedIn-auto">
+<h3>ShutDownDisabledWhileLoggedIn<a class="headerlink" href="#com.apple.loginwindow-ShutDownDisabledWhileLoggedIn-auto" title="Permalink to this headline">¶</a></h3>
+<p>Disable Shutdown Apple Menu Item</p>
+<p>Disables the &#8220;Shutdown&#8221; option when users are logged in.  Set to &#8220;True&#8221; to set the preference.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.loginwindow-RestartDisabledWhileLoggedIn-auto">
+<h3>RestartDisabledWhileLoggedIn<a class="headerlink" href="#com.apple.loginwindow-RestartDisabledWhileLoggedIn-auto" title="Permalink to this headline">¶</a></h3>
+<p>Disable Restart Apple Menu Item</p>
+<p>Disables the &#8220;Restart&#8221; option when users are logged in.  Set to &#8220;True&#8221; to set the preference.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.loginwindow-PowerOffDisabledWhileLoggedIn-auto">
+<h3>PowerOffDisabledWhileLoggedIn<a class="headerlink" href="#com.apple.loginwindow-PowerOffDisabledWhileLoggedIn-auto" title="Permalink to this headline">¶</a></h3>
+<p>Disable Power Off Apple Menu Item</p>
+<p>If set to true, the Power Off menu item will be disabled when the user is logged in.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.loginwindow-DisableLoginItemsSuppression-auto">
+<h3>DisableLoginItemsSuppression<a class="headerlink" href="#com.apple.loginwindow-DisableLoginItemsSuppression-auto" title="Permalink to this headline">¶</a></h3>
+<p>Disable Login Items Suppression</p>
+<p>If set to true, the user is prevented from disabling login item launching using the Shift key.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.loginwindow-DisableFDEAutoLogin-auto">
+<h3>DisableFDEAutoLogin<a class="headerlink" href="#com.apple.loginwindow-DisableFDEAutoLogin-auto" title="Permalink to this headline">¶</a></h3>
+<p>Disable automatic login</p>
+<p>Disable automatic login if FileVault is enabled, so that both an EFI Login and loginwindow password are required</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="untested">
+<h3>Untested<a class="headerlink" href="#untested" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>RetriesUntilHint</li>
+<li>com.apple.login.mcx.DisableAutoLoginClient</li>
+<li>UseComputerNameForComputerRecordName</li>
+<li>EnableExternalAccounts</li>
+<li>LocalUserLoginEnabled</li>
+<li>LocalUsersHaveWorkgroups</li>
+<li>FlattenUserWorkgroups</li>
+<li>CombineUserWorkgroups</li>
+</ul>
+</div>
 </div>
 </div>
 

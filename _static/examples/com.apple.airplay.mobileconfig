@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>Passwords</key>
+			<array>
+				<dict>
+					<key>DeviceName</key>
+					<string></string>
+					<key>Password</key>
+					<string></string>
+				</dict>
+			</array>
+			<key>PayloadDescription</key>
+			<string>Configures AirPlay settings</string>
+			<key>PayloadDisplayName</key>
+			<string>AirPlay settings</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.airplay</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>com.apple.airplay</string>
+			<key>PayloadUUID</key>
+			<string></string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>Whitelist</key>
+			<array>
+				<dict>
+					<key>DeviceID</key>
+					<string></string>
+				</dict>
+			</array>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Example: AirPlay settings</string>
+	<key>PayloadDisplayName</key>
+	<string>Example: AirPlay</string>
+	<key>PayloadIdentifier</key>
+	<string>com.apple.airplay.example</string>
+	<key>PayloadOrganization</key>
+	<string>Example Organization</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>690efd24-1173-4327-be21-676e099e0839</string>
+</dict>
+</plist>

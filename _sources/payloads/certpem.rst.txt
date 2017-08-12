@@ -2,21 +2,22 @@
 
 Certificate (PEM)
 =================
+:download:`Template <../_static/examples/com.apple.security.pem.mobileconfig>`
 
 PEM-encoded certificate (.cer) without private key. May contain root certificates.
 
 Summary
 -------
 
-.. pfmheader:: manifests/manual/com.apple.security.pem manifest.plist
+.. pfmheader:: /_static/manifests/com.apple.security.pem manifest.plist
 
-.. pfm:: manifests/manual/com.apple.security.pem manifest.plist
+.. pfm:: /_static/manifests/com.apple.security.pem manifest.plist
 
 Keys
 ----
 
-.. pfmkey:: PayloadCertificateFileName manifests/manual/com.apple.security.pem manifest.plist
-.. pfmkey:: PayloadContent manifests/manual/com.apple.security.pem manifest.plist
+.. pfmkey:: PayloadCertificateFileName /_static/manifests/com.apple.security.pem manifest.plist
+.. pfmkey:: PayloadContent /_static/manifests/com.apple.security.pem manifest.plist
 
 
 

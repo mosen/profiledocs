@@ -1,0 +1,100 @@
+{
+    "$schema": "http://json-schema.org/schema#", 
+    "type": "object", 
+    "properties": {
+        "PayloadUUID": {
+            "default": "", 
+            "pattern": "^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$", 
+            "type": "string", 
+            "description": "Unique identifier for the payload (format 01234567-89AB-CDEF-0123-456789ABCDEF)"
+        }, 
+        "PayloadDescription": {
+            "default": "Proxy Configuration Payload", 
+            "type": "string", 
+            "description": "Description of the payload"
+        }, 
+        "PayloadOrganization": {
+            "type": "string", 
+            "description": "This value describes the issuing organization of the profile, as displayed to the user"
+        }, 
+        "PayloadIdentifier": {
+            "default": "com.apple.SystemConfiguration", 
+            "type": "string", 
+            "description": "A unique identifier for the payload, dot-delimited.  Usually root PayloadIdentifier+subidentifier"
+        }, 
+        "PayloadDisplayName": {
+            "default": "Proxy Configuration Payload", 
+            "type": "string", 
+            "description": "Name of the payload"
+        }, 
+        "PayloadType": {
+            "default": "com.apple.SystemConfiguration", 
+            "type": "string", 
+            "description": "The type of the payload, a reverse dns string"
+        }, 
+        "PayloadVersion": {
+            "default": 1, 
+            "type": "number", 
+            "description": "The version of the whole configuration profile."
+        }, 
+        "Proxies": {
+            "type": "dict", 
+            "description": "macOS System Proxy Configuration", 
+            "properties": {
+                "RTSPEnable": {
+                    "default": 0, 
+                    "type": "number", 
+                    "description": "Enable RTSP Streaming Proxy, 0 - disabled, 1 - enabled"
+                }, 
+                "HTTPSEnable": {
+                    "default": 0, 
+                    "type": "number", 
+                    "description": "Enable HTTPS Proxy, 0 - disabled, 1 - enabled"
+                }, 
+                "FTPEnable": {
+                    "default": 0, 
+                    "type": "number", 
+                    "description": "Enable FTP Proxy, 0 - disabled, 1 - enabled"
+                }, 
+                "HTTPEnable": {
+                    "default": 0, 
+                    "type": "number", 
+                    "description": "Enable HTTP Proxy, 0 - disabled, 1 - enabled"
+                }, 
+                "HTTPPort": {
+                    "default": 80, 
+                    "type": "number", 
+                    "description": "HTTP Proxy Port"
+                }, 
+                "GopherEnable": {
+                    "default": 0, 
+                    "type": "number", 
+                    "description": "Enable Gopher Proxy, 0 - disabled, 1 - enabled"
+                }, 
+                "SOCKSEnable": {
+                    "default": 0, 
+                    "type": "number", 
+                    "description": "Enable SOCKS Proxy, 0 - disabled, 1 - enabled"
+                }, 
+                "HTTPProxy": {
+                    "type": "string", 
+                    "description": "HTTP Proxy Hostname"
+                }, 
+                "ProxyAutoConfigEnable": {
+                    "default": 0, 
+                    "type": "number", 
+                    "description": "Enable the use of a Proxy AutoConfig file"
+                }, 
+                "ExceptionsList": {
+                    "items": {
+                        "type": "string", 
+                        "description": "Bypassed domain or IP address. May contain wildcards. IP addresses may be in CIDR format."
+                    }, 
+                    "type": "array", 
+                    "description": "Bypass proxy settings for these Hosts & Domains"
+                }
+            }
+        }
+    }, 
+    "title": "com.apple.SystemConfiguration"
+}

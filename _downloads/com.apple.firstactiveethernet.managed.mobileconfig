@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>EAPClientConfiguration</key>
+			<dict>
+				<key>AcceptEAPTypes</key>
+				<array>
+					<integer>13</integer>
+				</array>
+				<key>EAPFASTProvisionPAC</key>
+				<false/>
+				<key>EAPFASTProvisionPACAnonymously</key>
+				<false/>
+				<key>EAPFASTUsePAC</key>
+				<false/>
+				<key>EAPSIMNumberOfRANDs</key>
+				<integer>3</integer>
+				<key>OneTimeUserPassword</key>
+				<false/>
+				<key>OuterIdentity</key>
+				<string></string>
+				<key>PayloadCertificateAnchorUUID</key>
+				<array>
+					<string></string>
+				</array>
+				<key>TLSAllowTrustExceptions</key>
+				<false/>
+				<key>TLSTrustedServerNames</key>
+				<array>
+					<string></string>
+				</array>
+				<key>TTLSInnerAuthentication</key>
+				<string>PAP</string>
+				<key>UserName</key>
+				<string></string>
+				<key>UserPassword</key>
+				<string></string>
+			</dict>
+			<key>Password</key>
+			<string></string>
+			<key>PayloadCertificateUUID</key>
+			<string></string>
+			<key>PayloadDescription</key>
+			<string>802.1x Ethernet Settings</string>
+			<key>PayloadDisplayName</key>
+			<string>802.1x Ethernet Settings</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.firstactiveethernet.managed</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>com.apple.firstactiveethernet.managed</string>
+			<key>PayloadUUID</key>
+			<string></string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>ProxyPACFallbackAllowed</key>
+			<false/>
+			<key>ProxyPACURL</key>
+			<string></string>
+			<key>ProxyPassword</key>
+			<string></string>
+			<key>ProxyServer</key>
+			<string></string>
+			<key>ProxyServerPort</key>
+			<integer>0</integer>
+			<key>ProxyType</key>
+			<string>None</string>
+			<key>ProxyUsername</key>
+			<string></string>
+			<key>QoSMarkingPolicy</key>
+			<dict>
+				<key>QoSMarkingAppleAudioVideoCalls</key>
+				<true/>
+				<key>QoSMarkingEnabled</key>
+				<true/>
+				<key>QoSMarkingWhitelistedAppIdentifiers</key>
+				<array>
+					<string></string>
+				</array>
+			</dict>
+			<key>TLSCertificateRequired</key>
+			<false/>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Example: Use this section to define 802.1x Ethernet settings</string>
+	<key>PayloadDisplayName</key>
+	<string>Example: 802.1x Ethernet Settings</string>
+	<key>PayloadIdentifier</key>
+	<string>com.apple.firstactiveethernet.managed.example</string>
+	<key>PayloadOrganization</key>
+	<string>Example Organization</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>b2ce9954-0fad-48c5-bc78-a0961a91f1a8</string>
+</dict>
+</plist>

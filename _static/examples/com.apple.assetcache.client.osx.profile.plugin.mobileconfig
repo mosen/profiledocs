@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>PayloadDescription</key>
+			<string>AssetCache Client</string>
+			<key>PayloadDisplayName</key>
+			<string>AssetCache Client</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.assetcache.client.osx.profile.plugin</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>com.apple.assetcache.client.osx.profile.plugin</string>
+			<key>PayloadUUID</key>
+			<string></string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>PublicIPAddressRanges</key>
+			<array>
+				<dict>
+					<key>first</key>
+					<string></string>
+					<key>last</key>
+					<string></string>
+					<key>type</key>
+					<string>IPv4</string>
+				</dict>
+			</array>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Example: AssetCache Client Payload</string>
+	<key>PayloadDisplayName</key>
+	<string>Example: AssetCache Client Payload</string>
+	<key>PayloadIdentifier</key>
+	<string>com.apple.assetcache.client.osx.profile.plugin.example</string>
+	<key>PayloadOrganization</key>
+	<string>Example Organization</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>b54af24b-6963-46fd-b9bd-682734352847</string>
+</dict>
+</plist>

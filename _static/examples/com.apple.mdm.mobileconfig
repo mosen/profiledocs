@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>AccessRights</key>
+			<integer>0</integer>
+			<key>CheckInURL</key>
+			<string></string>
+			<key>CheckOutWhenRemoved</key>
+			<false/>
+			<key>IdentityCertificateUUID</key>
+			<string></string>
+			<key>PayloadDescription</key>
+			<string>Configures a Mobile Device Management server</string>
+			<key>PayloadDisplayName</key>
+			<string>MDM</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.mdm</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>com.apple.mdm</string>
+			<key>PayloadUUID</key>
+			<string></string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>ServerCapabilities</key>
+			<string>com.apple.mdm.per-user-connections</string>
+			<key>ServerURL</key>
+			<string></string>
+			<key>SignMessage</key>
+			<false/>
+			<key>Topic</key>
+			<string></string>
+			<key>UseDevelopmentAPNS</key>
+			<false/>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Example: Use this section to define settings for mobile device management.</string>
+	<key>PayloadDisplayName</key>
+	<string>Example: MDM</string>
+	<key>PayloadIdentifier</key>
+	<string>com.apple.mdm.example</string>
+	<key>PayloadOrganization</key>
+	<string>Example Organization</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>cd987e19-434a-4dd1-8073-9a0463dc9b13</string>
+</dict>
+</plist>

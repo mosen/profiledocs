@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>App</key>
+			<dict>
+				<key>Identifier</key>
+				<string></string>
+				<key>Options</key>
+				<dict>
+					<key>DisableAutoLock</key>
+					<false/>
+					<key>DisableDeviceRotation</key>
+					<false/>
+					<key>DisableRingerSwitch</key>
+					<false/>
+					<key>DisableSleepWakeButton</key>
+					<false/>
+					<key>DisableTouch</key>
+					<false/>
+					<key>DisableVolumeButtons</key>
+					<false/>
+					<key>EnableAssistiveTouch</key>
+					<false/>
+					<key>EnableInvertColors</key>
+					<false/>
+					<key>EnableMonoAudio</key>
+					<false/>
+					<key>EnableSpeakSelection</key>
+					<false/>
+					<key>EnableVoiceOver</key>
+					<false/>
+					<key>EnableZoom</key>
+					<false/>
+				</dict>
+				<key>UserEnabledOptions</key>
+				<dict>
+					<key>AssistiveTouch</key>
+					<false/>
+					<key>InvertColors</key>
+					<false/>
+					<key>VoiceOver</key>
+					<false/>
+					<key>Zoom</key>
+					<false/>
+				</dict>
+			</dict>
+			<key>PayloadDescription</key>
+			<string>App Lock</string>
+			<key>PayloadDisplayName</key>
+			<string>App Lock</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.app.lock</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>com.apple.app.lock</string>
+			<key>PayloadUUID</key>
+			<string></string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Example:  App Lock (Supervised Only)</string>
+	<key>PayloadDisplayName</key>
+	<string>Example: App Lock</string>
+	<key>PayloadIdentifier</key>
+	<string>com.apple.app.lock.example</string>
+	<key>PayloadOrganization</key>
+	<string>Example Organization</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>82654c10-8efc-44df-bb48-d5d42aecb852</string>
+</dict>
+</plist>

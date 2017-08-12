@@ -1,0 +1,96 @@
+{
+    "$schema": "http://json-schema.org/schema#", 
+    "type": "object", 
+    "properties": {
+        "PayloadUUID": {
+            "default": "", 
+            "pattern": "^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$", 
+            "type": "string", 
+            "description": "Unique identifier for the payload (format 01234567-89AB-CDEF-0123-456789ABCDEF)"
+        }, 
+        "Defer": {
+            "type": "boolean", 
+            "description": "Set to true to defer enabling FileVault until the designated user logs out. For details, see fdesetup(8). The person enabling FileVault must be either a local user or a mobile account user."
+        }, 
+        "PayloadDescription": {
+            "default": "FileVault 2", 
+            "type": "string", 
+            "description": "Description of the payload"
+        }, 
+        "Enable": {
+            "type": "boolean", 
+            "description": "Set to 'On' to enable FileVault. Set to 'Off' to disable FileVault. This value is required."
+        }, 
+        "ShowRecoveryKey": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Set to false to not display the personal recovery key to the user after FileVault is enabled"
+        }, 
+        "UseKeychain": {
+            "type": "boolean", 
+            "description": "If set to true and no certificate information is provided in this payload, the keychain already created at /Library/Keychains/FileVaultMaster.keychain will be used when the institutional recovery key is added."
+        }, 
+        "Certificate": {
+            "type": "string", 
+            "description": "DER-encoded certificate data if an institutional recovery key will be added."
+        }, 
+        "DeferForceAtUserLoginMaxBypassAttempts": {
+            "type": "number", 
+            "description": "When using the Defer option you can optionally set this key to the maximum number of times the user can bypass enabling FileVault before it will require that it be enabled before the user can log in. If set to 0, it will always prompt to enable FileVault until it is enabled, though it will allow you to bypass enabling it. Setting this key to \u20131 will disable this feature."
+        }, 
+        "DeferDontAskAtUserLogout": {
+            "type": "number", 
+            "description": "When using the Defer option, set this key to true to not request enabling FileVault at user logout time."
+        }, 
+        "PayloadOrganization": {
+            "type": "string", 
+            "description": "This value describes the issuing organization of the profile, as displayed to the user"
+        }, 
+        "Password": {
+            "type": "string", 
+            "description": "User password of the Open Directory user that will be added to FileVault. Use the UserEntersMissingInfo key if you want to prompt for this information."
+        }, 
+        "PayloadIdentifier": {
+            "default": "com.apple.MCX.FileVault2", 
+            "type": "string", 
+            "description": "A unique identifier for the payload, dot-delimited.  Usually root PayloadIdentifier+subidentifier"
+        }, 
+        "PayloadDisplayName": {
+            "default": "FileVault 2", 
+            "type": "string", 
+            "description": "Name of the payload"
+        }, 
+        "OutputPath": {
+            "type": "string", 
+            "description": "Path to the location where the recovery key and computer information plist will be stored."
+        }, 
+        "PayloadType": {
+            "default": "com.apple.MCX.FileVault2", 
+            "type": "string", 
+            "description": "The type of the payload, a reverse dns string"
+        }, 
+        "UseRecoveryKey": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Set to true to create a personal recovery key"
+        }, 
+        "UserEntersMissingInfo": {
+            "type": "boolean", 
+            "description": "Set to true for manual profile installs to prompt for missing user name or password fields."
+        }, 
+        "PayloadVersion": {
+            "default": 1, 
+            "type": "number", 
+            "description": "The version of the whole configuration profile."
+        }, 
+        "Username": {
+            "type": "string", 
+            "description": "User name of the Open Directory user that will be added to FileVault."
+        }, 
+        "PayloadCertificateUUID": {
+            "type": "string", 
+            "description": "UUID of the payload containing the asymmetric recovery key certificate payload."
+        }
+    }, 
+    "title": "com.apple.MCX.FileVault2"
+}

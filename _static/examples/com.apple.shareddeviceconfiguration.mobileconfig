@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>AssetTagInformation</key>
+			<string></string>
+			<key>IfLostReturnToMessage</key>
+			<string></string>
+			<key>PayloadDescription</key>
+			<string>Configures ownership information for a shared device</string>
+			<key>PayloadDisplayName</key>
+			<string>Shared Device Configuration</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.shareddeviceconfiguration</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>com.apple.shareddeviceconfiguration</string>
+			<key>PayloadUUID</key>
+			<string></string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Example: Use this section to define text displayed by shared devices in the login window and lock screen.</string>
+	<key>PayloadDisplayName</key>
+	<string>Example: OSXServerAccount</string>
+	<key>PayloadIdentifier</key>
+	<string>com.apple.shareddeviceconfiguration.example</string>
+	<key>PayloadOrganization</key>
+	<string>Example Organization</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>7f14c8e8-9ea4-43d1-8b2b-488a86182893</string>
+</dict>
+</plist>

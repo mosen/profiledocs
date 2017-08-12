@@ -35,7 +35,7 @@
         <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="Configuration Profiles  documentation" href="../index.html"/>
         <link rel="up" title="Payloads" href="index.html"/>
-        <link rel="next" title="macOS Subsystem Notes" href="../macos/index.html"/>
+        <link rel="next" title="Custom Settings" href="../custom/index.html"/>
         <link rel="prev" title="Web Content Filter" href="webcontentfilter.html"/> 
 
   
@@ -107,10 +107,12 @@
 <li class="toctree-l2"><a class="reference internal" href="certpkcs12.html">Certificate (PKCS#12)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certpref.html">Certificate Preference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certroot.html">Certificate (Root CA)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conference.html">Conference Room Display</a></li>
 <li class="toctree-l2"><a class="reference internal" href="coremediaio.html">Core Media IO (Camera)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom.html">Custom Settings (MCX)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dashwidgets.html">Dashboard Widgets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="legacy_custom.html">Legacy Custom Settings (MCX)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dashwidgets.html">Parental Control Dashboard Payload</a></li>
 <li class="toctree-l2"><a class="reference internal" href="desktop.html">Desktop Picture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dictionary.html">Dictionary (Parental Controls)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="discrecording.html">Disc Recording</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dock.html">Dock</a></li>
 <li class="toctree-l2"><a class="reference internal" href="domains.html">Domains</a></li>
@@ -120,11 +122,13 @@
 <li class="toctree-l2"><a class="reference internal" href="enrollment.html">Enrollment (Supervised)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ethernet.html">Ethernet 802.1x</a></li>
 <li class="toctree-l2"><a class="reference internal" href="exchange.html">Exchange</a></li>
+<li class="toctree-l2"><a class="reference internal" href="finderburn.html">Finder (Disc Burning)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="firewall.html">Firewall</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fv2.html">FileVault 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fvescrow.html">FileVault Recovery Key Escrow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fv2redirect.html">FileVault Recovery Key Redirect</a></li>
 <li class="toctree-l2"><a class="reference internal" href="font.html">Font</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gamecenter.html">Game Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gamecenter.html">Parental Control - Game Center</a></li>
 <li class="toctree-l2"><a class="reference internal" href="globalproxy.html">Global HTTP Proxy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="google.html">Google Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="homescreen.html">Home Screen Layout</a></li>
@@ -159,12 +163,14 @@
 <li class="toctree-l2"><a class="reference internal" href="shareddevice.html">Shared Device</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sharekit.html">ShareKit</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sidebar.html">Sidebar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="smartcard.html">Smart Card</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sso.html">Single-Sign On</a></li>
 <li class="toctree-l2"><a class="reference internal" href="supervision.html">Supervision</a></li>
 <li class="toctree-l2"><a class="reference internal" href="swupd.html">Software Update Server</a></li>
 <li class="toctree-l2"><a class="reference internal" href="spctl.html">System Policy Control</a></li>
 <li class="toctree-l2"><a class="reference internal" href="submitdiag.html">Submit Diagnostics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="systemconfiguration.html">SystemConfiguration (Proxies)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="systemmigration.html">System Migration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="systempolicy.html">System Policy (Gatekeeper)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sysprefs.html">System Preference Panes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sprule.html">System Policy Rule</a></li>
@@ -210,6 +216,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#com.apple.wifi.managed-TLSAllowTrustExceptions-auto">TLSAllowTrustExceptions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#com.apple.wifi.managed-TTLSInnerAuthentication-auto">TTLSInnerAuthentication</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#com.apple.wifi.managed-OuterIdentity-auto">OuterIdentity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.wifi.managed-SystemModeCredentialsSource-auto">SystemModeCredentialsSource</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#com.apple.wifi.managed-EAPFASTUsePAC-auto">EAPFASTUsePAC</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#com.apple.wifi.managed-EAPFASTProvisionPAC-auto">EAPFASTProvisionPAC</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#com.apple.wifi.managed-EAPFASTProvisionPACAnonymously-auto">EAPFASTProvisionPACAnonymously</a></li>
@@ -234,8 +241,12 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../custom/index.html">Custom Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mdm/commands/index.html">MDM Commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../macos/index.html">macOS Subsystem Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pdp/index.html">Profile Domain Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
 </ul>
 
             
@@ -1150,25 +1161,31 @@ and CoreWLAN will only return AirPort devices.</p>
 <td>If TTLS, PEAP, or EAP-FAST is used, this string is used instead of the user&#8217;s identity outside the encrypted tunnel. This value can be used to mask the true identity of the person using the network</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>EAPFASTUsePAC</td>
+<tr class="row-odd"><td>SystemModeCredentialsSource</td>
+<td>string</td>
+<td>System Profile Credentials Source</td>
+<td>Use an alternate set of credentials when in System mode (AKA not a loginwindow profile). This can be used to tell EAPOLClient to use the computer password in a bound active directory scenario for authentication.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>EAPFASTUsePAC</td>
 <td>boolean</td>
 <td>Use PAC</td>
 <td>If set, the device will use an existing PAC if it&#8217;s present. Otherwise the server must present its identity using a certificate</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>EAPFASTProvisionPAC</td>
+<tr class="row-odd"><td>EAPFASTProvisionPAC</td>
 <td>boolean</td>
 <td>Provision PAC</td>
 <td>If set, provisions the device </td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>EAPFASTProvisionPACAnonymously</td>
+<tr class="row-even"><td>EAPFASTProvisionPACAnonymously</td>
 <td>boolean</td>
 <td>Provision PAC Anonymously</td>
 <td>If set, provisions the device anonymously. Note that there are known man-in-the-middle attacks for anonymous provisioning</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>EAPSIMNumberOfRANDs</td>
+<tr class="row-odd"><td>EAPSIMNumberOfRANDs</td>
 <td>integer</td>
 <td>Allow Two RANDs</td>
 <td>The minimum number of RAND values accepted from the server. 3 is the default, and 2 is allowed, but offers less security. For use with EAP-SIM only.</td>
@@ -1507,6 +1524,46 @@ and CoreWLAN will only return AirPort devices.</p>
 </tr>
 </tbody>
 </table>
+</div>
+<div class="section" id="com.apple.wifi.managed-SystemModeCredentialsSource-auto">
+<h3>SystemModeCredentialsSource<a class="headerlink" href="#com.apple.wifi.managed-SystemModeCredentialsSource-auto" title="Permalink to this headline">¶</a></h3>
+<p>System Profile Credentials Source</p>
+<p>Use an alternate set of credentials when in System mode (AKA not a loginwindow profile). This can be used to tell EAPOLClient to use the computer password in a bound active directory scenario for authentication.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<h3>Valid Choices<a class="headerlink" href="#com.apple.wifi.managed-SystemModeCredentialsSource-auto" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>ActiveDirectory</li>
+</ul>
 </div>
 <div class="section" id="com.apple.wifi.managed-EAPFASTUsePAC-auto">
 <h3>EAPFASTUsePAC<a class="headerlink" href="#com.apple.wifi.managed-EAPFASTUsePAC-auto" title="Permalink to this headline">¶</a></h3>
@@ -1933,7 +1990,7 @@ and CoreWLAN will only return AirPort devices.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../macos/index.html" class="btn btn-neutral float-right" title="macOS Subsystem Notes" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../custom/index.html" class="btn btn-neutral float-right" title="Custom Settings" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="webcontentfilter.html" class="btn btn-neutral" title="Web Content Filter" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>

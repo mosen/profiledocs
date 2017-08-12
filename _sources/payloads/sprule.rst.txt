@@ -14,16 +14,16 @@ If the payload is present in a user profile, an error will be generated during i
 Summary
 -------
 
-.. pfmheader:: manifests/manual/com.apple.systempolicy.rule manifest.plist
-.. pfm:: manifests/manual/com.apple.systempolicy.rule manifest.plist
+.. pfmheader:: /_static/manifests/com.apple.systempolicy.rule manifest.plist
+.. pfm:: /_static/manifests/com.apple.systempolicy.rule manifest.plist
 
 Keys
 ----
 
-.. pfmkey:: Requirement manifests/manual/com.apple.systempolicy.rule manifest.plist
-.. pfmkey:: Comment manifests/manual/com.apple.systempolicy.rule manifest.plist
-.. pfmkey:: Expiration manifests/manual/com.apple.systempolicy.rule manifest.plist
-.. pfmkey:: OperationType manifests/manual/com.apple.systempolicy.rule manifest.plist
+.. pfmkey:: Requirement /_static/manifests/com.apple.systempolicy.rule manifest.plist
+.. pfmkey:: Comment /_static/manifests/com.apple.systempolicy.rule manifest.plist
+.. pfmkey:: Expiration /_static/manifests/com.apple.systempolicy.rule manifest.plist
+.. pfmkey:: OperationType /_static/manifests/com.apple.systempolicy.rule manifest.plist
 
 Links
 -----

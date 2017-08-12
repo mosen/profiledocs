@@ -1,0 +1,554 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>mdmclient &mdash; Configuration Profiles  documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Configuration Profiles  documentation" href="../index.html"/>
+        <link rel="up" title="Troubleshooting" href="index.html"/>
+        <link rel="next" title="APNS (Push Notifications)" href="apns.html"/>
+        <link rel="prev" title="Logging" href="logging.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Configuration Profiles
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html#submitting-an-error">Submitting an error</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html#writing-documentation">Writing Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../official.html">Official Links and Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manifest.html">Manifest File Format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extmanifest.html">Extended Manifest Format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../payloads/index.html">Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../custom/index.html">Custom Settings</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Troubleshooting</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="logging.html">Logging</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">mdmclient</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#common-flags">Common Flags</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#commands-for-simulating-mdm">Commands for simulating MDM</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#airplay">airplay</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queryappinstallation">QueryAppInstallation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#querycertificates">QueryCertificates</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#querydeviceinformation">QueryDeviceInformation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queryinstalledapps">QueryInstalledApps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#queryinstalledprofiles">QueryInstalledProfiles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#querynetworkinformation">QueryNetworkInformation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#querysecurityinfo">QuerySecurityInfo</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#commands-for-simulating-dep">Commands for simulating DEP</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#cloudconfig">cloudconfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dep">dep</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dep-nag">dep nag</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#misc-debugging-and-utility-commands">Misc debugging and utility commands</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#agent">agent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cleanconfigprofile">cleanconfigprofile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dumppluginkitsettings-10-13">dumpPlugInKitSettings (10.13)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dumpsessions-unverified">dumpSessions (Unverified)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#encrypt">encrypt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dumpscepvars">dumpSCEPVars</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#logplugins-10-13">logplugins (10.13)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mdmsim-unverified">mdmsim (Unverified)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#unverified-commands">Unverified commands</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#testnsxpc">testNSXPC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mcx-userlogin">mcx_userlogin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#daemon">daemon</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rundaemon">rundaemon</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#installedprofiles">installedProfiles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#installsystemprofile">InstallSystemProfile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#installuserprofile">InstallUserProfile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#logevents">logevents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#nop">nop</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#prelogincheckin">preLoginCheckin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#removesystemprofile">removeSystemProfile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#removeuserprofile">removeUserProfile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#stripcms">stripCMS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#test">test</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#testfdekeyrotation">testFDEKeyRotation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="apns.html">APNS (Push Notifications)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../mdm/commands/index.html">MDM Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../macos/index.html">macOS Subsystem Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pdp/index.html">Profile Domain Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Configuration Profiles</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Troubleshooting</a> &raquo;</li>
+      
+    <li>mdmclient</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/troubleshooting/mdmclient.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="mdmclient">
+<h1><a class="toc-backref" href="#id1">mdmclient</a><a class="headerlink" href="#mdmclient" title="Permalink to this headline">¶</a></h1>
+<p>The <code class="docutils literal"><span class="pre">mdmclient</span></code> binary ships with the operating system and is located in <code class="docutils literal"><span class="pre">/usr/libexec/mdmclient</span></code>.</p>
+<p>Several subcommands are available, some related to troubleshooting MDM.</p>
+<div class="contents topic" id="commands">
+<p class="topic-title first">Commands</p>
+<ul class="simple">
+<li><a class="reference internal" href="#mdmclient" id="id1">mdmclient</a><ul>
+<li><a class="reference internal" href="#common-flags" id="id2">Common Flags</a></li>
+<li><a class="reference internal" href="#commands-for-simulating-mdm" id="id3">Commands for simulating MDM</a><ul>
+<li><a class="reference internal" href="#airplay" id="id4">airplay</a></li>
+<li><a class="reference internal" href="#queryappinstallation" id="id5">QueryAppInstallation</a></li>
+<li><a class="reference internal" href="#querycertificates" id="id6">QueryCertificates</a></li>
+<li><a class="reference internal" href="#querydeviceinformation" id="id7">QueryDeviceInformation</a></li>
+<li><a class="reference internal" href="#queryinstalledapps" id="id8">QueryInstalledApps</a></li>
+<li><a class="reference internal" href="#queryinstalledprofiles" id="id9">QueryInstalledProfiles</a></li>
+<li><a class="reference internal" href="#querynetworkinformation" id="id10">QueryNetworkInformation</a></li>
+<li><a class="reference internal" href="#querysecurityinfo" id="id11">QuerySecurityInfo</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#commands-for-simulating-dep" id="id12">Commands for simulating DEP</a><ul>
+<li><a class="reference internal" href="#cloudconfig" id="id13">cloudconfig</a></li>
+<li><a class="reference internal" href="#dep" id="id14">dep</a></li>
+<li><a class="reference internal" href="#dep-nag" id="id15">dep nag</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#misc-debugging-and-utility-commands" id="id16">Misc debugging and utility commands</a><ul>
+<li><a class="reference internal" href="#agent" id="id17">agent</a></li>
+<li><a class="reference internal" href="#cleanconfigprofile" id="id18">cleanconfigprofile</a></li>
+<li><a class="reference internal" href="#dumppluginkitsettings-10-13" id="id19">dumpPlugInKitSettings (10.13)</a></li>
+<li><a class="reference internal" href="#dumpsessions-unverified" id="id20">dumpSessions (Unverified)</a></li>
+<li><a class="reference internal" href="#encrypt" id="id21">encrypt</a></li>
+<li><a class="reference internal" href="#dumpscepvars" id="id22">dumpSCEPVars</a></li>
+<li><a class="reference internal" href="#logplugins-10-13" id="id23">logplugins (10.13)</a></li>
+<li><a class="reference internal" href="#mdmsim-unverified" id="id24">mdmsim (Unverified)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#unverified-commands" id="id25">Unverified commands</a><ul>
+<li><a class="reference internal" href="#testnsxpc" id="id26">testNSXPC</a></li>
+<li><a class="reference internal" href="#mcx-userlogin" id="id27">mcx_userlogin</a></li>
+<li><a class="reference internal" href="#daemon" id="id28">daemon</a></li>
+<li><a class="reference internal" href="#rundaemon" id="id29">rundaemon</a></li>
+<li><a class="reference internal" href="#installedprofiles" id="id30">installedProfiles</a></li>
+<li><a class="reference internal" href="#installsystemprofile" id="id31">InstallSystemProfile</a></li>
+<li><a class="reference internal" href="#installuserprofile" id="id32">InstallUserProfile</a></li>
+<li><a class="reference internal" href="#logevents" id="id33">logevents</a></li>
+<li><a class="reference internal" href="#nop" id="id34">nop</a></li>
+<li><a class="reference internal" href="#prelogincheckin" id="id35">preLoginCheckin</a></li>
+<li><a class="reference internal" href="#removesystemprofile" id="id36">removeSystemProfile</a></li>
+<li><a class="reference internal" href="#removeuserprofile" id="id37">removeUserProfile</a></li>
+<li><a class="reference internal" href="#stripcms" id="id38">stripCMS</a></li>
+<li><a class="reference internal" href="#test" id="id39">test</a></li>
+<li><a class="reference internal" href="#testfdekeyrotation" id="id40">testFDEKeyRotation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="common-flags">
+<h2><a class="toc-backref" href="#id2">Common Flags</a><a class="headerlink" href="#common-flags" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">-debug</span></code></dt>
+<dd>Debug mode</dd>
+<dt><code class="docutils literal"><span class="pre">-beepOnError</span></code></dt>
+<dd>Beep on error</dd>
+</dl>
+</div>
+<div class="section" id="commands-for-simulating-mdm">
+<h2><a class="toc-backref" href="#id3">Commands for simulating MDM</a><a class="headerlink" href="#commands-for-simulating-mdm" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="airplay">
+<h3><a class="toc-backref" href="#id4">airplay</a><a class="headerlink" href="#airplay" title="Permalink to this headline">¶</a></h3>
+<p>Usage:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">libexec</span><span class="o">/</span><span class="n">mdmclient</span> <span class="n">airplay</span> <span class="n">start</span>
+<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">libexec</span><span class="o">/</span><span class="n">mdmclient</span> <span class="n">airplay</span> <span class="n">stop</span>
+</pre></div>
+</div>
+<p>Requires a plist containing a <strong>RequestMirroring</strong> payload for start, and a <strong>StopMirroring</strong> payload for stop.</p>
+</div>
+<div class="section" id="queryappinstallation">
+<h3><a class="toc-backref" href="#id5">QueryAppInstallation</a><a class="headerlink" href="#queryappinstallation" title="Permalink to this headline">¶</a></h3>
+<p>Usage:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">libexec</span><span class="o">/</span><span class="n">mdmclient</span> <span class="n">QueryAppInstallation</span>
+</pre></div>
+</div>
+<p>Return information that would normally be returned to the MDM in a <code class="docutils literal"><span class="pre">DeviceInformation</span></code> query for Table 6 in</p>
+<ul class="simple">
+<li><a class="reference external" href="https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW15">Official: DeviceInformation</a>.</li>
+</ul>
+</div>
+<div class="section" id="querycertificates">
+<h3><a class="toc-backref" href="#id6">QueryCertificates</a><a class="headerlink" href="#querycertificates" title="Permalink to this headline">¶</a></h3>
+<p>Usage:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">libexec</span><span class="o">/</span><span class="n">mdmclient</span> <span class="n">QueryCertificates</span>
+</pre></div>
+</div>
+<p>Return information that would normally be returned to the MDM in a <code class="docutils literal"><span class="pre">CertificateList</span></code> query.</p>
+<ul class="simple">
+<li><a class="reference external" href="https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW13">Official: CertificateList</a>.</li>
+</ul>
+</div>
+<div class="section" id="querydeviceinformation">
+<h3><a class="toc-backref" href="#id7">QueryDeviceInformation</a><a class="headerlink" href="#querydeviceinformation" title="Permalink to this headline">¶</a></h3>
+<p>Usage:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">libexec</span><span class="o">/</span><span class="n">mdmclient</span> <span class="n">QueryDeviceInformation</span>
+</pre></div>
+</div>
+<p>Return information that would normally be returned to the MDM in a <code class="docutils literal"><span class="pre">DeviceInformation</span></code> query for Table 7</p>
+<ul class="simple">
+<li><a class="reference external" href="https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW15">Official: DeviceInformation - Table 7</a>.</li>
+</ul>
+</div>
+<div class="section" id="queryinstalledapps">
+<h3><a class="toc-backref" href="#id8">QueryInstalledApps</a><a class="headerlink" href="#queryinstalledapps" title="Permalink to this headline">¶</a></h3>
+<p>Usage:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">libexec</span><span class="o">/</span><span class="n">mdmclient</span> <span class="n">QueryInstalledApps</span>
+</pre></div>
+</div>
+<p>Return information that would normally be returned to the MDM in a <code class="docutils literal"><span class="pre">InstalledApplicationList</span></code> query.</p>
+<ul class="simple">
+<li><a class="reference external" href="https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW14">Official: InstalledApplicationList</a>.</li>
+</ul>
+</div>
+<div class="section" id="queryinstalledprofiles">
+<h3><a class="toc-backref" href="#id9">QueryInstalledProfiles</a><a class="headerlink" href="#queryinstalledprofiles" title="Permalink to this headline">¶</a></h3>
+<p>Usage:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">libexec</span><span class="o">/</span><span class="n">mdmclient</span> <span class="n">QueryInstalledProfiles</span>
+</pre></div>
+</div>
+<p>Return information that would normally be returned to the MDM in a <code class="docutils literal"><span class="pre">ProfileList</span></code> query.</p>
+<ul class="simple">
+<li><a class="reference external" href="https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW7">Official: ProfileList</a>.</li>
+</ul>
+</div>
+<div class="section" id="querynetworkinformation">
+<h3><a class="toc-backref" href="#id10">QueryNetworkInformation</a><a class="headerlink" href="#querynetworkinformation" title="Permalink to this headline">¶</a></h3>
+<p>Usage:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">libexec</span><span class="o">/</span><span class="n">mdmclient</span> <span class="n">QueryNetworkInformation</span>
+</pre></div>
+</div>
+<p>Return information that would normally be returned to the MDM in a <code class="docutils literal"><span class="pre">DeviceInformation</span></code> query for Table 9</p>
+<ul class="simple">
+<li><a class="reference external" href="https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW15">Official: DeviceInformation - Table 9</a>.</li>
+</ul>
+</div>
+<div class="section" id="querysecurityinfo">
+<h3><a class="toc-backref" href="#id11">QuerySecurityInfo</a><a class="headerlink" href="#querysecurityinfo" title="Permalink to this headline">¶</a></h3>
+<p>Usage:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">libexec</span><span class="o">/</span><span class="n">mdmclient</span> <span class="n">QuerySecurityInfo</span>
+</pre></div>
+</div>
+<p>Return information that would normally be returned to the MDM in a <code class="docutils literal"><span class="pre">SecurityInfo</span></code> query.</p>
+<ul class="simple">
+<li><a class="reference external" href="https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW19">Official: SecurityInfo</a>.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="commands-for-simulating-dep">
+<h2><a class="toc-backref" href="#id12">Commands for simulating DEP</a><a class="headerlink" href="#commands-for-simulating-dep" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="cloudconfig">
+<h3><a class="toc-backref" href="#id13">cloudconfig</a><a class="headerlink" href="#cloudconfig" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Unverified</li>
+</ul>
+</div>
+<div class="section" id="dep">
+<h3><a class="toc-backref" href="#id14">dep</a><a class="headerlink" href="#dep" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>This is a subcommand and may have several other commands, other than <cite>nag</cite>.</li>
+</ul>
+</div>
+<div class="section" id="dep-nag">
+<h3><a class="toc-backref" href="#id15">dep nag</a><a class="headerlink" href="#dep-nag" title="Permalink to this headline">¶</a></h3>
+<p>Usage:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">libexec</span><span class="o">/</span><span class="n">mdmclient</span> <span class="n">dep</span> <span class="n">nag</span>
+</pre></div>
+</div>
+<p>Clears out the cloud config activation record and retrieves a new one.</p>
+<p>Basic sequence of events:</p>
+<ol class="arabic simple">
+<li>Previously saved profile at <code class="docutils literal"><span class="pre">/var/db/ConfigurationProfiles/.cloudConfigProfileInstalled</span></code> is deleted.</li>
+<li>Tries to fetch a new cloud config profile.</li>
+<li><dl class="first docutils">
+<dt>If this succeeded it writes out <code class="docutils literal"><span class="pre">/var/db/ConfigurationProfiles/.cloudConfigRecordFound</span></code>. If failed it writes</dt>
+<dd><code class="docutils literal"><span class="pre">/var/db/ConfigurationProfiles/.cloudConfigRecordNotFound</span></code> instead (No DEP record for this device).</dd>
+</dl>
+</li>
+</ol>
+</div>
+</div>
+<div class="section" id="misc-debugging-and-utility-commands">
+<h2><a class="toc-backref" href="#id16">Misc debugging and utility commands</a><a class="headerlink" href="#misc-debugging-and-utility-commands" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="agent">
+<h3><a class="toc-backref" href="#id17">agent</a><a class="headerlink" href="#agent" title="Permalink to this headline">¶</a></h3>
+<p>Start XPC service <code class="docutils literal"><span class="pre">com.apple.mdmclient.agent</span></code>.</p>
+</div>
+<div class="section" id="cleanconfigprofile">
+<h3><a class="toc-backref" href="#id18">cleanconfigprofile</a><a class="headerlink" href="#cleanconfigprofile" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Unverified</li>
+</ul>
+</div>
+<div class="section" id="dumppluginkitsettings-10-13">
+<h3><a class="toc-backref" href="#id19">dumpPlugInKitSettings (10.13)</a><a class="headerlink" href="#dumppluginkitsettings-10-13" title="Permalink to this headline">¶</a></h3>
+<p>List registered extensions by their extension point (category), such as sharing, quicklook, network extensions etc.</p>
+</div>
+<div class="section" id="dumpsessions-unverified">
+<h3><a class="toc-backref" href="#id20">dumpSessions (Unverified)</a><a class="headerlink" href="#dumpsessions-unverified" title="Permalink to this headline">¶</a></h3>
+<p>Outputs <code class="docutils literal"><span class="pre">Debug</span> <span class="pre">mode</span> <span class="pre">enabled</span></code>.
+Assume it logs communications with the MDM(?)</p>
+</div>
+<div class="section" id="encrypt">
+<h3><a class="toc-backref" href="#id21">encrypt</a><a class="headerlink" href="#encrypt" title="Permalink to this headline">¶</a></h3>
+<p>Usage:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">libexec</span><span class="o">/</span><span class="n">mdmclient</span> <span class="n">encrypt</span> <span class="o">&lt;</span><span class="n">recipient</span> <span class="n">cert</span> <span class="n">name</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">path</span> <span class="n">to</span> <span class="n">plist</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Encrypt a payload into an encrypted payload.</p>
+</div>
+<div class="section" id="dumpscepvars">
+<h3><a class="toc-backref" href="#id22">dumpSCEPVars</a><a class="headerlink" href="#dumpscepvars" title="Permalink to this headline">¶</a></h3>
+<p>This command will show you what the substitution variable values for the SCEP payload will be.</p>
+</div>
+<div class="section" id="logplugins-10-13">
+<h3><a class="toc-backref" href="#id23">logplugins (10.13)</a><a class="headerlink" href="#logplugins-10-13" title="Permalink to this headline">¶</a></h3>
+<p>This command outputs a list of payload domain plugins and information provided by them as a delegate.</p>
+</div>
+<div class="section" id="mdmsim-unverified">
+<h3><a class="toc-backref" href="#id24">mdmsim (Unverified)</a><a class="headerlink" href="#mdmsim-unverified" title="Permalink to this headline">¶</a></h3>
+<p>Some kind of simulator although it is not known how to set this up.</p>
+</div>
+</div>
+<div class="section" id="unverified-commands">
+<h2><a class="toc-backref" href="#id25">Unverified commands</a><a class="headerlink" href="#unverified-commands" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="testnsxpc">
+<h3><a class="toc-backref" href="#id26">testNSXPC</a><a class="headerlink" href="#testnsxpc" title="Permalink to this headline">¶</a></h3>
+<p>Actually seems to do nothing.</p>
+</div>
+<div class="section" id="mcx-userlogin">
+<h3><a class="toc-backref" href="#id27">mcx_userlogin</a><a class="headerlink" href="#mcx-userlogin" title="Permalink to this headline">¶</a></h3>
+<p>Takes a plist from STDIN.</p>
+</div>
+<div class="section" id="daemon">
+<h3><a class="toc-backref" href="#id28">daemon</a><a class="headerlink" href="#daemon" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="rundaemon">
+<h3><a class="toc-backref" href="#id29">rundaemon</a><a class="headerlink" href="#rundaemon" title="Permalink to this headline">¶</a></h3>
+<p>Used for the <code class="docutils literal"><span class="pre">com.apple.mdmclient.daemon.runatboot</span></code> launchd service.</p>
+</div>
+<div class="section" id="installedprofiles">
+<h3><a class="toc-backref" href="#id30">installedProfiles</a><a class="headerlink" href="#installedprofiles" title="Permalink to this headline">¶</a></h3>
+<p>Similar to <code class="docutils literal"><span class="pre">QueryInstalledProfiles</span></code> but takes a <strong>System</strong> or <strong>User</strong> scope option.</p>
+</div>
+<div class="section" id="installsystemprofile">
+<h3><a class="toc-backref" href="#id31">InstallSystemProfile</a><a class="headerlink" href="#installsystemprofile" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="installuserprofile">
+<h3><a class="toc-backref" href="#id32">InstallUserProfile</a><a class="headerlink" href="#installuserprofile" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="logevents">
+<h3><a class="toc-backref" href="#id33">logevents</a><a class="headerlink" href="#logevents" title="Permalink to this headline">¶</a></h3>
+<p>Display a list of XPC events at both the computer and user level.</p>
+</div>
+<div class="section" id="nop">
+<h3><a class="toc-backref" href="#id34">nop</a><a class="headerlink" href="#nop" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="prelogincheckin">
+<h3><a class="toc-backref" href="#id35">preLoginCheckin</a><a class="headerlink" href="#prelogincheckin" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="removesystemprofile">
+<h3><a class="toc-backref" href="#id36">removeSystemProfile</a><a class="headerlink" href="#removesystemprofile" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="removeuserprofile">
+<h3><a class="toc-backref" href="#id37">removeUserProfile</a><a class="headerlink" href="#removeuserprofile" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="stripcms">
+<h3><a class="toc-backref" href="#id38">stripCMS</a><a class="headerlink" href="#stripcms" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="test">
+<h3><a class="toc-backref" href="#id39">test</a><a class="headerlink" href="#test" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="testfdekeyrotation">
+<h3><a class="toc-backref" href="#id40">testFDEKeyRotation</a><a class="headerlink" href="#testfdekeyrotation" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="apns.html" class="btn btn-neutral float-right" title="APNS (Push Notifications)" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="logging.html" class="btn btn-neutral" title="Logging" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, MacAdmins Community.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

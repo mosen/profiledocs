@@ -107,10 +107,12 @@
 <li class="toctree-l2"><a class="reference internal" href="certpkcs12.html">Certificate (PKCS#12)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certpref.html">Certificate Preference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certroot.html">Certificate (Root CA)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conference.html">Conference Room Display</a></li>
 <li class="toctree-l2"><a class="reference internal" href="coremediaio.html">Core Media IO (Camera)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom.html">Custom Settings (MCX)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dashwidgets.html">Dashboard Widgets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="legacy_custom.html">Legacy Custom Settings (MCX)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dashwidgets.html">Parental Control Dashboard Payload</a></li>
 <li class="toctree-l2"><a class="reference internal" href="desktop.html">Desktop Picture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dictionary.html">Dictionary (Parental Controls)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="discrecording.html">Disc Recording</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dock.html">Dock</a></li>
 <li class="toctree-l2"><a class="reference internal" href="domains.html">Domains</a></li>
@@ -120,11 +122,13 @@
 <li class="toctree-l2"><a class="reference internal" href="enrollment.html">Enrollment (Supervised)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ethernet.html">Ethernet 802.1x</a></li>
 <li class="toctree-l2"><a class="reference internal" href="exchange.html">Exchange</a></li>
+<li class="toctree-l2"><a class="reference internal" href="finderburn.html">Finder (Disc Burning)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="firewall.html">Firewall</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fv2.html">FileVault 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fvescrow.html">FileVault Recovery Key Escrow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fv2redirect.html">FileVault Recovery Key Redirect</a></li>
 <li class="toctree-l2"><a class="reference internal" href="font.html">Font</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gamecenter.html">Game Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gamecenter.html">Parental Control - Game Center</a></li>
 <li class="toctree-l2"><a class="reference internal" href="globalproxy.html">Global HTTP Proxy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="google.html">Google Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="homescreen.html">Home Screen Layout</a></li>
@@ -169,12 +173,14 @@
 <li class="toctree-l2"><a class="reference internal" href="shareddevice.html">Shared Device</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sharekit.html">ShareKit</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sidebar.html">Sidebar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="smartcard.html">Smart Card</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sso.html">Single-Sign On</a></li>
 <li class="toctree-l2"><a class="reference internal" href="supervision.html">Supervision</a></li>
 <li class="toctree-l2"><a class="reference internal" href="swupd.html">Software Update Server</a></li>
 <li class="toctree-l2"><a class="reference internal" href="spctl.html">System Policy Control</a></li>
 <li class="toctree-l2"><a class="reference internal" href="submitdiag.html">Submit Diagnostics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="systemconfiguration.html">SystemConfiguration (Proxies)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="systemmigration.html">System Migration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="systempolicy.html">System Policy (Gatekeeper)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sysprefs.html">System Preference Panes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sprule.html">System Policy Rule</a></li>
@@ -189,8 +195,12 @@
 <li class="toctree-l2"><a class="reference internal" href="wifi.html">Wi-Fi</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../custom/index.html">Custom Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mdm/commands/index.html">MDM Commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../macos/index.html">macOS Subsystem Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pdp/index.html">Profile Domain Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
 </ul>
 
             
@@ -285,19 +295,19 @@ as a whole. It also allows you to configure a different log level for persistent
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>Processes</td>
-<td>dict</td>
+<td>dictionary</td>
 <td>Processes</td>
 <td>Configure Process Logging</td>
 <td>n/a</td>
 </tr>
 <tr class="row-odd"><td>Subsystems</td>
-<td>dict</td>
+<td>dictionary</td>
 <td>Subsystems</td>
 <td>Configure Subsystem Logging</td>
 <td>n/a</td>
 </tr>
 <tr class="row-even"><td>System</td>
-<td>dict</td>
+<td>dictionary</td>
 <td>System</td>
 <td>Configure System Logging</td>
 <td>n/a</td>
@@ -336,7 +346,7 @@ as a whole. It also allows you to configure a different log level for persistent
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>dict</td>
+<tr class="row-even"><td>dictionary</td>
 <td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
@@ -369,7 +379,7 @@ The format of this dict is as below:</p>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>Level</td>
-<td>dict</td>
+<td>dictionary</td>
 <td>Minimum Level</td>
 <td>Configures minimum logging level and persistence level</td>
 <td>n/a</td>
@@ -381,7 +391,7 @@ The format of this dict is as below:</p>
 <td>n/a</td>
 </tr>
 <tr class="row-even"><td>TTL</td>
-<td>dict</td>
+<td>dictionary</td>
 <td>Log entry time to live by level</td>
 <td>Changes how long a log entry will remain before being removed</td>
 <td>n/a</td>
@@ -419,7 +429,7 @@ The format of this dict is as below:</p>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>dict</td>
+<tr class="row-even"><td>dictionary</td>
 <td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
@@ -528,7 +538,7 @@ The format of this dict is as below:</p>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>dict</td>
+<tr class="row-even"><td>dictionary</td>
 <td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
@@ -580,6 +590,79 @@ The format of this dict is as below:</p>
 <h4>Propagate-with-Activity<a class="headerlink" href="#com.apple.system.logging-Propagate-with-Activity-auto" title="Permalink to this headline">¶</a></h4>
 <p>Messages attached to the activity tree</p>
 <p>Messages are attached to the activity tree in Console and crash dumps</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.system.logging-CategoryName-auto">
+<h4>CategoryName<a class="headerlink" href="#com.apple.system.logging-CategoryName-auto" title="Permalink to this headline">¶</a></h4>
+<p>Category Logging Options</p>
+<p>Default logging settings for the category specified by (CategoryName). This dictionary takes the same format as DEFAULT-OPTIONS.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>dictionary</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.system.logging-Enable-Oversize-Messages-auto">
+<h4>Enable-Oversize-Messages<a class="headerlink" href="#com.apple.system.logging-Enable-Oversize-Messages-auto" title="Permalink to this headline">¶</a></h4>
+<p>Enable Oversize Messages</p>
+<p>Enables large messages in the log. This WILL have
+                            a detrimental effect on performance.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="14%" />

@@ -2,19 +2,22 @@
 
 Domains
 =======
+:download:`Template <../_static/examples/com.apple.domains.mobileconfig>`
+
+This payload defines domains that are under an enterprise’s management.
 
 Summary
 -------
 
-.. pfmheader:: manifests/manual/com.apple.domains manifest.plist
-.. pfm:: manifests/manual/com.apple.domains manifest.plist
+.. pfmheader:: /_static/manifests/com.apple.domains manifest.plist
+.. pfm:: /_static/manifests/com.apple.domains manifest.plist
 
 Keys
 ----
 
-.. pfmkey:: EmailDomains manifests/manual/com.apple.domains manifest.plist
-.. pfmkey:: WebDomains manifests/manual/com.apple.domains manifest.plist
-.. pfmkey:: SafariPasswordAutoFillDomains manifests/manual/com.apple.domains manifest.plist
+.. pfmkey:: EmailDomains /_static/manifests/com.apple.domains manifest.plist
+.. pfmkey:: WebDomains /_static/manifests/com.apple.domains manifest.plist
+.. pfmkey:: SafariPasswordAutoFillDomains /_static/manifests/com.apple.domains manifest.plist
 
 Links
 -----

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>PayloadDescription</key>
+			<string>Desktop Wallpaper Settings</string>
+			<key>PayloadDisplayName</key>
+			<string>Desktop Wallpaper Settings</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.desktop</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>com.apple.desktop</string>
+			<key>PayloadUUID</key>
+			<string></string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>locked</key>
+			<false/>
+			<key>override-picture-path</key>
+			<string></string>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Example: Desktop Settings</string>
+	<key>PayloadDisplayName</key>
+	<string>Example: Desktop Picture Settings</string>
+	<key>PayloadIdentifier</key>
+	<string>com.apple.desktop.example</string>
+	<key>PayloadOrganization</key>
+	<string>Example Organization</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>26cdfd69-e1fd-4481-9b79-65c04225fef2</string>
+</dict>
+</plist>

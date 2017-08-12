@@ -2308,15 +2308,37 @@
 				</dict>
 				<dict>
 					<key>pfm_name</key>
+					<string>SupplementalMatchDomainsNoSearch</string>
+					<key>pfm_title</key>
+					<string>Append supplemental domains to resolver list</string>
+					<key>pfm_description</key>
+					<string>Optional. Whether (0) or not (1) the domains in the SupplementalMatchDomains list should be appended to the resolver’s list of search domains. Default is 0.</string>
+					<key>pfm_type</key>
+					<string>integer</string>
+					<key>pfm_default</key>
+					<integer>0</integer>
+					<key>pfm_range_min</key>
+					<integer>0</integer>
+					<key>pfm_range_max</key>
+					<integer>1</integer>
+					<key>pfm_macos_min</key>
+					<string>10.12</string>
+					<key>pfm_ios_min</key>
+					<string>10.0</string>
+				</dict>
+				<dict>
+					<key>pfm_name</key>
 					<string>EnableCertificateRevocationCheck</string>
 					<key>pfm_title</key>
 					<string>Enable certificate revocation check</string>
 					<key>pfm_description</key>
-					<string>Set to 1 to enable certificate revocation check for IKEv2 connections</string>
+					<string>Optional. Set to 1 to enable a certificate revocation check for IKEv2 connections. This is a best-effort revocation check; server response timeouts will not cause it to fail.</string>
 					<key>pfm_default</key>
 					<integer>0</integer>
 					<key>pfm_type</key>
 					<string>integer</string>
+					<key>pfm_ios_min</key>
+					<string>9.0</string>
 				</dict>
 				<dict>
 					<key>pfm_name</key>
@@ -2392,6 +2414,50 @@
 					<string>Common name of the server certificate</string>
 					<key>pfm_type</key>
 					<string>string</string>
+				</dict>
+				<dict>
+					<key>pfm_name</key>
+					<string>TLSMinimumVersion</string>
+					<key>pfm_title</key>
+					<string>TLSMinimumVersion</string>
+					<key>pfm_description</key>
+					<string>The minimum TLS version to be used with EAP-TLS authentication. Value may be 1.0, 1.1, or 1.2. If no value is specified, the default minimum is 1.0.</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_macos_min</key>
+					<string>10.13</string>
+					<key>pfm_ios_min</key>
+					<string>11.0</string>
+					<key>pfm_range_list</key>
+					<array>
+						<string>1.0</string>
+						<string>1.1</string>
+						<string>1.2</string>
+					</array>
+					<key>pfm_default</key>
+					<string>1.0</string>
+				</dict>
+				<dict>
+					<key>pfm_name</key>
+					<string>TLSMaximumVersion</string>
+					<key>pfm_title</key>
+					<string>TLSMaximumVersion</string>
+					<key>pfm_description</key>
+					<string>The maximum TLS version to be used with EAP-TLS authentication. Value may be 1.0, 1.1, or 1.2. If no value is specified, the default maximum is 1.2.</string>
+					<key>pfm_type</key>
+					<string>string</string>
+					<key>pfm_macos_min</key>
+					<string>10.13</string>
+					<key>pfm_ios_min</key>
+					<string>11.0</string>
+					<key>pfm_range_list</key>
+					<array>
+						<string>1.0</string>
+						<string>1.1</string>
+						<string>1.2</string>
+					</array>
+					<key>pfm_default</key>
+					<string>1.2</string>
 				</dict>
 				<dict>
 					<key>pfm_name</key>
@@ -2996,9 +3062,9 @@
 									<key>pfm_default</key>
 									<dict>
 										<key>EncryptionAlgorithm</key>
-										<string>3DES</string>
+										<string>AES-256</string>
 										<key>IntegrityAlgorithm</key>
-										<string>SHA-96</string>
+										<string>SHA2-256</string>
 										<key>DiffieHellmanGroup</key>
 										<integer>14</integer>
 										<key>LifeTimeInMinutes</key>
@@ -3060,9 +3126,9 @@
 									<key>pfm_default</key>
 									<dict>
 										<key>EncryptionAlgorithm</key>
-										<string>3DES</string>
+										<string>AES-256</string>
 										<key>IntegrityAlgorithm</key>
-										<string>SHA-96</string>
+										<string>SHA2-256</string>
 										<key>DiffieHellmanGroup</key>
 										<integer>14</integer>
 										<key>LifeTimeInMinutes</key>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>Dock</key>
+			<array>
+				<dict>
+					<key>BundleID</key>
+					<string></string>
+					<key>DisplayName</key>
+					<string></string>
+					<key>Pages</key>
+					<array>
+					</array>
+					<key>Type</key>
+					<string>Application</string>
+				</dict>
+			</array>
+			<key>Pages</key>
+			<array>
+				<dict>
+					<key>BundleID</key>
+					<string></string>
+					<key>DisplayName</key>
+					<string></string>
+					<key>Pages</key>
+					<array>
+					</array>
+					<key>Type</key>
+					<string>Application</string>
+				</dict>
+			</array>
+			<key>PayloadDescription</key>
+			<string>Home Screen Layout</string>
+			<key>PayloadDisplayName</key>
+			<string>Home Screen Layout</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.homescreenlayout</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>com.apple.homescreenlayout</string>
+			<key>PayloadUUID</key>
+			<string></string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Example: Home Screen Layout Payload</string>
+	<key>PayloadDisplayName</key>
+	<string>Example: Home Screen Layout Payload</string>
+	<key>PayloadIdentifier</key>
+	<string>com.apple.homescreenlayout.example</string>
+	<key>PayloadOrganization</key>
+	<string>Example Organization</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>24d958c0-7b51-465b-a191-0b552edeade8</string>
+</dict>
+</plist>

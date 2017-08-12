@@ -118,10 +118,12 @@
 <li class="toctree-l2"><a class="reference internal" href="certpkcs12.html">Certificate (PKCS#12)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certpref.html">Certificate Preference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certroot.html">Certificate (Root CA)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conference.html">Conference Room Display</a></li>
 <li class="toctree-l2"><a class="reference internal" href="coremediaio.html">Core Media IO (Camera)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom.html">Custom Settings (MCX)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dashwidgets.html">Dashboard Widgets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="legacy_custom.html">Legacy Custom Settings (MCX)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dashwidgets.html">Parental Control Dashboard Payload</a></li>
 <li class="toctree-l2"><a class="reference internal" href="desktop.html">Desktop Picture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dictionary.html">Dictionary (Parental Controls)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="discrecording.html">Disc Recording</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dock.html">Dock</a></li>
 <li class="toctree-l2"><a class="reference internal" href="domains.html">Domains</a></li>
@@ -131,11 +133,13 @@
 <li class="toctree-l2"><a class="reference internal" href="enrollment.html">Enrollment (Supervised)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ethernet.html">Ethernet 802.1x</a></li>
 <li class="toctree-l2"><a class="reference internal" href="exchange.html">Exchange</a></li>
+<li class="toctree-l2"><a class="reference internal" href="finderburn.html">Finder (Disc Burning)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="firewall.html">Firewall</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fv2.html">FileVault 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fvescrow.html">FileVault Recovery Key Escrow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fv2redirect.html">FileVault Recovery Key Redirect</a></li>
 <li class="toctree-l2"><a class="reference internal" href="font.html">Font</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gamecenter.html">Game Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gamecenter.html">Parental Control - Game Center</a></li>
 <li class="toctree-l2"><a class="reference internal" href="globalproxy.html">Global HTTP Proxy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="google.html">Google Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="homescreen.html">Home Screen Layout</a></li>
@@ -170,12 +174,14 @@
 <li class="toctree-l2"><a class="reference internal" href="shareddevice.html">Shared Device</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sharekit.html">ShareKit</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sidebar.html">Sidebar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="smartcard.html">Smart Card</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sso.html">Single-Sign On</a></li>
 <li class="toctree-l2"><a class="reference internal" href="supervision.html">Supervision</a></li>
 <li class="toctree-l2"><a class="reference internal" href="swupd.html">Software Update Server</a></li>
 <li class="toctree-l2"><a class="reference internal" href="spctl.html">System Policy Control</a></li>
 <li class="toctree-l2"><a class="reference internal" href="submitdiag.html">Submit Diagnostics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="systemconfiguration.html">SystemConfiguration (Proxies)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="systemmigration.html">System Migration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="systempolicy.html">System Policy (Gatekeeper)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sysprefs.html">System Preference Panes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sprule.html">System Policy Rule</a></li>
@@ -190,8 +196,12 @@
 <li class="toctree-l2"><a class="reference internal" href="wifi.html">Wi-Fi</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../custom/index.html">Custom Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mdm/commands/index.html">MDM Commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../macos/index.html">macOS Subsystem Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pdp/index.html">Profile Domain Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
 </ul>
 
             
@@ -240,6 +250,8 @@
             
   <div class="section" id="app-store">
 <span id="payloadtype-com-apple-appstore"></span><h1>App Store<a class="headerlink" href="#app-store" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference download internal" href="../_downloads/com.apple.appstore.mobileconfig" download=""><code class="xref download docutils literal"><span class="pre">Template</span></code></a></p>
+<p>Establishes macOS AppStore restrictions and is supported on the User channel.</p>
 <div class="section" id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
 <table class="docutils field-list" frame="void" rules="none">
@@ -284,31 +296,31 @@
 <tr class="row-even"><td>restrict-store-require-admin-to-install</td>
 <td>boolean</td>
 <td>Require Admin To Install</td>
-<td>Require Admin To Install</td>
+<td>Restrict app installations to admin users</td>
 <td>n/a</td>
 </tr>
 <tr class="row-odd"><td>restrict-store-softwareupdate-only</td>
 <td>boolean</td>
-<td></td>
-<td></td>
+<td>Restrict app installations to software updates only</td>
+<td>Restrict app installations to software updates only</td>
 <td>n/a</td>
 </tr>
 <tr class="row-even"><td>restrict-store-disable-app-adoption</td>
 <td>boolean</td>
-<td></td>
-<td></td>
+<td>Disable App Adoption by users</td>
+<td>Disable App Adoption by users</td>
 <td>n/a</td>
 </tr>
 <tr class="row-odd"><td>DisableSoftwareUpdateNotifications</td>
 <td>boolean</td>
-<td></td>
-<td></td>
+<td>Disable software update notifications</td>
+<td>Disable software update notifications</td>
 <td>n/a</td>
 </tr>
 <tr class="row-even"><td>restrict-store-mdm-install-softwareupdate-only</td>
 <td>boolean</td>
-<td></td>
-<td></td>
+<td>Restrict app installations to MDM-installed apps and software updates</td>
+<td>Restrict app installations to MDM-installed apps and software updates</td>
 <td>n/a</td>
 </tr>
 </tbody>
@@ -319,7 +331,7 @@
 <div class="section" id="com.apple.appstore-restrict-store-require-admin-to-install-auto">
 <h3>restrict-store-require-admin-to-install<a class="headerlink" href="#com.apple.appstore-restrict-store-require-admin-to-install-auto" title="Permalink to this headline">¶</a></h3>
 <p>Require Admin To Install</p>
-<p>Require Admin To Install</p>
+<p>Restrict app installations to admin users</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="14%" />
@@ -346,7 +358,7 @@
 <td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
-<td>N/A</td>
+<td>10.9</td>
 <td>N/A</td>
 </tr>
 </tbody>
@@ -354,8 +366,8 @@
 </div>
 <div class="section" id="com.apple.appstore-restrict-store-softwareupdate-only-auto">
 <h3>restrict-store-softwareupdate-only<a class="headerlink" href="#com.apple.appstore-restrict-store-softwareupdate-only-auto" title="Permalink to this headline">¶</a></h3>
-<p></p>
-<p></p>
+<p>Restrict app installations to software updates only</p>
+<p>Restrict app installations to software updates only</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="14%" />
@@ -382,7 +394,7 @@
 <td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
-<td>N/A</td>
+<td>10.10</td>
 <td>N/A</td>
 </tr>
 </tbody>
@@ -390,8 +402,8 @@
 </div>
 <div class="section" id="com.apple.appstore-restrict-store-disable-app-adoption-auto">
 <h3>restrict-store-disable-app-adoption<a class="headerlink" href="#com.apple.appstore-restrict-store-disable-app-adoption-auto" title="Permalink to this headline">¶</a></h3>
-<p></p>
-<p></p>
+<p>Disable App Adoption by users</p>
+<p>Disable App Adoption by users</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="14%" />
@@ -418,7 +430,7 @@
 <td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
-<td>N/A</td>
+<td>10.10</td>
 <td>N/A</td>
 </tr>
 </tbody>
@@ -426,8 +438,8 @@
 </div>
 <div class="section" id="com.apple.appstore-DisableSoftwareUpdateNotifications-auto">
 <h3>DisableSoftwareUpdateNotifications<a class="headerlink" href="#com.apple.appstore-DisableSoftwareUpdateNotifications-auto" title="Permalink to this headline">¶</a></h3>
-<p></p>
-<p></p>
+<p>Disable software update notifications</p>
+<p>Disable software update notifications</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="14%" />
@@ -454,7 +466,7 @@
 <td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
-<td>N/A</td>
+<td>10.10</td>
 <td>N/A</td>
 </tr>
 </tbody>
@@ -462,8 +474,8 @@
 </div>
 <div class="section" id="com.apple.appstore-restrict-store-mdm-install-softwareupdate-only-auto">
 <h3>restrict-store-mdm-install-softwareupdate-only<a class="headerlink" href="#com.apple.appstore-restrict-store-mdm-install-softwareupdate-only-auto" title="Permalink to this headline">¶</a></h3>
-<p></p>
-<p></p>
+<p>Restrict app installations to MDM-installed apps and software updates</p>
+<p>Restrict app installations to MDM-installed apps and software updates</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="14%" />
@@ -490,7 +502,7 @@
 <td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
-<td>N/A</td>
+<td>10.11</td>
 <td>N/A</td>
 </tr>
 </tbody>

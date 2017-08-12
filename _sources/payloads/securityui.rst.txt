@@ -8,5 +8,5 @@ UI Security Preferences
 Summary
 -------
 
-.. pfmheader:: manifests/manual/com.apple.preference.security manifest.plist
-.. pfm:: manifests/manual/com.apple.preference.security manifest.plist
+.. pfmheader:: /_static/manifests/com.apple.preference.security manifest.plist
+.. pfm:: /_static/manifests/com.apple.preference.security manifest.plist

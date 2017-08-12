@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>AutoLaunchedApplicationDictionary-managed</key>
+			<array>
+				<dict>
+					<key>AuthenticateAsLoginUserShortName</key>
+					<false/>
+					<key>Hide</key>
+					<false/>
+					<key>MCX-NetworkHomeDirectoryItem</key>
+					<false/>
+					<key>Path</key>
+					<string></string>
+					<key>URL</key>
+					<string></string>
+				</dict>
+			</array>
+			<key>DisableLoginItemsSuppression</key>
+			<false/>
+			<key>PayloadDescription</key>
+			<string>Login Items</string>
+			<key>PayloadDisplayName</key>
+			<string>Login Items</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.loginitems.managed</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>com.apple.loginitems.managed</string>
+			<key>PayloadUUID</key>
+			<string></string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Example: Login Items</string>
+	<key>PayloadDisplayName</key>
+	<string>Example: Login Items</string>
+	<key>PayloadIdentifier</key>
+	<string>com.apple.loginitems.managed.example</string>
+	<key>PayloadOrganization</key>
+	<string>Example Organization</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>b480f936-7fe5-4238-9976-2f131719a63b</string>
+</dict>
+</plist>

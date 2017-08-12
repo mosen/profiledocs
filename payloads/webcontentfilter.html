@@ -107,10 +107,12 @@
 <li class="toctree-l2"><a class="reference internal" href="certpkcs12.html">Certificate (PKCS#12)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certpref.html">Certificate Preference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certroot.html">Certificate (Root CA)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conference.html">Conference Room Display</a></li>
 <li class="toctree-l2"><a class="reference internal" href="coremediaio.html">Core Media IO (Camera)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom.html">Custom Settings (MCX)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dashwidgets.html">Dashboard Widgets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="legacy_custom.html">Legacy Custom Settings (MCX)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dashwidgets.html">Parental Control Dashboard Payload</a></li>
 <li class="toctree-l2"><a class="reference internal" href="desktop.html">Desktop Picture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dictionary.html">Dictionary (Parental Controls)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="discrecording.html">Disc Recording</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dock.html">Dock</a></li>
 <li class="toctree-l2"><a class="reference internal" href="domains.html">Domains</a></li>
@@ -120,11 +122,13 @@
 <li class="toctree-l2"><a class="reference internal" href="enrollment.html">Enrollment (Supervised)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ethernet.html">Ethernet 802.1x</a></li>
 <li class="toctree-l2"><a class="reference internal" href="exchange.html">Exchange</a></li>
+<li class="toctree-l2"><a class="reference internal" href="finderburn.html">Finder (Disc Burning)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="firewall.html">Firewall</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fv2.html">FileVault 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fvescrow.html">FileVault Recovery Key Escrow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fv2redirect.html">FileVault Recovery Key Redirect</a></li>
 <li class="toctree-l2"><a class="reference internal" href="font.html">Font</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gamecenter.html">Game Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gamecenter.html">Parental Control - Game Center</a></li>
 <li class="toctree-l2"><a class="reference internal" href="globalproxy.html">Global HTTP Proxy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="google.html">Google Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="homescreen.html">Home Screen Layout</a></li>
@@ -159,12 +163,14 @@
 <li class="toctree-l2"><a class="reference internal" href="shareddevice.html">Shared Device</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sharekit.html">ShareKit</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sidebar.html">Sidebar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="smartcard.html">Smart Card</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sso.html">Single-Sign On</a></li>
 <li class="toctree-l2"><a class="reference internal" href="supervision.html">Supervision</a></li>
 <li class="toctree-l2"><a class="reference internal" href="swupd.html">Software Update Server</a></li>
 <li class="toctree-l2"><a class="reference internal" href="spctl.html">System Policy Control</a></li>
 <li class="toctree-l2"><a class="reference internal" href="submitdiag.html">Submit Diagnostics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="systemconfiguration.html">SystemConfiguration (Proxies)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="systemmigration.html">System Migration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="systempolicy.html">System Policy (Gatekeeper)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sysprefs.html">System Preference Panes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sprule.html">System Policy Rule</a></li>
@@ -179,19 +185,8 @@
 <li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#keys">Keys</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#com.apple.webcontent-filter-FilterType-auto">FilterType</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#com.apple.webcontent-filter-AutoFilterEnabled-auto">AutoFilterEnabled</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#com.apple.webcontent-filter-PermittedURLs-auto">PermittedURLs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#com.apple.webcontent-filter-WhitelistedBookmarks-auto">WhitelistedBookmarks</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#com.apple.webcontent-filter-BlacklistedURLs-auto">BlacklistedURLs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#com.apple.webcontent-filter-UserDefinedName-auto">UserDefinedName</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#com.apple.webcontent-filter-PluginBundleID-auto">PluginBundleID</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#com.apple.webcontent-filter-ServerAddress-auto">ServerAddress</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#com.apple.webcontent-filter-UserName-auto">UserName</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#com.apple.webcontent-filter-Password-auto">Password</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#com.apple.webcontent-filter-PayloadCertificateUUID-auto">PayloadCertificateUUID</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#com.apple.webcontent-filter-Organization-auto">Organization</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#com.apple.webcontent-filter-FilterBrowsers-auto">FilterBrowsers</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#com.apple.webcontent-filter-FilterSockets-auto">FilterSockets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#filtertype-is-builtin">FilterType is BuiltIn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#filtertype-is-plugin">FilterType is Plugin</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#links">Links</a></li>
@@ -200,8 +195,12 @@
 <li class="toctree-l2"><a class="reference internal" href="wifi.html">Wi-Fi</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../custom/index.html">Custom Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mdm/commands/index.html">MDM Commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../macos/index.html">macOS Subsystem Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pdp/index.html">Profile Domain Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
 </ul>
 
             
@@ -250,6 +249,29 @@
             
   <div class="section" id="web-content-filter">
 <span id="payloadtype-com-apple-webcontent-filter"></span><h1>Web Content Filter<a class="headerlink" href="#web-content-filter" title="Permalink to this headline">¶</a></h1>
+<p>The Web Content Filter payload allows you to whitelist and blacklist specific web URLs. This payload is supported only on supervised devices.</p>
+<p>When multiple content filter payloads are present:</p>
+<ul>
+<li><p class="first">The blacklist is the union of all blacklists—that is, any URL that appears in any blacklist is inaccessible.</p>
+</li>
+<li><p class="first">The permitted list is the intersection of all permitted lists—that is, only URLs that appear in every permitted list
+are accessible when they would otherwise be blocked by the automatic filter.</p>
+</li>
+<li><p class="first">The whitelist list is the intersection of all whitelists—that is, only URLs that appear in every whitelist are accessible.</p>
+</li>
+<li><p class="first">URLs are matched by using string-based root matching. A URL matches a whitelist, blacklist, or permitted list pattern
+if the exact characters of the pattern appear as the root of the URL.</p>
+<p>For example, if test.com/a is blacklisted, then test.com, test.com/b, and test.com/c/d/e will all be blocked.
+Matching does not discard subdomain prefixes, so if test.com/a is blacklisted, m.test.com is not blocked.</p>
+<p>Also, no attempt is made to match aliases (IP address versus DNS names, for example) or to handle requests
+with explicit port numbers.</p>
+</li>
+</ul>
+<p>If a profile does not contain an array for PermittedURLs or WhitelistedBookmarks,
+that profile is skipped when evaluating the missing array or arrays.</p>
+<p>As an exception, if a payload contains an AutoFilterEnabled key, but does not contain a PermittedURLs array,
+that profile is treated as containing an empty array—that is, all websites are blocked.</p>
+<p>All filtering options are active simultaneously. Only URLs and sites that pass all rules are permitted.</p>
 <div class="section" id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
 <table class="docutils field-list" frame="void" rules="none">
@@ -300,19 +322,23 @@
 <tr class="row-odd"><td>AutoFilterEnabled</td>
 <td>boolean</td>
 <td>Web filter enabled</td>
-<td>Enables Web content filter</td>
+<td>Optional. If true, automatic filtering is enabled. This function evaluates each web page as it is
+				loaded and attempts to identify and block content not suitable for children.
+				The search algorithm is complex and may vary from release to release, but it is basically looking for
+				adult language, i.e. swearing and sexually explicit language. The default value is false.</td>
 <td>n/a</td>
 </tr>
 <tr class="row-even"><td>PermittedURLs</td>
 <td>array</td>
 <td>PermittedURLs</td>
-<td>List of permitted urls. Each entry contains a URL that will be accessible whether the automatic filter allows access or not</td>
+<td>Used only when AutoFilterEnabled is true. Otherwise, this field is ignored.
+				Each entry contains a URL that is accessible whether the automatic filter allows access or not.</td>
 <td>n/a</td>
 </tr>
 <tr class="row-odd"><td>WhitelistedBookmarks</td>
 <td>array</td>
 <td>White list</td>
-<td> If present, only these URLs will be added to the bookmark, and only these URLs will be permitted.</td>
+<td>Optional. If present, these URLs are added to the browser’s bookmarks, and the user is not allowed to visit any sites other than these. The number of these URLs should be limited to about 500.</td>
 <td>n/a</td>
 </tr>
 <tr class="row-even"><td>BlacklistedURLs</td>
@@ -416,10 +442,19 @@
 </tbody>
 </table>
 </div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">FilterType must be <strong>Plugin</strong> on macOS</p>
+</div>
+<div class="section" id="filtertype-is-builtin">
+<h3>FilterType is BuiltIn<a class="headerlink" href="#filtertype-is-builtin" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="com.apple.webcontent-filter-AutoFilterEnabled-auto">
-<h3>AutoFilterEnabled<a class="headerlink" href="#com.apple.webcontent-filter-AutoFilterEnabled-auto" title="Permalink to this headline">¶</a></h3>
+<h4>AutoFilterEnabled<a class="headerlink" href="#com.apple.webcontent-filter-AutoFilterEnabled-auto" title="Permalink to this headline">¶</a></h4>
 <p>Web filter enabled</p>
-<p>Enables Web content filter</p>
+<p>Optional. If true, automatic filtering is enabled. This function evaluates each web page as it is
+				loaded and attempts to identify and block content not suitable for children.
+				The search algorithm is complex and may vary from release to release, but it is basically looking for
+				adult language, i.e. swearing and sexually explicit language. The default value is false.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="14%" />
@@ -442,7 +477,7 @@
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>boolean</td>
-<td>True</td>
+<td>False</td>
 <td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
@@ -453,9 +488,10 @@
 </table>
 </div>
 <div class="section" id="com.apple.webcontent-filter-PermittedURLs-auto">
-<h3>PermittedURLs<a class="headerlink" href="#com.apple.webcontent-filter-PermittedURLs-auto" title="Permalink to this headline">¶</a></h3>
+<h4>PermittedURLs<a class="headerlink" href="#com.apple.webcontent-filter-PermittedURLs-auto" title="Permalink to this headline">¶</a></h4>
 <p>PermittedURLs</p>
-<p>List of permitted urls. Each entry contains a URL that will be accessible whether the automatic filter allows access or not</p>
+<p>Used only when AutoFilterEnabled is true. Otherwise, this field is ignored.
+				Each entry contains a URL that is accessible whether the automatic filter allows access or not.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="14%" />
@@ -489,9 +525,9 @@
 </table>
 </div>
 <div class="section" id="com.apple.webcontent-filter-WhitelistedBookmarks-auto">
-<h3>WhitelistedBookmarks<a class="headerlink" href="#com.apple.webcontent-filter-WhitelistedBookmarks-auto" title="Permalink to this headline">¶</a></h3>
+<h4>WhitelistedBookmarks<a class="headerlink" href="#com.apple.webcontent-filter-WhitelistedBookmarks-auto" title="Permalink to this headline">¶</a></h4>
 <p>White list</p>
-<p> If present, only these URLs will be added to the bookmark, and only these URLs will be permitted.</p>
+<p>Optional. If present, these URLs are added to the browser’s bookmarks, and the user is not allowed to visit any sites other than these. The number of these URLs should be limited to about 500.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="14%" />
@@ -525,7 +561,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.webcontent-filter-BlacklistedURLs-auto">
-<h3>BlacklistedURLs<a class="headerlink" href="#com.apple.webcontent-filter-BlacklistedURLs-auto" title="Permalink to this headline">¶</a></h3>
+<h4>BlacklistedURLs<a class="headerlink" href="#com.apple.webcontent-filter-BlacklistedURLs-auto" title="Permalink to this headline">¶</a></h4>
 <p>BlacklistedURLs</p>
 <p>Each entry contains a URL that will not be accessible.</p>
 <table border="1" class="docutils">
@@ -560,8 +596,11 @@
 </tbody>
 </table>
 </div>
+</div>
+<div class="section" id="filtertype-is-plugin">
+<h3>FilterType is Plugin<a class="headerlink" href="#filtertype-is-plugin" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="com.apple.webcontent-filter-UserDefinedName-auto">
-<h3>UserDefinedName<a class="headerlink" href="#com.apple.webcontent-filter-UserDefinedName-auto" title="Permalink to this headline">¶</a></h3>
+<h4>UserDefinedName<a class="headerlink" href="#com.apple.webcontent-filter-UserDefinedName-auto" title="Permalink to this headline">¶</a></h4>
 <p>UserDefinedName</p>
 <p>A string which will be displayed for this filtering configuration.</p>
 <table border="1" class="docutils">
@@ -597,7 +636,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.webcontent-filter-PluginBundleID-auto">
-<h3>PluginBundleID<a class="headerlink" href="#com.apple.webcontent-filter-PluginBundleID-auto" title="Permalink to this headline">¶</a></h3>
+<h4>PluginBundleID<a class="headerlink" href="#com.apple.webcontent-filter-PluginBundleID-auto" title="Permalink to this headline">¶</a></h4>
 <p>PluginBundleID</p>
 <p>The Bundle ID of the plugin that provides filtering service.</p>
 <table border="1" class="docutils">
@@ -633,7 +672,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.webcontent-filter-ServerAddress-auto">
-<h3>ServerAddress<a class="headerlink" href="#com.apple.webcontent-filter-ServerAddress-auto" title="Permalink to this headline">¶</a></h3>
+<h4>ServerAddress<a class="headerlink" href="#com.apple.webcontent-filter-ServerAddress-auto" title="Permalink to this headline">¶</a></h4>
 <p>ServerAddress</p>
 <p> Server address (may be IP address, hostname, or URL).</p>
 <table border="1" class="docutils">
@@ -669,7 +708,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.webcontent-filter-UserName-auto">
-<h3>UserName<a class="headerlink" href="#com.apple.webcontent-filter-UserName-auto" title="Permalink to this headline">¶</a></h3>
+<h4>UserName<a class="headerlink" href="#com.apple.webcontent-filter-UserName-auto" title="Permalink to this headline">¶</a></h4>
 <p>Username</p>
 <p>A username for the service.</p>
 <table border="1" class="docutils">
@@ -705,7 +744,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.webcontent-filter-Password-auto">
-<h3>Password<a class="headerlink" href="#com.apple.webcontent-filter-Password-auto" title="Permalink to this headline">¶</a></h3>
+<h4>Password<a class="headerlink" href="#com.apple.webcontent-filter-Password-auto" title="Permalink to this headline">¶</a></h4>
 <p>Password</p>
 <p>A password for the service.</p>
 <table border="1" class="docutils">
@@ -741,7 +780,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.webcontent-filter-PayloadCertificateUUID-auto">
-<h3>PayloadCertificateUUID<a class="headerlink" href="#com.apple.webcontent-filter-PayloadCertificateUUID-auto" title="Permalink to this headline">¶</a></h3>
+<h4>PayloadCertificateUUID<a class="headerlink" href="#com.apple.webcontent-filter-PayloadCertificateUUID-auto" title="Permalink to this headline">¶</a></h4>
 <p>Certificate UUID</p>
 <p>UUID of the certificate payload containing an identity used as the client credential</p>
 <table border="1" class="docutils">
@@ -777,7 +816,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.webcontent-filter-Organization-auto">
-<h3>Organization<a class="headerlink" href="#com.apple.webcontent-filter-Organization-auto" title="Permalink to this headline">¶</a></h3>
+<h4>Organization<a class="headerlink" href="#com.apple.webcontent-filter-Organization-auto" title="Permalink to this headline">¶</a></h4>
 <p>Organization</p>
 <p>An Organization string that will be passed to the 3rd party plugin.</p>
 <table border="1" class="docutils">
@@ -813,7 +852,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.webcontent-filter-FilterBrowsers-auto">
-<h3>FilterBrowsers<a class="headerlink" href="#com.apple.webcontent-filter-FilterBrowsers-auto" title="Permalink to this headline">¶</a></h3>
+<h4>FilterBrowsers<a class="headerlink" href="#com.apple.webcontent-filter-FilterBrowsers-auto" title="Permalink to this headline">¶</a></h4>
 <p>FilterBrowsers</p>
 <p>FilterBrowsers</p>
 <table border="1" class="docutils">
@@ -849,7 +888,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.webcontent-filter-FilterSockets-auto">
-<h3>FilterSockets<a class="headerlink" href="#com.apple.webcontent-filter-FilterSockets-auto" title="Permalink to this headline">¶</a></h3>
+<h4>FilterSockets<a class="headerlink" href="#com.apple.webcontent-filter-FilterSockets-auto" title="Permalink to this headline">¶</a></h4>
 <p>FilterSockets</p>
 <p>FilterSockets</p>
 <table border="1" class="docutils">
@@ -883,6 +922,7 @@
 </tr>
 </tbody>
 </table>
+</div>
 </div>
 </div>
 <div class="section" id="links">

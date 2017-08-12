@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>PayloadDescription</key>
+			<string>Login scripts</string>
+			<key>PayloadDisplayName</key>
+			<string>Login scripts</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.mcxloginscripts</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>com.apple.mcxloginscripts</string>
+			<key>PayloadUUID</key>
+			<string></string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>loginscripts</key>
+			<array>
+			</array>
+			<key>logoutscripts</key>
+			<array>
+			</array>
+			<key>skipLoginHook</key>
+			<false/>
+			<key>skipLogoutHook</key>
+			<false/>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Example: Login scripts via LoginHook/LogoutHook</string>
+	<key>PayloadDisplayName</key>
+	<string>Example: Login scripts</string>
+	<key>PayloadIdentifier</key>
+	<string>com.apple.mcxloginscripts.example</string>
+	<key>PayloadOrganization</key>
+	<string>Example Organization</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>48030464-fb97-4a1f-ac8b-73a84c9bbd60</string>
+</dict>
+</plist>

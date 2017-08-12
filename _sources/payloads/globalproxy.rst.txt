@@ -2,6 +2,7 @@
 
 Global HTTP Proxy
 =================
+:download:`Template <../_static/examples/com.apple.proxy.http.global.mobileconfig>`
 
 This payload allows you to specify global HTTP proxy settings.
 
@@ -11,20 +12,20 @@ This payload allows you to specify global HTTP proxy settings.
 Summary
 -------
 
-.. pfmheader:: manifests/manual/com.apple.proxy.http.global manifest.plist
-.. pfm:: manifests/manual/com.apple.proxy.http.global manifest.plist
+.. pfmheader:: /_static/manifests/com.apple.proxy.http.global manifest.plist
+.. pfm:: /_static/manifests/com.apple.proxy.http.global manifest.plist
 
 Keys
 ----
 
-.. pfmkey:: ProxyType manifests/manual/com.apple.proxy.http.global manifest.plist
-.. pfmkey:: ProxyServer manifests/manual/com.apple.proxy.http.global manifest.plist
-.. pfmkey:: ProxyServerPort manifests/manual/com.apple.proxy.http.global manifest.plist
-.. pfmkey:: ProxyUsername manifests/manual/com.apple.proxy.http.global manifest.plist
-.. pfmkey:: ProxyPassword manifests/manual/com.apple.proxy.http.global manifest.plist
-.. pfmkey:: ProxyPACURL manifests/manual/com.apple.proxy.http.global manifest.plist
-.. pfmkey:: ProxyPACFallbackAllowed manifests/manual/com.apple.proxy.http.global manifest.plist
-.. pfmkey:: ProxyCaptiveLoginAllowed manifests/manual/com.apple.proxy.http.global manifest.plist
+.. pfmkey:: ProxyType /_static/manifests/com.apple.proxy.http.global manifest.plist
+.. pfmkey:: ProxyServer /_static/manifests/com.apple.proxy.http.global manifest.plist
+.. pfmkey:: ProxyServerPort /_static/manifests/com.apple.proxy.http.global manifest.plist
+.. pfmkey:: ProxyUsername /_static/manifests/com.apple.proxy.http.global manifest.plist
+.. pfmkey:: ProxyPassword /_static/manifests/com.apple.proxy.http.global manifest.plist
+.. pfmkey:: ProxyPACURL /_static/manifests/com.apple.proxy.http.global manifest.plist
+.. pfmkey:: ProxyPACFallbackAllowed /_static/manifests/com.apple.proxy.http.global manifest.plist
+.. pfmkey:: ProxyCaptiveLoginAllowed /_static/manifests/com.apple.proxy.http.global manifest.plist
 
 Links
 -----

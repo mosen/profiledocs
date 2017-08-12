@@ -107,27 +107,38 @@
 <li class="toctree-l2"><a class="reference internal" href="certpkcs12.html">Certificate (PKCS#12)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certpref.html">Certificate Preference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="certroot.html">Certificate (Root CA)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conference.html">Conference Room Display</a></li>
 <li class="toctree-l2"><a class="reference internal" href="coremediaio.html">Core Media IO (Camera)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom.html">Custom Settings (MCX)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dashwidgets.html">Dashboard Widgets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="legacy_custom.html">Legacy Custom Settings (MCX)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dashwidgets.html">Parental Control Dashboard Payload</a></li>
 <li class="toctree-l2"><a class="reference internal" href="desktop.html">Desktop Picture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dictionary.html">Dictionary (Parental Controls)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="discrecording.html">Disc Recording</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Dock</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#keys">Keys</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#com.apple.dock-autohide-auto">autohide</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#com.apple.dock-launchanim-auto">launchanim</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#com.apple.dock-magnify-auto">magnify</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#com.apple.dock-mineffect-auto">mineffect</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#com.apple.dock-orientation-auto">orientation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.dock-position-immutable-auto">position-immutable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.dock-autohide-auto">autohide</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.dock-autohide-immutable-auto">autohide-immutable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.dock-minimize-to-application-auto">minimize-to-application</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.dock-minimize-to-application-immutable-auto">minimize-to-application-immutable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.dock-magnification-auto">magnification</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.dock-magnify-immutable-auto">magnify-immutable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.dock-largesize-auto">largesize</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.dock-magsize-immutable-auto">magsize-immutable</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#com.apple.dock-show-process-indicators-auto">show-process-indicators</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#com.apple.dock-AllowDockFixupOverride-auto">AllowDockFixupOverride</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.dock-launchanim-auto">launchanim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.dock-launchanim-immutable-auto">launchanim-immutable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.dock-mineffect-auto">mineffect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.dock-mineffect-immutable-auto">mineffect-immutable</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#com.apple.dock-tilesize-auto">tilesize</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.dock-size-immutable-auto">size-immutable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.dock-AllowDockFixupOverride-auto">AllowDockFixupOverride</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#com.apple.dock-static-only-auto">static-only</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#com.apple.dock-static-apps-auto">static-apps</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#com.apple.dock-static-others-auto">static-others</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#com.apple.dock-MCXDockSpecialFolders-auto">MCXDockSpecialFolders</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#com.apple.dock-mcxfolderflag-auto">mcxfolderflag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.dock-static-apps-auto">static-apps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.dock-contents-immutable-auto">contents-immutable</a></li>
 </ul>
 </li>
 </ul>
@@ -139,11 +150,13 @@
 <li class="toctree-l2"><a class="reference internal" href="enrollment.html">Enrollment (Supervised)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ethernet.html">Ethernet 802.1x</a></li>
 <li class="toctree-l2"><a class="reference internal" href="exchange.html">Exchange</a></li>
+<li class="toctree-l2"><a class="reference internal" href="finderburn.html">Finder (Disc Burning)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="firewall.html">Firewall</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fv2.html">FileVault 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fvescrow.html">FileVault Recovery Key Escrow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fv2redirect.html">FileVault Recovery Key Redirect</a></li>
 <li class="toctree-l2"><a class="reference internal" href="font.html">Font</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gamecenter.html">Game Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gamecenter.html">Parental Control - Game Center</a></li>
 <li class="toctree-l2"><a class="reference internal" href="globalproxy.html">Global HTTP Proxy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="google.html">Google Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="homescreen.html">Home Screen Layout</a></li>
@@ -178,12 +191,14 @@
 <li class="toctree-l2"><a class="reference internal" href="shareddevice.html">Shared Device</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sharekit.html">ShareKit</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sidebar.html">Sidebar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="smartcard.html">Smart Card</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sso.html">Single-Sign On</a></li>
 <li class="toctree-l2"><a class="reference internal" href="supervision.html">Supervision</a></li>
 <li class="toctree-l2"><a class="reference internal" href="swupd.html">Software Update Server</a></li>
 <li class="toctree-l2"><a class="reference internal" href="spctl.html">System Policy Control</a></li>
 <li class="toctree-l2"><a class="reference internal" href="submitdiag.html">Submit Diagnostics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="systemconfiguration.html">SystemConfiguration (Proxies)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="systemmigration.html">System Migration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="systempolicy.html">System Policy (Gatekeeper)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sysprefs.html">System Preference Panes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sprule.html">System Policy Rule</a></li>
@@ -198,8 +213,12 @@
 <li class="toctree-l2"><a class="reference internal" href="wifi.html">Wi-Fi</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../custom/index.html">Custom Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mdm/commands/index.html">MDM Commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../macos/index.html">macOS Subsystem Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pdp/index.html">Profile Domain Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
 </ul>
 
             
@@ -247,11 +266,10 @@
            <div itemprop="articleBody">
             
   <div class="section" id="dock">
-<h1>Dock<a class="headerlink" href="#dock" title="Permalink to this headline">¶</a></h1>
-<div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">These manifest keys have been imported from MCX, they have not yet been verified.</p>
-</div>
+<span id="payloadtype-com-apple-dock"></span><h1>Dock<a class="headerlink" href="#dock" title="Permalink to this headline">¶</a></h1>
+<p><code class="xref download docutils literal"><span class="pre">Template</span></code></p>
+<p>The Dock payload is supported on the user channel and, except for AllowDockFixupOverride, on all version of macOS.
+The key <code class="docutils literal"><span class="pre">AllowDockFixupOverride</span></code> is supported on macOS 10.12 and later.</p>
 <div class="section" id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
 <table class="docutils field-list" frame="void" rules="none">
@@ -293,124 +311,143 @@
 </tr>
 </thead>
 <tbody valign="top">
+<tr class="row-even"><td>orientation</td>
+<td>string</td>
+<td>Position</td>
+<td>Orientation of the dock.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>position-immutable</td>
+<td>boolean</td>
+<td>Lock Position</td>
+<td>If true, the position is locked.</td>
+<td>n/a</td>
+</tr>
 <tr class="row-even"><td>autohide</td>
 <td>boolean</td>
-<td>Hiding</td>
-<td>Set to true to turn hiding on.</td>
+<td>Auto Hide</td>
+<td>If true, automatically hide and show the dock.</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>contents-immutable</td>
+<tr class="row-odd"><td>autohide-immutable</td>
 <td>boolean</td>
-<td>Changes Disabled</td>
-<td>Set to true to prevent user from changing Dock contents.</td>
+<td>Lock Auto Hide</td>
+<td>If true, the Automatically Hide checkbox is disabled.</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>launchanim</td>
+<tr class="row-even"><td>minimize-to-application</td>
 <td>boolean</td>
-<td>Launch Animation</td>
-<td>Set to true to use launch animation.</td>
+<td>Minimize to application</td>
+<td>If true, enable the minimize-to-application feature.</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>magnify</td>
+<tr class="row-odd"><td>minimize-to-application-immutable</td>
+<td>boolean</td>
+<td>Lock Minimize to application</td>
+<td>If true, the minimize-to-application checkbox is disabled.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>magnification</td>
 <td>boolean</td>
 <td>Magnification</td>
 <td>Set to true to turn on magnification.</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>mineffect</td>
+<tr class="row-odd"><td>magnify-immutable</td>
+<td>boolean</td>
+<td>Magnification Checkbox Disabled</td>
+<td>Set to true to disable the magnification checkbox.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>largesize</td>
+<td>real</td>
+<td>Largest Tile Size</td>
+<td>Largest tile size in pixels.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>magsize-immutable</td>
+<td>boolean</td>
+<td>Magnification Slider Disabled</td>
+<td>Set to true to disable the magnification slider.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>show-process-indicators</td>
+<td>boolean</td>
+<td>Show process indicators</td>
+<td>If true, show the process indicator.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>launchanim</td>
+<td>boolean</td>
+<td>Launch Animation</td>
+<td>Set to true to use launch animation.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>launchanim-immutable</td>
+<td>boolean</td>
+<td>Launch Animation Checkbox Disabled</td>
+<td>Set to true to disable the launch animation checkbox.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>mineffect</td>
 <td>string</td>
 <td>Minimization Effect</td>
 <td>n/a</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>orientation</td>
-<td>string</td>
-<td>Position</td>
-<td>Left\, right\, or bottom Dock position.</td>
+<tr class="row-even"><td>mineffect-immutable</td>
+<td>boolean</td>
+<td>Minimization Popup Menu Disabled</td>
+<td>Set to true to disable the minimization effect popup.</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>tilesize</td>
+<tr class="row-odd"><td>tilesize</td>
 <td>real</td>
 <td>Tile Size</td>
-<td>The size of the dock tiles. Valid sizes are from 16 to 128.</td>
+<td>The tile size. Values must be in range 16 to 128.</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>static-only</td>
+<tr class="row-even"><td>size-immutable</td>
 <td>boolean</td>
-<td>Managed Tiles Only</td>
-<td>Set to true to only show the managed tiles.</td>
+<td>Tile Size UI Disabled</td>
+<td>Set to true to prevent user from changing tile size.</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>show-process-indicators</td>
-<td>boolean</td>
-<td>Show process indicators (unverified)</td>
-<td>Show process indicators (unverified)</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>AllowDockFixupOverride</td>
-<td>boolean</td>
-<td>AllowDockFixupOverride (unverified)</td>
-<td>AllowDockFixupOverride (unverified)</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>static-apps</td>
-<td>array</td>
-<td>Forced Dock Applications</td>
-<td>Forced Dock Applications</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>static-others</td>
-<td>array</td>
-<td>Forced Dock Documents</td>
-<td>Forced Dock Documents or Volumes</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>AppItems-Raw</td>
-<td>array</td>
-<td>Application Tiles</td>
-<td>Array for holding application tile data.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>DocItems-Raw</td>
-<td>array</td>
-<td>Document Tiles</td>
-<td>Array for holding document and URL tile data.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>MCXDockSpecialFolders</td>
+<tr class="row-odd"><td>MCXDockSpecialFolders</td>
 <td>array</td>
 <td>Managed Client Special Folders</td>
 <td>Folders added by Managed Client.</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>appTilesUPKManaged</td>
-<td>union policy</td>
-<td>Managed Application Tiles Union Policy</td>
-<td>Application tiles union policy keys for managed domain.</td>
+<tr class="row-even"><td>AllowDockFixupOverride</td>
+<td>boolean</td>
+<td>AllowDockFixupOverride</td>
+<td>If true, use the file in /Library/Preferences/com.apple.dockfixup.plist when a new user or migrated user logs in.
+                    The format of this file currently has no documentation. This option has no effect for existing users.</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>appTilesUPKUser</td>
-<td>union policy</td>
-<td>User Application Tiles Union Policy</td>
-<td>Application tiles union policy keys for user domain.</td>
+<tr class="row-odd"><td>static-only</td>
+<td>boolean</td>
+<td>Static items only</td>
+<td>If true, the device will use the static-apps and static-others dictionaries for the dock and ignore any items in the persistent-apps and persistent-others dictionaries. If false, the contents will be merged with the static items listed first.</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>docTilesUPKManaged</td>
-<td>union policy</td>
-<td>Managed Document Tiles Union Policy</td>
-<td>Document tiles union policy keys for managed domain.</td>
+<tr class="row-even"><td>static-apps</td>
+<td>array</td>
+<td>Forced Dock Applications</td>
+<td>Dock items in the Applications side that cannot be removed from the dock.</td>
 <td>n/a</td>
 </tr>
-<tr class="row-even"><td>docTilesUPKUser</td>
-<td>union policy</td>
-<td>User Document Tiles Union Policy</td>
-<td>Document tiles union policy keys for user domain.</td>
+<tr class="row-odd"><td>static-others</td>
+<td>array</td>
+<td>Forced Dock Documents</td>
+<td>Dock items in the Documents side that cannot be removed from the dock.</td>
 <td>n/a</td>
 </tr>
-<tr class="row-odd"><td>mcxDocSpecialUPK</td>
-<td>union policy</td>
-<td>Managed Client Special Folders Union Policy Key</td>
-<td>Union policy key for Managed Client Dock special folders.</td>
+<tr class="row-even"><td>contents-immutable</td>
+<td>boolean</td>
+<td>Changes Disabled</td>
+<td>If true, the user cannot remove any item from or add any item to the dock.</td>
 <td>n/a</td>
 </tr>
 </tbody>
@@ -418,10 +455,340 @@
 </div>
 <div class="section" id="keys">
 <h2>Keys<a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="com.apple.dock-orientation-auto">
+<h3>orientation<a class="headerlink" href="#com.apple.dock-orientation-auto" title="Permalink to this headline">¶</a></h3>
+<p>Position</p>
+<p>Orientation of the dock.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<h3>Valid Choices<a class="headerlink" href="#com.apple.dock-orientation-auto" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>left</li>
+<li>bottom</li>
+<li>right</li>
+</ul>
+</div>
+<div class="section" id="com.apple.dock-position-immutable-auto">
+<h3>position-immutable<a class="headerlink" href="#com.apple.dock-position-immutable-auto" title="Permalink to this headline">¶</a></h3>
+<p>Lock Position</p>
+<p>If true, the position is locked.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="section" id="com.apple.dock-autohide-auto">
 <h3>autohide<a class="headerlink" href="#com.apple.dock-autohide-auto" title="Permalink to this headline">¶</a></h3>
-<p>Hiding</p>
-<p>Set to true to turn hiding on.</p>
+<p>Auto Hide</p>
+<p>If true, automatically hide and show the dock.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.dock-autohide-immutable-auto">
+<h3>autohide-immutable<a class="headerlink" href="#com.apple.dock-autohide-immutable-auto" title="Permalink to this headline">¶</a></h3>
+<p>Lock Auto Hide</p>
+<p>If true, the Automatically Hide checkbox is disabled.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.dock-minimize-to-application-auto">
+<h3>minimize-to-application<a class="headerlink" href="#com.apple.dock-minimize-to-application-auto" title="Permalink to this headline">¶</a></h3>
+<p>Minimize to application</p>
+<p>If true, enable the minimize-to-application feature.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.dock-minimize-to-application-immutable-auto">
+<h3>minimize-to-application-immutable<a class="headerlink" href="#com.apple.dock-minimize-to-application-immutable-auto" title="Permalink to this headline">¶</a></h3>
+<p>Lock Minimize to application</p>
+<p>If true, the minimize-to-application checkbox is disabled.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.dock-magnification-auto">
+<h3>magnification<a class="headerlink" href="#com.apple.dock-magnification-auto" title="Permalink to this headline">¶</a></h3>
+<p>Magnification</p>
+<p>Set to true to turn on magnification.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.dock-magnify-immutable-auto">
+<h3>magnify-immutable<a class="headerlink" href="#com.apple.dock-magnify-immutable-auto" title="Permalink to this headline">¶</a></h3>
+<p>Magnification Checkbox Disabled</p>
+<p>Set to true to disable the magnification checkbox.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.dock-largesize-auto">
+<h3>largesize<a class="headerlink" href="#com.apple.dock-largesize-auto" title="Permalink to this headline">¶</a></h3>
+<p>Largest Tile Size</p>
+<p>Largest tile size in pixels.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>real</td>
+<td>128.0</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.dock-magsize-immutable-auto">
+<h3>magsize-immutable<a class="headerlink" href="#com.apple.dock-magsize-immutable-auto" title="Permalink to this headline">¶</a></h3>
+<p>Magnification Slider Disabled</p>
+<p>Set to true to disable the magnification slider.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="14%" />
@@ -445,6 +812,42 @@
 <tbody valign="top">
 <tr class="row-even"><td>boolean</td>
 <td>False</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.dock-show-process-indicators-auto">
+<h3>show-process-indicators<a class="headerlink" href="#com.apple.dock-show-process-indicators-auto" title="Permalink to this headline">¶</a></h3>
+<p>Show process indicators</p>
+<p>If true, show the process indicator.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
@@ -490,10 +893,10 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="com.apple.dock-magnify-auto">
-<h3>magnify<a class="headerlink" href="#com.apple.dock-magnify-auto" title="Permalink to this headline">¶</a></h3>
-<p>Magnification</p>
-<p>Set to true to turn on magnification.</p>
+<div class="section" id="com.apple.dock-launchanim-immutable-auto">
+<h3>launchanim-immutable<a class="headerlink" href="#com.apple.dock-launchanim-immutable-auto" title="Permalink to this headline">¶</a></h3>
+<p>Launch Animation Checkbox Disabled</p>
+<p>Set to true to disable the launch animation checkbox.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="14%" />
@@ -516,7 +919,7 @@
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>boolean</td>
-<td>True</td>
+<td>False</td>
 <td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
@@ -567,160 +970,10 @@
 <li>scale</li>
 </ul>
 </div>
-<div class="section" id="com.apple.dock-orientation-auto">
-<h3>orientation<a class="headerlink" href="#com.apple.dock-orientation-auto" title="Permalink to this headline">¶</a></h3>
-<p>Position</p>
-<p>Left\, right\, or bottom Dock position.</p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Type</th>
-<th class="head">Default</th>
-<th class="head">Required</th>
-<th class="head">Regex</th>
-<th class="head">iOS</th>
-<th class="head">macOS</th>
-<th class="head">Supervised</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>string</td>
-<td>bottom</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>N/A</td>
-</tr>
-</tbody>
-</table>
-<h3>Valid Choices<a class="headerlink" href="#com.apple.dock-orientation-auto" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li>left</li>
-<li>bottom</li>
-<li>right</li>
-</ul>
-</div>
-<div class="section" id="com.apple.dock-show-process-indicators-auto">
-<h3>show-process-indicators<a class="headerlink" href="#com.apple.dock-show-process-indicators-auto" title="Permalink to this headline">¶</a></h3>
-<p>Show process indicators (unverified)</p>
-<p>Show process indicators (unverified)</p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Type</th>
-<th class="head">Default</th>
-<th class="head">Required</th>
-<th class="head">Regex</th>
-<th class="head">iOS</th>
-<th class="head">macOS</th>
-<th class="head">Supervised</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>boolean</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>N/A</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="com.apple.dock-AllowDockFixupOverride-auto">
-<h3>AllowDockFixupOverride<a class="headerlink" href="#com.apple.dock-AllowDockFixupOverride-auto" title="Permalink to this headline">¶</a></h3>
-<p>AllowDockFixupOverride (unverified)</p>
-<p>AllowDockFixupOverride (unverified)</p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Type</th>
-<th class="head">Default</th>
-<th class="head">Required</th>
-<th class="head">Regex</th>
-<th class="head">iOS</th>
-<th class="head">macOS</th>
-<th class="head">Supervised</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>boolean</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>N/A</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="com.apple.dock-tilesize-auto">
-<h3>tilesize<a class="headerlink" href="#com.apple.dock-tilesize-auto" title="Permalink to this headline">¶</a></h3>
-<p>Tile Size</p>
-<p>The size of the dock tiles. Valid sizes are from 16 to 128.</p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Type</th>
-<th class="head">Default</th>
-<th class="head">Required</th>
-<th class="head">Regex</th>
-<th class="head">iOS</th>
-<th class="head">macOS</th>
-<th class="head">Supervised</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>real</td>
-<td>64.0</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>N/A</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="com.apple.dock-static-only-auto">
-<h3>static-only<a class="headerlink" href="#com.apple.dock-static-only-auto" title="Permalink to this headline">¶</a></h3>
-<p>Managed Tiles Only</p>
-<p>Set to true to only show the managed tiles.</p>
+<div class="section" id="com.apple.dock-mineffect-immutable-auto">
+<h3>mineffect-immutable<a class="headerlink" href="#com.apple.dock-mineffect-immutable-auto" title="Permalink to this headline">¶</a></h3>
+<p>Minimization Popup Menu Disabled</p>
+<p>Set to true to disable the minimization effect popup.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="14%" />
@@ -753,10 +1006,197 @@
 </tbody>
 </table>
 </div>
+<div class="section" id="com.apple.dock-tilesize-auto">
+<h3>tilesize<a class="headerlink" href="#com.apple.dock-tilesize-auto" title="Permalink to this headline">¶</a></h3>
+<p>Tile Size</p>
+<p>The tile size. Values must be in range 16 to 128.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>real</td>
+<td>64.0</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.dock-size-immutable-auto">
+<h3>size-immutable<a class="headerlink" href="#com.apple.dock-size-immutable-auto" title="Permalink to this headline">¶</a></h3>
+<p>Tile Size UI Disabled</p>
+<p>Set to true to prevent user from changing tile size.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>False</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>MCXDockSpecialFolders can contain any of the valid mcxfolderflag values
+.. pfmkey:: MCXDockSpecialFolders:mcxfolderflag /_static/manifests/com.apple.dock manifest.plist</p>
+<div class="section" id="com.apple.dock-AllowDockFixupOverride-auto">
+<h3>AllowDockFixupOverride<a class="headerlink" href="#com.apple.dock-AllowDockFixupOverride-auto" title="Permalink to this headline">¶</a></h3>
+<p>AllowDockFixupOverride</p>
+<p>If true, use the file in /Library/Preferences/com.apple.dockfixup.plist when a new user or migrated user logs in.
+                    The format of this file currently has no documentation. This option has no effect for existing users.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>10.12</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.dock-static-only-auto">
+<h3>static-only<a class="headerlink" href="#com.apple.dock-static-only-auto" title="Permalink to this headline">¶</a></h3>
+<p>Static items only</p>
+<p>If true, the device will use the static-apps and static-others dictionaries for the dock and ignore any items in the persistent-apps and persistent-others dictionaries. If false, the contents will be merged with the static items listed first.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>False</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.dock-static-others-auto">
+<h3>static-others<a class="headerlink" href="#com.apple.dock-static-others-auto" title="Permalink to this headline">¶</a></h3>
+<p>Forced Dock Documents</p>
+<p>Dock items in the Documents side that cannot be removed from the dock.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>array</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Each item in static-others is a dictionary containing the following keys:</p>
+<p><strong>tile-data</strong></p>
+<p><strong>file-data</strong></p>
+<p><strong>url</strong></p>
 <div class="section" id="com.apple.dock-static-apps-auto">
 <h3>static-apps<a class="headerlink" href="#com.apple.dock-static-apps-auto" title="Permalink to this headline">¶</a></h3>
 <p>Forced Dock Applications</p>
-<p>Forced Dock Applications</p>
+<p>Dock items in the Applications side that cannot be removed from the dock.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="14%" />
@@ -808,8 +1248,8 @@
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>tile-data</td>
-<td>dictionary</td>
-<td>Dock Tile Data</td>
+<td>n/a</td>
+<td>n/a</td>
 <td>n/a</td>
 <td>n/a</td>
 </tr>
@@ -817,12 +1257,6 @@
 <td>string</td>
 <td>Tile Type</td>
 <td>Type of tile.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>mcx_typehint</td>
-<td>integer</td>
-<td>n/a</td>
-<td>Used internally by Workgroup Manager.  Do not change.</td>
 <td>n/a</td>
 </tr>
 </tbody>
@@ -845,68 +1279,31 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>file-data</td>
-<td>dictionary</td>
-<td>File Data</td>
-<td>File data for a file tile.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>file-label</td>
+<tr class="row-even"><td>label</td>
 <td>string</td>
 <td>n/a</td>
-<td>Tile label.</td>
+<td>Label of a dock item.</td>
+<td>always</td>
+</tr>
+<tr class="row-odd"><td>url</td>
+<td>string</td>
+<td>n/a</td>
+<td>For URL tiles, the URL string.</td>
 <td>n/a</td>
 </tr>
 <tr class="row-even"><td>file-type</td>
 <td>integer</td>
 <td>File Type</td>
-<td>Tile file type.</td>
-<td>n/a</td>
+<td>The type of the tile expressed as a number. 3 = directory, 0 = URL, 1 = file</td>
+<td>always</td>
 </tr>
 </tbody>
 </table>
 <p><strong>file-data</strong></p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="43%" />
-<col width="14%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Name</th>
-<th class="head">Type</th>
-<th class="head">Title</th>
-<th class="head">Description</th>
-<th class="head">Required</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>_CFURLString</td>
-<td>string</td>
-<td>File Path</td>
-<td>Absolute file system path.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>_CFURLStringType</td>
-<td>integer</td>
-<td>_CFURLStringType.pfm_title.URL, URL Type</td>
-<td>_CFURLStringType.pfm_description.URL, URL type. Always set to 0.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>_CFURLAliasData</td>
-<td>alias</td>
-<td>Alias</td>
-<td>Alias data; required for server-based items only.</td>
-<td>n/a</td>
-</tr>
-</tbody>
-</table>
-<div class="section" id="com.apple.dock-static-others-auto">
-<h3>static-others<a class="headerlink" href="#com.apple.dock-static-others-auto" title="Permalink to this headline">¶</a></h3>
-<p>Forced Dock Documents</p>
-<p>Forced Dock Documents or Volumes</p>
+<div class="section" id="com.apple.dock-contents-immutable-auto">
+<h3>contents-immutable<a class="headerlink" href="#com.apple.dock-contents-immutable-auto" title="Permalink to this headline">¶</a></h3>
+<p>Changes Disabled</p>
+<p>If true, the user cannot remove any item from or add any item to the dock.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="14%" />
@@ -928,202 +1325,8 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>array</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>N/A</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>Each item in static-others is a dictionary containing the following keys:</p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="43%" />
-<col width="14%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Name</th>
-<th class="head">Type</th>
-<th class="head">Title</th>
-<th class="head">Description</th>
-<th class="head">Required</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>tile-data</td>
-<td>dictionary</td>
-<td>Tile Data</td>
-<td>Dock tile data.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>tile-type</td>
-<td>string</td>
-<td>Tile Type</td>
-<td>Type of tile.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>mcx_typehint</td>
-<td>integer</td>
-<td>n/a</td>
-<td>Used internally by Workgroup Manager.  Do not change.</td>
-<td>n/a</td>
-</tr>
-</tbody>
-</table>
-<p><strong>tile-data</strong></p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="43%" />
-<col width="14%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Name</th>
-<th class="head">Type</th>
-<th class="head">Title</th>
-<th class="head">Description</th>
-<th class="head">Required</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>file-data</td>
-<td>dictionary</td>
-<td>File Data</td>
-<td>File data for a file tile.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>url</td>
-<td>dictionary</td>
-<td>URL Data</td>
-<td>URL data for a URL tile.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>file-label</td>
-<td>string</td>
-<td>File Tile Label</td>
-<td>Tile label for file.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>label</td>
-<td>string</td>
-<td>URL Tile Label</td>
-<td>Tile label for URL tile.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>file-type</td>
-<td>integer</td>
-<td>Item Type</td>
-<td>Type of item. For Document tiles: set to 2 for non-volume\, 18 for volume\, 32 if not a folder.</td>
-<td>n/a</td>
-</tr>
-</tbody>
-</table>
-<p><strong>file-data</strong></p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="43%" />
-<col width="14%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Name</th>
-<th class="head">Type</th>
-<th class="head">Title</th>
-<th class="head">Description</th>
-<th class="head">Required</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>_CFURLString</td>
-<td>url</td>
-<td>title</td>
-<td>Absolute file system path.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>_CFURLStringType</td>
-<td>integer</td>
-<td>_CFURLStringType.pfm_title.file, title</td>
-<td>_CFURLStringType.pfm_description.file, 0 for file.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>_CFURLAliasData</td>
-<td>alias</td>
-<td>Alias</td>
-<td>Alias data; required for server-based items only.</td>
-<td>n/a</td>
-</tr>
-</tbody>
-</table>
-<p><strong>url</strong></p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="43%" />
-<col width="14%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Name</th>
-<th class="head">Type</th>
-<th class="head">Title</th>
-<th class="head">Description</th>
-<th class="head">Required</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>_CFURLString</td>
-<td>url</td>
-<td>URL</td>
-<td>Universal resource locator (URL).</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>_CFURLStringType</td>
-<td>integer</td>
-<td>_CFURLStringType.pfm_title.URLID, URL ID</td>
-<td>_CFURLStringType.pfm_description.URLID, URL type. 15 for a URL.</td>
-<td>n/a</td>
-</tr>
-</tbody>
-</table>
-<div class="section" id="com.apple.dock-MCXDockSpecialFolders-auto">
-<h3>MCXDockSpecialFolders<a class="headerlink" href="#com.apple.dock-MCXDockSpecialFolders-auto" title="Permalink to this headline">¶</a></h3>
-<p>Managed Client Special Folders</p>
-<p>Folders added by Managed Client.</p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Type</th>
-<th class="head">Default</th>
-<th class="head">Required</th>
-<th class="head">Regex</th>
-<th class="head">iOS</th>
-<th class="head">macOS</th>
-<th class="head">Supervised</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>array</td>
-<td>N/A</td>
+<tr class="row-even"><td>boolean</td>
+<td>False</td>
 <td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
@@ -1132,49 +1335,6 @@
 </tr>
 </tbody>
 </table>
-</div>
-<p>MCXDockSpecialFolders can contain any of the valid mcxfolderflag values</p>
-<div class="section" id="com.apple.dock-mcxfolderflag-auto">
-<h3>mcxfolderflag<a class="headerlink" href="#com.apple.dock-mcxfolderflag-auto" title="Permalink to this headline">¶</a></h3>
-<p>Folder Flag</p>
-<p>Flag for one folder added by Managed Client.</p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Type</th>
-<th class="head">Default</th>
-<th class="head">Required</th>
-<th class="head">Regex</th>
-<th class="head">iOS</th>
-<th class="head">macOS</th>
-<th class="head">Supervised</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>string</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>N/A</td>
-</tr>
-</tbody>
-</table>
-<h3>Valid Choices<a class="headerlink" href="#com.apple.dock-mcxfolderflag-auto" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li>AddDockMCXMyApplicationsFolder</li>
-<li>AddDockMCXDocumentsFolder</li>
-<li>AddDockMCXOriginalNetworkHomeFolder</li>
-</ul>
 </div>
 </div>
 </div>

@@ -8,5 +8,5 @@ TrackPad Settings
 Summary
 -------
 
-.. pfm:: manifests/manual/com.apple.trackpad manifest.plist
-.. pfmheader:: manifests/manual/com.apple.trackpad manifest.plist
+.. pfm:: /_static/manifests/com.apple.trackpad manifest.plist
+.. pfmheader:: /_static/manifests/com.apple.trackpad manifest.plist

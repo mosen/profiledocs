@@ -13,15 +13,15 @@ Keys correspond to the directories under ``/Library/Preferences/Logging``.
 Summary
 -------
 
-.. pfmheader:: manifests/manual/com.apple.system.logging manifest.plist
-.. pfm:: manifests/manual/com.apple.system.logging manifest.plist
+.. pfmheader:: /_static/manifests/com.apple.system.logging manifest.plist
+.. pfm:: /_static/manifests/com.apple.system.logging manifest.plist
 
 Keys
 ----
 
 .. note:: Only the keys for Subsystems are shown because the other types adhere to the same structure.
 
-.. pfmkey:: Subsystems manifests/manual/com.apple.system.logging manifest.plist
+.. pfmkey:: Subsystems /_static/manifests/com.apple.system.logging manifest.plist
 
 This dict contains one key by default called ``DEFAULT-OPTIONS`` which is applied when no logging category is matched.
 The format of this dict is as below:
@@ -29,20 +29,24 @@ The format of this dict is as below:
 Default Options
 ^^^^^^^^^^^^^^^
 
-.. pfm:: manifests/manual/com.apple.system.logging manifest.plist
+.. pfm:: /_static/manifests/com.apple.system.logging manifest.plist
     :key: Subsystems:subsystemDomain:DEFAULT-OPTIONS
 
-.. pfmkey:: Subsystems:subsystemDomain:DEFAULT-OPTIONS:Level manifests/manual/com.apple.system.logging manifest.plist
-.. pfm:: manifests/manual/com.apple.system.logging manifest.plist
+.. pfmkey:: Subsystems:subsystemDomain:DEFAULT-OPTIONS:Level /_static/manifests/com.apple.system.logging manifest.plist
+.. pfm:: /_static/manifests/com.apple.system.logging manifest.plist
     :key: Subsystems:subsystemDomain:DEFAULT-OPTIONS:Level
 
-.. pfmkey:: Subsystems:subsystemDomain:DEFAULT-OPTIONS:Default-Privacy-Setting manifests/manual/com.apple.system.logging manifest.plist
+.. pfmkey:: Subsystems:subsystemDomain:DEFAULT-OPTIONS:Default-Privacy-Setting /_static/manifests/com.apple.system.logging manifest.plist
 
-.. pfmkey:: Subsystems:subsystemDomain:DEFAULT-OPTIONS:TTL manifests/manual/com.apple.system.logging manifest.plist
-.. pfm:: manifests/manual/com.apple.system.logging manifest.plist
+.. pfmkey:: Subsystems:subsystemDomain:DEFAULT-OPTIONS:TTL /_static/manifests/com.apple.system.logging manifest.plist
+.. pfm:: /_static/manifests/com.apple.system.logging manifest.plist
     :key: Subsystems:subsystemDomain:DEFAULT-OPTIONS:TTL
 
-.. pfmkey:: Subsystems:subsystemDomain:DEFAULT-OPTIONS:Propagate-with-Activity manifests/manual/com.apple.system.logging manifest.plist
+.. pfmkey:: Subsystems:subsystemDomain:DEFAULT-OPTIONS:Propagate-with-Activity /_static/manifests/com.apple.system.logging manifest.plist
+
+.. pfmkey:: Subsystems:CategoryName /_static/manifests/com.apple.system.logging manifest.plist
+
+.. pfmkey:: Subsystems:Enable-Oversize-Messages /_static/manifests/com.apple.system.logging manifest.plist
 
 Notes
 -----

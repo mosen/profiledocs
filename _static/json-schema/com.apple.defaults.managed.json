@@ -1,0 +1,36 @@
+{
+    "$schema": "http://json-schema.org/schema#", 
+    "type": "object", 
+    "properties": {
+        "PayloadUUID": {
+            "default": "", 
+            "pattern": "^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$", 
+            "type": "string", 
+            "description": "Unique identifier for the payload (format 01234567-89AB-CDEF-0123-456789ABCDEF)"
+        }, 
+        "DefaultsData": {
+            "type": "object", 
+            "description": "The dictionary structure that will be set as the preferences content under the mobile user."
+        }, 
+        "DefaultsDomainName": {
+            "type": "string", 
+            "description": "The app bundle ID reverse domain for default settings."
+        }, 
+        "PayloadIdentifier": {
+            "default": "com.apple.defaults", 
+            "type": "string", 
+            "description": "A unique identifier for the payload, dot-delimited.  Usually root PayloadIdentifier+subidentifier"
+        }, 
+        "PayloadType": {
+            "default": "com.apple.defaults.managed", 
+            "type": "string", 
+            "description": "The type of the payload, a reverse dns string"
+        }, 
+        "PayloadVersion": {
+            "default": 1, 
+            "type": "number", 
+            "description": "The version of the whole configuration profile."
+        }
+    }, 
+    "title": "com.apple.defaults.managed"
+}

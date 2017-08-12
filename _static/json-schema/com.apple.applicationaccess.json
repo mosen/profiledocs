@@ -1,0 +1,571 @@
+{
+    "$schema": "http://json-schema.org/schema#", 
+    "type": "object", 
+    "properties": {
+        "allowPredictiveKeyboard": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Allow Predictive Keyboard (Supervised devices only)"
+        }, 
+        "allowVideoConferencing": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Allow video conferencing"
+        }, 
+        "PayloadDisplayName": {
+            "default": "Restrictions", 
+            "type": "string", 
+            "description": "Name of the payload"
+        }, 
+        "forceAssistantProfanityFilter": {
+            "default": false, 
+            "type": "boolean", 
+            "description": "Enable Siri Profanity Filter (Supervised devices only)"
+        }, 
+        "allowDiagnosticSubmission": {
+            "type": "boolean", 
+            "description": "Send diagnostic and usage reports to Apple"
+        }, 
+        "allowCloudBackup": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Allow backup using iCloud"
+        }, 
+        "allowPhotoStream": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Allow Photo Stream to be used on the device"
+        }, 
+        "safariAllowJavaScript": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Allow JavaScript in Safari"
+        }, 
+        "allowCloudAddressBook": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Allow macOS iCloud Address Book Services"
+        }, 
+        "forceAirPlayIncomingRequestsPairingPassword": {
+            "default": false, 
+            "type": "boolean", 
+            "description": "If set to true, forces all devices sending AirPlay requests to this device to use a pairing password."
+        }, 
+        "allowCloudMail": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Allow macOS iCloud Mail Services"
+        }, 
+        "allowMusicService": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "If set to false, Apple Music will be disabled in the Music app."
+        }, 
+        "allowAirDrop": {
+            "type": "boolean", 
+            "description": "Disable AirDrop if set to false"
+        }, 
+        "allowChat": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Allow use of iMessage (Supervised only)"
+        }, 
+        "allowOpenFromManagedToUnmanaged": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Enable allow open from managed to unmanaged"
+        }, 
+        "allowYouTube": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "When false, the YouTube application is disabled and its icon is removed from the Home screen."
+        }, 
+        "allowPassbookWhileLocked": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "If set to false, Wallet notifications will not be shown on the lock screen."
+        }, 
+        "PayloadDescription": {
+            "default": "Configures restrictions", 
+            "type": "string", 
+            "description": "Description of the payload"
+        }, 
+        "allowCloudDocumentSync": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Allow document syncing with iCloud. When false, disables document and key-value syncing to iCloud."
+        }, 
+        "ratingTVShows": {
+            "default": 1000, 
+            "type": "number", 
+            "description": "Ranking number for TV Shows"
+        }, 
+        "allowAutoUnlock": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "If set to false, disallows macOS auto unlock. Defaults to true."
+        }, 
+        "allowExplicitContent": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Allow user access of explicit content"
+        }, 
+        "allowCloudKeychainSync": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Allow iCloud Keychain Sync"
+        }, 
+        "allowAppCellularDataModification": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Allow modifying cellular data usage for apps settings"
+        }, 
+        "allowBookstore": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Supervised only. If set to false, iBookstore will be disabled."
+        }, 
+        "allowLockScreenNotificationsView": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "If set to false, the Notifications view in Notification Center on the lock screen is disabled and users can\u2019t receive notifications when the screen is locked."
+        }, 
+        "allowGlobalBackgroundFetchWhenRoaming": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Allow automatic sync while roaming"
+        }, 
+        "allowNews": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Allow the user to access and use News"
+        }, 
+        "allowDeviceNameModification": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Allow modifying device name"
+        }, 
+        "allowActivityContinuation": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "If set to false, Handoff will be disabled."
+        }, 
+        "allowSharedStream": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "If set to false, disabled Shared Stream."
+        }, 
+        "allowEraseContentAndSettings": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Supervised only. If set to false, the user cannot choose the option \"Erase All Content and Settings\" in Settings > General > Reset"
+        }, 
+        "forceEncryptedBackup": {
+            "default": false, 
+            "type": "boolean", 
+            "description": "Force encrypted backups"
+        }, 
+        "allowVoiceDialing": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Allow voice dialing while device is locked"
+        }, 
+        "ratingMovies": {
+            "default": 1000, 
+            "type": "number", 
+            "description": "Ranking number for movies"
+        }, 
+        "allowFingerprintForUnlock": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Allow Touch ID to Unlock Device"
+        }, 
+        "allowiTunes": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "When false, the iTunes Music Store is disabled and its icon is removed from the Home screen. Users cannot preview, purchase, or download content."
+        }, 
+        "allowCloudBookmarks": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Allow macOS iCloud Bookmark Sync"
+        }, 
+        "allowCloudDesktopAndDocuments": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "If set to false, disallows macOS cloud desktop and document services. Defaults to true."
+        }, 
+        "allowLockScreenTodayView": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "If set to false, the Today view in Notification Center on the lock screen is disabled."
+        }, 
+        "allowCloudBTMM": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Allow iCloud Back to my Mac"
+        }, 
+        "allowPodcasts": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "If set to false, disables podcasts. Defaults to true."
+        }, 
+        "allowNotificationsModification": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Allow Modifying Notifications Settings"
+        }, 
+        "forceITunesStorePasswordEntry": {
+            "default": false, 
+            "type": "boolean", 
+            "description": "Require the user's iTunes password to be entered for every purchase"
+        }, 
+        "safariForceFraudWarning": {
+            "default": false, 
+            "type": "boolean", 
+            "description": "Enable fraud warning in Safari"
+        }, 
+        "allowBluetoothModification": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Allow modifying Bluetooth settings"
+        }, 
+        "allowHostPairing": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "If set to false, host pairing is disabled with the exception of the supervision host. If no supervision host certificate has been configured, all pairing is disabled. Host pairing lets the administrator control which devices an iOS 7 device can pair with."
+        }, 
+        "autonomousSingleAppModePermittedAppIDs": {
+            "items": {
+                "type": "string", 
+                "description": "App Bundle ID specified will be allowed to enter Single App Mode autonomously."
+            }, 
+            "type": "array", 
+            "description": "If present, allows apps identified by the bundle IDs listed in the array to autonomously enter Single App Mode."
+        }, 
+        "PayloadUUID": {
+            "default": "", 
+            "pattern": "^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$", 
+            "type": "string", 
+            "description": "Unique identifier for the payload (format 01234567-89AB-CDEF-0123-456789ABCDEF)"
+        }, 
+        "allowKeyboardShortcuts": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Allow Keyboard Shortcuts (Supervised devices only)"
+        }, 
+        "allowCloudNotes": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Allow macOS iCloud Notes Services"
+        }, 
+        "allowDiagnosticSubmissionModification": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "If set to false, the diagnostic submission and app analytics settings in the Diagnostics & Usage pane in Settings cannot be modified"
+        }, 
+        "allowRadioService": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "If set to false, Apple Music Radio is disabled."
+        }, 
+        "allowSpotlightInternetResults": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "If set to false, search results from the web will not be shown in Spotlight."
+        }, 
+        "allowCloudCalendar": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Allow macOS iCloud Calendar Services"
+        }, 
+        "safariAllowPopups": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Allow Pop-ups in Safari"
+        }, 
+        "allowSafari": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Allow the user to use Safari"
+        }, 
+        "allowUIAppInstallation": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "When false, the App Store is disabled and its icon is removed from the Home screen. However, users may continue to use Host apps (iTunes, Configurator) to install or update their apps."
+        }, 
+        "allowPasscodeModification": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "If set to false, prevents the device passcode from being added, changed, or removed. Defaults to true. This restriction is ignored by shared iPads."
+        }, 
+        "PayloadIdentifier": {
+            "default": "com.apple.applicationaccess", 
+            "type": "string", 
+            "description": "A unique identifier for the payload, dot-delimited.  Usually root PayloadIdentifier+subidentifier"
+        }, 
+        "allowInAppPurchases": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Allow the user to make purchases within applications"
+        }, 
+        "allowAssistantWhileLocked": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Allow Siri while device is locked"
+        }, 
+        "allowEnablingRestrictions": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Allow configuring restrictions (Supervised only)"
+        }, 
+        "allowAppRemoval": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Allow the user to remove apps (Supervised only)"
+        }, 
+        "allowEnterpriseAppTrust": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "If set to false removes the Trust Enterprise Developer button in Settings->General->Profiles Device Management, preventing apps from being provisioned by universal provisioning profiles. This restriction applies to free developer accounts but it does not apply to enterprise app developers who are trusted because their apps were pushed via MDM, nor does it revoke previously granted trust. Defaults to true."
+        }, 
+        "PayloadType": {
+            "default": "com.apple.applicationaccess", 
+            "type": "string", 
+            "description": "The type of the payload, a reverse dns string"
+        }, 
+        "allowEnterpriseBookBackup": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Allow enterprise books to be backed up"
+        }, 
+        "allowAddingGameCenterFriends": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Allow the user to add Friends on Game Center"
+        }, 
+        "allowFindMyFriendsModification": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "If set to false, changes to Find My Friends are disabled."
+        }, 
+        "forceWatchWristDetection": {
+            "default": false, 
+            "type": "boolean", 
+            "description": "Force Apple Watch wrist detection"
+        }, 
+        "ratingApps": {
+            "default": 1000, 
+            "type": "number", 
+            "description": "Ranking number for apps"
+        }, 
+        "allowMultiplayerGaming": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Allow multiplayer gaming"
+        }, 
+        "forceAirDropUnmanaged": {
+            "default": false, 
+            "type": "boolean", 
+            "description": "Treat AirDrop as Unmanaged Destination"
+        }, 
+        "allowGameCenter": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Allow Game Center (Supervised only)"
+        }, 
+        "allowAutomaticAppDownloads": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "If set to false, prevents automatic downloading of apps purchased on other devices. Does not affect updates to existing apps. Defaults to true"
+        }, 
+        "allowEnterpriseBookMetadataSync": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Allow enterprise books notes and highlights to be synced"
+        }, 
+        "forceAirPlayOutgoingRequestsPairingPassword": {
+            "default": false, 
+            "type": "boolean", 
+            "description": "If set to true, forces all devices receiving AirPlay requests from this device to use a pairing password."
+        }, 
+        "PayloadVersion": {
+            "default": 1, 
+            "type": "number", 
+            "description": "The version of the whole configuration profile."
+        }, 
+        "allowCloudFMM": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Allow iCloud Find my Mac"
+        }, 
+        "allowRemoteScreenObservation": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Allow Classroom or similar to observe the screen. This key should be nested beneath allowScreenShot as a sub-restriction. If allowScreenShot is set to false, it also prevents the Classroom app from observing remote screens."
+        }, 
+        "safariAcceptCookies": {
+            "default": 2, 
+            "enum": [
+                0, 
+                1, 
+                1.5, 
+                2
+            ], 
+            "type": "number", 
+            "description": "Accept cookies: 0 - Never, 1 - From current website only (iOS 8) or visited sites (pre-iOS 8), 1.5 - From websites I visit, 2 - Always"
+        }, 
+        "allowBookstoreErotica": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Supervised only. If set to false, the user will not be able to download media from the iBookstore that is tagged as erotica."
+        }, 
+        "ratingRegion": {
+            "enum": [
+                "us", 
+                "au", 
+                "ca", 
+                "de", 
+                "fr", 
+                "ie", 
+                "jp", 
+                "nz", 
+                "gb"
+            ], 
+            "type": "string", 
+            "description": "Two-character code for the region used to specify ratings"
+        }, 
+        "allowUntrustedTLSPrompt": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Allow user to accept untrusted TLS certificates"
+        }, 
+        "allowAssistant": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Allow Siri"
+        }, 
+        "PayloadOrganization": {
+            "type": "string", 
+            "description": "This value describes the issuing organization of the profile, as displayed to the user"
+        }, 
+        "allowAccountModification": {
+            "type": "boolean", 
+            "description": "Allow user to modify accounts"
+        }, 
+        "allowScreenShot": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Allow the user to take screenshots or screen recordings"
+        }, 
+        "allowDefinitionLookup": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Allow Define (Supervised devices only)"
+        }, 
+        "allowAppInstallation": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Allow only a connected Mac host to install applications"
+        }, 
+        "blacklistedAppBundleIDs": {
+            "items": {
+                "default": "", 
+                "type": "string", 
+                "description": "Blacklisted App"
+            }, 
+            "type": "array", 
+            "description": "If present, prevents bundle IDs listed in the array from being shown or launchable."
+        }, 
+        "allowAutoCorrection": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Allow Auto Correction (Supervised devices only)"
+        }, 
+        "allowOTAPKIUpdates": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "If false, over-the-air PKI updates are disabled. Setting this restriction to false does not disable CRL and OCSP checks. Default is true."
+        }, 
+        "allowFingerprintModification": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Allow modifying Touch ID fingerprints"
+        }, 
+        "forceLimitAdTracking": {
+            "default": false, 
+            "type": "boolean", 
+            "description": "If true, limits ad tracking. Default is false."
+        }, 
+        "allowSpellCheck": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Allow Spell Check (Supervised devices only)"
+        }, 
+        "allowCamera": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Allow the user to use the camera"
+        }, 
+        "allowCloudReminders": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Allow macOS iCloud Reminder Services"
+        }, 
+        "allowPairedWatch": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "If set to false, disables pairing with an Apple Watch. Any currently paired Apple Watch is unpaired and erased. Defaults to true."
+        }, 
+        "allowAssistantUserGeneratedContent": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "When false, prevents Siri from querying user-generated content from the web."
+        }, 
+        "allowManagedAppsCloudSync": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Allow iCloud sync for managed apps"
+        }, 
+        "allowCloudPhotoLibrary": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Allow iCloud Photo Library to be used on the device"
+        }, 
+        "whitelistedAppBundleIDs": {
+            "items": {
+                "default": "", 
+                "type": "string", 
+                "description": "Whitelisted App"
+            }, 
+            "type": "array", 
+            "description": "If present, allows only bundle IDs listed in the array from being shown or launchable."
+        }, 
+        "allowWallpaperModification": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Allow modifying Wallpaper (Supervised only)"
+        }, 
+        "safariAllowAutoFill": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Allow AutoFill in Safari"
+        }, 
+        "allowUIConfigurationProfileInstallation": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Supervised only. If set to false, the user is prohibited from installing configuration profiles and certificates interactively."
+        }, 
+        "allowLockScreenControlCenter": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "If false, prevents Control Center from appearing on the Lock screen."
+        }, 
+        "allowOpenFromUnmanagedToManaged": {
+            "default": true, 
+            "type": "boolean", 
+            "description": "Enable allow open from unmanaged to managed"
+        }
+    }, 
+    "title": "com.apple.applicationaccess"
+}

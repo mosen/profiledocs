@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>Kerberos</key>
+			<dict>
+				<key>AppIdentifierMatches</key>
+				<array>
+					<string></string>
+				</array>
+				<key>PayloadCertificateUUID</key>
+				<string></string>
+				<key>PrincipalName</key>
+				<string></string>
+				<key>Realm</key>
+				<string></string>
+				<key>URLPrefixMatches</key>
+				<array>
+					<string></string>
+				</array>
+			</dict>
+			<key>Name</key>
+			<string></string>
+			<key>PayloadDescription</key>
+			<string>Single Sign-On Account Payload</string>
+			<key>PayloadDisplayName</key>
+			<string>Single Sign-On Account Payload</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.sso</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>com.apple.sso</string>
+			<key>PayloadUUID</key>
+			<string></string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Example: Single Sign-On Account Payload</string>
+	<key>PayloadDisplayName</key>
+	<string>Example: Single Sign-On</string>
+	<key>PayloadIdentifier</key>
+	<string>com.apple.sso.example</string>
+	<key>PayloadOrganization</key>
+	<string>Example Organization</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>1d29519e-5349-4703-8bf0-ba95b29334d2</string>
+</dict>
+</plist>

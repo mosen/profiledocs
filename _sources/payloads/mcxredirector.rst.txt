@@ -8,8 +8,8 @@ Folder Redirection (MCX)
 Summary
 -------
 
-.. pfmheader:: manifests/manual/com.apple.MCXRedirector manifest.plist
-.. pfm:: manifests/manual/com.apple.MCXRedirector manifest.plist
+.. pfmheader:: /_static/manifests/com.apple.MCXRedirector manifest.plist
+.. pfm:: /_static/manifests/com.apple.MCXRedirector manifest.plist
 
 Keys
 ----

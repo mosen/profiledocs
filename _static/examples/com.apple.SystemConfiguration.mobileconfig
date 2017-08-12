@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>PayloadDescription</key>
+			<string>Proxy Configuration Payload</string>
+			<key>PayloadDisplayName</key>
+			<string>Proxy Configuration Payload</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.SystemConfiguration</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>com.apple.SystemConfiguration</string>
+			<key>PayloadUUID</key>
+			<string></string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>Proxies</key>
+			<dict>
+				<key>ExceptionsList</key>
+				<array>
+					<string></string>
+				</array>
+				<key>FTPEnable</key>
+				<integer>0</integer>
+				<key>GopherEnable</key>
+				<integer>0</integer>
+				<key>HTTPEnable</key>
+				<integer>0</integer>
+				<key>HTTPPort</key>
+				<integer>80</integer>
+				<key>HTTPProxy</key>
+				<string></string>
+				<key>HTTPSEnable</key>
+				<integer>0</integer>
+				<key>ProxyAutoConfigEnable</key>
+				<integer>0</integer>
+				<key>RTSPEnable</key>
+				<integer>0</integer>
+				<key>SOCKSEnable</key>
+				<integer>0</integer>
+			</dict>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Example: Proxy Configuration Payload</string>
+	<key>PayloadDisplayName</key>
+	<string>Example: Proxy Configuration Payload</string>
+	<key>PayloadIdentifier</key>
+	<string>com.apple.SystemConfiguration.example</string>
+	<key>PayloadOrganization</key>
+	<string>Example Organization</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>c9cdf1c4-f897-4f73-9d86-325bcfc73aa8</string>
+</dict>
+</plist>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>Password</key>
+			<string></string>
+			<key>PayloadCertificateFileName</key>
+			<string></string>
+			<key>PayloadContent</key>
+			<string>Base64EncodedDataHere==</string>
+			<key>PayloadDescription</key>
+			<string>Adds a PKCS#1-formatted certificate</string>
+			<key>PayloadDisplayName</key>
+			<string>Certificate</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.security.pkcs1</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>com.apple.security.pkcs1</string>
+			<key>PayloadUUID</key>
+			<string></string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Example: Use this section to define settings for a pkcs1 certificate.</string>
+	<key>PayloadDisplayName</key>
+	<string>Example: Certificate</string>
+	<key>PayloadIdentifier</key>
+	<string>com.apple.security.pkcs1.example</string>
+	<key>PayloadOrganization</key>
+	<string>Example Organization</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>25fa414c-db06-4376-8d10-3eb2710610d1</string>
+</dict>
+</plist>

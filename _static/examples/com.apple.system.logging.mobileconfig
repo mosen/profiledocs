@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>PayloadDescription</key>
+			<string>Unified Logging Configuration</string>
+			<key>PayloadDisplayName</key>
+			<string>Unified Logging Configuration</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.system.logging</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>com.apple.system.logging</string>
+			<key>PayloadUUID</key>
+			<string></string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>Processes</key>
+			<dict>
+			</dict>
+			<key>Subsystems</key>
+			<dict>
+				<key>subsystemDomain</key>
+				<dict>
+					<key>DEFAULT-OPTIONS</key>
+					<dict>
+						<key>Default-Privacy-Setting</key>
+						<string>Inherit</string>
+						<key>Level</key>
+						<dict>
+							<key>Enable</key>
+							<string>Inherit</string>
+							<key>Persist</key>
+							<string>Inherit</string>
+						</dict>
+						<key>Propagate-with-Activity</key>
+						<false/>
+						<key>TTL</key>
+						<dict>
+							<key>Debug</key>
+							<integer>0</integer>
+							<key>Default</key>
+							<integer>0</integer>
+							<key>Info</key>
+							<integer>0</integer>
+						</dict>
+					</dict>
+				</dict>
+			</dict>
+			<key>System</key>
+			<dict>
+			</dict>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Example: Unified Logging Configuration</string>
+	<key>PayloadDisplayName</key>
+	<string>Example: Unified Logging Configuration</string>
+	<key>PayloadIdentifier</key>
+	<string>com.apple.system.logging.example</string>
+	<key>PayloadOrganization</key>
+	<string>Example Organization</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>40d769f9-b028-4c82-9ae5-1bfb8d135779</string>
+</dict>
+</plist>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>DisableUsingiCloudPassword</key>
+			<false/>
+			<key>PayloadDescription</key>
+			<string>User Preferences</string>
+			<key>PayloadDisplayName</key>
+			<string>User Preferences</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.preferences.users</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>com.apple.preferences.users</string>
+			<key>PayloadUUID</key>
+			<string></string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Example: User Preferences</string>
+	<key>PayloadDisplayName</key>
+	<string>Example: User Preferences</string>
+	<key>PayloadIdentifier</key>
+	<string>com.apple.preferences.users.example</string>
+	<key>PayloadOrganization</key>
+	<string>Example Organization</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>5e82d4d3-0ce7-4931-8ded-08cd92923d49</string>
+</dict>
+</plist>

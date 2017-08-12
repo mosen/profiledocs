@@ -4,6 +4,8 @@ mcx
 The mcx plugin takes care of a bunch of "legacy" profile domains that seem to be ported over from 10.6.
 Some of these domains still seem to receive updates.
 
+.. note:: The actual implementations of these are part of ManagedClient
+
 Domains
 -------
 
@@ -30,9 +32,10 @@ Domains
 - com.apple.MCX.sidebar (:ref:`payloadtype-com.apple.MCX.sidebar`)
 - com.apple.configurationprofile.identification (:ref:`payloadtype-com.apple.configurationprofile.identification`)
 - com.apple.ManagedClient.preferences (:ref:`payloadtype-com.apple.ManagedClient.preferences`)
+    .. note:: Although the MCX plugin handles ManagedClient.preferences it is actually a NOP. The handling is done in ManagedClient.
 - com.apple.Dictionary (:ref:`payloadtype-com.apple.Dictionary`)
-- com.apple.familycontrols.timelimits.v2
-- com.apple.familycontrols.timelimits (:ref:`payloadtype-com.apple.familycontrols.timelimits`)
+- com.apple.familycontrols.timelimits.v2 (:ref:`payloadtype-com.apple.familycontrols.timelimits.v2`)
+- com.apple.familycontrols.timelimits
 - com.apple.familycontrols.contentfilter (:ref:`payloadtype-com.apple.familycontrols.contentfilter`)
 - com.apple.systempreferences (:ref:`payloadtype-com.apple.systempreferences`)
 - com.apple.SubmitDiagInfo (:ref:`payloadtype-com.apple.SubmitDiagInfo`)

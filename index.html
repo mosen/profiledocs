@@ -88,8 +88,12 @@
 <li class="toctree-l1"><a class="reference internal" href="manifest.html">Manifest File Format</a></li>
 <li class="toctree-l1"><a class="reference internal" href="extmanifest.html">Extended Manifest Format</a></li>
 <li class="toctree-l1"><a class="reference internal" href="payloads/index.html">Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom/index.html">Custom Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting/index.html">Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mdm/commands/index.html">MDM Commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="macos/index.html">macOS Subsystem Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pdp/index.html">Profile Domain Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
 </ul>
 
             
@@ -146,6 +150,7 @@
 <li class="toctree-l1"><a class="reference internal" href="manifest.html">Manifest File Format</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="manifest.html#basic-keys">Basic Keys</a></li>
 <li class="toctree-l2"><a class="reference internal" href="manifest.html#conditions">Conditions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manifest.html#union-policies-mcx">Union Policies (MCX)</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="extmanifest.html">Extended Manifest Format</a><ul>
@@ -170,10 +175,12 @@
 <li class="toctree-l2"><a class="reference internal" href="payloads/certpkcs12.html">Certificate (PKCS#12)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="payloads/certpref.html">Certificate Preference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="payloads/certroot.html">Certificate (Root CA)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="payloads/conference.html">Conference Room Display</a></li>
 <li class="toctree-l2"><a class="reference internal" href="payloads/coremediaio.html">Core Media IO (Camera)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="payloads/custom.html">Custom Settings (MCX)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="payloads/dashwidgets.html">Dashboard Widgets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="payloads/legacy_custom.html">Legacy Custom Settings (MCX)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="payloads/dashwidgets.html">Parental Control Dashboard Payload</a></li>
 <li class="toctree-l2"><a class="reference internal" href="payloads/desktop.html">Desktop Picture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="payloads/dictionary.html">Dictionary (Parental Controls)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="payloads/discrecording.html">Disc Recording</a></li>
 <li class="toctree-l2"><a class="reference internal" href="payloads/dock.html">Dock</a></li>
 <li class="toctree-l2"><a class="reference internal" href="payloads/domains.html">Domains</a></li>
@@ -183,11 +190,13 @@
 <li class="toctree-l2"><a class="reference internal" href="payloads/enrollment.html">Enrollment (Supervised)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="payloads/ethernet.html">Ethernet 802.1x</a></li>
 <li class="toctree-l2"><a class="reference internal" href="payloads/exchange.html">Exchange</a></li>
+<li class="toctree-l2"><a class="reference internal" href="payloads/finderburn.html">Finder (Disc Burning)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="payloads/firewall.html">Firewall</a></li>
 <li class="toctree-l2"><a class="reference internal" href="payloads/fv2.html">FileVault 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="payloads/fvescrow.html">FileVault Recovery Key Escrow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="payloads/fv2redirect.html">FileVault Recovery Key Redirect</a></li>
 <li class="toctree-l2"><a class="reference internal" href="payloads/font.html">Font</a></li>
-<li class="toctree-l2"><a class="reference internal" href="payloads/gamecenter.html">Game Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="payloads/gamecenter.html">Parental Control - Game Center</a></li>
 <li class="toctree-l2"><a class="reference internal" href="payloads/globalproxy.html">Global HTTP Proxy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="payloads/google.html">Google Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="payloads/homescreen.html">Home Screen Layout</a></li>
@@ -222,12 +231,14 @@
 <li class="toctree-l2"><a class="reference internal" href="payloads/shareddevice.html">Shared Device</a></li>
 <li class="toctree-l2"><a class="reference internal" href="payloads/sharekit.html">ShareKit</a></li>
 <li class="toctree-l2"><a class="reference internal" href="payloads/sidebar.html">Sidebar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="payloads/smartcard.html">Smart Card</a></li>
 <li class="toctree-l2"><a class="reference internal" href="payloads/sso.html">Single-Sign On</a></li>
 <li class="toctree-l2"><a class="reference internal" href="payloads/supervision.html">Supervision</a></li>
 <li class="toctree-l2"><a class="reference internal" href="payloads/swupd.html">Software Update Server</a></li>
 <li class="toctree-l2"><a class="reference internal" href="payloads/spctl.html">System Policy Control</a></li>
 <li class="toctree-l2"><a class="reference internal" href="payloads/submitdiag.html">Submit Diagnostics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="payloads/systemconfiguration.html">SystemConfiguration (Proxies)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="payloads/systemmigration.html">System Migration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="payloads/systempolicy.html">System Policy (Gatekeeper)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="payloads/sysprefs.html">System Preference Panes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="payloads/sprule.html">System Policy Rule</a></li>
@@ -240,6 +251,25 @@
 <li class="toctree-l2"><a class="reference internal" href="payloads/webclip.html">WebClip</a></li>
 <li class="toctree-l2"><a class="reference internal" href="payloads/webcontentfilter.html">Web Content Filter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="payloads/wifi.html">Wi-Fi</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="custom/index.html">Custom Settings</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="custom/chrome.html">Google Chrome</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom/controlstrip.html">Touch Bar (Control Strip)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom/ibooks.html">iBooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom/office2016.html">Microsoft Office 2016</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom/onedrive.html">Microsoft OneDrive</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting/index.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting/logging.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting/mdmclient.html">mdmclient</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting/apns.html">APNS (Push Notifications)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mdm/commands/index.html">MDM Commands</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mdm/commands/InstallApplication.html">InstallApplication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mdm/commands/ScheduleOSUpdate.html">ScheduleOSUpdate</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="macos/index.html">macOS Subsystem Notes</a><ul>
@@ -274,6 +304,10 @@
 <li class="toctree-l2"><a class="reference internal" href="pdp/webclip.html">WebClip</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pdp/wifi.html">wifi</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pdp/xsanplugin.html">xsanplugin</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="glossary.html#id1">Glossary</a></li>
 </ul>
 </li>
 </ul>

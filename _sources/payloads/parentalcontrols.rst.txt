@@ -6,16 +6,16 @@ Parental Controls
 Summary
 -------
 
-.. pfmheader:: manifests/manual/com.apple.applicationaccess.new manifest.plist
-.. pfm:: manifests/manual/com.apple.applicationaccess.new manifest.plist
+.. pfmheader:: /_static/manifests/com.apple.applicationaccess.new manifest.plist
+.. pfm:: /_static/manifests/com.apple.applicationaccess.new manifest.plist
 
 Keys
 ----
 
-.. pfmkey:: familyControlsEnabled manifests/manual/com.apple.applicationaccess.new manifest.plist
-.. pfmkey:: whiteList manifests/manual/com.apple.applicationaccess.new manifest.plist
-.. pfmkey:: pathWhiteList manifests/manual/com.apple.applicationaccess.new manifest.plist
-.. pfmkey:: pathBlackList manifests/manual/com.apple.applicationaccess.new manifest.plist
+.. pfmkey:: familyControlsEnabled /_static/manifests/com.apple.applicationaccess.new manifest.plist
+.. pfmkey:: whiteList /_static/manifests/com.apple.applicationaccess.new manifest.plist
+.. pfmkey:: pathWhiteList /_static/manifests/com.apple.applicationaccess.new manifest.plist
+.. pfmkey:: pathBlackList /_static/manifests/com.apple.applicationaccess.new manifest.plist
 
 
 

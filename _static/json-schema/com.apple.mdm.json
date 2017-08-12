@@ -1,0 +1,86 @@
+{
+    "$schema": "http://json-schema.org/schema#", 
+    "type": "object", 
+    "properties": {
+        "PayloadUUID": {
+            "default": "", 
+            "pattern": "^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$", 
+            "type": "string", 
+            "description": "Unique identifier for the payload (format 01234567-89AB-CDEF-0123-456789ABCDEF)"
+        }, 
+        "ServerCapabilities": {
+            "enum": [
+                "com.apple.mdm.per-user-connections"
+            ], 
+            "type": "array", 
+            "description": "Optional. An array of strings indicating server capabilities. If the server manages OS X devices or a shared iPad, this field is mandatory and must contain the value com.apple.mdm.per-user-connections. This indicates that the server supports both device and user connections."
+        }, 
+        "PayloadDescription": {
+            "default": "Configures a Mobile Device Management server", 
+            "type": "string", 
+            "description": "Description of the payload"
+        }, 
+        "CheckInURL": {
+            "pattern": "^https://.*$", 
+            "type": "string", 
+            "description": "The URL that the device will use to check in during installation. If this URL is not given, the ServerURL will be used for both purposes."
+        }, 
+        "CheckOutWhenRemoved": {
+            "type": "boolean", 
+            "description": "If true, the device attempts to send a CheckOut message to the check-in server when the profile is removed. Defaults to false.\n\t\t\t\tNote: OS X v10.8 acts as though this setting is always true."
+        }, 
+        "PayloadOrganization": {
+            "type": "string", 
+            "description": "This value describes the issuing organization of the profile, as displayed to the user"
+        }, 
+        "ServerURL": {
+            "pattern": "^https://.*$", 
+            "type": "string", 
+            "description": "The URL that the device will contact to retrieve device management instructions."
+        }, 
+        "PayloadIdentifier": {
+            "default": "com.apple.mdm", 
+            "type": "string", 
+            "description": "A unique identifier for the payload, dot-delimited.  Usually root PayloadIdentifier+subidentifier"
+        }, 
+        "PayloadDisplayName": {
+            "default": "MDM", 
+            "type": "string", 
+            "description": "Name of the payload"
+        }, 
+        "Topic": {
+            "type": "string", 
+            "description": "The topic that MDM will listen to for Push notifications. The certificate that the server uses to send push notifications must have the same topic in its subject."
+        }, 
+        "PayloadType": {
+            "default": "com.apple.mdm", 
+            "type": "string", 
+            "description": "The type of the payload, a reverse dns string"
+        }, 
+        "SignMessage": {
+            "default": false, 
+            "type": "boolean", 
+            "description": "If set, each message coming from the device will carry the additional HTTP header Mdm-Signature"
+        }, 
+        "PayloadVersion": {
+            "default": 1, 
+            "type": "number", 
+            "description": "The version of the whole configuration profile."
+        }, 
+        "IdentityCertificateUUID": {
+            "pattern": "^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$", 
+            "type": "string", 
+            "description": "UUID of the certificate payload for the device's identity. It may also point to a SCEP payload."
+        }, 
+        "AccessRights": {
+            "type": "number", 
+            "description": "Logical OR of several bit-flags. If 2 is specified, then 1 must also be specified. If 128 is specified, then 64 must also be specified."
+        }, 
+        "UseDevelopmentAPNS": {
+            "default": false, 
+            "type": "boolean", 
+            "description": "If set, will use the development APNS servers. Otherwise, the device will use the production servers."
+        }
+    }, 
+    "title": "com.apple.mdm"
+}

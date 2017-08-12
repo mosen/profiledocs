@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>pfm_description</key>
+        <string>This payload defines domains that are under an enterprises management</string>
+        <key>pfm_title</key>
+        <string>Domains Payload</string>
+        <key>pfm_format_version</key>
+        <integer>1</integer>
+        <key>pfm_version</key>
+        <integer>1</integer>
+        <key>pfm_domain</key>
+        <string>com.apple.domains</string>
+        <key>pfm_subkeys</key>
+        <array>
+            <dict>
+                <key>pfm_name</key>
+                <string>PayloadDescription</string>
+                <key>pfm_title</key>
+                <string>Payload Description</string>
+                <key>pfm_description</key>
+                <string>Description of the payload</string>
+                <key>pfm_type</key>
+                <string>string</string>
+                <key>pfm_default</key>
+                <string>Domains Payload</string>
+            </dict>
+            <dict>
+                <key>pfm_name</key>
+                <string>PayloadDisplayName</string>
+                <key>pfm_title</key>
+                <string>Payload Display Name</string>
+                <key>pfm_description</key>
+                <string>Name of the payload</string>
+                <key>pfm_type</key>
+                <string>string</string>
+                <key>pfm_default</key>
+                <string>Domains Payload</string>
+                <key>pfm_require</key>
+                <string>always</string>
+            </dict>
+            <dict>
+                <key>pfm_name</key>
+                <string>PayloadIdentifier</string>
+                <key>pfm_title</key>
+                <string>Payload Identifier</string>
+                <key>pfm_description</key>
+                <string>A unique identifier for the payload, dot-delimited.  Usually root PayloadIdentifier+subidentifier</string>
+                <key>pfm_type</key>
+                <string>string</string>
+                <key>pfm_default</key>
+                <string>com.apple.domains</string>
+                <key>pfm_require</key>
+                <string>always</string>
+            </dict>
+            <dict>
+                <key>pfm_name</key>
+                <string>PayloadType</string>
+                <key>pfm_title</key>
+                <string>Payload Type</string>
+                <key>pfm_description</key>
+                <string>The type of the payload, a reverse dns string</string>
+                <key>pfm_type</key>
+                <string>string</string>
+                <key>pfm_default</key>
+                <string>com.apple.domains</string>
+                <key>pfm_require</key>
+                <string>always</string>
+            </dict>
+            <dict>
+                <key>pfm_name</key>
+                <string>PayloadUUID</string>
+                <key>pfm_title</key>
+                <string>Payload UUID</string>
+                <key>pfm_description</key>
+                <string>Unique identifier for the payload (format 01234567-89AB-CDEF-0123-456789ABCDEF)</string>
+                <key>pfm_type</key>
+                <string>string</string>
+                <key>pfm_default</key>
+                <string></string>
+                <key>pfm_require</key>
+                <string>always</string>
+                <key>pfm_format</key>
+                <string>^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$</string>
+            </dict>
+            <dict>
+                <key>pfm_name</key>
+                <string>PayloadVersion</string>
+                <key>pfm_title</key>
+                <string>Payload Version</string>
+                <key>pfm_description</key>
+                <string>The version of the whole configuration profile.</string>
+                <key>pfm_type</key>
+                <string>integer</string>
+                <key>pfm_default</key>
+                <integer>1</integer>
+                <key>pfm_require</key>
+                <string>always</string>
+            </dict>
+            <dict>
+                <key>pfm_name</key>
+                <string>PayloadOrganization</string>
+                <key>pfm_title</key>
+                <string>Payload Organization</string>
+                <key>pfm_description</key>
+                <string>This value describes the issuing organization of the profile, as displayed to the user</string>
+                <key>pfm_type</key>
+                <string>string</string>
+            </dict>
+            <dict>
+                <key>pfm_name</key>
+                <string>EmailDomains</string>
+                <key>pfm_title</key>
+                <string>Unmarked Email Domains</string>
+                <key>pfm_description</key>
+                <string>Any email address that does not have a suffix that matches one of the unmarked email domains specified by the key EmailDomains will be considered out-of-domain and will be highlighted as such in the Mail app.</string>
+                <key>pfm_type</key>
+                <string>array</string>
+                <key>pfm_subkeys</key>
+                <array>
+                    <dict>
+                        <key>pfm_name</key>
+                        <string>EmailDomainItem</string>
+                        <key>pfm_title</key>
+                        <string>Managed E-mail Domain</string>
+                        <key>pfm_description</key>
+                        <string>An email address lacking a suffix that matches any of these strings will be considered out-of-domain</string>
+                        <key>pfm_type</key>
+                        <string>string</string>
+                    </dict>
+                </array>
+            </dict>
+            <dict>
+                <key>pfm_name</key>
+                <string>WebDomains</string>
+                <key>pfm_title</key>
+                <string>Managed Safari Web Domains</string>
+                <key>pfm_description</key>
+                <string>Opening a document originating from a managed Safari web domain causes iOS to treat the document as managed for the purpose of Managed Open In.</string>
+                <key>pfm_type</key>
+                <string>array</string>
+                <key>pfm_subkeys</key>
+                <array>
+                    <dict>
+                        <key>pfm_name</key>
+                        <string>WebDomainItem</string>
+                        <key>pfm_title</key>
+                        <string>Managed Web Domain</string>
+                        <key>pfm_description</key>
+                        <string>URLs matching the patterns listed here will be considered managed. Not supported in macOS</string>
+                        <key>pfm_type</key>
+                        <string>string</string>
+                    </dict>
+                </array>
+            </dict>
+            <dict>
+                <key>pfm_name</key>
+                <string>SafariPasswordAutoFillDomains</string>
+                <key>pfm_title</key>
+                <string>Managed Safari Web Domains</string>
+                <key>pfm_description</key>
+                <string>Users can save passwords in Safari only from URLs matching the patterns listed here.</string>
+                <key>pfm_type</key>
+                <string>array</string>
+                <key>pfm_ios_min</key>
+                <string>9.3</string>
+                <key>pfm_subkeys</key>
+                <array>
+                    <dict>
+                        <key>pfm_name</key>
+                        <string>SafariPasswordAutoFillDomainItem</string>
+                        <key>pfm_title</key>
+                        <string>Managed Safari Autofill Web Domain</string>
+                        <key>pfm_description</key>
+                        <string>Users can save passwords in Safari only from URLs matching the patterns listed here</string>
+                        <key>pfm_type</key>
+                        <string>string</string>
+                    </dict>
+                </array>
+            </dict>
+        </array>
+    </dict>
+</plist>
