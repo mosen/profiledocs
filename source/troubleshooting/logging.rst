@@ -5,25 +5,6 @@ There are several different processes related to profile installation and MDM co
 The easiest option is to download this :download:`Logging Profile </_static/profiles/MDM Debug Logging.mobileconfig>`
 for macOS 10.12 and higher.
 
-Push Notifications
-------------------
-
-Log Location
-    /Library/Logs/apsd.log
-
-Commands::
-
-    sudo touch /Library/Logs/apsd.log
-    sudo defaults write /Library/Preferences/com.apple.apsd APSWriteLogs -bool TRUE
-    sudo defaults write /Library/Preferences/com.apple.apsd APSLogLevel -int 7
-    sudo killall apsd
-
-
-Per Topic status can be retrieved by executing::
-
-    /System/Library/PrivateFrameworks/ApplePushService.framework/apsctl status
-
-
 
 MDM Debugging
 -------------
