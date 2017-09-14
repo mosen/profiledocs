@@ -160,6 +160,8 @@
 <li class="toctree-l4"><a class="reference internal" href="#com.apple.loginwindow-PowerOffDisabledWhileLoggedIn-auto">PowerOffDisabledWhileLoggedIn</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#com.apple.loginwindow-DisableLoginItemsSuppression-auto">DisableLoginItemsSuppression</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#com.apple.loginwindow-DisableFDEAutoLogin-auto">DisableFDEAutoLogin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.loginwindow-LogOutDisabledWhileLoggedIn-auto">LogOutDisabledWhileLoggedIn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.loginwindow-DisableScreenLockImmediate-auto">DisableScreenLockImmediate</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#untested">Untested</a></li>
 </ul>
 </li>
@@ -213,7 +215,6 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../custom/index.html">Custom Settings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">Troubleshooting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../mdm/commands/index.html">MDM Commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../macos/index.html">macOS Subsystem Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pdp/index.html">Profile Domain Plugins</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
@@ -421,6 +422,18 @@ the loginwindow display.</p>
 <td>boolean</td>
 <td>Disable automatic login</td>
 <td>Disable automatic login if FileVault is enabled, so that both an EFI Login and loginwindow password are required</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>LogOutDisabledWhileLoggedIn</td>
+<td>boolean</td>
+<td>Disable Log Out menu item</td>
+<td>If set to true, disables the Log Out... menu item when logged in</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>DisableScreenLockImmediate</td>
+<td>boolean</td>
+<td>Disable immediate screen lock</td>
+<td>If set to true, disables the immediate screen lock functions.</td>
 <td>n/a</td>
 </tr>
 </tbody>
@@ -1107,6 +1120,78 @@ the loginwindow display.</p>
 <td>N/A</td>
 <td>N/A</td>
 <td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.loginwindow-LogOutDisabledWhileLoggedIn-auto">
+<h3>LogOutDisabledWhileLoggedIn<a class="headerlink" href="#com.apple.loginwindow-LogOutDisabledWhileLoggedIn-auto" title="Permalink to this headline">¶</a></h3>
+<p>Disable Log Out menu item</p>
+<p>If set to true, disables the Log Out... menu item when logged in</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>10.13</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.loginwindow-DisableScreenLockImmediate-auto">
+<h3>DisableScreenLockImmediate<a class="headerlink" href="#com.apple.loginwindow-DisableScreenLockImmediate-auto" title="Permalink to this headline">¶</a></h3>
+<p>Disable immediate screen lock</p>
+<p>If set to true, disables the immediate screen lock functions.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>10.13</td>
 <td>N/A</td>
 </tr>
 </tbody>

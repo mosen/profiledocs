@@ -190,7 +190,6 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../custom/index.html">Custom Settings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">Troubleshooting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../mdm/commands/index.html">MDM Commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../macos/index.html">macOS Subsystem Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pdp/index.html">Profile Domain Plugins</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
@@ -251,6 +250,7 @@
 <li>com.apple.secondethernet.managed</li>
 <li>com.apple.thirdactiveethernet.managed</li>
 <li>com.apple.thirdethernet.managed</li>
+<li>com.apple.globalethernet.managed (10.13)</li>
 </ul>
 <p>Payloads with <strong>active</strong> in their name apply to Ethernet interfaces that are working at the time of profile installation.
 If there is no active Ethernet interface working, the <code class="docutils literal"><span class="pre">com.apple.firstactiveethernet.managed</span></code> payload will configure
@@ -373,6 +373,12 @@ newly active interface.</p>
 <td>dictionary</td>
 <td>QoS Marking Policy</td>
 <td>Restrict fast lane QoS marking</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>Interface</td>
+<td>string</td>
+<td>Interface name</td>
+<td>The name of the interface, only used with the payload com.apple.globalethernet.managed</td>
 <td>n/a</td>
 </tr>
 </tbody>

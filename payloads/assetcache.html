@@ -99,6 +99,7 @@
 <li class="toctree-l2"><a class="reference internal" href="appstore.html">App Store</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">AssetCache Client</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#multiple-payloads">Multiple Payloads</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="caldav.html">CalDAV</a></li>
@@ -190,7 +191,6 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../custom/index.html">Custom Settings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">Troubleshooting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../mdm/commands/index.html">MDM Commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../macos/index.html">macOS Subsystem Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pdp/index.html">Profile Domain Plugins</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
@@ -296,6 +296,11 @@
 </tr>
 </tbody>
 </table>
+</div>
+<div class="section" id="multiple-payloads">
+<h2>Multiple Payloads<a class="headerlink" href="#multiple-payloads" title="Permalink to this headline">¶</a></h2>
+<p>AssetCacheLocator XPC Service reads multiple entries from <a href="#id1"><span class="problematic" id="id2">:path:`/Library/Preferences/com.apple.AssetCacheClientProfiles.plist`</span></a>
+so it seems at first glance that multiple <em>PublicIPAddressRange</em> keys will all be considered in sequence.</p>
 </div>
 </div>
 

@@ -15,4 +15,19 @@ Summary
 .. pfmheader:: /_static/manifests/com.apple.loginitems.managed manifest.plist
 .. pfm:: /_static/manifests/com.apple.loginitems.managed manifest.plist
 
+Keys
+----
+
+.. pfmkey:: AutoLaunchedApplicationDictionary-managed /_static/manifests/com.apple.loginitems.managed manifest.plist
+
+
+Items
+^^^^^
+
+Each item may contain these keys
+
+.. pfm:: /_static/manifests/com.apple.loginitems.managed manifest.plist
+    :key: AutoLaunchedApplicationDictionary-managed:AutoLaunchedApplicationItem
+
+
 

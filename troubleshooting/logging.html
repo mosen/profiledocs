@@ -93,17 +93,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../custom/index.html">Custom Settings</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Troubleshooting</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Logging</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#push-notifications">Push Notifications</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#mdm-debugging">MDM Debugging</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#mcx">MCX</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#unified-logging-predicates">Unified Logging Predicates</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="mdmclient.html">mdmclient</a></li>
-<li class="toctree-l2"><a class="reference internal" href="apns.html">APNS (Push Notifications)</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../mdm/commands/index.html">MDM Commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../macos/index.html">macOS Subsystem Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pdp/index.html">Profile Domain Plugins</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
@@ -158,24 +155,6 @@
 <p>There are several different processes related to profile installation and MDM command acknowledgement.
 The easiest option is to download this <a class="reference download internal" href="../_downloads/MDM Debug Logging.mobileconfig" download=""><code class="xref download docutils literal"><span class="pre">Logging</span> <span class="pre">Profile</span></code></a>
 for macOS 10.12 and higher.</p>
-<div class="section" id="push-notifications">
-<h2>Push Notifications<a class="headerlink" href="#push-notifications" title="Permalink to this headline">¶</a></h2>
-<dl class="docutils">
-<dt>Log Location</dt>
-<dd>/Library/Logs/apsd.log</dd>
-</dl>
-<p>Commands:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">touch</span> <span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Logs</span><span class="o">/</span><span class="n">apsd</span><span class="o">.</span><span class="n">log</span>
-<span class="n">sudo</span> <span class="n">defaults</span> <span class="n">write</span> <span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Preferences</span><span class="o">/</span><span class="n">com</span><span class="o">.</span><span class="n">apple</span><span class="o">.</span><span class="n">apsd</span> <span class="n">APSWriteLogs</span> <span class="o">-</span><span class="nb">bool</span> <span class="n">TRUE</span>
-<span class="n">sudo</span> <span class="n">defaults</span> <span class="n">write</span> <span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Preferences</span><span class="o">/</span><span class="n">com</span><span class="o">.</span><span class="n">apple</span><span class="o">.</span><span class="n">apsd</span> <span class="n">APSLogLevel</span> <span class="o">-</span><span class="nb">int</span> <span class="mi">7</span>
-<span class="n">sudo</span> <span class="n">killall</span> <span class="n">apsd</span>
-</pre></div>
-</div>
-<p>Per Topic status can be retrieved by executing:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">System</span><span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">PrivateFrameworks</span><span class="o">/</span><span class="n">ApplePushService</span><span class="o">.</span><span class="n">framework</span><span class="o">/</span><span class="n">apsctl</span> <span class="n">status</span>
-</pre></div>
-</div>
-</div>
 <div class="section" id="mdm-debugging">
 <h2>MDM Debugging<a class="headerlink" href="#mdm-debugging" title="Permalink to this headline">¶</a></h2>
 <p>Commands:</p>

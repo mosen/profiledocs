@@ -198,7 +198,6 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../custom/index.html">Custom Settings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">Troubleshooting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../mdm/commands/index.html">MDM Commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../macos/index.html">macOS Subsystem Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pdp/index.html">Profile Domain Plugins</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
@@ -322,7 +321,7 @@
 <tr class="row-even"><td>askForPasswordDelay</td>
 <td>integer</td>
 <td>Require Password</td>
-<td>Number of seconds before requiring a password to unlock the screen.</td>
+<td>Number of seconds before requiring a password to unlock the screen. A value of 2147483647 (eg 0x7FFFFFFF) can be used to disable this requirement, and on 10.13, the payload is one of the only ways of disabling the feature. Note that the askForPassword must still be set to true to use this option.</td>
 <td>n/a</td>
 </tr>
 </tbody>
@@ -486,7 +485,7 @@
 <div class="section" id="com.apple.screensaver-askForPasswordDelay-auto">
 <h3>askForPasswordDelay<a class="headerlink" href="#com.apple.screensaver-askForPasswordDelay-auto" title="Permalink to this headline">¶</a></h3>
 <p>Require Password</p>
-<p>Number of seconds before requiring a password to unlock the screen.</p>
+<p>Number of seconds before requiring a password to unlock the screen. A value of 2147483647 (eg 0x7FFFFFFF) can be used to disable this requirement, and on 10.13, the payload is one of the only ways of disabling the feature. Note that the askForPassword must still be set to true to use this option.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="14%" />

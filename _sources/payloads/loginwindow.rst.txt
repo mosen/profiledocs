@@ -36,6 +36,8 @@ Keys
 .. pfmkey:: PowerOffDisabledWhileLoggedIn /_static/manifests/com.apple.loginwindow manifest.plist
 .. pfmkey:: DisableLoginItemsSuppression /_static/manifests/com.apple.loginwindow manifest.plist
 .. pfmkey:: DisableFDEAutoLogin /_static/manifests/com.apple.loginwindow manifest.plist
+.. pfmkey:: LogOutDisabledWhileLoggedIn /_static/manifests/com.apple.loginwindow manifest.plist
+.. pfmkey:: DisableScreenLockImmediate /_static/manifests/com.apple.loginwindow manifest.plist
 
 Untested
 ^^^^^^^^
