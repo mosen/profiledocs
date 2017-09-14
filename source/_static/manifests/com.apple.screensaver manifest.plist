@@ -84,7 +84,7 @@
                 <key>pfm_default</key>
                 <integer>0</integer>
                 <key>pfm_description</key>
-                <string>Number of seconds before requiring a password to unlock the screen.</string>
+                <string>Number of seconds before requiring a password to unlock the screen. A value of 2147483647 (eg 0x7FFFFFFF) can be used to disable this requirement, and on 10.13, the payload is one of the only ways of disabling the feature. Note that the askForPassword must still be set to true to use this option.</string>
                 <key>pfm_name</key>
                 <string>askForPasswordDelay</string>
                 <key>pfm_targets</key>

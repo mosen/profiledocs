@@ -12,6 +12,7 @@ The 802.1x Ethernet payload is designated by specifying one of the following as 
 - com.apple.secondethernet.managed
 - com.apple.thirdactiveethernet.managed
 - com.apple.thirdethernet.managed
+- com.apple.globalethernet.managed (10.13)
 
 Payloads with **active** in their name apply to Ethernet interfaces that are working at the time of profile installation.
 If there is no active Ethernet interface working, the ``com.apple.firstactiveethernet.managed`` payload will configure
