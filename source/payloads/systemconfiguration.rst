@@ -19,6 +19,9 @@ There doesn't seem to be any keys that deal with:
 - FTP Passive Mode
 - Which interface the payload applies to
 
+.. todo:: Try combining this with :ref:`payloadtype-com.apple.proxy.http.global`.
+
+
 .. contents::
 
 Summary
@@ -41,3 +44,6 @@ Keys
 .. pfmkey:: Proxies:ProxyAutoConfigEnable /_static/manifests/com.apple.SystemConfiguration manifest.plist
 .. pfmkey:: Proxies:RTSPEnable /_static/manifests/com.apple.SystemConfiguration manifest.plist
 .. pfmkey:: Proxies:SOCKSEnable /_static/manifests/com.apple.SystemConfiguration manifest.plist
+
+.. pfm:: /_static/manifests/com.apple.SystemConfiguration manifest.plist
+    :key: Proxies:ExceptionsList
