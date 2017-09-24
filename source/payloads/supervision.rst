@@ -3,11 +3,12 @@
 Supervision
 ===========
 
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: manifests/ac2/com.apple.chaperone manifest.plist
-.. pfm:: manifests/ac2/com.apple.chaperone manifest.plist
 
 Keys
 ----

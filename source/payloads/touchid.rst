@@ -5,8 +5,9 @@ Touch ID
 
 .. note:: TODO Key functionality still needs verification
 
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.touchidpolicy manifest.plist
-.. pfm:: /_static/manifests/com.apple.touchidpolicy manifest.plist

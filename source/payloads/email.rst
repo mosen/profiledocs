@@ -5,12 +5,12 @@ E-mail Account
 
 An email payload creates an email account on the device.
 
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.mail.managed manifest.plist
-
-.. pfm:: /_static/manifests/com.apple.mail.managed manifest.plist
 
 Keys
 ----

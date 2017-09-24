@@ -6,11 +6,12 @@ Sidebar
 
 .. warning:: This seems to be deprecated? calls LSSharedFileList
 
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.MCX.sidebar manifest.plist
-.. pfm:: /_static/manifests/com.apple.MCX.sidebar manifest.plist
 
 Keys
 ----

@@ -6,9 +6,10 @@ Dictionary (Parental Controls)
 
 The Parental Control Dictionary payload enables the restrictions defined in the device’s Parental Controls Dictionary.
 
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.Dictionary manifest.plist
-.. pfm:: /_static/manifests/com.apple.Dictionary manifest.plist
 

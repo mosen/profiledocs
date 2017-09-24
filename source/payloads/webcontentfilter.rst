@@ -28,11 +28,12 @@ that profile is treated as containing an empty array—that is, all websites are
 
 All filtering options are active simultaneously. Only URLs and sites that pass all rules are permitted.
 
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.webcontent-filter manifest.plist
-.. pfm:: /_static/manifests/com.apple.webcontent-filter manifest.plist
 
 Keys
 ----

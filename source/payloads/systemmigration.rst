@@ -7,11 +7,12 @@ System migration occurs when items are transferred to a macOS device from a Wind
 
 This payload must be single and exist only in a device profile. If the payload is present in a user profile, an error will be generated during installation and the profile will fail to install.
 
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.systemmigration manifest.plist
-.. pfm:: /_static/manifests/com.apple.systemmigration manifest.plist
 
 Keys
 ----

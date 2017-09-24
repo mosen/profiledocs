@@ -6,11 +6,12 @@ App Store
 
 Establishes macOS AppStore restrictions and is supported on the User channel.
 
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.appstore manifest.plist
-.. pfm:: /_static/manifests/com.apple.appstore manifest.plist
 
 Keys
 ----

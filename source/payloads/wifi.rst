@@ -7,11 +7,12 @@ Wi-Fi
     qualify, so you may have issues testing in a Virtual Machine. This is because it uses CoreWLAN to make the settings
     and CoreWLAN will only return AirPort devices.
 
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.wifi.managed manifest.plist
-.. pfm:: /_static/manifests/com.apple.wifi.managed manifest.plist
 
 Keys
 ----

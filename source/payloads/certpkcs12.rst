@@ -8,11 +8,12 @@ Password-protected identity certificate (.p12). Only one certificate may be incl
 
 .. WARNING:: Because the password string is stored in the clear in the profile, it is recommended that the profile be encrypted for the device.
 
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.security.pkcs12 manifest.plist
-.. pfm:: /_static/manifests/com.apple.security.pkcs12 manifest.plist
 
 Keys
 ----

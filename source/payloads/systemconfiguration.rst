@@ -17,10 +17,12 @@ There doesn't seem to be any keys that deal with:
 - FTP Passive Mode
 - Which interface the payload applies to
 
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.SystemConfiguration manifest.plist
-.. pfm:: /_static/manifests/com.apple.SystemConfiguration manifest.plist
+
 
 

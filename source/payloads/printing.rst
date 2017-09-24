@@ -6,11 +6,14 @@ Printing
 The printing payload manages printers that should be added to the user's computer, as well as restrictions on how the
 user may print.
 
+.. note:: If the model or PPD does not exist at the time the profile is installed, it will use a Generic PostScript driver.
+
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.mcxprinting manifest.plist
-.. pfm:: /_static/manifests/com.apple.mcxprinting manifest.plist
 
 Keys
 ----

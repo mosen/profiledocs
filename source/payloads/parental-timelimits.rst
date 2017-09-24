@@ -5,11 +5,12 @@ Parental Controls - Time Limits
 
 This payload controls time allowances and curfews as shown in the Parental Controls system preference pane.
 
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.familycontrols.timelimits.v2 manifest.plist
-.. pfm:: /_static/manifests/com.apple.familycontrols.timelimits.v2 manifest.plist
 
 Keys
 ----

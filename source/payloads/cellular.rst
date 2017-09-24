@@ -16,12 +16,12 @@ This payload replaces the com.apple.managedCarrier payload, which is supported, 
 - Supersedes ``com.apple.apn.managed`` (APN) which is used on iOS 6 and earlier.
 - Supersedes ``com.apple.managedCarrier``
 
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.cellular manifest.plist
-
-.. pfm:: /_static/manifests/com.apple.cellular manifest.plist
 
 Keys
 ----

@@ -1,11 +1,12 @@
 OSX Server Account
 ==================
 
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: manifests/ac2/com.apple.osxserver.account manifest.plist
-.. pfm:: manifests/ac2/com.apple.osxserver.account manifest.plist
 
 Keys
 ----

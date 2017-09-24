@@ -6,12 +6,12 @@ Certificate (PEM)
 
 PEM-encoded certificate (.cer) without private key. May contain root certificates.
 
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.security.pem manifest.plist
-
-.. pfm:: /_static/manifests/com.apple.security.pem manifest.plist
 
 Keys
 ----

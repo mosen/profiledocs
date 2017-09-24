@@ -8,11 +8,12 @@ the loginwindow display.
 
 Profile Manager only displays a fraction of the keys that may actually be used.
 
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.loginwindow manifest.plist
-.. pfm:: /_static/manifests/com.apple.loginwindow manifest.plist
 
 Keys
 ----

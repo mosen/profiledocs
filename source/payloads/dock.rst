@@ -7,11 +7,12 @@ Dock
 The Dock payload is supported on the user channel and, except for AllowDockFixupOverride, on all version of macOS.
 The key ``AllowDockFixupOverride`` is supported on macOS 10.12 and later.
 
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.dock manifest.plist
-.. pfm:: /_static/manifests/com.apple.dock manifest.plist
 
 Keys
 ----

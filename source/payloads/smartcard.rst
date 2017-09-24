@@ -5,11 +5,12 @@ Smart Card
 
 This payload controls restrictions and settings for SmartCard pairing on macOS v10.12.4 and later.
 
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.smartcard manifest.plist
-.. pfm:: /_static/manifests/com.apple.smartcard manifest.plist
 
 Keys
 ----

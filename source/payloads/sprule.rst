@@ -11,11 +11,12 @@ The keys and functionality are tightly related to the spctl command line tool. Y
 This payload must only exist in a device profile.
 If the payload is present in a user profile, an error will be generated during installation and the profile will fail to install.
 
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.systempolicy.rule manifest.plist
-.. pfm:: /_static/manifests/com.apple.systempolicy.rule manifest.plist
 
 Keys
 ----

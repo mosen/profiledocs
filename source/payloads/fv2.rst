@@ -14,11 +14,12 @@ a specific certificate payload is referenced, or the UseKeychain key value is se
 
 In all cases, the certificate information must be set up properly for FileVault or it will be ignored and no institutional recovery key will be set up.
 
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.MCX.FileVault2 manifest.plist
-.. pfm:: /_static/manifests/com.apple.MCX.FileVault2 manifest.plist
 
 Keys
 ----

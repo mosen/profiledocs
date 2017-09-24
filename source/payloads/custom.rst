@@ -10,6 +10,7 @@ apply the managed preference as a ByHost preference if this string is present.
 
 -[MCX_PostComposite postCompositeByHost:userHome:]:
 
+.. contents::
 
 Forced
 """"""

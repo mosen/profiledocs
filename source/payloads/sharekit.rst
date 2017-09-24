@@ -35,12 +35,12 @@ com.apple.reminders.RemindersShareExtension
 com.apple.share.LinkedIn.post
     LinkedIn
 
+.. contents::
 
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.ShareKitHelper manifest.plist
-.. pfm:: /_static/manifests/com.apple.ShareKitHelper manifest.plist
 
 Keys
 ----

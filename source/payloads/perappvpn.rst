@@ -10,12 +10,12 @@ The Per-App VPN payload supports all of the keys described in :ref:`payloadtype-
 
 .. note:: Copy VPN payload keys into the per app vpn manifest.
 
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.vpn.managed.applayer manifest.plist
-
-.. pfm:: /_static/manifests/com.apple.vpn.managed.applayer manifest.plist
 
 Links
 -----

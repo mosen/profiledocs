@@ -1,13 +1,14 @@
 .. _payloadtype-com.apple.applicationaccess.new:
 
-Parental Controls
-=================
+Application Access
+==================
+
+.. contents::
 
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.applicationaccess.new manifest.plist
-.. pfm:: /_static/manifests/com.apple.applicationaccess.new manifest.plist
 
 Keys
 ----

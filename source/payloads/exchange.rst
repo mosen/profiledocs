@@ -9,11 +9,12 @@ In macOS, the Exchange payload is designated by specifying **com.apple.ews.accou
 
 .. NOTE:: As with VPN and Wi-Fi configurations, it is possible to associate an SCEP credential with an Exchange configuration via the PayloadCertificateUUID key.
 
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.eas.account manifest.plist
-.. pfm:: /_static/manifests/com.apple.eas.account manifest.plist
 
 Keys
 ----

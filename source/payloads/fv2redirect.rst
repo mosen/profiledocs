@@ -19,11 +19,12 @@ which can be any data that locates the recovery key.
 The SSL certificate chain of the server is evaluated by the client, which must trust it.
 If needed, the configuration profile can include an additional certificate to set up a chain of trust.
 
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.security.FDERecoveryRedirect manifest.plist
-.. pfm:: /_static/manifests/com.apple.security.FDERecoveryRedirect manifest.plist
 
 Keys
 ----

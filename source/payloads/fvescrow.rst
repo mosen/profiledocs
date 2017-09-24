@@ -3,11 +3,12 @@
 FileVault Recovery Key Escrow
 =============================
 
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.security.FDERecoveryKeyEscrow manifest.plist
-.. pfm:: /_static/manifests/com.apple.security.FDERecoveryKeyEscrow manifest.plist
 
 Keys
 ----

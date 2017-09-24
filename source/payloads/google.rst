@@ -12,11 +12,12 @@ Google accounts must be installed via MDM or by Apple Configurator 2 (if the dev
 The payload never contains credentials; the user will be prompted to enter credentials shortly after the
 payload has been successfully installed.
 
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.google-oauth manifest.plist
-.. pfm:: /_static/manifests/com.apple.google-oauth manifest.plist
 
 Keys
 ----

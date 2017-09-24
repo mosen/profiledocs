@@ -9,11 +9,12 @@ This payload allows you to specify global HTTP proxy settings.
 .. NOTE:: If the ProxyType field is set to Auto and no ProxyPACURL value is specified,
     the device uses the web proxy autodiscovery protocol (WPAD) to discover proxies.
 
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.proxy.http.global manifest.plist
-.. pfm:: /_static/manifests/com.apple.proxy.http.global manifest.plist
 
 Keys
 ----

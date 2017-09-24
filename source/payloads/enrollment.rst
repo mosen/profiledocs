@@ -3,6 +3,8 @@ Enrollment (Supervised)
 
 .. pfm:: manifests/ac2/com.apple.enrollment manifest.plist
 
+.. contents::
+
 Keys
 ----
 

@@ -13,11 +13,12 @@ Available in macOS 10.12 and later. A Firewall payload manages the Application F
     The "Automatically allow signed downloaded software" and "Automatically allow built-in software" options are not supported, but both will be forced **ON** when this payload is present.
     However those options are not changed when the payload is installed. Only the UI is greyed out.
 
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.security.firewall manifest.plist
-.. pfm:: /_static/manifests/com.apple.security.firewall manifest.plist
 
 Keys
 ----

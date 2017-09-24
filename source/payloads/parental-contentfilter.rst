@@ -11,11 +11,12 @@ As with the System Preference pane you can use two approaches:
 
 **whitelistEnabled** and **useContentFilter** are mutually exclusive.
 
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.familycontrols.contentfilter manifest.plist
-.. pfm:: /_static/manifests/com.apple.familycontrols.contentfilter manifest.plist
 
 Keys
 ----

@@ -3,9 +3,10 @@
 Submit Diagnostics
 ==================
 
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.SubmitDiagInfo manifest.plist
-.. pfm:: /_static/manifests/com.apple.SubmitDiagInfo manifest.plist
 

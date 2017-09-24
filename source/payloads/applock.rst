@@ -13,11 +13,12 @@ The home button is disabled, and the device returns to the specified application
    During that time you should restrict the visible apps as much as possible,
    except for Settings and Phone and any other apps that cannot be blacklisted.
 
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.app.lock manifest.plist
-.. pfm:: /_static/manifests/com.apple.app.lock manifest.plist
 
 Keys
 ----

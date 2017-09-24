@@ -3,9 +3,9 @@
 VPN
 ===
 
-.. pfmheader:: /_static/manifests/com.apple.vpn.managed manifest.plist
+.. contents::
 
-.. pfm:: /_static/manifests/com.apple.vpn.managed manifest.plist
+.. pfmheader:: /_static/manifests/com.apple.vpn.managed manifest.plist
 
 Keys
 ----

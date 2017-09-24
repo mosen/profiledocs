@@ -5,11 +5,12 @@ MDM
 
 This payload, when installed, will attempt to enroll the device into an MDM server.
 
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.mdm manifest.plist
-.. pfm:: /_static/manifests/com.apple.mdm manifest.plist
 
 Keys
 ----

@@ -4,11 +4,12 @@ App-to-Per-App VPN Mapping
 ==========================
 :download:`Template <../_static/examples/com.apple.vpn.managed.appmapping.mobileconfig>`
 
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.vpn.managed.appmapping manifest.plist
-.. pfm:: /_static/manifests/com.apple.vpn.managed.appmapping manifest.plist
 
 Links
 -----
