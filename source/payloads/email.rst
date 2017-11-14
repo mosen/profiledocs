@@ -2,6 +2,7 @@
 
 E-mail Account
 ==============
+:download:`Template <../_static/examples/com.apple.mail.managed.mobileconfig>`
 
 An email payload creates an email account on the device.
 

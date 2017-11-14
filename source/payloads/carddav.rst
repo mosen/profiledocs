@@ -2,6 +2,7 @@
 
 CardDAV
 =======
+:download:`Template <../_static/examples/com.apple.carddav.account.mobileconfig>`
 
 As of macOS v10.8 and later, this payload type supports obtaining CardDAVUsername and CardDAVPassword from an Identification Payload, if present.
 

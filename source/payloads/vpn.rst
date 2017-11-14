@@ -2,6 +2,7 @@
 
 VPN
 ===
+:download:`Template <../_static/examples/com.apple.vpn.managed.mobileconfig>`
 
 .. contents::
 

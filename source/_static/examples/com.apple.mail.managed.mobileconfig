@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>EmailAccountDescription</key>
+			<string></string>
+			<key>EmailAccountName</key>
+			<string></string>
+			<key>EmailAccountType</key>
+			<string>EmailTypeIMAP</string>
+			<key>EmailAddress</key>
+			<string></string>
+			<key>IncomingMailServerAuthentication</key>
+			<string>EmailAuthNone</string>
+			<key>IncomingMailServerHostName</key>
+			<string></string>
+			<key>IncomingMailServerIMAPPathPrefix</key>
+			<string></string>
+			<key>IncomingMailServerPortNumber</key>
+			<integer>993</integer>
+			<key>IncomingMailServerUseSSL</key>
+			<true/>
+			<key>IncomingMailServerUsername</key>
+			<string></string>
+			<key>IncomingPassword</key>
+			<string></string>
+			<key>OutgoingMailServerAuthentication</key>
+			<string>EmailAuthPassword</string>
+			<key>OutgoingMailServerHostName</key>
+			<string></string>
+			<key>OutgoingMailServerPortNumber</key>
+			<integer>587</integer>
+			<key>OutgoingMailServerUseSSL</key>
+			<true/>
+			<key>OutgoingMailServerUsername</key>
+			<string></string>
+			<key>OutgoingPassword</key>
+			<string></string>
+			<key>OutgoingPasswordSameAsIncomingPassword</key>
+			<false/>
+			<key>PayloadDescription</key>
+			<string>Configures Email settings</string>
+			<key>PayloadDisplayName</key>
+			<string>Email</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.mail.managed</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>com.apple.mail.managed</string>
+			<key>PayloadUUID</key>
+			<string></string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>PreventAppSheet</key>
+			<false/>
+			<key>PreventMove</key>
+			<false/>
+			<key>SMIMEEnablePerMessageSwitch</key>
+			<false/>
+			<key>SMIMEEnabled</key>
+			<false/>
+			<key>SMIMEEncryptionCertificateUUID</key>
+			<string></string>
+			<key>SMIMEEncryptionEnabled</key>
+			<true/>
+			<key>SMIMESigningCertificateUUID</key>
+			<string></string>
+			<key>SMIMESigningEnabled</key>
+			<true/>
+			<key>allowMailDrop</key>
+			<false/>
+			<key>disableMailRecentsSyncing</key>
+			<false/>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Example: Use this section to define settings for access to Email servers.</string>
+	<key>PayloadDisplayName</key>
+	<string>Example: Email</string>
+	<key>PayloadIdentifier</key>
+	<string>com.apple.mail.managed.example</string>
+	<key>PayloadOrganization</key>
+	<string>Example Organization</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>6edb8f27-81f4-4fe4-acbc-61d46992db9b</string>
+</dict>
+</plist>

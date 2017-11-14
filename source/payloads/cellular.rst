@@ -2,6 +2,7 @@
 
 Cellular
 ========
+:download:`Template <../_static/examples/com.apple.cellular.mobileconfig>`
 
 A cellular payload configures cellular network settings on the device.
 It is not supported on macOS. On iOS 7 and later, a cellular payload is designated by specifying **com.apple.cellular** as the PayloadType value.

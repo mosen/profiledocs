@@ -2,6 +2,7 @@
 
 FileVault Recovery Key Escrow
 =============================
+:download:`Template <../_static/examples/com.apple.security.FDERecoveryKeyEscrow.mobileconfig>`
 
 .. contents::
 

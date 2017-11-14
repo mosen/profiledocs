@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Dock Payload</key>
+	<dict>
+		<key>AllowDockFixupOverride</key>
+		<false/>
+		<key>MCXDockSpecialFolders</key>
+		<array>
+			<string>AddDockMCXMyApplicationsFolder</string>
+		</array>
+		<key>PayloadDescription</key>
+		<string>Dock Payload</string>
+		<key>PayloadDisplayName</key>
+		<string>Dock Payload</string>
+		<key>PayloadIdentifier</key>
+		<string>com.apple.dock</string>
+		<key>PayloadOrganization</key>
+		<string></string>
+		<key>PayloadType</key>
+		<string>com.apple.dock</string>
+		<key>PayloadUUID</key>
+		<string></string>
+		<key>PayloadVersion</key>
+		<integer>1</integer>
+		<key>autohide</key>
+		<false/>
+		<key>autohide-immutable</key>
+		<false/>
+		<key>contents-immutable</key>
+		<false/>
+		<key>largesize</key>
+		<real>128.0</real>
+		<key>launchanim</key>
+		<true/>
+		<key>launchanim-immutable</key>
+		<false/>
+		<key>magnification</key>
+		<false/>
+		<key>magnify-immutable</key>
+		<false/>
+		<key>magsize-immutable</key>
+		<false/>
+		<key>mineffect</key>
+		<string>genie</string>
+		<key>mineffect-immutable</key>
+		<false/>
+		<key>minimize-to-application</key>
+		<false/>
+		<key>minimize-to-application-immutable</key>
+		<false/>
+		<key>orientation</key>
+		<string>left</string>
+		<key>position-immutable</key>
+		<false/>
+		<key>show-process-indicators</key>
+		<false/>
+		<key>size-immutable</key>
+		<false/>
+		<key>static-apps</key>
+		<array>
+			<dict>
+				<key>tile-data</key>
+				<dict>
+					<key>file-type</key>
+					<integer>0</integer>
+					<key>label</key>
+					<string></string>
+					<key>url</key>
+					<string></string>
+				</dict>
+				<key>tile-type</key>
+				<string>file-tile</string>
+			</dict>
+		</array>
+		<key>static-only</key>
+		<false/>
+		<key>static-others</key>
+		<array>
+		</array>
+		<key>tilesize</key>
+		<real>64.0</real>
+	</dict>
+</dict>
+</plist>

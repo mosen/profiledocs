@@ -2,6 +2,7 @@
 
 Calendar Subscription
 =====================
+:download:`Template <../_static/examples/com.apple.subscribedcalendar.account.mobileconfig>`
 
 A calendar subscription payload adds a subscribed calendar to the user’s calendars list.
 The calendar subscription payload is not supported in macOS.

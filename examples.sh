@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 DESTDIR="./source/_static/examples"
 
-for filename in ./source/payloads/manifests/manual/*.plist; do
+for filename in ./source/_static/manifests/*.plist; do
     echo ${filename}
     BASENAME=$(basename "${filename}")
 
