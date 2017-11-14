@@ -13,11 +13,12 @@ as the PayloadType value.
 
 See also :ref:`payloadtype-com.apple.security.identitypreference` for setting up identity preferences.
 
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.security.certificatepreference manifest.plist
-.. pfm:: /_static/manifests/com.apple.security.certificatepreference manifest.plist
 
 Keys
 ----

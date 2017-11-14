@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>loginwindow</key>
+	<dict>
+		<key>AdminHostInfo</key>
+		<string>HostName</string>
+		<key>AllowList</key>
+		<array>
+			<string>ABCDEFAB-CDEF-ABCD-EFAB-CDEF00000050</string>
+		</array>
+		<key>DenyList</key>
+		<array>
+			<string>ABCDEFAB-CDEF-ABCD-EFAB-CDEF00000050</string>
+		</array>
+		<key>DisableConsoleAccess</key>
+		<true/>
+		<key>DisableFDEAutoLogin</key>
+		<false/>
+		<key>DisableLoginItemsSuppression</key>
+		<false/>
+		<key>DisableScreenLockImmediate</key>
+		<false/>
+		<key>HideAdminUsers</key>
+		<true/>
+		<key>HideLocalUsers</key>
+		<true/>
+		<key>HideMobileAccounts</key>
+		<true/>
+		<key>IncludeNetworkUser</key>
+		<true/>
+		<key>LogOutDisabledWhileLoggedIn</key>
+		<false/>
+		<key>LoginwindowText</key>
+		<string></string>
+		<key>PowerOffDisabledWhileLoggedIn</key>
+		<true/>
+		<key>RestartDisabled</key>
+		<true/>
+		<key>RestartDisabledWhileLoggedIn</key>
+		<true/>
+		<key>SHOWFULLNAME</key>
+		<true/>
+		<key>SHOWOTHERUSERS_MANAGED</key>
+		<false/>
+		<key>ShutDownDisabled</key>
+		<true/>
+		<key>ShutDownDisabledWhileLoggedIn</key>
+		<true/>
+		<key>SleepDisabled</key>
+		<true/>
+	</dict>
+</dict>
+</plist>

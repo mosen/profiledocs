@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>Font</key>
+			<string>Base64EncodedDataHere==</string>
+			<key>Name</key>
+			<string></string>
+			<key>PayloadDescription</key>
+			<string>Configures Font settings</string>
+			<key>PayloadDisplayName</key>
+			<string>Font</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.font</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>com.apple.font</string>
+			<key>PayloadUUID</key>
+			<string></string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Example: Use this section to define Font settings.</string>
+	<key>PayloadDisplayName</key>
+	<string>Example: Font</string>
+	<key>PayloadIdentifier</key>
+	<string>com.apple.font.example</string>
+	<key>PayloadOrganization</key>
+	<string>Example Organization</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>f17f4458-6bc9-4d16-bc50-0918e3e44c62</string>
+</dict>
+</plist>

@@ -5,8 +5,9 @@ TrackPad Settings
 
 .. warning:: Key functionality needs verification
 
+.. contents::
+
 Summary
 -------
 
-.. pfm:: /_static/manifests/com.apple.trackpad manifest.plist
 .. pfmheader:: /_static/manifests/com.apple.trackpad manifest.plist

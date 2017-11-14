@@ -94,6 +94,7 @@
 <li class="toctree-l2"><a class="reference internal" href="activedirectory.html">Active Directory</a></li>
 <li class="toctree-l2"><a class="reference internal" href="adcert.html">Active Directory Certificate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="airplay.html">AirPlay</a></li>
+<li class="toctree-l2"><a class="reference internal" href="com.apple.airplay.security.html">AirPlay Security</a></li>
 <li class="toctree-l2"><a class="reference internal" href="airprint.html">AirPrint</a></li>
 <li class="toctree-l2"><a class="reference internal" href="applock.html">App Lock</a></li>
 <li class="toctree-l2"><a class="reference internal" href="appstore.html">App Store</a></li>
@@ -166,7 +167,7 @@
 <li class="toctree-l2"><a class="reference internal" href="perappvpn.html">Per-App VPN</a></li>
 <li class="toctree-l2"><a class="reference internal" href="appmapping.html">App-to-Per-App VPN Mapping</a></li>
 <li class="toctree-l2"><a class="reference internal" href="defaults.html">iOS Defaults</a></li>
-<li class="toctree-l2"><a class="reference internal" href="parentalcontrols.html">Parental Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parentalcontrols.html">Application Access</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parental-timelimits.html">Parental Controls - Time Limits</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parental-contentfilter.html">Parental Controls - Content Filter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="profileremovalpassword.html">Profile Removal Password</a></li>
@@ -252,7 +253,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="global-http-proxy">
-<span id="payloadtype-com-apple-proxy-http-global"></span><h1>Global HTTP Proxy<a class="headerlink" href="#global-http-proxy" title="Permalink to this headline">¶</a></h1>
+<span id="payloadtype-com-apple-proxy-http-global"></span><h1><a class="toc-backref" href="#id1">Global HTTP Proxy</a><a class="headerlink" href="#global-http-proxy" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference download internal" href="../_downloads/com.apple.proxy.http.global.mobileconfig" download=""><code class="xref download docutils literal"><span class="pre">Template</span></code></a></p>
 <p>This payload allows you to specify global HTTP proxy settings.</p>
 <div class="admonition note">
@@ -260,8 +261,29 @@
 <p class="last">If the ProxyType field is set to Auto and no ProxyPACURL value is specified,
 the device uses the web proxy autodiscovery protocol (WPAD) to discover proxies.</p>
 </div>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#global-http-proxy" id="id1">Global HTTP Proxy</a><ul>
+<li><a class="reference internal" href="#summary" id="id2">Summary</a></li>
+<li><a class="reference internal" href="#keys" id="id3">Keys</a><ul>
+<li><a class="reference internal" href="#com.apple.proxy.http.global-ProxyType-auto" id="id4">ProxyType</a></li>
+<li><a class="reference internal" href="#com.apple.proxy.http.global-ProxyServer-auto" id="id5">ProxyServer</a></li>
+<li><a class="reference internal" href="#com.apple.proxy.http.global-ProxyServerPort-auto" id="id6">ProxyServerPort</a></li>
+<li><a class="reference internal" href="#com.apple.proxy.http.global-ProxyUsername-auto" id="id7">ProxyUsername</a></li>
+<li><a class="reference internal" href="#com.apple.proxy.http.global-ProxyPassword-auto" id="id8">ProxyPassword</a></li>
+<li><a class="reference internal" href="#com.apple.proxy.http.global-ProxyPACURL-auto" id="id9">ProxyPACURL</a></li>
+<li><a class="reference internal" href="#com.apple.proxy.http.global-ProxyPACFallbackAllowed-auto" id="id10">ProxyPACFallbackAllowed</a></li>
+<li><a class="reference internal" href="#com.apple.proxy.http.global-ProxyCaptiveLoginAllowed-auto" id="id11">ProxyCaptiveLoginAllowed</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#links" id="id12">Links</a></li>
+</ul>
+</li>
+</ul>
+</div>
 <div class="section" id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id2">Summary</a><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -284,78 +306,11 @@ the device uses the web proxy autodiscovery protocol (WPAD) to discover proxies.
 </tr>
 </tbody>
 </table>
-<table border="1" class="docutils">
-<colgroup>
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="43%" />
-<col width="14%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Name</th>
-<th class="head">Type</th>
-<th class="head">Title</th>
-<th class="head">Description</th>
-<th class="head">Required</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>ProxyType</td>
-<td>string</td>
-<td>Proxy Type</td>
-<td>Proxy Type</td>
-<td>always</td>
-</tr>
-<tr class="row-odd"><td>ProxyServer</td>
-<td>string</td>
-<td>Proxy Server</td>
-<td>Proxy Server</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>ProxyServerPort</td>
-<td>integer</td>
-<td>Proxy Server Port</td>
-<td>Proxy Server Port</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>ProxyUsername</td>
-<td>string</td>
-<td>Proxy Username</td>
-<td>Proxy Username</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>ProxyPassword</td>
-<td>string</td>
-<td>Proxy Password</td>
-<td>Proxy Password</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>ProxyPACURL</td>
-<td>string</td>
-<td>Proxy PAC URL</td>
-<td>Proxy PAC URL</td>
-<td>always</td>
-</tr>
-<tr class="row-even"><td>ProxyPACFallbackAllowed</td>
-<td>boolean</td>
-<td>Proxy PAC Fallback Allowed</td>
-<td>Proxy PAC Fallback Allowed</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>ProxyCaptiveLoginAllowed</td>
-<td>boolean</td>
-<td>Proxy Bypass Allowed</td>
-<td>Proxy Bypass Allowed</td>
-<td>n/a</td>
-</tr>
-</tbody>
-</table>
 </div>
 <div class="section" id="keys">
-<h2>Keys<a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id3">Keys</a><a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="com.apple.proxy.http.global-ProxyType-auto">
-<h3>ProxyType<a class="headerlink" href="#com.apple.proxy.http.global-ProxyType-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id4">ProxyType</a><a class="headerlink" href="#com.apple.proxy.http.global-ProxyType-auto" title="Permalink to this headline">¶</a></h3>
 <p>Proxy Type</p>
 <p>Proxy Type</p>
 <table border="1" class="docutils">
@@ -396,7 +351,7 @@ the device uses the web proxy autodiscovery protocol (WPAD) to discover proxies.
 </ul>
 </div>
 <div class="section" id="com.apple.proxy.http.global-ProxyServer-auto">
-<h3>ProxyServer<a class="headerlink" href="#com.apple.proxy.http.global-ProxyServer-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id5">ProxyServer</a><a class="headerlink" href="#com.apple.proxy.http.global-ProxyServer-auto" title="Permalink to this headline">¶</a></h3>
 <p>Proxy Server</p>
 <p>Proxy Server</p>
 <table border="1" class="docutils">
@@ -432,7 +387,7 @@ the device uses the web proxy autodiscovery protocol (WPAD) to discover proxies.
 </table>
 </div>
 <div class="section" id="com.apple.proxy.http.global-ProxyServerPort-auto">
-<h3>ProxyServerPort<a class="headerlink" href="#com.apple.proxy.http.global-ProxyServerPort-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id6">ProxyServerPort</a><a class="headerlink" href="#com.apple.proxy.http.global-ProxyServerPort-auto" title="Permalink to this headline">¶</a></h3>
 <p>Proxy Server Port</p>
 <p>Proxy Server Port</p>
 <table border="1" class="docutils">
@@ -468,7 +423,7 @@ the device uses the web proxy autodiscovery protocol (WPAD) to discover proxies.
 </table>
 </div>
 <div class="section" id="com.apple.proxy.http.global-ProxyUsername-auto">
-<h3>ProxyUsername<a class="headerlink" href="#com.apple.proxy.http.global-ProxyUsername-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id7">ProxyUsername</a><a class="headerlink" href="#com.apple.proxy.http.global-ProxyUsername-auto" title="Permalink to this headline">¶</a></h3>
 <p>Proxy Username</p>
 <p>Proxy Username</p>
 <table border="1" class="docutils">
@@ -504,7 +459,7 @@ the device uses the web proxy autodiscovery protocol (WPAD) to discover proxies.
 </table>
 </div>
 <div class="section" id="com.apple.proxy.http.global-ProxyPassword-auto">
-<h3>ProxyPassword<a class="headerlink" href="#com.apple.proxy.http.global-ProxyPassword-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id8">ProxyPassword</a><a class="headerlink" href="#com.apple.proxy.http.global-ProxyPassword-auto" title="Permalink to this headline">¶</a></h3>
 <p>Proxy Password</p>
 <p>Proxy Password</p>
 <table border="1" class="docutils">
@@ -540,7 +495,7 @@ the device uses the web proxy autodiscovery protocol (WPAD) to discover proxies.
 </table>
 </div>
 <div class="section" id="com.apple.proxy.http.global-ProxyPACURL-auto">
-<h3>ProxyPACURL<a class="headerlink" href="#com.apple.proxy.http.global-ProxyPACURL-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id9">ProxyPACURL</a><a class="headerlink" href="#com.apple.proxy.http.global-ProxyPACURL-auto" title="Permalink to this headline">¶</a></h3>
 <p>Proxy PAC URL</p>
 <p>Proxy PAC URL</p>
 <table border="1" class="docutils">
@@ -576,7 +531,7 @@ the device uses the web proxy autodiscovery protocol (WPAD) to discover proxies.
 </table>
 </div>
 <div class="section" id="com.apple.proxy.http.global-ProxyPACFallbackAllowed-auto">
-<h3>ProxyPACFallbackAllowed<a class="headerlink" href="#com.apple.proxy.http.global-ProxyPACFallbackAllowed-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id10">ProxyPACFallbackAllowed</a><a class="headerlink" href="#com.apple.proxy.http.global-ProxyPACFallbackAllowed-auto" title="Permalink to this headline">¶</a></h3>
 <p>Proxy PAC Fallback Allowed</p>
 <p>Proxy PAC Fallback Allowed</p>
 <table border="1" class="docutils">
@@ -612,7 +567,7 @@ the device uses the web proxy autodiscovery protocol (WPAD) to discover proxies.
 </table>
 </div>
 <div class="section" id="com.apple.proxy.http.global-ProxyCaptiveLoginAllowed-auto">
-<h3>ProxyCaptiveLoginAllowed<a class="headerlink" href="#com.apple.proxy.http.global-ProxyCaptiveLoginAllowed-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id11">ProxyCaptiveLoginAllowed</a><a class="headerlink" href="#com.apple.proxy.http.global-ProxyCaptiveLoginAllowed-auto" title="Permalink to this headline">¶</a></h3>
 <p>Proxy Bypass Allowed</p>
 <p>Proxy Bypass Allowed</p>
 <table border="1" class="docutils">
@@ -649,7 +604,7 @@ the device uses the web proxy autodiscovery protocol (WPAD) to discover proxies.
 </div>
 </div>
 <div class="section" id="links">
-<h2>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id12">Links</a><a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><a class="reference external" href="https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW34">Official Documentation</a>.</li>
 </ul>

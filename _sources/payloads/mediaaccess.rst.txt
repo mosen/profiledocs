@@ -5,11 +5,12 @@ Media Access (SystemUIServer)
 
 Control access to mount/eject external media.
 
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.systemuiserver manifest.plist
-.. pfm:: /_static/manifests/com.apple.systemuiserver manifest.plist
 
 Keys
 ----

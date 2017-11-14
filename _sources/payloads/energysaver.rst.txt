@@ -7,11 +7,12 @@ Energy Saver
 This payload describes Energy Saver / Power Management settings.
 For more information on the individual settings you can also consult the :command:`pmset(1)` tool.
 
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.MCX manifest.plist
-.. pfm:: /_static/manifests/com.apple.MCX manifest.plist
 
 Keys
 ----

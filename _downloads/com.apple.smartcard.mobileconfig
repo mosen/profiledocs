@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>PayloadDescription</key>
+			<string>SmartCard Settings</string>
+			<key>PayloadDisplayName</key>
+			<string>SmartCard Settings</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.smartcard</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>com.apple.smartcard</string>
+			<key>PayloadUUID</key>
+			<string></string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>UserPairing</key>
+			<true/>
+			<key>allowSmartCard</key>
+			<true/>
+			<key>checkCertificateTrust</key>
+			<false/>
+			<key>oneCardPerUser</key>
+			<false/>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Example: SmartCard Settings Payload</string>
+	<key>PayloadDisplayName</key>
+	<string>Example: SmartCard Settings</string>
+	<key>PayloadIdentifier</key>
+	<string>com.apple.smartcard.example</string>
+	<key>PayloadOrganization</key>
+	<string>Example Organization</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>9f50be35-0f38-4a70-8d20-025541cfac1e</string>
+</dict>
+</plist>

@@ -120,6 +120,8 @@ pfm_range_max
 
 Type
     **Integer** or **Real** maximum value (if **pfm_type** is integer or real)
+	
+There exist a typo in some manifests where this key is named: "pmf_range_max"
 
 pfm_format
 ^^^^^^^^^^
@@ -140,6 +142,16 @@ Indicates whether this key is required to be present.
 - Always means that the key is absolutely required.
 - Push means the profile will require user interaction to install if this key is omitted. If attempting to install
     automatically, the profile installation will fail.
+
+pfm_required
+^^^^^^^^^^^
+
+Type
+    Boolean or String "always"
+
+Indicates whether this key is required to be present.
+
+- Always or boolean true means that the key is absolutely required.
 
 pfm_repetition_min
 ^^^^^^^^^^^^^^^^^^

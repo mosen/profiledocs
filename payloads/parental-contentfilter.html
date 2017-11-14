@@ -94,6 +94,7 @@
 <li class="toctree-l2"><a class="reference internal" href="activedirectory.html">Active Directory</a></li>
 <li class="toctree-l2"><a class="reference internal" href="adcert.html">Active Directory Certificate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="airplay.html">AirPlay</a></li>
+<li class="toctree-l2"><a class="reference internal" href="com.apple.airplay.security.html">AirPlay Security</a></li>
 <li class="toctree-l2"><a class="reference internal" href="airprint.html">AirPrint</a></li>
 <li class="toctree-l2"><a class="reference internal" href="applock.html">App Lock</a></li>
 <li class="toctree-l2"><a class="reference internal" href="appstore.html">App Store</a></li>
@@ -151,7 +152,7 @@
 <li class="toctree-l2"><a class="reference internal" href="perappvpn.html">Per-App VPN</a></li>
 <li class="toctree-l2"><a class="reference internal" href="appmapping.html">App-to-Per-App VPN Mapping</a></li>
 <li class="toctree-l2"><a class="reference internal" href="defaults.html">iOS Defaults</a></li>
-<li class="toctree-l2"><a class="reference internal" href="parentalcontrols.html">Parental Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parentalcontrols.html">Application Access</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parental-timelimits.html">Parental Controls - Time Limits</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Parental Controls - Content Filter</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a></li>
@@ -241,7 +242,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="parental-controls-content-filter">
-<span id="payloadtype-com-apple-familycontrols-contentfilter"></span><h1>Parental Controls - Content Filter<a class="headerlink" href="#parental-controls-content-filter" title="Permalink to this headline">¶</a></h1>
+<span id="payloadtype-com-apple-familycontrols-contentfilter"></span><h1><a class="toc-backref" href="#id1">Parental Controls - Content Filter</a><a class="headerlink" href="#parental-controls-content-filter" title="Permalink to this headline">¶</a></h1>
 <p>This payload enables you to control access to sites through parental controls.
 As with the System Preference pane you can use two approaches:</p>
 <ul class="simple">
@@ -249,8 +250,18 @@ As with the System Preference pane you can use two approaches:</p>
 <li>A content filter with custom blacklist and whitelist.</li>
 </ul>
 <p><strong>whitelistEnabled</strong> and <strong>useContentFilter</strong> are mutually exclusive.</p>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#parental-controls-content-filter" id="id1">Parental Controls - Content Filter</a><ul>
+<li><a class="reference internal" href="#summary" id="id2">Summary</a></li>
+<li><a class="reference internal" href="#keys" id="id3">Keys</a></li>
+</ul>
+</li>
+</ul>
+</div>
 <div class="section" id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id2">Summary</a><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -273,64 +284,9 @@ As with the System Preference pane you can use two approaches:</p>
 </tr>
 </tbody>
 </table>
-<table border="1" class="docutils">
-<colgroup>
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="43%" />
-<col width="14%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Name</th>
-<th class="head">Type</th>
-<th class="head">Title</th>
-<th class="head">Description</th>
-<th class="head">Required</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>whitelistEnabled</td>
-<td>boolean</td>
-<td>Enable site whitelist</td>
-<td>Set to true to use the filterWhiteList and filterBlackList lists.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>siteWhitelist</td>
-<td>array</td>
-<td>Site Whitelist</td>
-<td>Required if whiteListEnabled is true. If specified, this key contains an array of dictionaries that define additional allowed sites besides those in the automated list of allowed and unallowed sites, including disallowed adult sites.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>useContentFilter</td>
-<td>boolean</td>
-<td>Use built in content filter</td>
-<td>Set to true to try to automatically filter content.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>restrictWeb</td>
-<td>boolean</td>
-<td>Limit access to websites</td>
-<td>Set to true to enable Web content filters.</td>
-<td>always</td>
-</tr>
-<tr class="row-even"><td>filterWhitelist</td>
-<td>array</td>
-<td>Content Filter Whitelist</td>
-<td>If specified and restrictWeb is true, an array of URLs designating the only allowed Websites.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>filterBlacklist</td>
-<td>array</td>
-<td>Content Filter Backlist</td>
-<td>If specified and restrictWeb is true, an array of URLs of Websites never to be allowed.</td>
-<td>n/a</td>
-</tr>
-</tbody>
-</table>
 </div>
 <div class="section" id="keys">
-<h2>Keys<a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id3">Keys</a><a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 

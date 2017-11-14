@@ -94,6 +94,7 @@
 <li class="toctree-l2"><a class="reference internal" href="activedirectory.html">Active Directory</a></li>
 <li class="toctree-l2"><a class="reference internal" href="adcert.html">Active Directory Certificate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="airplay.html">AirPlay</a></li>
+<li class="toctree-l2"><a class="reference internal" href="com.apple.airplay.security.html">AirPlay Security</a></li>
 <li class="toctree-l2"><a class="reference internal" href="airprint.html">AirPrint</a></li>
 <li class="toctree-l2"><a class="reference internal" href="applock.html">App Lock</a></li>
 <li class="toctree-l2"><a class="reference internal" href="appstore.html">App Store</a></li>
@@ -171,7 +172,7 @@
 <li class="toctree-l2"><a class="reference internal" href="perappvpn.html">Per-App VPN</a></li>
 <li class="toctree-l2"><a class="reference internal" href="appmapping.html">App-to-Per-App VPN Mapping</a></li>
 <li class="toctree-l2"><a class="reference internal" href="defaults.html">iOS Defaults</a></li>
-<li class="toctree-l2"><a class="reference internal" href="parentalcontrols.html">Parental Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parentalcontrols.html">Application Access</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parental-timelimits.html">Parental Controls - Time Limits</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parental-contentfilter.html">Parental Controls - Content Filter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="profileremovalpassword.html">Profile Removal Password</a></li>
@@ -257,13 +258,40 @@
            <div itemprop="articleBody">
             
   <div class="section" id="password-policy">
-<span id="payloadtype-com-apple-mobiledevice-passwordpolicy"></span><h1>Password Policy<a class="headerlink" href="#password-policy" title="Permalink to this headline">¶</a></h1>
+<span id="payloadtype-com-apple-mobiledevice-passwordpolicy"></span><h1><a class="toc-backref" href="#id1">Password Policy</a><a class="headerlink" href="#password-policy" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference download internal" href="../_downloads/com.apple.mobiledevice.passwordpolicy.mobileconfig" download=""><code class="xref download docutils literal"><span class="pre">Template</span></code></a></p>
 <p>On iOS, the key names generally reflect the expected functionality.</p>
 <p>On macOS, these settings will affect the password policy of a directory node.
 Additionally, some settings are applied via plist <code class="docutils literal"><span class="pre">com.apple.screensaver</span></code>. Most keys are translated into policy
 settings, see <a class="reference internal" href="../macos/pwpolicy.html#pwpolicy"><span class="std std-ref">Password Policy</span></a> for more information.</p>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#password-policy" id="id1">Password Policy</a><ul>
+<li><a class="reference internal" href="#summary" id="id2">Summary</a></li>
+<li><a class="reference internal" href="#keys" id="id3">Keys</a><ul>
+<li><a class="reference internal" href="#com.apple.mobiledevice.passwordpolicy-manualFetchingWhenRoaming-auto" id="id4">manualFetchingWhenRoaming</a></li>
+<li><a class="reference internal" href="#com.apple.mobiledevice.passwordpolicy-allowSimple-auto" id="id5">allowSimple</a></li>
+<li><a class="reference internal" href="#com.apple.mobiledevice.passwordpolicy-forcePIN-auto" id="id6">forcePIN</a></li>
+<li><a class="reference internal" href="#com.apple.mobiledevice.passwordpolicy-maxFailedAttempts-auto" id="id7">maxFailedAttempts</a></li>
+<li><a class="reference internal" href="#com.apple.mobiledevice.passwordpolicy-maxInactivity-auto" id="id8">maxInactivity</a></li>
+<li><a class="reference internal" href="#com.apple.mobiledevice.passwordpolicy-maxPINAgeInDays-auto" id="id9">maxPINAgeInDays</a></li>
+<li><a class="reference internal" href="#com.apple.mobiledevice.passwordpolicy-minComplexChars-auto" id="id10">minComplexChars</a></li>
+<li><a class="reference internal" href="#com.apple.mobiledevice.passwordpolicy-minLength-auto" id="id11">minLength</a></li>
+<li><a class="reference internal" href="#com.apple.mobiledevice.passwordpolicy-requireAlphanumeric-auto" id="id12">requireAlphanumeric</a></li>
+<li><a class="reference internal" href="#com.apple.mobiledevice.passwordpolicy-pinHistory-auto" id="id13">pinHistory</a></li>
+<li><a class="reference internal" href="#com.apple.mobiledevice.passwordpolicy-maxGracePeriod-auto" id="id14">maxGracePeriod</a></li>
+<li><a class="reference internal" href="#com.apple.mobiledevice.passwordpolicy-allowFingerprintModification-auto" id="id15">allowFingerprintModification</a></li>
+<li><a class="reference internal" href="#com.apple.mobiledevice.passwordpolicy-changeAtNextAuth-auto" id="id16">changeAtNextAuth</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#links" id="id17">Links</a></li>
+</ul>
+</li>
+</ul>
+</div>
 <div class="section" id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id2">Summary</a><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -286,109 +314,11 @@ settings, see <a class="reference internal" href="../macos/pwpolicy.html#pwpolic
 </tr>
 </tbody>
 </table>
-<table border="1" class="docutils">
-<colgroup>
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="43%" />
-<col width="14%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Name</th>
-<th class="head">Type</th>
-<th class="head">Title</th>
-<th class="head">Description</th>
-<th class="head">Required</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>manualFetchingWhenRoaming</td>
-<td>boolean</td>
-<td>Manual Fetching When Roaming</td>
-<td>Deprecated. Use allowGlobalBackgroundFetchWhenRoaming in the Restrictions payload instead.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>allowSimple</td>
-<td>boolean</td>
-<td>Allow Simple Value</td>
-<td>Permit the use of repeating, ascending, and descending character sequences</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>forcePIN</td>
-<td>boolean</td>
-<td>Require Passcode on Device</td>
-<td>Enforce the use of a passcode before using the device</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>maxFailedAttempts</td>
-<td>integer</td>
-<td>Maximum Number of Failed Attempts</td>
-<td>Number of passcode entry attempts allowed before all data on device will be erased</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>maxInactivity</td>
-<td>integer</td>
-<td>Auto-Lock</td>
-<td>The number of minutes for which the device can be idle (without being unlocked by the user) before it gets locked by the system</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>maxPINAgeInDays</td>
-<td>integer</td>
-<td>Maximum Passcode Age</td>
-<td>The number of days for which the passcode can remain unchanged</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>minComplexChars</td>
-<td>integer</td>
-<td>Minimum Number of Complex Characters</td>
-<td>Smallest number of non-alphanumeric characters allowed</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>minLength</td>
-<td>integer</td>
-<td>Minimum Passcode Length</td>
-<td>Smallest allowable number of characters in passcode</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>requireAlphanumeric</td>
-<td>boolean</td>
-<td>Require Alphabetic Value</td>
-<td>Require passcodes to contain at least one letter</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>pinHistory</td>
-<td>integer</td>
-<td>Passcode History</td>
-<td>Number of unique passcodes required between passcode reuse</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>maxGracePeriod</td>
-<td>integer</td>
-<td>Grace Period for Device Lock</td>
-<td>The maximum grace period, in minutes, to unlock the phone without entering a passcode</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>allowFingerprintModification</td>
-<td>boolean</td>
-<td>Allow modification of Touch ID</td>
-<td>Optional. Supervised only. Not supported on macOS. Allows the user to modify Touch ID. Default NO.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>changeAtNextAuth</td>
-<td>boolean</td>
-<td>Change at next authentication</td>
-<td>Optional. On macOS, setting this to true will cause a password reset to occur the next time the user tries to authenticate.
-				If this key is set in a device profile, the setting takes effect for all users, and admin authentications may fail until the admin user password is also reset.</td>
-<td>n/a</td>
-</tr>
-</tbody>
-</table>
 </div>
 <div class="section" id="keys">
-<h2>Keys<a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id3">Keys</a><a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="com.apple.mobiledevice.passwordpolicy-manualFetchingWhenRoaming-auto">
-<h3>manualFetchingWhenRoaming<a class="headerlink" href="#com.apple.mobiledevice.passwordpolicy-manualFetchingWhenRoaming-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id4">manualFetchingWhenRoaming</a><a class="headerlink" href="#com.apple.mobiledevice.passwordpolicy-manualFetchingWhenRoaming-auto" title="Permalink to this headline">¶</a></h3>
 <p>Manual Fetching When Roaming</p>
 <p>Deprecated. Use allowGlobalBackgroundFetchWhenRoaming in the Restrictions payload instead.</p>
 <table border="1" class="docutils">
@@ -424,7 +354,7 @@ settings, see <a class="reference internal" href="../macos/pwpolicy.html#pwpolic
 </table>
 </div>
 <div class="section" id="com.apple.mobiledevice.passwordpolicy-allowSimple-auto">
-<h3>allowSimple<a class="headerlink" href="#com.apple.mobiledevice.passwordpolicy-allowSimple-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id5">allowSimple</a><a class="headerlink" href="#com.apple.mobiledevice.passwordpolicy-allowSimple-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow Simple Value</p>
 <p>Permit the use of repeating, ascending, and descending character sequences</p>
 <table border="1" class="docutils">
@@ -465,7 +395,7 @@ settings, see <a class="reference internal" href="../macos/pwpolicy.html#pwpolic
 Setting this value to false is synonymous to setting minComplexChars to &#8220;1&#8221;.</p>
 </div>
 <div class="section" id="com.apple.mobiledevice.passwordpolicy-forcePIN-auto">
-<h3>forcePIN<a class="headerlink" href="#com.apple.mobiledevice.passwordpolicy-forcePIN-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id6">forcePIN</a><a class="headerlink" href="#com.apple.mobiledevice.passwordpolicy-forcePIN-auto" title="Permalink to this headline">¶</a></h3>
 <p>Require Passcode on Device</p>
 <p>Enforce the use of a passcode before using the device</p>
 <table border="1" class="docutils">
@@ -506,7 +436,7 @@ Setting this value to false is synonymous to setting minComplexChars to &#8220;1
 Simply setting this value (and not others) forces the user to enter a passcode, without imposing a length or quality.</p>
 </div>
 <div class="section" id="com.apple.mobiledevice.passwordpolicy-maxFailedAttempts-auto">
-<h3>maxFailedAttempts<a class="headerlink" href="#com.apple.mobiledevice.passwordpolicy-maxFailedAttempts-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id7">maxFailedAttempts</a><a class="headerlink" href="#com.apple.mobiledevice.passwordpolicy-maxFailedAttempts-auto" title="Permalink to this headline">¶</a></h3>
 <p>Maximum Number of Failed Attempts</p>
 <p>Number of passcode entry attempts allowed before all data on device will be erased</p>
 <table border="1" class="docutils">
@@ -547,7 +477,7 @@ Simply setting this value (and not others) forces the user to enter a passcode, 
 Once this number is exceeded, the device is locked and must be connected to its designated iTunes in order to be unlocked.</p>
 </div>
 <div class="section" id="com.apple.mobiledevice.passwordpolicy-maxInactivity-auto">
-<span id="payloadkey-com-apple-mobiledevice-passwordpolicy-maxinactivity"></span><h3>maxInactivity<a class="headerlink" href="#com.apple.mobiledevice.passwordpolicy-maxInactivity-auto" title="Permalink to this headline">¶</a></h3>
+<span id="payloadkey-com-apple-mobiledevice-passwordpolicy-maxinactivity"></span><h3><a class="toc-backref" href="#id8">maxInactivity</a><a class="headerlink" href="#com.apple.mobiledevice.passwordpolicy-maxInactivity-auto" title="Permalink to this headline">¶</a></h3>
 <p>Auto-Lock</p>
 <p>The number of minutes for which the device can be idle (without being unlocked by the user) before it gets locked by the system</p>
 <table border="1" class="docutils">
@@ -591,7 +521,7 @@ is the number of seconds until the screen is locked.</p>
 <dd>10.9+, possibly earlier</dd>
 </dl>
 <div class="section" id="com.apple.mobiledevice.passwordpolicy-maxPINAgeInDays-auto">
-<h3>maxPINAgeInDays<a class="headerlink" href="#com.apple.mobiledevice.passwordpolicy-maxPINAgeInDays-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id9">maxPINAgeInDays</a><a class="headerlink" href="#com.apple.mobiledevice.passwordpolicy-maxPINAgeInDays-auto" title="Permalink to this headline">¶</a></h3>
 <p>Maximum Passcode Age</p>
 <p>The number of days for which the passcode can remain unchanged</p>
 <table border="1" class="docutils">
@@ -641,7 +571,7 @@ After this number of days, the user is forced to change the passcode before the 
 <p class="last">Profile Manager lists the maximum PIN age for macOS to be 730 days.</p>
 </div>
 <div class="section" id="com.apple.mobiledevice.passwordpolicy-minComplexChars-auto">
-<h3>minComplexChars<a class="headerlink" href="#com.apple.mobiledevice.passwordpolicy-minComplexChars-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id10">minComplexChars</a><a class="headerlink" href="#com.apple.mobiledevice.passwordpolicy-minComplexChars-auto" title="Permalink to this headline">¶</a></h3>
 <p>Minimum Number of Complex Characters</p>
 <p>Smallest number of non-alphanumeric characters allowed</p>
 <table border="1" class="docutils">
@@ -694,7 +624,7 @@ The number 3 in the regex signifies the configured number of complex characters.
 <p class="last">Profile Manager lists the maximum as being 4</p>
 </div>
 <div class="section" id="com.apple.mobiledevice.passwordpolicy-minLength-auto">
-<h3>minLength<a class="headerlink" href="#com.apple.mobiledevice.passwordpolicy-minLength-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id11">minLength</a><a class="headerlink" href="#com.apple.mobiledevice.passwordpolicy-minLength-auto" title="Permalink to this headline">¶</a></h3>
 <p>Minimum Passcode Length</p>
 <p>Smallest allowable number of characters in passcode</p>
 <table border="1" class="docutils">
@@ -743,7 +673,7 @@ The number 4 in the regex signifies the number of characters required.</dd>
 <p class="last">Profile Manager lists the maximum as being 16</p>
 </div>
 <div class="section" id="com.apple.mobiledevice.passwordpolicy-requireAlphanumeric-auto">
-<h3>requireAlphanumeric<a class="headerlink" href="#com.apple.mobiledevice.passwordpolicy-requireAlphanumeric-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id12">requireAlphanumeric</a><a class="headerlink" href="#com.apple.mobiledevice.passwordpolicy-requireAlphanumeric-auto" title="Permalink to this headline">¶</a></h3>
 <p>Require Alphabetic Value</p>
 <p>Require passcodes to contain at least one letter</p>
 <table border="1" class="docutils">
@@ -786,7 +716,7 @@ The number 4 in the regex signifies the number of characters required.</dd>
 <dd>This translates into an account policy that contains the rule <code class="docutils literal"><span class="pre">policyAttributePassword</span> <span class="pre">matches</span> <span class="pre">'^(?=.*[0-9])(?=.*[a-zA-Z]).+'</span></code>.</dd>
 </dl>
 <div class="section" id="com.apple.mobiledevice.passwordpolicy-pinHistory-auto">
-<h3>pinHistory<a class="headerlink" href="#com.apple.mobiledevice.passwordpolicy-pinHistory-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id13">pinHistory</a><a class="headerlink" href="#com.apple.mobiledevice.passwordpolicy-pinHistory-auto" title="Permalink to this headline">¶</a></h3>
 <p>Passcode History</p>
 <p>Number of unique passcodes required between passcode reuse</p>
 <table border="1" class="docutils">
@@ -828,7 +758,7 @@ Minimum value is 1, maximum value is 50.</p>
 <dd>10.9+</dd>
 </dl>
 <div class="section" id="com.apple.mobiledevice.passwordpolicy-maxGracePeriod-auto">
-<span id="payloadkey-com-apple-mobiledevice-passwordpolicy-maxgraceperiod"></span><h3>maxGracePeriod<a class="headerlink" href="#com.apple.mobiledevice.passwordpolicy-maxGracePeriod-auto" title="Permalink to this headline">¶</a></h3>
+<span id="payloadkey-com-apple-mobiledevice-passwordpolicy-maxgraceperiod"></span><h3><a class="toc-backref" href="#id14">maxGracePeriod</a><a class="headerlink" href="#com.apple.mobiledevice.passwordpolicy-maxGracePeriod-auto" title="Permalink to this headline">¶</a></h3>
 <p>Grace Period for Device Lock</p>
 <p>The maximum grace period, in minutes, to unlock the phone without entering a passcode</p>
 <table border="1" class="docutils">
@@ -872,7 +802,7 @@ will need to unlock the account.</p>
 <dd>10.9+, Possibly earlier</dd>
 </dl>
 <div class="section" id="com.apple.mobiledevice.passwordpolicy-allowFingerprintModification-auto">
-<h3>allowFingerprintModification<a class="headerlink" href="#com.apple.mobiledevice.passwordpolicy-allowFingerprintModification-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id15">allowFingerprintModification</a><a class="headerlink" href="#com.apple.mobiledevice.passwordpolicy-allowFingerprintModification-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow modification of Touch ID</p>
 <p>Optional. Supervised only. Not supported on macOS. Allows the user to modify Touch ID. Default NO.</p>
 <table border="1" class="docutils">
@@ -908,7 +838,7 @@ will need to unlock the account.</p>
 </table>
 </div>
 <div class="section" id="com.apple.mobiledevice.passwordpolicy-changeAtNextAuth-auto">
-<h3>changeAtNextAuth<a class="headerlink" href="#com.apple.mobiledevice.passwordpolicy-changeAtNextAuth-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id16">changeAtNextAuth</a><a class="headerlink" href="#com.apple.mobiledevice.passwordpolicy-changeAtNextAuth-auto" title="Permalink to this headline">¶</a></h3>
 <p>Change at next authentication</p>
 <p>Optional. On macOS, setting this to true will cause a password reset to occur the next time the user tries to authenticate.
 				If this key is set in a device profile, the setting takes effect for all users, and admin authentications may fail until the admin user password is also reset.</p>
@@ -946,7 +876,7 @@ will need to unlock the account.</p>
 </div>
 </div>
 <div class="section" id="links">
-<h2>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id17">Links</a><a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><a class="reference external" href="https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW9">Official Documentation</a>.</li>
 </ul>

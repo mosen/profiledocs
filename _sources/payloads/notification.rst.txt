@@ -5,11 +5,12 @@ It is supported on the User Channel.
 
 This payload specifies the restriction enforced notification settings for apps, using their bundle identifiers.
 
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.notificationsettings manifest.plist
-.. pfm:: /_static/manifests/com.apple.notificationsettings manifest.plist
 
 Keys
 ----

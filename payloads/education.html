@@ -94,6 +94,7 @@
 <li class="toctree-l2"><a class="reference internal" href="activedirectory.html">Active Directory</a></li>
 <li class="toctree-l2"><a class="reference internal" href="adcert.html">Active Directory Certificate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="airplay.html">AirPlay</a></li>
+<li class="toctree-l2"><a class="reference internal" href="com.apple.airplay.security.html">AirPlay Security</a></li>
 <li class="toctree-l2"><a class="reference internal" href="airprint.html">AirPrint</a></li>
 <li class="toctree-l2"><a class="reference internal" href="applock.html">App Lock</a></li>
 <li class="toctree-l2"><a class="reference internal" href="appstore.html">App Store</a></li>
@@ -168,7 +169,7 @@
 <li class="toctree-l2"><a class="reference internal" href="perappvpn.html">Per-App VPN</a></li>
 <li class="toctree-l2"><a class="reference internal" href="appmapping.html">App-to-Per-App VPN Mapping</a></li>
 <li class="toctree-l2"><a class="reference internal" href="defaults.html">iOS Defaults</a></li>
-<li class="toctree-l2"><a class="reference internal" href="parentalcontrols.html">Parental Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parentalcontrols.html">Application Access</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parental-timelimits.html">Parental Controls - Time Limits</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parental-contentfilter.html">Parental Controls - Content Filter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="profileremovalpassword.html">Profile Removal Password</a></li>
@@ -254,7 +255,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="education-payload">
-<span id="payloadtype-com-apple-education"></span><h1>Education Payload<a class="headerlink" href="#education-payload" title="Permalink to this headline">¶</a></h1>
+<span id="payloadtype-com-apple-education"></span><h1><a class="toc-backref" href="#id1">Education Payload</a><a class="headerlink" href="#education-payload" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference download internal" href="../_downloads/com.apple.education.mobileconfig" download=""><code class="xref download docutils literal"><span class="pre">Template</span></code></a></p>
 <p>The Education Configuration Payload defines the users, groups, and departments within an educational organization.</p>
 <ul class="simple">
@@ -262,8 +263,40 @@
 <li>Leader certificates must have the common name prefix &#8220;leader&#8221; (case insensitive).</li>
 <li>Member certificates must have the common name prefix &#8220;member&#8221; (case insensitive).</li>
 </ul>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#education-payload" id="id1">Education Payload</a><ul>
+<li><a class="reference internal" href="#summary" id="id2">Summary</a></li>
+<li><a class="reference internal" href="#keys" id="id3">Keys</a><ul>
+<li><a class="reference internal" href="#com.apple.education-OrganizationUUID-auto" id="id4">OrganizationUUID</a></li>
+<li><a class="reference internal" href="#com.apple.education-OrganizationName-auto" id="id5">OrganizationName</a></li>
+<li><a class="reference internal" href="#com.apple.education-PayloadCertificateUUID-auto" id="id6">PayloadCertificateUUID</a></li>
+<li><a class="reference internal" href="#com.apple.education-LeaderPayloadCertificateAnchorUUID-auto" id="id7">LeaderPayloadCertificateAnchorUUID</a></li>
+<li><a class="reference internal" href="#com.apple.education-MemberPayloadCertificateAnchorUUID-auto" id="id8">MemberPayloadCertificateAnchorUUID</a></li>
+<li><a class="reference internal" href="#com.apple.education-UserIdentifier-auto" id="id9">UserIdentifier</a></li>
+<li><a class="reference internal" href="#com.apple.education-Departments-auto" id="id10">Departments</a></li>
+<li><a class="reference internal" href="#department-items" id="id11">Department Items</a><ul>
+<li><a class="reference internal" href="#com.apple.education-Groups-auto" id="id12">Groups</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#group-items" id="id13">Group Items</a><ul>
+<li><a class="reference internal" href="#com.apple.education-Users-auto" id="id14">Users</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#user-items" id="id15">User Items</a><ul>
+<li><a class="reference internal" href="#com.apple.education-DeviceGroups-auto" id="id16">DeviceGroups</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#links" id="id17">Links</a></li>
+</ul>
+</li>
+</ul>
+</div>
 <div class="section" id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id2">Summary</a><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -286,96 +319,11 @@
 </tr>
 </tbody>
 </table>
-<table border="1" class="docutils">
-<colgroup>
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="43%" />
-<col width="14%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Name</th>
-<th class="head">Type</th>
-<th class="head">Title</th>
-<th class="head">Description</th>
-<th class="head">Required</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>OrganizationUUID</td>
-<td>string</td>
-<td>Organization Identifier</td>
-<td>This can be any valid UUID. All teacher and student devices that need to communicate with one another must have the same OrganizationUUID, particularly if they originated from different Device Enrollment Programs.</td>
-<td>always</td>
-</tr>
-<tr class="row-odd"><td>OrganizationName</td>
-<td>string</td>
-<td>Organization Display Name</td>
-<td>This name will be shown in the iOS login screen.</td>
-<td>always</td>
-</tr>
-<tr class="row-even"><td>PayloadCertificateUUID</td>
-<td>string</td>
-<td>Client Authentication Certificate UUID</td>
-<td>The UUID of an identity certificate payload that will be used to perform client authentication with other devices.</td>
-<td>always</td>
-</tr>
-<tr class="row-odd"><td>LeaderPayloadCertificateAnchorUUID</td>
-<td>array</td>
-<td>Leader Peer Identities</td>
-<td>An array of UUIDs referring to certificate payloads that will be used to authorize leader peer certificate identities. This array must contain all certificates needed to validate the entire chain of trust. Leader certificates must have the common name prefix leader (case insensitive).</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>MemberPayloadCertificateAnchorUUID</td>
-<td>array</td>
-<td>Group Member Peer Identities</td>
-<td>An array of UUIDs referring to certificate payloads that will be used to authorize group member peer certificate identities. This array must contain all certificates needed to validate the entire chain of trust. Member certificates must have the common name prefix member (case insensitive).</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>UserIdentifier</td>
-<td>string</td>
-<td>Device User</td>
-<td>A unique string that identifies the user of this device within the organization.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>Departments</td>
-<td>array</td>
-<td>Departments</td>
-<td>Shared: An array of dictionaries that define departments that are shown in the iOS login window. Leader: An array of dictionaries that define departments that are shown in the Classroom app.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>Groups</td>
-<td>array</td>
-<td>Groups</td>
-<td>Shared: An array of dictionaries that define groups that the user can select in the login window.
-                    Leader: An array of dictionaries that define the groups that the user can control.
-                    Member: An array of dictionaries that define the groups of which the user is a member.
-                </td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>Users</td>
-<td>array</td>
-<td>Users</td>
-<td> Shared: An array of dictionaries that define the users that are shown in the iOS login window.
-                    Leader: An array of dictionaries that define users that are members of the leader’s groups.
-                    Member: An array of dictionaries that must contain the definition of the user specified in the UserIdentifier key.
-                    With one-to-one member devices, this key should include only the device user and the leader but not other class members.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>DeviceGroups</td>
-<td>array</td>
-<td>Device Groups</td>
-<td>Leader: An array of dictionaries that define the device groups to which the leader can assign devices. This key is not included in member payloads.</td>
-<td>n/a</td>
-</tr>
-</tbody>
-</table>
 </div>
 <div class="section" id="keys">
-<h2>Keys<a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id3">Keys</a><a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="com.apple.education-OrganizationUUID-auto">
-<h3>OrganizationUUID<a class="headerlink" href="#com.apple.education-OrganizationUUID-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id4">OrganizationUUID</a><a class="headerlink" href="#com.apple.education-OrganizationUUID-auto" title="Permalink to this headline">¶</a></h3>
 <p>Organization Identifier</p>
 <p>This can be any valid UUID. All teacher and student devices that need to communicate with one another must have the same OrganizationUUID, particularly if they originated from different Device Enrollment Programs.</p>
 <table border="1" class="docutils">
@@ -411,7 +359,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.education-OrganizationName-auto">
-<h3>OrganizationName<a class="headerlink" href="#com.apple.education-OrganizationName-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id5">OrganizationName</a><a class="headerlink" href="#com.apple.education-OrganizationName-auto" title="Permalink to this headline">¶</a></h3>
 <p>Organization Display Name</p>
 <p>This name will be shown in the iOS login screen.</p>
 <table border="1" class="docutils">
@@ -447,7 +395,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.education-PayloadCertificateUUID-auto">
-<h3>PayloadCertificateUUID<a class="headerlink" href="#com.apple.education-PayloadCertificateUUID-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id6">PayloadCertificateUUID</a><a class="headerlink" href="#com.apple.education-PayloadCertificateUUID-auto" title="Permalink to this headline">¶</a></h3>
 <p>Client Authentication Certificate UUID</p>
 <p>The UUID of an identity certificate payload that will be used to perform client authentication with other devices.</p>
 <table border="1" class="docutils">
@@ -483,7 +431,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.education-LeaderPayloadCertificateAnchorUUID-auto">
-<h3>LeaderPayloadCertificateAnchorUUID<a class="headerlink" href="#com.apple.education-LeaderPayloadCertificateAnchorUUID-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id7">LeaderPayloadCertificateAnchorUUID</a><a class="headerlink" href="#com.apple.education-LeaderPayloadCertificateAnchorUUID-auto" title="Permalink to this headline">¶</a></h3>
 <p>Leader Peer Identities</p>
 <p>An array of UUIDs referring to certificate payloads that will be used to authorize leader peer certificate identities. This array must contain all certificates needed to validate the entire chain of trust. Leader certificates must have the common name prefix leader (case insensitive).</p>
 <table border="1" class="docutils">
@@ -519,7 +467,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.education-MemberPayloadCertificateAnchorUUID-auto">
-<h3>MemberPayloadCertificateAnchorUUID<a class="headerlink" href="#com.apple.education-MemberPayloadCertificateAnchorUUID-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id8">MemberPayloadCertificateAnchorUUID</a><a class="headerlink" href="#com.apple.education-MemberPayloadCertificateAnchorUUID-auto" title="Permalink to this headline">¶</a></h3>
 <p>Group Member Peer Identities</p>
 <p>An array of UUIDs referring to certificate payloads that will be used to authorize group member peer certificate identities. This array must contain all certificates needed to validate the entire chain of trust. Member certificates must have the common name prefix member (case insensitive).</p>
 <table border="1" class="docutils">
@@ -555,7 +503,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.education-UserIdentifier-auto">
-<h3>UserIdentifier<a class="headerlink" href="#com.apple.education-UserIdentifier-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id9">UserIdentifier</a><a class="headerlink" href="#com.apple.education-UserIdentifier-auto" title="Permalink to this headline">¶</a></h3>
 <p>Device User</p>
 <p>A unique string that identifies the user of this device within the organization.</p>
 <table border="1" class="docutils">
@@ -591,7 +539,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.education-Departments-auto">
-<h3>Departments<a class="headerlink" href="#com.apple.education-Departments-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id10">Departments</a><a class="headerlink" href="#com.apple.education-Departments-auto" title="Permalink to this headline">¶</a></h3>
 <p>Departments</p>
 <p>Shared: An array of dictionaries that define departments that are shown in the iOS login window. Leader: An array of dictionaries that define departments that are shown in the Classroom app.</p>
 <table border="1" class="docutils">
@@ -627,7 +575,7 @@
 </table>
 </div>
 <div class="section" id="department-items">
-<h3>Department Items<a class="headerlink" href="#department-items" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id11">Department Items</a><a class="headerlink" href="#department-items" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="14%" />
@@ -660,7 +608,7 @@
 </tbody>
 </table>
 <div class="section" id="com.apple.education-Groups-auto">
-<h4>Groups<a class="headerlink" href="#com.apple.education-Groups-auto" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id12">Groups</a><a class="headerlink" href="#com.apple.education-Groups-auto" title="Permalink to this headline">¶</a></h4>
 <p>Groups</p>
 <p>Shared: An array of dictionaries that define groups that the user can select in the login window.
                     Leader: An array of dictionaries that define the groups that the user can control.
@@ -700,7 +648,7 @@
 </div>
 </div>
 <div class="section" id="group-items">
-<h3>Group Items<a class="headerlink" href="#group-items" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id13">Group Items</a><a class="headerlink" href="#group-items" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="14%" />
@@ -769,7 +717,7 @@
 </tbody>
 </table>
 <div class="section" id="com.apple.education-Users-auto">
-<h4>Users<a class="headerlink" href="#com.apple.education-Users-auto" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id14">Users</a><a class="headerlink" href="#com.apple.education-Users-auto" title="Permalink to this headline">¶</a></h4>
 <p>Users</p>
 <p> Shared: An array of dictionaries that define the users that are shown in the iOS login window.
                     Leader: An array of dictionaries that define users that are members of the leader’s groups.
@@ -809,7 +757,7 @@
 </div>
 </div>
 <div class="section" id="user-items">
-<h3>User Items<a class="headerlink" href="#user-items" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id15">User Items</a><a class="headerlink" href="#user-items" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="14%" />
@@ -878,7 +826,7 @@
 </tbody>
 </table>
 <div class="section" id="com.apple.education-DeviceGroups-auto">
-<h4>DeviceGroups<a class="headerlink" href="#com.apple.education-DeviceGroups-auto" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id16">DeviceGroups</a><a class="headerlink" href="#com.apple.education-DeviceGroups-auto" title="Permalink to this headline">¶</a></h4>
 <p>Device Groups</p>
 <p>Leader: An array of dictionaries that define the device groups to which the leader can assign devices. This key is not included in member payloads.</p>
 <table border="1" class="docutils">
@@ -953,7 +901,7 @@
 </div>
 </div>
 <div class="section" id="links">
-<h2>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id17">Links</a><a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><a class="reference external" href="https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW601">Official Documentation</a>.</li>
 </ul>

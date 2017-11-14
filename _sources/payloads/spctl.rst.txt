@@ -7,11 +7,12 @@ This payload allows control over configuring the “Allowed applications downloa
 
 This payload must only exist in a device profile. If the payload is present in a user profile, an error will be generated during installation and the profile will fail to install.
 
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.systempolicy.control manifest.plist
-.. pfm:: /_static/manifests/com.apple.systempolicy.control manifest.plist
 
 Keys
 ----

@@ -6,12 +6,12 @@ AirPlay
 
 Whitelist AirPlay destinations
 
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.airplay manifest.plist
-
-.. pfm:: /_static/manifests/com.apple.airplay manifest.plist
 
 Keys
 ----

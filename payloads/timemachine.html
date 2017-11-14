@@ -94,6 +94,7 @@
 <li class="toctree-l2"><a class="reference internal" href="activedirectory.html">Active Directory</a></li>
 <li class="toctree-l2"><a class="reference internal" href="adcert.html">Active Directory Certificate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="airplay.html">AirPlay</a></li>
+<li class="toctree-l2"><a class="reference internal" href="com.apple.airplay.security.html">AirPlay Security</a></li>
 <li class="toctree-l2"><a class="reference internal" href="airprint.html">AirPrint</a></li>
 <li class="toctree-l2"><a class="reference internal" href="applock.html">App Lock</a></li>
 <li class="toctree-l2"><a class="reference internal" href="appstore.html">App Store</a></li>
@@ -151,7 +152,7 @@
 <li class="toctree-l2"><a class="reference internal" href="perappvpn.html">Per-App VPN</a></li>
 <li class="toctree-l2"><a class="reference internal" href="appmapping.html">App-to-Per-App VPN Mapping</a></li>
 <li class="toctree-l2"><a class="reference internal" href="defaults.html">iOS Defaults</a></li>
-<li class="toctree-l2"><a class="reference internal" href="parentalcontrols.html">Parental Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parentalcontrols.html">Application Access</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parental-timelimits.html">Parental Controls - Time Limits</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parental-contentfilter.html">Parental Controls - Content Filter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="profileremovalpassword.html">Profile Removal Password</a></li>
@@ -251,11 +252,31 @@
            <div itemprop="articleBody">
             
   <div class="section" id="time-machine">
-<span id="payloadtype-com-apple-mcx-timemachine"></span><h1>Time Machine<a class="headerlink" href="#time-machine" title="Permalink to this headline">¶</a></h1>
+<span id="payloadtype-com-apple-mcx-timemachine"></span><h1><a class="toc-backref" href="#id1">Time Machine</a><a class="headerlink" href="#time-machine" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference download internal" href="../_downloads/com.apple.MCX.TimeMachine.mobileconfig" download=""><code class="xref download docutils literal"><span class="pre">Template</span></code></a></p>
 <p>Time machine settings.</p>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#time-machine" id="id1">Time Machine</a><ul>
+<li><a class="reference internal" href="#summary" id="id2">Summary</a></li>
+<li><a class="reference internal" href="#keys" id="id3">Keys</a><ul>
+<li><a class="reference internal" href="#com.apple.MCX.TimeMachine-BackupDestURL-auto" id="id4">BackupDestURL</a></li>
+<li><a class="reference internal" href="#com.apple.MCX.TimeMachine-BackupAllVolumes-auto" id="id5">BackupAllVolumes</a></li>
+<li><a class="reference internal" href="#com.apple.MCX.TimeMachine-BackupSkipSys-auto" id="id6">BackupSkipSys</a></li>
+<li><a class="reference internal" href="#com.apple.MCX.TimeMachine-AutoBackup-auto" id="id7">AutoBackup</a></li>
+<li><a class="reference internal" href="#com.apple.MCX.TimeMachine-MobileBackups-auto" id="id8">MobileBackups</a></li>
+<li><a class="reference internal" href="#com.apple.MCX.TimeMachine-BackupSizeMB-auto" id="id9">BackupSizeMB</a></li>
+<li><a class="reference internal" href="#com.apple.MCX.TimeMachine-BasePaths-auto" id="id10">BasePaths</a></li>
+<li><a class="reference internal" href="#com.apple.MCX.TimeMachine-SkipPaths-auto" id="id11">SkipPaths</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
 <div class="section" id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id2">Summary</a><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -278,78 +299,11 @@
 </tr>
 </tbody>
 </table>
-<table border="1" class="docutils">
-<colgroup>
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="43%" />
-<col width="14%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Name</th>
-<th class="head">Type</th>
-<th class="head">Title</th>
-<th class="head">Description</th>
-<th class="head">Required</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>BackupDestURL</td>
-<td>string</td>
-<td>Backup Destination</td>
-<td>Set Time Machine Backup Destination.  Set to the server address of the destination you would like to set.  Example:  afp://someserver.apple.com/Backups/.  Note that the sharepoint must be hosted on a server running Mac OS X 10.5 or higher and must have be enabled as a Time Machine backup destination.  Users must also have read/write access to the sharepoint.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>BackupAllVolumes</td>
-<td>boolean</td>
-<td>Backup All Volumes</td>
-<td>Set Time Machine to Back Up All Volumes.  Set to &#8220;True&#8221; to set the preference to backup all volumes.  Set to &#8220;False&#8221; to set the preference to backup the startup volume only.  Please note that the &#8220;Backup Destination&#8221; preference must also be set if using this preference.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>BackupSkipSys</td>
-<td>boolean</td>
-<td>Skip System Files</td>
-<td>Set Time Machine preference to skip system file backup.  Set to &#8220;True&#8221; to skip system file backup.  This setting applies to 10.5 and higher.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>AutoBackup</td>
-<td>boolean</td>
-<td>Auto Backup</td>
-<td>Set Time Machine to Back Up Automatically.  Set to &#8220;True&#8221; to set the preference.  Please note that the &#8220;Backup Destination&#8221; preference must also be set if using this preference.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>MobileBackups</td>
-<td>boolean</td>
-<td>MobileBackups</td>
-<td>Unverified - Backup mobile users?</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>BackupSizeMB</td>
-<td>integer</td>
-<td>Backup Limit</td>
-<td>Set Time Machine per client backup limit (in MB).  Set to the number of maximum MB you would like to allow for each client.  Example:  5000.  This setting applies to 10.5 and higher.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>BasePaths</td>
-<td>array</td>
-<td>BasePaths</td>
-<td>Unverified - BasePaths to back up</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>SkipPaths</td>
-<td>array</td>
-<td>SkipPaths</td>
-<td>Unverified - SkipPaths, paths to skip</td>
-<td>n/a</td>
-</tr>
-</tbody>
-</table>
 </div>
 <div class="section" id="keys">
-<h2>Keys<a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id3">Keys</a><a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="com.apple.MCX.TimeMachine-BackupDestURL-auto">
-<h3>BackupDestURL<a class="headerlink" href="#com.apple.MCX.TimeMachine-BackupDestURL-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id4">BackupDestURL</a><a class="headerlink" href="#com.apple.MCX.TimeMachine-BackupDestURL-auto" title="Permalink to this headline">¶</a></h3>
 <p>Backup Destination</p>
 <p>Set Time Machine Backup Destination.  Set to the server address of the destination you would like to set.  Example:  afp://someserver.apple.com/Backups/.  Note that the sharepoint must be hosted on a server running Mac OS X 10.5 or higher and must have be enabled as a Time Machine backup destination.  Users must also have read/write access to the sharepoint.</p>
 <table border="1" class="docutils">
@@ -385,7 +339,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.MCX.TimeMachine-BackupAllVolumes-auto">
-<h3>BackupAllVolumes<a class="headerlink" href="#com.apple.MCX.TimeMachine-BackupAllVolumes-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id5">BackupAllVolumes</a><a class="headerlink" href="#com.apple.MCX.TimeMachine-BackupAllVolumes-auto" title="Permalink to this headline">¶</a></h3>
 <p>Backup All Volumes</p>
 <p>Set Time Machine to Back Up All Volumes.  Set to &#8220;True&#8221; to set the preference to backup all volumes.  Set to &#8220;False&#8221; to set the preference to backup the startup volume only.  Please note that the &#8220;Backup Destination&#8221; preference must also be set if using this preference.</p>
 <table border="1" class="docutils">
@@ -421,7 +375,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.MCX.TimeMachine-BackupSkipSys-auto">
-<h3>BackupSkipSys<a class="headerlink" href="#com.apple.MCX.TimeMachine-BackupSkipSys-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id6">BackupSkipSys</a><a class="headerlink" href="#com.apple.MCX.TimeMachine-BackupSkipSys-auto" title="Permalink to this headline">¶</a></h3>
 <p>Skip System Files</p>
 <p>Set Time Machine preference to skip system file backup.  Set to &#8220;True&#8221; to skip system file backup.  This setting applies to 10.5 and higher.</p>
 <table border="1" class="docutils">
@@ -457,7 +411,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.MCX.TimeMachine-AutoBackup-auto">
-<h3>AutoBackup<a class="headerlink" href="#com.apple.MCX.TimeMachine-AutoBackup-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id7">AutoBackup</a><a class="headerlink" href="#com.apple.MCX.TimeMachine-AutoBackup-auto" title="Permalink to this headline">¶</a></h3>
 <p>Auto Backup</p>
 <p>Set Time Machine to Back Up Automatically.  Set to &#8220;True&#8221; to set the preference.  Please note that the &#8220;Backup Destination&#8221; preference must also be set if using this preference.</p>
 <table border="1" class="docutils">
@@ -493,7 +447,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.MCX.TimeMachine-MobileBackups-auto">
-<h3>MobileBackups<a class="headerlink" href="#com.apple.MCX.TimeMachine-MobileBackups-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id8">MobileBackups</a><a class="headerlink" href="#com.apple.MCX.TimeMachine-MobileBackups-auto" title="Permalink to this headline">¶</a></h3>
 <p>MobileBackups</p>
 <p>Unverified - Backup mobile users?</p>
 <table border="1" class="docutils">
@@ -529,7 +483,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.MCX.TimeMachine-BackupSizeMB-auto">
-<h3>BackupSizeMB<a class="headerlink" href="#com.apple.MCX.TimeMachine-BackupSizeMB-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id9">BackupSizeMB</a><a class="headerlink" href="#com.apple.MCX.TimeMachine-BackupSizeMB-auto" title="Permalink to this headline">¶</a></h3>
 <p>Backup Limit</p>
 <p>Set Time Machine per client backup limit (in MB).  Set to the number of maximum MB you would like to allow for each client.  Example:  5000.  This setting applies to 10.5 and higher.</p>
 <table border="1" class="docutils">
@@ -565,7 +519,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.MCX.TimeMachine-BasePaths-auto">
-<h3>BasePaths<a class="headerlink" href="#com.apple.MCX.TimeMachine-BasePaths-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id10">BasePaths</a><a class="headerlink" href="#com.apple.MCX.TimeMachine-BasePaths-auto" title="Permalink to this headline">¶</a></h3>
 <p>BasePaths</p>
 <p>Unverified - BasePaths to back up</p>
 <table border="1" class="docutils">
@@ -601,7 +555,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.MCX.TimeMachine-SkipPaths-auto">
-<h3>SkipPaths<a class="headerlink" href="#com.apple.MCX.TimeMachine-SkipPaths-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id11">SkipPaths</a><a class="headerlink" href="#com.apple.MCX.TimeMachine-SkipPaths-auto" title="Permalink to this headline">¶</a></h3>
 <p>SkipPaths</p>
 <p>Unverified - SkipPaths, paths to skip</p>
 <table border="1" class="docutils">

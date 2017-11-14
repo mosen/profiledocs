@@ -114,6 +114,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="airplay.html">AirPlay</a></li>
+<li class="toctree-l2"><a class="reference internal" href="com.apple.airplay.security.html">AirPlay Security</a></li>
 <li class="toctree-l2"><a class="reference internal" href="airprint.html">AirPrint</a></li>
 <li class="toctree-l2"><a class="reference internal" href="applock.html">App Lock</a></li>
 <li class="toctree-l2"><a class="reference internal" href="appstore.html">App Store</a></li>
@@ -171,7 +172,7 @@
 <li class="toctree-l2"><a class="reference internal" href="perappvpn.html">Per-App VPN</a></li>
 <li class="toctree-l2"><a class="reference internal" href="appmapping.html">App-to-Per-App VPN Mapping</a></li>
 <li class="toctree-l2"><a class="reference internal" href="defaults.html">iOS Defaults</a></li>
-<li class="toctree-l2"><a class="reference internal" href="parentalcontrols.html">Parental Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parentalcontrols.html">Application Access</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parental-timelimits.html">Parental Controls - Time Limits</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parental-contentfilter.html">Parental Controls - Content Filter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="profileremovalpassword.html">Profile Removal Password</a></li>
@@ -257,12 +258,38 @@
            <div itemprop="articleBody">
             
   <div class="section" id="active-directory-certificate">
-<span id="payloadtype-com-apple-adcertificate-managed"></span><h1>Active Directory Certificate<a class="headerlink" href="#active-directory-certificate" title="Permalink to this headline">¶</a></h1>
+<span id="payloadtype-com-apple-adcertificate-managed"></span><h1><a class="toc-backref" href="#id1">Active Directory Certificate</a><a class="headerlink" href="#active-directory-certificate" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference download internal" href="../_downloads/com.apple.ADCertificate.managed.mobileconfig" download=""><code class="xref download docutils literal"><span class="pre">Template</span></code></a></p>
 <p>You can request a certificate from a Microsoft Certificate Authority (CA) using DCE/RPC and the
 Active Directory Certificate profile payload instructions detailed at <a class="reference external" href="https://support.apple.com/kb/HT5357">https://support.apple.com/kb/HT5357</a>.</p>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#active-directory-certificate" id="id1">Active Directory Certificate</a><ul>
+<li><a class="reference internal" href="#summary" id="id2">Summary</a></li>
+<li><a class="reference internal" href="#keys" id="id3">Keys</a><ul>
+<li><a class="reference internal" href="#com.apple.ADCertificate.managed-Description-auto" id="id4">Description</a></li>
+<li><a class="reference internal" href="#com.apple.ADCertificate.managed-CertServer-auto" id="id5">CertServer</a></li>
+<li><a class="reference internal" href="#com.apple.ADCertificate.managed-CertTemplate-auto" id="id6">CertTemplate</a></li>
+<li><a class="reference internal" href="#com.apple.ADCertificate.managed-CertificateAuthority-auto" id="id7">CertificateAuthority</a></li>
+<li><a class="reference internal" href="#com.apple.ADCertificate.managed-CertificateAcquisitionMechanism-auto" id="id8">CertificateAcquisitionMechanism</a></li>
+<li><a class="reference internal" href="#com.apple.ADCertificate.managed-CertificateRenewalTimeInterval-auto" id="id9">CertificateRenewalTimeInterval</a></li>
+<li><a class="reference internal" href="#com.apple.ADCertificate.managed-Keysize-auto" id="id10">Keysize</a></li>
+<li><a class="reference internal" href="#com.apple.ADCertificate.managed-UserName-auto" id="id11">UserName</a></li>
+<li><a class="reference internal" href="#com.apple.ADCertificate.managed-Password-auto" id="id12">Password</a></li>
+<li><a class="reference internal" href="#com.apple.ADCertificate.managed-PromptForCredentials-auto" id="id13">PromptForCredentials</a></li>
+<li><a class="reference internal" href="#com.apple.ADCertificate.managed-AllowAllAppsAccess-auto" id="id14">AllowAllAppsAccess</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#links" id="id15">Links</a></li>
+<li><a class="reference internal" href="#troubleshooting" id="id16">Troubleshooting</a></li>
+<li><a class="reference internal" href="#uninstall-behaviour" id="id17">Uninstall Behaviour</a></li>
+</ul>
+</li>
+</ul>
+</div>
 <div class="section" id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id2">Summary</a><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -285,102 +312,11 @@ Active Directory Certificate profile payload instructions detailed at <a class="
 </tr>
 </tbody>
 </table>
-<table border="1" class="docutils">
-<colgroup>
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="43%" />
-<col width="14%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Name</th>
-<th class="head">Type</th>
-<th class="head">Title</th>
-<th class="head">Description</th>
-<th class="head">Required</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>Description</td>
-<td>string</td>
-<td>Description</td>
-<td>The description of the certificate request as shown in the certificate selector of other payloads such as VPN and Network</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>CertServer</td>
-<td>string</td>
-<td>Certificate Server</td>
-<td>Fully qualified host name of the Active Directory issuing CA.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>CertTemplate</td>
-<td>string</td>
-<td>Certificate Template</td>
-<td>Template Name as it appears in the General tab of the template’s object in the Certificate Templates’ Microsoft Management Console snap-in component.</td>
-<td>always</td>
-</tr>
-<tr class="row-odd"><td>CertificateAuthority</td>
-<td>string</td>
-<td>Certificate Authority</td>
-<td>Name of the CA. This value is determined from the Common Name (CN) of the Active Directory entry: CN=(your CA name), CN=&#8217;Certification Authorities&#8217;, CN=&#8217;Public Key Services&#8217;, CN=&#8217;Services&#8217;, or CN=&#8217;Configuration&#8217;, (your base Domain Name).</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>CertificateAcquisitionMechanism</td>
-<td>string</td>
-<td>Acquisition Mechanism</td>
-<td>Most commonly RPC. If using Web enrollment, HTTP.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>CertificateRenewalTimeInterval</td>
-<td>integer</td>
-<td>Certificate Expiration Notification Threshold</td>
-<td>The number of days before the certificate expires at which to start showing the expiration notification</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>Keysize</td>
-<td>integer</td>
-<td>RSA Key Size</td>
-<td>The RSA key size for the Certificate Signing Request (CSR).</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>UserName</td>
-<td>string</td>
-<td>User name</td>
-<td>The user name with which to authenticate to the certificate server</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>Password</td>
-<td>string</td>
-<td>Password</td>
-<td>The password with which to authenticate to the certificate server</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>PromptForCredentials</td>
-<td>boolean</td>
-<td>Prompt for credentials</td>
-<td>Prompt the user for credentials.  This setting is not supported for pushed profiles</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>AllowAllAppsAccess</td>
-<td>boolean</td>
-<td>Allow access to all apps</td>
-<td>Allow all apps to access the certificate in the keychain</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>KeyIsExtractable</td>
-<td>boolean</td>
-<td>Allow export from keychain</td>
-<td>Allow admin to export private key from the keychain</td>
-<td>n/a</td>
-</tr>
-</tbody>
-</table>
 </div>
 <div class="section" id="keys">
-<h2>Keys<a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id3">Keys</a><a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="com.apple.ADCertificate.managed-Description-auto">
-<h3>Description<a class="headerlink" href="#com.apple.ADCertificate.managed-Description-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id4">Description</a><a class="headerlink" href="#com.apple.ADCertificate.managed-Description-auto" title="Permalink to this headline">¶</a></h3>
 <p>Description</p>
 <p>The description of the certificate request as shown in the certificate selector of other payloads such as VPN and Network</p>
 <table border="1" class="docutils">
@@ -416,7 +352,7 @@ Active Directory Certificate profile payload instructions detailed at <a class="
 </table>
 </div>
 <div class="section" id="com.apple.ADCertificate.managed-CertServer-auto">
-<h3>CertServer<a class="headerlink" href="#com.apple.ADCertificate.managed-CertServer-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id5">CertServer</a><a class="headerlink" href="#com.apple.ADCertificate.managed-CertServer-auto" title="Permalink to this headline">¶</a></h3>
 <p>Certificate Server</p>
 <p>Fully qualified host name of the Active Directory issuing CA.</p>
 <table border="1" class="docutils">
@@ -452,7 +388,7 @@ Active Directory Certificate profile payload instructions detailed at <a class="
 </table>
 </div>
 <div class="section" id="com.apple.ADCertificate.managed-CertTemplate-auto">
-<h3>CertTemplate<a class="headerlink" href="#com.apple.ADCertificate.managed-CertTemplate-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id6">CertTemplate</a><a class="headerlink" href="#com.apple.ADCertificate.managed-CertTemplate-auto" title="Permalink to this headline">¶</a></h3>
 <p>Certificate Template</p>
 <p>Template Name as it appears in the General tab of the template’s object in the Certificate Templates’ Microsoft Management Console snap-in component.</p>
 <table border="1" class="docutils">
@@ -488,7 +424,7 @@ Active Directory Certificate profile payload instructions detailed at <a class="
 </table>
 </div>
 <div class="section" id="com.apple.ADCertificate.managed-CertificateAuthority-auto">
-<h3>CertificateAuthority<a class="headerlink" href="#com.apple.ADCertificate.managed-CertificateAuthority-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id7">CertificateAuthority</a><a class="headerlink" href="#com.apple.ADCertificate.managed-CertificateAuthority-auto" title="Permalink to this headline">¶</a></h3>
 <p>Certificate Authority</p>
 <p>Name of the CA. This value is determined from the Common Name (CN) of the Active Directory entry: CN=(your CA name), CN=&#8217;Certification Authorities&#8217;, CN=&#8217;Public Key Services&#8217;, CN=&#8217;Services&#8217;, or CN=&#8217;Configuration&#8217;, (your base Domain Name).</p>
 <table border="1" class="docutils">
@@ -524,7 +460,7 @@ Active Directory Certificate profile payload instructions detailed at <a class="
 </table>
 </div>
 <div class="section" id="com.apple.ADCertificate.managed-CertificateAcquisitionMechanism-auto">
-<h3>CertificateAcquisitionMechanism<a class="headerlink" href="#com.apple.ADCertificate.managed-CertificateAcquisitionMechanism-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id8">CertificateAcquisitionMechanism</a><a class="headerlink" href="#com.apple.ADCertificate.managed-CertificateAcquisitionMechanism-auto" title="Permalink to this headline">¶</a></h3>
 <p>Acquisition Mechanism</p>
 <p>Most commonly RPC. If using Web enrollment, HTTP.</p>
 <table border="1" class="docutils">
@@ -565,7 +501,7 @@ Active Directory Certificate profile payload instructions detailed at <a class="
 </ul>
 </div>
 <div class="section" id="com.apple.ADCertificate.managed-CertificateRenewalTimeInterval-auto">
-<h3>CertificateRenewalTimeInterval<a class="headerlink" href="#com.apple.ADCertificate.managed-CertificateRenewalTimeInterval-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id9">CertificateRenewalTimeInterval</a><a class="headerlink" href="#com.apple.ADCertificate.managed-CertificateRenewalTimeInterval-auto" title="Permalink to this headline">¶</a></h3>
 <p>Certificate Expiration Notification Threshold</p>
 <p>The number of days before the certificate expires at which to start showing the expiration notification</p>
 <table border="1" class="docutils">
@@ -601,7 +537,7 @@ Active Directory Certificate profile payload instructions detailed at <a class="
 </table>
 </div>
 <div class="section" id="com.apple.ADCertificate.managed-Keysize-auto">
-<h3>Keysize<a class="headerlink" href="#com.apple.ADCertificate.managed-Keysize-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id10">Keysize</a><a class="headerlink" href="#com.apple.ADCertificate.managed-Keysize-auto" title="Permalink to this headline">¶</a></h3>
 <p>RSA Key Size</p>
 <p>The RSA key size for the Certificate Signing Request (CSR).</p>
 <table border="1" class="docutils">
@@ -637,7 +573,7 @@ Active Directory Certificate profile payload instructions detailed at <a class="
 </table>
 </div>
 <div class="section" id="com.apple.ADCertificate.managed-UserName-auto">
-<h3>UserName<a class="headerlink" href="#com.apple.ADCertificate.managed-UserName-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id11">UserName</a><a class="headerlink" href="#com.apple.ADCertificate.managed-UserName-auto" title="Permalink to this headline">¶</a></h3>
 <p>User name</p>
 <p>The user name with which to authenticate to the certificate server</p>
 <table border="1" class="docutils">
@@ -673,7 +609,7 @@ Active Directory Certificate profile payload instructions detailed at <a class="
 </table>
 </div>
 <div class="section" id="com.apple.ADCertificate.managed-Password-auto">
-<h3>Password<a class="headerlink" href="#com.apple.ADCertificate.managed-Password-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id12">Password</a><a class="headerlink" href="#com.apple.ADCertificate.managed-Password-auto" title="Permalink to this headline">¶</a></h3>
 <p>Password</p>
 <p>The password with which to authenticate to the certificate server</p>
 <table border="1" class="docutils">
@@ -709,7 +645,7 @@ Active Directory Certificate profile payload instructions detailed at <a class="
 </table>
 </div>
 <div class="section" id="com.apple.ADCertificate.managed-PromptForCredentials-auto">
-<h3>PromptForCredentials<a class="headerlink" href="#com.apple.ADCertificate.managed-PromptForCredentials-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id13">PromptForCredentials</a><a class="headerlink" href="#com.apple.ADCertificate.managed-PromptForCredentials-auto" title="Permalink to this headline">¶</a></h3>
 <p>Prompt for credentials</p>
 <p>Prompt the user for credentials.  This setting is not supported for pushed profiles</p>
 <table border="1" class="docutils">
@@ -749,7 +685,7 @@ Active Directory Certificate profile payload instructions detailed at <a class="
 <p class="last">PromptForCredentials seems to have no effect on manually installed profiles. They still ask for credentials.</p>
 </div>
 <div class="section" id="com.apple.ADCertificate.managed-AllowAllAppsAccess-auto">
-<h3>AllowAllAppsAccess<a class="headerlink" href="#com.apple.ADCertificate.managed-AllowAllAppsAccess-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id14">AllowAllAppsAccess</a><a class="headerlink" href="#com.apple.ADCertificate.managed-AllowAllAppsAccess-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow access to all apps</p>
 <p>Allow all apps to access the certificate in the keychain</p>
 <table border="1" class="docutils">
@@ -786,14 +722,14 @@ Active Directory Certificate profile payload instructions detailed at <a class="
 </div>
 </div>
 <div class="section" id="links">
-<h2>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id15">Links</a><a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><a class="reference external" href="https://macmule.com/2015/09/06/osx-ad-certificate-requests-some-tips/">macmules blog: OSX &amp; AD CERTIFICATE REQUESTS, SOME TIPS</a>.</li>
 <li><a class="reference external" href="https://support.apple.com/en-us/HT204446">Certificate Renewal Behaviour</a>.</li>
 </ul>
 </div>
 <div class="section" id="troubleshooting">
-<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id16">Troubleshooting</a><a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
 <p class="last">As of approx 10.12.4 you can no longer select a transport. And you will not be able to install the payload
@@ -805,7 +741,7 @@ computer account. Normally the certificate policy will deny this, so check that 
 </ul>
 </div>
 <div class="section" id="uninstall-behaviour">
-<h2>Uninstall Behaviour<a class="headerlink" href="#uninstall-behaviour" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id17">Uninstall Behaviour</a><a class="headerlink" href="#uninstall-behaviour" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>The certificate is not revoked upon uninstallation.</li>
 <li>The certificate is not removed from keychain, but the private key IS removed. The private key is named after the issuing host.</li>

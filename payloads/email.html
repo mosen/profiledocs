@@ -94,6 +94,7 @@
 <li class="toctree-l2"><a class="reference internal" href="activedirectory.html">Active Directory</a></li>
 <li class="toctree-l2"><a class="reference internal" href="adcert.html">Active Directory Certificate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="airplay.html">AirPlay</a></li>
+<li class="toctree-l2"><a class="reference internal" href="com.apple.airplay.security.html">AirPlay Security</a></li>
 <li class="toctree-l2"><a class="reference internal" href="airprint.html">AirPrint</a></li>
 <li class="toctree-l2"><a class="reference internal" href="applock.html">App Lock</a></li>
 <li class="toctree-l2"><a class="reference internal" href="appstore.html">App Store</a></li>
@@ -184,7 +185,7 @@
 <li class="toctree-l2"><a class="reference internal" href="perappvpn.html">Per-App VPN</a></li>
 <li class="toctree-l2"><a class="reference internal" href="appmapping.html">App-to-Per-App VPN Mapping</a></li>
 <li class="toctree-l2"><a class="reference internal" href="defaults.html">iOS Defaults</a></li>
-<li class="toctree-l2"><a class="reference internal" href="parentalcontrols.html">Parental Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parentalcontrols.html">Application Access</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parental-timelimits.html">Parental Controls - Time Limits</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parental-contentfilter.html">Parental Controls - Content Filter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="profileremovalpassword.html">Profile Removal Password</a></li>
@@ -270,10 +271,50 @@
            <div itemprop="articleBody">
             
   <div class="section" id="e-mail-account">
-<span id="payloadtype-com-apple-mail-managed"></span><h1>E-mail Account<a class="headerlink" href="#e-mail-account" title="Permalink to this headline">¶</a></h1>
+<span id="payloadtype-com-apple-mail-managed"></span><h1><a class="toc-backref" href="#id1">E-mail Account</a><a class="headerlink" href="#e-mail-account" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference download internal" href="../_downloads/com.apple.mail.managed.mobileconfig" download=""><code class="xref download docutils literal"><span class="pre">Template</span></code></a></p>
 <p>An email payload creates an email account on the device.</p>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#e-mail-account" id="id1">E-mail Account</a><ul>
+<li><a class="reference internal" href="#summary" id="id2">Summary</a></li>
+<li><a class="reference internal" href="#keys" id="id3">Keys</a><ul>
+<li><a class="reference internal" href="#com.apple.mail.managed-EmailAccountDescription-auto" id="id4">EmailAccountDescription</a></li>
+<li><a class="reference internal" href="#com.apple.mail.managed-EmailAccountType-auto" id="id5">EmailAccountType</a></li>
+<li><a class="reference internal" href="#com.apple.mail.managed-EmailAccountName-auto" id="id6">EmailAccountName</a></li>
+<li><a class="reference internal" href="#com.apple.mail.managed-EmailAddress-auto" id="id7">EmailAddress</a></li>
+<li><a class="reference internal" href="#com.apple.mail.managed-disableMailRecentsSyncing-auto" id="id8">disableMailRecentsSyncing</a></li>
+<li><a class="reference internal" href="#com.apple.mail.managed-allowMailDrop-auto" id="id9">allowMailDrop</a></li>
+<li><a class="reference internal" href="#com.apple.mail.managed-PreventMove-auto" id="id10">PreventMove</a></li>
+<li><a class="reference internal" href="#com.apple.mail.managed-PreventAppSheet-auto" id="id11">PreventAppSheet</a></li>
+<li><a class="reference internal" href="#com.apple.mail.managed-SMIMEEnabled-auto" id="id12">SMIMEEnabled</a></li>
+<li><a class="reference internal" href="#com.apple.mail.managed-SMIMEEnablePerMessageSwitch-auto" id="id13">SMIMEEnablePerMessageSwitch</a></li>
+<li><a class="reference internal" href="#com.apple.mail.managed-SMIMESigningCertificateUUID-auto" id="id14">SMIMESigningCertificateUUID</a></li>
+<li><a class="reference internal" href="#com.apple.mail.managed-SMIMEEncryptionCertificateUUID-auto" id="id15">SMIMEEncryptionCertificateUUID</a></li>
+<li><a class="reference internal" href="#com.apple.mail.managed-IncomingMailServerAuthentication-auto" id="id16">IncomingMailServerAuthentication</a></li>
+<li><a class="reference internal" href="#com.apple.mail.managed-IncomingMailServerHostName-auto" id="id17">IncomingMailServerHostName</a></li>
+<li><a class="reference internal" href="#com.apple.mail.managed-IncomingMailServerIMAPPathPrefix-auto" id="id18">IncomingMailServerIMAPPathPrefix</a></li>
+<li><a class="reference internal" href="#com.apple.mail.managed-IncomingMailServerPortNumber-auto" id="id19">IncomingMailServerPortNumber</a></li>
+<li><a class="reference internal" href="#com.apple.mail.managed-IncomingMailServerUseSSL-auto" id="id20">IncomingMailServerUseSSL</a></li>
+<li><a class="reference internal" href="#com.apple.mail.managed-IncomingMailServerUsername-auto" id="id21">IncomingMailServerUsername</a></li>
+<li><a class="reference internal" href="#com.apple.mail.managed-IncomingPassword-auto" id="id22">IncomingPassword</a></li>
+<li><a class="reference internal" href="#com.apple.mail.managed-OutgoingPassword-auto" id="id23">OutgoingPassword</a></li>
+<li><a class="reference internal" href="#com.apple.mail.managed-OutgoingPasswordSameAsIncomingPassword-auto" id="id24">OutgoingPasswordSameAsIncomingPassword</a></li>
+<li><a class="reference internal" href="#com.apple.mail.managed-OutgoingMailServerAuthentication-auto" id="id25">OutgoingMailServerAuthentication</a></li>
+<li><a class="reference internal" href="#com.apple.mail.managed-OutgoingMailServerHostName-auto" id="id26">OutgoingMailServerHostName</a></li>
+<li><a class="reference internal" href="#com.apple.mail.managed-OutgoingMailServerPortNumber-auto" id="id27">OutgoingMailServerPortNumber</a></li>
+<li><a class="reference internal" href="#com.apple.mail.managed-OutgoingMailServerUseSSL-auto" id="id28">OutgoingMailServerUseSSL</a></li>
+<li><a class="reference internal" href="#com.apple.mail.managed-OutgoingMailServerUsername-auto" id="id29">OutgoingMailServerUsername</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#links" id="id30">Links</a></li>
+</ul>
+</li>
+</ul>
+</div>
 <div class="section" id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id2">Summary</a><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -296,198 +337,11 @@
 </tr>
 </tbody>
 </table>
-<table border="1" class="docutils">
-<colgroup>
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="43%" />
-<col width="14%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Name</th>
-<th class="head">Type</th>
-<th class="head">Title</th>
-<th class="head">Description</th>
-<th class="head">Required</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>EmailAccountDescription</td>
-<td>string</td>
-<td>Account Description</td>
-<td>The display name of the account (e.g. &#8220;Company Mail Account&#8221;)</td>
-<td>always</td>
-</tr>
-<tr class="row-odd"><td>EmailAccountType</td>
-<td>string</td>
-<td>Account Type</td>
-<td>The protocol for accessing the email account</td>
-<td>always</td>
-</tr>
-<tr class="row-even"><td>EmailAccountName</td>
-<td>string</td>
-<td>Account Name</td>
-<td>The display name of the user (e.g. &#8220;John Appleseed&#8221;)</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>EmailAddress</td>
-<td>string</td>
-<td>Email Address</td>
-<td>The address of the account (e.g. &#8220;john&#64;company.com&#8221;)</td>
-<td>push</td>
-</tr>
-<tr class="row-even"><td>disableMailRecentsSyncing</td>
-<td>boolean</td>
-<td>Disable Mail Recents Syncing</td>
-<td>If set to true, this account is excluded from address Recents syncing.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>allowMailDrop</td>
-<td>boolean</td>
-<td>Allow Mail Drop</td>
-<td>If set to true, this account is allowed to use Mail Drop.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>PreventMove</td>
-<td>boolean</td>
-<td>Prevent Move</td>
-<td> If set to true, messages may not be moved out of this email account into another account.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>PreventAppSheet</td>
-<td>boolean</td>
-<td>Prevent App Sheet</td>
-<td>If set to true, this account will not be available for sending mail in third party applications</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>SMIMEEnabled</td>
-<td>boolean</td>
-<td>S/MIME Enabled</td>
-<td>If set to true, this account will support S/MIME</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>SMIMESigningEnabled</td>
-<td>boolean</td>
-<td>S/MIME Signing Enabled</td>
-<td>Optional. Default true. If set to true, S/MIME signing is enabled for this account.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>SMIMEEnablePerMessageSwitch</td>
-<td>boolean</td>
-<td>S/MIME Enable Per-Message Switch</td>
-<td>If set to true, enable the per-message encryption switch.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>SMIMESigningCertificateUUID</td>
-<td>string</td>
-<td>S/MIME Signing Certificate</td>
-<td>The PayloadUUID of the identity certificate used to sign messages sent from this account.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>SMIMEEncryptionEnabled</td>
-<td>boolean</td>
-<td>S/MIME Encryption Enabled</td>
-<td>Optional. Default false. If set to true, S/MIME encryption is on by default for this account.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>SMIMEEncryptionCertificateUUID</td>
-<td>string</td>
-<td>S/MIME Encryption Certificate</td>
-<td>The PayloadUUID of the identity certificate used to decrypt messages coming into this account.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>IncomingMailServerAuthentication</td>
-<td>string</td>
-<td>Incoming Mail Server Authentification</td>
-<td>The authentication method for the incoming mail server</td>
-<td>always</td>
-</tr>
-<tr class="row-odd"><td>IncomingMailServerHostName</td>
-<td>string</td>
-<td>Mail Server</td>
-<td>Hostname or IP Address</td>
-<td>always</td>
-</tr>
-<tr class="row-even"><td>IncomingMailServerIMAPPathPrefix</td>
-<td>string</td>
-<td>Path Prefix</td>
-<td>Path prefix for IMAP mail server</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>IncomingMailServerPortNumber</td>
-<td>integer</td>
-<td>Port</td>
-<td>Port number for incoming mail</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>IncomingMailServerUseSSL</td>
-<td>boolean</td>
-<td>Use SSL</td>
-<td>Retrieve incoming mail through Secure Socket Layer</td>
-<td>always</td>
-</tr>
-<tr class="row-odd"><td>IncomingMailServerUsername</td>
-<td>string</td>
-<td>Username</td>
-<td>The username used to connect to the server for incoming mail</td>
-<td>push</td>
-</tr>
-<tr class="row-even"><td>IncomingPassword</td>
-<td>string</td>
-<td>Password</td>
-<td>The password for the incoming mail server</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>OutgoingPassword</td>
-<td>string</td>
-<td>Password</td>
-<td>The password for the outgoing mail server</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>OutgoingPasswordSameAsIncomingPassword</td>
-<td>boolean</td>
-<td>Outgoing Password Same As Incoming</td>
-<td>SMTP authentication uses the same password as POP/IMAP</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>OutgoingMailServerAuthentication</td>
-<td>string</td>
-<td>Authentication Type</td>
-<td>The authentication method for the outgoing mail server</td>
-<td>always</td>
-</tr>
-<tr class="row-even"><td>OutgoingMailServerHostName</td>
-<td>string</td>
-<td>Mail Server</td>
-<td>Hostname or IP address for outgoing mail</td>
-<td>always</td>
-</tr>
-<tr class="row-odd"><td>OutgoingMailServerPortNumber</td>
-<td>integer</td>
-<td>Port</td>
-<td>The port number for outgoing mail</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>OutgoingMailServerUseSSL</td>
-<td>boolean</td>
-<td>Use SSL</td>
-<td>Send outgoing mail through Secure Socket Layer</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>OutgoingMailServerUsername</td>
-<td>string</td>
-<td>Username</td>
-<td>The username used to connect to the server for outgoing mail</td>
-<td>push</td>
-</tr>
-</tbody>
-</table>
 </div>
 <div class="section" id="keys">
-<h2>Keys<a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id3">Keys</a><a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="com.apple.mail.managed-EmailAccountDescription-auto">
-<h3>EmailAccountDescription<a class="headerlink" href="#com.apple.mail.managed-EmailAccountDescription-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id4">EmailAccountDescription</a><a class="headerlink" href="#com.apple.mail.managed-EmailAccountDescription-auto" title="Permalink to this headline">¶</a></h3>
 <p>Account Description</p>
 <p>The display name of the account (e.g. &#8220;Company Mail Account&#8221;)</p>
 <table border="1" class="docutils">
@@ -523,7 +377,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.mail.managed-EmailAccountType-auto">
-<h3>EmailAccountType<a class="headerlink" href="#com.apple.mail.managed-EmailAccountType-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id5">EmailAccountType</a><a class="headerlink" href="#com.apple.mail.managed-EmailAccountType-auto" title="Permalink to this headline">¶</a></h3>
 <p>Account Type</p>
 <p>The protocol for accessing the email account</p>
 <table border="1" class="docutils">
@@ -564,7 +418,7 @@
 </ul>
 </div>
 <div class="section" id="com.apple.mail.managed-EmailAccountName-auto">
-<h3>EmailAccountName<a class="headerlink" href="#com.apple.mail.managed-EmailAccountName-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id6">EmailAccountName</a><a class="headerlink" href="#com.apple.mail.managed-EmailAccountName-auto" title="Permalink to this headline">¶</a></h3>
 <p>Account Name</p>
 <p>The display name of the user (e.g. &#8220;John Appleseed&#8221;)</p>
 <table border="1" class="docutils">
@@ -600,7 +454,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.mail.managed-EmailAddress-auto">
-<h3>EmailAddress<a class="headerlink" href="#com.apple.mail.managed-EmailAddress-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id7">EmailAddress</a><a class="headerlink" href="#com.apple.mail.managed-EmailAddress-auto" title="Permalink to this headline">¶</a></h3>
 <p>Email Address</p>
 <p>The address of the account (e.g. &#8220;john&#64;company.com&#8221;)</p>
 <table border="1" class="docutils">
@@ -636,7 +490,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.mail.managed-disableMailRecentsSyncing-auto">
-<h3>disableMailRecentsSyncing<a class="headerlink" href="#com.apple.mail.managed-disableMailRecentsSyncing-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id8">disableMailRecentsSyncing</a><a class="headerlink" href="#com.apple.mail.managed-disableMailRecentsSyncing-auto" title="Permalink to this headline">¶</a></h3>
 <p>Disable Mail Recents Syncing</p>
 <p>If set to true, this account is excluded from address Recents syncing.</p>
 <table border="1" class="docutils">
@@ -672,7 +526,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.mail.managed-allowMailDrop-auto">
-<h3>allowMailDrop<a class="headerlink" href="#com.apple.mail.managed-allowMailDrop-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id9">allowMailDrop</a><a class="headerlink" href="#com.apple.mail.managed-allowMailDrop-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow Mail Drop</p>
 <p>If set to true, this account is allowed to use Mail Drop.</p>
 <table border="1" class="docutils">
@@ -708,7 +562,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.mail.managed-PreventMove-auto">
-<h3>PreventMove<a class="headerlink" href="#com.apple.mail.managed-PreventMove-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id10">PreventMove</a><a class="headerlink" href="#com.apple.mail.managed-PreventMove-auto" title="Permalink to this headline">¶</a></h3>
 <p>Prevent Move</p>
 <p> If set to true, messages may not be moved out of this email account into another account.</p>
 <table border="1" class="docutils">
@@ -744,7 +598,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.mail.managed-PreventAppSheet-auto">
-<h3>PreventAppSheet<a class="headerlink" href="#com.apple.mail.managed-PreventAppSheet-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id11">PreventAppSheet</a><a class="headerlink" href="#com.apple.mail.managed-PreventAppSheet-auto" title="Permalink to this headline">¶</a></h3>
 <p>Prevent App Sheet</p>
 <p>If set to true, this account will not be available for sending mail in third party applications</p>
 <table border="1" class="docutils">
@@ -780,7 +634,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.mail.managed-SMIMEEnabled-auto">
-<h3>SMIMEEnabled<a class="headerlink" href="#com.apple.mail.managed-SMIMEEnabled-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id12">SMIMEEnabled</a><a class="headerlink" href="#com.apple.mail.managed-SMIMEEnabled-auto" title="Permalink to this headline">¶</a></h3>
 <p>S/MIME Enabled</p>
 <p>If set to true, this account will support S/MIME</p>
 <table border="1" class="docutils">
@@ -816,7 +670,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.mail.managed-SMIMEEnablePerMessageSwitch-auto">
-<h3>SMIMEEnablePerMessageSwitch<a class="headerlink" href="#com.apple.mail.managed-SMIMEEnablePerMessageSwitch-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id13">SMIMEEnablePerMessageSwitch</a><a class="headerlink" href="#com.apple.mail.managed-SMIMEEnablePerMessageSwitch-auto" title="Permalink to this headline">¶</a></h3>
 <p>S/MIME Enable Per-Message Switch</p>
 <p>If set to true, enable the per-message encryption switch.</p>
 <table border="1" class="docutils">
@@ -852,7 +706,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.mail.managed-SMIMESigningCertificateUUID-auto">
-<h3>SMIMESigningCertificateUUID<a class="headerlink" href="#com.apple.mail.managed-SMIMESigningCertificateUUID-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id14">SMIMESigningCertificateUUID</a><a class="headerlink" href="#com.apple.mail.managed-SMIMESigningCertificateUUID-auto" title="Permalink to this headline">¶</a></h3>
 <p>S/MIME Signing Certificate</p>
 <p>The PayloadUUID of the identity certificate used to sign messages sent from this account.</p>
 <table border="1" class="docutils">
@@ -888,7 +742,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.mail.managed-SMIMEEncryptionCertificateUUID-auto">
-<h3>SMIMEEncryptionCertificateUUID<a class="headerlink" href="#com.apple.mail.managed-SMIMEEncryptionCertificateUUID-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id15">SMIMEEncryptionCertificateUUID</a><a class="headerlink" href="#com.apple.mail.managed-SMIMEEncryptionCertificateUUID-auto" title="Permalink to this headline">¶</a></h3>
 <p>S/MIME Encryption Certificate</p>
 <p>The PayloadUUID of the identity certificate used to decrypt messages coming into this account.</p>
 <table border="1" class="docutils">
@@ -924,7 +778,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.mail.managed-IncomingMailServerAuthentication-auto">
-<h3>IncomingMailServerAuthentication<a class="headerlink" href="#com.apple.mail.managed-IncomingMailServerAuthentication-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id16">IncomingMailServerAuthentication</a><a class="headerlink" href="#com.apple.mail.managed-IncomingMailServerAuthentication-auto" title="Permalink to this headline">¶</a></h3>
 <p>Incoming Mail Server Authentification</p>
 <p>The authentication method for the incoming mail server</p>
 <table border="1" class="docutils">
@@ -968,7 +822,7 @@
 </ul>
 </div>
 <div class="section" id="com.apple.mail.managed-IncomingMailServerHostName-auto">
-<h3>IncomingMailServerHostName<a class="headerlink" href="#com.apple.mail.managed-IncomingMailServerHostName-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id17">IncomingMailServerHostName</a><a class="headerlink" href="#com.apple.mail.managed-IncomingMailServerHostName-auto" title="Permalink to this headline">¶</a></h3>
 <p>Mail Server</p>
 <p>Hostname or IP Address</p>
 <table border="1" class="docutils">
@@ -1004,7 +858,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.mail.managed-IncomingMailServerIMAPPathPrefix-auto">
-<h3>IncomingMailServerIMAPPathPrefix<a class="headerlink" href="#com.apple.mail.managed-IncomingMailServerIMAPPathPrefix-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id18">IncomingMailServerIMAPPathPrefix</a><a class="headerlink" href="#com.apple.mail.managed-IncomingMailServerIMAPPathPrefix-auto" title="Permalink to this headline">¶</a></h3>
 <p>Path Prefix</p>
 <p>Path prefix for IMAP mail server</p>
 <table border="1" class="docutils">
@@ -1040,7 +894,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.mail.managed-IncomingMailServerPortNumber-auto">
-<h3>IncomingMailServerPortNumber<a class="headerlink" href="#com.apple.mail.managed-IncomingMailServerPortNumber-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id19">IncomingMailServerPortNumber</a><a class="headerlink" href="#com.apple.mail.managed-IncomingMailServerPortNumber-auto" title="Permalink to this headline">¶</a></h3>
 <p>Port</p>
 <p>Port number for incoming mail</p>
 <table border="1" class="docutils">
@@ -1076,7 +930,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.mail.managed-IncomingMailServerUseSSL-auto">
-<h3>IncomingMailServerUseSSL<a class="headerlink" href="#com.apple.mail.managed-IncomingMailServerUseSSL-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id20">IncomingMailServerUseSSL</a><a class="headerlink" href="#com.apple.mail.managed-IncomingMailServerUseSSL-auto" title="Permalink to this headline">¶</a></h3>
 <p>Use SSL</p>
 <p>Retrieve incoming mail through Secure Socket Layer</p>
 <table border="1" class="docutils">
@@ -1112,7 +966,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.mail.managed-IncomingMailServerUsername-auto">
-<h3>IncomingMailServerUsername<a class="headerlink" href="#com.apple.mail.managed-IncomingMailServerUsername-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id21">IncomingMailServerUsername</a><a class="headerlink" href="#com.apple.mail.managed-IncomingMailServerUsername-auto" title="Permalink to this headline">¶</a></h3>
 <p>Username</p>
 <p>The username used to connect to the server for incoming mail</p>
 <table border="1" class="docutils">
@@ -1148,7 +1002,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.mail.managed-IncomingPassword-auto">
-<h3>IncomingPassword<a class="headerlink" href="#com.apple.mail.managed-IncomingPassword-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id22">IncomingPassword</a><a class="headerlink" href="#com.apple.mail.managed-IncomingPassword-auto" title="Permalink to this headline">¶</a></h3>
 <p>Password</p>
 <p>The password for the incoming mail server</p>
 <table border="1" class="docutils">
@@ -1184,7 +1038,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.mail.managed-OutgoingPassword-auto">
-<h3>OutgoingPassword<a class="headerlink" href="#com.apple.mail.managed-OutgoingPassword-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id23">OutgoingPassword</a><a class="headerlink" href="#com.apple.mail.managed-OutgoingPassword-auto" title="Permalink to this headline">¶</a></h3>
 <p>Password</p>
 <p>The password for the outgoing mail server</p>
 <table border="1" class="docutils">
@@ -1220,7 +1074,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.mail.managed-OutgoingPasswordSameAsIncomingPassword-auto">
-<h3>OutgoingPasswordSameAsIncomingPassword<a class="headerlink" href="#com.apple.mail.managed-OutgoingPasswordSameAsIncomingPassword-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id24">OutgoingPasswordSameAsIncomingPassword</a><a class="headerlink" href="#com.apple.mail.managed-OutgoingPasswordSameAsIncomingPassword-auto" title="Permalink to this headline">¶</a></h3>
 <p>Outgoing Password Same As Incoming</p>
 <p>SMTP authentication uses the same password as POP/IMAP</p>
 <table border="1" class="docutils">
@@ -1256,7 +1110,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.mail.managed-OutgoingMailServerAuthentication-auto">
-<h3>OutgoingMailServerAuthentication<a class="headerlink" href="#com.apple.mail.managed-OutgoingMailServerAuthentication-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id25">OutgoingMailServerAuthentication</a><a class="headerlink" href="#com.apple.mail.managed-OutgoingMailServerAuthentication-auto" title="Permalink to this headline">¶</a></h3>
 <p>Authentication Type</p>
 <p>The authentication method for the outgoing mail server</p>
 <table border="1" class="docutils">
@@ -1300,7 +1154,7 @@
 </ul>
 </div>
 <div class="section" id="com.apple.mail.managed-OutgoingMailServerHostName-auto">
-<h3>OutgoingMailServerHostName<a class="headerlink" href="#com.apple.mail.managed-OutgoingMailServerHostName-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id26">OutgoingMailServerHostName</a><a class="headerlink" href="#com.apple.mail.managed-OutgoingMailServerHostName-auto" title="Permalink to this headline">¶</a></h3>
 <p>Mail Server</p>
 <p>Hostname or IP address for outgoing mail</p>
 <table border="1" class="docutils">
@@ -1336,7 +1190,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.mail.managed-OutgoingMailServerPortNumber-auto">
-<h3>OutgoingMailServerPortNumber<a class="headerlink" href="#com.apple.mail.managed-OutgoingMailServerPortNumber-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id27">OutgoingMailServerPortNumber</a><a class="headerlink" href="#com.apple.mail.managed-OutgoingMailServerPortNumber-auto" title="Permalink to this headline">¶</a></h3>
 <p>Port</p>
 <p>The port number for outgoing mail</p>
 <table border="1" class="docutils">
@@ -1372,7 +1226,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.mail.managed-OutgoingMailServerUseSSL-auto">
-<h3>OutgoingMailServerUseSSL<a class="headerlink" href="#com.apple.mail.managed-OutgoingMailServerUseSSL-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id28">OutgoingMailServerUseSSL</a><a class="headerlink" href="#com.apple.mail.managed-OutgoingMailServerUseSSL-auto" title="Permalink to this headline">¶</a></h3>
 <p>Use SSL</p>
 <p>Send outgoing mail through Secure Socket Layer</p>
 <table border="1" class="docutils">
@@ -1408,7 +1262,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.mail.managed-OutgoingMailServerUsername-auto">
-<h3>OutgoingMailServerUsername<a class="headerlink" href="#com.apple.mail.managed-OutgoingMailServerUsername-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id29">OutgoingMailServerUsername</a><a class="headerlink" href="#com.apple.mail.managed-OutgoingMailServerUsername-auto" title="Permalink to this headline">¶</a></h3>
 <p>Username</p>
 <p>The username used to connect to the server for outgoing mail</p>
 <table border="1" class="docutils">
@@ -1445,7 +1299,7 @@
 </div>
 </div>
 <div class="section" id="links">
-<h2>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id30">Links</a><a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><a class="reference external" href="https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW11">Official Documentation</a>.</li>
 </ul>

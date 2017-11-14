@@ -94,6 +94,7 @@
 <li class="toctree-l2"><a class="reference internal" href="activedirectory.html">Active Directory</a></li>
 <li class="toctree-l2"><a class="reference internal" href="adcert.html">Active Directory Certificate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="airplay.html">AirPlay</a></li>
+<li class="toctree-l2"><a class="reference internal" href="com.apple.airplay.security.html">AirPlay Security</a></li>
 <li class="toctree-l2"><a class="reference internal" href="airprint.html">AirPrint</a></li>
 <li class="toctree-l2"><a class="reference internal" href="applock.html">App Lock</a></li>
 <li class="toctree-l2"><a class="reference internal" href="appstore.html">App Store</a></li>
@@ -151,7 +152,7 @@
 <li class="toctree-l2"><a class="reference internal" href="perappvpn.html">Per-App VPN</a></li>
 <li class="toctree-l2"><a class="reference internal" href="appmapping.html">App-to-Per-App VPN Mapping</a></li>
 <li class="toctree-l2"><a class="reference internal" href="defaults.html">iOS Defaults</a></li>
-<li class="toctree-l2"><a class="reference internal" href="parentalcontrols.html">Parental Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parentalcontrols.html">Application Access</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parental-timelimits.html">Parental Controls - Time Limits</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parental-contentfilter.html">Parental Controls - Content Filter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="profileremovalpassword.html">Profile Removal Password</a></li>
@@ -249,14 +250,32 @@
            <div itemprop="articleBody">
             
   <div class="section" id="sidebar">
-<span id="payloadtype-com-apple-mcx-sidebar"></span><h1>Sidebar<a class="headerlink" href="#sidebar" title="Permalink to this headline">¶</a></h1>
+<span id="payloadtype-com-apple-mcx-sidebar"></span><h1><a class="toc-backref" href="#id1">Sidebar</a><a class="headerlink" href="#sidebar" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference download internal" href="../_downloads/com.apple.MCX.sidebar.mobileconfig" download=""><code class="xref download docutils literal"><span class="pre">Template</span></code></a></p>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
 <p class="last">This seems to be deprecated? calls LSSharedFileList</p>
 </div>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#sidebar" id="id1">Sidebar</a><ul>
+<li><a class="reference internal" href="#summary" id="id2">Summary</a></li>
+<li><a class="reference internal" href="#keys" id="id3">Keys</a><ul>
+<li><a class="reference internal" href="#com.apple.MCX.sidebar-shouldAddNetworkHome-auto" id="id4">shouldAddNetworkHome</a></li>
+<li><a class="reference internal" href="#com.apple.MCX.sidebar-shouldAddUserHome-auto" id="id5">shouldAddUserHome</a></li>
+<li><a class="reference internal" href="#com.apple.MCX.sidebar-hideiCloudDrive-auto" id="id6">hideiCloudDrive</a></li>
+<li><a class="reference internal" href="#com.apple.MCX.sidebar-customBaseURLs-auto" id="id7">customBaseURLs</a></li>
+<li><a class="reference internal" href="#com.apple.MCX.sidebar-SidebarDestination-auto" id="id8">SidebarDestination</a></li>
+<li><a class="reference internal" href="#custom-urls" id="id9">Custom URLs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
 <div class="section" id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id2">Summary</a><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -279,60 +298,11 @@
 </tr>
 </tbody>
 </table>
-<table border="1" class="docutils">
-<colgroup>
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="43%" />
-<col width="14%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Name</th>
-<th class="head">Type</th>
-<th class="head">Title</th>
-<th class="head">Description</th>
-<th class="head">Required</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>shouldAddNetworkHome</td>
-<td>boolean</td>
-<td>Add Network Home</td>
-<td>Add Network Home</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>shouldAddUserHome</td>
-<td>boolean</td>
-<td>Add User Home</td>
-<td>Add User Home</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>hideiCloudDrive</td>
-<td>boolean</td>
-<td>Hide iCloud Drive</td>
-<td>Hide iCloud Drive</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>customBaseURLs</td>
-<td>array</td>
-<td>Custom URLs</td>
-<td>Base URLs to custom locations. Array of string URIs</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>SidebarDestination</td>
-<td>string</td>
-<td>Maybe after before of custom urls</td>
-<td>Destination of sidebar item</td>
-<td>n/a</td>
-</tr>
-</tbody>
-</table>
 </div>
 <div class="section" id="keys">
-<h2>Keys<a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id3">Keys</a><a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="com.apple.MCX.sidebar-shouldAddNetworkHome-auto">
-<h3>shouldAddNetworkHome<a class="headerlink" href="#com.apple.MCX.sidebar-shouldAddNetworkHome-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id4">shouldAddNetworkHome</a><a class="headerlink" href="#com.apple.MCX.sidebar-shouldAddNetworkHome-auto" title="Permalink to this headline">¶</a></h3>
 <p>Add Network Home</p>
 <p>Add Network Home</p>
 <table border="1" class="docutils">
@@ -368,7 +338,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.MCX.sidebar-shouldAddUserHome-auto">
-<h3>shouldAddUserHome<a class="headerlink" href="#com.apple.MCX.sidebar-shouldAddUserHome-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id5">shouldAddUserHome</a><a class="headerlink" href="#com.apple.MCX.sidebar-shouldAddUserHome-auto" title="Permalink to this headline">¶</a></h3>
 <p>Add User Home</p>
 <p>Add User Home</p>
 <table border="1" class="docutils">
@@ -404,7 +374,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.MCX.sidebar-hideiCloudDrive-auto">
-<h3>hideiCloudDrive<a class="headerlink" href="#com.apple.MCX.sidebar-hideiCloudDrive-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id6">hideiCloudDrive</a><a class="headerlink" href="#com.apple.MCX.sidebar-hideiCloudDrive-auto" title="Permalink to this headline">¶</a></h3>
 <p>Hide iCloud Drive</p>
 <p>Hide iCloud Drive</p>
 <table border="1" class="docutils">
@@ -440,7 +410,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.MCX.sidebar-customBaseURLs-auto">
-<h3>customBaseURLs<a class="headerlink" href="#com.apple.MCX.sidebar-customBaseURLs-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id7">customBaseURLs</a><a class="headerlink" href="#com.apple.MCX.sidebar-customBaseURLs-auto" title="Permalink to this headline">¶</a></h3>
 <p>Custom URLs</p>
 <p>Base URLs to custom locations. Array of string URIs</p>
 <table border="1" class="docutils">
@@ -476,7 +446,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.MCX.sidebar-SidebarDestination-auto">
-<h3>SidebarDestination<a class="headerlink" href="#com.apple.MCX.sidebar-SidebarDestination-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id8">SidebarDestination</a><a class="headerlink" href="#com.apple.MCX.sidebar-SidebarDestination-auto" title="Permalink to this headline">¶</a></h3>
 <p>Maybe after before of custom urls</p>
 <p>Destination of sidebar item</p>
 <table border="1" class="docutils">
@@ -512,7 +482,7 @@
 </table>
 </div>
 <div class="section" id="custom-urls">
-<h3>Custom URLs<a class="headerlink" href="#custom-urls" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id9">Custom URLs</a><a class="headerlink" href="#custom-urls" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="14%" />

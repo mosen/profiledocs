@@ -8,6 +8,8 @@ This profile sets the contents of a plist in a specified preference domain on iO
 
 It is the iOS equivalent of :ref:`payloadtype-com.apple.ManagedClient.preferences`.
 
+.. contents::
+
 Summary
 -------
 

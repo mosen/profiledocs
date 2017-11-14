@@ -6,12 +6,12 @@ Certificate (PKCS#1)
 
 DER-encoded certificate (.cer) without private key. May contain root certificates.
 
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.security.pkcs1 manifest.plist
-
-.. pfm:: /_static/manifests/com.apple.security.pkcs1 manifest.plist
 
 Keys
 ----

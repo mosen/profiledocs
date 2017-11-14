@@ -5,8 +5,10 @@ Finder (Disc Burning)
 
 Finder Disc Burning Restrictions.
 
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.finder manifest.plist
-.. pfm:: /_static/manifests/com.apple.finder manifest.plist
+

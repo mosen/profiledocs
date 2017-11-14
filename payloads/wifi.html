@@ -94,6 +94,7 @@
 <li class="toctree-l2"><a class="reference internal" href="activedirectory.html">Active Directory</a></li>
 <li class="toctree-l2"><a class="reference internal" href="adcert.html">Active Directory Certificate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="airplay.html">AirPlay</a></li>
+<li class="toctree-l2"><a class="reference internal" href="com.apple.airplay.security.html">AirPlay Security</a></li>
 <li class="toctree-l2"><a class="reference internal" href="airprint.html">AirPrint</a></li>
 <li class="toctree-l2"><a class="reference internal" href="applock.html">App Lock</a></li>
 <li class="toctree-l2"><a class="reference internal" href="appstore.html">App Store</a></li>
@@ -151,7 +152,7 @@
 <li class="toctree-l2"><a class="reference internal" href="perappvpn.html">Per-App VPN</a></li>
 <li class="toctree-l2"><a class="reference internal" href="appmapping.html">App-to-Per-App VPN Mapping</a></li>
 <li class="toctree-l2"><a class="reference internal" href="defaults.html">iOS Defaults</a></li>
-<li class="toctree-l2"><a class="reference internal" href="parentalcontrols.html">Parental Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parentalcontrols.html">Application Access</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parental-timelimits.html">Parental Controls - Time Limits</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parental-contentfilter.html">Parental Controls - Content Filter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="profileremovalpassword.html">Profile Removal Password</a></li>
@@ -293,15 +294,78 @@
            <div itemprop="articleBody">
             
   <div class="section" id="wi-fi">
-<span id="payloadtype-com-apple-wifi-managed"></span><h1>Wi-Fi<a class="headerlink" href="#wi-fi" title="Permalink to this headline">¶</a></h1>
+<span id="payloadtype-com-apple-wifi-managed"></span><h1><a class="toc-backref" href="#id1">Wi-Fi</a><a class="headerlink" href="#wi-fi" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference download internal" href="../_downloads/com.apple.wifi.managed.mobileconfig" download=""><code class="xref download docutils literal"><span class="pre">Template</span></code></a></p>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
 <p class="last">The profile cannot be installed if your machine does not have a Wi-Fi AirPort adapter. USB Adapters do not
 qualify, so you may have issues testing in a Virtual Machine. This is because it uses CoreWLAN to make the settings
 and CoreWLAN will only return AirPort devices.</p>
 </div>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#wi-fi" id="id1">Wi-Fi</a><ul>
+<li><a class="reference internal" href="#summary" id="id2">Summary</a></li>
+<li><a class="reference internal" href="#keys" id="id3">Keys</a><ul>
+<li><a class="reference internal" href="#com.apple.wifi.managed-SSID_STR-auto" id="id4">SSID_STR</a></li>
+<li><a class="reference internal" href="#com.apple.wifi.managed-HIDDEN_NETWORK-auto" id="id5">HIDDEN_NETWORK</a></li>
+<li><a class="reference internal" href="#com.apple.wifi.managed-AutoJoin-auto" id="id6">AutoJoin</a></li>
+<li><a class="reference internal" href="#com.apple.wifi.managed-CaptiveBypass-auto" id="id7">CaptiveBypass</a></li>
+<li><a class="reference internal" href="#com.apple.wifi.managed-EncryptionType-auto" id="id8">EncryptionType</a></li>
+<li><a class="reference internal" href="#com.apple.wifi.managed-Password-auto" id="id9">Password</a></li>
+<li><a class="reference internal" href="#com.apple.wifi.managed-PayloadCertificateUUID-auto" id="id10">PayloadCertificateUUID</a></li>
+<li><a class="reference internal" href="#com.apple.wifi.managed-TLSCertificateRequired-auto" id="id11">TLSCertificateRequired</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#keys-hotspot" id="id12">Keys (HotSpot)</a><ul>
+<li><a class="reference internal" href="#com.apple.wifi.managed-IsHotspot-auto" id="id13">IsHotspot</a></li>
+<li><a class="reference internal" href="#com.apple.wifi.managed-DomainName-auto" id="id14">DomainName</a></li>
+<li><a class="reference internal" href="#com.apple.wifi.managed-DisplayedOperatorName-auto" id="id15">DisplayedOperatorName</a></li>
+<li><a class="reference internal" href="#com.apple.wifi.managed-ServiceProviderRoamingEnabled-auto" id="id16">ServiceProviderRoamingEnabled</a></li>
+<li><a class="reference internal" href="#com.apple.wifi.managed-RoamingConsortiumOIs-auto" id="id17">RoamingConsortiumOIs</a></li>
+<li><a class="reference internal" href="#com.apple.wifi.managed-NAIRealmNames-auto" id="id18">NAIRealmNames</a></li>
+<li><a class="reference internal" href="#com.apple.wifi.managed-MCCAndMNCs-auto" id="id19">MCCAndMNCs</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#keys-802-1x" id="id20">Keys (802.1x)</a><ul>
+<li><a class="reference internal" href="#com.apple.wifi.managed-EAPClientConfiguration-auto" id="id21">EAPClientConfiguration</a></li>
+<li><a class="reference internal" href="#com.apple.wifi.managed-AcceptEAPTypes-auto" id="id22">AcceptEAPTypes</a></li>
+<li><a class="reference internal" href="#com.apple.wifi.managed-UserName-auto" id="id23">UserName</a></li>
+<li><a class="reference internal" href="#com.apple.wifi.managed-UserPassword-auto" id="id24">UserPassword</a></li>
+<li><a class="reference internal" href="#com.apple.wifi.managed-OneTimeUserPassword-auto" id="id25">OneTimeUserPassword</a></li>
+<li><a class="reference internal" href="#com.apple.wifi.managed-PayloadCertificateAnchorUUID-auto" id="id26">PayloadCertificateAnchorUUID</a></li>
+<li><a class="reference internal" href="#com.apple.wifi.managed-TLSTrustedServerNames-auto" id="id27">TLSTrustedServerNames</a></li>
+<li><a class="reference internal" href="#com.apple.wifi.managed-TLSAllowTrustExceptions-auto" id="id28">TLSAllowTrustExceptions</a></li>
+<li><a class="reference internal" href="#com.apple.wifi.managed-TTLSInnerAuthentication-auto" id="id29">TTLSInnerAuthentication</a></li>
+<li><a class="reference internal" href="#com.apple.wifi.managed-OuterIdentity-auto" id="id30">OuterIdentity</a></li>
+<li><a class="reference internal" href="#com.apple.wifi.managed-SystemModeCredentialsSource-auto" id="id31">SystemModeCredentialsSource</a></li>
+<li><a class="reference internal" href="#com.apple.wifi.managed-EAPFASTUsePAC-auto" id="id32">EAPFASTUsePAC</a></li>
+<li><a class="reference internal" href="#com.apple.wifi.managed-EAPFASTProvisionPAC-auto" id="id33">EAPFASTProvisionPAC</a></li>
+<li><a class="reference internal" href="#com.apple.wifi.managed-EAPFASTProvisionPACAnonymously-auto" id="id34">EAPFASTProvisionPACAnonymously</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#keys-proxy" id="id35">Keys (Proxy)</a><ul>
+<li><a class="reference internal" href="#com.apple.wifi.managed-ProxyType-auto" id="id36">ProxyType</a></li>
+<li><a class="reference internal" href="#com.apple.wifi.managed-ProxyServer-auto" id="id37">ProxyServer</a></li>
+<li><a class="reference internal" href="#com.apple.wifi.managed-ProxyUsername-auto" id="id38">ProxyUsername</a></li>
+<li><a class="reference internal" href="#com.apple.wifi.managed-ProxyServerPort-auto" id="id39">ProxyServerPort</a></li>
+<li><a class="reference internal" href="#com.apple.wifi.managed-ProxyPassword-auto" id="id40">ProxyPassword</a></li>
+<li><a class="reference internal" href="#com.apple.wifi.managed-ProxyPACURL-auto" id="id41">ProxyPACURL</a></li>
+<li><a class="reference internal" href="#com.apple.wifi.managed-ProxyPACFallbackAllowed-auto" id="id42">ProxyPACFallbackAllowed</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#keys-qos" id="id43">Keys (QoS)</a><ul>
+<li><a class="reference internal" href="#com.apple.wifi.managed-QoSMarkingPolicy-auto" id="id44">QoSMarkingPolicy</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#links" id="id45">Links</a></li>
+</ul>
+</li>
+</ul>
+</div>
 <div class="section" id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id2">Summary</a><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -324,180 +388,11 @@ and CoreWLAN will only return AirPort devices.</p>
 </tr>
 </tbody>
 </table>
-<table border="1" class="docutils">
-<colgroup>
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="43%" />
-<col width="14%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Name</th>
-<th class="head">Type</th>
-<th class="head">Title</th>
-<th class="head">Description</th>
-<th class="head">Required</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>NONEXISTENT</td>
-<td>string</td>
-<td>Nonexistent flag</td>
-<td></td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>SSID_STR</td>
-<td>string</td>
-<td>SSID</td>
-<td>SSID of the Wi-Fi network to be used</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>HIDDEN_NETWORK</td>
-<td>boolean</td>
-<td>Hidden</td>
-<td>If set, assumes the network is hidden. Otherwise the device will use broadcast SSID to identify the network.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>AutoJoin</td>
-<td>boolean</td>
-<td>Auto Join</td>
-<td>Automatically join the network</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>CaptiveBypass</td>
-<td>boolean</td>
-<td>Disable Captive Network Detection</td>
-<td>Do not show the captive network sheet</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>EncryptionType</td>
-<td>string</td>
-<td>Encryption Type</td>
-<td>Wireless network encryption to use when connecting. The None value is available in iOS 5.0 and later and the WPA2 value is available in iOS 8.0 and later.</td>
-<td>always</td>
-</tr>
-<tr class="row-even"><td>IsHotspot</td>
-<td>boolean</td>
-<td>Is Hotspot</td>
-<td>Is a legacy or Hotspot 2.0 network</td>
-<td>always</td>
-</tr>
-<tr class="row-odd"><td>DomainName</td>
-<td>string</td>
-<td>Domain Name</td>
-<td>HotSpot 2.0 domain name</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>DisplayedOperatorName</td>
-<td>string</td>
-<td>Displayed Operator Name</td>
-<td>HotSpot 2.0 operator name</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>ServiceProviderRoamingEnabled</td>
-<td>boolean</td>
-<td>Roaming Enable</td>
-<td>HotSpot 2.0 allow roaming flag</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>RoamingConsortiumOIs</td>
-<td>array</td>
-<td>Roaming OIs</td>
-<td>HotSpot 2.0 organization identifiers</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>NAIRealmNames</td>
-<td>array</td>
-<td>Realm Names</td>
-<td>HotSpot 2.0 NAI realm names</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>MCCAndMNCs</td>
-<td>array</td>
-<td>MCC/MNCs</td>
-<td>HotSpot 2.0 MCC/MNCs</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>EAPClientConfiguration</td>
-<td>dictionary</td>
-<td>EAP Client Configuration</td>
-<td>Specifies 802.1x EAP authentication parameters</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>Password</td>
-<td>string</td>
-<td>Password</td>
-<td>Specifies the password for the access point</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>PayloadCertificateUUID</td>
-<td>string</td>
-<td>Certificate UUID</td>
-<td>UUID of the certificate payload containing an identity used as the client credential</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>TLSCertificateRequired</td>
-<td>boolean</td>
-<td>Certificate Required</td>
-<td>If set, force a non-default authentication method. (if YES, uses certificate from PayloadCertificateUUID)</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>ProxyType</td>
-<td>string</td>
-<td>Proxy Type</td>
-<td>The type of proxy configuration to use for this wireless connection</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>ProxyServer</td>
-<td>string</td>
-<td>Proxy Server</td>
-<td>The hostname of the proxy server</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>ProxyUsername</td>
-<td>string</td>
-<td>Proxy Username</td>
-<td>The username for proxy server authentication</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>ProxyServerPort</td>
-<td>integer</td>
-<td>Proxy Server Port</td>
-<td>The port used to connect to the proxy server</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>ProxyPassword</td>
-<td>string</td>
-<td>Proxy Password</td>
-<td>The password to authenticate with the proxy</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>ProxyPACURL</td>
-<td>string</td>
-<td>Proxy Username</td>
-<td>URL used to recieve proxy settings</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>ProxyPACFallbackAllowed</td>
-<td>boolean</td>
-<td>Proxy PAC Fallback Allowed</td>
-<td>Proxy PAC Fallback Allowed</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>QoSMarkingPolicy</td>
-<td>dictionary</td>
-<td>QoS Marking Policy</td>
-<td>Restrict fast lane QoS marking</td>
-<td>n/a</td>
-</tr>
-</tbody>
-</table>
 </div>
 <div class="section" id="keys">
-<h2>Keys<a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id3">Keys</a><a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="com.apple.wifi.managed-SSID_STR-auto">
-<h3>SSID_STR<a class="headerlink" href="#com.apple.wifi.managed-SSID_STR-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id4">SSID_STR</a><a class="headerlink" href="#com.apple.wifi.managed-SSID_STR-auto" title="Permalink to this headline">¶</a></h3>
 <p>SSID</p>
 <p>SSID of the Wi-Fi network to be used</p>
 <table border="1" class="docutils">
@@ -536,7 +431,7 @@ and CoreWLAN will only return AirPort devices.</p>
 <li>In iOS 7.0 and later, this is optional if a DomainName value is provided</li>
 </ul>
 <div class="section" id="com.apple.wifi.managed-HIDDEN_NETWORK-auto">
-<h3>HIDDEN_NETWORK<a class="headerlink" href="#com.apple.wifi.managed-HIDDEN_NETWORK-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id5">HIDDEN_NETWORK</a><a class="headerlink" href="#com.apple.wifi.managed-HIDDEN_NETWORK-auto" title="Permalink to this headline">¶</a></h3>
 <p>Hidden</p>
 <p>If set, assumes the network is hidden. Otherwise the device will use broadcast SSID to identify the network.</p>
 <table border="1" class="docutils">
@@ -572,7 +467,7 @@ and CoreWLAN will only return AirPort devices.</p>
 </table>
 </div>
 <div class="section" id="com.apple.wifi.managed-AutoJoin-auto">
-<h3>AutoJoin<a class="headerlink" href="#com.apple.wifi.managed-AutoJoin-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id6">AutoJoin</a><a class="headerlink" href="#com.apple.wifi.managed-AutoJoin-auto" title="Permalink to this headline">¶</a></h3>
 <p>Auto Join</p>
 <p>Automatically join the network</p>
 <table border="1" class="docutils">
@@ -608,7 +503,7 @@ and CoreWLAN will only return AirPort devices.</p>
 </table>
 </div>
 <div class="section" id="com.apple.wifi.managed-CaptiveBypass-auto">
-<h3>CaptiveBypass<a class="headerlink" href="#com.apple.wifi.managed-CaptiveBypass-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id7">CaptiveBypass</a><a class="headerlink" href="#com.apple.wifi.managed-CaptiveBypass-auto" title="Permalink to this headline">¶</a></h3>
 <p>Disable Captive Network Detection</p>
 <p>Do not show the captive network sheet</p>
 <table border="1" class="docutils">
@@ -644,7 +539,7 @@ and CoreWLAN will only return AirPort devices.</p>
 </table>
 </div>
 <div class="section" id="com.apple.wifi.managed-EncryptionType-auto">
-<h3>EncryptionType<a class="headerlink" href="#com.apple.wifi.managed-EncryptionType-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id8">EncryptionType</a><a class="headerlink" href="#com.apple.wifi.managed-EncryptionType-auto" title="Permalink to this headline">¶</a></h3>
 <p>Encryption Type</p>
 <p>Wireless network encryption to use when connecting. The None value is available in iOS 5.0 and later and the WPA2 value is available in iOS 8.0 and later.</p>
 <table border="1" class="docutils">
@@ -688,7 +583,7 @@ and CoreWLAN will only return AirPort devices.</p>
 </ul>
 </div>
 <div class="section" id="com.apple.wifi.managed-Password-auto">
-<h3>Password<a class="headerlink" href="#com.apple.wifi.managed-Password-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id9">Password</a><a class="headerlink" href="#com.apple.wifi.managed-Password-auto" title="Permalink to this headline">¶</a></h3>
 <p>Password</p>
 <p>Specifies the password for the access point</p>
 <table border="1" class="docutils">
@@ -724,7 +619,7 @@ and CoreWLAN will only return AirPort devices.</p>
 </table>
 </div>
 <div class="section" id="com.apple.wifi.managed-PayloadCertificateUUID-auto">
-<h3>PayloadCertificateUUID<a class="headerlink" href="#com.apple.wifi.managed-PayloadCertificateUUID-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id10">PayloadCertificateUUID</a><a class="headerlink" href="#com.apple.wifi.managed-PayloadCertificateUUID-auto" title="Permalink to this headline">¶</a></h3>
 <p>Certificate UUID</p>
 <p>UUID of the certificate payload containing an identity used as the client credential</p>
 <table border="1" class="docutils">
@@ -760,7 +655,7 @@ and CoreWLAN will only return AirPort devices.</p>
 </table>
 </div>
 <div class="section" id="com.apple.wifi.managed-TLSCertificateRequired-auto">
-<h3>TLSCertificateRequired<a class="headerlink" href="#com.apple.wifi.managed-TLSCertificateRequired-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id11">TLSCertificateRequired</a><a class="headerlink" href="#com.apple.wifi.managed-TLSCertificateRequired-auto" title="Permalink to this headline">¶</a></h3>
 <p>Certificate Required</p>
 <p>If set, force a non-default authentication method. (if YES, uses certificate from PayloadCertificateUUID)</p>
 <table border="1" class="docutils">
@@ -797,9 +692,9 @@ and CoreWLAN will only return AirPort devices.</p>
 </div>
 </div>
 <div class="section" id="keys-hotspot">
-<h2>Keys (HotSpot)<a class="headerlink" href="#keys-hotspot" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id12">Keys (HotSpot)</a><a class="headerlink" href="#keys-hotspot" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="com.apple.wifi.managed-IsHotspot-auto">
-<h3>IsHotspot<a class="headerlink" href="#com.apple.wifi.managed-IsHotspot-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id13">IsHotspot</a><a class="headerlink" href="#com.apple.wifi.managed-IsHotspot-auto" title="Permalink to this headline">¶</a></h3>
 <p>Is Hotspot</p>
 <p>Is a legacy or Hotspot 2.0 network</p>
 <table border="1" class="docutils">
@@ -835,7 +730,7 @@ and CoreWLAN will only return AirPort devices.</p>
 </table>
 </div>
 <div class="section" id="com.apple.wifi.managed-DomainName-auto">
-<h3>DomainName<a class="headerlink" href="#com.apple.wifi.managed-DomainName-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id14">DomainName</a><a class="headerlink" href="#com.apple.wifi.managed-DomainName-auto" title="Permalink to this headline">¶</a></h3>
 <p>Domain Name</p>
 <p>HotSpot 2.0 domain name</p>
 <table border="1" class="docutils">
@@ -871,7 +766,7 @@ and CoreWLAN will only return AirPort devices.</p>
 </table>
 </div>
 <div class="section" id="com.apple.wifi.managed-DisplayedOperatorName-auto">
-<h3>DisplayedOperatorName<a class="headerlink" href="#com.apple.wifi.managed-DisplayedOperatorName-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id15">DisplayedOperatorName</a><a class="headerlink" href="#com.apple.wifi.managed-DisplayedOperatorName-auto" title="Permalink to this headline">¶</a></h3>
 <p>Displayed Operator Name</p>
 <p>HotSpot 2.0 operator name</p>
 <table border="1" class="docutils">
@@ -907,7 +802,7 @@ and CoreWLAN will only return AirPort devices.</p>
 </table>
 </div>
 <div class="section" id="com.apple.wifi.managed-ServiceProviderRoamingEnabled-auto">
-<h3>ServiceProviderRoamingEnabled<a class="headerlink" href="#com.apple.wifi.managed-ServiceProviderRoamingEnabled-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id16">ServiceProviderRoamingEnabled</a><a class="headerlink" href="#com.apple.wifi.managed-ServiceProviderRoamingEnabled-auto" title="Permalink to this headline">¶</a></h3>
 <p>Roaming Enable</p>
 <p>HotSpot 2.0 allow roaming flag</p>
 <table border="1" class="docutils">
@@ -943,7 +838,7 @@ and CoreWLAN will only return AirPort devices.</p>
 </table>
 </div>
 <div class="section" id="com.apple.wifi.managed-RoamingConsortiumOIs-auto">
-<h3>RoamingConsortiumOIs<a class="headerlink" href="#com.apple.wifi.managed-RoamingConsortiumOIs-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id17">RoamingConsortiumOIs</a><a class="headerlink" href="#com.apple.wifi.managed-RoamingConsortiumOIs-auto" title="Permalink to this headline">¶</a></h3>
 <p>Roaming OIs</p>
 <p>HotSpot 2.0 organization identifiers</p>
 <table border="1" class="docutils">
@@ -979,7 +874,7 @@ and CoreWLAN will only return AirPort devices.</p>
 </table>
 </div>
 <div class="section" id="com.apple.wifi.managed-NAIRealmNames-auto">
-<h3>NAIRealmNames<a class="headerlink" href="#com.apple.wifi.managed-NAIRealmNames-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id18">NAIRealmNames</a><a class="headerlink" href="#com.apple.wifi.managed-NAIRealmNames-auto" title="Permalink to this headline">¶</a></h3>
 <p>Realm Names</p>
 <p>HotSpot 2.0 NAI realm names</p>
 <table border="1" class="docutils">
@@ -1015,7 +910,7 @@ and CoreWLAN will only return AirPort devices.</p>
 </table>
 </div>
 <div class="section" id="com.apple.wifi.managed-MCCAndMNCs-auto">
-<h3>MCCAndMNCs<a class="headerlink" href="#com.apple.wifi.managed-MCCAndMNCs-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id19">MCCAndMNCs</a><a class="headerlink" href="#com.apple.wifi.managed-MCCAndMNCs-auto" title="Permalink to this headline">¶</a></h3>
 <p>MCC/MNCs</p>
 <p>HotSpot 2.0 MCC/MNCs</p>
 <table border="1" class="docutils">
@@ -1052,9 +947,9 @@ and CoreWLAN will only return AirPort devices.</p>
 </div>
 </div>
 <div class="section" id="keys-802-1x">
-<h2>Keys (802.1x)<a class="headerlink" href="#keys-802-1x" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id20">Keys (802.1x)</a><a class="headerlink" href="#keys-802-1x" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="com.apple.wifi.managed-EAPClientConfiguration-auto">
-<h3>EAPClientConfiguration<a class="headerlink" href="#com.apple.wifi.managed-EAPClientConfiguration-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id21">EAPClientConfiguration</a><a class="headerlink" href="#com.apple.wifi.managed-EAPClientConfiguration-auto" title="Permalink to this headline">¶</a></h3>
 <p>EAP Client Configuration</p>
 <p>Specifies 802.1x EAP authentication parameters</p>
 <table border="1" class="docutils">
@@ -1193,7 +1088,7 @@ and CoreWLAN will only return AirPort devices.</p>
 </tbody>
 </table>
 <div class="section" id="com.apple.wifi.managed-AcceptEAPTypes-auto">
-<h3>AcceptEAPTypes<a class="headerlink" href="#com.apple.wifi.managed-AcceptEAPTypes-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id22">AcceptEAPTypes</a><a class="headerlink" href="#com.apple.wifi.managed-AcceptEAPTypes-auto" title="Permalink to this headline">¶</a></h3>
 <p>Accept EAP Types</p>
 <p>The EAP types accepted</p>
 <table border="1" class="docutils">
@@ -1229,7 +1124,7 @@ and CoreWLAN will only return AirPort devices.</p>
 </table>
 </div>
 <div class="section" id="com.apple.wifi.managed-UserName-auto">
-<h3>UserName<a class="headerlink" href="#com.apple.wifi.managed-UserName-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id23">UserName</a><a class="headerlink" href="#com.apple.wifi.managed-UserName-auto" title="Permalink to this headline">¶</a></h3>
 <p>Username</p>
 <p>Username. If not provided, the user may be prompted during login</p>
 <table border="1" class="docutils">
@@ -1265,7 +1160,7 @@ and CoreWLAN will only return AirPort devices.</p>
 </table>
 </div>
 <div class="section" id="com.apple.wifi.managed-UserPassword-auto">
-<h3>UserPassword<a class="headerlink" href="#com.apple.wifi.managed-UserPassword-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id24">UserPassword</a><a class="headerlink" href="#com.apple.wifi.managed-UserPassword-auto" title="Permalink to this headline">¶</a></h3>
 <p>Password</p>
 <p>Password. If not provided, the user may be prompted during login</p>
 <table border="1" class="docutils">
@@ -1301,7 +1196,7 @@ and CoreWLAN will only return AirPort devices.</p>
 </table>
 </div>
 <div class="section" id="com.apple.wifi.managed-OneTimeUserPassword-auto">
-<h3>OneTimeUserPassword<a class="headerlink" href="#com.apple.wifi.managed-OneTimeUserPassword-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id25">OneTimeUserPassword</a><a class="headerlink" href="#com.apple.wifi.managed-OneTimeUserPassword-auto" title="Permalink to this headline">¶</a></h3>
 <p>Per-Connection Password</p>
 <p>If set, the user will be prompted for a password each time they connect to the network</p>
 <table border="1" class="docutils">
@@ -1337,7 +1232,7 @@ and CoreWLAN will only return AirPort devices.</p>
 </table>
 </div>
 <div class="section" id="com.apple.wifi.managed-PayloadCertificateAnchorUUID-auto">
-<h3>PayloadCertificateAnchorUUID<a class="headerlink" href="#com.apple.wifi.managed-PayloadCertificateAnchorUUID-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id26">PayloadCertificateAnchorUUID</a><a class="headerlink" href="#com.apple.wifi.managed-PayloadCertificateAnchorUUID-auto" title="Permalink to this headline">¶</a></h3>
 <p>Certificate Anchor UUID</p>
 <p>Array of UUIDs corresponding to the trusted certificates for this authentication</p>
 <table border="1" class="docutils">
@@ -1373,7 +1268,7 @@ and CoreWLAN will only return AirPort devices.</p>
 </table>
 </div>
 <div class="section" id="com.apple.wifi.managed-TLSTrustedServerNames-auto">
-<h3>TLSTrustedServerNames<a class="headerlink" href="#com.apple.wifi.managed-TLSTrustedServerNames-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id27">TLSTrustedServerNames</a><a class="headerlink" href="#com.apple.wifi.managed-TLSTrustedServerNames-auto" title="Permalink to this headline">¶</a></h3>
 <p>TLS Trusted Server Names</p>
 <p>Array of Common Names of server certificates that can be trusted. The wildcard * can be used to match a range of strings</p>
 <table border="1" class="docutils">
@@ -1409,7 +1304,7 @@ and CoreWLAN will only return AirPort devices.</p>
 </table>
 </div>
 <div class="section" id="com.apple.wifi.managed-TLSAllowTrustExceptions-auto">
-<h3>TLSAllowTrustExceptions<a class="headerlink" href="#com.apple.wifi.managed-TLSAllowTrustExceptions-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id28">TLSAllowTrustExceptions</a><a class="headerlink" href="#com.apple.wifi.managed-TLSAllowTrustExceptions-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow Trust Exceptions</p>
 <p>No longer supported in iOS 8 and later</p>
 <table border="1" class="docutils">
@@ -1445,7 +1340,7 @@ and CoreWLAN will only return AirPort devices.</p>
 </table>
 </div>
 <div class="section" id="com.apple.wifi.managed-TTLSInnerAuthentication-auto">
-<h3>TTLSInnerAuthentication<a class="headerlink" href="#com.apple.wifi.managed-TTLSInnerAuthentication-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id29">TTLSInnerAuthentication</a><a class="headerlink" href="#com.apple.wifi.managed-TTLSInnerAuthentication-auto" title="Permalink to this headline">¶</a></h3>
 <p>TTLS Inner Authentication</p>
 <p>Specifies the inner authentication used by the TTLS module</p>
 <table border="1" class="docutils">
@@ -1489,7 +1384,7 @@ and CoreWLAN will only return AirPort devices.</p>
 </ul>
 </div>
 <div class="section" id="com.apple.wifi.managed-OuterIdentity-auto">
-<h3>OuterIdentity<a class="headerlink" href="#com.apple.wifi.managed-OuterIdentity-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id30">OuterIdentity</a><a class="headerlink" href="#com.apple.wifi.managed-OuterIdentity-auto" title="Permalink to this headline">¶</a></h3>
 <p>Outer Identity</p>
 <p>If TTLS, PEAP, or EAP-FAST is used, this string is used instead of the user&#8217;s identity outside the encrypted tunnel. This value can be used to mask the true identity of the person using the network</p>
 <table border="1" class="docutils">
@@ -1525,7 +1420,7 @@ and CoreWLAN will only return AirPort devices.</p>
 </table>
 </div>
 <div class="section" id="com.apple.wifi.managed-SystemModeCredentialsSource-auto">
-<h3>SystemModeCredentialsSource<a class="headerlink" href="#com.apple.wifi.managed-SystemModeCredentialsSource-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id31">SystemModeCredentialsSource</a><a class="headerlink" href="#com.apple.wifi.managed-SystemModeCredentialsSource-auto" title="Permalink to this headline">¶</a></h3>
 <p>System Profile Credentials Source</p>
 <p>Use an alternate set of credentials when in System mode (AKA not a loginwindow profile). This can be used to tell EAPOLClient to use the computer password in a bound active directory scenario for authentication.</p>
 <table border="1" class="docutils">
@@ -1565,7 +1460,7 @@ and CoreWLAN will only return AirPort devices.</p>
 </ul>
 </div>
 <div class="section" id="com.apple.wifi.managed-EAPFASTUsePAC-auto">
-<h3>EAPFASTUsePAC<a class="headerlink" href="#com.apple.wifi.managed-EAPFASTUsePAC-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id32">EAPFASTUsePAC</a><a class="headerlink" href="#com.apple.wifi.managed-EAPFASTUsePAC-auto" title="Permalink to this headline">¶</a></h3>
 <p>Use PAC</p>
 <p>If set, the device will use an existing PAC if it&#8217;s present. Otherwise the server must present its identity using a certificate</p>
 <table border="1" class="docutils">
@@ -1601,7 +1496,7 @@ and CoreWLAN will only return AirPort devices.</p>
 </table>
 </div>
 <div class="section" id="com.apple.wifi.managed-EAPFASTProvisionPAC-auto">
-<h3>EAPFASTProvisionPAC<a class="headerlink" href="#com.apple.wifi.managed-EAPFASTProvisionPAC-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id33">EAPFASTProvisionPAC</a><a class="headerlink" href="#com.apple.wifi.managed-EAPFASTProvisionPAC-auto" title="Permalink to this headline">¶</a></h3>
 <p>Provision PAC</p>
 <p>If set, provisions the device </p>
 <table border="1" class="docutils">
@@ -1637,7 +1532,7 @@ and CoreWLAN will only return AirPort devices.</p>
 </table>
 </div>
 <div class="section" id="com.apple.wifi.managed-EAPFASTProvisionPACAnonymously-auto">
-<h3>EAPFASTProvisionPACAnonymously<a class="headerlink" href="#com.apple.wifi.managed-EAPFASTProvisionPACAnonymously-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id34">EAPFASTProvisionPACAnonymously</a><a class="headerlink" href="#com.apple.wifi.managed-EAPFASTProvisionPACAnonymously-auto" title="Permalink to this headline">¶</a></h3>
 <p>Provision PAC Anonymously</p>
 <p>If set, provisions the device anonymously. Note that there are known man-in-the-middle attacks for anonymous provisioning</p>
 <table border="1" class="docutils">
@@ -1674,9 +1569,9 @@ and CoreWLAN will only return AirPort devices.</p>
 </div>
 </div>
 <div class="section" id="keys-proxy">
-<h2>Keys (Proxy)<a class="headerlink" href="#keys-proxy" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id35">Keys (Proxy)</a><a class="headerlink" href="#keys-proxy" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="com.apple.wifi.managed-ProxyType-auto">
-<h3>ProxyType<a class="headerlink" href="#com.apple.wifi.managed-ProxyType-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id36">ProxyType</a><a class="headerlink" href="#com.apple.wifi.managed-ProxyType-auto" title="Permalink to this headline">¶</a></h3>
 <p>Proxy Type</p>
 <p>The type of proxy configuration to use for this wireless connection</p>
 <table border="1" class="docutils">
@@ -1718,7 +1613,7 @@ and CoreWLAN will only return AirPort devices.</p>
 </ul>
 </div>
 <div class="section" id="com.apple.wifi.managed-ProxyServer-auto">
-<h3>ProxyServer<a class="headerlink" href="#com.apple.wifi.managed-ProxyServer-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id37">ProxyServer</a><a class="headerlink" href="#com.apple.wifi.managed-ProxyServer-auto" title="Permalink to this headline">¶</a></h3>
 <p>Proxy Server</p>
 <p>The hostname of the proxy server</p>
 <table border="1" class="docutils">
@@ -1754,7 +1649,7 @@ and CoreWLAN will only return AirPort devices.</p>
 </table>
 </div>
 <div class="section" id="com.apple.wifi.managed-ProxyUsername-auto">
-<h3>ProxyUsername<a class="headerlink" href="#com.apple.wifi.managed-ProxyUsername-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id38">ProxyUsername</a><a class="headerlink" href="#com.apple.wifi.managed-ProxyUsername-auto" title="Permalink to this headline">¶</a></h3>
 <p>Proxy Username</p>
 <p>The username for proxy server authentication</p>
 <table border="1" class="docutils">
@@ -1790,7 +1685,7 @@ and CoreWLAN will only return AirPort devices.</p>
 </table>
 </div>
 <div class="section" id="com.apple.wifi.managed-ProxyServerPort-auto">
-<h3>ProxyServerPort<a class="headerlink" href="#com.apple.wifi.managed-ProxyServerPort-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id39">ProxyServerPort</a><a class="headerlink" href="#com.apple.wifi.managed-ProxyServerPort-auto" title="Permalink to this headline">¶</a></h3>
 <p>Proxy Server Port</p>
 <p>The port used to connect to the proxy server</p>
 <table border="1" class="docutils">
@@ -1826,7 +1721,7 @@ and CoreWLAN will only return AirPort devices.</p>
 </table>
 </div>
 <div class="section" id="com.apple.wifi.managed-ProxyPassword-auto">
-<h3>ProxyPassword<a class="headerlink" href="#com.apple.wifi.managed-ProxyPassword-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id40">ProxyPassword</a><a class="headerlink" href="#com.apple.wifi.managed-ProxyPassword-auto" title="Permalink to this headline">¶</a></h3>
 <p>Proxy Password</p>
 <p>The password to authenticate with the proxy</p>
 <table border="1" class="docutils">
@@ -1862,7 +1757,7 @@ and CoreWLAN will only return AirPort devices.</p>
 </table>
 </div>
 <div class="section" id="com.apple.wifi.managed-ProxyPACURL-auto">
-<h3>ProxyPACURL<a class="headerlink" href="#com.apple.wifi.managed-ProxyPACURL-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id41">ProxyPACURL</a><a class="headerlink" href="#com.apple.wifi.managed-ProxyPACURL-auto" title="Permalink to this headline">¶</a></h3>
 <p>Proxy Username</p>
 <p>URL used to recieve proxy settings</p>
 <table border="1" class="docutils">
@@ -1898,7 +1793,7 @@ and CoreWLAN will only return AirPort devices.</p>
 </table>
 </div>
 <div class="section" id="com.apple.wifi.managed-ProxyPACFallbackAllowed-auto">
-<h3>ProxyPACFallbackAllowed<a class="headerlink" href="#com.apple.wifi.managed-ProxyPACFallbackAllowed-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id42">ProxyPACFallbackAllowed</a><a class="headerlink" href="#com.apple.wifi.managed-ProxyPACFallbackAllowed-auto" title="Permalink to this headline">¶</a></h3>
 <p>Proxy PAC Fallback Allowed</p>
 <p>Proxy PAC Fallback Allowed</p>
 <table border="1" class="docutils">
@@ -1935,9 +1830,9 @@ and CoreWLAN will only return AirPort devices.</p>
 </div>
 </div>
 <div class="section" id="keys-qos">
-<h2>Keys (QoS)<a class="headerlink" href="#keys-qos" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id43">Keys (QoS)</a><a class="headerlink" href="#keys-qos" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="com.apple.wifi.managed-QoSMarkingPolicy-auto">
-<h3>QoSMarkingPolicy<a class="headerlink" href="#com.apple.wifi.managed-QoSMarkingPolicy-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id44">QoSMarkingPolicy</a><a class="headerlink" href="#com.apple.wifi.managed-QoSMarkingPolicy-auto" title="Permalink to this headline">¶</a></h3>
 <p>QoS Marking Policy</p>
 <p>Restrict fast lane QoS marking</p>
 <table border="1" class="docutils">
@@ -1975,7 +1870,7 @@ and CoreWLAN will only return AirPort devices.</p>
 <p>Available in iOS 10.0 and later. Not supported in macOS.</p>
 </div>
 <div class="section" id="links">
-<h2>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id45">Links</a><a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><a class="reference external" href="https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW30">Official Documentation</a>.</li>
 </ul>

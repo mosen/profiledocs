@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>APNs</key>
+			<array>
+				<dict>
+					<key>AllowedProtocolMask</key>
+					<integer>0</integer>
+					<key>AllowedProtocolMaskInDomesticRoaming</key>
+					<integer>0</integer>
+					<key>AllowedProtocolMaskInRoaming</key>
+					<integer>0</integer>
+					<key>AuthenticationType</key>
+					<string>PAP</string>
+					<key>DefaultProtocolMask</key>
+					<integer>0</integer>
+					<key>Name</key>
+					<string></string>
+					<key>Password</key>
+					<string></string>
+					<key>ProxyPort</key>
+					<integer>0</integer>
+					<key>ProxyServer</key>
+					<string></string>
+					<key>Username</key>
+					<string></string>
+				</dict>
+			</array>
+			<key>AttachAPN</key>
+			<dict>
+				<key>AuthenticationType</key>
+				<string>PAP</string>
+				<key>Name</key>
+				<string></string>
+				<key>Password</key>
+				<string></string>
+				<key>Username</key>
+				<string></string>
+			</dict>
+			<key>PayloadDescription</key>
+			<string>Configures cellular data settings</string>
+			<key>PayloadDisplayName</key>
+			<string>Cellular</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.cellular</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>com.apple.cellular</string>
+			<key>PayloadUUID</key>
+			<string></string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Example: Use this section to define custom APNs for cellular data access.</string>
+	<key>PayloadDisplayName</key>
+	<string>Example: Cellular</string>
+	<key>PayloadIdentifier</key>
+	<string>com.apple.cellular.example</string>
+	<key>PayloadOrganization</key>
+	<string>Example Organization</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>c5081471-0cd9-40a6-b87a-6d5e5f8bd3d4</string>
+</dict>
+</plist>

@@ -2,10 +2,11 @@
 
 VPN
 ===
+:download:`Template <../_static/examples/com.apple.vpn.managed.mobileconfig>`
+
+.. contents::
 
 .. pfmheader:: /_static/manifests/com.apple.vpn.managed manifest.plist
-
-.. pfm:: /_static/manifests/com.apple.vpn.managed manifest.plist
 
 Keys
 ----

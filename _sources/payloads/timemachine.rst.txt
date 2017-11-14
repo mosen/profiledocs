@@ -6,11 +6,12 @@ Time Machine
 
 Time machine settings.
 
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.MCX.TimeMachine manifest.plist
-.. pfm:: /_static/manifests/com.apple.MCX.TimeMachine manifest.plist
 
 Keys
 ----

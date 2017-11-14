@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>Password</key>
+			<string></string>
+			<key>PayloadDescription</key>
+			<string>AirPlay Security settings</string>
+			<key>PayloadDisplayName</key>
+			<string>AirPlay Security settings</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.airplay.security</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>com.apple.airplay.security</string>
+			<key>PayloadUUID</key>
+			<string></string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>SecurityType</key>
+			<string>PASSCODE_ONCE</string>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Example: Manages the AirPlay Security settings on Apple TV (Settings &gt; AirPlay &gt; Security)</string>
+	<key>PayloadDisplayName</key>
+	<string>Example: Apple TV AirPlay Security</string>
+	<key>PayloadIdentifier</key>
+	<string>com.apple.airplay.security.example</string>
+	<key>PayloadOrganization</key>
+	<string>Example Organization</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>6cdeeb74-1112-4036-97b6-313e16a59736</string>
+</dict>
+</plist>

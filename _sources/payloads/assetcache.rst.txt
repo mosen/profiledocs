@@ -6,11 +6,12 @@ AssetCache Client
 
 .. note:: TODO Key functionality still needs verification
 
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.assetcache.client.osx.profile.plugin manifest.plist
-.. pfm:: /_static/manifests/com.apple.assetcache.client.osx.profile.plugin manifest.plist
 
 Multiple Payloads
 -----------------

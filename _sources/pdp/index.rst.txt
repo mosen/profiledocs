@@ -7,6 +7,9 @@ of each PayloadType.
 Profile domain plugins live in ``/System/Library/CoreServices/ManagedClient.app/Contents/PlugIns``. More recently
 as of Sierra some have been added to ``/System/Library/ConfigurationProfiles/PlugIns``.
 
+In High Sierra, XPC Services are used instead, which are located within the ``ConfigurationProfiles.framework`` at
+``/System/Library/PrivateFrameworks/ConfigurationProfiles.framework/XPCServices``.
+
 
 .. toctree::
     :maxdepth: 2

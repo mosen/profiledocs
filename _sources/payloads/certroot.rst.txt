@@ -5,11 +5,12 @@ Certificate (Root CA)
 
 Alias for :ref:`payloadtype-com.apple.security.pkcs1`.
 
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.security.root manifest.plist
-.. pfm:: /_static/manifests/com.apple.security.root manifest.plist
 
 Keys
 ----

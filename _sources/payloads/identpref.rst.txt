@@ -8,11 +8,12 @@ an identity payload included in the same profile. It can only appear in a user p
 
 See also :ref:`payloadtype-com.apple.security.certificatepreference` for setting up certificate preferences.
 
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.security.identitypreference manifest.plist
-.. pfm:: /_static/manifests/com.apple.security.identitypreference manifest.plist
 
 Links
 -----

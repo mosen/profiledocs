@@ -9,6 +9,7 @@ Payloads
     activedirectory.rst
     adcert.rst
     airplay.rst
+    com.apple.airplay.security.rst
     airprint.rst
     applock.rst
     appstore.rst

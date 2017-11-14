@@ -1,11 +1,14 @@
 WebClip
 =======
 
+.. note:: On macOS this will create a .webloc file located in the documents area of the dock.
+
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: manifests/ac2/com.apple.webClip.managed manifest.plist
-.. pfm:: manifests/ac2/com.apple.webClip.managed manifest.plist
 
 Keys
 ----

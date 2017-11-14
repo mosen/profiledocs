@@ -24,8 +24,9 @@ the interface is working or not.
 .. warning:: If you change the active ethernet interface after the profile is installed, it will not apply to the
     newly active interface.
 
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.firstactiveethernet.managed manifest.plist
-.. pfm:: /_static/manifests/com.apple.firstactiveethernet.managed manifest.plist

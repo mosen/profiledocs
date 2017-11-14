@@ -94,6 +94,7 @@
 <li class="toctree-l2"><a class="reference internal" href="activedirectory.html">Active Directory</a></li>
 <li class="toctree-l2"><a class="reference internal" href="adcert.html">Active Directory Certificate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="airplay.html">AirPlay</a></li>
+<li class="toctree-l2"><a class="reference internal" href="com.apple.airplay.security.html">AirPlay Security</a></li>
 <li class="toctree-l2"><a class="reference internal" href="airprint.html">AirPrint</a></li>
 <li class="toctree-l2"><a class="reference internal" href="applock.html">App Lock</a></li>
 <li class="toctree-l2"><a class="reference internal" href="appstore.html">App Store</a></li>
@@ -177,7 +178,7 @@
 <li class="toctree-l2"><a class="reference internal" href="perappvpn.html">Per-App VPN</a></li>
 <li class="toctree-l2"><a class="reference internal" href="appmapping.html">App-to-Per-App VPN Mapping</a></li>
 <li class="toctree-l2"><a class="reference internal" href="defaults.html">iOS Defaults</a></li>
-<li class="toctree-l2"><a class="reference internal" href="parentalcontrols.html">Parental Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parentalcontrols.html">Application Access</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parental-timelimits.html">Parental Controls - Time Limits</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parental-contentfilter.html">Parental Controls - Content Filter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="profileremovalpassword.html">Profile Removal Password</a></li>
@@ -263,15 +264,48 @@
            <div itemprop="articleBody">
             
   <div class="section" id="exchange">
-<span id="payloadtype-com-apple-eas-account"></span><h1>Exchange<a class="headerlink" href="#exchange" title="Permalink to this headline">¶</a></h1>
+<span id="payloadtype-com-apple-eas-account"></span><h1><a class="toc-backref" href="#id1">Exchange</a><a class="headerlink" href="#exchange" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference download internal" href="../_downloads/com.apple.eas.account.mobileconfig" download=""><code class="xref download docutils literal"><span class="pre">Template</span></code></a></p>
 <p>In iOS, the Exchange payload is designated by specifying <strong>com.apple.eas.account</strong> as the PayloadType value. This payload configures an Exchange Active Sync account on the device.</p>
 <p>In macOS, the Exchange payload is designated by specifying <strong>com.apple.ews.account</strong> as the PayloadType value. This payload will configure an Exchange Web Services account for Contacts, Mail, Notes, Reminders, and Calendar.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">As with VPN and Wi-Fi configurations, it is possible to associate an SCEP credential with an Exchange configuration via the PayloadCertificateUUID key.</p>
 </div>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#exchange" id="id1">Exchange</a><ul>
+<li><a class="reference internal" href="#summary" id="id2">Summary</a></li>
+<li><a class="reference internal" href="#keys" id="id3">Keys</a><ul>
+<li><a class="reference internal" href="#com.apple.eas.account-Certificate-auto" id="id4">Certificate</a></li>
+<li><a class="reference internal" href="#com.apple.eas.account-CertificateName-auto" id="id5">CertificateName</a></li>
+<li><a class="reference internal" href="#com.apple.eas.account-CertificatePassword-auto" id="id6">CertificatePassword</a></li>
+<li><a class="reference internal" href="#com.apple.eas.account-PayloadCertificateUUID-auto" id="id7">PayloadCertificateUUID</a></li>
+<li><a class="reference internal" href="#com.apple.eas.account-Host-auto" id="id8">Host</a></li>
+<li><a class="reference internal" href="#com.apple.eas.account-MailNumberOfPastDaysToSync-auto" id="id9">MailNumberOfPastDaysToSync</a></li>
+<li><a class="reference internal" href="#com.apple.eas.account-SSL-auto" id="id10">SSL</a></li>
+<li><a class="reference internal" href="#com.apple.eas.account-EmailAddress-auto" id="id11">EmailAddress</a></li>
+<li><a class="reference internal" href="#com.apple.eas.account-UserName-auto" id="id12">UserName</a></li>
+<li><a class="reference internal" href="#com.apple.eas.account-Password-auto" id="id13">Password</a></li>
+<li><a class="reference internal" href="#com.apple.eas.account-PreventMove-auto" id="id14">PreventMove</a></li>
+<li><a class="reference internal" href="#com.apple.eas.account-PreventAppSheet-auto" id="id15">PreventAppSheet</a></li>
+<li><a class="reference internal" href="#com.apple.eas.account-allowMailDrop-auto" id="id16">allowMailDrop</a></li>
+<li><a class="reference internal" href="#com.apple.eas.account-SMIMEEnabled-auto" id="id17">SMIMEEnabled</a></li>
+<li><a class="reference internal" href="#com.apple.eas.account-SMIMEEnablePerMessageSwitch-auto" id="id18">SMIMEEnablePerMessageSwitch</a></li>
+<li><a class="reference internal" href="#com.apple.eas.account-SMIMESigningCertificateUUID-auto" id="id19">SMIMESigningCertificateUUID</a></li>
+<li><a class="reference internal" href="#com.apple.eas.account-SMIMEEncryptionCertificateUUID-auto" id="id20">SMIMEEncryptionCertificateUUID</a></li>
+<li><a class="reference internal" href="#com.apple.eas.account-disableMailRecentsSyncing-auto" id="id21">disableMailRecentsSyncing</a></li>
+<li><a class="reference internal" href="#com.apple.eas.account-CommunicationServiceRules-auto" id="id22">CommunicationServiceRules</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#links" id="id23">Links</a></li>
+</ul>
+</li>
+</ul>
+</div>
 <div class="section" id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id2">Summary</a><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -294,144 +328,11 @@
 </tr>
 </tbody>
 </table>
-<table border="1" class="docutils">
-<colgroup>
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="43%" />
-<col width="14%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Name</th>
-<th class="head">Type</th>
-<th class="head">Title</th>
-<th class="head">Description</th>
-<th class="head">Required</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>Certificate</td>
-<td>data</td>
-<td>Authentication Credential</td>
-<td>For accounts that allow authentication via certificate, a p12 identity certificate in NSData blob format DEPRECATED</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>CertificateName</td>
-<td>string</td>
-<td>Authentication Credential Name</td>
-<td>Name or description of the credential for ActiveSync DEPRECATED</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>CertificatePassword</td>
-<td>string</td>
-<td>Authentication Credential Password</td>
-<td>The password necessary for the p12 identity certificate. Use only with encrypted profiles DEPRECATED</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>PayloadCertificateUUID</td>
-<td>string</td>
-<td>Payload Certificate UUID</td>
-<td>UUID of the certificate to use for authentication</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>Host</td>
-<td>string</td>
-<td>Exchange ActiveSync Host</td>
-<td>The Exchange server host name or IP address</td>
-<td>always</td>
-</tr>
-<tr class="row-odd"><td>MailNumberOfPastDaysToSync</td>
-<td>integer</td>
-<td>Past Days of Mail to Sync</td>
-<td>The number of past days of mail to synchronzie</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>SSL</td>
-<td>boolean</td>
-<td>Use SSL</td>
-<td>Send all communication through Secure Socket Layer</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>EmailAddress</td>
-<td>string</td>
-<td>Email Address</td>
-<td>The address of the account (e.g. &#8220;john&#64;company.com)</td>
-<td>push</td>
-</tr>
-<tr class="row-even"><td>UserName</td>
-<td>string</td>
-<td>User</td>
-<td>User for the account. Domain and User must be blank for device to prompt for user</td>
-<td>push</td>
-</tr>
-<tr class="row-odd"><td>Password</td>
-<td>string</td>
-<td>Password</td>
-<td>The password for the account</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>PreventMove</td>
-<td>boolean</td>
-<td>Prevent Move</td>
-<td> If set to true, messages may not be moved out of this email account into another account.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>PreventAppSheet</td>
-<td>boolean</td>
-<td>Prevent App Sheet</td>
-<td>If set to true, this account will not be available for sending mail in third party applications</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>allowMailDrop</td>
-<td>boolean</td>
-<td>Allow Mail Drop</td>
-<td>If set to true, this account is allowed to use Mail Drop.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>SMIMEEnabled</td>
-<td>boolean</td>
-<td>S/MIME Enabled</td>
-<td>If set to true, this account will support S/MIME</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>SMIMEEnablePerMessageSwitch</td>
-<td>boolean</td>
-<td>S/MIME Enable Per-Message Switch</td>
-<td>If set to true, enable the per-message encryption switch.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>SMIMESigningCertificateUUID</td>
-<td>string</td>
-<td>S/MIME Signing Certificate</td>
-<td>The PayloadUUID of the identity certificate used to sign messages sent from this account.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>SMIMEEncryptionCertificateUUID</td>
-<td>string</td>
-<td>S/MIME Encryption Certificate</td>
-<td>The PayloadUUID of the identity certificate used to decrypt messages coming into this account.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>disableMailRecentsSyncing</td>
-<td>boolean</td>
-<td>Disable Mail Recents Syncing</td>
-<td>If set to true, this account is excluded from address Recents syncing.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>CommunicationServiceRules</td>
-<td>dictionary</td>
-<td>Communication Service Rules</td>
-<td></td>
-<td>n/a</td>
-</tr>
-</tbody>
-</table>
 </div>
 <div class="section" id="keys">
-<h2>Keys<a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id3">Keys</a><a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="com.apple.eas.account-Certificate-auto">
-<h3>Certificate<a class="headerlink" href="#com.apple.eas.account-Certificate-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id4">Certificate</a><a class="headerlink" href="#com.apple.eas.account-Certificate-auto" title="Permalink to this headline">¶</a></h3>
 <p>Authentication Credential</p>
 <p>For accounts that allow authentication via certificate, a p12 identity certificate in NSData blob format DEPRECATED</p>
 <table border="1" class="docutils">
@@ -467,7 +368,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.eas.account-CertificateName-auto">
-<h3>CertificateName<a class="headerlink" href="#com.apple.eas.account-CertificateName-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id5">CertificateName</a><a class="headerlink" href="#com.apple.eas.account-CertificateName-auto" title="Permalink to this headline">¶</a></h3>
 <p>Authentication Credential Name</p>
 <p>Name or description of the credential for ActiveSync DEPRECATED</p>
 <table border="1" class="docutils">
@@ -503,7 +404,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.eas.account-CertificatePassword-auto">
-<h3>CertificatePassword<a class="headerlink" href="#com.apple.eas.account-CertificatePassword-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id6">CertificatePassword</a><a class="headerlink" href="#com.apple.eas.account-CertificatePassword-auto" title="Permalink to this headline">¶</a></h3>
 <p>Authentication Credential Password</p>
 <p>The password necessary for the p12 identity certificate. Use only with encrypted profiles DEPRECATED</p>
 <table border="1" class="docutils">
@@ -539,7 +440,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.eas.account-PayloadCertificateUUID-auto">
-<h3>PayloadCertificateUUID<a class="headerlink" href="#com.apple.eas.account-PayloadCertificateUUID-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id7">PayloadCertificateUUID</a><a class="headerlink" href="#com.apple.eas.account-PayloadCertificateUUID-auto" title="Permalink to this headline">¶</a></h3>
 <p>Payload Certificate UUID</p>
 <p>UUID of the certificate to use for authentication</p>
 <table border="1" class="docutils">
@@ -575,7 +476,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.eas.account-Host-auto">
-<h3>Host<a class="headerlink" href="#com.apple.eas.account-Host-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id8">Host</a><a class="headerlink" href="#com.apple.eas.account-Host-auto" title="Permalink to this headline">¶</a></h3>
 <p>Exchange ActiveSync Host</p>
 <p>The Exchange server host name or IP address</p>
 <table border="1" class="docutils">
@@ -611,7 +512,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.eas.account-MailNumberOfPastDaysToSync-auto">
-<h3>MailNumberOfPastDaysToSync<a class="headerlink" href="#com.apple.eas.account-MailNumberOfPastDaysToSync-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id9">MailNumberOfPastDaysToSync</a><a class="headerlink" href="#com.apple.eas.account-MailNumberOfPastDaysToSync-auto" title="Permalink to this headline">¶</a></h3>
 <p>Past Days of Mail to Sync</p>
 <p>The number of past days of mail to synchronzie</p>
 <table border="1" class="docutils">
@@ -647,7 +548,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.eas.account-SSL-auto">
-<h3>SSL<a class="headerlink" href="#com.apple.eas.account-SSL-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id10">SSL</a><a class="headerlink" href="#com.apple.eas.account-SSL-auto" title="Permalink to this headline">¶</a></h3>
 <p>Use SSL</p>
 <p>Send all communication through Secure Socket Layer</p>
 <table border="1" class="docutils">
@@ -683,7 +584,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.eas.account-EmailAddress-auto">
-<h3>EmailAddress<a class="headerlink" href="#com.apple.eas.account-EmailAddress-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id11">EmailAddress</a><a class="headerlink" href="#com.apple.eas.account-EmailAddress-auto" title="Permalink to this headline">¶</a></h3>
 <p>Email Address</p>
 <p>The address of the account (e.g. &#8220;john&#64;company.com)</p>
 <table border="1" class="docutils">
@@ -719,7 +620,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.eas.account-UserName-auto">
-<h3>UserName<a class="headerlink" href="#com.apple.eas.account-UserName-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id12">UserName</a><a class="headerlink" href="#com.apple.eas.account-UserName-auto" title="Permalink to this headline">¶</a></h3>
 <p>User</p>
 <p>User for the account. Domain and User must be blank for device to prompt for user</p>
 <table border="1" class="docutils">
@@ -755,7 +656,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.eas.account-Password-auto">
-<h3>Password<a class="headerlink" href="#com.apple.eas.account-Password-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id13">Password</a><a class="headerlink" href="#com.apple.eas.account-Password-auto" title="Permalink to this headline">¶</a></h3>
 <p>Password</p>
 <p>The password for the account</p>
 <table border="1" class="docutils">
@@ -791,7 +692,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.eas.account-PreventMove-auto">
-<h3>PreventMove<a class="headerlink" href="#com.apple.eas.account-PreventMove-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id14">PreventMove</a><a class="headerlink" href="#com.apple.eas.account-PreventMove-auto" title="Permalink to this headline">¶</a></h3>
 <p>Prevent Move</p>
 <p> If set to true, messages may not be moved out of this email account into another account.</p>
 <table border="1" class="docutils">
@@ -827,7 +728,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.eas.account-PreventAppSheet-auto">
-<h3>PreventAppSheet<a class="headerlink" href="#com.apple.eas.account-PreventAppSheet-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id15">PreventAppSheet</a><a class="headerlink" href="#com.apple.eas.account-PreventAppSheet-auto" title="Permalink to this headline">¶</a></h3>
 <p>Prevent App Sheet</p>
 <p>If set to true, this account will not be available for sending mail in third party applications</p>
 <table border="1" class="docutils">
@@ -863,7 +764,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.eas.account-allowMailDrop-auto">
-<h3>allowMailDrop<a class="headerlink" href="#com.apple.eas.account-allowMailDrop-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id16">allowMailDrop</a><a class="headerlink" href="#com.apple.eas.account-allowMailDrop-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow Mail Drop</p>
 <p>If set to true, this account is allowed to use Mail Drop.</p>
 <table border="1" class="docutils">
@@ -899,7 +800,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.eas.account-SMIMEEnabled-auto">
-<h3>SMIMEEnabled<a class="headerlink" href="#com.apple.eas.account-SMIMEEnabled-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id17">SMIMEEnabled</a><a class="headerlink" href="#com.apple.eas.account-SMIMEEnabled-auto" title="Permalink to this headline">¶</a></h3>
 <p>S/MIME Enabled</p>
 <p>If set to true, this account will support S/MIME</p>
 <table border="1" class="docutils">
@@ -935,7 +836,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.eas.account-SMIMEEnablePerMessageSwitch-auto">
-<h3>SMIMEEnablePerMessageSwitch<a class="headerlink" href="#com.apple.eas.account-SMIMEEnablePerMessageSwitch-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id18">SMIMEEnablePerMessageSwitch</a><a class="headerlink" href="#com.apple.eas.account-SMIMEEnablePerMessageSwitch-auto" title="Permalink to this headline">¶</a></h3>
 <p>S/MIME Enable Per-Message Switch</p>
 <p>If set to true, enable the per-message encryption switch.</p>
 <table border="1" class="docutils">
@@ -971,7 +872,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.eas.account-SMIMESigningCertificateUUID-auto">
-<h3>SMIMESigningCertificateUUID<a class="headerlink" href="#com.apple.eas.account-SMIMESigningCertificateUUID-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id19">SMIMESigningCertificateUUID</a><a class="headerlink" href="#com.apple.eas.account-SMIMESigningCertificateUUID-auto" title="Permalink to this headline">¶</a></h3>
 <p>S/MIME Signing Certificate</p>
 <p>The PayloadUUID of the identity certificate used to sign messages sent from this account.</p>
 <table border="1" class="docutils">
@@ -1007,7 +908,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.eas.account-SMIMEEncryptionCertificateUUID-auto">
-<h3>SMIMEEncryptionCertificateUUID<a class="headerlink" href="#com.apple.eas.account-SMIMEEncryptionCertificateUUID-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id20">SMIMEEncryptionCertificateUUID</a><a class="headerlink" href="#com.apple.eas.account-SMIMEEncryptionCertificateUUID-auto" title="Permalink to this headline">¶</a></h3>
 <p>S/MIME Encryption Certificate</p>
 <p>The PayloadUUID of the identity certificate used to decrypt messages coming into this account.</p>
 <table border="1" class="docutils">
@@ -1043,7 +944,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.eas.account-disableMailRecentsSyncing-auto">
-<h3>disableMailRecentsSyncing<a class="headerlink" href="#com.apple.eas.account-disableMailRecentsSyncing-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id21">disableMailRecentsSyncing</a><a class="headerlink" href="#com.apple.eas.account-disableMailRecentsSyncing-auto" title="Permalink to this headline">¶</a></h3>
 <p>Disable Mail Recents Syncing</p>
 <p>If set to true, this account is excluded from address Recents syncing.</p>
 <table border="1" class="docutils">
@@ -1079,7 +980,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.eas.account-CommunicationServiceRules-auto">
-<h3>CommunicationServiceRules<a class="headerlink" href="#com.apple.eas.account-CommunicationServiceRules-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id22">CommunicationServiceRules</a><a class="headerlink" href="#com.apple.eas.account-CommunicationServiceRules-auto" title="Permalink to this headline">¶</a></h3>
 <p>Communication Service Rules</p>
 <p></p>
 <table border="1" class="docutils">
@@ -1116,7 +1017,7 @@
 </div>
 </div>
 <div class="section" id="links">
-<h2>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id23">Links</a><a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><a class="reference external" href="https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW25">Official Documentation</a>.</li>
 </ul>

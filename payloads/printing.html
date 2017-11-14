@@ -94,6 +94,7 @@
 <li class="toctree-l2"><a class="reference internal" href="activedirectory.html">Active Directory</a></li>
 <li class="toctree-l2"><a class="reference internal" href="adcert.html">Active Directory Certificate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="airplay.html">AirPlay</a></li>
+<li class="toctree-l2"><a class="reference internal" href="com.apple.airplay.security.html">AirPlay Security</a></li>
 <li class="toctree-l2"><a class="reference internal" href="airprint.html">AirPrint</a></li>
 <li class="toctree-l2"><a class="reference internal" href="applock.html">App Lock</a></li>
 <li class="toctree-l2"><a class="reference internal" href="appstore.html">App Store</a></li>
@@ -168,7 +169,7 @@
 <li class="toctree-l2"><a class="reference internal" href="perappvpn.html">Per-App VPN</a></li>
 <li class="toctree-l2"><a class="reference internal" href="appmapping.html">App-to-Per-App VPN Mapping</a></li>
 <li class="toctree-l2"><a class="reference internal" href="defaults.html">iOS Defaults</a></li>
-<li class="toctree-l2"><a class="reference internal" href="parentalcontrols.html">Parental Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parentalcontrols.html">Application Access</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parental-timelimits.html">Parental Controls - Time Limits</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parental-contentfilter.html">Parental Controls - Content Filter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="profileremovalpassword.html">Profile Removal Password</a></li>
@@ -254,11 +255,38 @@
            <div itemprop="articleBody">
             
   <div class="section" id="printing">
-<span id="payloadtype-com-apple-mcxprinting"></span><h1>Printing<a class="headerlink" href="#printing" title="Permalink to this headline">¶</a></h1>
+<span id="payloadtype-com-apple-mcxprinting"></span><h1><a class="toc-backref" href="#id1">Printing</a><a class="headerlink" href="#printing" title="Permalink to this headline">¶</a></h1>
 <p>The printing payload manages printers that should be added to the user&#8217;s computer, as well as restrictions on how the
 user may print.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If the model or PPD does not exist at the time the profile is installed, it will use a Generic PostScript driver.</p>
+</div>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#printing" id="id1">Printing</a><ul>
+<li><a class="reference internal" href="#summary" id="id2">Summary</a></li>
+<li><a class="reference internal" href="#keys" id="id3">Keys</a><ul>
+<li><a class="reference internal" href="#com.apple.mcxprinting-DefaultPrinter-auto" id="id4">DefaultPrinter</a></li>
+<li><a class="reference internal" href="#com.apple.mcxprinting-UserPrinterList-auto" id="id5">UserPrinterList</a></li>
+<li><a class="reference internal" href="#com.apple.mcxprinting-RequireAdminToAddPrinters-auto" id="id6">RequireAdminToAddPrinters</a></li>
+<li><a class="reference internal" href="#com.apple.mcxprinting-AllowLocalPrinters-auto" id="id7">AllowLocalPrinters</a></li>
+<li><a class="reference internal" href="#com.apple.mcxprinting-RequireAdminToPrintLocally-auto" id="id8">RequireAdminToPrintLocally</a></li>
+<li><a class="reference internal" href="#com.apple.mcxprinting-ShowOnlyManagedPrinters-auto" id="id9">ShowOnlyManagedPrinters</a></li>
+<li><a class="reference internal" href="#com.apple.mcxprinting-PrintFooter-auto" id="id10">PrintFooter</a></li>
+<li><a class="reference internal" href="#com.apple.mcxprinting-PrintMACAddress-auto" id="id11">PrintMACAddress</a></li>
+<li><a class="reference internal" href="#com.apple.mcxprinting-FooterFontSize-auto" id="id12">FooterFontSize</a></li>
+<li><a class="reference internal" href="#com.apple.mcxprinting-FooterFontName-auto" id="id13">FooterFontName</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#links" id="id14">Links</a></li>
+</ul>
+</li>
+</ul>
+</div>
 <div class="section" id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id2">Summary</a><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -281,90 +309,11 @@ user may print.</p>
 </tr>
 </tbody>
 </table>
-<table border="1" class="docutils">
-<colgroup>
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="43%" />
-<col width="14%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Name</th>
-<th class="head">Type</th>
-<th class="head">Title</th>
-<th class="head">Description</th>
-<th class="head">Required</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>DefaultPrinter</td>
-<td>dict</td>
-<td>Default Printer Configuration</td>
-<td>Default Printer Configuration</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>UserPrinterList</td>
-<td>dict</td>
-<td>Installed Printers</td>
-<td>A list of printers to manage. The PPD software must already exist on the target</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>RequireAdminToAddPrinters</td>
-<td>boolean</td>
-<td>Modification Requires Administrator</td>
-<td>Only administrators may modify the printer list</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>AllowLocalPrinters</td>
-<td>boolean</td>
-<td>Allow Local Printers</td>
-<td>Allow printers that connect directly to user&#8217;s computer</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>RequireAdminToPrintLocally</td>
-<td>boolean</td>
-<td>Require administrator password to print locally</td>
-<td>Require an administrator password to print to locally connected printers</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>ShowOnlyManagedPrinters</td>
-<td>boolean</td>
-<td>Only show managed printers</td>
-<td>Only show printers managed by profiles</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>PrintFooter</td>
-<td>boolean</td>
-<td>Print page footer</td>
-<td>Print a page footer including the user name and date</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>PrintMACAddress</td>
-<td>boolean</td>
-<td>Include MAC Address on footer</td>
-<td>Include the MAC address of the user&#8217;s computer in the footer</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>FooterFontSize</td>
-<td>string</td>
-<td>Footer font size</td>
-<td>The font size (in points) of the footer</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>FooterFontName</td>
-<td>string</td>
-<td>Footer font name</td>
-<td>The name of the font to use for the footer eg. Courier</td>
-<td>n/a</td>
-</tr>
-</tbody>
-</table>
 </div>
 <div class="section" id="keys">
-<h2>Keys<a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id3">Keys</a><a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="com.apple.mcxprinting-DefaultPrinter-auto">
-<h3>DefaultPrinter<a class="headerlink" href="#com.apple.mcxprinting-DefaultPrinter-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id4">DefaultPrinter</a><a class="headerlink" href="#com.apple.mcxprinting-DefaultPrinter-auto" title="Permalink to this headline">¶</a></h3>
 <p>Default Printer Configuration</p>
 <p>Default Printer Configuration</p>
 <table border="1" class="docutils">
@@ -431,7 +380,7 @@ user may print.</p>
 </tbody>
 </table>
 <div class="section" id="com.apple.mcxprinting-UserPrinterList-auto">
-<h3>UserPrinterList<a class="headerlink" href="#com.apple.mcxprinting-UserPrinterList-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id5">UserPrinterList</a><a class="headerlink" href="#com.apple.mcxprinting-UserPrinterList-auto" title="Permalink to this headline">¶</a></h3>
 <p>Installed Printers</p>
 <p>A list of printers to manage. The PPD software must already exist on the target</p>
 <table border="1" class="docutils">
@@ -553,7 +502,7 @@ user may print.</p>
 </tbody>
 </table>
 <div class="section" id="com.apple.mcxprinting-RequireAdminToAddPrinters-auto">
-<h3>RequireAdminToAddPrinters<a class="headerlink" href="#com.apple.mcxprinting-RequireAdminToAddPrinters-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id6">RequireAdminToAddPrinters</a><a class="headerlink" href="#com.apple.mcxprinting-RequireAdminToAddPrinters-auto" title="Permalink to this headline">¶</a></h3>
 <p>Modification Requires Administrator</p>
 <p>Only administrators may modify the printer list</p>
 <table border="1" class="docutils">
@@ -589,7 +538,7 @@ user may print.</p>
 </table>
 </div>
 <div class="section" id="com.apple.mcxprinting-AllowLocalPrinters-auto">
-<h3>AllowLocalPrinters<a class="headerlink" href="#com.apple.mcxprinting-AllowLocalPrinters-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id7">AllowLocalPrinters</a><a class="headerlink" href="#com.apple.mcxprinting-AllowLocalPrinters-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow Local Printers</p>
 <p>Allow printers that connect directly to user&#8217;s computer</p>
 <table border="1" class="docutils">
@@ -625,7 +574,7 @@ user may print.</p>
 </table>
 </div>
 <div class="section" id="com.apple.mcxprinting-RequireAdminToPrintLocally-auto">
-<h3>RequireAdminToPrintLocally<a class="headerlink" href="#com.apple.mcxprinting-RequireAdminToPrintLocally-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id8">RequireAdminToPrintLocally</a><a class="headerlink" href="#com.apple.mcxprinting-RequireAdminToPrintLocally-auto" title="Permalink to this headline">¶</a></h3>
 <p>Require administrator password to print locally</p>
 <p>Require an administrator password to print to locally connected printers</p>
 <table border="1" class="docutils">
@@ -661,7 +610,7 @@ user may print.</p>
 </table>
 </div>
 <div class="section" id="com.apple.mcxprinting-ShowOnlyManagedPrinters-auto">
-<h3>ShowOnlyManagedPrinters<a class="headerlink" href="#com.apple.mcxprinting-ShowOnlyManagedPrinters-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id9">ShowOnlyManagedPrinters</a><a class="headerlink" href="#com.apple.mcxprinting-ShowOnlyManagedPrinters-auto" title="Permalink to this headline">¶</a></h3>
 <p>Only show managed printers</p>
 <p>Only show printers managed by profiles</p>
 <table border="1" class="docutils">
@@ -697,7 +646,7 @@ user may print.</p>
 </table>
 </div>
 <div class="section" id="com.apple.mcxprinting-PrintFooter-auto">
-<h3>PrintFooter<a class="headerlink" href="#com.apple.mcxprinting-PrintFooter-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id10">PrintFooter</a><a class="headerlink" href="#com.apple.mcxprinting-PrintFooter-auto" title="Permalink to this headline">¶</a></h3>
 <p>Print page footer</p>
 <p>Print a page footer including the user name and date</p>
 <table border="1" class="docutils">
@@ -733,7 +682,7 @@ user may print.</p>
 </table>
 </div>
 <div class="section" id="com.apple.mcxprinting-PrintMACAddress-auto">
-<h3>PrintMACAddress<a class="headerlink" href="#com.apple.mcxprinting-PrintMACAddress-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id11">PrintMACAddress</a><a class="headerlink" href="#com.apple.mcxprinting-PrintMACAddress-auto" title="Permalink to this headline">¶</a></h3>
 <p>Include MAC Address on footer</p>
 <p>Include the MAC address of the user&#8217;s computer in the footer</p>
 <table border="1" class="docutils">
@@ -769,7 +718,7 @@ user may print.</p>
 </table>
 </div>
 <div class="section" id="com.apple.mcxprinting-FooterFontSize-auto">
-<h3>FooterFontSize<a class="headerlink" href="#com.apple.mcxprinting-FooterFontSize-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id12">FooterFontSize</a><a class="headerlink" href="#com.apple.mcxprinting-FooterFontSize-auto" title="Permalink to this headline">¶</a></h3>
 <p>Footer font size</p>
 <p>The font size (in points) of the footer</p>
 <table border="1" class="docutils">
@@ -805,7 +754,7 @@ user may print.</p>
 </table>
 </div>
 <div class="section" id="com.apple.mcxprinting-FooterFontName-auto">
-<h3>FooterFontName<a class="headerlink" href="#com.apple.mcxprinting-FooterFontName-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id13">FooterFontName</a><a class="headerlink" href="#com.apple.mcxprinting-FooterFontName-auto" title="Permalink to this headline">¶</a></h3>
 <p>Footer font name</p>
 <p>The name of the font to use for the footer eg. Courier</p>
 <table border="1" class="docutils">
@@ -842,7 +791,7 @@ user may print.</p>
 </div>
 </div>
 <div class="section" id="links">
-<h2>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id14">Links</a><a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Setting print queue options (OUTDATED) <a class="reference external" href="https://support.apple.com/en-qa/HT200262">OS X Mavericks: Setting print queue authentication method via profile</a>.</li>
 </ul>

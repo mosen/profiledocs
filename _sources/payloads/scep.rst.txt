@@ -7,12 +7,12 @@ An SCEP payload automates the request of a client certificate from an SCEP serve
 
 .. note:: GetCACaps is mentioned in the documentation but not included in this manifest.
 
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.security.scep manifest.plist
-.. pfm:: /_static/manifests/com.apple.security.scep manifest.plist
-    :key: PayloadContent
 
 Keys
 ----

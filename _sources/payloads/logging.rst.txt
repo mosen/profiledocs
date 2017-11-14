@@ -10,11 +10,12 @@ Also see the :manpage:`log(1)` man page for more information about the configura
 
 Keys correspond to the directories under ``/Library/Preferences/Logging``.
 
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.system.logging manifest.plist
-.. pfm:: /_static/manifests/com.apple.system.logging manifest.plist
 
 Keys
 ----

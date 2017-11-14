@@ -3,9 +3,10 @@
 Voice Dictation
 ===============
 
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.ironwood.support manifest.plist
 
-.. pfm:: /_static/manifests/com.apple.ironwood.support manifest.plist

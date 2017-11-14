@@ -5,11 +5,12 @@ Screen Saver
 
 .. warning:: This manifest has been pulled from MCX and may not be up to date. Testing is in progress
 
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.screensaver manifest.plist
-.. pfm:: /_static/manifests/com.apple.screensaver manifest.plist
 
 Keys
 ----

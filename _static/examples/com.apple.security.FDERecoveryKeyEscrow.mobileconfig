@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>DeviceKey</key>
+			<string></string>
+			<key>EncryptCertPayloadUUID</key>
+			<string></string>
+			<key>Location</key>
+			<string></string>
+			<key>PayloadDescription</key>
+			<string>FileVault Recovery Key Escrow Payload</string>
+			<key>PayloadDisplayName</key>
+			<string>FileVault Recovery Key Escrow Payload</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.security.FDERecoveryKeyEscrow</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>com.apple.security.FDERecoveryKeyEscrow</string>
+			<key>PayloadUUID</key>
+			<string></string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Example: FileVault Recovery Key Escrow Payload</string>
+	<key>PayloadDisplayName</key>
+	<string>Example: FileVault Recovery Key Escrow Payload</string>
+	<key>PayloadIdentifier</key>
+	<string>com.apple.security.FDERecoveryKeyEscrow.example</string>
+	<key>PayloadOrganization</key>
+	<string>Example Organization</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>879dc4f7-a8e7-473d-a85d-ad978eb266bf</string>
+</dict>
+</plist>

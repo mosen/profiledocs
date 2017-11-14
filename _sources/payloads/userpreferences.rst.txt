@@ -8,8 +8,9 @@ More testing is required.
 
 .. warning:: This is an older style MCX payload and the keys have not been tested to work.
 
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.preferences.users manifest.plist
-.. pfm:: /_static/manifests/com.apple.preferences.users manifest.plist

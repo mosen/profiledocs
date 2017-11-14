@@ -1,11 +1,12 @@
 Single-Sign On
 ==============
 
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.sso manifest.plist
-.. pfm:: /_static/manifests/com.apple.sso manifest.plist
 
 Keys
 ----

@@ -8,11 +8,12 @@ A Restrictions payload allows the administrator to restrict the user from doing 
 
 The Restrictions payload is supported in iOS; some keys are also supported in macOS, as noted below.
 
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.applicationaccess manifest.plist
-.. pfm:: /_static/manifests/com.apple.applicationaccess manifest.plist
 
 Keys
 ----

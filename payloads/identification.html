@@ -94,6 +94,7 @@
 <li class="toctree-l2"><a class="reference internal" href="activedirectory.html">Active Directory</a></li>
 <li class="toctree-l2"><a class="reference internal" href="adcert.html">Active Directory Certificate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="airplay.html">AirPlay</a></li>
+<li class="toctree-l2"><a class="reference internal" href="com.apple.airplay.security.html">AirPlay Security</a></li>
 <li class="toctree-l2"><a class="reference internal" href="airprint.html">AirPrint</a></li>
 <li class="toctree-l2"><a class="reference internal" href="applock.html">App Lock</a></li>
 <li class="toctree-l2"><a class="reference internal" href="appstore.html">App Store</a></li>
@@ -163,7 +164,7 @@
 <li class="toctree-l2"><a class="reference internal" href="perappvpn.html">Per-App VPN</a></li>
 <li class="toctree-l2"><a class="reference internal" href="appmapping.html">App-to-Per-App VPN Mapping</a></li>
 <li class="toctree-l2"><a class="reference internal" href="defaults.html">iOS Defaults</a></li>
-<li class="toctree-l2"><a class="reference internal" href="parentalcontrols.html">Parental Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parentalcontrols.html">Application Access</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parental-timelimits.html">Parental Controls - Time Limits</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parental-contentfilter.html">Parental Controls - Content Filter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="profileremovalpassword.html">Profile Removal Password</a></li>
@@ -249,12 +250,30 @@
            <div itemprop="articleBody">
             
   <div class="section" id="payloadtype-com-apple-configurationprofile-identification">
-<span id="identification"></span><h1>Identification<a class="headerlink" href="#payloadtype-com-apple-configurationprofile-identification" title="Permalink to this headline">¶</a></h1>
+<span id="identification"></span><h1><a class="toc-backref" href="#id1">Identification</a><a class="headerlink" href="#payloadtype-com-apple-configurationprofile-identification" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference download internal" href="../_downloads/com.apple.configurationprofile.identification.mobileconfig" download=""><code class="xref download docutils literal"><span class="pre">Template</span></code></a></p>
 <p>This payload allows you to save names of the account user and prompt text. If left blank, the user has to provide this information when he or she installs the profile.</p>
 <p>The Identification payload is not supported in iOS.</p>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#payloadtype-com-apple-configurationprofile-identification" id="id1">Identification</a><ul>
+<li><a class="reference internal" href="#summary" id="id2">Summary</a></li>
+<li><a class="reference internal" href="#keys" id="id3">Keys</a><ul>
+<li><a class="reference internal" href="#com.apple.configurationprofile.identification-FullName-auto" id="id4">FullName</a></li>
+<li><a class="reference internal" href="#com.apple.configurationprofile.identification-EmailAddress-auto" id="id5">EmailAddress</a></li>
+<li><a class="reference internal" href="#com.apple.configurationprofile.identification-UserName-auto" id="id6">UserName</a></li>
+<li><a class="reference internal" href="#com.apple.configurationprofile.identification-Password-auto" id="id7">Password</a></li>
+<li><a class="reference internal" href="#com.apple.configurationprofile.identification-Prompt-auto" id="id8">Prompt</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#links" id="id9">Links</a></li>
+</ul>
+</li>
+</ul>
+</div>
 <div class="section" id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id2">Summary</a><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -277,72 +296,11 @@
 </tr>
 </tbody>
 </table>
-<table border="1" class="docutils">
-<colgroup>
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="43%" />
-<col width="14%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Name</th>
-<th class="head">Type</th>
-<th class="head">Title</th>
-<th class="head">Description</th>
-<th class="head">Required</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>FullName</td>
-<td>string</td>
-<td>Full Name</td>
-<td>The full name of the designated accounts.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>EmailAddress</td>
-<td>string</td>
-<td>E-mail address</td>
-<td>The address for the accounts.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>UserName</td>
-<td>string</td>
-<td>Username</td>
-<td>The UNIX user name for the accounts.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>Password</td>
-<td>string</td>
-<td>Password</td>
-<td>You can provide the password or choose to have the user provide it when he or she installs the profile.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>AuthMethod</td>
-<td>string</td>
-<td>Authentication Method</td>
-<td>Allow the user to enter the password upon installation instead of being supplied in the payload</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>Prompt</td>
-<td>string</td>
-<td>Prompt</td>
-<td>Short prompt text</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>PromptMessage</td>
-<td>string</td>
-<td>Prompt Message</td>
-<td>Additional prompt description.</td>
-<td>n/a</td>
-</tr>
-</tbody>
-</table>
 </div>
 <div class="section" id="keys">
-<h2>Keys<a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id3">Keys</a><a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="com.apple.configurationprofile.identification-FullName-auto">
-<h3>FullName<a class="headerlink" href="#com.apple.configurationprofile.identification-FullName-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id4">FullName</a><a class="headerlink" href="#com.apple.configurationprofile.identification-FullName-auto" title="Permalink to this headline">¶</a></h3>
 <p>Full Name</p>
 <p>The full name of the designated accounts.</p>
 <table border="1" class="docutils">
@@ -378,7 +336,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.configurationprofile.identification-EmailAddress-auto">
-<h3>EmailAddress<a class="headerlink" href="#com.apple.configurationprofile.identification-EmailAddress-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id5">EmailAddress</a><a class="headerlink" href="#com.apple.configurationprofile.identification-EmailAddress-auto" title="Permalink to this headline">¶</a></h3>
 <p>E-mail address</p>
 <p>The address for the accounts.</p>
 <table border="1" class="docutils">
@@ -414,7 +372,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.configurationprofile.identification-UserName-auto">
-<h3>UserName<a class="headerlink" href="#com.apple.configurationprofile.identification-UserName-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id6">UserName</a><a class="headerlink" href="#com.apple.configurationprofile.identification-UserName-auto" title="Permalink to this headline">¶</a></h3>
 <p>Username</p>
 <p>The UNIX user name for the accounts.</p>
 <table border="1" class="docutils">
@@ -450,7 +408,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.configurationprofile.identification-Password-auto">
-<h3>Password<a class="headerlink" href="#com.apple.configurationprofile.identification-Password-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id7">Password</a><a class="headerlink" href="#com.apple.configurationprofile.identification-Password-auto" title="Permalink to this headline">¶</a></h3>
 <p>Password</p>
 <p>You can provide the password or choose to have the user provide it when he or she installs the profile.</p>
 <table border="1" class="docutils">
@@ -486,7 +444,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.configurationprofile.identification-Prompt-auto">
-<h3>Prompt<a class="headerlink" href="#com.apple.configurationprofile.identification-Prompt-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id8">Prompt</a><a class="headerlink" href="#com.apple.configurationprofile.identification-Prompt-auto" title="Permalink to this headline">¶</a></h3>
 <p>Prompt</p>
 <p>Short prompt text</p>
 <table border="1" class="docutils">
@@ -523,7 +481,7 @@
 </div>
 </div>
 <div class="section" id="links">
-<h2>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id9">Links</a><a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><a class="reference external" href="https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW10">Official Documentation</a>.</li>
 </ul>

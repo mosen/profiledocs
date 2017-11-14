@@ -102,6 +102,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#pfm-range-max">pfm_range_max</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pfm-format">pfm_format</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pfm-require">pfm_require</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pfm-required">pfm_required</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pfm-repetition-min">pfm_repetition_min</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pfm-repetition-max">pfm_repetition_max</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pfm-exclude">pfm_exclude</a></li>
@@ -300,6 +301,7 @@ If the <strong>pfm_type</strong> is array or dict it can contain an entire struc
 <dt>Type</dt>
 <dd><strong>Integer</strong> or <strong>Real</strong> maximum value (if <strong>pfm_type</strong> is integer or real)</dd>
 </dl>
+<p>There exist a typo in some manifests where this key is named: &#8220;pmf_range_max&#8221;</p>
 </div>
 <div class="section" id="pfm-format">
 <h3>pfm_format<a class="headerlink" href="#pfm-format" title="Permalink to this headline">¶</a></h3>
@@ -323,6 +325,17 @@ If the <strong>pfm_type</strong> is array or dict it can contain an entire struc
 <dd>automatically, the profile installation will fail.</dd>
 </dl>
 </li>
+</ul>
+</div>
+<div class="section" id="pfm-required">
+<h3>pfm_required<a class="headerlink" href="#pfm-required" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Type</dt>
+<dd>Boolean or String &#8220;always&#8221;</dd>
+</dl>
+<p>Indicates whether this key is required to be present.</p>
+<ul class="simple">
+<li>Always or boolean true means that the key is absolutely required.</li>
 </ul>
 </div>
 <div class="section" id="pfm-repetition-min">

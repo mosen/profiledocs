@@ -6,11 +6,12 @@ Domains
 
 This payload defines domains that are under an enterprise’s management.
 
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.domains manifest.plist
-.. pfm:: /_static/manifests/com.apple.domains manifest.plist
 
 Keys
 ----

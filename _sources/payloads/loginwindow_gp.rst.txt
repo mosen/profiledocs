@@ -6,9 +6,10 @@ Loginwindow (GlobalPreferences)
 
 The ``GlobalPreferences`` payload is used to enable Fast user switching and to set an automatic logout period.
 
+.. contents::
 
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/GlobalPreferences manifest.plist
-.. pfm:: /_static/manifests/GlobalPreferences manifest.plist
+

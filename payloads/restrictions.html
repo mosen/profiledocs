@@ -94,6 +94,7 @@
 <li class="toctree-l2"><a class="reference internal" href="activedirectory.html">Active Directory</a></li>
 <li class="toctree-l2"><a class="reference internal" href="adcert.html">Active Directory Certificate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="airplay.html">AirPlay</a></li>
+<li class="toctree-l2"><a class="reference internal" href="com.apple.airplay.security.html">AirPlay Security</a></li>
 <li class="toctree-l2"><a class="reference internal" href="airprint.html">AirPrint</a></li>
 <li class="toctree-l2"><a class="reference internal" href="applock.html">App Lock</a></li>
 <li class="toctree-l2"><a class="reference internal" href="appstore.html">App Store</a></li>
@@ -151,7 +152,7 @@
 <li class="toctree-l2"><a class="reference internal" href="perappvpn.html">Per-App VPN</a></li>
 <li class="toctree-l2"><a class="reference internal" href="appmapping.html">App-to-Per-App VPN Mapping</a></li>
 <li class="toctree-l2"><a class="reference internal" href="defaults.html">iOS Defaults</a></li>
-<li class="toctree-l2"><a class="reference internal" href="parentalcontrols.html">Parental Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parentalcontrols.html">Application Access</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parental-timelimits.html">Parental Controls - Time Limits</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parental-contentfilter.html">Parental Controls - Content Filter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="profileremovalpassword.html">Profile Removal Password</a></li>
@@ -321,12 +322,102 @@
            <div itemprop="articleBody">
             
   <div class="section" id="restrictions">
-<span id="payloadtype-com-apple-applicationaccess"></span><h1>Restrictions<a class="headerlink" href="#restrictions" title="Permalink to this headline">¶</a></h1>
+<span id="payloadtype-com-apple-applicationaccess"></span><h1><a class="toc-backref" href="#id1">Restrictions</a><a class="headerlink" href="#restrictions" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference download internal" href="../_downloads/com.apple.applicationaccess.mobileconfig" download=""><code class="xref download docutils literal"><span class="pre">Template</span></code></a></p>
 <p>A Restrictions payload allows the administrator to restrict the user from doing certain things with the device, such as using the camera.</p>
 <p>The Restrictions payload is supported in iOS; some keys are also supported in macOS, as noted below.</p>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#restrictions" id="id1">Restrictions</a><ul>
+<li><a class="reference internal" href="#summary" id="id2">Summary</a></li>
+<li><a class="reference internal" href="#keys" id="id3">Keys</a><ul>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowAppInstallation-auto" id="id4">allowAppInstallation</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowUIAppInstallation-auto" id="id5">allowUIAppInstallation</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowAutomaticAppDownloads-auto" id="id6">allowAutomaticAppDownloads</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowAppRemoval-auto" id="id7">allowAppRemoval</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowEnterpriseAppTrust-auto" id="id8">allowEnterpriseAppTrust</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowCamera-auto" id="id9">allowCamera</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowExplicitContent-auto" id="id10">allowExplicitContent</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowScreenShot-auto" id="id11">allowScreenShot</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowRemoteScreenObservation-auto" id="id12">allowRemoteScreenObservation</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowChat-auto" id="id13">allowChat</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowBookstore-auto" id="id14">allowBookstore</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowBookstoreErotica-auto" id="id15">allowBookstoreErotica</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowMusicService-auto" id="id16">allowMusicService</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowRadioService-auto" id="id17">allowRadioService</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowSharedStream-auto" id="id18">allowSharedStream</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowPassbookWhileLocked-auto" id="id19">allowPassbookWhileLocked</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowUIConfigurationProfileInstallation-auto" id="id20">allowUIConfigurationProfileInstallation</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowiTunes-auto" id="id21">allowiTunes</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowNews-auto" id="id22">allowNews</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowSafari-auto" id="id23">allowSafari</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowGameCenter-auto" id="id24">allowGameCenter</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowAddingGameCenterFriends-auto" id="id25">allowAddingGameCenterFriends</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowBluetoothModification-auto" id="id26">allowBluetoothModification</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowAppCellularDataModification-auto" id="id27">allowAppCellularDataModification</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowDeviceNameModification-auto" id="id28">allowDeviceNameModification</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowPasscodeModification-auto" id="id29">allowPasscodeModification</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowWallpaperModification-auto" id="id30">allowWallpaperModification</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowEnablingRestrictions-auto" id="id31">allowEnablingRestrictions</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowGlobalBackgroundFetchWhenRoaming-auto" id="id32">allowGlobalBackgroundFetchWhenRoaming</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowManagedAppsCloudSync-auto" id="id33">allowManagedAppsCloudSync</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowEnterpriseBookBackup-auto" id="id34">allowEnterpriseBookBackup</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowEnterpriseBookMetadataSync-auto" id="id35">allowEnterpriseBookMetadataSync</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowInAppPurchases-auto" id="id36">allowInAppPurchases</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowMultiplayerGaming-auto" id="id37">allowMultiplayerGaming</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowVideoConferencing-auto" id="id38">allowVideoConferencing</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowVoiceDialing-auto" id="id39">allowVoiceDialing</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-forceEncryptedBackup-auto" id="id40">forceEncryptedBackup</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-forceWatchWristDetection-auto" id="id41">forceWatchWristDetection</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowPairedWatch-auto" id="id42">allowPairedWatch</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowEraseContentAndSettings-auto" id="id43">allowEraseContentAndSettings</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowSpotlightInternetResults-auto" id="id44">allowSpotlightInternetResults</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowCloudDocumentSync-auto" id="id45">allowCloudDocumentSync</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowUntrustedTLSPrompt-auto" id="id46">allowUntrustedTLSPrompt</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowDiagnosticSubmission-auto" id="id47">allowDiagnosticSubmission</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowDiagnosticSubmissionModification-auto" id="id48">allowDiagnosticSubmissionModification</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowPhotoStream-auto" id="id49">allowPhotoStream</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowCloudPhotoLibrary-auto" id="id50">allowCloudPhotoLibrary</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowCloudBackup-auto" id="id51">allowCloudBackup</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-forceITunesStorePasswordEntry-auto" id="id52">forceITunesStorePasswordEntry</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-ratingApps-auto" id="id53">ratingApps</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-ratingMovies-auto" id="id54">ratingMovies</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-ratingTVShows-auto" id="id55">ratingTVShows</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-ratingRegion-auto" id="id56">ratingRegion</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-safariAcceptCookies-auto" id="id57">safariAcceptCookies</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-safariAllowAutoFill-auto" id="id58">safariAllowAutoFill</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-safariAllowJavaScript-auto" id="id59">safariAllowJavaScript</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-safariAllowPopups-auto" id="id60">safariAllowPopups</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-safariForceFraudWarning-auto" id="id61">safariForceFraudWarning</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowAssistant-auto" id="id62">allowAssistant</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowAssistantWhileLocked-auto" id="id63">allowAssistantWhileLocked</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-forceAssistantProfanityFilter-auto" id="id64">forceAssistantProfanityFilter</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowPredictiveKeyboard-auto" id="id65">allowPredictiveKeyboard</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowKeyboardShortcuts-auto" id="id66">allowKeyboardShortcuts</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowAutoCorrection-auto" id="id67">allowAutoCorrection</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowSpellCheck-auto" id="id68">allowSpellCheck</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowDefinitionLookup-auto" id="id69">allowDefinitionLookup</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowOpenFromUnmanagedToManaged-auto" id="id70">allowOpenFromUnmanagedToManaged</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowOpenFromManagedToUnmanaged-auto" id="id71">allowOpenFromManagedToUnmanaged</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-forceAirDropUnmanaged-auto" id="id72">forceAirDropUnmanaged</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowActivityContinuation-auto" id="id73">allowActivityContinuation</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowFingerprintForUnlock-auto" id="id74">allowFingerprintForUnlock</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowFingerprintModification-auto" id="id75">allowFingerprintModification</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowNotificationsModification-auto" id="id76">allowNotificationsModification</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-blacklistedAppBundleIDs-auto" id="id77">blacklistedAppBundleIDs</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-whitelistedAppBundleIDs-auto" id="id78">whitelistedAppBundleIDs</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowAutoUnlock-auto" id="id79">allowAutoUnlock</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowCloudDesktopAndDocuments-auto" id="id80">allowCloudDesktopAndDocuments</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#links" id="id81">Links</a></li>
+</ul>
+</li>
+</ul>
+</div>
 <div class="section" id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id2">Summary</a><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -349,698 +440,11 @@
 </tr>
 </tbody>
 </table>
-<table border="1" class="docutils">
-<colgroup>
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="43%" />
-<col width="14%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Name</th>
-<th class="head">Type</th>
-<th class="head">Title</th>
-<th class="head">Description</th>
-<th class="head">Required</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>allowAccountModification</td>
-<td>boolean</td>
-<td>Allow user to modify accounts</td>
-<td>Allow user to modify accounts</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>allowAirDrop</td>
-<td>boolean</td>
-<td>Disable AirDrop</td>
-<td>Disable AirDrop if set to false</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>allowAppInstallation</td>
-<td>boolean</td>
-<td>Allow App Installation from Apple Configurator and iTunes</td>
-<td>Allow only a connected Mac host to install applications</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>allowUIAppInstallation</td>
-<td>boolean</td>
-<td>Allow App Installation from App Store</td>
-<td>When false, the App Store is disabled and its icon is removed from the Home screen. However, users may continue to use Host apps (iTunes, Configurator) to install or update their apps.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>allowAutomaticAppDownloads</td>
-<td>boolean</td>
-<td>Allow Automatic App Downloads</td>
-<td>If set to false, prevents automatic downloading of apps purchased on other devices. Does not affect updates to existing apps. Defaults to true</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>allowAppRemoval</td>
-<td>boolean</td>
-<td>Allow App Removal</td>
-<td>Allow the user to remove apps (Supervised only)</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>allowEnterpriseAppTrust</td>
-<td>boolean</td>
-<td>Allow Trusting Enterprise Apps</td>
-<td>If set to false removes the Trust Enterprise Developer button in Settings-&gt;General-&gt;Profiles Device Management, preventing apps from being provisioned by universal provisioning profiles. This restriction applies to free developer accounts but it does not apply to enterprise app developers who are trusted because their apps were pushed via MDM, nor does it revoke previously granted trust. Defaults to true.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>allowCamera</td>
-<td>boolean</td>
-<td>Allow Camera Use</td>
-<td>Allow the user to use the camera</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>allowExplicitContent</td>
-<td>boolean</td>
-<td>Allow Explicit Content</td>
-<td>Allow user access of explicit content</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>allowFindMyFriendsModification</td>
-<td>boolean</td>
-<td>Allow Find My Friends changes</td>
-<td>If set to false, changes to Find My Friends are disabled.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>allowScreenShot</td>
-<td>boolean</td>
-<td>Allow Screenshots and Screen Recording</td>
-<td>Allow the user to take screenshots or screen recordings</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>allowRemoteScreenObservation</td>
-<td>boolean</td>
-<td>Allow Remote Screen Observation</td>
-<td>Allow Classroom or similar to observe the screen. This key should be nested beneath allowScreenShot as a sub-restriction. If allowScreenShot is set to false, it also prevents the Classroom app from observing remote screens.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>allowChat</td>
-<td>boolean</td>
-<td>Allow use of iMessage</td>
-<td>Allow use of iMessage (Supervised only)</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>allowBookstore</td>
-<td>boolean</td>
-<td>Allow Bookstore</td>
-<td>Supervised only. If set to false, iBookstore will be disabled.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>allowBookstoreErotica</td>
-<td>boolean</td>
-<td>Allow Bookstore Erotica</td>
-<td>Supervised only. If set to false, the user will not be able to download media from the iBookstore that is tagged as erotica.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>allowMusicService</td>
-<td>boolean</td>
-<td>Allow Apple Music</td>
-<td>If set to false, Apple Music will be disabled in the Music app.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>allowRadioService</td>
-<td>boolean</td>
-<td>Allow iTunes Radio</td>
-<td>If set to false, Apple Music Radio is disabled.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>allowSharedStream</td>
-<td>boolean</td>
-<td>Allow Shared Stream</td>
-<td>If set to false, disabled Shared Stream.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>allowPassbookWhileLocked</td>
-<td>boolean</td>
-<td>Allow Wallet While Locked</td>
-<td>If set to false, Wallet notifications will not be shown on the lock screen.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>allowUIConfigurationProfileInstallation</td>
-<td>boolean</td>
-<td>Allow UI Configuration Profile Installation</td>
-<td>Supervised only. If set to false, the user is prohibited from installing configuration profiles and certificates interactively.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>allowiTunes</td>
-<td>boolean</td>
-<td>Allow use of iTunes</td>
-<td>When false, the iTunes Music Store is disabled and its icon is removed from the Home screen. Users cannot preview, purchase, or download content.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>allowiTunesFileSharing</td>
-<td>boolean</td>
-<td>Allow use of iTunes sharing</td>
-<td>Optional. When false, iTunes application file sharing services are disabled.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>autonomousSingleAppModePermittedAppIDs</td>
-<td>array</td>
-<td>Allow apps to enter single app mode themselves.</td>
-<td>If present, allows apps identified by the bundle IDs listed in the array to autonomously enter Single App Mode.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>allowNews</td>
-<td>boolean</td>
-<td>Allow use of News</td>
-<td>Allow the user to access and use News</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>allowSafari</td>
-<td>boolean</td>
-<td>Allow use of Safari</td>
-<td>Allow the user to use Safari</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>allowGameCenter</td>
-<td>boolean</td>
-<td>Allow Game Center</td>
-<td>Allow Game Center (Supervised only)</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>allowAddingGameCenterFriends</td>
-<td>boolean</td>
-<td>Allow Adding Game Center Friends</td>
-<td>Allow the user to add Friends on Game Center</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>allowBluetoothModification</td>
-<td>boolean</td>
-<td>Allow modifying Bluetooth settings</td>
-<td>Allow modifying Bluetooth settings</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>allowAppCellularDataModification</td>
-<td>boolean</td>
-<td>Allow Modifying Cellular Data Usage for Apps Settings</td>
-<td>Allow modifying cellular data usage for apps settings</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>allowDeviceNameModification</td>
-<td>boolean</td>
-<td>Allow Modifying Device Name</td>
-<td>Allow modifying device name</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>allowPasscodeModification</td>
-<td>boolean</td>
-<td>Allow Modifying Passcode</td>
-<td>If set to false, prevents the device passcode from being added, changed, or removed. Defaults to true. This restriction is ignored by shared iPads.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>allowWallpaperModification</td>
-<td>boolean</td>
-<td>Allow Modifying Wallpaper</td>
-<td>Allow modifying Wallpaper (Supervised only)</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>allowEnablingRestrictions</td>
-<td>boolean</td>
-<td>Allow Configuring Restrictions</td>
-<td>Allow configuring restrictions (Supervised only)</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>allowGlobalBackgroundFetchWhenRoaming</td>
-<td>boolean</td>
-<td>Allow Automatic Sync While Roaming</td>
-<td>Allow automatic sync while roaming</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>allowManagedAppsCloudSync</td>
-<td>boolean</td>
-<td>Allow iCloud Sync for Managed Apps</td>
-<td>Allow iCloud sync for managed apps</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>allowEnterpriseBookBackup</td>
-<td>boolean</td>
-<td>Allow Enterprise Books Backup</td>
-<td>Allow enterprise books to be backed up</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>allowEnterpriseBookMetadataSync</td>
-<td>boolean</td>
-<td>Allow Enterprise Books Notes and Highlights Sync</td>
-<td>Allow enterprise books notes and highlights to be synced</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>allowInAppPurchases</td>
-<td>boolean</td>
-<td>Allow In App Purchases</td>
-<td>Allow the user to make purchases within applications</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>allowPodcasts</td>
-<td>boolean</td>
-<td>Allow Podcasts</td>
-<td>If set to false, disables podcasts. Defaults to true.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>allowLockScreenControlCenter</td>
-<td>boolean</td>
-<td>Allow Control Center on Lock Screen</td>
-<td>If false, prevents Control Center from appearing on the Lock screen.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>allowHostPairing</td>
-<td>boolean</td>
-<td>Allow pairing with any host</td>
-<td>If set to false, host pairing is disabled with the exception of the supervision host. If no supervision host certificate has been configured, all pairing is disabled. Host pairing lets the administrator control which devices an iOS 7 device can pair with.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>allowLockScreenNotificationsView</td>
-<td>boolean</td>
-<td>Allow notifications to be displayed on the lock screen</td>
-<td>If set to false, the Notifications view in Notification Center on the lock screen is disabled and users can’t receive notifications when the screen is locked.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>allowLockScreenTodayView</td>
-<td>boolean</td>
-<td>Allow Today view on the lock screen</td>
-<td>If set to false, the Today view in Notification Center on the lock screen is disabled.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>allowMultiplayerGaming</td>
-<td>boolean</td>
-<td>Allow Multiplayer Gaming</td>
-<td>Allow multiplayer gaming</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>allowVideoConferencing</td>
-<td>boolean</td>
-<td>Allow Video Conferencing</td>
-<td>Allow video conferencing</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>allowVoiceDialing</td>
-<td>boolean</td>
-<td>Allow Voice Dialing While Device is Locked</td>
-<td>Allow voice dialing while device is locked</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>allowYouTube</td>
-<td>boolean</td>
-<td>Allow YouTube App (iOS 6)</td>
-<td>When false, the YouTube application is disabled and its icon is removed from the Home screen.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>forceEncryptedBackup</td>
-<td>boolean</td>
-<td>Force Encrypted Backups</td>
-<td>Force encrypted backups</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>forceWatchWristDetection</td>
-<td>boolean</td>
-<td>Force Apple Watch Wrist Detection</td>
-<td>Force Apple Watch wrist detection</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>allowPairedWatch</td>
-<td>boolean</td>
-<td>Allow Pairing With Apple Watch</td>
-<td>If set to false, disables pairing with an Apple Watch. Any currently paired Apple Watch is unpaired and erased. Defaults to true.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>allowEraseContentAndSettings</td>
-<td>boolean</td>
-<td>Allow Erase All Content and Settings</td>
-<td>Supervised only. If set to false, the user cannot choose the option &#8220;Erase All Content and Settings&#8221; in Settings &gt; General &gt; Reset</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>allowSpotlightInternetResults</td>
-<td>boolean</td>
-<td>Allow Internet results in Spotlight</td>
-<td>If set to false, search results from the web will not be shown in Spotlight.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>allowCloudDocumentSync</td>
-<td>boolean</td>
-<td>Allow iCloud Document Sync</td>
-<td>Allow document syncing with iCloud. When false, disables document and key-value syncing to iCloud.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>allowCloudKeychainSync</td>
-<td>boolean</td>
-<td>Allow iCloud Keychain Sync</td>
-<td>Allow iCloud Keychain Sync</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>allowUntrustedTLSPrompt</td>
-<td>boolean</td>
-<td>Allow user to accept untrusted TLS certificates</td>
-<td>Allow user to accept untrusted TLS certificates</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>allowDiagnosticSubmission</td>
-<td>boolean</td>
-<td>Allow diagnostic submission</td>
-<td>Send diagnostic and usage reports to Apple</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>allowDiagnosticSubmissionModification</td>
-<td>boolean</td>
-<td>Allow modifying diagnostics settings</td>
-<td>If set to false, the diagnostic submission and app analytics settings in the Diagnostics &amp; Usage pane in Settings cannot be modified</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>allowPhotoStream</td>
-<td>boolean</td>
-<td>Allow Photo Stream</td>
-<td>Allow Photo Stream to be used on the device</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>allowCloudPhotoLibrary</td>
-<td>boolean</td>
-<td>Allow iCloud Photo Library</td>
-<td>Allow iCloud Photo Library to be used on the device</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>allowCloudBackup</td>
-<td>boolean</td>
-<td>Allow iCloud Backup</td>
-<td>Allow backup using iCloud</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>allowCloudBTMM</td>
-<td>boolean</td>
-<td>Allow iCloud Back to my Mac</td>
-<td>Allow iCloud Back to my Mac</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>allowCloudFMM</td>
-<td>boolean</td>
-<td>Allow iCloud Find my Mac</td>
-<td>Allow iCloud Find my Mac</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>allowCloudBookmarks</td>
-<td>boolean</td>
-<td>Allow macOS iCloud Bookmark Sync</td>
-<td>Allow macOS iCloud Bookmark Sync</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>allowCloudMail</td>
-<td>boolean</td>
-<td>Allow macOS iCloud Mail Services</td>
-<td>Allow macOS iCloud Mail Services</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>allowCloudCalendar</td>
-<td>boolean</td>
-<td>Allow macOS iCloud Calendar Services</td>
-<td>Allow macOS iCloud Calendar Services</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>allowCloudReminders</td>
-<td>boolean</td>
-<td>Allow macOS iCloud Reminder Services</td>
-<td>Allow macOS iCloud Reminder Services</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>allowCloudAddressBook</td>
-<td>boolean</td>
-<td>Allow macOS iCloud Address Book Services</td>
-<td>Allow macOS iCloud Address Book Services</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>allowCloudNotes</td>
-<td>boolean</td>
-<td>Allow macOS iCloud Notes Services</td>
-<td>Allow macOS iCloud Notes Services</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>forceITunesStorePasswordEntry</td>
-<td>boolean</td>
-<td>Require iTunes password for all purchases</td>
-<td>Require the user&#8217;s iTunes password to be entered for every purchase</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>forceLimitAdTracking</td>
-<td>boolean</td>
-<td>Limit Ad Tracking</td>
-<td>If true, limits ad tracking. Default is false.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>forceAirPlayOutgoingRequestsPairingPassword</td>
-<td>boolean</td>
-<td>AirPlay requests must use a pairing password</td>
-<td>If set to true, forces all devices receiving AirPlay requests from this device to use a pairing password.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>forceAirPlayIncomingRequestsPairingPassword</td>
-<td>boolean</td>
-<td>AirPlay requests incoming must use a pairing password</td>
-<td>If set to true, forces all devices sending AirPlay requests to this device to use a pairing password.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>ratingApps</td>
-<td>integer</td>
-<td>Apps Ranking Number</td>
-<td>Ranking number for apps</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>ratingMovies</td>
-<td>integer</td>
-<td>Movies Ranking Number</td>
-<td>Ranking number for movies</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>ratingTVShows</td>
-<td>integer</td>
-<td>TV Shows Ranking Number</td>
-<td>Ranking number for TV Shows</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>ratingRegion</td>
-<td>string</td>
-<td>Region Code</td>
-<td>Two-character code for the region used to specify ratings</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>safariAcceptCookies</td>
-<td>real</td>
-<td>Accept Cookies in Safari</td>
-<td>Accept cookies: 0 - Never, 1 - From current website only (iOS 8) or visited sites (pre-iOS 8), 1.5 - From websites I visit, 2 - Always</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>safariAllowAutoFill</td>
-<td>boolean</td>
-<td>Allow AutoFill in Safari</td>
-<td>Allow AutoFill in Safari</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>safariAllowJavaScript</td>
-<td>boolean</td>
-<td>Allow JavaScript</td>
-<td>Allow JavaScript in Safari</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>safariAllowPopups</td>
-<td>boolean</td>
-<td>Allow Pop-ups</td>
-<td>Allow Pop-ups in Safari</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>safariForceFraudWarning</td>
-<td>boolean</td>
-<td>Enable Fraud Warning</td>
-<td>Enable fraud warning in Safari</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>allowAssistant</td>
-<td>boolean</td>
-<td>Allow Siri</td>
-<td>Allow Siri</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>allowAssistantUserGeneratedContent</td>
-<td>boolean</td>
-<td>When false, prevents Siri from querying user-generated content from the web.</td>
-<td>When false, prevents Siri from querying user-generated content from the web.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>allowAssistantWhileLocked</td>
-<td>boolean</td>
-<td>Allow Siri While Locked</td>
-<td>Allow Siri while device is locked</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>forceAssistantProfanityFilter</td>
-<td>boolean</td>
-<td>Enable Siri Profanity Filter</td>
-<td>Enable Siri Profanity Filter (Supervised devices only)</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>allowPredictiveKeyboard</td>
-<td>boolean</td>
-<td>Allow Predictive Keyboard</td>
-<td>Allow Predictive Keyboard (Supervised devices only)</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>allowKeyboardShortcuts</td>
-<td>boolean</td>
-<td>Allow Keyboard Shortcuts</td>
-<td>Allow Keyboard Shortcuts (Supervised devices only)</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>allowAutoCorrection</td>
-<td>boolean</td>
-<td>Allow Auto Correction</td>
-<td>Allow Auto Correction (Supervised devices only)</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>allowSpellCheck</td>
-<td>boolean</td>
-<td>Allow Spell Check</td>
-<td>Allow Spell Check (Supervised devices only)</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>allowDefinitionLookup</td>
-<td>boolean</td>
-<td>Allow Define</td>
-<td>Allow Define (Supervised devices only)</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>allowOpenFromUnmanagedToManaged</td>
-<td>boolean</td>
-<td>Enable allow open from unmanaged to managed</td>
-<td>Enable allow open from unmanaged to managed</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>allowOpenFromManagedToUnmanaged</td>
-<td>boolean</td>
-<td>Enable allow open from managed to unmanaged</td>
-<td>Enable allow open from managed to unmanaged</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>allowOTAPKIUpdates</td>
-<td>boolean</td>
-<td>Allow PKI Updates OTA</td>
-<td>If false, over-the-air PKI updates are disabled. Setting this restriction to false does not disable CRL and OCSP checks. Default is true.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>forceAirDropUnmanaged</td>
-<td>boolean</td>
-<td>Treat AirDrop as Unmanaged Destination</td>
-<td>Treat AirDrop as Unmanaged Destination</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>allowActivityContinuation</td>
-<td>boolean</td>
-<td>Allow Handoff</td>
-<td>If set to false, Handoff will be disabled.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>allowFingerprintForUnlock</td>
-<td>boolean</td>
-<td>Allow Touch ID to Unlock Device</td>
-<td>Allow Touch ID to Unlock Device</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>allowFingerprintModification</td>
-<td>boolean</td>
-<td>Allow Modifying Touch ID Fingerprints</td>
-<td>Allow modifying Touch ID fingerprints</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>allowNotificationsModification</td>
-<td>boolean</td>
-<td>Allow Modifying Notifications Settings</td>
-<td>Allow Modifying Notifications Settings</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>blacklistedAppBundleIDs</td>
-<td>array</td>
-<td>Blacklisted Apps</td>
-<td>If present, prevents bundle IDs listed in the array from being shown or launchable.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>whitelistedAppBundleIDs</td>
-<td>array</td>
-<td>Whitelisted Apps</td>
-<td>If present, allows only bundle IDs listed in the array from being shown or launchable.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>allowAutoUnlock</td>
-<td>boolean</td>
-<td>Allow macOS auto unlock</td>
-<td>If set to false, disallows macOS auto unlock. Defaults to true.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>allowCloudDesktopAndDocuments</td>
-<td>boolean</td>
-<td>Allow cloud desktop and documents</td>
-<td>If set to false, disallows macOS cloud desktop and document services. Defaults to true.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>allowDictation</td>
-<td>boolean</td>
-<td>disallows dictation input</td>
-<td>Supervised only. If set to false, disallows dictation input. Defaults to true.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>forceWiFiWhitelisting</td>
-<td>boolean</td>
-<td>Only join WiFi through configuration profiles</td>
-<td>Optional. Supervised only. If set to true, the device can join Wi-Fi networks only if they were set up through a configuration profile. Defaults to false.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>forceUnpromptedManagedClassroomScreenObservation</td>
-<td>boolean</td>
-<td>Only join WiFi through configuration profiles</td>
-<td>Optional. Supervised only. If set to true, and ScreenObservationPermissionModificationAllowed is also true in the Education payload,
-				a student enrolled in a managed course via the Classroom app will automatically give permission to that course&#8217;s teacher’s requests to observe
-				the student’s screen without prompting the student. Defaults to false.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>allowAirPrint</td>
-<td>boolean</td>
-<td>Allow AirPrint</td>
-<td>upervised only. If set to false, disallow AirPrint. Defaults to true.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>allowAirPrintCredentialsStorage</td>
-<td>boolean</td>
-<td>Allow AirPrint Credentials in KeyChain</td>
-<td>Supervised only. If set to false, disallows keychain storage of username and password for Airprint. Defaults to true.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>forceAirPrintTrustedTLSRequirement</td>
-<td>boolean</td>
-<td>Require Trusted TLS Certificates for AirPrint</td>
-<td>Supervised only. If set to true, requires trusted certificates for TLS printing communication. Defaults to false.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>allowAirPrintiBeaconDiscovery</td>
-<td>boolean</td>
-<td>Disable iBeacon discovery of AirPrint printers</td>
-<td>Supervised only. If set to false, disables iBeacon discovery of AirPrint printers. This prevents spurious AirPrint Bluetooth beacons from phishing for network traffic. Defaults to true.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>allowSystemAppRemoval</td>
-<td>boolean</td>
-<td>Allow Removal of System Apps</td>
-<td>Supervised only. If set to false, disables the removal of system apps from the device. Defaults to true.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>allowVPNCreation</td>
-<td>boolean</td>
-<td>Allow the creation of VPN configurations</td>
-<td>Supervised only. If set to false, disallow the creation of VPN configurations. Defaults to true.</td>
-<td>n/a</td>
-</tr>
-</tbody>
-</table>
 </div>
 <div class="section" id="keys">
-<h2>Keys<a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id3">Keys</a><a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="com.apple.applicationaccess-allowAppInstallation-auto">
-<h3>allowAppInstallation<a class="headerlink" href="#com.apple.applicationaccess-allowAppInstallation-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id4">allowAppInstallation</a><a class="headerlink" href="#com.apple.applicationaccess-allowAppInstallation-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow App Installation from Apple Configurator and iTunes</p>
 <p>Allow only a connected Mac host to install applications</p>
 <table border="1" class="docutils">
@@ -1076,7 +480,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowUIAppInstallation-auto">
-<h3>allowUIAppInstallation<a class="headerlink" href="#com.apple.applicationaccess-allowUIAppInstallation-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id5">allowUIAppInstallation</a><a class="headerlink" href="#com.apple.applicationaccess-allowUIAppInstallation-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow App Installation from App Store</p>
 <p>When false, the App Store is disabled and its icon is removed from the Home screen. However, users may continue to use Host apps (iTunes, Configurator) to install or update their apps.</p>
 <table border="1" class="docutils">
@@ -1112,7 +516,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowAutomaticAppDownloads-auto">
-<h3>allowAutomaticAppDownloads<a class="headerlink" href="#com.apple.applicationaccess-allowAutomaticAppDownloads-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id6">allowAutomaticAppDownloads</a><a class="headerlink" href="#com.apple.applicationaccess-allowAutomaticAppDownloads-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow Automatic App Downloads</p>
 <p>If set to false, prevents automatic downloading of apps purchased on other devices. Does not affect updates to existing apps. Defaults to true</p>
 <table border="1" class="docutils">
@@ -1148,7 +552,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowAppRemoval-auto">
-<h3>allowAppRemoval<a class="headerlink" href="#com.apple.applicationaccess-allowAppRemoval-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id7">allowAppRemoval</a><a class="headerlink" href="#com.apple.applicationaccess-allowAppRemoval-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow App Removal</p>
 <p>Allow the user to remove apps (Supervised only)</p>
 <table border="1" class="docutils">
@@ -1184,7 +588,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowEnterpriseAppTrust-auto">
-<h3>allowEnterpriseAppTrust<a class="headerlink" href="#com.apple.applicationaccess-allowEnterpriseAppTrust-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id8">allowEnterpriseAppTrust</a><a class="headerlink" href="#com.apple.applicationaccess-allowEnterpriseAppTrust-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow Trusting Enterprise Apps</p>
 <p>If set to false removes the Trust Enterprise Developer button in Settings-&gt;General-&gt;Profiles Device Management, preventing apps from being provisioned by universal provisioning profiles. This restriction applies to free developer accounts but it does not apply to enterprise app developers who are trusted because their apps were pushed via MDM, nor does it revoke previously granted trust. Defaults to true.</p>
 <table border="1" class="docutils">
@@ -1220,7 +624,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowCamera-auto">
-<h3>allowCamera<a class="headerlink" href="#com.apple.applicationaccess-allowCamera-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id9">allowCamera</a><a class="headerlink" href="#com.apple.applicationaccess-allowCamera-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow Camera Use</p>
 <p>Allow the user to use the camera</p>
 <table border="1" class="docutils">
@@ -1256,7 +660,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowExplicitContent-auto">
-<h3>allowExplicitContent<a class="headerlink" href="#com.apple.applicationaccess-allowExplicitContent-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id10">allowExplicitContent</a><a class="headerlink" href="#com.apple.applicationaccess-allowExplicitContent-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow Explicit Content</p>
 <p>Allow user access of explicit content</p>
 <table border="1" class="docutils">
@@ -1292,7 +696,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowScreenShot-auto">
-<h3>allowScreenShot<a class="headerlink" href="#com.apple.applicationaccess-allowScreenShot-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id11">allowScreenShot</a><a class="headerlink" href="#com.apple.applicationaccess-allowScreenShot-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow Screenshots and Screen Recording</p>
 <p>Allow the user to take screenshots or screen recordings</p>
 <table border="1" class="docutils">
@@ -1328,7 +732,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowRemoteScreenObservation-auto">
-<h3>allowRemoteScreenObservation<a class="headerlink" href="#com.apple.applicationaccess-allowRemoteScreenObservation-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id12">allowRemoteScreenObservation</a><a class="headerlink" href="#com.apple.applicationaccess-allowRemoteScreenObservation-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow Remote Screen Observation</p>
 <p>Allow Classroom or similar to observe the screen. This key should be nested beneath allowScreenShot as a sub-restriction. If allowScreenShot is set to false, it also prevents the Classroom app from observing remote screens.</p>
 <table border="1" class="docutils">
@@ -1364,7 +768,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowChat-auto">
-<h3>allowChat<a class="headerlink" href="#com.apple.applicationaccess-allowChat-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id13">allowChat</a><a class="headerlink" href="#com.apple.applicationaccess-allowChat-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow use of iMessage</p>
 <p>Allow use of iMessage (Supervised only)</p>
 <table border="1" class="docutils">
@@ -1400,7 +804,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowBookstore-auto">
-<h3>allowBookstore<a class="headerlink" href="#com.apple.applicationaccess-allowBookstore-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id14">allowBookstore</a><a class="headerlink" href="#com.apple.applicationaccess-allowBookstore-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow Bookstore</p>
 <p>Supervised only. If set to false, iBookstore will be disabled.</p>
 <table border="1" class="docutils">
@@ -1436,7 +840,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowBookstoreErotica-auto">
-<h3>allowBookstoreErotica<a class="headerlink" href="#com.apple.applicationaccess-allowBookstoreErotica-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id15">allowBookstoreErotica</a><a class="headerlink" href="#com.apple.applicationaccess-allowBookstoreErotica-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow Bookstore Erotica</p>
 <p>Supervised only. If set to false, the user will not be able to download media from the iBookstore that is tagged as erotica.</p>
 <table border="1" class="docutils">
@@ -1472,7 +876,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowMusicService-auto">
-<h3>allowMusicService<a class="headerlink" href="#com.apple.applicationaccess-allowMusicService-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id16">allowMusicService</a><a class="headerlink" href="#com.apple.applicationaccess-allowMusicService-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow Apple Music</p>
 <p>If set to false, Apple Music will be disabled in the Music app.</p>
 <table border="1" class="docutils">
@@ -1508,7 +912,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowRadioService-auto">
-<h3>allowRadioService<a class="headerlink" href="#com.apple.applicationaccess-allowRadioService-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id17">allowRadioService</a><a class="headerlink" href="#com.apple.applicationaccess-allowRadioService-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow iTunes Radio</p>
 <p>If set to false, Apple Music Radio is disabled.</p>
 <table border="1" class="docutils">
@@ -1544,7 +948,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowSharedStream-auto">
-<h3>allowSharedStream<a class="headerlink" href="#com.apple.applicationaccess-allowSharedStream-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id18">allowSharedStream</a><a class="headerlink" href="#com.apple.applicationaccess-allowSharedStream-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow Shared Stream</p>
 <p>If set to false, disabled Shared Stream.</p>
 <table border="1" class="docutils">
@@ -1580,7 +984,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowPassbookWhileLocked-auto">
-<h3>allowPassbookWhileLocked<a class="headerlink" href="#com.apple.applicationaccess-allowPassbookWhileLocked-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id19">allowPassbookWhileLocked</a><a class="headerlink" href="#com.apple.applicationaccess-allowPassbookWhileLocked-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow Wallet While Locked</p>
 <p>If set to false, Wallet notifications will not be shown on the lock screen.</p>
 <table border="1" class="docutils">
@@ -1616,7 +1020,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowUIConfigurationProfileInstallation-auto">
-<h3>allowUIConfigurationProfileInstallation<a class="headerlink" href="#com.apple.applicationaccess-allowUIConfigurationProfileInstallation-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id20">allowUIConfigurationProfileInstallation</a><a class="headerlink" href="#com.apple.applicationaccess-allowUIConfigurationProfileInstallation-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow UI Configuration Profile Installation</p>
 <p>Supervised only. If set to false, the user is prohibited from installing configuration profiles and certificates interactively.</p>
 <table border="1" class="docutils">
@@ -1652,7 +1056,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowiTunes-auto">
-<h3>allowiTunes<a class="headerlink" href="#com.apple.applicationaccess-allowiTunes-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id21">allowiTunes</a><a class="headerlink" href="#com.apple.applicationaccess-allowiTunes-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow use of iTunes</p>
 <p>When false, the iTunes Music Store is disabled and its icon is removed from the Home screen. Users cannot preview, purchase, or download content.</p>
 <table border="1" class="docutils">
@@ -1688,7 +1092,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowNews-auto">
-<h3>allowNews<a class="headerlink" href="#com.apple.applicationaccess-allowNews-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id22">allowNews</a><a class="headerlink" href="#com.apple.applicationaccess-allowNews-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow use of News</p>
 <p>Allow the user to access and use News</p>
 <table border="1" class="docutils">
@@ -1724,7 +1128,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowSafari-auto">
-<h3>allowSafari<a class="headerlink" href="#com.apple.applicationaccess-allowSafari-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id23">allowSafari</a><a class="headerlink" href="#com.apple.applicationaccess-allowSafari-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow use of Safari</p>
 <p>Allow the user to use Safari</p>
 <table border="1" class="docutils">
@@ -1760,7 +1164,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowGameCenter-auto">
-<h3>allowGameCenter<a class="headerlink" href="#com.apple.applicationaccess-allowGameCenter-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id24">allowGameCenter</a><a class="headerlink" href="#com.apple.applicationaccess-allowGameCenter-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow Game Center</p>
 <p>Allow Game Center (Supervised only)</p>
 <table border="1" class="docutils">
@@ -1796,7 +1200,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowAddingGameCenterFriends-auto">
-<h3>allowAddingGameCenterFriends<a class="headerlink" href="#com.apple.applicationaccess-allowAddingGameCenterFriends-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id25">allowAddingGameCenterFriends</a><a class="headerlink" href="#com.apple.applicationaccess-allowAddingGameCenterFriends-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow Adding Game Center Friends</p>
 <p>Allow the user to add Friends on Game Center</p>
 <table border="1" class="docutils">
@@ -1832,7 +1236,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowBluetoothModification-auto">
-<h3>allowBluetoothModification<a class="headerlink" href="#com.apple.applicationaccess-allowBluetoothModification-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id26">allowBluetoothModification</a><a class="headerlink" href="#com.apple.applicationaccess-allowBluetoothModification-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow modifying Bluetooth settings</p>
 <p>Allow modifying Bluetooth settings</p>
 <table border="1" class="docutils">
@@ -1868,7 +1272,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowAppCellularDataModification-auto">
-<h3>allowAppCellularDataModification<a class="headerlink" href="#com.apple.applicationaccess-allowAppCellularDataModification-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id27">allowAppCellularDataModification</a><a class="headerlink" href="#com.apple.applicationaccess-allowAppCellularDataModification-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow Modifying Cellular Data Usage for Apps Settings</p>
 <p>Allow modifying cellular data usage for apps settings</p>
 <table border="1" class="docutils">
@@ -1904,7 +1308,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowDeviceNameModification-auto">
-<h3>allowDeviceNameModification<a class="headerlink" href="#com.apple.applicationaccess-allowDeviceNameModification-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id28">allowDeviceNameModification</a><a class="headerlink" href="#com.apple.applicationaccess-allowDeviceNameModification-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow Modifying Device Name</p>
 <p>Allow modifying device name</p>
 <table border="1" class="docutils">
@@ -1940,7 +1344,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowPasscodeModification-auto">
-<h3>allowPasscodeModification<a class="headerlink" href="#com.apple.applicationaccess-allowPasscodeModification-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id29">allowPasscodeModification</a><a class="headerlink" href="#com.apple.applicationaccess-allowPasscodeModification-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow Modifying Passcode</p>
 <p>If set to false, prevents the device passcode from being added, changed, or removed. Defaults to true. This restriction is ignored by shared iPads.</p>
 <table border="1" class="docutils">
@@ -1976,7 +1380,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowWallpaperModification-auto">
-<h3>allowWallpaperModification<a class="headerlink" href="#com.apple.applicationaccess-allowWallpaperModification-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id30">allowWallpaperModification</a><a class="headerlink" href="#com.apple.applicationaccess-allowWallpaperModification-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow Modifying Wallpaper</p>
 <p>Allow modifying Wallpaper (Supervised only)</p>
 <table border="1" class="docutils">
@@ -2012,7 +1416,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowEnablingRestrictions-auto">
-<h3>allowEnablingRestrictions<a class="headerlink" href="#com.apple.applicationaccess-allowEnablingRestrictions-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id31">allowEnablingRestrictions</a><a class="headerlink" href="#com.apple.applicationaccess-allowEnablingRestrictions-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow Configuring Restrictions</p>
 <p>Allow configuring restrictions (Supervised only)</p>
 <table border="1" class="docutils">
@@ -2048,7 +1452,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowGlobalBackgroundFetchWhenRoaming-auto">
-<h3>allowGlobalBackgroundFetchWhenRoaming<a class="headerlink" href="#com.apple.applicationaccess-allowGlobalBackgroundFetchWhenRoaming-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id32">allowGlobalBackgroundFetchWhenRoaming</a><a class="headerlink" href="#com.apple.applicationaccess-allowGlobalBackgroundFetchWhenRoaming-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow Automatic Sync While Roaming</p>
 <p>Allow automatic sync while roaming</p>
 <table border="1" class="docutils">
@@ -2084,7 +1488,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowManagedAppsCloudSync-auto">
-<h3>allowManagedAppsCloudSync<a class="headerlink" href="#com.apple.applicationaccess-allowManagedAppsCloudSync-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id33">allowManagedAppsCloudSync</a><a class="headerlink" href="#com.apple.applicationaccess-allowManagedAppsCloudSync-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow iCloud Sync for Managed Apps</p>
 <p>Allow iCloud sync for managed apps</p>
 <table border="1" class="docutils">
@@ -2120,7 +1524,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowEnterpriseBookBackup-auto">
-<h3>allowEnterpriseBookBackup<a class="headerlink" href="#com.apple.applicationaccess-allowEnterpriseBookBackup-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id34">allowEnterpriseBookBackup</a><a class="headerlink" href="#com.apple.applicationaccess-allowEnterpriseBookBackup-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow Enterprise Books Backup</p>
 <p>Allow enterprise books to be backed up</p>
 <table border="1" class="docutils">
@@ -2156,7 +1560,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowEnterpriseBookMetadataSync-auto">
-<h3>allowEnterpriseBookMetadataSync<a class="headerlink" href="#com.apple.applicationaccess-allowEnterpriseBookMetadataSync-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id35">allowEnterpriseBookMetadataSync</a><a class="headerlink" href="#com.apple.applicationaccess-allowEnterpriseBookMetadataSync-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow Enterprise Books Notes and Highlights Sync</p>
 <p>Allow enterprise books notes and highlights to be synced</p>
 <table border="1" class="docutils">
@@ -2192,7 +1596,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowInAppPurchases-auto">
-<h3>allowInAppPurchases<a class="headerlink" href="#com.apple.applicationaccess-allowInAppPurchases-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id36">allowInAppPurchases</a><a class="headerlink" href="#com.apple.applicationaccess-allowInAppPurchases-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow In App Purchases</p>
 <p>Allow the user to make purchases within applications</p>
 <table border="1" class="docutils">
@@ -2228,7 +1632,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowMultiplayerGaming-auto">
-<h3>allowMultiplayerGaming<a class="headerlink" href="#com.apple.applicationaccess-allowMultiplayerGaming-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id37">allowMultiplayerGaming</a><a class="headerlink" href="#com.apple.applicationaccess-allowMultiplayerGaming-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow Multiplayer Gaming</p>
 <p>Allow multiplayer gaming</p>
 <table border="1" class="docutils">
@@ -2264,7 +1668,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowVideoConferencing-auto">
-<h3>allowVideoConferencing<a class="headerlink" href="#com.apple.applicationaccess-allowVideoConferencing-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id38">allowVideoConferencing</a><a class="headerlink" href="#com.apple.applicationaccess-allowVideoConferencing-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow Video Conferencing</p>
 <p>Allow video conferencing</p>
 <table border="1" class="docutils">
@@ -2300,7 +1704,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowVoiceDialing-auto">
-<h3>allowVoiceDialing<a class="headerlink" href="#com.apple.applicationaccess-allowVoiceDialing-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id39">allowVoiceDialing</a><a class="headerlink" href="#com.apple.applicationaccess-allowVoiceDialing-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow Voice Dialing While Device is Locked</p>
 <p>Allow voice dialing while device is locked</p>
 <table border="1" class="docutils">
@@ -2336,7 +1740,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-forceEncryptedBackup-auto">
-<h3>forceEncryptedBackup<a class="headerlink" href="#com.apple.applicationaccess-forceEncryptedBackup-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id40">forceEncryptedBackup</a><a class="headerlink" href="#com.apple.applicationaccess-forceEncryptedBackup-auto" title="Permalink to this headline">¶</a></h3>
 <p>Force Encrypted Backups</p>
 <p>Force encrypted backups</p>
 <table border="1" class="docutils">
@@ -2372,7 +1776,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-forceWatchWristDetection-auto">
-<h3>forceWatchWristDetection<a class="headerlink" href="#com.apple.applicationaccess-forceWatchWristDetection-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id41">forceWatchWristDetection</a><a class="headerlink" href="#com.apple.applicationaccess-forceWatchWristDetection-auto" title="Permalink to this headline">¶</a></h3>
 <p>Force Apple Watch Wrist Detection</p>
 <p>Force Apple Watch wrist detection</p>
 <table border="1" class="docutils">
@@ -2408,7 +1812,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowPairedWatch-auto">
-<h3>allowPairedWatch<a class="headerlink" href="#com.apple.applicationaccess-allowPairedWatch-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id42">allowPairedWatch</a><a class="headerlink" href="#com.apple.applicationaccess-allowPairedWatch-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow Pairing With Apple Watch</p>
 <p>If set to false, disables pairing with an Apple Watch. Any currently paired Apple Watch is unpaired and erased. Defaults to true.</p>
 <table border="1" class="docutils">
@@ -2444,7 +1848,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowEraseContentAndSettings-auto">
-<h3>allowEraseContentAndSettings<a class="headerlink" href="#com.apple.applicationaccess-allowEraseContentAndSettings-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id43">allowEraseContentAndSettings</a><a class="headerlink" href="#com.apple.applicationaccess-allowEraseContentAndSettings-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow Erase All Content and Settings</p>
 <p>Supervised only. If set to false, the user cannot choose the option &#8220;Erase All Content and Settings&#8221; in Settings &gt; General &gt; Reset</p>
 <table border="1" class="docutils">
@@ -2480,7 +1884,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowSpotlightInternetResults-auto">
-<h3>allowSpotlightInternetResults<a class="headerlink" href="#com.apple.applicationaccess-allowSpotlightInternetResults-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id44">allowSpotlightInternetResults</a><a class="headerlink" href="#com.apple.applicationaccess-allowSpotlightInternetResults-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow Internet results in Spotlight</p>
 <p>If set to false, search results from the web will not be shown in Spotlight.</p>
 <table border="1" class="docutils">
@@ -2516,7 +1920,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowCloudDocumentSync-auto">
-<h3>allowCloudDocumentSync<a class="headerlink" href="#com.apple.applicationaccess-allowCloudDocumentSync-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id45">allowCloudDocumentSync</a><a class="headerlink" href="#com.apple.applicationaccess-allowCloudDocumentSync-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow iCloud Document Sync</p>
 <p>Allow document syncing with iCloud. When false, disables document and key-value syncing to iCloud.</p>
 <table border="1" class="docutils">
@@ -2552,7 +1956,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowUntrustedTLSPrompt-auto">
-<h3>allowUntrustedTLSPrompt<a class="headerlink" href="#com.apple.applicationaccess-allowUntrustedTLSPrompt-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id46">allowUntrustedTLSPrompt</a><a class="headerlink" href="#com.apple.applicationaccess-allowUntrustedTLSPrompt-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow user to accept untrusted TLS certificates</p>
 <p>Allow user to accept untrusted TLS certificates</p>
 <table border="1" class="docutils">
@@ -2588,7 +1992,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowDiagnosticSubmission-auto">
-<h3>allowDiagnosticSubmission<a class="headerlink" href="#com.apple.applicationaccess-allowDiagnosticSubmission-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id47">allowDiagnosticSubmission</a><a class="headerlink" href="#com.apple.applicationaccess-allowDiagnosticSubmission-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow diagnostic submission</p>
 <p>Send diagnostic and usage reports to Apple</p>
 <table border="1" class="docutils">
@@ -2624,7 +2028,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowDiagnosticSubmissionModification-auto">
-<h3>allowDiagnosticSubmissionModification<a class="headerlink" href="#com.apple.applicationaccess-allowDiagnosticSubmissionModification-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id48">allowDiagnosticSubmissionModification</a><a class="headerlink" href="#com.apple.applicationaccess-allowDiagnosticSubmissionModification-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow modifying diagnostics settings</p>
 <p>If set to false, the diagnostic submission and app analytics settings in the Diagnostics &amp; Usage pane in Settings cannot be modified</p>
 <table border="1" class="docutils">
@@ -2660,7 +2064,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowPhotoStream-auto">
-<h3>allowPhotoStream<a class="headerlink" href="#com.apple.applicationaccess-allowPhotoStream-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id49">allowPhotoStream</a><a class="headerlink" href="#com.apple.applicationaccess-allowPhotoStream-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow Photo Stream</p>
 <p>Allow Photo Stream to be used on the device</p>
 <table border="1" class="docutils">
@@ -2696,7 +2100,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowCloudPhotoLibrary-auto">
-<h3>allowCloudPhotoLibrary<a class="headerlink" href="#com.apple.applicationaccess-allowCloudPhotoLibrary-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id50">allowCloudPhotoLibrary</a><a class="headerlink" href="#com.apple.applicationaccess-allowCloudPhotoLibrary-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow iCloud Photo Library</p>
 <p>Allow iCloud Photo Library to be used on the device</p>
 <table border="1" class="docutils">
@@ -2732,7 +2136,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowCloudBackup-auto">
-<h3>allowCloudBackup<a class="headerlink" href="#com.apple.applicationaccess-allowCloudBackup-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id51">allowCloudBackup</a><a class="headerlink" href="#com.apple.applicationaccess-allowCloudBackup-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow iCloud Backup</p>
 <p>Allow backup using iCloud</p>
 <table border="1" class="docutils">
@@ -2768,7 +2172,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-forceITunesStorePasswordEntry-auto">
-<h3>forceITunesStorePasswordEntry<a class="headerlink" href="#com.apple.applicationaccess-forceITunesStorePasswordEntry-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id52">forceITunesStorePasswordEntry</a><a class="headerlink" href="#com.apple.applicationaccess-forceITunesStorePasswordEntry-auto" title="Permalink to this headline">¶</a></h3>
 <p>Require iTunes password for all purchases</p>
 <p>Require the user&#8217;s iTunes password to be entered for every purchase</p>
 <table border="1" class="docutils">
@@ -2804,7 +2208,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-ratingApps-auto">
-<h3>ratingApps<a class="headerlink" href="#com.apple.applicationaccess-ratingApps-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id53">ratingApps</a><a class="headerlink" href="#com.apple.applicationaccess-ratingApps-auto" title="Permalink to this headline">¶</a></h3>
 <p>Apps Ranking Number</p>
 <p>Ranking number for apps</p>
 <table border="1" class="docutils">
@@ -2840,7 +2244,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-ratingMovies-auto">
-<h3>ratingMovies<a class="headerlink" href="#com.apple.applicationaccess-ratingMovies-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id54">ratingMovies</a><a class="headerlink" href="#com.apple.applicationaccess-ratingMovies-auto" title="Permalink to this headline">¶</a></h3>
 <p>Movies Ranking Number</p>
 <p>Ranking number for movies</p>
 <table border="1" class="docutils">
@@ -2876,7 +2280,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-ratingTVShows-auto">
-<h3>ratingTVShows<a class="headerlink" href="#com.apple.applicationaccess-ratingTVShows-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id55">ratingTVShows</a><a class="headerlink" href="#com.apple.applicationaccess-ratingTVShows-auto" title="Permalink to this headline">¶</a></h3>
 <p>TV Shows Ranking Number</p>
 <p>Ranking number for TV Shows</p>
 <table border="1" class="docutils">
@@ -2912,7 +2316,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-ratingRegion-auto">
-<h3>ratingRegion<a class="headerlink" href="#com.apple.applicationaccess-ratingRegion-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id56">ratingRegion</a><a class="headerlink" href="#com.apple.applicationaccess-ratingRegion-auto" title="Permalink to this headline">¶</a></h3>
 <p>Region Code</p>
 <p>Two-character code for the region used to specify ratings</p>
 <table border="1" class="docutils">
@@ -2960,7 +2364,7 @@
 </ul>
 </div>
 <div class="section" id="com.apple.applicationaccess-safariAcceptCookies-auto">
-<h3>safariAcceptCookies<a class="headerlink" href="#com.apple.applicationaccess-safariAcceptCookies-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id57">safariAcceptCookies</a><a class="headerlink" href="#com.apple.applicationaccess-safariAcceptCookies-auto" title="Permalink to this headline">¶</a></h3>
 <p>Accept Cookies in Safari</p>
 <p>Accept cookies: 0 - Never, 1 - From current website only (iOS 8) or visited sites (pre-iOS 8), 1.5 - From websites I visit, 2 - Always</p>
 <table border="1" class="docutils">
@@ -3003,7 +2407,7 @@
 </ul>
 </div>
 <div class="section" id="com.apple.applicationaccess-safariAllowAutoFill-auto">
-<h3>safariAllowAutoFill<a class="headerlink" href="#com.apple.applicationaccess-safariAllowAutoFill-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id58">safariAllowAutoFill</a><a class="headerlink" href="#com.apple.applicationaccess-safariAllowAutoFill-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow AutoFill in Safari</p>
 <p>Allow AutoFill in Safari</p>
 <table border="1" class="docutils">
@@ -3039,7 +2443,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-safariAllowJavaScript-auto">
-<h3>safariAllowJavaScript<a class="headerlink" href="#com.apple.applicationaccess-safariAllowJavaScript-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id59">safariAllowJavaScript</a><a class="headerlink" href="#com.apple.applicationaccess-safariAllowJavaScript-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow JavaScript</p>
 <p>Allow JavaScript in Safari</p>
 <table border="1" class="docutils">
@@ -3075,7 +2479,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-safariAllowPopups-auto">
-<h3>safariAllowPopups<a class="headerlink" href="#com.apple.applicationaccess-safariAllowPopups-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id60">safariAllowPopups</a><a class="headerlink" href="#com.apple.applicationaccess-safariAllowPopups-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow Pop-ups</p>
 <p>Allow Pop-ups in Safari</p>
 <table border="1" class="docutils">
@@ -3111,7 +2515,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-safariForceFraudWarning-auto">
-<h3>safariForceFraudWarning<a class="headerlink" href="#com.apple.applicationaccess-safariForceFraudWarning-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id61">safariForceFraudWarning</a><a class="headerlink" href="#com.apple.applicationaccess-safariForceFraudWarning-auto" title="Permalink to this headline">¶</a></h3>
 <p>Enable Fraud Warning</p>
 <p>Enable fraud warning in Safari</p>
 <table border="1" class="docutils">
@@ -3147,7 +2551,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowAssistant-auto">
-<h3>allowAssistant<a class="headerlink" href="#com.apple.applicationaccess-allowAssistant-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id62">allowAssistant</a><a class="headerlink" href="#com.apple.applicationaccess-allowAssistant-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow Siri</p>
 <p>Allow Siri</p>
 <table border="1" class="docutils">
@@ -3183,7 +2587,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowAssistantWhileLocked-auto">
-<h3>allowAssistantWhileLocked<a class="headerlink" href="#com.apple.applicationaccess-allowAssistantWhileLocked-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id63">allowAssistantWhileLocked</a><a class="headerlink" href="#com.apple.applicationaccess-allowAssistantWhileLocked-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow Siri While Locked</p>
 <p>Allow Siri while device is locked</p>
 <table border="1" class="docutils">
@@ -3219,7 +2623,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-forceAssistantProfanityFilter-auto">
-<h3>forceAssistantProfanityFilter<a class="headerlink" href="#com.apple.applicationaccess-forceAssistantProfanityFilter-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id64">forceAssistantProfanityFilter</a><a class="headerlink" href="#com.apple.applicationaccess-forceAssistantProfanityFilter-auto" title="Permalink to this headline">¶</a></h3>
 <p>Enable Siri Profanity Filter</p>
 <p>Enable Siri Profanity Filter (Supervised devices only)</p>
 <table border="1" class="docutils">
@@ -3255,7 +2659,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowPredictiveKeyboard-auto">
-<h3>allowPredictiveKeyboard<a class="headerlink" href="#com.apple.applicationaccess-allowPredictiveKeyboard-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id65">allowPredictiveKeyboard</a><a class="headerlink" href="#com.apple.applicationaccess-allowPredictiveKeyboard-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow Predictive Keyboard</p>
 <p>Allow Predictive Keyboard (Supervised devices only)</p>
 <table border="1" class="docutils">
@@ -3291,7 +2695,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowKeyboardShortcuts-auto">
-<h3>allowKeyboardShortcuts<a class="headerlink" href="#com.apple.applicationaccess-allowKeyboardShortcuts-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id66">allowKeyboardShortcuts</a><a class="headerlink" href="#com.apple.applicationaccess-allowKeyboardShortcuts-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow Keyboard Shortcuts</p>
 <p>Allow Keyboard Shortcuts (Supervised devices only)</p>
 <table border="1" class="docutils">
@@ -3327,7 +2731,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowAutoCorrection-auto">
-<h3>allowAutoCorrection<a class="headerlink" href="#com.apple.applicationaccess-allowAutoCorrection-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id67">allowAutoCorrection</a><a class="headerlink" href="#com.apple.applicationaccess-allowAutoCorrection-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow Auto Correction</p>
 <p>Allow Auto Correction (Supervised devices only)</p>
 <table border="1" class="docutils">
@@ -3363,7 +2767,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowSpellCheck-auto">
-<h3>allowSpellCheck<a class="headerlink" href="#com.apple.applicationaccess-allowSpellCheck-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id68">allowSpellCheck</a><a class="headerlink" href="#com.apple.applicationaccess-allowSpellCheck-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow Spell Check</p>
 <p>Allow Spell Check (Supervised devices only)</p>
 <table border="1" class="docutils">
@@ -3399,7 +2803,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowDefinitionLookup-auto">
-<h3>allowDefinitionLookup<a class="headerlink" href="#com.apple.applicationaccess-allowDefinitionLookup-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id69">allowDefinitionLookup</a><a class="headerlink" href="#com.apple.applicationaccess-allowDefinitionLookup-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow Define</p>
 <p>Allow Define (Supervised devices only)</p>
 <table border="1" class="docutils">
@@ -3435,7 +2839,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowOpenFromUnmanagedToManaged-auto">
-<h3>allowOpenFromUnmanagedToManaged<a class="headerlink" href="#com.apple.applicationaccess-allowOpenFromUnmanagedToManaged-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id70">allowOpenFromUnmanagedToManaged</a><a class="headerlink" href="#com.apple.applicationaccess-allowOpenFromUnmanagedToManaged-auto" title="Permalink to this headline">¶</a></h3>
 <p>Enable allow open from unmanaged to managed</p>
 <p>Enable allow open from unmanaged to managed</p>
 <table border="1" class="docutils">
@@ -3471,7 +2875,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowOpenFromManagedToUnmanaged-auto">
-<h3>allowOpenFromManagedToUnmanaged<a class="headerlink" href="#com.apple.applicationaccess-allowOpenFromManagedToUnmanaged-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id71">allowOpenFromManagedToUnmanaged</a><a class="headerlink" href="#com.apple.applicationaccess-allowOpenFromManagedToUnmanaged-auto" title="Permalink to this headline">¶</a></h3>
 <p>Enable allow open from managed to unmanaged</p>
 <p>Enable allow open from managed to unmanaged</p>
 <table border="1" class="docutils">
@@ -3507,7 +2911,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-forceAirDropUnmanaged-auto">
-<h3>forceAirDropUnmanaged<a class="headerlink" href="#com.apple.applicationaccess-forceAirDropUnmanaged-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id72">forceAirDropUnmanaged</a><a class="headerlink" href="#com.apple.applicationaccess-forceAirDropUnmanaged-auto" title="Permalink to this headline">¶</a></h3>
 <p>Treat AirDrop as Unmanaged Destination</p>
 <p>Treat AirDrop as Unmanaged Destination</p>
 <table border="1" class="docutils">
@@ -3543,7 +2947,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowActivityContinuation-auto">
-<h3>allowActivityContinuation<a class="headerlink" href="#com.apple.applicationaccess-allowActivityContinuation-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id73">allowActivityContinuation</a><a class="headerlink" href="#com.apple.applicationaccess-allowActivityContinuation-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow Handoff</p>
 <p>If set to false, Handoff will be disabled.</p>
 <table border="1" class="docutils">
@@ -3579,7 +2983,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowFingerprintForUnlock-auto">
-<h3>allowFingerprintForUnlock<a class="headerlink" href="#com.apple.applicationaccess-allowFingerprintForUnlock-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id74">allowFingerprintForUnlock</a><a class="headerlink" href="#com.apple.applicationaccess-allowFingerprintForUnlock-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow Touch ID to Unlock Device</p>
 <p>Allow Touch ID to Unlock Device</p>
 <table border="1" class="docutils">
@@ -3615,7 +3019,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowFingerprintModification-auto">
-<h3>allowFingerprintModification<a class="headerlink" href="#com.apple.applicationaccess-allowFingerprintModification-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id75">allowFingerprintModification</a><a class="headerlink" href="#com.apple.applicationaccess-allowFingerprintModification-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow Modifying Touch ID Fingerprints</p>
 <p>Allow modifying Touch ID fingerprints</p>
 <table border="1" class="docutils">
@@ -3651,7 +3055,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowNotificationsModification-auto">
-<h3>allowNotificationsModification<a class="headerlink" href="#com.apple.applicationaccess-allowNotificationsModification-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id76">allowNotificationsModification</a><a class="headerlink" href="#com.apple.applicationaccess-allowNotificationsModification-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow Modifying Notifications Settings</p>
 <p>Allow Modifying Notifications Settings</p>
 <table border="1" class="docutils">
@@ -3687,7 +3091,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-blacklistedAppBundleIDs-auto">
-<h3>blacklistedAppBundleIDs<a class="headerlink" href="#com.apple.applicationaccess-blacklistedAppBundleIDs-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id77">blacklistedAppBundleIDs</a><a class="headerlink" href="#com.apple.applicationaccess-blacklistedAppBundleIDs-auto" title="Permalink to this headline">¶</a></h3>
 <p>Blacklisted Apps</p>
 <p>If present, prevents bundle IDs listed in the array from being shown or launchable.</p>
 <table border="1" class="docutils">
@@ -3723,7 +3127,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-whitelistedAppBundleIDs-auto">
-<h3>whitelistedAppBundleIDs<a class="headerlink" href="#com.apple.applicationaccess-whitelistedAppBundleIDs-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id78">whitelistedAppBundleIDs</a><a class="headerlink" href="#com.apple.applicationaccess-whitelistedAppBundleIDs-auto" title="Permalink to this headline">¶</a></h3>
 <p>Whitelisted Apps</p>
 <p>If present, allows only bundle IDs listed in the array from being shown or launchable.</p>
 <table border="1" class="docutils">
@@ -3759,7 +3163,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowAutoUnlock-auto">
-<h3>allowAutoUnlock<a class="headerlink" href="#com.apple.applicationaccess-allowAutoUnlock-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id79">allowAutoUnlock</a><a class="headerlink" href="#com.apple.applicationaccess-allowAutoUnlock-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow macOS auto unlock</p>
 <p>If set to false, disallows macOS auto unlock. Defaults to true.</p>
 <table border="1" class="docutils">
@@ -3795,7 +3199,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.applicationaccess-allowCloudDesktopAndDocuments-auto">
-<h3>allowCloudDesktopAndDocuments<a class="headerlink" href="#com.apple.applicationaccess-allowCloudDesktopAndDocuments-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id80">allowCloudDesktopAndDocuments</a><a class="headerlink" href="#com.apple.applicationaccess-allowCloudDesktopAndDocuments-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow cloud desktop and documents</p>
 <p>If set to false, disallows macOS cloud desktop and document services. Defaults to true.</p>
 <table border="1" class="docutils">
@@ -3832,7 +3236,7 @@
 </div>
 </div>
 <div class="section" id="links">
-<h2>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id81">Links</a><a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><a class="reference external" href="https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW13">Official Documentation</a>.</li>
 </ul>

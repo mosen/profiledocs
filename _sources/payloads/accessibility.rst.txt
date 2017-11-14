@@ -6,11 +6,12 @@ Accessibility
 
 This payload controls accessibility settings.
 
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.universalaccess manifest.plist
-.. pfm:: /_static/manifests/com.apple.universalaccess manifest.plist
 
 Keys
 ----

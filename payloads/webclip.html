@@ -94,6 +94,7 @@
 <li class="toctree-l2"><a class="reference internal" href="activedirectory.html">Active Directory</a></li>
 <li class="toctree-l2"><a class="reference internal" href="adcert.html">Active Directory Certificate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="airplay.html">AirPlay</a></li>
+<li class="toctree-l2"><a class="reference internal" href="com.apple.airplay.security.html">AirPlay Security</a></li>
 <li class="toctree-l2"><a class="reference internal" href="airprint.html">AirPrint</a></li>
 <li class="toctree-l2"><a class="reference internal" href="applock.html">App Lock</a></li>
 <li class="toctree-l2"><a class="reference internal" href="appstore.html">App Store</a></li>
@@ -151,7 +152,7 @@
 <li class="toctree-l2"><a class="reference internal" href="perappvpn.html">Per-App VPN</a></li>
 <li class="toctree-l2"><a class="reference internal" href="appmapping.html">App-to-Per-App VPN Mapping</a></li>
 <li class="toctree-l2"><a class="reference internal" href="defaults.html">iOS Defaults</a></li>
-<li class="toctree-l2"><a class="reference internal" href="parentalcontrols.html">Parental Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parentalcontrols.html">Application Access</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parental-timelimits.html">Parental Controls - Time Limits</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parental-contentfilter.html">Parental Controls - Content Filter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="profileremovalpassword.html">Profile Removal Password</a></li>
@@ -250,9 +251,32 @@
            <div itemprop="articleBody">
             
   <div class="section" id="webclip">
-<h1>WebClip<a class="headerlink" href="#webclip" title="Permalink to this headline">¶</a></h1>
+<h1><a class="toc-backref" href="#id1">WebClip</a><a class="headerlink" href="#webclip" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">On macOS this will create a .webloc file located in the documents area of the dock.</p>
+</div>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#webclip" id="id1">WebClip</a><ul>
+<li><a class="reference internal" href="#summary" id="id2">Summary</a></li>
+<li><a class="reference internal" href="#keys" id="id3">Keys</a><ul>
+<li><a class="reference internal" href="#com.apple.webClip.managed-URL-auto" id="id4">URL</a></li>
+<li><a class="reference internal" href="#com.apple.webClip.managed-Label-auto" id="id5">Label</a></li>
+<li><a class="reference internal" href="#com.apple.webClip.managed-Icon-auto" id="id6">Icon</a></li>
+<li><a class="reference internal" href="#com.apple.webClip.managed-IsRemovable-auto" id="id7">IsRemovable</a></li>
+<li><a class="reference internal" href="#com.apple.webClip.managed-FullScreen-auto" id="id8">FullScreen</a></li>
+<li><a class="reference internal" href="#com.apple.webClip.managed-Precomposed-auto" id="id9">Precomposed</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#links" id="id10">Links</a></li>
+</ul>
+</li>
+</ul>
+</div>
 <div class="section" id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id2">Summary</a><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -275,66 +299,11 @@
 </tr>
 </tbody>
 </table>
-<table border="1" class="docutils">
-<colgroup>
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="43%" />
-<col width="14%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Name</th>
-<th class="head">Type</th>
-<th class="head">Title</th>
-<th class="head">Description</th>
-<th class="head">Required</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>URL</td>
-<td>string</td>
-<td>URL</td>
-<td>The URL that the web clip should open when clicked. The URL must begin with HTTP or HTTPS</td>
-<td>always</td>
-</tr>
-<tr class="row-odd"><td>Label</td>
-<td>string</td>
-<td>Label</td>
-<td>The name of the Web Clip as displayed on the Home screen</td>
-<td>always</td>
-</tr>
-<tr class="row-even"><td>Icon</td>
-<td>data</td>
-<td>Icon</td>
-<td>A PNG icon to be shown on the Home screen. Should be 59 x 60 pixels. If not specified a white square will be shown</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>IsRemovable</td>
-<td>boolean</td>
-<td>Removable</td>
-<td>If not set, the user cannot remove the Web Clip, but it will be removed if the profile is deleted</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>FullScreen</td>
-<td>boolean</td>
-<td>Full Screen</td>
-<td>Launch the Web Clip as a full-screen web app</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>Precomposed</td>
-<td>boolean</td>
-<td>Precomposed Icon</td>
-<td>Prevent SpringBoard from adding &#8220;shine&#8221; to the icon</td>
-<td>n/a</td>
-</tr>
-</tbody>
-</table>
 </div>
 <div class="section" id="keys">
-<h2>Keys<a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id3">Keys</a><a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="com.apple.webClip.managed-URL-auto">
-<h3>URL<a class="headerlink" href="#com.apple.webClip.managed-URL-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id4">URL</a><a class="headerlink" href="#com.apple.webClip.managed-URL-auto" title="Permalink to this headline">¶</a></h3>
 <p>URL</p>
 <p>The URL that the web clip should open when clicked. The URL must begin with HTTP or HTTPS</p>
 <table border="1" class="docutils">
@@ -370,7 +339,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.webClip.managed-Label-auto">
-<h3>Label<a class="headerlink" href="#com.apple.webClip.managed-Label-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id5">Label</a><a class="headerlink" href="#com.apple.webClip.managed-Label-auto" title="Permalink to this headline">¶</a></h3>
 <p>Label</p>
 <p>The name of the Web Clip as displayed on the Home screen</p>
 <table border="1" class="docutils">
@@ -406,7 +375,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.webClip.managed-Icon-auto">
-<h3>Icon<a class="headerlink" href="#com.apple.webClip.managed-Icon-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id6">Icon</a><a class="headerlink" href="#com.apple.webClip.managed-Icon-auto" title="Permalink to this headline">¶</a></h3>
 <p>Icon</p>
 <p>A PNG icon to be shown on the Home screen. Should be 59 x 60 pixels. If not specified a white square will be shown</p>
 <table border="1" class="docutils">
@@ -442,7 +411,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.webClip.managed-IsRemovable-auto">
-<h3>IsRemovable<a class="headerlink" href="#com.apple.webClip.managed-IsRemovable-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id7">IsRemovable</a><a class="headerlink" href="#com.apple.webClip.managed-IsRemovable-auto" title="Permalink to this headline">¶</a></h3>
 <p>Removable</p>
 <p>If not set, the user cannot remove the Web Clip, but it will be removed if the profile is deleted</p>
 <table border="1" class="docutils">
@@ -478,7 +447,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.webClip.managed-FullScreen-auto">
-<h3>FullScreen<a class="headerlink" href="#com.apple.webClip.managed-FullScreen-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id8">FullScreen</a><a class="headerlink" href="#com.apple.webClip.managed-FullScreen-auto" title="Permalink to this headline">¶</a></h3>
 <p>Full Screen</p>
 <p>Launch the Web Clip as a full-screen web app</p>
 <table border="1" class="docutils">
@@ -514,7 +483,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.webClip.managed-Precomposed-auto">
-<h3>Precomposed<a class="headerlink" href="#com.apple.webClip.managed-Precomposed-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id9">Precomposed</a><a class="headerlink" href="#com.apple.webClip.managed-Precomposed-auto" title="Permalink to this headline">¶</a></h3>
 <p>Precomposed Icon</p>
 <p>Prevent SpringBoard from adding &#8220;shine&#8221; to the icon</p>
 <table border="1" class="docutils">
@@ -551,7 +520,7 @@
 </div>
 </div>
 <div class="section" id="links">
-<h2>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id10">Links</a><a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><a class="reference external" href="https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW12">Official Documentation</a>.</li>
 </ul>

@@ -94,6 +94,7 @@
 <li class="toctree-l2"><a class="reference internal" href="activedirectory.html">Active Directory</a></li>
 <li class="toctree-l2"><a class="reference internal" href="adcert.html">Active Directory Certificate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="airplay.html">AirPlay</a></li>
+<li class="toctree-l2"><a class="reference internal" href="com.apple.airplay.security.html">AirPlay Security</a></li>
 <li class="toctree-l2"><a class="reference internal" href="airprint.html">AirPrint</a></li>
 <li class="toctree-l2"><a class="reference internal" href="applock.html">App Lock</a></li>
 <li class="toctree-l2"><a class="reference internal" href="appstore.html">App Store</a></li>
@@ -179,7 +180,7 @@
 <li class="toctree-l2"><a class="reference internal" href="perappvpn.html">Per-App VPN</a></li>
 <li class="toctree-l2"><a class="reference internal" href="appmapping.html">App-to-Per-App VPN Mapping</a></li>
 <li class="toctree-l2"><a class="reference internal" href="defaults.html">iOS Defaults</a></li>
-<li class="toctree-l2"><a class="reference internal" href="parentalcontrols.html">Parental Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parentalcontrols.html">Application Access</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parental-timelimits.html">Parental Controls - Time Limits</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parental-contentfilter.html">Parental Controls - Content Filter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="profileremovalpassword.html">Profile Removal Password</a></li>
@@ -265,12 +266,47 @@
            <div itemprop="articleBody">
             
   <div class="section" id="loginwindow">
-<span id="payloadtype-com-apple-loginwindow"></span><h1>Loginwindow<a class="headerlink" href="#loginwindow" title="Permalink to this headline">¶</a></h1>
+<span id="payloadtype-com-apple-loginwindow"></span><h1><a class="toc-backref" href="#id1">Loginwindow</a><a class="headerlink" href="#loginwindow" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference download internal" href="../_downloads/com.apple.loginwindow.mobileconfig" download=""><code class="xref download docutils literal"><span class="pre">Template</span></code></a></p>
 <p>The com.apple.loginwindow payload, which is actually a different piece of code to the loginwindow payload, controls
 the loginwindow display.</p>
 <p>Profile Manager only displays a fraction of the keys that may actually be used.</p>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#loginwindow" id="id1">Loginwindow</a><ul>
+<li><a class="reference internal" href="#summary" id="id2">Summary</a></li>
+<li><a class="reference internal" href="#keys" id="id3">Keys</a><ul>
+<li><a class="reference internal" href="#com.apple.loginwindow-SHOWFULLNAME-auto" id="id4">SHOWFULLNAME</a></li>
+<li><a class="reference internal" href="#com.apple.loginwindow-HideLocalUsers-auto" id="id5">HideLocalUsers</a></li>
+<li><a class="reference internal" href="#com.apple.loginwindow-IncludeNetworkUser-auto" id="id6">IncludeNetworkUser</a></li>
+<li><a class="reference internal" href="#com.apple.loginwindow-HideAdminUsers-auto" id="id7">HideAdminUsers</a></li>
+<li><a class="reference internal" href="#com.apple.loginwindow-SHOWOTHERUSERS_MANAGED-auto" id="id8">SHOWOTHERUSERS_MANAGED</a></li>
+<li><a class="reference internal" href="#com.apple.loginwindow-AdminHostInfo-auto" id="id9">AdminHostInfo</a></li>
+<li><a class="reference internal" href="#com.apple.loginwindow-AllowList-auto" id="id10">AllowList</a></li>
+<li><a class="reference internal" href="#com.apple.loginwindow-DenyList-auto" id="id11">DenyList</a></li>
+<li><a class="reference internal" href="#com.apple.loginwindow-HideMobileAccounts-auto" id="id12">HideMobileAccounts</a></li>
+<li><a class="reference internal" href="#com.apple.loginwindow-ShutDownDisabled-auto" id="id13">ShutDownDisabled</a></li>
+<li><a class="reference internal" href="#com.apple.loginwindow-RestartDisabled-auto" id="id14">RestartDisabled</a></li>
+<li><a class="reference internal" href="#com.apple.loginwindow-SleepDisabled-auto" id="id15">SleepDisabled</a></li>
+<li><a class="reference internal" href="#com.apple.loginwindow-DisableConsoleAccess-auto" id="id16">DisableConsoleAccess</a></li>
+<li><a class="reference internal" href="#com.apple.loginwindow-LoginwindowText-auto" id="id17">LoginwindowText</a></li>
+<li><a class="reference internal" href="#com.apple.loginwindow-ShutDownDisabledWhileLoggedIn-auto" id="id18">ShutDownDisabledWhileLoggedIn</a></li>
+<li><a class="reference internal" href="#com.apple.loginwindow-RestartDisabledWhileLoggedIn-auto" id="id19">RestartDisabledWhileLoggedIn</a></li>
+<li><a class="reference internal" href="#com.apple.loginwindow-PowerOffDisabledWhileLoggedIn-auto" id="id20">PowerOffDisabledWhileLoggedIn</a></li>
+<li><a class="reference internal" href="#com.apple.loginwindow-DisableLoginItemsSuppression-auto" id="id21">DisableLoginItemsSuppression</a></li>
+<li><a class="reference internal" href="#com.apple.loginwindow-DisableFDEAutoLogin-auto" id="id22">DisableFDEAutoLogin</a></li>
+<li><a class="reference internal" href="#com.apple.loginwindow-LogOutDisabledWhileLoggedIn-auto" id="id23">LogOutDisabledWhileLoggedIn</a></li>
+<li><a class="reference internal" href="#com.apple.loginwindow-DisableScreenLockImmediate-auto" id="id24">DisableScreenLockImmediate</a></li>
+<li><a class="reference internal" href="#untested" id="id25">Untested</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
 <div class="section" id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id2">Summary</a><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -293,156 +329,11 @@ the loginwindow display.</p>
 </tr>
 </tbody>
 </table>
-<table border="1" class="docutils">
-<colgroup>
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="43%" />
-<col width="14%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Name</th>
-<th class="head">Type</th>
-<th class="head">Title</th>
-<th class="head">Description</th>
-<th class="head">Required</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>SHOWFULLNAME</td>
-<td>boolean</td>
-<td>Display Mode</td>
-<td>Set the login window to display name and password text boxes for user login or a list of users.  Set to &#8220;True&#8221; to display username and password text boxes.  Set to &#8220;False&#8221; to display a list of users.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>HideLocalUsers</td>
-<td>boolean</td>
-<td>Hide Local Users</td>
-<td>When showing a user list, set to true to show only network and system users.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>IncludeNetworkUser</td>
-<td>boolean</td>
-<td>Show Network Accounts</td>
-<td>Set the login window to show network accounts.  Display mode must be set to display &#8220;List of Users&#8221; for this preference to take effect.  Set to &#8220;True&#8221; to set the preference.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>HideAdminUsers</td>
-<td>boolean</td>
-<td>Hide Admin Accounts</td>
-<td>Set the login window to hide admin accounts.  Display mode must be set to display &#8220;List of Users&#8221; for this preference to take effect.  Set to &#8220;True&#8221; to set the preference.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>SHOWOTHERUSERS_MANAGED</td>
-<td>boolean</td>
-<td>Hide Other Accounts</td>
-<td>Set the login window to hide the option to login as &#8220;other&#8221; account.  Display mode must be set to display &#8220;List of Users&#8221; for this preference to take effect.  Set to &#8220;False&#8221; to set the preference.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>AdminHostInfo</td>
-<td>string</td>
-<td>Heading</td>
-<td>Set the default heading of the Login Window.  Example values include:  &#8220;HostName&#8221;, &#8220;SystemVersion&#8221;, &#8220;SystemBuild&#8221;, &#8220;SerialNumber&#8221;, &#8220;IPAddress&#8221;, &#8220;DSStatus&#8221;, &#8220;Time&#8221;.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>AllowList</td>
-<td>array</td>
-<td>Allowed Users or Groups</td>
-<td>User or group GUIDs of users that are allowed to log in. An asterisk &#8216;*&#8217; string specifies all users or groups.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>DenyList</td>
-<td>array</td>
-<td>Denied Users or Groups</td>
-<td>User or group GUIDs of users that cannot log in. This list takes priority over the list in the AllowList key.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>HideMobileAccounts</td>
-<td>boolean</td>
-<td>Hide Mobile Accounts</td>
-<td>If set to true, mobile account users will not be visible in a user list. In some cases mobile users will show up as network users.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>ShutDownDisabled</td>
-<td>boolean</td>
-<td>Hide Shut Down Button</td>
-<td>If set to true, the Shut Down button item will be hidden.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>RestartDisabled</td>
-<td>boolean</td>
-<td>Hide Restart Button</td>
-<td>Set the option to hide the Restart button from the login window.  Set to &#8220;True&#8221; to set the preference.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>SleepDisabled</td>
-<td>boolean</td>
-<td>Hide Sleep Button</td>
-<td>If set to true, the Sleep button item will be hidden.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>DisableConsoleAccess</td>
-<td>boolean</td>
-<td>Disable Console Access</td>
-<td>Disables the ability for a user to access the console by typing &#8220;&gt;console&#8221; for a username at the login window.  Set to &#8220;True&#8221; to set the preference.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>LoginwindowText</td>
-<td>string</td>
-<td>Login Window Text</td>
-<td>Text to display in the login window.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>ShutDownDisabledWhileLoggedIn</td>
-<td>boolean</td>
-<td>Disable Shutdown Apple Menu Item</td>
-<td>Disables the &#8220;Shutdown&#8221; option when users are logged in.  Set to &#8220;True&#8221; to set the preference.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>RestartDisabledWhileLoggedIn</td>
-<td>boolean</td>
-<td>Disable Restart Apple Menu Item</td>
-<td>Disables the &#8220;Restart&#8221; option when users are logged in.  Set to &#8220;True&#8221; to set the preference.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>PowerOffDisabledWhileLoggedIn</td>
-<td>boolean</td>
-<td>Disable Power Off Apple Menu Item</td>
-<td>If set to true, the Power Off menu item will be disabled when the user is logged in.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>DisableLoginItemsSuppression</td>
-<td>boolean</td>
-<td>Disable Login Items Suppression</td>
-<td>If set to true, the user is prevented from disabling login item launching using the Shift key.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>DisableFDEAutoLogin</td>
-<td>boolean</td>
-<td>Disable automatic login</td>
-<td>Disable automatic login if FileVault is enabled, so that both an EFI Login and loginwindow password are required</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>LogOutDisabledWhileLoggedIn</td>
-<td>boolean</td>
-<td>Disable Log Out menu item</td>
-<td>If set to true, disables the Log Out... menu item when logged in</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>DisableScreenLockImmediate</td>
-<td>boolean</td>
-<td>Disable immediate screen lock</td>
-<td>If set to true, disables the immediate screen lock functions.</td>
-<td>n/a</td>
-</tr>
-</tbody>
-</table>
 </div>
 <div class="section" id="keys">
-<h2>Keys<a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id3">Keys</a><a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="com.apple.loginwindow-SHOWFULLNAME-auto">
-<h3>SHOWFULLNAME<a class="headerlink" href="#com.apple.loginwindow-SHOWFULLNAME-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id4">SHOWFULLNAME</a><a class="headerlink" href="#com.apple.loginwindow-SHOWFULLNAME-auto" title="Permalink to this headline">¶</a></h3>
 <p>Display Mode</p>
 <p>Set the login window to display name and password text boxes for user login or a list of users.  Set to &#8220;True&#8221; to display username and password text boxes.  Set to &#8220;False&#8221; to display a list of users.</p>
 <table border="1" class="docutils">
@@ -478,7 +369,7 @@ the loginwindow display.</p>
 </table>
 </div>
 <div class="section" id="com.apple.loginwindow-HideLocalUsers-auto">
-<h3>HideLocalUsers<a class="headerlink" href="#com.apple.loginwindow-HideLocalUsers-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id5">HideLocalUsers</a><a class="headerlink" href="#com.apple.loginwindow-HideLocalUsers-auto" title="Permalink to this headline">¶</a></h3>
 <p>Hide Local Users</p>
 <p>When showing a user list, set to true to show only network and system users.</p>
 <table border="1" class="docutils">
@@ -514,7 +405,7 @@ the loginwindow display.</p>
 </table>
 </div>
 <div class="section" id="com.apple.loginwindow-IncludeNetworkUser-auto">
-<h3>IncludeNetworkUser<a class="headerlink" href="#com.apple.loginwindow-IncludeNetworkUser-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id6">IncludeNetworkUser</a><a class="headerlink" href="#com.apple.loginwindow-IncludeNetworkUser-auto" title="Permalink to this headline">¶</a></h3>
 <p>Show Network Accounts</p>
 <p>Set the login window to show network accounts.  Display mode must be set to display &#8220;List of Users&#8221; for this preference to take effect.  Set to &#8220;True&#8221; to set the preference.</p>
 <table border="1" class="docutils">
@@ -550,7 +441,7 @@ the loginwindow display.</p>
 </table>
 </div>
 <div class="section" id="com.apple.loginwindow-HideAdminUsers-auto">
-<h3>HideAdminUsers<a class="headerlink" href="#com.apple.loginwindow-HideAdminUsers-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id7">HideAdminUsers</a><a class="headerlink" href="#com.apple.loginwindow-HideAdminUsers-auto" title="Permalink to this headline">¶</a></h3>
 <p>Hide Admin Accounts</p>
 <p>Set the login window to hide admin accounts.  Display mode must be set to display &#8220;List of Users&#8221; for this preference to take effect.  Set to &#8220;True&#8221; to set the preference.</p>
 <table border="1" class="docutils">
@@ -586,7 +477,7 @@ the loginwindow display.</p>
 </table>
 </div>
 <div class="section" id="com.apple.loginwindow-SHOWOTHERUSERS_MANAGED-auto">
-<h3>SHOWOTHERUSERS_MANAGED<a class="headerlink" href="#com.apple.loginwindow-SHOWOTHERUSERS_MANAGED-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id8">SHOWOTHERUSERS_MANAGED</a><a class="headerlink" href="#com.apple.loginwindow-SHOWOTHERUSERS_MANAGED-auto" title="Permalink to this headline">¶</a></h3>
 <p>Hide Other Accounts</p>
 <p>Set the login window to hide the option to login as &#8220;other&#8221; account.  Display mode must be set to display &#8220;List of Users&#8221; for this preference to take effect.  Set to &#8220;False&#8221; to set the preference.</p>
 <table border="1" class="docutils">
@@ -622,7 +513,7 @@ the loginwindow display.</p>
 </table>
 </div>
 <div class="section" id="com.apple.loginwindow-AdminHostInfo-auto">
-<h3>AdminHostInfo<a class="headerlink" href="#com.apple.loginwindow-AdminHostInfo-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id9">AdminHostInfo</a><a class="headerlink" href="#com.apple.loginwindow-AdminHostInfo-auto" title="Permalink to this headline">¶</a></h3>
 <p>Heading</p>
 <p>Set the default heading of the Login Window.  Example values include:  &#8220;HostName&#8221;, &#8220;SystemVersion&#8221;, &#8220;SystemBuild&#8221;, &#8220;SerialNumber&#8221;, &#8220;IPAddress&#8221;, &#8220;DSStatus&#8221;, &#8220;Time&#8221;.</p>
 <table border="1" class="docutils">
@@ -658,7 +549,7 @@ the loginwindow display.</p>
 </table>
 </div>
 <div class="section" id="com.apple.loginwindow-AllowList-auto">
-<h3>AllowList<a class="headerlink" href="#com.apple.loginwindow-AllowList-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id10">AllowList</a><a class="headerlink" href="#com.apple.loginwindow-AllowList-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allowed Users or Groups</p>
 <p>User or group GUIDs of users that are allowed to log in. An asterisk &#8216;*&#8217; string specifies all users or groups.</p>
 <table border="1" class="docutils">
@@ -694,7 +585,7 @@ the loginwindow display.</p>
 </table>
 </div>
 <div class="section" id="com.apple.loginwindow-DenyList-auto">
-<h3>DenyList<a class="headerlink" href="#com.apple.loginwindow-DenyList-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id11">DenyList</a><a class="headerlink" href="#com.apple.loginwindow-DenyList-auto" title="Permalink to this headline">¶</a></h3>
 <p>Denied Users or Groups</p>
 <p>User or group GUIDs of users that cannot log in. This list takes priority over the list in the AllowList key.</p>
 <table border="1" class="docutils">
@@ -730,7 +621,7 @@ the loginwindow display.</p>
 </table>
 </div>
 <div class="section" id="com.apple.loginwindow-HideMobileAccounts-auto">
-<h3>HideMobileAccounts<a class="headerlink" href="#com.apple.loginwindow-HideMobileAccounts-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id12">HideMobileAccounts</a><a class="headerlink" href="#com.apple.loginwindow-HideMobileAccounts-auto" title="Permalink to this headline">¶</a></h3>
 <p>Hide Mobile Accounts</p>
 <p>If set to true, mobile account users will not be visible in a user list. In some cases mobile users will show up as network users.</p>
 <table border="1" class="docutils">
@@ -766,7 +657,7 @@ the loginwindow display.</p>
 </table>
 </div>
 <div class="section" id="com.apple.loginwindow-ShutDownDisabled-auto">
-<h3>ShutDownDisabled<a class="headerlink" href="#com.apple.loginwindow-ShutDownDisabled-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id13">ShutDownDisabled</a><a class="headerlink" href="#com.apple.loginwindow-ShutDownDisabled-auto" title="Permalink to this headline">¶</a></h3>
 <p>Hide Shut Down Button</p>
 <p>If set to true, the Shut Down button item will be hidden.</p>
 <table border="1" class="docutils">
@@ -802,7 +693,7 @@ the loginwindow display.</p>
 </table>
 </div>
 <div class="section" id="com.apple.loginwindow-RestartDisabled-auto">
-<h3>RestartDisabled<a class="headerlink" href="#com.apple.loginwindow-RestartDisabled-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id14">RestartDisabled</a><a class="headerlink" href="#com.apple.loginwindow-RestartDisabled-auto" title="Permalink to this headline">¶</a></h3>
 <p>Hide Restart Button</p>
 <p>Set the option to hide the Restart button from the login window.  Set to &#8220;True&#8221; to set the preference.</p>
 <table border="1" class="docutils">
@@ -838,7 +729,7 @@ the loginwindow display.</p>
 </table>
 </div>
 <div class="section" id="com.apple.loginwindow-SleepDisabled-auto">
-<h3>SleepDisabled<a class="headerlink" href="#com.apple.loginwindow-SleepDisabled-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id15">SleepDisabled</a><a class="headerlink" href="#com.apple.loginwindow-SleepDisabled-auto" title="Permalink to this headline">¶</a></h3>
 <p>Hide Sleep Button</p>
 <p>If set to true, the Sleep button item will be hidden.</p>
 <table border="1" class="docutils">
@@ -874,7 +765,7 @@ the loginwindow display.</p>
 </table>
 </div>
 <div class="section" id="com.apple.loginwindow-DisableConsoleAccess-auto">
-<h3>DisableConsoleAccess<a class="headerlink" href="#com.apple.loginwindow-DisableConsoleAccess-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id16">DisableConsoleAccess</a><a class="headerlink" href="#com.apple.loginwindow-DisableConsoleAccess-auto" title="Permalink to this headline">¶</a></h3>
 <p>Disable Console Access</p>
 <p>Disables the ability for a user to access the console by typing &#8220;&gt;console&#8221; for a username at the login window.  Set to &#8220;True&#8221; to set the preference.</p>
 <table border="1" class="docutils">
@@ -910,7 +801,7 @@ the loginwindow display.</p>
 </table>
 </div>
 <div class="section" id="com.apple.loginwindow-LoginwindowText-auto">
-<h3>LoginwindowText<a class="headerlink" href="#com.apple.loginwindow-LoginwindowText-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id17">LoginwindowText</a><a class="headerlink" href="#com.apple.loginwindow-LoginwindowText-auto" title="Permalink to this headline">¶</a></h3>
 <p>Login Window Text</p>
 <p>Text to display in the login window.</p>
 <table border="1" class="docutils">
@@ -946,7 +837,7 @@ the loginwindow display.</p>
 </table>
 </div>
 <div class="section" id="com.apple.loginwindow-ShutDownDisabledWhileLoggedIn-auto">
-<h3>ShutDownDisabledWhileLoggedIn<a class="headerlink" href="#com.apple.loginwindow-ShutDownDisabledWhileLoggedIn-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id18">ShutDownDisabledWhileLoggedIn</a><a class="headerlink" href="#com.apple.loginwindow-ShutDownDisabledWhileLoggedIn-auto" title="Permalink to this headline">¶</a></h3>
 <p>Disable Shutdown Apple Menu Item</p>
 <p>Disables the &#8220;Shutdown&#8221; option when users are logged in.  Set to &#8220;True&#8221; to set the preference.</p>
 <table border="1" class="docutils">
@@ -982,7 +873,7 @@ the loginwindow display.</p>
 </table>
 </div>
 <div class="section" id="com.apple.loginwindow-RestartDisabledWhileLoggedIn-auto">
-<h3>RestartDisabledWhileLoggedIn<a class="headerlink" href="#com.apple.loginwindow-RestartDisabledWhileLoggedIn-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id19">RestartDisabledWhileLoggedIn</a><a class="headerlink" href="#com.apple.loginwindow-RestartDisabledWhileLoggedIn-auto" title="Permalink to this headline">¶</a></h3>
 <p>Disable Restart Apple Menu Item</p>
 <p>Disables the &#8220;Restart&#8221; option when users are logged in.  Set to &#8220;True&#8221; to set the preference.</p>
 <table border="1" class="docutils">
@@ -1018,7 +909,7 @@ the loginwindow display.</p>
 </table>
 </div>
 <div class="section" id="com.apple.loginwindow-PowerOffDisabledWhileLoggedIn-auto">
-<h3>PowerOffDisabledWhileLoggedIn<a class="headerlink" href="#com.apple.loginwindow-PowerOffDisabledWhileLoggedIn-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id20">PowerOffDisabledWhileLoggedIn</a><a class="headerlink" href="#com.apple.loginwindow-PowerOffDisabledWhileLoggedIn-auto" title="Permalink to this headline">¶</a></h3>
 <p>Disable Power Off Apple Menu Item</p>
 <p>If set to true, the Power Off menu item will be disabled when the user is logged in.</p>
 <table border="1" class="docutils">
@@ -1054,7 +945,7 @@ the loginwindow display.</p>
 </table>
 </div>
 <div class="section" id="com.apple.loginwindow-DisableLoginItemsSuppression-auto">
-<h3>DisableLoginItemsSuppression<a class="headerlink" href="#com.apple.loginwindow-DisableLoginItemsSuppression-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id21">DisableLoginItemsSuppression</a><a class="headerlink" href="#com.apple.loginwindow-DisableLoginItemsSuppression-auto" title="Permalink to this headline">¶</a></h3>
 <p>Disable Login Items Suppression</p>
 <p>If set to true, the user is prevented from disabling login item launching using the Shift key.</p>
 <table border="1" class="docutils">
@@ -1090,7 +981,7 @@ the loginwindow display.</p>
 </table>
 </div>
 <div class="section" id="com.apple.loginwindow-DisableFDEAutoLogin-auto">
-<h3>DisableFDEAutoLogin<a class="headerlink" href="#com.apple.loginwindow-DisableFDEAutoLogin-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id22">DisableFDEAutoLogin</a><a class="headerlink" href="#com.apple.loginwindow-DisableFDEAutoLogin-auto" title="Permalink to this headline">¶</a></h3>
 <p>Disable automatic login</p>
 <p>Disable automatic login if FileVault is enabled, so that both an EFI Login and loginwindow password are required</p>
 <table border="1" class="docutils">
@@ -1126,7 +1017,7 @@ the loginwindow display.</p>
 </table>
 </div>
 <div class="section" id="com.apple.loginwindow-LogOutDisabledWhileLoggedIn-auto">
-<h3>LogOutDisabledWhileLoggedIn<a class="headerlink" href="#com.apple.loginwindow-LogOutDisabledWhileLoggedIn-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id23">LogOutDisabledWhileLoggedIn</a><a class="headerlink" href="#com.apple.loginwindow-LogOutDisabledWhileLoggedIn-auto" title="Permalink to this headline">¶</a></h3>
 <p>Disable Log Out menu item</p>
 <p>If set to true, disables the Log Out... menu item when logged in</p>
 <table border="1" class="docutils">
@@ -1162,7 +1053,7 @@ the loginwindow display.</p>
 </table>
 </div>
 <div class="section" id="com.apple.loginwindow-DisableScreenLockImmediate-auto">
-<h3>DisableScreenLockImmediate<a class="headerlink" href="#com.apple.loginwindow-DisableScreenLockImmediate-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id24">DisableScreenLockImmediate</a><a class="headerlink" href="#com.apple.loginwindow-DisableScreenLockImmediate-auto" title="Permalink to this headline">¶</a></h3>
 <p>Disable immediate screen lock</p>
 <p>If set to true, disables the immediate screen lock functions.</p>
 <table border="1" class="docutils">
@@ -1198,7 +1089,7 @@ the loginwindow display.</p>
 </table>
 </div>
 <div class="section" id="untested">
-<h3>Untested<a class="headerlink" href="#untested" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id25">Untested</a><a class="headerlink" href="#untested" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>RetriesUntilHint</li>
 <li>com.apple.login.mcx.DisableAutoLoginClient</li>

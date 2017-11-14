@@ -139,6 +139,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="adcert.html">Active Directory Certificate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="airplay.html">AirPlay</a></li>
+<li class="toctree-l2"><a class="reference internal" href="com.apple.airplay.security.html">AirPlay Security</a></li>
 <li class="toctree-l2"><a class="reference internal" href="airprint.html">AirPrint</a></li>
 <li class="toctree-l2"><a class="reference internal" href="applock.html">App Lock</a></li>
 <li class="toctree-l2"><a class="reference internal" href="appstore.html">App Store</a></li>
@@ -196,7 +197,7 @@
 <li class="toctree-l2"><a class="reference internal" href="perappvpn.html">Per-App VPN</a></li>
 <li class="toctree-l2"><a class="reference internal" href="appmapping.html">App-to-Per-App VPN Mapping</a></li>
 <li class="toctree-l2"><a class="reference internal" href="defaults.html">iOS Defaults</a></li>
-<li class="toctree-l2"><a class="reference internal" href="parentalcontrols.html">Parental Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parentalcontrols.html">Application Access</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parental-timelimits.html">Parental Controls - Time Limits</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parental-contentfilter.html">Parental Controls - Content Filter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="profileremovalpassword.html">Profile Removal Password</a></li>
@@ -282,15 +283,66 @@
            <div itemprop="articleBody">
             
   <div class="section" id="active-directory">
-<span id="payloadtype-com-apple-directoryservice-managed"></span><h1>Active Directory<a class="headerlink" href="#active-directory" title="Permalink to this headline">¶</a></h1>
+<span id="payloadtype-com-apple-directoryservice-managed"></span><h1><a class="toc-backref" href="#id1">Active Directory</a><a class="headerlink" href="#active-directory" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference download internal" href="../_downloads/com.apple.DirectoryService.managed.mobileconfig" download=""><code class="xref download docutils literal"><span class="pre">Template</span></code></a></p>
 <p>Join an active directory domain.</p>
 <p>Advanced AD options available via Directory Utility or the dsconfigad command line tool can also be set using a configuration profile.</p>
 <ul class="simple">
 <li>ClientID does not appear in the official documentation.</li>
 </ul>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#active-directory" id="id1">Active Directory</a><ul>
+<li><a class="reference internal" href="#summary" id="id2">Summary</a></li>
+<li><a class="reference internal" href="#keys" id="id3">Keys</a><ul>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-HostName-auto" id="id4">HostName</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-UserName-auto" id="id5">UserName</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-Password-auto" id="id6">Password</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ClientID-auto" id="id7">ClientID</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADOrganizationalUnit-auto" id="id8">ADOrganizationalUnit</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADCreateMobileAccountAtLoginFlag-auto" id="id9">ADCreateMobileAccountAtLoginFlag</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADCreateMobileAccountAtLogin-auto" id="id10">ADCreateMobileAccountAtLogin</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADWarnUserBeforeCreatingMAFlag-auto" id="id11">ADWarnUserBeforeCreatingMAFlag</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADWarnUserBeforeCreatingMA-auto" id="id12">ADWarnUserBeforeCreatingMA</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADForceHomeLocalFlag-auto" id="id13">ADForceHomeLocalFlag</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADForceHomeLocal-auto" id="id14">ADForceHomeLocal</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADUseWindowsUNCPathFlag-auto" id="id15">ADUseWindowsUNCPathFlag</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADUseWindowsUNCPath-auto" id="id16">ADUseWindowsUNCPath</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADMountStyle-auto" id="id17">ADMountStyle</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADDefaultUserShellFlag-auto" id="id18">ADDefaultUserShellFlag</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADDefaultUserShell-auto" id="id19">ADDefaultUserShell</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADMapUIDAttributeFlag-auto" id="id20">ADMapUIDAttributeFlag</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADMapUIDAttribute-auto" id="id21">ADMapUIDAttribute</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADMapGIDAttributeFlag-auto" id="id22">ADMapGIDAttributeFlag</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADMapGIDAttribute-auto" id="id23">ADMapGIDAttribute</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADMapGGIDAttributeFlag-auto" id="id24">ADMapGGIDAttributeFlag</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADMapGGIDAttribute-auto" id="id25">ADMapGGIDAttribute</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADPreferredDCServerFlag-auto" id="id26">ADPreferredDCServerFlag</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADPreferredDCServer-auto" id="id27">ADPreferredDCServer</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADDomainAdminGroupListFlag-auto" id="id28">ADDomainAdminGroupListFlag</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADDomainAdminGroupList-auto" id="id29">ADDomainAdminGroupList</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADAllowMultiDomainAuthFlag-auto" id="id30">ADAllowMultiDomainAuthFlag</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADAllowMultiDomainAuth-auto" id="id31">ADAllowMultiDomainAuth</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADNamespaceFlag-auto" id="id32">ADNamespaceFlag</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADNamespace-auto" id="id33">ADNamespace</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADPacketSignFlag-auto" id="id34">ADPacketSignFlag</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADPacketSign-auto" id="id35">ADPacketSign</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADPacketEncryptFlag-auto" id="id36">ADPacketEncryptFlag</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADPacketEncrypt-auto" id="id37">ADPacketEncrypt</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADRestrictDDNSFlag-auto" id="id38">ADRestrictDDNSFlag</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADRestrictDDNS-auto" id="id39">ADRestrictDDNS</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADTrustChangePassIntervalDaysFlag-auto" id="id40">ADTrustChangePassIntervalDaysFlag</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADTrustChangePassIntervalDays-auto" id="id41">ADTrustChangePassIntervalDays</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#links" id="id42">Links</a></li>
+</ul>
+</li>
+</ul>
+</div>
 <div class="section" id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id2">Summary</a><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -313,258 +365,11 @@
 </tr>
 </tbody>
 </table>
-<table border="1" class="docutils">
-<colgroup>
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="43%" />
-<col width="14%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Name</th>
-<th class="head">Type</th>
-<th class="head">Title</th>
-<th class="head">Description</th>
-<th class="head">Required</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>HostName</td>
-<td>string</td>
-<td>Active Directory Domain</td>
-<td>The Active Directory domain to join.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>UserName</td>
-<td>string</td>
-<td>User name</td>
-<td>User name of the account used to join the domain.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>Password</td>
-<td>string</td>
-<td>Password</td>
-<td>Password of the account used to join the domain.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>ClientID</td>
-<td>string</td>
-<td>Client ID</td>
-<td>The directory server client ID.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>ADOrganizationalUnit</td>
-<td>string</td>
-<td>Organizational Unit</td>
-<td>The organizational unit (OU) where the joining computer object is added.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>ADCreateMobileAccountAtLoginFlag</td>
-<td>boolean</td>
-<td>Enable ADCreateMobileAccountAtLogin Flag</td>
-<td>Enable ADCreateMobileAccountAtLogin Flag</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>ADCreateMobileAccountAtLogin</td>
-<td>boolean</td>
-<td>Create mobile account at login</td>
-<td>Create mobile account at login.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>ADWarnUserBeforeCreatingMAFlag</td>
-<td>boolean</td>
-<td>Enable ADWarnUserBeforeCreatingMA Flag</td>
-<td>Enable ADWarnUserBeforeCreatingMA Flag</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>ADWarnUserBeforeCreatingMA</td>
-<td>boolean</td>
-<td>Require confirmation before creating mobile account</td>
-<td>Require confirmation before creating mobile account</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>ADForceHomeLocalFlag</td>
-<td>boolean</td>
-<td>Enable ADForceHomeLocal Flag</td>
-<td>Enable ADForceHomeLocal Flag</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>ADForceHomeLocal</td>
-<td>boolean</td>
-<td>Force local home directory on startup disk</td>
-<td>Force local home directory on startup disk</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>ADUseWindowsUNCPathFlag</td>
-<td>boolean</td>
-<td>Enable ADUseWindowsUNCPath Flag</td>
-<td>Enable ADUseWindowsUNCPath Flag</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>ADUseWindowsUNCPath</td>
-<td>boolean</td>
-<td>Use UNC path for network home location</td>
-<td>Use UNC path from Active Directory to derive network home location</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>ADMountStyle</td>
-<td>string</td>
-<td>Mount Style</td>
-<td>Network protocol to be used to mount home directory.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>ADDefaultUserShellFlag</td>
-<td>boolean</td>
-<td>Enable ADDefaultUserShell Key</td>
-<td>Enable ADDefaultUserShell Key</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>ADDefaultUserShell</td>
-<td>string</td>
-<td>Default user shell</td>
-<td>Default user shell</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>ADMapUIDAttributeFlag</td>
-<td>boolean</td>
-<td>Enable ADMapUIDAttribute Key</td>
-<td>Enable ADMapUIDAttribute Key</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>ADMapUIDAttribute</td>
-<td>string</td>
-<td>Map UID to attribute</td>
-<td>Map UID to attribute</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>ADMapGIDAttributeFlag</td>
-<td>boolean</td>
-<td>Enable ADMapGIDAttribute Key</td>
-<td>Enable ADMapGIDAttribute Key</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>ADMapGIDAttribute</td>
-<td>string</td>
-<td>Map user GID to attribute</td>
-<td>Map user GID to attribute</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>ADMapGGIDAttributeFlag</td>
-<td>boolean</td>
-<td>Enable ADMapGGIDAttribute Key</td>
-<td>Enable ADMapGGIDAttribute Key</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>ADMapGGIDAttribute</td>
-<td>string</td>
-<td>Map group GID to attribute</td>
-<td>Map group GID to attribute</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>ADPreferredDCServerFlag</td>
-<td>boolean</td>
-<td>Enable ADPreferredDCServer Key</td>
-<td>Enable ADPreferredDCServer Key</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>ADPreferredDCServer</td>
-<td>string</td>
-<td>Preferred domain server</td>
-<td>Preferred domain server</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>ADDomainAdminGroupListFlag</td>
-<td>boolean</td>
-<td>Enable ADDomainAdminGroupList Key</td>
-<td>Enable ADDomainAdminGroupList Key</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>ADDomainAdminGroupList</td>
-<td>array</td>
-<td>Allow administration by specified Active Directory groups.</td>
-<td>Allow administration by specified Active Directory groups.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>ADAllowMultiDomainAuthFlag</td>
-<td>boolean</td>
-<td>Enable ADAllowMultiDomainAuth Key</td>
-<td>Enable ADAllowMultiDomainAuth Key</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>ADAllowMultiDomainAuth</td>
-<td>boolean</td>
-<td>Allow authentication from any domain in the forest</td>
-<td>Allow authentication from any domain in the forest</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>ADNamespaceFlag</td>
-<td>boolean</td>
-<td>Enable ADNamespace Key</td>
-<td>Enable ADNamespace Key</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>ADNamespace</td>
-<td>string</td>
-<td>Set primary user account naming convention: &#8220;forest&#8221; or &#8220;domain&#8221;</td>
-<td>Set primary user account naming convention: &#8220;forest&#8221; or &#8220;domain&#8221;</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>ADPacketSignFlag</td>
-<td>boolean</td>
-<td>Enable ADPacketSign Key</td>
-<td>Enable ADPacketSign Key</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>ADPacketSign</td>
-<td>string</td>
-<td>Packet signing</td>
-<td>Packet signing</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>ADPacketEncryptFlag</td>
-<td>boolean</td>
-<td>Enable ADPacketEncrypt Key</td>
-<td>Enable ADPacketEncrypt Key</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>ADPacketEncrypt</td>
-<td>string</td>
-<td>Packet encryption</td>
-<td>Packet encryption</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>ADRestrictDDNSFlag</td>
-<td>boolean</td>
-<td>Enable ADRestrictDDNS Key</td>
-<td>Enable ADRestrictDDNS Key</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>ADRestrictDDNS</td>
-<td>array</td>
-<td>Restrict DDNS on interfaces</td>
-<td>Restrict Dynamic DNS updates to the specified interfaces (e.g. en0, en1, etc).</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>ADTrustChangePassIntervalDaysFlag</td>
-<td>boolean</td>
-<td>Enable ADTrustChangePassIntervalDays Key</td>
-<td>Enable ADTrustChangePassIntervalDays Key</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>ADTrustChangePassIntervalDays</td>
-<td>integer</td>
-<td>Password trust interval</td>
-<td>How often to change computer trust account password in days</td>
-<td>n/a</td>
-</tr>
-</tbody>
-</table>
 </div>
 <div class="section" id="keys">
-<h2>Keys<a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id3">Keys</a><a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="com.apple.DirectoryService.managed-HostName-auto">
-<h3>HostName<a class="headerlink" href="#com.apple.DirectoryService.managed-HostName-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id4">HostName</a><a class="headerlink" href="#com.apple.DirectoryService.managed-HostName-auto" title="Permalink to this headline">¶</a></h3>
 <p>Active Directory Domain</p>
 <p>The Active Directory domain to join.</p>
 <table border="1" class="docutils">
@@ -604,7 +409,7 @@
 <p class="last">Apple documentation says the domain name, Profile Manager refers to a domain controller hostname.</p>
 </div>
 <div class="section" id="com.apple.DirectoryService.managed-UserName-auto">
-<h3>UserName<a class="headerlink" href="#com.apple.DirectoryService.managed-UserName-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id5">UserName</a><a class="headerlink" href="#com.apple.DirectoryService.managed-UserName-auto" title="Permalink to this headline">¶</a></h3>
 <p>User name</p>
 <p>User name of the account used to join the domain.</p>
 <table border="1" class="docutils">
@@ -640,7 +445,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.DirectoryService.managed-Password-auto">
-<h3>Password<a class="headerlink" href="#com.apple.DirectoryService.managed-Password-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id6">Password</a><a class="headerlink" href="#com.apple.DirectoryService.managed-Password-auto" title="Permalink to this headline">¶</a></h3>
 <p>Password</p>
 <p>Password of the account used to join the domain.</p>
 <table border="1" class="docutils">
@@ -676,7 +481,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.DirectoryService.managed-ClientID-auto">
-<h3>ClientID<a class="headerlink" href="#com.apple.DirectoryService.managed-ClientID-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id7">ClientID</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ClientID-auto" title="Permalink to this headline">¶</a></h3>
 <p>Client ID</p>
 <p>The directory server client ID.</p>
 <table border="1" class="docutils">
@@ -712,7 +517,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.DirectoryService.managed-ADOrganizationalUnit-auto">
-<h3>ADOrganizationalUnit<a class="headerlink" href="#com.apple.DirectoryService.managed-ADOrganizationalUnit-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id8">ADOrganizationalUnit</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADOrganizationalUnit-auto" title="Permalink to this headline">¶</a></h3>
 <p>Organizational Unit</p>
 <p>The organizational unit (OU) where the joining computer object is added.</p>
 <table border="1" class="docutils">
@@ -748,7 +553,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.DirectoryService.managed-ADCreateMobileAccountAtLoginFlag-auto">
-<h3>ADCreateMobileAccountAtLoginFlag<a class="headerlink" href="#com.apple.DirectoryService.managed-ADCreateMobileAccountAtLoginFlag-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id9">ADCreateMobileAccountAtLoginFlag</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADCreateMobileAccountAtLoginFlag-auto" title="Permalink to this headline">¶</a></h3>
 <p>Enable ADCreateMobileAccountAtLogin Flag</p>
 <p>Enable ADCreateMobileAccountAtLogin Flag</p>
 <table border="1" class="docutils">
@@ -784,7 +589,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.DirectoryService.managed-ADCreateMobileAccountAtLogin-auto">
-<h3>ADCreateMobileAccountAtLogin<a class="headerlink" href="#com.apple.DirectoryService.managed-ADCreateMobileAccountAtLogin-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id10">ADCreateMobileAccountAtLogin</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADCreateMobileAccountAtLogin-auto" title="Permalink to this headline">¶</a></h3>
 <p>Create mobile account at login</p>
 <p>Create mobile account at login.</p>
 <table border="1" class="docutils">
@@ -820,7 +625,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.DirectoryService.managed-ADWarnUserBeforeCreatingMAFlag-auto">
-<h3>ADWarnUserBeforeCreatingMAFlag<a class="headerlink" href="#com.apple.DirectoryService.managed-ADWarnUserBeforeCreatingMAFlag-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id11">ADWarnUserBeforeCreatingMAFlag</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADWarnUserBeforeCreatingMAFlag-auto" title="Permalink to this headline">¶</a></h3>
 <p>Enable ADWarnUserBeforeCreatingMA Flag</p>
 <p>Enable ADWarnUserBeforeCreatingMA Flag</p>
 <table border="1" class="docutils">
@@ -856,7 +661,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.DirectoryService.managed-ADWarnUserBeforeCreatingMA-auto">
-<h3>ADWarnUserBeforeCreatingMA<a class="headerlink" href="#com.apple.DirectoryService.managed-ADWarnUserBeforeCreatingMA-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id12">ADWarnUserBeforeCreatingMA</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADWarnUserBeforeCreatingMA-auto" title="Permalink to this headline">¶</a></h3>
 <p>Require confirmation before creating mobile account</p>
 <p>Require confirmation before creating mobile account</p>
 <table border="1" class="docutils">
@@ -892,7 +697,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.DirectoryService.managed-ADForceHomeLocalFlag-auto">
-<h3>ADForceHomeLocalFlag<a class="headerlink" href="#com.apple.DirectoryService.managed-ADForceHomeLocalFlag-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id13">ADForceHomeLocalFlag</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADForceHomeLocalFlag-auto" title="Permalink to this headline">¶</a></h3>
 <p>Enable ADForceHomeLocal Flag</p>
 <p>Enable ADForceHomeLocal Flag</p>
 <table border="1" class="docutils">
@@ -928,7 +733,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.DirectoryService.managed-ADForceHomeLocal-auto">
-<h3>ADForceHomeLocal<a class="headerlink" href="#com.apple.DirectoryService.managed-ADForceHomeLocal-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id14">ADForceHomeLocal</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADForceHomeLocal-auto" title="Permalink to this headline">¶</a></h3>
 <p>Force local home directory on startup disk</p>
 <p>Force local home directory on startup disk</p>
 <table border="1" class="docutils">
@@ -964,7 +769,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.DirectoryService.managed-ADUseWindowsUNCPathFlag-auto">
-<h3>ADUseWindowsUNCPathFlag<a class="headerlink" href="#com.apple.DirectoryService.managed-ADUseWindowsUNCPathFlag-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id15">ADUseWindowsUNCPathFlag</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADUseWindowsUNCPathFlag-auto" title="Permalink to this headline">¶</a></h3>
 <p>Enable ADUseWindowsUNCPath Flag</p>
 <p>Enable ADUseWindowsUNCPath Flag</p>
 <table border="1" class="docutils">
@@ -1000,7 +805,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.DirectoryService.managed-ADUseWindowsUNCPath-auto">
-<h3>ADUseWindowsUNCPath<a class="headerlink" href="#com.apple.DirectoryService.managed-ADUseWindowsUNCPath-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id16">ADUseWindowsUNCPath</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADUseWindowsUNCPath-auto" title="Permalink to this headline">¶</a></h3>
 <p>Use UNC path for network home location</p>
 <p>Use UNC path from Active Directory to derive network home location</p>
 <table border="1" class="docutils">
@@ -1036,7 +841,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.DirectoryService.managed-ADMountStyle-auto">
-<h3>ADMountStyle<a class="headerlink" href="#com.apple.DirectoryService.managed-ADMountStyle-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id17">ADMountStyle</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADMountStyle-auto" title="Permalink to this headline">¶</a></h3>
 <p>Mount Style</p>
 <p>Network protocol to be used to mount home directory.</p>
 <table border="1" class="docutils">
@@ -1077,7 +882,7 @@
 </ul>
 </div>
 <div class="section" id="com.apple.DirectoryService.managed-ADDefaultUserShellFlag-auto">
-<h3>ADDefaultUserShellFlag<a class="headerlink" href="#com.apple.DirectoryService.managed-ADDefaultUserShellFlag-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id18">ADDefaultUserShellFlag</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADDefaultUserShellFlag-auto" title="Permalink to this headline">¶</a></h3>
 <p>Enable ADDefaultUserShell Key</p>
 <p>Enable ADDefaultUserShell Key</p>
 <table border="1" class="docutils">
@@ -1113,7 +918,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.DirectoryService.managed-ADDefaultUserShell-auto">
-<h3>ADDefaultUserShell<a class="headerlink" href="#com.apple.DirectoryService.managed-ADDefaultUserShell-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id19">ADDefaultUserShell</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADDefaultUserShell-auto" title="Permalink to this headline">¶</a></h3>
 <p>Default user shell</p>
 <p>Default user shell</p>
 <table border="1" class="docutils">
@@ -1149,7 +954,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.DirectoryService.managed-ADMapUIDAttributeFlag-auto">
-<h3>ADMapUIDAttributeFlag<a class="headerlink" href="#com.apple.DirectoryService.managed-ADMapUIDAttributeFlag-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id20">ADMapUIDAttributeFlag</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADMapUIDAttributeFlag-auto" title="Permalink to this headline">¶</a></h3>
 <p>Enable ADMapUIDAttribute Key</p>
 <p>Enable ADMapUIDAttribute Key</p>
 <table border="1" class="docutils">
@@ -1185,7 +990,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.DirectoryService.managed-ADMapUIDAttribute-auto">
-<h3>ADMapUIDAttribute<a class="headerlink" href="#com.apple.DirectoryService.managed-ADMapUIDAttribute-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id21">ADMapUIDAttribute</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADMapUIDAttribute-auto" title="Permalink to this headline">¶</a></h3>
 <p>Map UID to attribute</p>
 <p>Map UID to attribute</p>
 <table border="1" class="docutils">
@@ -1221,7 +1026,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.DirectoryService.managed-ADMapGIDAttributeFlag-auto">
-<h3>ADMapGIDAttributeFlag<a class="headerlink" href="#com.apple.DirectoryService.managed-ADMapGIDAttributeFlag-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id22">ADMapGIDAttributeFlag</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADMapGIDAttributeFlag-auto" title="Permalink to this headline">¶</a></h3>
 <p>Enable ADMapGIDAttribute Key</p>
 <p>Enable ADMapGIDAttribute Key</p>
 <table border="1" class="docutils">
@@ -1257,7 +1062,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.DirectoryService.managed-ADMapGIDAttribute-auto">
-<h3>ADMapGIDAttribute<a class="headerlink" href="#com.apple.DirectoryService.managed-ADMapGIDAttribute-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id23">ADMapGIDAttribute</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADMapGIDAttribute-auto" title="Permalink to this headline">¶</a></h3>
 <p>Map user GID to attribute</p>
 <p>Map user GID to attribute</p>
 <table border="1" class="docutils">
@@ -1293,7 +1098,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.DirectoryService.managed-ADMapGGIDAttributeFlag-auto">
-<h3>ADMapGGIDAttributeFlag<a class="headerlink" href="#com.apple.DirectoryService.managed-ADMapGGIDAttributeFlag-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id24">ADMapGGIDAttributeFlag</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADMapGGIDAttributeFlag-auto" title="Permalink to this headline">¶</a></h3>
 <p>Enable ADMapGGIDAttribute Key</p>
 <p>Enable ADMapGGIDAttribute Key</p>
 <table border="1" class="docutils">
@@ -1329,7 +1134,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.DirectoryService.managed-ADMapGGIDAttribute-auto">
-<h3>ADMapGGIDAttribute<a class="headerlink" href="#com.apple.DirectoryService.managed-ADMapGGIDAttribute-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id25">ADMapGGIDAttribute</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADMapGGIDAttribute-auto" title="Permalink to this headline">¶</a></h3>
 <p>Map group GID to attribute</p>
 <p>Map group GID to attribute</p>
 <table border="1" class="docutils">
@@ -1365,7 +1170,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.DirectoryService.managed-ADPreferredDCServerFlag-auto">
-<h3>ADPreferredDCServerFlag<a class="headerlink" href="#com.apple.DirectoryService.managed-ADPreferredDCServerFlag-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id26">ADPreferredDCServerFlag</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADPreferredDCServerFlag-auto" title="Permalink to this headline">¶</a></h3>
 <p>Enable ADPreferredDCServer Key</p>
 <p>Enable ADPreferredDCServer Key</p>
 <table border="1" class="docutils">
@@ -1401,7 +1206,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.DirectoryService.managed-ADPreferredDCServer-auto">
-<h3>ADPreferredDCServer<a class="headerlink" href="#com.apple.DirectoryService.managed-ADPreferredDCServer-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id27">ADPreferredDCServer</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADPreferredDCServer-auto" title="Permalink to this headline">¶</a></h3>
 <p>Preferred domain server</p>
 <p>Preferred domain server</p>
 <table border="1" class="docutils">
@@ -1437,7 +1242,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.DirectoryService.managed-ADDomainAdminGroupListFlag-auto">
-<h3>ADDomainAdminGroupListFlag<a class="headerlink" href="#com.apple.DirectoryService.managed-ADDomainAdminGroupListFlag-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id28">ADDomainAdminGroupListFlag</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADDomainAdminGroupListFlag-auto" title="Permalink to this headline">¶</a></h3>
 <p>Enable ADDomainAdminGroupList Key</p>
 <p>Enable ADDomainAdminGroupList Key</p>
 <table border="1" class="docutils">
@@ -1473,7 +1278,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.DirectoryService.managed-ADDomainAdminGroupList-auto">
-<h3>ADDomainAdminGroupList<a class="headerlink" href="#com.apple.DirectoryService.managed-ADDomainAdminGroupList-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id29">ADDomainAdminGroupList</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADDomainAdminGroupList-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow administration by specified Active Directory groups.</p>
 <p>Allow administration by specified Active Directory groups.</p>
 <table border="1" class="docutils">
@@ -1509,7 +1314,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.DirectoryService.managed-ADAllowMultiDomainAuthFlag-auto">
-<h3>ADAllowMultiDomainAuthFlag<a class="headerlink" href="#com.apple.DirectoryService.managed-ADAllowMultiDomainAuthFlag-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id30">ADAllowMultiDomainAuthFlag</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADAllowMultiDomainAuthFlag-auto" title="Permalink to this headline">¶</a></h3>
 <p>Enable ADAllowMultiDomainAuth Key</p>
 <p>Enable ADAllowMultiDomainAuth Key</p>
 <table border="1" class="docutils">
@@ -1545,7 +1350,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.DirectoryService.managed-ADAllowMultiDomainAuth-auto">
-<h3>ADAllowMultiDomainAuth<a class="headerlink" href="#com.apple.DirectoryService.managed-ADAllowMultiDomainAuth-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id31">ADAllowMultiDomainAuth</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADAllowMultiDomainAuth-auto" title="Permalink to this headline">¶</a></h3>
 <p>Allow authentication from any domain in the forest</p>
 <p>Allow authentication from any domain in the forest</p>
 <table border="1" class="docutils">
@@ -1581,7 +1386,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.DirectoryService.managed-ADNamespaceFlag-auto">
-<h3>ADNamespaceFlag<a class="headerlink" href="#com.apple.DirectoryService.managed-ADNamespaceFlag-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id32">ADNamespaceFlag</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADNamespaceFlag-auto" title="Permalink to this headline">¶</a></h3>
 <p>Enable ADNamespace Key</p>
 <p>Enable ADNamespace Key</p>
 <table border="1" class="docutils">
@@ -1617,7 +1422,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.DirectoryService.managed-ADNamespace-auto">
-<h3>ADNamespace<a class="headerlink" href="#com.apple.DirectoryService.managed-ADNamespace-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id33">ADNamespace</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADNamespace-auto" title="Permalink to this headline">¶</a></h3>
 <p>Set primary user account naming convention: &#8220;forest&#8221; or &#8220;domain&#8221;</p>
 <p>Set primary user account naming convention: &#8220;forest&#8221; or &#8220;domain&#8221;</p>
 <table border="1" class="docutils">
@@ -1658,7 +1463,7 @@
 </ul>
 </div>
 <div class="section" id="com.apple.DirectoryService.managed-ADPacketSignFlag-auto">
-<h3>ADPacketSignFlag<a class="headerlink" href="#com.apple.DirectoryService.managed-ADPacketSignFlag-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id34">ADPacketSignFlag</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADPacketSignFlag-auto" title="Permalink to this headline">¶</a></h3>
 <p>Enable ADPacketSign Key</p>
 <p>Enable ADPacketSign Key</p>
 <table border="1" class="docutils">
@@ -1694,7 +1499,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.DirectoryService.managed-ADPacketSign-auto">
-<h3>ADPacketSign<a class="headerlink" href="#com.apple.DirectoryService.managed-ADPacketSign-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id35">ADPacketSign</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADPacketSign-auto" title="Permalink to this headline">¶</a></h3>
 <p>Packet signing</p>
 <p>Packet signing</p>
 <table border="1" class="docutils">
@@ -1736,7 +1541,7 @@
 </ul>
 </div>
 <div class="section" id="com.apple.DirectoryService.managed-ADPacketEncryptFlag-auto">
-<h3>ADPacketEncryptFlag<a class="headerlink" href="#com.apple.DirectoryService.managed-ADPacketEncryptFlag-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id36">ADPacketEncryptFlag</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADPacketEncryptFlag-auto" title="Permalink to this headline">¶</a></h3>
 <p>Enable ADPacketEncrypt Key</p>
 <p>Enable ADPacketEncrypt Key</p>
 <table border="1" class="docutils">
@@ -1772,7 +1577,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.DirectoryService.managed-ADPacketEncrypt-auto">
-<h3>ADPacketEncrypt<a class="headerlink" href="#com.apple.DirectoryService.managed-ADPacketEncrypt-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id37">ADPacketEncrypt</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADPacketEncrypt-auto" title="Permalink to this headline">¶</a></h3>
 <p>Packet encryption</p>
 <p>Packet encryption</p>
 <table border="1" class="docutils">
@@ -1815,7 +1620,7 @@
 </ul>
 </div>
 <div class="section" id="com.apple.DirectoryService.managed-ADRestrictDDNSFlag-auto">
-<h3>ADRestrictDDNSFlag<a class="headerlink" href="#com.apple.DirectoryService.managed-ADRestrictDDNSFlag-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id38">ADRestrictDDNSFlag</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADRestrictDDNSFlag-auto" title="Permalink to this headline">¶</a></h3>
 <p>Enable ADRestrictDDNS Key</p>
 <p>Enable ADRestrictDDNS Key</p>
 <table border="1" class="docutils">
@@ -1851,7 +1656,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.DirectoryService.managed-ADRestrictDDNS-auto">
-<h3>ADRestrictDDNS<a class="headerlink" href="#com.apple.DirectoryService.managed-ADRestrictDDNS-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id39">ADRestrictDDNS</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADRestrictDDNS-auto" title="Permalink to this headline">¶</a></h3>
 <p>Restrict DDNS on interfaces</p>
 <p>Restrict Dynamic DNS updates to the specified interfaces (e.g. en0, en1, etc).</p>
 <table border="1" class="docutils">
@@ -1887,7 +1692,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.DirectoryService.managed-ADTrustChangePassIntervalDaysFlag-auto">
-<h3>ADTrustChangePassIntervalDaysFlag<a class="headerlink" href="#com.apple.DirectoryService.managed-ADTrustChangePassIntervalDaysFlag-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id40">ADTrustChangePassIntervalDaysFlag</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADTrustChangePassIntervalDaysFlag-auto" title="Permalink to this headline">¶</a></h3>
 <p>Enable ADTrustChangePassIntervalDays Key</p>
 <p>Enable ADTrustChangePassIntervalDays Key</p>
 <table border="1" class="docutils">
@@ -1923,7 +1728,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.DirectoryService.managed-ADTrustChangePassIntervalDays-auto">
-<h3>ADTrustChangePassIntervalDays<a class="headerlink" href="#com.apple.DirectoryService.managed-ADTrustChangePassIntervalDays-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id41">ADTrustChangePassIntervalDays</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADTrustChangePassIntervalDays-auto" title="Permalink to this headline">¶</a></h3>
 <p>Password trust interval</p>
 <p>How often to change computer trust account password in days</p>
 <table border="1" class="docutils">
@@ -1960,7 +1765,7 @@
 </div>
 </div>
 <div class="section" id="links">
-<h2>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id42">Links</a><a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><a class="reference external" href="https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW62">Official Documentation</a>.</li>
 </ul>

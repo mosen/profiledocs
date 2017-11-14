@@ -6,8 +6,10 @@ Parental Control - Game Center
 
 The Parental Control Game Center payload restricts Game Center options on the device.
 
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.gamed manifest.plist
-.. pfm:: /_static/manifests/com.apple.gamed manifest.plist
+

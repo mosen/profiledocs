@@ -94,6 +94,7 @@
 <li class="toctree-l2"><a class="reference internal" href="activedirectory.html">Active Directory</a></li>
 <li class="toctree-l2"><a class="reference internal" href="adcert.html">Active Directory Certificate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="airplay.html">AirPlay</a></li>
+<li class="toctree-l2"><a class="reference internal" href="com.apple.airplay.security.html">AirPlay Security</a></li>
 <li class="toctree-l2"><a class="reference internal" href="airprint.html">AirPrint</a></li>
 <li class="toctree-l2"><a class="reference internal" href="applock.html">App Lock</a></li>
 <li class="toctree-l2"><a class="reference internal" href="appstore.html">App Store</a></li>
@@ -151,7 +152,7 @@
 <li class="toctree-l2"><a class="reference internal" href="perappvpn.html">Per-App VPN</a></li>
 <li class="toctree-l2"><a class="reference internal" href="appmapping.html">App-to-Per-App VPN Mapping</a></li>
 <li class="toctree-l2"><a class="reference internal" href="defaults.html">iOS Defaults</a></li>
-<li class="toctree-l2"><a class="reference internal" href="parentalcontrols.html">Parental Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parentalcontrols.html">Application Access</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parental-timelimits.html">Parental Controls - Time Limits</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parental-contentfilter.html">Parental Controls - Content Filter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="profileremovalpassword.html">Profile Removal Password</a></li>
@@ -261,14 +262,44 @@
            <div itemprop="articleBody">
             
   <div class="section" id="scep">
-<span id="payloadtype-com-apple-security-scep"></span><h1>SCEP<a class="headerlink" href="#scep" title="Permalink to this headline">¶</a></h1>
+<span id="payloadtype-com-apple-security-scep"></span><h1><a class="toc-backref" href="#id1">SCEP</a><a class="headerlink" href="#scep" title="Permalink to this headline">¶</a></h1>
 <p>An SCEP payload automates the request of a client certificate from an SCEP server.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">GetCACaps is mentioned in the documentation but not included in this manifest.</p>
 </div>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#scep" id="id1">SCEP</a><ul>
+<li><a class="reference internal" href="#summary" id="id2">Summary</a></li>
+<li><a class="reference internal" href="#keys" id="id3">Keys</a><ul>
+<li><a class="reference internal" href="#com.apple.security.scep-URL-auto" id="id4">URL</a></li>
+<li><a class="reference internal" href="#com.apple.security.scep-Name-auto" id="id5">Name</a></li>
+<li><a class="reference internal" href="#com.apple.security.scep-Subject-auto" id="id6">Subject</a></li>
+<li><a class="reference internal" href="#com.apple.security.scep-Challenge-auto" id="id7">Challenge</a></li>
+<li><a class="reference internal" href="#com.apple.security.scep-Keysize-auto" id="id8">Keysize</a></li>
+<li><a class="reference internal" href="#com.apple.security.scep-CAFingerprint-auto" id="id9">CAFingerprint</a></li>
+<li><a class="reference internal" href="#com.apple.security.scep-KeyType-auto" id="id10">KeyType</a></li>
+<li><a class="reference internal" href="#com.apple.security.scep-KeyUsage-auto" id="id11">KeyUsage</a></li>
+<li><a class="reference internal" href="#com.apple.security.scep-SubjectAltName-auto" id="id12">SubjectAltName</a></li>
+<li><a class="reference internal" href="#com.apple.security.scep-Retries-auto" id="id13">Retries</a></li>
+<li><a class="reference internal" href="#com.apple.security.scep-RetryDelay-auto" id="id14">RetryDelay</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#substitution-variables" id="id15">Substitution Variables</a></li>
+<li><a class="reference internal" href="#unified-logging" id="id16">Unified Logging</a><ul>
+<li><a class="reference internal" href="#scep-networking" id="id17">SCEP Networking</a></li>
+<li><a class="reference internal" href="#certificate-payload-plugin" id="id18">Certificate Payload Plugin</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#links" id="id19">Links</a></li>
+</ul>
+</li>
+</ul>
+</div>
 <div class="section" id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id2">Summary</a><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -291,102 +322,11 @@
 </tr>
 </tbody>
 </table>
-<table border="1" class="docutils">
-<colgroup>
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="43%" />
-<col width="14%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Name</th>
-<th class="head">Type</th>
-<th class="head">Title</th>
-<th class="head">Description</th>
-<th class="head">Required</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>URL</td>
-<td>string</td>
-<td>URL</td>
-<td>The base URL for the SCEP server</td>
-<td>always</td>
-</tr>
-<tr class="row-odd"><td>Name</td>
-<td>string</td>
-<td>Name</td>
-<td>Optional. Any string that is understood by the SCEP server. For example, it could be a domain name like example.org. If a certificate authority has multiple CA certificates this field can be used to distinguish which is required.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>Subject</td>
-<td>array</td>
-<td>Subject</td>
-<td>The representation of a X.500 name represented as an array of OID and value. OIDs can be represented as dotted numbers, with shortcuts for country (C), locality (L), state (ST), organization (O), organizational unit (OU), and common name (CN).</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>Challenge</td>
-<td>string</td>
-<td>Challenge</td>
-<td>Used as the pre-shared secret for automatic enrollment</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>Keysize</td>
-<td>integer</td>
-<td>Key Size</td>
-<td>Key size in bits</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>CAFingerprint</td>
-<td>data</td>
-<td>Fingerprint</td>
-<td>Optional. The fingerprint of the Certificate Authority certificate.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>KeyType</td>
-<td>string</td>
-<td>Key Type</td>
-<td>Optional. Currently always &#8220;RSA&#8221;.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>KeyUsage</td>
-<td>integer</td>
-<td>Key Usage</td>
-<td>A bitmask indicating the use of the ky. 1 - signing, 4 - encryption, 5 - signing and encryption</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>SubjectAltName</td>
-<td>dictionary</td>
-<td>Subject Alt Name</td>
-<td>Specifies the Subject Alt Name for the certificate</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>Retries</td>
-<td>integer</td>
-<td>Retries</td>
-<td>The number of times the device should retry if the server sends a PENDING response</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>RetryDelay</td>
-<td>integer</td>
-<td>Retry Delay</td>
-<td>The number of seconds to wait between subsequent retries. The first retry is attempted without this delay</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>GetCACaps</td>
-<td>dictionary</td>
-<td>Custom GetCACaps Response</td>
-<td>If you add a dictionary with the key GetCACaps, the device uses the strings you provide as the authoritative source of information about the capabilities of your CA.</td>
-<td>n/a</td>
-</tr>
-</tbody>
-</table>
 </div>
 <div class="section" id="keys">
-<h2>Keys<a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id3">Keys</a><a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="com.apple.security.scep-URL-auto">
-<h3>URL<a class="headerlink" href="#com.apple.security.scep-URL-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id4">URL</a><a class="headerlink" href="#com.apple.security.scep-URL-auto" title="Permalink to this headline">¶</a></h3>
 <p>URL</p>
 <p>The base URL for the SCEP server</p>
 <table border="1" class="docutils">
@@ -422,7 +362,7 @@
 </table>
 </div>
 <div class="section" id="com.apple.security.scep-Name-auto">
-<h3>Name<a class="headerlink" href="#com.apple.security.scep-Name-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id5">Name</a><a class="headerlink" href="#com.apple.security.scep-Name-auto" title="Permalink to this headline">¶</a></h3>
 <p>Name</p>
 <p>Optional. Any string that is understood by the SCEP server. For example, it could be a domain name like example.org. If a certificate authority has multiple CA certificates this field can be used to distinguish which is required.</p>
 <table border="1" class="docutils">
@@ -460,7 +400,7 @@
 <p>Optional. Any string that is understood by the SCEP server. For example, it could be a domain name like example.org.
 If a certificate authority has multiple CA certificates this field can be used to distinguish which is required.</p>
 <div class="section" id="com.apple.security.scep-Subject-auto">
-<h3>Subject<a class="headerlink" href="#com.apple.security.scep-Subject-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id6">Subject</a><a class="headerlink" href="#com.apple.security.scep-Subject-auto" title="Permalink to this headline">¶</a></h3>
 <p>Subject</p>
 <p>The representation of a X.500 name represented as an array of OID and value. OIDs can be represented as dotted numbers, with shortcuts for country (C), locality (L), state (ST), organization (O), organizational unit (OU), and common name (CN).</p>
 <table border="1" class="docutils">
@@ -501,7 +441,7 @@ For example, /C=US/O=Apple Inc./CN=foo/1.2.5.3=bar, which would translate to:</p
 <div>[ [ [&#8220;C&#8221;, &#8220;US&#8221;] ], [ [&#8220;O&#8221;, &#8220;Apple Inc.&#8221;] ], ..., [ [ &#8220;1.2.5.3&#8221;, &#8220;bar&#8221; ] ] ]</div></blockquote>
 <p>OIDs can be represented as dotted numbers, with shortcuts for country (C), locality (L), state (ST), organization (O), organizational unit (OU), and common name (CN).</p>
 <div class="section" id="com.apple.security.scep-Challenge-auto">
-<h3>Challenge<a class="headerlink" href="#com.apple.security.scep-Challenge-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id7">Challenge</a><a class="headerlink" href="#com.apple.security.scep-Challenge-auto" title="Permalink to this headline">¶</a></h3>
 <p>Challenge</p>
 <p>Used as the pre-shared secret for automatic enrollment</p>
 <table border="1" class="docutils">
@@ -537,7 +477,7 @@ For example, /C=US/O=Apple Inc./CN=foo/1.2.5.3=bar, which would translate to:</p
 </table>
 </div>
 <div class="section" id="com.apple.security.scep-Keysize-auto">
-<h3>Keysize<a class="headerlink" href="#com.apple.security.scep-Keysize-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id8">Keysize</a><a class="headerlink" href="#com.apple.security.scep-Keysize-auto" title="Permalink to this headline">¶</a></h3>
 <p>Key Size</p>
 <p>Key size in bits</p>
 <table border="1" class="docutils">
@@ -578,7 +518,7 @@ For example, /C=US/O=Apple Inc./CN=foo/1.2.5.3=bar, which would translate to:</p
 </ul>
 </div>
 <div class="section" id="com.apple.security.scep-CAFingerprint-auto">
-<h3>CAFingerprint<a class="headerlink" href="#com.apple.security.scep-CAFingerprint-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id9">CAFingerprint</a><a class="headerlink" href="#com.apple.security.scep-CAFingerprint-auto" title="Permalink to this headline">¶</a></h3>
 <p>Fingerprint</p>
 <p>Optional. The fingerprint of the Certificate Authority certificate.</p>
 <table border="1" class="docutils">
@@ -614,7 +554,7 @@ For example, /C=US/O=Apple Inc./CN=foo/1.2.5.3=bar, which would translate to:</p
 </table>
 </div>
 <div class="section" id="com.apple.security.scep-KeyType-auto">
-<h3>KeyType<a class="headerlink" href="#com.apple.security.scep-KeyType-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id10">KeyType</a><a class="headerlink" href="#com.apple.security.scep-KeyType-auto" title="Permalink to this headline">¶</a></h3>
 <p>Key Type</p>
 <p>Optional. Currently always &#8220;RSA&#8221;.</p>
 <table border="1" class="docutils">
@@ -654,7 +594,7 @@ For example, /C=US/O=Apple Inc./CN=foo/1.2.5.3=bar, which would translate to:</p
 </ul>
 </div>
 <div class="section" id="com.apple.security.scep-KeyUsage-auto">
-<h3>KeyUsage<a class="headerlink" href="#com.apple.security.scep-KeyUsage-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id11">KeyUsage</a><a class="headerlink" href="#com.apple.security.scep-KeyUsage-auto" title="Permalink to this headline">¶</a></h3>
 <p>Key Usage</p>
 <p>A bitmask indicating the use of the ky. 1 - signing, 4 - encryption, 5 - signing and encryption</p>
 <table border="1" class="docutils">
@@ -690,7 +630,7 @@ For example, /C=US/O=Apple Inc./CN=foo/1.2.5.3=bar, which would translate to:</p
 </table>
 </div>
 <div class="section" id="com.apple.security.scep-SubjectAltName-auto">
-<h3>SubjectAltName<a class="headerlink" href="#com.apple.security.scep-SubjectAltName-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id12">SubjectAltName</a><a class="headerlink" href="#com.apple.security.scep-SubjectAltName-auto" title="Permalink to this headline">¶</a></h3>
 <p>Subject Alt Name</p>
 <p>Specifies the Subject Alt Name for the certificate</p>
 <table border="1" class="docutils">
@@ -726,7 +666,7 @@ For example, /C=US/O=Apple Inc./CN=foo/1.2.5.3=bar, which would translate to:</p
 </table>
 </div>
 <div class="section" id="com.apple.security.scep-Retries-auto">
-<h3>Retries<a class="headerlink" href="#com.apple.security.scep-Retries-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id13">Retries</a><a class="headerlink" href="#com.apple.security.scep-Retries-auto" title="Permalink to this headline">¶</a></h3>
 <p>Retries</p>
 <p>The number of times the device should retry if the server sends a PENDING response</p>
 <table border="1" class="docutils">
@@ -762,7 +702,7 @@ For example, /C=US/O=Apple Inc./CN=foo/1.2.5.3=bar, which would translate to:</p
 </table>
 </div>
 <div class="section" id="com.apple.security.scep-RetryDelay-auto">
-<h3>RetryDelay<a class="headerlink" href="#com.apple.security.scep-RetryDelay-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id14">RetryDelay</a><a class="headerlink" href="#com.apple.security.scep-RetryDelay-auto" title="Permalink to this headline">¶</a></h3>
 <p>Retry Delay</p>
 <p>The number of seconds to wait between subsequent retries. The first retry is attempted without this delay</p>
 <table border="1" class="docutils">
@@ -799,7 +739,7 @@ For example, /C=US/O=Apple Inc./CN=foo/1.2.5.3=bar, which would translate to:</p
 </div>
 </div>
 <div class="section" id="substitution-variables">
-<h2>Substitution Variables<a class="headerlink" href="#substitution-variables" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id15">Substitution Variables</a><a class="headerlink" href="#substitution-variables" title="Permalink to this headline">¶</a></h2>
 <p>The values of these can be obtained by running (in a Terminal window):</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">libexec</span><span class="o">/</span><span class="n">mdmclient</span> <span class="n">dumpSCEPVars</span>
 </pre></div>
@@ -834,9 +774,9 @@ For example, /C=US/O=Apple Inc./CN=foo/1.2.5.3=bar, which would translate to:</p
 </dl>
 </div>
 <div class="section" id="unified-logging">
-<h2>Unified Logging<a class="headerlink" href="#unified-logging" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id16">Unified Logging</a><a class="headerlink" href="#unified-logging" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="scep-networking">
-<h3>SCEP Networking<a class="headerlink" href="#scep-networking" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id17">SCEP Networking</a><a class="headerlink" href="#scep-networking" title="Permalink to this headline">¶</a></h3>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -849,7 +789,7 @@ For example, /C=US/O=Apple Inc./CN=foo/1.2.5.3=bar, which would translate to:</p
 </table>
 </div>
 <div class="section" id="certificate-payload-plugin">
-<h3>Certificate Payload Plugin<a class="headerlink" href="#certificate-payload-plugin" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id18">Certificate Payload Plugin</a><a class="headerlink" href="#certificate-payload-plugin" title="Permalink to this headline">¶</a></h3>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -863,7 +803,7 @@ For example, /C=US/O=Apple Inc./CN=foo/1.2.5.3=bar, which would translate to:</p
 </div>
 </div>
 <div class="section" id="links">
-<h2>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id19">Links</a><a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><a class="reference external" href="https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW18">Official Documentation</a>.</li>
 <li><a class="reference external" href="https://support.apple.com/en-us/HT204446">Certificate Renewal Behaviour</a>.</li>

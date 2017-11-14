@@ -94,6 +94,7 @@
 <li class="toctree-l2"><a class="reference internal" href="activedirectory.html">Active Directory</a></li>
 <li class="toctree-l2"><a class="reference internal" href="adcert.html">Active Directory Certificate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="airplay.html">AirPlay</a></li>
+<li class="toctree-l2"><a class="reference internal" href="com.apple.airplay.security.html">AirPlay Security</a></li>
 <li class="toctree-l2"><a class="reference internal" href="airprint.html">AirPrint</a></li>
 <li class="toctree-l2"><a class="reference internal" href="applock.html">App Lock</a></li>
 <li class="toctree-l2"><a class="reference internal" href="appstore.html">App Store</a></li>
@@ -151,7 +152,7 @@
 <li class="toctree-l2"><a class="reference internal" href="perappvpn.html">Per-App VPN</a></li>
 <li class="toctree-l2"><a class="reference internal" href="appmapping.html">App-to-Per-App VPN Mapping</a></li>
 <li class="toctree-l2"><a class="reference internal" href="defaults.html">iOS Defaults</a></li>
-<li class="toctree-l2"><a class="reference internal" href="parentalcontrols.html">Parental Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parentalcontrols.html">Application Access</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parental-timelimits.html">Parental Controls - Time Limits</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parental-contentfilter.html">Parental Controls - Content Filter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="profileremovalpassword.html">Profile Removal Password</a></li>
@@ -248,14 +249,31 @@
            <div itemprop="articleBody">
             
   <div class="section" id="system-policy-rule">
-<span id="payloadtype-com-apple-systempolicy-rule"></span><h1>System Policy Rule<a class="headerlink" href="#system-policy-rule" title="Permalink to this headline">¶</a></h1>
+<span id="payloadtype-com-apple-systempolicy-rule"></span><h1><a class="toc-backref" href="#id1">System Policy Rule</a><a class="headerlink" href="#system-policy-rule" title="Permalink to this headline">¶</a></h1>
 <p>This is one of three payloads that allows control of various GateKeeper settings.</p>
 <p>This payload allows control over Gatekeeper’s system policy rules.
 The keys and functionality are tightly related to the spctl command line tool. You should be read the manual page for spctl.</p>
 <p>This payload must only exist in a device profile.
 If the payload is present in a user profile, an error will be generated during installation and the profile will fail to install.</p>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#system-policy-rule" id="id1">System Policy Rule</a><ul>
+<li><a class="reference internal" href="#summary" id="id2">Summary</a></li>
+<li><a class="reference internal" href="#keys" id="id3">Keys</a><ul>
+<li><a class="reference internal" href="#com.apple.systempolicy.rule-Requirement-auto" id="id4">Requirement</a></li>
+<li><a class="reference internal" href="#com.apple.systempolicy.rule-Comment-auto" id="id5">Comment</a></li>
+<li><a class="reference internal" href="#com.apple.systempolicy.rule-Expiration-auto" id="id6">Expiration</a></li>
+<li><a class="reference internal" href="#com.apple.systempolicy.rule-OperationType-auto" id="id7">OperationType</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#links" id="id8">Links</a></li>
+</ul>
+</li>
+</ul>
+</div>
 <div class="section" id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id2">Summary</a><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -278,54 +296,11 @@ If the payload is present in a user profile, an error will be generated during i
 </tr>
 </tbody>
 </table>
-<table border="1" class="docutils">
-<colgroup>
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="43%" />
-<col width="14%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Name</th>
-<th class="head">Type</th>
-<th class="head">Title</th>
-<th class="head">Description</th>
-<th class="head">Required</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>Requirement</td>
-<td>string</td>
-<td>The policy requirement</td>
-<td>The policy requirement. This key must follow the syntax described in Code Signing Requirement Language.</td>
-<td>always</td>
-</tr>
-<tr class="row-odd"><td>Comment</td>
-<td>string</td>
-<td>This string will appear in the System Policy UI.</td>
-<td>This string will appear in the System Policy UI. If it is missing, “PayloadDisplayName” or “PayloadDescription” will be put into this field before the rule is added to the System Policy database.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>Expiration</td>
-<td>date</td>
-<td>An expiration date for rule(s) being processed.</td>
-<td>An expiration date for rule(s) being processed.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>OperationType</td>
-<td>string</td>
-<td>Operation Type.</td>
-<td>Operation Type.</td>
-<td>n/a</td>
-</tr>
-</tbody>
-</table>
 </div>
 <div class="section" id="keys">
-<h2>Keys<a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id3">Keys</a><a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="com.apple.systempolicy.rule-Requirement-auto">
-<h3>Requirement<a class="headerlink" href="#com.apple.systempolicy.rule-Requirement-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id4">Requirement</a><a class="headerlink" href="#com.apple.systempolicy.rule-Requirement-auto" title="Permalink to this headline">¶</a></h3>
 <p>The policy requirement</p>
 <p>The policy requirement. This key must follow the syntax described in Code Signing Requirement Language.</p>
 <table border="1" class="docutils">
@@ -361,7 +336,7 @@ If the payload is present in a user profile, an error will be generated during i
 </table>
 </div>
 <div class="section" id="com.apple.systempolicy.rule-Comment-auto">
-<h3>Comment<a class="headerlink" href="#com.apple.systempolicy.rule-Comment-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id5">Comment</a><a class="headerlink" href="#com.apple.systempolicy.rule-Comment-auto" title="Permalink to this headline">¶</a></h3>
 <p>This string will appear in the System Policy UI.</p>
 <p>This string will appear in the System Policy UI. If it is missing, “PayloadDisplayName” or “PayloadDescription” will be put into this field before the rule is added to the System Policy database.</p>
 <table border="1" class="docutils">
@@ -397,7 +372,7 @@ If the payload is present in a user profile, an error will be generated during i
 </table>
 </div>
 <div class="section" id="com.apple.systempolicy.rule-Expiration-auto">
-<h3>Expiration<a class="headerlink" href="#com.apple.systempolicy.rule-Expiration-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id6">Expiration</a><a class="headerlink" href="#com.apple.systempolicy.rule-Expiration-auto" title="Permalink to this headline">¶</a></h3>
 <p>An expiration date for rule(s) being processed.</p>
 <p>An expiration date for rule(s) being processed.</p>
 <table border="1" class="docutils">
@@ -433,7 +408,7 @@ If the payload is present in a user profile, an error will be generated during i
 </table>
 </div>
 <div class="section" id="com.apple.systempolicy.rule-OperationType-auto">
-<h3>OperationType<a class="headerlink" href="#com.apple.systempolicy.rule-OperationType-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id7">OperationType</a><a class="headerlink" href="#com.apple.systempolicy.rule-OperationType-auto" title="Permalink to this headline">¶</a></h3>
 <p>Operation Type.</p>
 <p>Operation Type.</p>
 <table border="1" class="docutils">
@@ -476,7 +451,7 @@ If the payload is present in a user profile, an error will be generated during i
 </div>
 </div>
 <div class="section" id="links">
-<h2>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id8">Links</a><a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><a class="reference external" href="https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW22">Official Documentation</a>.</li>
 </ul>

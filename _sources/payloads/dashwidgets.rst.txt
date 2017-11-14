@@ -6,10 +6,12 @@ Parental Control Dashboard Payload
 
 The Parental Control Dashboard payload is used to define a white list of dashboard widgets.
 
+.. contents::
+
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.dashboard manifest.plist
-.. pfm:: /_static/manifests/com.apple.dashboard manifest.plist
+
 
 

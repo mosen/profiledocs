@@ -94,6 +94,7 @@
 <li class="toctree-l2"><a class="reference internal" href="activedirectory.html">Active Directory</a></li>
 <li class="toctree-l2"><a class="reference internal" href="adcert.html">Active Directory Certificate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="airplay.html">AirPlay</a></li>
+<li class="toctree-l2"><a class="reference internal" href="com.apple.airplay.security.html">AirPlay Security</a></li>
 <li class="toctree-l2"><a class="reference internal" href="airprint.html">AirPrint</a></li>
 <li class="toctree-l2"><a class="reference internal" href="applock.html">App Lock</a></li>
 <li class="toctree-l2"><a class="reference internal" href="appstore.html">App Store</a></li>
@@ -170,7 +171,7 @@
 <li class="toctree-l2"><a class="reference internal" href="perappvpn.html">Per-App VPN</a></li>
 <li class="toctree-l2"><a class="reference internal" href="appmapping.html">App-to-Per-App VPN Mapping</a></li>
 <li class="toctree-l2"><a class="reference internal" href="defaults.html">iOS Defaults</a></li>
-<li class="toctree-l2"><a class="reference internal" href="parentalcontrols.html">Parental Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parentalcontrols.html">Application Access</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parental-timelimits.html">Parental Controls - Time Limits</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parental-contentfilter.html">Parental Controls - Content Filter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="profileremovalpassword.html">Profile Removal Password</a></li>
@@ -256,7 +257,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="filevault-2">
-<span id="payloadtype-com-apple-mcx-filevault2"></span><h1>FileVault 2<a class="headerlink" href="#filevault-2" title="Permalink to this headline">¶</a></h1>
+<span id="payloadtype-com-apple-mcx-filevault2"></span><h1><a class="toc-backref" href="#id1">FileVault 2</a><a class="headerlink" href="#filevault-2" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference download internal" href="../_downloads/com.apple.MCX.FileVault2.mobileconfig" download=""><code class="xref download docutils literal"><span class="pre">Template</span></code></a></p>
 <p>You can use FileVault 2 to perform full XTS-AES 128 encryption on the contents of a volume.
 Removal of the FileVault payload does not disable FileVault.</p>
@@ -264,8 +265,33 @@ Removal of the FileVault payload does not disable FileVault.</p>
 <p>An institutional recovery key will be created only if either there is certificate data available in the Certificate key value,
 a specific certificate payload is referenced, or the UseKeychain key value is set to true and a valid FileVaultMaster.keychain file was created.</p>
 <p>In all cases, the certificate information must be set up properly for FileVault or it will be ignored and no institutional recovery key will be set up.</p>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#filevault-2" id="id1">FileVault 2</a><ul>
+<li><a class="reference internal" href="#summary" id="id2">Summary</a></li>
+<li><a class="reference internal" href="#keys" id="id3">Keys</a><ul>
+<li><a class="reference internal" href="#com.apple.MCX.FileVault2-Enable-auto" id="id4">Enable</a></li>
+<li><a class="reference internal" href="#com.apple.MCX.FileVault2-Defer-auto" id="id5">Defer</a></li>
+<li><a class="reference internal" href="#com.apple.MCX.FileVault2-UserEntersMissingInfo-auto" id="id6">UserEntersMissingInfo</a></li>
+<li><a class="reference internal" href="#com.apple.MCX.FileVault2-UseRecoveryKey-auto" id="id7">UseRecoveryKey</a></li>
+<li><a class="reference internal" href="#com.apple.MCX.FileVault2-ShowRecoveryKey-auto" id="id8">ShowRecoveryKey</a></li>
+<li><a class="reference internal" href="#com.apple.MCX.FileVault2-OutputPath-auto" id="id9">OutputPath</a></li>
+<li><a class="reference internal" href="#com.apple.MCX.FileVault2-Certificate-auto" id="id10">Certificate</a></li>
+<li><a class="reference internal" href="#com.apple.MCX.FileVault2-PayloadCertificateUUID-auto" id="id11">PayloadCertificateUUID</a></li>
+<li><a class="reference internal" href="#com.apple.MCX.FileVault2-Username-auto" id="id12">Username</a></li>
+<li><a class="reference internal" href="#com.apple.MCX.FileVault2-Password-auto" id="id13">Password</a></li>
+<li><a class="reference internal" href="#com.apple.MCX.FileVault2-UseKeychain-auto" id="id14">UseKeychain</a></li>
+<li><a class="reference internal" href="#com.apple.MCX.FileVault2-DeferForceAtUserLoginMaxBypassAttempts-auto" id="id15">DeferForceAtUserLoginMaxBypassAttempts</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#links" id="id16">Links</a></li>
+</ul>
+</li>
+</ul>
+</div>
 <div class="section" id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id2">Summary</a><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -288,108 +314,11 @@ a specific certificate payload is referenced, or the UseKeychain key value is se
 </tr>
 </tbody>
 </table>
-<table border="1" class="docutils">
-<colgroup>
-<col width="14%" />
-<col width="14%" />
-<col width="14%" />
-<col width="43%" />
-<col width="14%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Name</th>
-<th class="head">Type</th>
-<th class="head">Title</th>
-<th class="head">Description</th>
-<th class="head">Required</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>Enable</td>
-<td>boolean</td>
-<td>Enable FileVault 2</td>
-<td>Set to &#8216;On&#8217; to enable FileVault. Set to &#8216;Off&#8217; to disable FileVault. This value is required.</td>
-<td>always</td>
-</tr>
-<tr class="row-odd"><td>Defer</td>
-<td>boolean</td>
-<td>Defer enabling until logout</td>
-<td>Set to true to defer enabling FileVault until the designated user logs out. For details, see fdesetup(8). The person enabling FileVault must be either a local user or a mobile account user.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>UserEntersMissingInfo</td>
-<td>boolean</td>
-<td>User enters username and password</td>
-<td>Set to true for manual profile installs to prompt for missing user name or password fields.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>UseRecoveryKey</td>
-<td>boolean</td>
-<td>Create a personal recovery key</td>
-<td>Set to true to create a personal recovery key</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>ShowRecoveryKey</td>
-<td>boolean</td>
-<td>Show the personal recovery key</td>
-<td>Set to false to not display the personal recovery key to the user after FileVault is enabled</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>OutputPath</td>
-<td>string</td>
-<td>Recovery key path</td>
-<td>Path to the location where the recovery key and computer information plist will be stored.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>Certificate</td>
-<td>data</td>
-<td>Certificate</td>
-<td>DER-encoded certificate data if an institutional recovery key will be added.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>PayloadCertificateUUID</td>
-<td>string</td>
-<td>Recovery Key Certificate Payload</td>
-<td>UUID of the payload containing the asymmetric recovery key certificate payload.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>Username</td>
-<td>string</td>
-<td>Username</td>
-<td>User name of the Open Directory user that will be added to FileVault.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>Password</td>
-<td>string</td>
-<td>Password</td>
-<td>User password of the Open Directory user that will be added to FileVault. Use the UserEntersMissingInfo key if you want to prompt for this information.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>UseKeychain</td>
-<td>boolean</td>
-<td>Add institutional recovery key to keychain</td>
-<td>If set to true and no certificate information is provided in this payload, the keychain already created at /Library/Keychains/FileVaultMaster.keychain will be used when the institutional recovery key is added.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-odd"><td>DeferForceAtUserLoginMaxBypassAttempts</td>
-<td>integer</td>
-<td>Maximum number of times FileVault can be skipped</td>
-<td>When using the Defer option you can optionally set this key to the maximum number of times the user can bypass enabling FileVault before it will require that it be enabled before the user can log in. If set to 0, it will always prompt to enable FileVault until it is enabled, though it will allow you to bypass enabling it. Setting this key to –1 will disable this feature.</td>
-<td>n/a</td>
-</tr>
-<tr class="row-even"><td>DeferDontAskAtUserLogout</td>
-<td>integer</td>
-<td>Dont ask at logout</td>
-<td>When using the Defer option, set this key to true to not request enabling FileVault at user logout time.</td>
-<td>n/a</td>
-</tr>
-</tbody>
-</table>
 </div>
 <div class="section" id="keys">
-<h2>Keys<a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id3">Keys</a><a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="com.apple.MCX.FileVault2-Enable-auto">
-<h3>Enable<a class="headerlink" href="#com.apple.MCX.FileVault2-Enable-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id4">Enable</a><a class="headerlink" href="#com.apple.MCX.FileVault2-Enable-auto" title="Permalink to this headline">¶</a></h3>
 <p>Enable FileVault 2</p>
 <p>Set to &#8216;On&#8217; to enable FileVault. Set to &#8216;Off&#8217; to disable FileVault. This value is required.</p>
 <table border="1" class="docutils">
@@ -425,7 +354,7 @@ a specific certificate payload is referenced, or the UseKeychain key value is se
 </table>
 </div>
 <div class="section" id="com.apple.MCX.FileVault2-Defer-auto">
-<h3>Defer<a class="headerlink" href="#com.apple.MCX.FileVault2-Defer-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id5">Defer</a><a class="headerlink" href="#com.apple.MCX.FileVault2-Defer-auto" title="Permalink to this headline">¶</a></h3>
 <p>Defer enabling until logout</p>
 <p>Set to true to defer enabling FileVault until the designated user logs out. For details, see fdesetup(8). The person enabling FileVault must be either a local user or a mobile account user.</p>
 <table border="1" class="docutils">
@@ -461,7 +390,7 @@ a specific certificate payload is referenced, or the UseKeychain key value is se
 </table>
 </div>
 <div class="section" id="com.apple.MCX.FileVault2-UserEntersMissingInfo-auto">
-<h3>UserEntersMissingInfo<a class="headerlink" href="#com.apple.MCX.FileVault2-UserEntersMissingInfo-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id6">UserEntersMissingInfo</a><a class="headerlink" href="#com.apple.MCX.FileVault2-UserEntersMissingInfo-auto" title="Permalink to this headline">¶</a></h3>
 <p>User enters username and password</p>
 <p>Set to true for manual profile installs to prompt for missing user name or password fields.</p>
 <table border="1" class="docutils">
@@ -497,7 +426,7 @@ a specific certificate payload is referenced, or the UseKeychain key value is se
 </table>
 </div>
 <div class="section" id="com.apple.MCX.FileVault2-UseRecoveryKey-auto">
-<h3>UseRecoveryKey<a class="headerlink" href="#com.apple.MCX.FileVault2-UseRecoveryKey-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id7">UseRecoveryKey</a><a class="headerlink" href="#com.apple.MCX.FileVault2-UseRecoveryKey-auto" title="Permalink to this headline">¶</a></h3>
 <p>Create a personal recovery key</p>
 <p>Set to true to create a personal recovery key</p>
 <table border="1" class="docutils">
@@ -533,7 +462,7 @@ a specific certificate payload is referenced, or the UseKeychain key value is se
 </table>
 </div>
 <div class="section" id="com.apple.MCX.FileVault2-ShowRecoveryKey-auto">
-<h3>ShowRecoveryKey<a class="headerlink" href="#com.apple.MCX.FileVault2-ShowRecoveryKey-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id8">ShowRecoveryKey</a><a class="headerlink" href="#com.apple.MCX.FileVault2-ShowRecoveryKey-auto" title="Permalink to this headline">¶</a></h3>
 <p>Show the personal recovery key</p>
 <p>Set to false to not display the personal recovery key to the user after FileVault is enabled</p>
 <table border="1" class="docutils">
@@ -569,7 +498,7 @@ a specific certificate payload is referenced, or the UseKeychain key value is se
 </table>
 </div>
 <div class="section" id="com.apple.MCX.FileVault2-OutputPath-auto">
-<h3>OutputPath<a class="headerlink" href="#com.apple.MCX.FileVault2-OutputPath-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id9">OutputPath</a><a class="headerlink" href="#com.apple.MCX.FileVault2-OutputPath-auto" title="Permalink to this headline">¶</a></h3>
 <p>Recovery key path</p>
 <p>Path to the location where the recovery key and computer information plist will be stored.</p>
 <table border="1" class="docutils">
@@ -605,7 +534,7 @@ a specific certificate payload is referenced, or the UseKeychain key value is se
 </table>
 </div>
 <div class="section" id="com.apple.MCX.FileVault2-Certificate-auto">
-<h3>Certificate<a class="headerlink" href="#com.apple.MCX.FileVault2-Certificate-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id10">Certificate</a><a class="headerlink" href="#com.apple.MCX.FileVault2-Certificate-auto" title="Permalink to this headline">¶</a></h3>
 <p>Certificate</p>
 <p>DER-encoded certificate data if an institutional recovery key will be added.</p>
 <table border="1" class="docutils">
@@ -641,7 +570,7 @@ a specific certificate payload is referenced, or the UseKeychain key value is se
 </table>
 </div>
 <div class="section" id="com.apple.MCX.FileVault2-PayloadCertificateUUID-auto">
-<h3>PayloadCertificateUUID<a class="headerlink" href="#com.apple.MCX.FileVault2-PayloadCertificateUUID-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id11">PayloadCertificateUUID</a><a class="headerlink" href="#com.apple.MCX.FileVault2-PayloadCertificateUUID-auto" title="Permalink to this headline">¶</a></h3>
 <p>Recovery Key Certificate Payload</p>
 <p>UUID of the payload containing the asymmetric recovery key certificate payload.</p>
 <table border="1" class="docutils">
@@ -677,7 +606,7 @@ a specific certificate payload is referenced, or the UseKeychain key value is se
 </table>
 </div>
 <div class="section" id="com.apple.MCX.FileVault2-Username-auto">
-<h3>Username<a class="headerlink" href="#com.apple.MCX.FileVault2-Username-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id12">Username</a><a class="headerlink" href="#com.apple.MCX.FileVault2-Username-auto" title="Permalink to this headline">¶</a></h3>
 <p>Username</p>
 <p>User name of the Open Directory user that will be added to FileVault.</p>
 <table border="1" class="docutils">
@@ -713,7 +642,7 @@ a specific certificate payload is referenced, or the UseKeychain key value is se
 </table>
 </div>
 <div class="section" id="com.apple.MCX.FileVault2-Password-auto">
-<h3>Password<a class="headerlink" href="#com.apple.MCX.FileVault2-Password-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id13">Password</a><a class="headerlink" href="#com.apple.MCX.FileVault2-Password-auto" title="Permalink to this headline">¶</a></h3>
 <p>Password</p>
 <p>User password of the Open Directory user that will be added to FileVault. Use the UserEntersMissingInfo key if you want to prompt for this information.</p>
 <table border="1" class="docutils">
@@ -749,7 +678,7 @@ a specific certificate payload is referenced, or the UseKeychain key value is se
 </table>
 </div>
 <div class="section" id="com.apple.MCX.FileVault2-UseKeychain-auto">
-<h3>UseKeychain<a class="headerlink" href="#com.apple.MCX.FileVault2-UseKeychain-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id14">UseKeychain</a><a class="headerlink" href="#com.apple.MCX.FileVault2-UseKeychain-auto" title="Permalink to this headline">¶</a></h3>
 <p>Add institutional recovery key to keychain</p>
 <p>If set to true and no certificate information is provided in this payload, the keychain already created at /Library/Keychains/FileVaultMaster.keychain will be used when the institutional recovery key is added.</p>
 <table border="1" class="docutils">
@@ -785,7 +714,7 @@ a specific certificate payload is referenced, or the UseKeychain key value is se
 </table>
 </div>
 <div class="section" id="com.apple.MCX.FileVault2-DeferForceAtUserLoginMaxBypassAttempts-auto">
-<h3>DeferForceAtUserLoginMaxBypassAttempts<a class="headerlink" href="#com.apple.MCX.FileVault2-DeferForceAtUserLoginMaxBypassAttempts-auto" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id15">DeferForceAtUserLoginMaxBypassAttempts</a><a class="headerlink" href="#com.apple.MCX.FileVault2-DeferForceAtUserLoginMaxBypassAttempts-auto" title="Permalink to this headline">¶</a></h3>
 <p>Maximum number of times FileVault can be skipped</p>
 <p>When using the Defer option you can optionally set this key to the maximum number of times the user can bypass enabling FileVault before it will require that it be enabled before the user can log in. If set to 0, it will always prompt to enable FileVault until it is enabled, though it will allow you to bypass enabling it. Setting this key to –1 will disable this feature.</p>
 <table border="1" class="docutils">
@@ -822,7 +751,7 @@ a specific certificate payload is referenced, or the UseKeychain key value is se
 </div>
 </div>
 <div class="section" id="links">
-<h2>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id16">Links</a><a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><a class="reference external" href="https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW842">Official Documentation</a>.</li>
 </ul>

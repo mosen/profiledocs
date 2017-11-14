@@ -10,12 +10,12 @@ It is supported on the User Channel.
 .. note:: If a home screen layout puts more than six items in the iPad dock the location of the seventh and
     succeeding items may be undefined but they will not be omitted.
 
+.. contents::
 
 Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.homescreenlayout manifest.plist
-.. pfm:: /_static/manifests/com.apple.homescreenlayout manifest.plist
 
 Keys
 ----
