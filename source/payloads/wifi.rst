@@ -49,6 +49,47 @@ Keys (802.1x)
     :key: EAPClientConfiguration
 
 .. pfmkey:: EAPClientConfiguration:AcceptEAPTypes /_static/manifests/com.apple.wifi.managed manifest.plist
+
+EAP Types values are as follows:
+
+0
+    Invalid *kEAPTypeInvalid* (internal use)
+1
+    Identity *kEAPTypeIdentity*
+2
+    Notification *kEAPTypeNotification*
+3
+    Nak *kEAPTypeNak*
+4
+    MD5 Challenge *kEAPTypeMD5Challenge*
+5
+    One Time Password *kEAPTypeOneTimePassword*
+6
+    Generic Token Card *kEAPTypeGenericTokenCard*
+13
+    Transport Layer Security (TLS) *kEAPTypeTLS*
+17
+    Cisco LEAP *kEAPTypeCiscoLEAP*
+18
+    EAP-SIM *kEAPTypeEAPSIM*
+19
+    SRP-SHA1 *kEAPTypeSRPSHA1*
+21
+    TTLS *kEAPTypeTTLS*
+23
+    EAP-AKA *kEAPTypeEAPAKA*
+25
+    PEAP *kEAPTypePEAP*
+26
+    MSCHAPv2 *kEAPTypeMSCHAPv2*
+33
+    Extensions *kEAPTypeExtensions*
+43
+    EAP-FAST *kEAPTypeEAPFAST*
+50
+    AKAPrime *kEAPTypeEAPAKAPrime*
+
+
 .. pfmkey:: EAPClientConfiguration:UserName /_static/manifests/com.apple.wifi.managed manifest.plist
 
 
