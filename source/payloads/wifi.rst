@@ -123,6 +123,11 @@ Keys (QoS)
 
 Available in iOS 10.0 and later. Not supported in macOS.
 
+Troubleshooting
+---------------
+
+EAP Unified Logs ``log show --predicate 'subsystem == "com.apple.eapol"'``.
+
 Links
 -----
 
