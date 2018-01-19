@@ -50,6 +50,7 @@ Payloads
     homescreen.rst
     identification.rst
     identpref.rst
+    kernelextpolicy.rst
     ldap.rst
     logging.rst
     loginitems.rst
