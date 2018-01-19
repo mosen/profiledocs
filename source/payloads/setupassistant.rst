@@ -13,5 +13,9 @@ Summary
 .. pfmheader:: /_static/manifests/com.apple.SetupAssistant.managed manifest.plist
 
 
+Keys
+----
 
-
+.. pfmkey:: SkipCloudSetup /_static/manifests/com.apple.SetupAssistant.managed manifest.plist
+.. pfmkey:: SkipSiriSetup /_static/manifests/com.apple.SetupAssistant.managed manifest.plist
+.. pfmkey:: SkipTouchIDSetup /_static/manifests/com.apple.SetupAssistant.managed manifest.plist
