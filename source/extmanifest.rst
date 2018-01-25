@@ -7,25 +7,44 @@ cases.
 The following is a description of keys added to the manifest format by the community as a working standard.
 
 
-Suggested Keys
---------------
+Extended Keys
+-------------
 
 pfm_macos_min
 ^^^^^^^^^^^^^
 
 Version of macOS that started supporting the key or payload.
-Could also add **pfm_ios_min** and **pfm_tvos_min**.
 
 pfm_macos_max
 ^^^^^^^^^^^^^
 
 Version of macOS that stopped supporting the key or payload.
-Can also apply to iOS and tvOS.
+
+pfm_ios_min
+^^^^^^^^^^^
+
+Version of iOS that started supporting the key or payload.
+
+pfm_ios_max
+^^^^^^^^^^^
+
+Version of iOS that stopped supporting the key or payload.
+
+pfm_tvos_min
+^^^^^^^^^^^^
+
+Version of tvOS that started supporting the key or payload.
+
+pfm_tvos_max
+^^^^^^^^^^^^
+
+Version of tvOS that stopped supporting the key or payload.
 
 pfm_supervised
 ^^^^^^^^^^^^^^
 
 Bool true/false, requires device to be supervised for this setting to work.
+Additionally, we will interpret this to mean that UAMDM is required for macOS.
 
 pfm_incompatible
 ^^^^^^^^^^^^^^^^
@@ -36,10 +55,3 @@ happen when one payload becomes superseded by another, and installing both resul
 
 There's currently no way to reference other manifests so there might need to be a **pfm_target_domain** key to
 match a domain in another manifest.
-
-pfm_target
-^^^^^^^^^^
-
-Resurrect this key from old MCX style manifests.
-Allows specifying the scope.
-
