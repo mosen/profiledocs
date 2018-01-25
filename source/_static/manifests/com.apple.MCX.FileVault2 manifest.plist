@@ -14,6 +14,8 @@
         <string>com.apple.MCX.FileVault2</string>
         <key>pfm_macos_min</key>
         <string>10.9</string>
+        <key>pfm_macos_max</key>
+        <string>10.12.6</string>
         <key>pfm_subkeys</key>
         <array>
             <dict>

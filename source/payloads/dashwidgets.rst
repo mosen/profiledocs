@@ -13,5 +13,14 @@ Summary
 
 .. pfmheader:: /_static/manifests/com.apple.dashboard manifest.plist
 
+Keys
+----
 
+.. pfmkey:: whiteListEnabled /_static/manifests/com.apple.dashboard manifest.plist
+.. pfmkey:: whiteList /_static/manifests/com.apple.dashboard manifest.plist
+
+Each whitelist item can contain the following keys:
+
+.. pfmkey:: whiteList:Type /_static/manifests/com.apple.dashboard manifest.plist
+.. pfmkey:: whiteList:ID /_static/manifests/com.apple.dashboard manifest.plist
 

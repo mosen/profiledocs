@@ -10,3 +10,9 @@ Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.NetworkBrowser manifest.plist
+
+Keys
+----
+
+.. pfmkey:: DisableAirDrop /_static/manifests/com.apple.NetworkBrowser manifest.plist
+.. pfmkey:: EnableODiskBrowsing /_static/manifests/com.apple.NetworkBrowser manifest.plist

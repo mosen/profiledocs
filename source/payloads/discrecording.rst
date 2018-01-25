@@ -13,3 +13,7 @@ Summary
 
 .. pfmheader:: /_static/manifests/com.apple.DiscRecording manifest.plist
 
+Keys
+----
+
+.. pfmkey:: BurnSupport /_static/manifests/com.apple.DiscRecording manifest.plist

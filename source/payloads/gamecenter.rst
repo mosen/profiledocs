@@ -13,3 +13,10 @@ Summary
 
 .. pfmheader:: /_static/manifests/com.apple.gamed manifest.plist
 
+Keys
+----
+
+.. pfmkey:: GKFeatureGameCenterAllowed /_static/manifests/com.apple.gamed manifest.plist
+.. pfmkey:: GKFeatureAccountModificationAllowed /_static/manifests/com.apple.gamed manifest.plist
+.. pfmkey:: GKFeatureAddingGameCenterFriendsAllowed /_static/manifests/com.apple.gamed manifest.plist
+.. pfmkey:: GKFeatureMultiplayerGamingAllowed /_static/manifests/com.apple.gamed manifest.plist

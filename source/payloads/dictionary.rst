@@ -13,3 +13,7 @@ Summary
 
 .. pfmheader:: /_static/manifests/com.apple.Dictionary manifest.plist
 
+Keys
+----
+
+.. pfmkey:: parentalControl /_static/manifests/com.apple.Dictionary manifest.plist

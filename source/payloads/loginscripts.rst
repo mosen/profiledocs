@@ -11,3 +11,12 @@ Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.mcxloginscripts manifest.plist
+
+
+Keys
+----
+
+.. pfmkey:: skipLoginHook /_static/manifests/com.apple.mcxloginscripts manifest.plist
+.. pfmkey:: skipLogoutHook /_static/manifests/com.apple.mcxloginscripts manifest.plist
+.. pfmkey:: loginscripts /_static/manifests/com.apple.mcxloginscripts manifest.plist
+.. pfmkey:: logoutscripts /_static/manifests/com.apple.mcxloginscripts manifest.plist

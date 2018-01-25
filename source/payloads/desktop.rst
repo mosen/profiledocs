@@ -16,4 +16,8 @@ Summary
 
 .. pfmheader:: /_static/manifests/com.apple.desktop manifest.plist
 
+Keys
+----
 
+.. pfmkey:: locked /_static/manifests/com.apple.desktop manifest.plist
+.. pfmkey:: override-picture-path /_static/manifests/com.apple.desktop manifest.plist

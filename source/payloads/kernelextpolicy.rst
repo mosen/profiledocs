@@ -14,3 +14,11 @@ Summary
 
 .. pfmheader:: /_static/manifests/com.apple.syspolicy.kernel-extension-policy.plist
 
+Keys
+----
+
+.. pfmkey:: AllowUserOverrides /_static/manifests/com.apple.syspolicy.kernel-extension-policy.plist
+.. pfmkey:: AllowedTeamIdentifiers /_static/manifests/com.apple.syspolicy.kernel-extension-policy.plist
+.. pfmkey:: AllowedKernelExtensions /_static/manifests/com.apple.syspolicy.kernel-extension-policy.plist
+
+

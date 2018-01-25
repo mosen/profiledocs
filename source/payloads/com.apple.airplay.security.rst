@@ -9,3 +9,9 @@ Summary
 
 .. pfmheader:: /_static/manifests/com.apple.airplay.security manifest.plist
 
+Keys
+----
+
+.. pfmkey:: SecurityType /_static/manifests/com.apple.airplay.security manifest.plist
+.. pfmkey:: Password /_static/manifests/com.apple.airplay.security manifest.plist
+

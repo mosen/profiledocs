@@ -14,3 +14,8 @@ Summary
 
 .. pfmheader:: /_static/manifests/com.apple.coremediaio.support manifest.plist
 
+Keys
+----
+
+.. pfmkey:: "Device Access Allowed" /_static/manifests/com.apple.coremediaio.support manifest.plist
+
