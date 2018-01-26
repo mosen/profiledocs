@@ -9,14 +9,19 @@ Welcome to MacAdmins Profile Reference's documentation!
    :caption: Contents:
 
    contributing.rst
-   official.rst
-   manifest.rst
-   extmanifest.rst
 
-   payloads/index.rst
+   payloads/common
+   payloads/mac
+   payloads/ios
+   payloads/tvos
+
    custom/index.rst
 
    troubleshooting/index.rst
+
+   official.rst
+   manifest.rst
+   extmanifest.rst
 
    mdm/commands/index
 

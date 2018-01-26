@@ -1,7 +1,10 @@
 .. _payloadtype-com.apple.universalaccess:
 
-Accessibility
-=============
+.. role:: macos
+
+:macos:`Accessibility`
+======================
+
 :download:`Template <../_static/examples/com.apple.universalaccess.mobileconfig>`
 
 This payload controls accessibility settings.

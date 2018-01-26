@@ -1,3 +1,5 @@
+*-
+-
 .. _payloadtype-com.apple.asam:
 
 Autonomous Single App Mode
