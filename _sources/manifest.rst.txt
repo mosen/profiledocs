@@ -290,7 +290,7 @@ This rule will pass if the value of the target does not match the list.
 Union Policies (MCX)
 --------------------
 
-The ``union policy`` type appears in older MCX style manifests.
+The ``union policy`` type appears in older MCX style manifests (originally occurring in OS X Server 10.4-10.6).
 
 pfm_upk_input_keys
 ^^^^^^^^^^^^^^^^^^

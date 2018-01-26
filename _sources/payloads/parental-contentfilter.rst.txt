@@ -21,5 +21,9 @@ Summary
 Keys
 ----
 
-
-
+.. pfmkey:: whitelistEnabled /_static/manifests/com.apple.familycontrols.contentfilter manifest.plist
+.. pfmkey:: siteWhitelist /_static/manifests/com.apple.familycontrols.contentfilter manifest.plist
+.. pfmkey:: useContentFilter /_static/manifests/com.apple.familycontrols.contentfilter manifest.plist
+.. pfmkey:: restrictWeb /_static/manifests/com.apple.familycontrols.contentfilter manifest.plist
+.. pfmkey:: filterWhitelist /_static/manifests/com.apple.familycontrols.contentfilter manifest.plist
+.. pfmkey:: filterBlacklist /_static/manifests/com.apple.familycontrols.contentfilter manifest.plist

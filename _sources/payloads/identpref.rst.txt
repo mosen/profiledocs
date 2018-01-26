@@ -15,6 +15,12 @@ Summary
 
 .. pfmheader:: /_static/manifests/com.apple.security.identitypreference manifest.plist
 
+Keys
+----
+
+.. pfmkey:: Name /_static/manifests/com.apple.security.identitypreference manifest.plist
+.. pfmkey:: PayloadCertificateUUID /_static/manifests/com.apple.security.identitypreference manifest.plist
+
 Links
 -----
 

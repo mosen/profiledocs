@@ -23,6 +23,17 @@ Summary
 Keys
 ----
 
+.. pfmkey:: EnableFirewall /_static/manifests/com.apple.security.firewall manifest.plist
+.. pfmkey:: BlockAllIncoming /_static/manifests/com.apple.security.firewall manifest.plist
+.. pfmkey:: EnableStealthMode /_static/manifests/com.apple.security.firewall manifest.plist
+.. pfmkey:: Applications /_static/manifests/com.apple.security.firewall manifest.plist
+
+Each item in the applications list contains these keys:
+
+.. pfmkey:: Applications:ApplicationItem:BundleID /_static/manifests/com.apple.security.firewall manifest.plist
+.. pfmkey:: Applications:ApplicationItem:Allowed /_static/manifests/com.apple.security.firewall manifest.plist
+
+
 Links
 -----
 

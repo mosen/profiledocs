@@ -159,6 +159,20 @@
                 <key>pfm_default</key>
                 <false/>
             </dict>
+            <dict>
+                <key>pfm_name</key>
+                <string>enforceSmartCard</string>
+                <key>pfm_title</key>
+                <string>Users cannot log in without a smart card</string>
+                <key>pfm_description</key>
+                <string>If true, users will be unable to log in or authenticate without a SmartCard.</string>
+                <key>pfm_type</key>
+                <string>boolean</string>
+                <key>pfm_default</key>
+                <false/>
+                <key>pfm_macos_min</key>
+                <string>10.13.2</string>
+            </dict>
         </array>
     </dict>
 </plist>

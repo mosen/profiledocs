@@ -151,6 +151,7 @@
 <li class="toctree-l2"><a class="reference internal" href="homescreen.html">Home Screen Layout</a></li>
 <li class="toctree-l2"><a class="reference internal" href="identification.html">Identification</a></li>
 <li class="toctree-l2"><a class="reference internal" href="identpref.html">Identity Preference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kernelextpolicy.html">Kernel Extension Policy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ldap.html">LDAP Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="logging.html">Unified Logging</a></li>
 <li class="toctree-l2"><a class="reference internal" href="loginitems.html">Login Items</a></li>
@@ -739,7 +740,7 @@ For more information on the individual settings you can also consult the <strong
 <tr class="row-even"><td>eventtype</td>
 <td>string</td>
 <td>The action to take</td>
-<td>The type of action to take at the scheduled time</td>
+<td>The type of action to take at the scheduled time: wake, wakepoweron, sleep, shutdown or restart</td>
 <td>n/a</td>
 </tr>
 <tr class="row-odd"><td>time</td>
@@ -751,7 +752,7 @@ For more information on the individual settings you can also consult the <strong
 <tr class="row-even"><td>weekdays</td>
 <td>integer</td>
 <td>Days to execute</td>
-<td>The days on which the scheduled event occurs. TODO: needs more format description</td>
+<td>The days on which the scheduled event occurs. 1 = Mon, 2 = Tue, 4 = Wed, 8 = Thu, 16 = Fri ORed with each other</td>
 <td>n/a</td>
 </tr>
 </tbody>

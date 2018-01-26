@@ -14,4 +14,10 @@ Summary
 
 .. pfmheader:: /_static/manifests/com.apple.conferenceroomdisplay manifest.plist
 
+Keys
+----
+
+.. pfmkey:: Message /_static/manifests/com.apple.conferenceroomdisplay manifest.plist
+
+
 

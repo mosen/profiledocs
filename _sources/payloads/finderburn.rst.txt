@@ -12,3 +12,7 @@ Summary
 
 .. pfmheader:: /_static/manifests/com.apple.finder manifest.plist
 
+Keys
+----
+
+.. pfmkey:: ProhibitBurn /_static/manifests/com.apple.finder manifest.plist

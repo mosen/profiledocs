@@ -23,6 +23,9 @@ Summary
 Keys
 ----
 
+.. pfmkey:: Name /_static/manifests/com.apple.security.certificatepreference manifest.plist
+.. pfmkey:: PayloadCertificateUUID /_static/manifests/com.apple.security.certificatepreference manifest.plist
+
 Links
 -----
 

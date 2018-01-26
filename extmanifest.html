@@ -88,12 +88,15 @@
 <li class="toctree-l1"><a class="reference internal" href="official.html">Official Links and Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="manifest.html">Manifest File Format</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Extended Manifest Format</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#suggested-keys">Suggested Keys</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#extended-keys">Extended Keys</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#pfm-macos-min">pfm_macos_min</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pfm-macos-max">pfm_macos_max</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pfm-ios-min">pfm_ios_min</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pfm-ios-max">pfm_ios_max</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pfm-tvos-min">pfm_tvos_min</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pfm-tvos-max">pfm_tvos_max</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pfm-supervised">pfm_supervised</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pfm-incompatible">pfm_incompatible</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#pfm-target">pfm_target</a></li>
 </ul>
 </li>
 </ul>
@@ -153,21 +156,36 @@
 <p>The manifest format covers most of the required information for writing configuration profiles, except for a few
 cases.</p>
 <p>The following is a description of keys added to the manifest format by the community as a working standard.</p>
-<div class="section" id="suggested-keys">
-<h2>Suggested Keys<a class="headerlink" href="#suggested-keys" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="extended-keys">
+<h2>Extended Keys<a class="headerlink" href="#extended-keys" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="pfm-macos-min">
 <h3>pfm_macos_min<a class="headerlink" href="#pfm-macos-min" title="Permalink to this headline">¶</a></h3>
-<p>Version of macOS that started supporting the key or payload.
-Could also add <strong>pfm_ios_min</strong> and <strong>pfm_tvos_min</strong>.</p>
+<p>Version of macOS that started supporting the key or payload.</p>
 </div>
 <div class="section" id="pfm-macos-max">
 <h3>pfm_macos_max<a class="headerlink" href="#pfm-macos-max" title="Permalink to this headline">¶</a></h3>
-<p>Version of macOS that stopped supporting the key or payload.
-Can also apply to iOS and tvOS.</p>
+<p>Version of macOS that stopped supporting the key or payload.</p>
+</div>
+<div class="section" id="pfm-ios-min">
+<h3>pfm_ios_min<a class="headerlink" href="#pfm-ios-min" title="Permalink to this headline">¶</a></h3>
+<p>Version of iOS that started supporting the key or payload.</p>
+</div>
+<div class="section" id="pfm-ios-max">
+<h3>pfm_ios_max<a class="headerlink" href="#pfm-ios-max" title="Permalink to this headline">¶</a></h3>
+<p>Version of iOS that stopped supporting the key or payload.</p>
+</div>
+<div class="section" id="pfm-tvos-min">
+<h3>pfm_tvos_min<a class="headerlink" href="#pfm-tvos-min" title="Permalink to this headline">¶</a></h3>
+<p>Version of tvOS that started supporting the key or payload.</p>
+</div>
+<div class="section" id="pfm-tvos-max">
+<h3>pfm_tvos_max<a class="headerlink" href="#pfm-tvos-max" title="Permalink to this headline">¶</a></h3>
+<p>Version of tvOS that stopped supporting the key or payload.</p>
 </div>
 <div class="section" id="pfm-supervised">
 <h3>pfm_supervised<a class="headerlink" href="#pfm-supervised" title="Permalink to this headline">¶</a></h3>
-<p>Bool true/false, requires device to be supervised for this setting to work.</p>
+<p>Bool true/false, requires device to be supervised for this setting to work.
+Additionally, we will interpret this to mean that UAMDM is required for macOS.</p>
 </div>
 <div class="section" id="pfm-incompatible">
 <h3>pfm_incompatible<a class="headerlink" href="#pfm-incompatible" title="Permalink to this headline">¶</a></h3>
@@ -176,11 +194,6 @@ how this key or payload is incompatible with the other payload or key. Usually t
 happen when one payload becomes superseded by another, and installing both results in undefined behaviour.</p>
 <p>There&#8217;s currently no way to reference other manifests so there might need to be a <strong>pfm_target_domain</strong> key to
 match a domain in another manifest.</p>
-</div>
-<div class="section" id="pfm-target">
-<h3>pfm_target<a class="headerlink" href="#pfm-target" title="Permalink to this headline">¶</a></h3>
-<p>Resurrect this key from old MCX style manifests.
-Allows specifying the scope.</p>
 </div>
 </div>
 </div>

@@ -135,6 +135,7 @@
 <li class="toctree-l2"><a class="reference internal" href="homescreen.html">Home Screen Layout</a></li>
 <li class="toctree-l2"><a class="reference internal" href="identification.html">Identification</a></li>
 <li class="toctree-l2"><a class="reference internal" href="identpref.html">Identity Preference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kernelextpolicy.html">Kernel Extension Policy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ldap.html">LDAP Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="logging.html">Unified Logging</a></li>
 <li class="toctree-l2"><a class="reference internal" href="loginitems.html">Login Items</a></li>
@@ -237,6 +238,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#com.apple.wifi.managed-QoSMarkingPolicy-auto">QoSMarkingPolicy</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#links">Links</a></li>
 </ul>
 </li>
@@ -359,7 +361,8 @@ and CoreWLAN will only return AirPort devices.</p>
 <li><a class="reference internal" href="#com.apple.wifi.managed-QoSMarkingPolicy-auto" id="id44">QoSMarkingPolicy</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#links" id="id45">Links</a></li>
+<li><a class="reference internal" href="#troubleshooting" id="id45">Troubleshooting</a></li>
+<li><a class="reference internal" href="#links" id="id46">Links</a></li>
 </ul>
 </li>
 </ul>
@@ -1123,6 +1126,45 @@ and CoreWLAN will only return AirPort devices.</p>
 </tbody>
 </table>
 </div>
+<p>EAP Types values are as follows:</p>
+<dl class="docutils">
+<dt>0</dt>
+<dd>Invalid <em>kEAPTypeInvalid</em> (internal use)</dd>
+<dt>1</dt>
+<dd>Identity <em>kEAPTypeIdentity</em></dd>
+<dt>2</dt>
+<dd>Notification <em>kEAPTypeNotification</em></dd>
+<dt>3</dt>
+<dd>Nak <em>kEAPTypeNak</em></dd>
+<dt>4</dt>
+<dd>MD5 Challenge <em>kEAPTypeMD5Challenge</em></dd>
+<dt>5</dt>
+<dd>One Time Password <em>kEAPTypeOneTimePassword</em></dd>
+<dt>6</dt>
+<dd>Generic Token Card <em>kEAPTypeGenericTokenCard</em></dd>
+<dt>13</dt>
+<dd>Transport Layer Security (TLS) <em>kEAPTypeTLS</em></dd>
+<dt>17</dt>
+<dd>Cisco LEAP <em>kEAPTypeCiscoLEAP</em></dd>
+<dt>18</dt>
+<dd>EAP-SIM <em>kEAPTypeEAPSIM</em></dd>
+<dt>19</dt>
+<dd>SRP-SHA1 <em>kEAPTypeSRPSHA1</em></dd>
+<dt>21</dt>
+<dd>TTLS <em>kEAPTypeTTLS</em></dd>
+<dt>23</dt>
+<dd>EAP-AKA <em>kEAPTypeEAPAKA</em></dd>
+<dt>25</dt>
+<dd>PEAP <em>kEAPTypePEAP</em></dd>
+<dt>26</dt>
+<dd>MSCHAPv2 <em>kEAPTypeMSCHAPv2</em></dd>
+<dt>33</dt>
+<dd>Extensions <em>kEAPTypeExtensions</em></dd>
+<dt>43</dt>
+<dd>EAP-FAST <em>kEAPTypeEAPFAST</em></dd>
+<dt>50</dt>
+<dd>AKAPrime <em>kEAPTypeEAPAKAPrime</em></dd>
+</dl>
 <div class="section" id="com.apple.wifi.managed-UserName-auto">
 <h3><a class="toc-backref" href="#id23">UserName</a><a class="headerlink" href="#com.apple.wifi.managed-UserName-auto" title="Permalink to this headline">¶</a></h3>
 <p>Username</p>
@@ -1869,8 +1911,12 @@ and CoreWLAN will only return AirPort devices.</p>
 </div>
 <p>Available in iOS 10.0 and later. Not supported in macOS.</p>
 </div>
+<div class="section" id="troubleshooting">
+<h2><a class="toc-backref" href="#id45">Troubleshooting</a><a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
+<p>EAP Unified Logs <code class="docutils literal"><span class="pre">log</span> <span class="pre">show</span> <span class="pre">--predicate</span> <span class="pre">'subsystem</span> <span class="pre">==</span> <span class="pre">&quot;com.apple.eapol&quot;'</span></code>.</p>
+</div>
 <div class="section" id="links">
-<h2><a class="toc-backref" href="#id45">Links</a><a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id46">Links</a><a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><a class="reference external" href="https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW30">Official Documentation</a>.</li>
 </ul>

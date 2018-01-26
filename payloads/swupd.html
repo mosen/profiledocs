@@ -135,6 +135,7 @@
 <li class="toctree-l2"><a class="reference internal" href="homescreen.html">Home Screen Layout</a></li>
 <li class="toctree-l2"><a class="reference internal" href="identification.html">Identification</a></li>
 <li class="toctree-l2"><a class="reference internal" href="identpref.html">Identity Preference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kernelextpolicy.html">Kernel Extension Policy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ldap.html">LDAP Account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="logging.html">Unified Logging</a></li>
 <li class="toctree-l2"><a class="reference internal" href="loginitems.html">Login Items</a></li>
@@ -270,6 +271,18 @@
 <td>boolean</td>
 <td>Allow installation of pre-release software</td>
 <td>Allow installation of pre-release software</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>forceDelayedSoftwareUpdates</td>
+<td>boolean</td>
+<td>Force delayed updates</td>
+<td>Optional. If true, software updates will be delayed by the duration defined by ManagedDeferredInstallDelay.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>ManagedDeferredInstallDelay</td>
+<td>integer</td>
+<td>Update delay in days</td>
+<td>Optional. The duration, in days, that software updates will be delayed, if forcedDelayedSoftwareUpdates is set to true. Default is 30.</td>
 <td>n/a</td>
 </tr>
 </tbody>
