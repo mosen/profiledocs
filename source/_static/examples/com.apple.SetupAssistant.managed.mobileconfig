@@ -21,7 +21,13 @@
 			<integer>1</integer>
 			<key>SkipCloudSetup</key>
 			<false/>
+			<key>SkipPrivacySetup</key>
+			<false/>
 			<key>SkipSiriSetup</key>
+			<false/>
+			<key>SkipTouchIDSetup</key>
+			<false/>
+			<key>SkipiCloudStorageSetup</key>
 			<false/>
 		</dict>
 	</array>
@@ -36,6 +42,8 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>54ecf252-88ac-4df0-9d80-faec8c0b6fa0</string>
+	<string>038de5ae-61f6-412d-8f66-63c18ad6b823</string>
+	<key>PayloadVersion</key>
+	<string>1</string>
 </dict>
 </plist>

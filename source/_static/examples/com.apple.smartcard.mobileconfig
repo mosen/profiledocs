@@ -25,6 +25,8 @@
 			<true/>
 			<key>checkCertificateTrust</key>
 			<false/>
+			<key>enforceSmartCard</key>
+			<false/>
 			<key>oneCardPerUser</key>
 			<false/>
 		</dict>
@@ -40,6 +42,8 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>9f50be35-0f38-4a70-8d20-025541cfac1e</string>
+	<string>452a35ef-09fa-4702-91c9-6a94bb9ce80c</string>
+	<key>PayloadVersion</key>
+	<string>1</string>
 </dict>
 </plist>

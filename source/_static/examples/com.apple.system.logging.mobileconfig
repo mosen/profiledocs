@@ -20,10 +20,13 @@
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>Processes</key>
-			<dict>
-			</dict>
+			<dict/>
 			<key>Subsystems</key>
 			<dict>
+				<key>CategoryName</key>
+				<dict/>
+				<key>Enable-Oversize-Messages</key>
+				<false/>
 				<key>subsystemDomain</key>
 				<dict>
 					<key>DEFAULT-OPTIONS</key>
@@ -52,8 +55,7 @@
 				</dict>
 			</dict>
 			<key>System</key>
-			<dict>
-			</dict>
+			<dict/>
 		</dict>
 	</array>
 	<key>PayloadDescription</key>
@@ -67,6 +69,8 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>40d769f9-b028-4c82-9ae5-1bfb8d135779</string>
+	<string>2aedd237-2f79-4e71-b6d6-3d2c9b5a9a78</string>
+	<key>PayloadVersion</key>
+	<string>1</string>
 </dict>
 </plist>
