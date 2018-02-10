@@ -27,3 +27,11 @@ PayloadContent Keys
 .. pfm:: /_static/manifests/com.apple.ManagedClient.preferences manifest.plist
    :key: PayloadContent:PreferenceDomainHere
 
+Forced
+""""""
+
+Forced is an array containing a dictionary in the following format:
+
+.. pfm:: /_static/manifests/com.apple.ManagedClient.preferences manifest.plist
+:key: PayloadContent:PreferenceDomainHere:Forced:ForcedItem
+
