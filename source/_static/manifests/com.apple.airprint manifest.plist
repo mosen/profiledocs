@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>pfm_description</key>
+	<string>Use this section to define settings for AirPrint.</string>
+	<key>pfm_title</key>
+	<string>AirPrint</string>
+	<key>pfm_format_version</key>
+	<integer>1</integer>
+	<key>pfm_version</key>
+	<integer>1</integer>
+	<key>pfm_domain</key>
+	<string>com.apple.airprint</string>
+	<key>pfm_ios_min</key>
+	<string>7.0</string>
+	<key>pfm_macos_min</key>
+	<string>10.10</string>
+	<key>pfm_subkeys</key>
+	<array>
+		<dict>
+			<key>pfm_name</key>
+			<string>PayloadDescription</string>
+			<key>pfm_title</key>
+			<string>Payload Description</string>
+			<key>pfm_description</key>
+			<string>Description of the payload</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_default</key>
+			<string>Configures AirPrint settings</string>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>PayloadDisplayName</string>
+			<key>pfm_title</key>
+			<string>Payload Display Name</string>
+			<key>pfm_description</key>
+			<string>Name of the payload</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_default</key>
+			<string>AirPrint</string>
+			<key>pfm_require</key>
+			<string>always</string>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>PayloadIdentifier</string>
+			<key>pfm_title</key>
+			<string>Payload Identifier</string>
+			<key>pfm_description</key>
+			<string>A unique identifier for the payload, dot-delimited.  Usually root PayloadIdentifier+subidentifier</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_default</key>
+			<string>com.apple.airprint</string>
+			<key>pfm_require</key>
+			<string>always</string>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>PayloadType</string>
+			<key>pfm_title</key>
+			<string>Payload Type</string>
+			<key>pfm_description</key>
+			<string>The type of the payload, a reverse dns string</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_default</key>
+			<string>com.apple.airprint</string>
+			<key>pfm_require</key>
+			<string>always</string>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>PayloadUUID</string>
+			<key>pfm_title</key>
+			<string>Payload UUID</string>
+			<key>pfm_description</key>
+			<string>Unique identifier for the payload (format 01234567-89AB-CDEF-0123-456789ABCDEF)</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_default</key>
+			<string></string>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_format</key>
+			<string>^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$</string>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>PayloadVersion</string>
+			<key>pfm_title</key>
+			<string>Payload Version</string>
+			<key>pfm_description</key>
+			<string>The version of the whole configuration profile.</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_default</key>
+			<integer>1</integer>
+			<key>pfm_require</key>
+			<string>always</string>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>PayloadOrganization</string>
+			<key>pfm_title</key>
+			<string>Payload Organization</string>
+			<key>pfm_description</key>
+			<string>This value describes the issuing organization of the profile, as displayed to the user</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>AirPrint</string>
+			<key>pfm_title</key>
+			<string>Air print</string>
+			<key>pfm_description</key>
+			<string>An array of AirPrint printers that should always be shown.</string>
+			<key>pfm_type</key>
+			<string>array</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_title</key>
+					<string>AirPrint Printer</string>
+					<key>pfm_name</key>
+					<string>Identifier</string>
+					<key>pfm_description</key>
+					<string>AirPrint Printer</string>
+					<key>pfm_type</key>
+					<string>dictionary</string>
+					<key>pfm_subkeys</key>
+					<array>
+						<dict>
+							<key>pfm_name</key>
+							<string>IPAddress</string>
+							<key>pfm_title</key>
+							<string>IP Address</string>
+							<key>pfm_description</key>
+							<string>The IP Address of the AirPrint destination.</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_name</key>
+							<string>ResourcePath</string>
+							<key>pfm_title</key>
+							<string>Resource Path</string>
+							<key>pfm_description</key>
+							<string>The Resource Path associated with the printer. This corresponds to the rp parameter of the _ipps.tcp Bonjour record. For example: printers/Canon_MG5300_series</string>
+							<key>pfm_type</key>
+							<string>string</string>
+						</dict>
+						<dict>
+							<key>pfm_name</key>
+							<string>Port</string>
+							<key>pfm_title</key>
+							<string>Listening Port</string>
+							<key>pfm_description</key>
+							<string>Listening port of the AirPrint destination. If this key is not specified AirPrint will use the default port.</string>
+							<key>pfm_type</key>
+							<string>integer</string>
+							<key>pfm_ios_min</key>
+							<string>11.0</string>
+						</dict>
+						<dict>
+							<key>pfm_name</key>
+							<string>ForceTLS</string>
+							<key>pfm_title</key>
+							<string>Force AirPrint via TLS</string>
+							<key>pfm_description</key>
+							<string>If true AirPrint connections are secured by Transport Layer Security (TLS). Default is false.</string>
+							<key>pfm_type</key>
+							<string>boolean</string>
+							<key>pfm_default</key>
+							<false/>
+							<key>pfm_ios_min</key>
+							<string>11.0</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>

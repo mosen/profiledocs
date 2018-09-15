@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>CardDAVAccountDescription</key>
+			<string>My CardDAV Account</string>
+			<key>CardDAVHostName</key>
+			<string></string>
+			<key>CardDAVPassword</key>
+			<string></string>
+			<key>CardDAVPort</key>
+			<integer>443</integer>
+			<key>CardDAVPrincipalURL</key>
+			<string></string>
+			<key>CardDAVUseSSL</key>
+			<true/>
+			<key>CardDAVUsername</key>
+			<string></string>
+			<key>CommunicationServiceRules</key>
+			<dict>
+				<key>DefaultServiceHandlers</key>
+				<dict>
+					<key>AudioCall</key>
+					<string></string>
+				</dict>
+			</dict>
+			<key>PayloadDescription</key>
+			<string>Configures a CardDAV account</string>
+			<key>PayloadDisplayName</key>
+			<string>CardDAV</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.carddav.account</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>com.apple.carddav.account</string>
+			<key>PayloadUUID</key>
+			<string></string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Example: Use this section to define settings for configuration access to CardDAV servers.</string>
+	<key>PayloadDisplayName</key>
+	<string>Example: CardDAV</string>
+	<key>PayloadIdentifier</key>
+	<string>com.apple.carddav.account.example</string>
+	<key>PayloadOrganization</key>
+	<string>Example Organization</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>e6f059fe-8138-482e-938a-c4a66b2a710c</string>
+	<key>PayloadVersion</key>
+	<string>1</string>
+</dict>
+</plist>

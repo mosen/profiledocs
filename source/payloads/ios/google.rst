@@ -1,0 +1,33 @@
+.. _payloadtype-com.apple.google-oauth:
+
+Google Account
+==============
+:download:`Template <../_static/examples/com.apple.google-oauth.mobileconfig>`
+
+You can install multiple Google payloads.
+
+Each Google payload sets up a Google email address as well as any other Google services the user enables after authentication.
+Google accounts must be installed via MDM or by Apple Configurator 2 (if the device is supervised).
+
+The payload never contains credentials; the user will be prompted to enter credentials shortly after the
+payload has been successfully installed.
+
+.. contents::
+
+Summary
+-------
+
+.. pfmheader:: /_static/manifests/com.apple.google-oauth manifest.plist
+
+Keys
+----
+
+.. pfmkey:: AccountDescription /_static/manifests/com.apple.google-oauth manifest.plist
+.. pfmkey:: AccountName /_static/manifests/com.apple.google-oauth manifest.plist
+.. pfmkey:: EmailAddress /_static/manifests/com.apple.google-oauth manifest.plist
+
+Links
+-----
+
+- `Official Documentation <https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW610>`_.
+

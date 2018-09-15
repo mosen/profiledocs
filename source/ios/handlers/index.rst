@@ -35,6 +35,7 @@
 - MCFontPayloadHandler
 - MCLoggingPayloadHandler
 
+example::
 
     @protocol Payload
     - handlerWithProfileHandler:(ProfileHandler *)handler;

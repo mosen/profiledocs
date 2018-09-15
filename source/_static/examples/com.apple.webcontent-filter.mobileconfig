@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>AutoFilterEnabled</key>
+			<false/>
+			<key>BlacklistedURLs</key>
+			<array>
+				<string></string>
+			</array>
+			<key>FilterBrowsers</key>
+			<true/>
+			<key>FilterSockets</key>
+			<true/>
+			<key>FilterType</key>
+			<string>BuiltIn</string>
+			<key>Organization</key>
+			<string></string>
+			<key>Password</key>
+			<string></string>
+			<key>PayloadCertificateUUID</key>
+			<string></string>
+			<key>PayloadDescription</key>
+			<string>Configures content filtering settings</string>
+			<key>PayloadDisplayName</key>
+			<string>Web Content Filter</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.webcontent-filter</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>com.apple.webcontent-filter</string>
+			<key>PayloadUUID</key>
+			<string></string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>PermittedURLs</key>
+			<array>
+				<string></string>
+			</array>
+			<key>PluginBundleID</key>
+			<string></string>
+			<key>ServerAddress</key>
+			<string></string>
+			<key>UserDefinedName</key>
+			<string></string>
+			<key>UserName</key>
+			<string></string>
+			<key>WhitelistedBookmarks</key>
+			<array>
+				<dict>
+					<key>BookmarkPath</key>
+					<string></string>
+					<key>Title</key>
+					<string></string>
+					<key>URL</key>
+					<string></string>
+				</dict>
+			</array>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Example: Use this section to define managed email and web domains.</string>
+	<key>PayloadDisplayName</key>
+	<string>Example: Web Content Filter</string>
+	<key>PayloadIdentifier</key>
+	<string>com.apple.webcontent-filter.example</string>
+	<key>PayloadOrganization</key>
+	<string>Example Organization</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>5ceecd39-963a-4158-9f6f-cb0e0b2f45de</string>
+</dict>
+</plist>

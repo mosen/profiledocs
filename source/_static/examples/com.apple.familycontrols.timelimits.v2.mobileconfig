@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>PayloadDescription</key>
+			<string>Parental Control Time Limits Payload</string>
+			<key>PayloadDisplayName</key>
+			<string>Parental Control Time Limits Payload</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.familycontrols.timelimits.v2</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>com.apple.familycontrols.timelimits.v2</string>
+			<key>PayloadUUID</key>
+			<string></string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>familyControlsEnabled</key>
+			<false/>
+			<key>limits-list</key>
+			<dict>
+				<key>weekday-allowance</key>
+				<dict>
+					<key>enabled</key>
+					<false/>
+					<key>end</key>
+					<string></string>
+					<key>rangeType</key>
+					<integer>0</integer>
+					<key>secondsPerDay</key>
+					<integer>0</integer>
+					<key>start</key>
+					<string></string>
+				</dict>
+				<key>weekday-curfew</key>
+				<dict>
+					<key>enabled</key>
+					<false/>
+					<key>end</key>
+					<string></string>
+					<key>rangeType</key>
+					<integer>0</integer>
+					<key>secondsPerDay</key>
+					<integer>0</integer>
+					<key>start</key>
+					<string></string>
+				</dict>
+				<key>weekend-allowance</key>
+				<dict>
+					<key>enabled</key>
+					<false/>
+					<key>end</key>
+					<string></string>
+					<key>rangeType</key>
+					<integer>0</integer>
+					<key>secondsPerDay</key>
+					<integer>0</integer>
+					<key>start</key>
+					<string></string>
+				</dict>
+				<key>weekend-curfew</key>
+				<dict>
+					<key>enabled</key>
+					<false/>
+					<key>end</key>
+					<string></string>
+					<key>rangeType</key>
+					<integer>0</integer>
+					<key>secondsPerDay</key>
+					<integer>0</integer>
+					<key>start</key>
+					<string></string>
+				</dict>
+			</dict>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Example: Parental Control Time Limits Payload</string>
+	<key>PayloadDisplayName</key>
+	<string>Example: Parental Control Time Limits Payload</string>
+	<key>PayloadIdentifier</key>
+	<string>com.apple.familycontrols.timelimits.v2.example</string>
+	<key>PayloadOrganization</key>
+	<string>Example Organization</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>f00ed147-fa45-40f4-a591-d4bde5a1e46b</string>
+	<key>PayloadVersion</key>
+	<string>1</string>
+</dict>
+</plist>

@@ -6,8 +6,7 @@
 	<array>
 		<dict>
 			<key>DefaultsData</key>
-			<dict>
-			</dict>
+			<dict/>
 			<key>DefaultsDomainName</key>
 			<string></string>
 			<key>PayloadIdentifier</key>
@@ -31,6 +30,8 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>7ed8e683-cc70-4cdc-ab46-aebbc41d184f</string>
+	<string>bf72912d-b8a6-43ed-a208-ab6c55a2b3dc</string>
+	<key>PayloadVersion</key>
+	<string>1</string>
 </dict>
 </plist>

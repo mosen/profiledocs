@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>AccountDescription</key>
+			<string></string>
+			<key>AccountName</key>
+			<string></string>
+			<key>CommunicationServiceRules</key>
+			<dict>
+				<key>DefaultServiceHandlers</key>
+				<dict>
+					<key>AudioCall</key>
+					<string></string>
+				</dict>
+			</dict>
+			<key>EmailAddress</key>
+			<string></string>
+			<key>PayloadDescription</key>
+			<string>Configures a Google account</string>
+			<key>PayloadDisplayName</key>
+			<string>Google Account</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.google-oauth</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>com.apple.google-oauth</string>
+			<key>PayloadUUID</key>
+			<string></string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Example: Use this section to configure Google accounts. The user will be prompted to sign in afterward.</string>
+	<key>PayloadDisplayName</key>
+	<string>Example: GoogleAccount</string>
+	<key>PayloadIdentifier</key>
+	<string>com.apple.google-oauth.example</string>
+	<key>PayloadOrganization</key>
+	<string>Example Organization</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>ad313f4c-902e-4762-875a-540245cb6861</string>
+	<key>PayloadVersion</key>
+	<string>1</string>
+</dict>
+</plist>

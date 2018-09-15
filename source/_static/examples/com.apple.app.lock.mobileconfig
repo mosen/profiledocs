@@ -75,6 +75,8 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>82654c10-8efc-44df-bb48-d5d42aecb852</string>
+	<string>d15cb02b-6d15-418d-84d0-5b696fa723e6</string>
+	<key>PayloadVersion</key>
+	<string>1</string>
 </dict>
 </plist>

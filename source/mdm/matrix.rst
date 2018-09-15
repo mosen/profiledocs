@@ -1,3 +1,0 @@
-Vendor Support Matrix
-=====================
-

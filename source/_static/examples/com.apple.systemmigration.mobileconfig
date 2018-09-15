@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>CustomBehavior</key>
+			<array>
+				<dict>
+					<key>Context</key>
+					<string></string>
+					<key>Paths</key>
+					<array>
+						<dict>
+							<key>SourcePath</key>
+							<string></string>
+							<key>SourcePathInUserHome</key>
+							<false/>
+							<key>TargetPath</key>
+							<string></string>
+							<key>TargetPathInUserHome</key>
+							<false/>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>PayloadDescription</key>
+			<string>System Migration Payload</string>
+			<key>PayloadDisplayName</key>
+			<string>System Migration Payload</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.systemmigration</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>com.apple.systemmigration</string>
+			<key>PayloadUUID</key>
+			<string></string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Example: System Migration Payload</string>
+	<key>PayloadDisplayName</key>
+	<string>Example: System Migration Payload</string>
+	<key>PayloadIdentifier</key>
+	<string>com.apple.systemmigration.example</string>
+	<key>PayloadOrganization</key>
+	<string>Example Organization</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>a967af93-57b2-4b96-a4b7-782cf28aad8a</string>
+</dict>
+</plist>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>Message</key>
+			<string></string>
+			<key>PayloadDescription</key>
+			<string>Conference Room Display Payload</string>
+			<key>PayloadDisplayName</key>
+			<string>Conference Room Display Payload</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.SubmitDiagInfo</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>com.apple.conferenceroomdisplay</string>
+			<key>PayloadUUID</key>
+			<string></string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Example: Conference Room Display Payload</string>
+	<key>PayloadDisplayName</key>
+	<string>Example: Conference Room Display Payload</string>
+	<key>PayloadIdentifier</key>
+	<string>com.apple.conferenceroomdisplay.example</string>
+	<key>PayloadOrganization</key>
+	<string>Example Organization</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>4a082431-1721-4740-a3de-ff71790a9c25</string>
+	<key>PayloadVersion</key>
+	<string>1</string>
+</dict>
+</plist>

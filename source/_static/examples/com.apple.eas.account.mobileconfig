@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>Certificate</key>
+			<string>Base64EncodedDataHere==</string>
+			<key>CertificateName</key>
+			<string></string>
+			<key>CertificatePassword</key>
+			<string></string>
+			<key>CommunicationServiceRules</key>
+			<dict>
+				<key>DefaultServiceHandlers</key>
+				<dict>
+					<key>AudioCall</key>
+					<string></string>
+				</dict>
+			</dict>
+			<key>EmailAddress</key>
+			<string></string>
+			<key>Host</key>
+			<string></string>
+			<key>MailNumberOfPastDaysToSync</key>
+			<integer>7</integer>
+			<key>Password</key>
+			<string></string>
+			<key>PayloadCertificateUUID</key>
+			<string></string>
+			<key>PayloadDescription</key>
+			<string>Configures an Exchange account</string>
+			<key>PayloadDisplayName</key>
+			<string>Exchange ActiveSync</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.eas.account</string>
+			<key>PayloadOrganization</key>
+			<string></string>
+			<key>PayloadType</key>
+			<string>com.apple.eas.account</string>
+			<key>PayloadUUID</key>
+			<string></string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>PreventAppSheet</key>
+			<false/>
+			<key>PreventMove</key>
+			<false/>
+			<key>SMIMEEnablePerMessageSwitch</key>
+			<false/>
+			<key>SMIMEEnabled</key>
+			<false/>
+			<key>SMIMEEncryptionCertificateUUID</key>
+			<string></string>
+			<key>SMIMESigningCertificateUUID</key>
+			<string></string>
+			<key>SSL</key>
+			<true/>
+			<key>UserName</key>
+			<string></string>
+			<key>allowMailDrop</key>
+			<false/>
+			<key>disableMailRecentsSyncing</key>
+			<false/>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Example: Use this section to define settings for the Exchange ActiveSync account.</string>
+	<key>PayloadDisplayName</key>
+	<string>Example: Exchange ActiveSync</string>
+	<key>PayloadIdentifier</key>
+	<string>com.apple.eas.account.example</string>
+	<key>PayloadOrganization</key>
+	<string>Example Organization</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>a0358988-d7ee-4bd5-b45e-8a206c21e9fe</string>
+	<key>PayloadVersion</key>
+	<string>1</string>
+</dict>
+</plist>

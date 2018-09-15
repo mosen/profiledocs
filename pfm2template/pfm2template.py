@@ -17,6 +17,7 @@ def generate_payload(data, result):
     result['PayloadIdentifier'] = '{}.example'.format(data.get('pfm_domain', 'domain.undefined'))
     result['PayloadDisplayName'] = 'Example: {}'.format(data.get('pfm_title'), 'No Title')
     result['PayloadDescription'] = 'Example: {}'.format(data.get('pfm_description'), 'No Description')
+    result['PayloadVersion'] = '1'
     result['PayloadContent'] = [{}]
     generate(data['pfm_subkeys'], result['PayloadContent'][0])
 
@@ -29,6 +30,7 @@ def generate_dict(data, result):
         result['PayloadIdentifier'] = '{}.example'.format(data.get('pfm_domain', 'domain.undefined'))
         result['PayloadDisplayName'] = 'Example: {}'.format(data.get('pfm_title'), 'No Title')
         result['PayloadDescription'] = 'Example: {}'.format(data.get('pfm_description'), 'No Description')
+        result['PayloadVersion'] = '1'
         result['PayloadContent'] = [{}]
 
         generate(data['pfm_subkeys'], result['PayloadContent'][0])

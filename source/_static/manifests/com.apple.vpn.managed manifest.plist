@@ -2427,7 +2427,7 @@
 					<key>pfm_macos_min</key>
 					<string>10.13</string>
 					<key>pfm_ios_min</key>
-					<string>10.11</string>
+					<string>11.0</string>
 					<key>pfm_range_list</key>
 					<array>
 						<string>1.0</string>
@@ -2449,7 +2449,7 @@
 					<key>pfm_macos_min</key>
 					<string>10.13</string>
 					<key>pfm_ios_min</key>
-					<string>10.11</string>
+					<string>11.0</string>
 					<key>pfm_range_list</key>
 					<array>
 						<string>1.0</string>
