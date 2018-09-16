@@ -22,3 +22,4 @@ sphinx-autobuild==0.6.0
 sphinx-rtd-theme==0.1.9
 tornado==4.4.2
 watchdog==0.8.3
+pdfminer.six==20170720
