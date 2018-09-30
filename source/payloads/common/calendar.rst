@@ -1,7 +1,12 @@
 .. _payloadtype-com.apple.subscribedcalendar.account:
 
-Calendar Subscription
-=====================
+Calendar Subscription Payload
+=============================
+
+.. figure:: /_static/ProfileManifests/Icons/ManifestsApple/com.apple.subscribedcalendar.account.png
+    :align: right
+    :figwidth: 200px
+
 :download:`Template <../_static/examples/com.apple.subscribedcalendar.account.mobileconfig>`
 
 A calendar subscription payload adds a subscribed calendar to the user’s calendars list.

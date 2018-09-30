@@ -1,7 +1,12 @@
 .. _payloadtype-com.apple.caldav.account:
 
-CalDAV
-======
+CalDAV Payload
+==============
+
+.. figure:: /_static/ProfileManifests/Icons/ManifestsApple/com.apple.caldav.account.png
+    :align: right
+    :figwidth: 200px
+
 :download:`Template <../_static/examples/com.apple.caldav.account.mobileconfig>`
 
 This payload configures a CalDAV account.
@@ -11,21 +16,16 @@ This payload configures a CalDAV account.
 Summary
 -------
 
-.. pfmheader:: /_static/manifests/com.apple.caldav.account manifest.plist
+.. pfmheader:: /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.caldav.account.plist
 
 Keys
 ----
 
-.. pfmkey:: CalDAVAccountDescription /_static/manifests/com.apple.caldav.account manifest.plist
-.. pfmkey:: CalDAVPort /_static/manifests/com.apple.caldav.account manifest.plist
-.. pfmkey:: CalDAVHostName /_static/manifests/com.apple.caldav.account manifest.plist
-.. pfmkey:: CalDAVUseSSL /_static/manifests/com.apple.caldav.account manifest.plist
-.. pfmkey:: CalDAVPrincipalURL /_static/manifests/com.apple.caldav.account manifest.plist
-.. pfmkey:: CalDAVUsername /_static/manifests/com.apple.caldav.account manifest.plist
-.. pfmkey:: CalDAVPassword /_static/manifests/com.apple.caldav.account manifest.plist
-
-Links
------
-
-- `Official Documentation <https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW16>`_.
+.. pfmkey:: CalDAVAccountDescription /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.caldav.account.plist
+.. pfmkey:: CalDAVPort /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.caldav.account.plist
+.. pfmkey:: CalDAVHostName /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.caldav.account.plist
+.. pfmkey:: CalDAVUseSSL /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.caldav.account.plist
+.. pfmkey:: CalDAVPrincipalURL /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.caldav.account.plist
+.. pfmkey:: CalDAVUsername /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.caldav.account.plist
+.. pfmkey:: CalDAVPassword /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.caldav.account.plist
 
