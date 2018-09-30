@@ -6,6 +6,7 @@ cases.
 
 The following is a description of keys added to the manifest format by the community as a working standard.
 
+See Also, erikberglunds extended format: `https://github.com/erikberglund/ProfileManifests/wiki/Manifest-Format`_.
 
 Extended Keys
 -------------
@@ -55,3 +56,22 @@ happen when one payload becomes superseded by another, and installing both resul
 
 There's currently no way to reference other manifests so there might need to be a **pfm_target_domain** key to
 match a domain in another manifest.
+
+pfm_note
+^^^^^^^^
+
+To add a note that requires special attention about the current payload I.E a warning about the payload behaviour.
+
+
+Extended Manifest Format
+------------------------
+
+The following keys are used to extend the manifest format to describe settings and situations not covered by the
+original set of keys.
+
++------------------------+------------------+----------+------+--------------------------------------------------------+
+| Key                    | Type             | Payload  | Key  | Description                                            |
++========================+==================+==========+======+========================================================+
+| pfm_allowed_file_types | Array of Strings | False    | True | File extensions or UTIs allowed when using a file as   |
+|                        |                  |          |      | value for a Data key.                                  |
++------------------------+------------------+----------+------+--------------------------------------------------------+

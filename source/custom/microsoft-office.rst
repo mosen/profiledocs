@@ -1,3 +1,5 @@
+.. _payloadtype-com.microsoft.office:
+
 Microsoft Office 2016
 =====================
 
@@ -6,8 +8,8 @@ These are custom settings and must be placed in a ``com.apple.ManagedClient.pref
 Summary
 -------
 
-.. pfm:: /_static/custom/com.microsoft.office.plist
-    :key: PayloadContent:com.microsoft.office:Forced:ForcedItem:mcx_preference_settings
+.. pfm:: /_static/ProfileManifests/Manifests/ManagedPreferencesApplications/com.microsoft.office.plist
+
 
 
 Links

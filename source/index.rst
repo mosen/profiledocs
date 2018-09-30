@@ -8,8 +8,6 @@ Welcome to MacAdmins Profile Reference's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   contributing.rst
-
    payloads/common
    payloads/mac
    payloads/ios
@@ -28,6 +26,8 @@ Welcome to MacAdmins Profile Reference's documentation!
    macos/index.rst
 
    pdp/index.rst
+
+   contributing.rst
 
    glossary.rst
 

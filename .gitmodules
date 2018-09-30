@@ -1,0 +1,3 @@
+[submodule "source/_static/ProfileManifests"]
+	path = source/_static/ProfileManifests
+	url = https://github.com/erikberglund/ProfileManifests.git

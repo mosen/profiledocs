@@ -1,3 +1,5 @@
+.. _payloadtype-com.microsoft.OneDrive:
+
 Microsoft OneDrive
 ==================
 
@@ -6,8 +8,9 @@ These are custom settings and must be placed in a ``com.apple.ManagedClient.pref
 Summary
 -------
 
-.. pfm:: /_static/custom/com.microsoft.OneDrive.plist
-    :key: PayloadContent:com.microsoft.OneDrive:Forced:ForcedItem:mcx_preference_settings
+.. pfm:: /_static/ProfileManifests/Manifests/ManagedPreferencesApplications/com.microsoft.OneDrive.plist
+
+
 
 
 Links
