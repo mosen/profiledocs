@@ -1,10 +1,12 @@
 .. _payloadtype-com.apple.app.lock:
 
-App Lock
-========
-:download:`Template <../_static/examples/com.apple.app.lock.mobileconfig>`
+App Lock Payload
+================
 
-Only one of this payload type can be installed at any time. This payload can be installed only on a Supervised device.
+.. figure:: /_static/ProfileManifests/Icons/ManifestsApple/com.apple.app.lock.png
+   :align: right
+   :figwidth: 200px
+
 By installing an app lock payload, the device is locked to a single application until the payload is removed.
 The home button is disabled, and the device returns to the specified application automatically upon wake or reboot.
 
@@ -13,38 +15,34 @@ The home button is disabled, and the device returns to the specified application
    During that time you should restrict the visible apps as much as possible,
    except for Settings and Phone and any other apps that cannot be blacklisted.
 
+:download:`Template <../_static/examples/com.apple.app.lock.mobileconfig>`
+
 .. contents::
 
 Summary
 -------
 
-.. pfmheader:: /_static/manifests/com.apple.applock manifest.plist
+.. pfmheader:: /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.app.lock.plist
 
 Keys
 ----
 
-.. pfmkey:: App /_static/manifests/ac2/com.apple.applock manifest.plist
+.. pfmkey:: App /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.app.lock.plist
 
 App Keys
 ^^^^^^^^
 
-.. pfm:: /_static/manifests/ac2/com.apple.applock manifest.plist
+.. pfm:: /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.app.lock.plist
    :key: App
 
 Options
 ^^^^^^^
 
-.. pfm:: /_static/manifests/ac2/com.apple.applock manifest.plist
+.. pfm:: /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.app.lock.plist
    :key: App:Options
 
 User Enabled Options
 ^^^^^^^^^^^^^^^^^^^^
 
-.. pfm:: /_static/manifests/ac2/com.apple.applock manifest.plist
+.. pfm:: /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.app.lock.plist
    :key: App:UserEnabledOptions
-
-Links
------
-
-- `Official Documentation <https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW35>`_.
-

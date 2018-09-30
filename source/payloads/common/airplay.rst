@@ -2,25 +2,23 @@
 
 AirPlay
 =======
+
+.. figure:: /_static/ProfileManifests/Icons/ManifestsApple/com.apple.airplay.png
+    :align: right
+    :figwidth: 200px
+
 :download:`Template <../_static/examples/com.apple.airplay.mobileconfig>`
 
-Whitelist AirPlay destinations
+This payload is used to whitelist AirPlay destinations, and to provide passwords for AirPlay destinations.
+
+.. pfmheader:: /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.airplay.plist
 
 .. contents::
-
-Summary
--------
-
-.. pfmheader:: /_static/manifests/com.apple.airplay manifest.plist
 
 Keys
 ----
 
-.. pfmkey:: Whitelist /_static/manifests/com.apple.airplay manifest.plist
+.. pfmkey:: Whitelist /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.airplay.plist
 
-.. pfmkey:: Passwords /_static/manifests/com.apple.airplay manifest.plist
+.. pfmkey:: Passwords /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.airplay.plist
 
-Links
------
-
-- `Official Documentation <https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW38>`_.

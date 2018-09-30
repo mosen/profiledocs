@@ -1,9 +1,11 @@
-*-
--
 .. _payloadtype-com.apple.asam:
 
 Autonomous Single App Mode
 ==========================
+
+.. figure:: /_static/ProfileManifests/Icons/ManifestsApple/com.apple.asam.png
+    :align: right
+    :figwidth: 200px
 
 :download:`Template <../_static/examples/com.apple.asam.mobileconfig>`
 
@@ -16,14 +18,14 @@ It must be installed as a device profile. Only one payload of this type can be i
 Summary
 -------
 
-.. pfmheader:: /_static/manifests/com.apple.asam manifest.plist
+.. pfmheader:: /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.asam.plist
 
 Keys
 ----
 
-.. pfmkey:: AllowedApplications /_static/manifests/com.apple.asam manifest.plist
+.. pfmkey:: AllowedApplications /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.asam.plist
 
 Each item contains the following keys
 
-.. pfmkey:: AllowedApplications:AllowedApplicationsItem:BundleIdentifier /_static/manifests/com.apple.asam manifest.plist
-.. pfmkey:: AllowedApplications:AllowedApplicationsItem:TeamIdentifier /_static/manifests/com.apple.asam manifest.plist
+.. pfmkey:: AllowedApplications:AllowedApplicationsItem:BundleIdentifier /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.asam.plist
+.. pfmkey:: AllowedApplications:AllowedApplicationsItem:TeamIdentifier /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.asam.plist

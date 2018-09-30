@@ -2,28 +2,31 @@
 
 AirPrint
 ========
-:download:`Template <../_static/examples/com.apple.airprint.mobileconfig>`
 
-The AirPrint payload adds AirPrint printers to the user’s AirPrint printer list. This makes it easier to support environments where the printers and the devices are on different subnets.
+.. figure:: /_static/ProfileManifests/Icons/ManifestsApple/com.apple.airprint.png
+    :align: right
+    :figwidth: 200px
+
+The AirPrint payload adds AirPrint printers to the user’s AirPrint printer list.
+This makes it easier to support environments where the printers and the devices are on different subnets.
+
+:download:`Template <../_static/examples/com.apple.airprint.mobileconfig>`
 
 .. contents::
 
 Summary
 -------
 
-.. pfmheader::  /_static/manifests/com.apple.airprint manifest.plist
+.. pfmheader:: /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.airprint.plist
 
 Keys
 ----
 
-.. pfmkey:: AirPrint /_static/manifests/com.apple.airprint manifest.plist
+.. pfmkey:: AirPrint /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.airprint.plist
 
 AirPrint items are in the following format:
 
-.. pfm:: /_static/manifests/com.apple.airprint manifest.plist
-    :key: AirPrint:Identifier
+.. pfm:: /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.airprint.plist
+    :key: AirPrint
 
-Links
------
-
-- `Official Documentation <https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW39>`_.
+.. pfmkey:: AirPrint:Printer:IPAddress /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.airprint.plist
