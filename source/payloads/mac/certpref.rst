@@ -1,7 +1,12 @@
 .. _payloadtype-com.apple.security.certificatepreference:
 
-Certificate Preference
-======================
+Certificate Preference Payload
+==============================
+
+.. figure:: /_static/ProfileManifests/Icons/ManifestsApple/com.apple.security.pkcs1.png
+    :align: right
+    :figwidth: 200px
+
 :download:`Template <../_static/examples/com.apple.security.certificatepreference.mobileconfig>`
 
 A Certificate Preference payload lets you identify a Certificate Preference item in the user's keychain that references
@@ -26,7 +31,3 @@ Keys
 .. pfmkey:: Name /_static/manifests/com.apple.security.certificatepreference manifest.plist
 .. pfmkey:: PayloadCertificateUUID /_static/manifests/com.apple.security.certificatepreference manifest.plist
 
-Links
------
-
-- `Official Documentation <https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW143>`_.

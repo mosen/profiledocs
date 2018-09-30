@@ -1,7 +1,12 @@
 .. _payloadtype-com.apple.firstactiveethernet.managed:
 
-Ethernet 802.1x
-===============
+802.1x Ethernet Payload
+=======================
+
+.. figure:: /_static/ProfileManifests/Icons/ManifestsApple/com.apple.firstactiveethernet.managed.png
+    :align: right
+    :figwidth: 200px
+
 :download:`Template <../_static/examples/com.apple.firstactiveethernet.managed.mobileconfig>`
 
 The 802.1x Ethernet payload is designated by specifying one of the following as the PayloadType value:
@@ -30,3 +35,5 @@ Summary
 -------
 
 .. pfmheader:: /_static/manifests/com.apple.firstactiveethernet.managed manifest.plist
+
+.. pfm:: /_static/manifests/com.apple.firstactiveethernet.managed manifest.plist

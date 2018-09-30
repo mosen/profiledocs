@@ -1,7 +1,12 @@
 .. _payloadtype-com.apple.cellular:
 
-Cellular
-========
+Cellular Payload
+================
+
+.. figure:: /_static/ProfileManifests/Icons/ManifestsApple/com.apple.cellular.png
+   :align: right
+   :figwidth: 200px
+
 :download:`Template <../_static/examples/com.apple.cellular.mobileconfig>`
 
 A cellular payload configures cellular network settings on the device.
@@ -22,18 +27,16 @@ This payload replaces the com.apple.managedCarrier payload, which is supported, 
 Summary
 -------
 
-.. pfmheader:: /_static/manifests/com.apple.cellular manifest.plist
+.. pfmheader:: /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.cellular.plist
 
 Keys
 ----
 
-.. pfmkey:: APNs /_static/manifests/com.apple.cellular manifest.plist
-.. pfmkey:: AttachAPN /_static/manifests/com.apple.cellular manifest.plist
+.. pfmkey:: APNs /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.cellular.plist
+.. pfmkey:: AttachAPN /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.cellular.plist
 
-.. pfm:: /_static/manifests/com.apple.cellular manifest.plist
+AttachAPN Keys
+^^^^^^^^^^^^^^
+
+.. pfm:: /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.cellular.plist
    :key: AttachAPN
-
-Links
------
-
-- `Official Documentation <https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW48>`_.

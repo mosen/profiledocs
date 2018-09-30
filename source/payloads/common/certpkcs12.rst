@@ -2,6 +2,11 @@
 
 Certificate (PKCS#12)
 =====================
+
+.. figure:: /_static/ProfileManifests/Icons/ManifestsApple/com.apple.security.pkcs12.png
+    :align: right
+    :figwidth: 200px
+
 :download:`Template <../_static/examples/com.apple.security.pkcs12.mobileconfig>`
 
 Password-protected identity certificate (.p12). Only one certificate may be included.

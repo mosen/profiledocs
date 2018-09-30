@@ -17,18 +17,14 @@ The calendar subscription payload is not supported in macOS.
 Summary
 -------
 
-.. pfmheader:: /_static/manifests/com.apple.subscribedcalendar.account manifest.plist
+.. pfmheader:: /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.subscribedcalendar.account.plist
 
 Keys
 ----
 
-.. pfmkey:: SubCalAccountDescription /_static/manifests/com.apple.subscribedcalendar.account manifest.plist
-.. pfmkey:: SubCalAccountHostName /_static/manifests/com.apple.subscribedcalendar.account manifest.plist
-.. pfmkey:: SubCalAccountPassword /_static/manifests/com.apple.subscribedcalendar.account manifest.plist
-.. pfmkey:: SubCalAccountUsername /_static/manifests/com.apple.subscribedcalendar.account manifest.plist
-.. pfmkey:: SubCalAccountUseSSL /_static/manifests/com.apple.subscribedcalendar.account manifest.plist
+.. pfmkey:: SubCalAccountDescription /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.subscribedcalendar.account.plist
+.. pfmkey:: SubCalAccountHostName /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.subscribedcalendar.account.plist
+.. pfmkey:: SubCalAccountPassword /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.subscribedcalendar.account.plist
+.. pfmkey:: SubCalAccountUsername /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.subscribedcalendar.account.plist
+.. pfmkey:: SubCalAccountUseSSL /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.subscribedcalendar.account.plist
 
-Links
------
-
-- `Official Documentation <https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW17>`_.

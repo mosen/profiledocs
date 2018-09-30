@@ -3,6 +3,10 @@
 Certificate (Root CA)
 =====================
 
+.. figure:: /_static/ProfileManifests/Icons/ManifestsApple/com.apple.security.pkcs1.png
+    :align: right
+    :figwidth: 200px
+
 Alias for :ref:`payloadtype-com.apple.security.pkcs1`.
 
 .. contents::

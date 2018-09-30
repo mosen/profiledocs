@@ -2,6 +2,11 @@
 
 Firewall
 ========
+
+.. figure:: /_static/ProfileManifests/Icons/ManifestsApple/com.apple.security.firewall.png
+    :align: right
+    :figwidth: 200px
+
 :download:`Template <../_static/examples/com.apple.security.firewall.mobileconfig>`
 
 Available in macOS 10.12 and later. A Firewall payload manages the Application Firewall settings accessible in the Security Preferences pane. Note these restrictions:
@@ -33,8 +38,3 @@ Each item in the applications list contains these keys:
 .. pfmkey:: Applications:ApplicationItem:BundleID /_static/manifests/com.apple.security.firewall manifest.plist
 .. pfmkey:: Applications:ApplicationItem:Allowed /_static/manifests/com.apple.security.firewall manifest.plist
 
-
-Links
------
-
-- `Official Documentation <https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW443>`_.

@@ -1,14 +1,19 @@
 .. _payloadtype-com.apple.education:
 
-Education Payload
-=================
-:download:`Template <../_static/examples/com.apple.education.mobileconfig>`
+Education Configuration Payload
+===============================
+
+.. figure:: /_static/ProfileManifests/Icons/ManifestsApple/com.apple.education.png
+    :align: right
+    :figwidth: 200px
 
 The Education Configuration Payload defines the users, groups, and departments within an educational organization.
 
 - All identities must be configured as both SSL clients and servers.
 - Leader certificates must have the common name prefix "leader" (case insensitive).
 - Member certificates must have the common name prefix "member" (case insensitive).
+
+:download:`Template <../_static/examples/com.apple.education.mobileconfig>`
 
 .. contents::
 
@@ -54,9 +59,3 @@ User Items
 
 .. pfm:: /_static/manifests/com.apple.education manifest.plist
     :key: DeviceGroups:DeviceGroupItem
-
-
-Links
------
-
-- `Official Documentation <https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW601>`_.

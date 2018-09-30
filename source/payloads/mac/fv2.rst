@@ -2,7 +2,13 @@
 
 FileVault 2
 ===========
+
+.. figure:: /_static/ProfileManifests/Icons/ManifestsApple/com.apple.MCX.FileVault2.png
+    :align: right
+    :figwidth: 200px
+
 :download:`Template <../_static/examples/com.apple.MCX.FileVault2.mobileconfig>`
+
 
 You can use FileVault 2 to perform full XTS-AES 128 encryption on the contents of a volume.
 Removal of the FileVault payload does not disable FileVault.
@@ -36,10 +42,3 @@ Keys
 .. pfmkey:: Password /_static/manifests/com.apple.MCX.FileVault2 manifest.plist
 .. pfmkey:: UseKeychain /_static/manifests/com.apple.MCX.FileVault2 manifest.plist
 .. pfmkey:: DeferForceAtUserLoginMaxBypassAttempts /_static/manifests/com.apple.MCX.FileVault2 manifest.plist
-
-Links
------
-
-- `Official Documentation <https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW842>`_.
-
-

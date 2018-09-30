@@ -1,7 +1,12 @@
 .. _payloadtype-com.apple.google-oauth:
 
-Google Account
-==============
+Google Account Payload
+======================
+
+.. figure:: /_static/ProfileManifests/Icons/ManifestsApple/com.apple.google-oauth.png
+    :align: right
+    :figwidth: 200px
+
 :download:`Template <../_static/examples/com.apple.google-oauth.mobileconfig>`
 
 You can install multiple Google payloads.
@@ -17,17 +22,12 @@ payload has been successfully installed.
 Summary
 -------
 
-.. pfmheader:: /_static/manifests/com.apple.google-oauth manifest.plist
+.. pfmheader:: /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.google-oauth.plist
 
 Keys
 ----
 
-.. pfmkey:: AccountDescription /_static/manifests/com.apple.google-oauth manifest.plist
-.. pfmkey:: AccountName /_static/manifests/com.apple.google-oauth manifest.plist
-.. pfmkey:: EmailAddress /_static/manifests/com.apple.google-oauth manifest.plist
-
-Links
------
-
-- `Official Documentation <https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW610>`_.
-
+.. pfmkey:: AccountDescription /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.google-oauth.plist
+.. pfmkey:: AccountName /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.google-oauth.plist
+.. pfmkey:: EmailAddress /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.google-oauth.plist
+.. pfmkey:: CommunicationServiceRules /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.google-oauth.plist

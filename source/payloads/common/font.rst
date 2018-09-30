@@ -2,12 +2,17 @@
 
 Font
 ====
+
+.. figure:: /_static/ProfileManifests/Icons/ManifestsApple/com.apple.font.png
+    :align: right
+    :figwidth: 200px
+
 :download:`Template <../_static/examples/com.apple.font.mobileconfig>`
 
 A Font payload lets you add an additional font to an iOS device.
 
-Each payload must contain exactly one font file in TrueType (.ttf) or OpenType (.otf) format.
-Collection formats (.ttc or .otc) are not supported.
+Each payload must contain exactly one font file in TrueType (**.ttf**) or OpenType (**.otf**) format.
+Collection formats (**.ttc** or **.otc**) are not supported.
 
 .. WARNING:: Fonts are identified by their embedded PostScript names.
     Two fonts with the same PostScript name are considered to be the same font even if their contents differ.
@@ -25,8 +30,3 @@ Keys
 
 .. pfmkey:: Name /_static/manifests/com.apple.font manifest.plist
 .. pfmkey:: Font /_static/manifests/com.apple.font manifest.plist
-
-Links
------
-
-- `Official Documentation <https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW43>`_.

@@ -2,6 +2,11 @@
 
 Loginwindow
 ===========
+
+.. figure:: /_static/ProfileManifests/Icons/ManifestsApple/com.apple.loginwindow.png
+    :align: right
+    :figwidth: 200px
+
 :download:`Template <../_static/examples/com.apple.loginwindow.mobileconfig>`
 
 The com.apple.loginwindow payload, which is actually a different piece of code to the loginwindow payload, controls

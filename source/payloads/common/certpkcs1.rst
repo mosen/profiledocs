@@ -2,6 +2,11 @@
 
 Certificate (PKCS#1)
 ====================
+
+.. figure:: /_static/ProfileManifests/Icons/ManifestsApple/com.apple.security.pkcs1.png
+    :align: right
+    :figwidth: 200px
+
 :download:`Template <../_static/examples/com.apple.security.pkcs1.mobileconfig>`
 
 DER-encoded certificate (.cer) without private key. May contain root certificates.
