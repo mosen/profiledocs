@@ -33,13 +33,13 @@ Keys
 .. pfmkey:: largesize /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.dock.plist
 .. pfmkey:: magsize-immutable /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.dock.plist
 .. pfmkey:: show-process-indicators /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.dock.plist
+.. pfmkey:: show-recents /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.dock.plist
 .. pfmkey:: launchanim /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.dock.plist
 .. pfmkey:: launchanim-immutable /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.dock.plist
 .. pfmkey:: mineffect /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.dock.plist
 .. pfmkey:: mineffect-immutable /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.dock.plist
 .. pfmkey:: tilesize /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.dock.plist
 .. pfmkey:: size-immutable /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.dock.plist
-.. pfmkey:: show-recents /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.dock.plist
 
 MCXDockSpecialFolders can contain any of the valid mcxfolderflag values
 .. pfmkey:: MCXDockSpecialFolders:mcxfolderflag /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.dock.plist
