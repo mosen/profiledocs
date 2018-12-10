@@ -10,7 +10,7 @@ Dock
 :download:`Template <../_static/examples/com.apple.dock.mobileconfig>`
 
 The Dock payload is supported on the user channel and, except for AllowDockFixupOverride, on all version of macOS.
-The key ``AllowDockFixupOverride`` is supported on macOS 10.12 and later.
+The key ``AllowDockFixupOverride`` is supported on macOS 10.12 and later. The key ``show-recents`` is supported on macOS 10.14 and later.
 
 .. contents::
 
@@ -39,6 +39,7 @@ Keys
 .. pfmkey:: mineffect-immutable /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.dock.plist
 .. pfmkey:: tilesize /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.dock.plist
 .. pfmkey:: size-immutable /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.dock.plist
+.. pfmkey:: show-recents /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.dock.plist
 
 MCXDockSpecialFolders can contain any of the valid mcxfolderflag values
 .. pfmkey:: MCXDockSpecialFolders:mcxfolderflag /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.dock.plist
