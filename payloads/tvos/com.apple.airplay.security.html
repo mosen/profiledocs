@@ -86,7 +86,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../ios.html">iOS Payloads</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../tvos.html">tvOS Payloads</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">AirPlay Security</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#keys">Keys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#keys">Keys</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.airplay.security-SecurityType-auto">SecurityType</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.airplay.security-Password-auto">Password</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="conference.html">Conference Room Display Payload</a></li>
@@ -172,12 +176,112 @@
   <div class="section" id="airplay-security">
 <span id="payloadtype-com-apple-airplay-security"></span><h1>AirPlay Security<a class="headerlink" href="#airplay-security" title="Permalink to this headline">¶</a></h1>
 <div class="figure align-right" style="width: 200px">
-<img alt="_static/ProfileManifests/Icons/ManifestsApple/com.apple.airplay.security.png" src="_static/ProfileManifests/Icons/ManifestsApple/com.apple.airplay.security.png" />
+<img alt="../../_images/com.apple.airplay.security.png" src="../../_images/com.apple.airplay.security.png" />
 </div>
 <p>The AirPlay Security payload locks Apple TV to a single security type.</p>
 <p><code class="xref download docutils literal notranslate"><span class="pre">Template</span></code></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">PayloadType:</th><td class="field-body">com.apple.airplay.security</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Supervised Only:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">N/A</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">macOS:</th><td class="field-body">N/A</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">macOS Deprecated:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">N/A</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">iOS:</th><td class="field-body">N/A</td>
+</tr>
+<tr class="field-even field"><th class="field-name">iOS Deprecated:</th><td class="field-body">N/A</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Highlander:</th><td class="field-body">True</td>
+</tr>
+</tbody>
+</table>
 <div class="section" id="keys">
 <h2>Keys<a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="com.apple.airplay.security-SecurityType-auto">
+<h3>SecurityType<a class="headerlink" href="#com.apple.airplay.security-SecurityType-auto" title="Permalink to this headline">¶</a></h3>
+<p>Security</p>
+<p>Security requirement for for devices that connect to Apple TV using airplay</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>always</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<h3>Valid Choices<a class="headerlink" href="#com.apple.airplay.security-SecurityType-auto" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>PASSCODE_ONCE</li>
+<li>PASSCODE_ALWAYS</li>
+<li>PASSWORD</li>
+</ul>
+</div>
+<div class="section" id="com.apple.airplay.security-Password-auto">
+<h3>Password<a class="headerlink" href="#com.apple.airplay.security-Password-auto" title="Permalink to this headline">¶</a></h3>
+<p>Password</p>
+<p>The Airplay Password</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 </div>
 

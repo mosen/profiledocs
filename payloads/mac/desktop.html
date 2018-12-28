@@ -96,7 +96,11 @@
 <li class="toctree-l2"><a class="reference internal" href="datetime.html">Date and Time</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Desktop Payload</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#keys">Keys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#keys">Keys</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.desktop-locked-auto">locked</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.desktop-override-picture-path-auto">override-picture-path</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="dictionary.html">Dictionary (Parental Controls)</a></li>
@@ -125,6 +129,7 @@
 <li class="toctree-l2"><a class="reference internal" href="parental-contentfilter.html">Parental Controls - Content Filter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parental-timelimits.html">Parental Controls - Time Limits</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parentalcontrols.html">Application Access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pppc.html">Privacy Preferences Policy Control Payload</a></li>
 <li class="toctree-l2"><a class="reference internal" href="printing.html">Printing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="screensaver.html">Screen Saver</a></li>
 <li class="toctree-l2"><a class="reference internal" href="securityui.html">UI Security Preferences</a></li>
@@ -140,7 +145,6 @@
 <li class="toctree-l2"><a class="reference internal" href="systemconfiguration.html">SystemConfiguration (Proxies)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="systemmigration.html">System Migration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="systempolicy.html">System Policy (Gatekeeper)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tcc.html">Privacy Preferences Policy Control Payload</a></li>
 <li class="toctree-l2"><a class="reference internal" href="timemachine.html">Time Machine</a></li>
 <li class="toctree-l2"><a class="reference internal" href="touchid.html">Touch ID</a></li>
 <li class="toctree-l2"><a class="reference internal" href="trackpad.html">TrackPad Settings</a></li>
@@ -230,7 +234,7 @@
   <div class="section" id="desktop-payload">
 <span id="payloadtype-com-apple-desktop"></span><h1><a class="toc-backref" href="#id1">Desktop Payload</a><a class="headerlink" href="#desktop-payload" title="Permalink to this headline">¶</a></h1>
 <div class="figure align-right" style="width: 200px">
-<img alt="_static/ProfileManifests/Icons/ManifestsApple/com.apple.desktop.png" src="_static/ProfileManifests/Icons/ManifestsApple/com.apple.desktop.png" />
+<img alt="../../_images/com.apple.desktop.png" src="../../_images/com.apple.desktop.png" />
 </div>
 <p><code class="xref download docutils literal notranslate"><span class="pre">Template</span></code></p>
 <p>This payload sets up macOS Desktop settings and restrictions. It is supported on the user channel and on macOS 10.10 and later.</p>
@@ -244,16 +248,114 @@ still be locked.</p>
 <ul class="simple">
 <li><a class="reference internal" href="#desktop-payload" id="id1">Desktop Payload</a><ul>
 <li><a class="reference internal" href="#summary" id="id2">Summary</a></li>
-<li><a class="reference internal" href="#keys" id="id3">Keys</a></li>
+<li><a class="reference internal" href="#keys" id="id3">Keys</a><ul>
+<li><a class="reference internal" href="#com.apple.desktop-locked-auto" id="id4">locked</a></li>
+<li><a class="reference internal" href="#com.apple.desktop-override-picture-path-auto" id="id5">override-picture-path</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="section" id="summary">
 <h2><a class="toc-backref" href="#id2">Summary</a><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">PayloadType:</th><td class="field-body">com.apple.desktop</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Supervised Only:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">N/A</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">macOS:</th><td class="field-body">10.10</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">macOS Deprecated:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">N/A</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">iOS:</th><td class="field-body">N/A</td>
+</tr>
+<tr class="field-even field"><th class="field-name">iOS Deprecated:</th><td class="field-body">N/A</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Highlander:</th><td class="field-body">True</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="section" id="keys">
 <h2><a class="toc-backref" href="#id3">Keys</a><a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="com.apple.desktop-locked-auto">
+<h3><a class="toc-backref" href="#id4">locked</a><a class="headerlink" href="#com.apple.desktop-locked-auto" title="Permalink to this headline">¶</a></h3>
+<p>Lock desktop picture</p>
+<p>Prevents user from modifying the desktop picture selection.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>False</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.desktop-override-picture-path-auto">
+<h3><a class="toc-backref" href="#id5">override-picture-path</a><a class="headerlink" href="#com.apple.desktop-override-picture-path-auto" title="Permalink to this headline">¶</a></h3>
+<p>Desktop picture path</p>
+<p>The path of the file to use as the desktop picture.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 </div>
 

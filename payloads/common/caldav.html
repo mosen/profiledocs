@@ -86,7 +86,16 @@
 <li class="toctree-l2"><a class="reference internal" href="airprint.html">AirPrint</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">CalDAV Payload</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#keys">Keys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#keys">Keys</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.caldav.account-CalDAVAccountDescription-auto">CalDAVAccountDescription</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.caldav.account-CalDAVPort-auto">CalDAVPort</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.caldav.account-CalDAVHostName-auto">CalDAVHostName</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.caldav.account-CalDAVUseSSL-auto">CalDAVUseSSL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.caldav.account-CalDAVPrincipalURL-auto">CalDAVPrincipalURL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.caldav.account-CalDAVUsername-auto">CalDAVUsername</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.caldav.account-CalDAVPassword-auto">CalDAVPassword</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="calendar.html">Calendar Subscription Payload</a></li>
@@ -195,7 +204,7 @@
   <div class="section" id="caldav-payload">
 <span id="payloadtype-com-apple-caldav-account"></span><h1><a class="toc-backref" href="#id1">CalDAV Payload</a><a class="headerlink" href="#caldav-payload" title="Permalink to this headline">¶</a></h1>
 <div class="figure align-right" style="width: 200px">
-<img alt="_static/ProfileManifests/Icons/ManifestsApple/com.apple.caldav.account.png" src="_static/ProfileManifests/Icons/ManifestsApple/com.apple.caldav.account.png" />
+<img alt="../../_images/com.apple.caldav.account.png" src="../../_images/com.apple.caldav.account.png" />
 </div>
 <p><code class="xref download docutils literal notranslate"><span class="pre">Template</span></code></p>
 <p>This payload configures a CalDAV account.</p>
@@ -204,16 +213,299 @@
 <ul class="simple">
 <li><a class="reference internal" href="#caldav-payload" id="id1">CalDAV Payload</a><ul>
 <li><a class="reference internal" href="#summary" id="id2">Summary</a></li>
-<li><a class="reference internal" href="#keys" id="id3">Keys</a></li>
+<li><a class="reference internal" href="#keys" id="id3">Keys</a><ul>
+<li><a class="reference internal" href="#com.apple.caldav.account-CalDAVAccountDescription-auto" id="id4">CalDAVAccountDescription</a></li>
+<li><a class="reference internal" href="#com.apple.caldav.account-CalDAVPort-auto" id="id5">CalDAVPort</a></li>
+<li><a class="reference internal" href="#com.apple.caldav.account-CalDAVHostName-auto" id="id6">CalDAVHostName</a></li>
+<li><a class="reference internal" href="#com.apple.caldav.account-CalDAVUseSSL-auto" id="id7">CalDAVUseSSL</a></li>
+<li><a class="reference internal" href="#com.apple.caldav.account-CalDAVPrincipalURL-auto" id="id8">CalDAVPrincipalURL</a></li>
+<li><a class="reference internal" href="#com.apple.caldav.account-CalDAVUsername-auto" id="id9">CalDAVUsername</a></li>
+<li><a class="reference internal" href="#com.apple.caldav.account-CalDAVPassword-auto" id="id10">CalDAVPassword</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="section" id="summary">
 <h2><a class="toc-backref" href="#id2">Summary</a><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">PayloadType:</th><td class="field-body">com.apple.caldav.account</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Supervised Only:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">N/A</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">macOS:</th><td class="field-body">N/A</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">macOS Deprecated:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">N/A</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">iOS:</th><td class="field-body">N/A</td>
+</tr>
+<tr class="field-even field"><th class="field-name">iOS Deprecated:</th><td class="field-body">N/A</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Highlander:</th><td class="field-body">False</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="section" id="keys">
 <h2><a class="toc-backref" href="#id3">Keys</a><a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="com.apple.caldav.account-CalDAVAccountDescription-auto">
+<h3><a class="toc-backref" href="#id4">CalDAVAccountDescription</a><a class="headerlink" href="#com.apple.caldav.account-CalDAVAccountDescription-auto" title="Permalink to this headline">¶</a></h3>
+<p>Account Description</p>
+<p>The display name of the account (e.g. “Company Calendar Account”)</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>My Calendar Account</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.caldav.account-CalDAVPort-auto">
+<h3><a class="toc-backref" href="#id5">CalDAVPort</a><a class="headerlink" href="#com.apple.caldav.account-CalDAVPort-auto" title="Permalink to this headline">¶</a></h3>
+<p>Port Number</p>
+<p>The port on which to connect to the CalDAV server.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>integer</td>
+<td>443</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.caldav.account-CalDAVHostName-auto">
+<h3><a class="toc-backref" href="#id6">CalDAVHostName</a><a class="headerlink" href="#com.apple.caldav.account-CalDAVHostName-auto" title="Permalink to this headline">¶</a></h3>
+<p>Account Hostname</p>
+<p>The IP address or fully qualified domain name (FQDN) of the CalDAV server.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>always</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.caldav.account-CalDAVUseSSL-auto">
+<h3><a class="toc-backref" href="#id7">CalDAVUseSSL</a><a class="headerlink" href="#com.apple.caldav.account-CalDAVUseSSL-auto" title="Permalink to this headline">¶</a></h3>
+<p>Use SSL</p>
+<p>Enable Secure Socket Layer communication with CalDAV server</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.caldav.account-CalDAVPrincipalURL-auto">
+<h3><a class="toc-backref" href="#id8">CalDAVPrincipalURL</a><a class="headerlink" href="#com.apple.caldav.account-CalDAVPrincipalURL-auto" title="Permalink to this headline">¶</a></h3>
+<p>Principal URL</p>
+<p>The base URL to the user’s calendar. In macOS this URL is required if the user doesn’t provide a password, because auto-discovery of the service will fail and the account won’t be created.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.caldav.account-CalDAVUsername-auto">
+<h3><a class="toc-backref" href="#id9">CalDAVUsername</a><a class="headerlink" href="#com.apple.caldav.account-CalDAVUsername-auto" title="Permalink to this headline">¶</a></h3>
+<p>Account Username</p>
+<p>The user name for the CalDAV account.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>push</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.caldav.account-CalDAVPassword-auto">
+<h3><a class="toc-backref" href="#id10">CalDAVPassword</a><a class="headerlink" href="#com.apple.caldav.account-CalDAVPassword-auto" title="Permalink to this headline">¶</a></h3>
+<p>Account Password</p>
+<p>The CalDAV password</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 </div>
 

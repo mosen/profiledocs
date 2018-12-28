@@ -187,6 +187,97 @@
 <p>These are custom settings and must be placed in a <code class="docutils literal notranslate"><span class="pre">com.apple.ManagedClient.preferences</span></code> payload.</p>
 <div class="section" id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="43%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Title</th>
+<th class="head">Description</th>
+<th class="head">Required</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>DisablePersonalSync</td>
+<td>boolean</td>
+<td>Disable personal accounts</td>
+<td>Prevents users from adding or syncing personal accounts.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>Tenants</td>
+<td>dictionary</td>
+<td>n/a</td>
+<td>OneDrive folder default location.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>AutomaticUploadBandwidthPercentage</td>
+<td>integer</td>
+<td>Automatic upload bandwidth percentage</td>
+<td>Percentage of local upload bandwidth that the sync client can use.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>UploadBandwidthLimited</td>
+<td>integer</td>
+<td>Maximum upload throughput</td>
+<td>Upload throughput in KB/sec that the sync client can use.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>DownloadBandwidthLimited</td>
+<td>integer</td>
+<td>Maximum download throughput</td>
+<td>Download throughput in KB/sec that the sync client can use.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>HideDockIcon</td>
+<td>boolean</td>
+<td>Hide Dock Icon</td>
+<td>Hides the OneDrive dock icon even when the application is running.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>OpenAtLogin</td>
+<td>boolean</td>
+<td>Open at login</td>
+<td>Automatically start OneDrive when the user logs in.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>SharePointOnPremFrontDoorUrl</td>
+<td>string</td>
+<td>SharePoint Server Front Door URL</td>
+<td>The URL of the on-premises SharePoint Server.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>SharePointOnPremTenantName</td>
+<td>string</td>
+<td>SharePoint Server Tenant Name</td>
+<td>The name that will be used when creating a folder to sync the on-premises SharePoint Server files.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>SharePointOnPremPrioritzationPolicy</td>
+<td>integer</td>
+<td>SharePoint OnPrem Prioritization</td>
+<td>Determines whether or not the client should set up sync for SharePoint Server or SharePoint Online first during the first-run scenario.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>DefaultToBusinessFRE</td>
+<td>boolean</td>
+<td>n/a</td>
+<td>Default to OneDrive Business</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>EnableAddAccounts</td>
+<td>boolean</td>
+<td>n/a</td>
+<td>Allow users to add accounts to OneDrive</td>
+<td>n/a</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="section" id="links">
 <h2>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>

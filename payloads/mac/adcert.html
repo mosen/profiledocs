@@ -86,7 +86,21 @@
 <li class="toctree-l2"><a class="reference internal" href="accessibility.html"><span class="macos">Accessibility</span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="activedirectory.html">Active Directory</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Active Directory Certificate</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#keys">Keys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#keys">Keys</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.ADCertificate.managed-Description-auto">Description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.ADCertificate.managed-CertServer-auto">CertServer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.ADCertificate.managed-CertTemplate-auto">CertTemplate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.ADCertificate.managed-CertificateAuthority-auto">CertificateAuthority</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.ADCertificate.managed-CertificateAcquisitionMechanism-auto">CertificateAcquisitionMechanism</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.ADCertificate.managed-CertificateRenewalTimeInterval-auto">CertificateRenewalTimeInterval</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.ADCertificate.managed-Keysize-auto">Keysize</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.ADCertificate.managed-UserName-auto">UserName</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.ADCertificate.managed-Password-auto">Password</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.ADCertificate.managed-PromptForCredentials-auto">PromptForCredentials</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.ADCertificate.managed-AllowAllAppsAccess-auto">AllowAllAppsAccess</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.ADCertificate.managed-EnableAutoRenewal-auto">EnableAutoRenewal</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#links">Links</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#uninstall-behaviour">Uninstall Behaviour</a></li>
@@ -127,6 +141,7 @@
 <li class="toctree-l2"><a class="reference internal" href="parental-contentfilter.html">Parental Controls - Content Filter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parental-timelimits.html">Parental Controls - Time Limits</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parentalcontrols.html">Application Access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pppc.html">Privacy Preferences Policy Control Payload</a></li>
 <li class="toctree-l2"><a class="reference internal" href="printing.html">Printing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="screensaver.html">Screen Saver</a></li>
 <li class="toctree-l2"><a class="reference internal" href="securityui.html">UI Security Preferences</a></li>
@@ -142,7 +157,6 @@
 <li class="toctree-l2"><a class="reference internal" href="systemconfiguration.html">SystemConfiguration (Proxies)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="systemmigration.html">System Migration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="systempolicy.html">System Policy (Gatekeeper)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tcc.html">Privacy Preferences Policy Control Payload</a></li>
 <li class="toctree-l2"><a class="reference internal" href="timemachine.html">Time Machine</a></li>
 <li class="toctree-l2"><a class="reference internal" href="touchid.html">Touch ID</a></li>
 <li class="toctree-l2"><a class="reference internal" href="trackpad.html">TrackPad Settings</a></li>
@@ -232,39 +246,512 @@
   <div class="section" id="active-directory-certificate">
 <span id="payloadtype-com-apple-adcertificate-managed"></span><h1><a class="toc-backref" href="#id1">Active Directory Certificate</a><a class="headerlink" href="#active-directory-certificate" title="Permalink to this headline">¶</a></h1>
 <div class="figure align-right" style="width: 200px">
-<img alt="_static/ProfileManifests/Icons/ManifestsApple/com.apple.ADCertificate.managed.png" src="_static/ProfileManifests/Icons/ManifestsApple/com.apple.ADCertificate.managed.png" />
+<img alt="../../_images/com.apple.ADCertificate.managed.png" src="../../_images/com.apple.ADCertificate.managed.png" />
 </div>
 <p><code class="xref download docutils literal notranslate"><span class="pre">Template</span></code></p>
 <p>You can request a certificate from a Microsoft Certificate Authority (CA) using DCE/RPC and the
 Active Directory Certificate profile payload instructions detailed at <a class="reference external" href="https://support.apple.com/kb/HT5357">https://support.apple.com/kb/HT5357</a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">PayloadType:</th><td class="field-body">com.apple.ADCertificate.managed</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Supervised Only:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">N/A</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">macOS:</th><td class="field-body">N/A</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">macOS Deprecated:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">N/A</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">iOS:</th><td class="field-body">N/A</td>
+</tr>
+<tr class="field-even field"><th class="field-name">iOS Deprecated:</th><td class="field-body">N/A</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Highlander:</th><td class="field-body">False</td>
+</tr>
+</tbody>
+</table>
 <div class="contents topic" id="contents">
 <p class="topic-title first">Contents</p>
 <ul class="simple">
 <li><a class="reference internal" href="#active-directory-certificate" id="id1">Active Directory Certificate</a><ul>
-<li><a class="reference internal" href="#keys" id="id2">Keys</a></li>
-<li><a class="reference internal" href="#links" id="id3">Links</a></li>
-<li><a class="reference internal" href="#troubleshooting" id="id4">Troubleshooting</a></li>
-<li><a class="reference internal" href="#uninstall-behaviour" id="id5">Uninstall Behaviour</a></li>
+<li><a class="reference internal" href="#keys" id="id2">Keys</a><ul>
+<li><a class="reference internal" href="#com.apple.ADCertificate.managed-Description-auto" id="id3">Description</a></li>
+<li><a class="reference internal" href="#com.apple.ADCertificate.managed-CertServer-auto" id="id4">CertServer</a></li>
+<li><a class="reference internal" href="#com.apple.ADCertificate.managed-CertTemplate-auto" id="id5">CertTemplate</a></li>
+<li><a class="reference internal" href="#com.apple.ADCertificate.managed-CertificateAuthority-auto" id="id6">CertificateAuthority</a></li>
+<li><a class="reference internal" href="#com.apple.ADCertificate.managed-CertificateAcquisitionMechanism-auto" id="id7">CertificateAcquisitionMechanism</a></li>
+<li><a class="reference internal" href="#com.apple.ADCertificate.managed-CertificateRenewalTimeInterval-auto" id="id8">CertificateRenewalTimeInterval</a></li>
+<li><a class="reference internal" href="#com.apple.ADCertificate.managed-Keysize-auto" id="id9">Keysize</a></li>
+<li><a class="reference internal" href="#com.apple.ADCertificate.managed-UserName-auto" id="id10">UserName</a></li>
+<li><a class="reference internal" href="#com.apple.ADCertificate.managed-Password-auto" id="id11">Password</a></li>
+<li><a class="reference internal" href="#com.apple.ADCertificate.managed-PromptForCredentials-auto" id="id12">PromptForCredentials</a></li>
+<li><a class="reference internal" href="#com.apple.ADCertificate.managed-AllowAllAppsAccess-auto" id="id13">AllowAllAppsAccess</a></li>
+<li><a class="reference internal" href="#com.apple.ADCertificate.managed-EnableAutoRenewal-auto" id="id14">EnableAutoRenewal</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#links" id="id15">Links</a></li>
+<li><a class="reference internal" href="#troubleshooting" id="id16">Troubleshooting</a></li>
+<li><a class="reference internal" href="#uninstall-behaviour" id="id17">Uninstall Behaviour</a></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="section" id="keys">
 <h2><a class="toc-backref" href="#id2">Keys</a><a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="com.apple.ADCertificate.managed-Description-auto">
+<h3><a class="toc-backref" href="#id3">Description</a><a class="headerlink" href="#com.apple.ADCertificate.managed-Description-auto" title="Permalink to this headline">¶</a></h3>
+<p>Description</p>
+<p>The description of the certificate request as shown in the certificate selector of other payloads such as VPN and Network</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>always</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.ADCertificate.managed-CertServer-auto">
+<h3><a class="toc-backref" href="#id4">CertServer</a><a class="headerlink" href="#com.apple.ADCertificate.managed-CertServer-auto" title="Permalink to this headline">¶</a></h3>
+<p>Certificate Server</p>
+<p>Fully qualified host name of the Active Directory issuing CA.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>always</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.ADCertificate.managed-CertTemplate-auto">
+<h3><a class="toc-backref" href="#id5">CertTemplate</a><a class="headerlink" href="#com.apple.ADCertificate.managed-CertTemplate-auto" title="Permalink to this headline">¶</a></h3>
+<p>Certificate Template</p>
+<p>The name of the certificate template as it appears in the General tab of the template’s object in the Certificate Templates’ Microsoft Management Console snap-in component. Usually Machine or User</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>User</td>
+<td>always</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.ADCertificate.managed-CertificateAuthority-auto">
+<h3><a class="toc-backref" href="#id6">CertificateAuthority</a><a class="headerlink" href="#com.apple.ADCertificate.managed-CertificateAuthority-auto" title="Permalink to this headline">¶</a></h3>
+<p>Certificate Authority</p>
+<p>Name of the CA. This value is determined from the Common Name (CN) of the Active Directory entry: CN=(your CA name), CN=’Certification Authorities’, CN=’Public Key Services’, CN=’Services’, or CN=’Configuration’, (your base Domain Name).</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>always</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.ADCertificate.managed-CertificateAcquisitionMechanism-auto">
+<h3><a class="toc-backref" href="#id7">CertificateAcquisitionMechanism</a><a class="headerlink" href="#com.apple.ADCertificate.managed-CertificateAcquisitionMechanism-auto" title="Permalink to this headline">¶</a></h3>
+<p>Acquisition Mechanism</p>
+<p>Most commonly RPC. If using Web enrollment, HTTP.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<h3>Valid Choices<a class="headerlink" href="#com.apple.ADCertificate.managed-CertificateAcquisitionMechanism-auto" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>RPC</li>
+<li>HTTP</li>
+</ul>
+</div>
+<div class="section" id="com.apple.ADCertificate.managed-CertificateRenewalTimeInterval-auto">
+<h3><a class="toc-backref" href="#id8">CertificateRenewalTimeInterval</a><a class="headerlink" href="#com.apple.ADCertificate.managed-CertificateRenewalTimeInterval-auto" title="Permalink to this headline">¶</a></h3>
+<p>Certificate Expiration Notification Threshold</p>
+<p>The number of days before the certificate expires at which to start showing the expiration notification</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>integer</td>
+<td>14</td>
+<td>always</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.ADCertificate.managed-Keysize-auto">
+<h3><a class="toc-backref" href="#id9">Keysize</a><a class="headerlink" href="#com.apple.ADCertificate.managed-Keysize-auto" title="Permalink to this headline">¶</a></h3>
+<p>RSA Key Size</p>
+<p>The RSA key size for the Certificate Signing Request (CSR).</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>integer</td>
+<td>2048</td>
+<td>always</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>10.11</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.ADCertificate.managed-UserName-auto">
+<h3><a class="toc-backref" href="#id10">UserName</a><a class="headerlink" href="#com.apple.ADCertificate.managed-UserName-auto" title="Permalink to this headline">¶</a></h3>
+<p>User name</p>
+<p>The user name with which to authenticate to the certificate server</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.ADCertificate.managed-Password-auto">
+<h3><a class="toc-backref" href="#id11">Password</a><a class="headerlink" href="#com.apple.ADCertificate.managed-Password-auto" title="Permalink to this headline">¶</a></h3>
+<p>Password</p>
+<p>The password with which to authenticate to the certificate server</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.ADCertificate.managed-PromptForCredentials-auto">
+<h3><a class="toc-backref" href="#id12">PromptForCredentials</a><a class="headerlink" href="#com.apple.ADCertificate.managed-PromptForCredentials-auto" title="Permalink to this headline">¶</a></h3>
+<p>Prompt for credentials</p>
+<p>Prompt the user for credentials.  This setting is not supported for pushed profiles</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>False</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
 <p class="last">PromptForCredentials seems to have no effect on manually installed profiles. They still ask for credentials.</p>
 </div>
+<div class="section" id="com.apple.ADCertificate.managed-AllowAllAppsAccess-auto">
+<h3><a class="toc-backref" href="#id13">AllowAllAppsAccess</a><a class="headerlink" href="#com.apple.ADCertificate.managed-AllowAllAppsAccess-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow access to all apps</p>
+<p>Allow all apps to access the certificate in the keychain</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>False</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.ADCertificate.managed-EnableAutoRenewal-auto">
+<h3><a class="toc-backref" href="#id14">EnableAutoRenewal</a><a class="headerlink" href="#com.apple.ADCertificate.managed-EnableAutoRenewal-auto" title="Permalink to this headline">¶</a></h3>
+<p>Enable auto-renewal</p>
+<p>Allows the certificate to attempt an auto-renewal from the server.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>False</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>10.13.4</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 <div class="section" id="links">
-<h2><a class="toc-backref" href="#id3">Links</a><a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id15">Links</a><a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><a class="reference external" href="https://macmule.com/2015/09/06/osx-ad-certificate-requests-some-tips/">macmules blog: OSX &amp; AD CERTIFICATE REQUESTS, SOME TIPS</a>.</li>
 <li><a class="reference external" href="https://support.apple.com/en-us/HT204446">Certificate Renewal Behaviour</a>.</li>
 </ul>
 </div>
 <div class="section" id="troubleshooting">
-<h2><a class="toc-backref" href="#id4">Troubleshooting</a><a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id16">Troubleshooting</a><a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
 <p class="last">As of approx 10.12.4 you can no longer select a transport. And you will not be able to install the payload
@@ -276,7 +763,7 @@ computer account. Normally the certificate policy will deny this, so check that 
 </ul>
 </div>
 <div class="section" id="uninstall-behaviour">
-<h2><a class="toc-backref" href="#id5">Uninstall Behaviour</a><a class="headerlink" href="#uninstall-behaviour" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id17">Uninstall Behaviour</a><a class="headerlink" href="#uninstall-behaviour" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>The certificate is not revoked upon uninstallation.</li>
 <li>The certificate is not removed from keychain, but the private key IS removed. The private key is named after the issuing host.</li>

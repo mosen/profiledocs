@@ -185,6 +185,163 @@
 <span id="payloadtype-menu-nomad-login-ad"></span><h1>NoMADLogin-AD<a class="headerlink" href="#nomadlogin-ad" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="43%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Title</th>
+<th class="head">Description</th>
+<th class="head">Required</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>ADDomain</td>
+<td>string</td>
+<td>n/a</td>
+<td>Defines the AD domain you’re working with.</td>
+<td>always</td>
+</tr>
+<tr class="row-odd"><td>PFC_SegmentedControl_0</td>
+<td>string</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>always</td>
+</tr>
+<tr class="row-even"><td>LoginScreen</td>
+<td>boolean</td>
+<td>n/a</td>
+<td>If set to yes, a macOS-style loginscreen will be presented instead of the NoMAD Login loginwindow style.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>LDAPOverSSL</td>
+<td>boolean</td>
+<td>n/a</td>
+<td>Determines if NoMAD Login uses LDAP over SSL.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>AdditionalADDomains</td>
+<td>array</td>
+<td>n/a</td>
+<td>List of domains to append at the loginwindow. If not set, the standard Managed Domain policy will apply.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>UsernameFieldPlaceholder</td>
+<td>string</td>
+<td>n/a</td>
+<td>Placeholder text to show in the username textfield.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>LoginLogo</td>
+<td>string</td>
+<td>n/a</td>
+<td>Path to the logo to display on the login screen. If set to NONE, no logo will be shown.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>LoginLogoData</td>
+<td>data</td>
+<td>n/a</td>
+<td>Logo to display on the login screen.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>BackgroundImage</td>
+<td>string</td>
+<td>n/a</td>
+<td>Path to the background image to be used.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>BackgroundImageAlpha</td>
+<td>integer</td>
+<td>n/a</td>
+<td>Alpha value of the background image.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>EULAText</td>
+<td>string</td>
+<td>n/a</td>
+<td>Text to present in the EULA window.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>EULAPath</td>
+<td>string</td>
+<td>n/a</td>
+<td>Path to save acceptance records to.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>EULATitle</td>
+<td>string</td>
+<td>n/a</td>
+<td>Text for the large title in the EULA window.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>EULASubTitle</td>
+<td>string</td>
+<td>n/a</td>
+<td>Text for a subtitle in the EULA window.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>CreateAdminUser</td>
+<td>boolean</td>
+<td>n/a</td>
+<td>Will place any local user created at login by NoMAD Login in the local admin group.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>CreateAdminIfGroupMember</td>
+<td>array</td>
+<td>n/a</td>
+<td>List of groups that should have its members created as local administrators.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>UserProfileImage</td>
+<td>string</td>
+<td>n/a</td>
+<td>Path to an image to set as the user profile image.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>DemobilizeUsers</td>
+<td>boolean</td>
+<td>n/a</td>
+<td>Will convert a previously cached mobile account from AD into a regular local user account on login.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>EnableFDE</td>
+<td>boolean</td>
+<td>n/a</td>
+<td>On systems using the APFS filesystem, this key will enable FileVault encryption as the user is signing in for the first time.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>EnableFDERecoveryKey</td>
+<td>boolean</td>
+<td>n/a</td>
+<td>Write the output of the fdesetup command to /var/db/.NoMADFDESetup</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>KeychainCreate</td>
+<td>boolean</td>
+<td>n/a</td>
+<td>Create keychain if it does not exist.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>KeychainAddNoMAD</td>
+<td>boolean</td>
+<td>n/a</td>
+<td>Add a NoMAD entry into the keychain.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>KeychainReset</td>
+<td>boolean</td>
+<td>n/a</td>
+<td>Reset keychain if login password doesn’t match.</td>
+<td>n/a</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 

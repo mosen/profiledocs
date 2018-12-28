@@ -187,6 +187,85 @@
 <p>These are custom settings and must be placed in a <code class="docutils literal notranslate"><span class="pre">com.apple.ManagedClient.preferences</span></code> payload.</p>
 <div class="section" id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="43%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Title</th>
+<th class="head">Description</th>
+<th class="head">Required</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>kCUIThemePreferencesThemeKeyPath</td>
+<td>integer</td>
+<td>Theme</td>
+<td>Set the theme used by Microsoft Office.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>OfficeActivationEmailAddress</td>
+<td>string</td>
+<td>Activation Account</td>
+<td>Sets value of ‘Belongs to’ field in the About Box. This happens automatically on 15.33+ installs. As of version 16.13+ this value also pre-fills the account authentication field.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>OfficeAutoSignIn</td>
+<td>boolean</td>
+<td>Hide welcome window of first launch</td>
+<td>Only prompt user for needed information like a O365 authentication.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>ShowDocStageOnLaunch</td>
+<td>boolean</td>
+<td>Hide gallery view on launch</td>
+<td>Disables the gallery view on application launch.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>ShowWhatsNewOnLaunch</td>
+<td>boolean</td>
+<td>Hide what’s new message after update</td>
+<td>Additional key to ‘OUIWhatsNewShownItemIds’ that services as a single place to remove all future “What’s new” messages for all suite apps: Word, PowerPoint, Excel, Outlook, and OneNote.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>DefaultsToLocalOpenSave</td>
+<td>boolean</td>
+<td>Use ‘On My Mac’ as default open and save location</td>
+<td>Sets the Open and Save options to default to ‘On My Mac’ instead of ‘Online Locations’.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>VisualBasicMacroExecutionState</td>
+<td>string</td>
+<td>VisualBasic macro security level</td>
+<td>Sets the VisualBasic Macro security level.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>msoridEnableLogging</td>
+<td>integer</td>
+<td>Enable logging for authentication requests</td>
+<td>Increase logging levels for authentication requests.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>msoridDefaultMinimumSeverity</td>
+<td>integer</td>
+<td>Minimum severity for authentication requests logging</td>
+<td>Set value to 200 if msoridEnableLogging is enabled.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>HaveMergedOldPrefs</td>
+<td>boolean</td>
+<td>Migrate old preferences to new domain</td>
+<td>Triggers for pre 15.32 preferences to be migrated to the new domain going forward. In most cases you should NOT manage or touch this.</td>
+<td>n/a</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="section" id="links">
 <h2>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
