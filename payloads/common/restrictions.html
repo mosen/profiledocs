@@ -1,0 +1,3256 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Restrictions &mdash; Configuration Profiles  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="SCEP" href="scep.html" />
+    <link rel="prev" title="Profile Removal Password" href="profileremovalpassword.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Configuration Profiles
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../common.html">Common Payloads</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="airplay.html">AirPlay</a></li>
+<li class="toctree-l2"><a class="reference internal" href="airprint.html">AirPrint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="caldav.html">CalDAV Payload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="calendar.html">Calendar Subscription Payload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="carddav.html">CardDAV Payload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="certpem.html">Certificate (PEM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="certpkcs1.html">Certificate (PKCS#1)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="certpkcs12.html">Certificate (PKCS#12)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="certroot.html">Certificate (Root CA)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="email.html">Email Payload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enrollment.html">Enrollment (Supervised)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exchange.html">Exchange</a></li>
+<li class="toctree-l2"><a class="reference internal" href="font.html">Font</a></li>
+<li class="toctree-l2"><a class="reference internal" href="globalproxy.html">Global HTTP Proxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ldap.html">LDAP Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mdm.html">MDM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passcode.html">Password Policy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="profileremovalpassword.html">Profile Removal Password</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Restrictions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#keys">Keys</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowAppInstallation-auto">allowAppInstallation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowUIAppInstallation-auto">allowUIAppInstallation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowAutomaticAppDownloads-auto">allowAutomaticAppDownloads</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowAppRemoval-auto">allowAppRemoval</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowEnterpriseAppTrust-auto">allowEnterpriseAppTrust</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowCamera-auto">allowCamera</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowExplicitContent-auto">allowExplicitContent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowScreenShot-auto">allowScreenShot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowRemoteScreenObservation-auto">allowRemoteScreenObservation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowChat-auto">allowChat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowBookstore-auto">allowBookstore</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowBookstoreErotica-auto">allowBookstoreErotica</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowMusicService-auto">allowMusicService</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowRadioService-auto">allowRadioService</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowSharedStream-auto">allowSharedStream</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowPassbookWhileLocked-auto">allowPassbookWhileLocked</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowUIConfigurationProfileInstallation-auto">allowUIConfigurationProfileInstallation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowiTunes-auto">allowiTunes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowNews-auto">allowNews</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowSafari-auto">allowSafari</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowGameCenter-auto">allowGameCenter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowAddingGameCenterFriends-auto">allowAddingGameCenterFriends</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowBluetoothModification-auto">allowBluetoothModification</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowAppCellularDataModification-auto">allowAppCellularDataModification</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowDeviceNameModification-auto">allowDeviceNameModification</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowPasscodeModification-auto">allowPasscodeModification</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowWallpaperModification-auto">allowWallpaperModification</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowEnablingRestrictions-auto">allowEnablingRestrictions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowGlobalBackgroundFetchWhenRoaming-auto">allowGlobalBackgroundFetchWhenRoaming</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowManagedAppsCloudSync-auto">allowManagedAppsCloudSync</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowEnterpriseBookBackup-auto">allowEnterpriseBookBackup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowEnterpriseBookMetadataSync-auto">allowEnterpriseBookMetadataSync</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowInAppPurchases-auto">allowInAppPurchases</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowMultiplayerGaming-auto">allowMultiplayerGaming</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowVideoConferencing-auto">allowVideoConferencing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowVoiceDialing-auto">allowVoiceDialing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-forceEncryptedBackup-auto">forceEncryptedBackup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-forceWatchWristDetection-auto">forceWatchWristDetection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowPairedWatch-auto">allowPairedWatch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowEraseContentAndSettings-auto">allowEraseContentAndSettings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowSpotlightInternetResults-auto">allowSpotlightInternetResults</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowCloudDocumentSync-auto">allowCloudDocumentSync</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowUntrustedTLSPrompt-auto">allowUntrustedTLSPrompt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowDiagnosticSubmission-auto">allowDiagnosticSubmission</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowDiagnosticSubmissionModification-auto">allowDiagnosticSubmissionModification</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowPhotoStream-auto">allowPhotoStream</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowCloudPhotoLibrary-auto">allowCloudPhotoLibrary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowCloudBackup-auto">allowCloudBackup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-forceITunesStorePasswordEntry-auto">forceITunesStorePasswordEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-ratingApps-auto">ratingApps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-ratingMovies-auto">ratingMovies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-ratingTVShows-auto">ratingTVShows</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-ratingRegion-auto">ratingRegion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-safariAcceptCookies-auto">safariAcceptCookies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-safariAllowAutoFill-auto">safariAllowAutoFill</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-safariAllowJavaScript-auto">safariAllowJavaScript</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-safariAllowPopups-auto">safariAllowPopups</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-safariForceFraudWarning-auto">safariForceFraudWarning</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowAssistant-auto">allowAssistant</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowAssistantWhileLocked-auto">allowAssistantWhileLocked</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-forceAssistantProfanityFilter-auto">forceAssistantProfanityFilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowPredictiveKeyboard-auto">allowPredictiveKeyboard</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowKeyboardShortcuts-auto">allowKeyboardShortcuts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowAutoCorrection-auto">allowAutoCorrection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowSpellCheck-auto">allowSpellCheck</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowDefinitionLookup-auto">allowDefinitionLookup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowOpenFromUnmanagedToManaged-auto">allowOpenFromUnmanagedToManaged</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowOpenFromManagedToUnmanaged-auto">allowOpenFromManagedToUnmanaged</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-forceAirDropUnmanaged-auto">forceAirDropUnmanaged</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowActivityContinuation-auto">allowActivityContinuation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowFingerprintForUnlock-auto">allowFingerprintForUnlock</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowFingerprintModification-auto">allowFingerprintModification</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowNotificationsModification-auto">allowNotificationsModification</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-blacklistedAppBundleIDs-auto">blacklistedAppBundleIDs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-whitelistedAppBundleIDs-auto">whitelistedAppBundleIDs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowAutoUnlock-auto">allowAutoUnlock</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.applicationaccess-allowCloudDesktopAndDocuments-auto">allowCloudDesktopAndDocuments</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#links">Links</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="scep.html">SCEP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="supervision.html">Supervision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vpn.html">VPN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webclip.html">WebClip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wifi.html">Wi-Fi</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../mac.html">Mac Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ios.html">iOS Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tvos.html">tvOS Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../custom/index.html">Custom Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../official.html">Official Links and Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manifest.html">Manifest File Format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extmanifest.html">Extended Manifest Format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../macos/index.html">macOS Subsystem Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pdp/index.html">Profile Domain Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html#submitting-an-error">Submitting an error</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html#writing-documentation">Writing Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Configuration Profiles</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../common.html">Common Payloads</a> &raquo;</li>
+        
+      <li>Restrictions</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/payloads/common/restrictions.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="restrictions">
+<span id="payloadtype-com-apple-applicationaccess"></span><h1><a class="toc-backref" href="#id1">Restrictions</a><a class="headerlink" href="#restrictions" title="Permalink to this headline">¶</a></h1>
+<p><code class="xref download docutils literal notranslate"><span class="pre">Template</span></code></p>
+<p>A Restrictions payload allows the administrator to restrict the user from doing certain things with the device, such as using the camera.</p>
+<p>The Restrictions payload is supported in iOS; some keys are also supported in macOS, as noted below.</p>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#restrictions" id="id1">Restrictions</a><ul>
+<li><a class="reference internal" href="#summary" id="id2">Summary</a></li>
+<li><a class="reference internal" href="#keys" id="id3">Keys</a><ul>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowAppInstallation-auto" id="id4">allowAppInstallation</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowUIAppInstallation-auto" id="id5">allowUIAppInstallation</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowAutomaticAppDownloads-auto" id="id6">allowAutomaticAppDownloads</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowAppRemoval-auto" id="id7">allowAppRemoval</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowEnterpriseAppTrust-auto" id="id8">allowEnterpriseAppTrust</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowCamera-auto" id="id9">allowCamera</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowExplicitContent-auto" id="id10">allowExplicitContent</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowScreenShot-auto" id="id11">allowScreenShot</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowRemoteScreenObservation-auto" id="id12">allowRemoteScreenObservation</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowChat-auto" id="id13">allowChat</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowBookstore-auto" id="id14">allowBookstore</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowBookstoreErotica-auto" id="id15">allowBookstoreErotica</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowMusicService-auto" id="id16">allowMusicService</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowRadioService-auto" id="id17">allowRadioService</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowSharedStream-auto" id="id18">allowSharedStream</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowPassbookWhileLocked-auto" id="id19">allowPassbookWhileLocked</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowUIConfigurationProfileInstallation-auto" id="id20">allowUIConfigurationProfileInstallation</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowiTunes-auto" id="id21">allowiTunes</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowNews-auto" id="id22">allowNews</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowSafari-auto" id="id23">allowSafari</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowGameCenter-auto" id="id24">allowGameCenter</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowAddingGameCenterFriends-auto" id="id25">allowAddingGameCenterFriends</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowBluetoothModification-auto" id="id26">allowBluetoothModification</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowAppCellularDataModification-auto" id="id27">allowAppCellularDataModification</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowDeviceNameModification-auto" id="id28">allowDeviceNameModification</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowPasscodeModification-auto" id="id29">allowPasscodeModification</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowWallpaperModification-auto" id="id30">allowWallpaperModification</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowEnablingRestrictions-auto" id="id31">allowEnablingRestrictions</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowGlobalBackgroundFetchWhenRoaming-auto" id="id32">allowGlobalBackgroundFetchWhenRoaming</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowManagedAppsCloudSync-auto" id="id33">allowManagedAppsCloudSync</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowEnterpriseBookBackup-auto" id="id34">allowEnterpriseBookBackup</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowEnterpriseBookMetadataSync-auto" id="id35">allowEnterpriseBookMetadataSync</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowInAppPurchases-auto" id="id36">allowInAppPurchases</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowMultiplayerGaming-auto" id="id37">allowMultiplayerGaming</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowVideoConferencing-auto" id="id38">allowVideoConferencing</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowVoiceDialing-auto" id="id39">allowVoiceDialing</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-forceEncryptedBackup-auto" id="id40">forceEncryptedBackup</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-forceWatchWristDetection-auto" id="id41">forceWatchWristDetection</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowPairedWatch-auto" id="id42">allowPairedWatch</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowEraseContentAndSettings-auto" id="id43">allowEraseContentAndSettings</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowSpotlightInternetResults-auto" id="id44">allowSpotlightInternetResults</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowCloudDocumentSync-auto" id="id45">allowCloudDocumentSync</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowUntrustedTLSPrompt-auto" id="id46">allowUntrustedTLSPrompt</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowDiagnosticSubmission-auto" id="id47">allowDiagnosticSubmission</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowDiagnosticSubmissionModification-auto" id="id48">allowDiagnosticSubmissionModification</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowPhotoStream-auto" id="id49">allowPhotoStream</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowCloudPhotoLibrary-auto" id="id50">allowCloudPhotoLibrary</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowCloudBackup-auto" id="id51">allowCloudBackup</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-forceITunesStorePasswordEntry-auto" id="id52">forceITunesStorePasswordEntry</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-ratingApps-auto" id="id53">ratingApps</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-ratingMovies-auto" id="id54">ratingMovies</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-ratingTVShows-auto" id="id55">ratingTVShows</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-ratingRegion-auto" id="id56">ratingRegion</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-safariAcceptCookies-auto" id="id57">safariAcceptCookies</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-safariAllowAutoFill-auto" id="id58">safariAllowAutoFill</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-safariAllowJavaScript-auto" id="id59">safariAllowJavaScript</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-safariAllowPopups-auto" id="id60">safariAllowPopups</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-safariForceFraudWarning-auto" id="id61">safariForceFraudWarning</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowAssistant-auto" id="id62">allowAssistant</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowAssistantWhileLocked-auto" id="id63">allowAssistantWhileLocked</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-forceAssistantProfanityFilter-auto" id="id64">forceAssistantProfanityFilter</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowPredictiveKeyboard-auto" id="id65">allowPredictiveKeyboard</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowKeyboardShortcuts-auto" id="id66">allowKeyboardShortcuts</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowAutoCorrection-auto" id="id67">allowAutoCorrection</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowSpellCheck-auto" id="id68">allowSpellCheck</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowDefinitionLookup-auto" id="id69">allowDefinitionLookup</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowOpenFromUnmanagedToManaged-auto" id="id70">allowOpenFromUnmanagedToManaged</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowOpenFromManagedToUnmanaged-auto" id="id71">allowOpenFromManagedToUnmanaged</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-forceAirDropUnmanaged-auto" id="id72">forceAirDropUnmanaged</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowActivityContinuation-auto" id="id73">allowActivityContinuation</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowFingerprintForUnlock-auto" id="id74">allowFingerprintForUnlock</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowFingerprintModification-auto" id="id75">allowFingerprintModification</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowNotificationsModification-auto" id="id76">allowNotificationsModification</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-blacklistedAppBundleIDs-auto" id="id77">blacklistedAppBundleIDs</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-whitelistedAppBundleIDs-auto" id="id78">whitelistedAppBundleIDs</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowAutoUnlock-auto" id="id79">allowAutoUnlock</a></li>
+<li><a class="reference internal" href="#com.apple.applicationaccess-allowCloudDesktopAndDocuments-auto" id="id80">allowCloudDesktopAndDocuments</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#links" id="id81">Links</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="summary">
+<h2><a class="toc-backref" href="#id2">Summary</a><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">PayloadType:</th><td class="field-body">com.apple.applicationaccess</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Supervised Only:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">N/A</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">macOS:</th><td class="field-body">N/A</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">macOS Deprecated:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">N/A</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">iOS:</th><td class="field-body">N/A</td>
+</tr>
+<tr class="field-even field"><th class="field-name">iOS Deprecated:</th><td class="field-body">N/A</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Highlander:</th><td class="field-body">N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="keys">
+<h2><a class="toc-backref" href="#id3">Keys</a><a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="com.apple.applicationaccess-allowAppInstallation-auto">
+<h3><a class="toc-backref" href="#id4">allowAppInstallation</a><a class="headerlink" href="#com.apple.applicationaccess-allowAppInstallation-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow App Installation from Apple Configurator and iTunes</p>
+<p>Allow only a connected Mac host to install applications</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowUIAppInstallation-auto">
+<h3><a class="toc-backref" href="#id5">allowUIAppInstallation</a><a class="headerlink" href="#com.apple.applicationaccess-allowUIAppInstallation-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow App Installation from App Store</p>
+<p>When false, the App Store is disabled and its icon is removed from the Home screen. However, users may continue to use Host apps (iTunes, Configurator) to install or update their apps.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>9.0</td>
+<td>N/A</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowAutomaticAppDownloads-auto">
+<h3><a class="toc-backref" href="#id6">allowAutomaticAppDownloads</a><a class="headerlink" href="#com.apple.applicationaccess-allowAutomaticAppDownloads-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow Automatic App Downloads</p>
+<p>If set to false, prevents automatic downloading of apps purchased on other devices. Does not affect updates to existing apps. Defaults to true</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>9.0</td>
+<td>N/A</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowAppRemoval-auto">
+<h3><a class="toc-backref" href="#id7">allowAppRemoval</a><a class="headerlink" href="#com.apple.applicationaccess-allowAppRemoval-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow App Removal</p>
+<p>Allow the user to remove apps (Supervised only)</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowEnterpriseAppTrust-auto">
+<h3><a class="toc-backref" href="#id8">allowEnterpriseAppTrust</a><a class="headerlink" href="#com.apple.applicationaccess-allowEnterpriseAppTrust-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow Trusting Enterprise Apps</p>
+<p>If set to false removes the Trust Enterprise Developer button in Settings-&gt;General-&gt;Profiles Device Management, preventing apps from being provisioned by universal provisioning profiles. This restriction applies to free developer accounts but it does not apply to enterprise app developers who are trusted because their apps were pushed via MDM, nor does it revoke previously granted trust. Defaults to true.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>9.0</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowCamera-auto">
+<h3><a class="toc-backref" href="#id9">allowCamera</a><a class="headerlink" href="#com.apple.applicationaccess-allowCamera-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow Camera Use</p>
+<p>Allow the user to use the camera</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>0.0</td>
+<td>10.11</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowExplicitContent-auto">
+<h3><a class="toc-backref" href="#id10">allowExplicitContent</a><a class="headerlink" href="#com.apple.applicationaccess-allowExplicitContent-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow Explicit Content</p>
+<p>Allow user access of explicit content</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowScreenShot-auto">
+<h3><a class="toc-backref" href="#id11">allowScreenShot</a><a class="headerlink" href="#com.apple.applicationaccess-allowScreenShot-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow Screenshots and Screen Recording</p>
+<p>Allow the user to take screenshots or screen recordings</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowRemoteScreenObservation-auto">
+<h3><a class="toc-backref" href="#id12">allowRemoteScreenObservation</a><a class="headerlink" href="#com.apple.applicationaccess-allowRemoteScreenObservation-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow Remote Screen Observation</p>
+<p>Allow Classroom or similar to observe the screen. This key should be nested beneath allowScreenShot as a sub-restriction. If allowScreenShot is set to false, it also prevents the Classroom app from observing remote screens.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>9.3</td>
+<td>N/A</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowChat-auto">
+<h3><a class="toc-backref" href="#id13">allowChat</a><a class="headerlink" href="#com.apple.applicationaccess-allowChat-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow use of iMessage</p>
+<p>Allow use of iMessage (Supervised only)</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>6.0</td>
+<td>N/A</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowBookstore-auto">
+<h3><a class="toc-backref" href="#id14">allowBookstore</a><a class="headerlink" href="#com.apple.applicationaccess-allowBookstore-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow Bookstore</p>
+<p>Supervised only. If set to false, iBookstore will be disabled.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>6.0</td>
+<td>N/A</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowBookstoreErotica-auto">
+<h3><a class="toc-backref" href="#id15">allowBookstoreErotica</a><a class="headerlink" href="#com.apple.applicationaccess-allowBookstoreErotica-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow Bookstore Erotica</p>
+<p>Supervised only. If set to false, the user will not be able to download media from the iBookstore that is tagged as erotica.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>6.0</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowMusicService-auto">
+<h3><a class="toc-backref" href="#id16">allowMusicService</a><a class="headerlink" href="#com.apple.applicationaccess-allowMusicService-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow Apple Music</p>
+<p>If set to false, Apple Music will be disabled in the Music app.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>9.3</td>
+<td>10.12</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowRadioService-auto">
+<h3><a class="toc-backref" href="#id17">allowRadioService</a><a class="headerlink" href="#com.apple.applicationaccess-allowRadioService-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow iTunes Radio</p>
+<p>If set to false, Apple Music Radio is disabled.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>9.3</td>
+<td>N/A</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowSharedStream-auto">
+<h3><a class="toc-backref" href="#id18">allowSharedStream</a><a class="headerlink" href="#com.apple.applicationaccess-allowSharedStream-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow Shared Stream</p>
+<p>If set to false, disabled Shared Stream.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>6.0</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowPassbookWhileLocked-auto">
+<h3><a class="toc-backref" href="#id19">allowPassbookWhileLocked</a><a class="headerlink" href="#com.apple.applicationaccess-allowPassbookWhileLocked-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow Wallet While Locked</p>
+<p>If set to false, Wallet notifications will not be shown on the lock screen.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>6.0</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowUIConfigurationProfileInstallation-auto">
+<h3><a class="toc-backref" href="#id20">allowUIConfigurationProfileInstallation</a><a class="headerlink" href="#com.apple.applicationaccess-allowUIConfigurationProfileInstallation-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow UI Configuration Profile Installation</p>
+<p>Supervised only. If set to false, the user is prohibited from installing configuration profiles and certificates interactively.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>6.0</td>
+<td>N/A</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowiTunes-auto">
+<h3><a class="toc-backref" href="#id21">allowiTunes</a><a class="headerlink" href="#com.apple.applicationaccess-allowiTunes-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow use of iTunes</p>
+<p>When false, the iTunes Music Store is disabled and its icon is removed from the Home screen. Users cannot preview, purchase, or download content.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowNews-auto">
+<h3><a class="toc-backref" href="#id22">allowNews</a><a class="headerlink" href="#com.apple.applicationaccess-allowNews-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow use of News</p>
+<p>Allow the user to access and use News</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>9.0</td>
+<td>N/A</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowSafari-auto">
+<h3><a class="toc-backref" href="#id23">allowSafari</a><a class="headerlink" href="#com.apple.applicationaccess-allowSafari-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow use of Safari</p>
+<p>Allow the user to use Safari</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowGameCenter-auto">
+<h3><a class="toc-backref" href="#id24">allowGameCenter</a><a class="headerlink" href="#com.apple.applicationaccess-allowGameCenter-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow Game Center</p>
+<p>Allow Game Center (Supervised only)</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>6.0</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowAddingGameCenterFriends-auto">
+<h3><a class="toc-backref" href="#id25">allowAddingGameCenterFriends</a><a class="headerlink" href="#com.apple.applicationaccess-allowAddingGameCenterFriends-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow Adding Game Center Friends</p>
+<p>Allow the user to add Friends on Game Center</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowBluetoothModification-auto">
+<h3><a class="toc-backref" href="#id26">allowBluetoothModification</a><a class="headerlink" href="#com.apple.applicationaccess-allowBluetoothModification-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow modifying Bluetooth settings</p>
+<p>Allow modifying Bluetooth settings</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>10.0</td>
+<td>N/A</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowAppCellularDataModification-auto">
+<h3><a class="toc-backref" href="#id27">allowAppCellularDataModification</a><a class="headerlink" href="#com.apple.applicationaccess-allowAppCellularDataModification-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow Modifying Cellular Data Usage for Apps Settings</p>
+<p>Allow modifying cellular data usage for apps settings</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>7.0</td>
+<td>N/A</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowDeviceNameModification-auto">
+<h3><a class="toc-backref" href="#id28">allowDeviceNameModification</a><a class="headerlink" href="#com.apple.applicationaccess-allowDeviceNameModification-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow Modifying Device Name</p>
+<p>Allow modifying device name</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>9.0</td>
+<td>N/A</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowPasscodeModification-auto">
+<h3><a class="toc-backref" href="#id29">allowPasscodeModification</a><a class="headerlink" href="#com.apple.applicationaccess-allowPasscodeModification-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow Modifying Passcode</p>
+<p>If set to false, prevents the device passcode from being added, changed, or removed. Defaults to true. This restriction is ignored by shared iPads.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>9.0</td>
+<td>N/A</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowWallpaperModification-auto">
+<h3><a class="toc-backref" href="#id30">allowWallpaperModification</a><a class="headerlink" href="#com.apple.applicationaccess-allowWallpaperModification-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow Modifying Wallpaper</p>
+<p>Allow modifying Wallpaper (Supervised only)</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>9.0</td>
+<td>N/A</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowEnablingRestrictions-auto">
+<h3><a class="toc-backref" href="#id31">allowEnablingRestrictions</a><a class="headerlink" href="#com.apple.applicationaccess-allowEnablingRestrictions-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow Configuring Restrictions</p>
+<p>Allow configuring restrictions (Supervised only)</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowGlobalBackgroundFetchWhenRoaming-auto">
+<h3><a class="toc-backref" href="#id32">allowGlobalBackgroundFetchWhenRoaming</a><a class="headerlink" href="#com.apple.applicationaccess-allowGlobalBackgroundFetchWhenRoaming-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow Automatic Sync While Roaming</p>
+<p>Allow automatic sync while roaming</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowManagedAppsCloudSync-auto">
+<h3><a class="toc-backref" href="#id33">allowManagedAppsCloudSync</a><a class="headerlink" href="#com.apple.applicationaccess-allowManagedAppsCloudSync-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow iCloud Sync for Managed Apps</p>
+<p>Allow iCloud sync for managed apps</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowEnterpriseBookBackup-auto">
+<h3><a class="toc-backref" href="#id34">allowEnterpriseBookBackup</a><a class="headerlink" href="#com.apple.applicationaccess-allowEnterpriseBookBackup-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow Enterprise Books Backup</p>
+<p>Allow enterprise books to be backed up</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowEnterpriseBookMetadataSync-auto">
+<h3><a class="toc-backref" href="#id35">allowEnterpriseBookMetadataSync</a><a class="headerlink" href="#com.apple.applicationaccess-allowEnterpriseBookMetadataSync-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow Enterprise Books Notes and Highlights Sync</p>
+<p>Allow enterprise books notes and highlights to be synced</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowInAppPurchases-auto">
+<h3><a class="toc-backref" href="#id36">allowInAppPurchases</a><a class="headerlink" href="#com.apple.applicationaccess-allowInAppPurchases-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow In App Purchases</p>
+<p>Allow the user to make purchases within applications</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowMultiplayerGaming-auto">
+<h3><a class="toc-backref" href="#id37">allowMultiplayerGaming</a><a class="headerlink" href="#com.apple.applicationaccess-allowMultiplayerGaming-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow Multiplayer Gaming</p>
+<p>Allow multiplayer gaming</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowVideoConferencing-auto">
+<h3><a class="toc-backref" href="#id38">allowVideoConferencing</a><a class="headerlink" href="#com.apple.applicationaccess-allowVideoConferencing-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow Video Conferencing</p>
+<p>Allow video conferencing</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowVoiceDialing-auto">
+<h3><a class="toc-backref" href="#id39">allowVoiceDialing</a><a class="headerlink" href="#com.apple.applicationaccess-allowVoiceDialing-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow Voice Dialing While Device is Locked</p>
+<p>Allow voice dialing while device is locked</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-forceEncryptedBackup-auto">
+<h3><a class="toc-backref" href="#id40">forceEncryptedBackup</a><a class="headerlink" href="#com.apple.applicationaccess-forceEncryptedBackup-auto" title="Permalink to this headline">¶</a></h3>
+<p>Force Encrypted Backups</p>
+<p>Force encrypted backups</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>False</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-forceWatchWristDetection-auto">
+<h3><a class="toc-backref" href="#id41">forceWatchWristDetection</a><a class="headerlink" href="#com.apple.applicationaccess-forceWatchWristDetection-auto" title="Permalink to this headline">¶</a></h3>
+<p>Force Apple Watch Wrist Detection</p>
+<p>Force Apple Watch wrist detection</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>False</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>8.2</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowPairedWatch-auto">
+<h3><a class="toc-backref" href="#id42">allowPairedWatch</a><a class="headerlink" href="#com.apple.applicationaccess-allowPairedWatch-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow Pairing With Apple Watch</p>
+<p>If set to false, disables pairing with an Apple Watch. Any currently paired Apple Watch is unpaired and erased. Defaults to true.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>9.0</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowEraseContentAndSettings-auto">
+<h3><a class="toc-backref" href="#id43">allowEraseContentAndSettings</a><a class="headerlink" href="#com.apple.applicationaccess-allowEraseContentAndSettings-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow Erase All Content and Settings</p>
+<p>Supervised only. If set to false, the user cannot choose the option “Erase All Content and Settings” in Settings &gt; General &gt; Reset</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowSpotlightInternetResults-auto">
+<h3><a class="toc-backref" href="#id44">allowSpotlightInternetResults</a><a class="headerlink" href="#com.apple.applicationaccess-allowSpotlightInternetResults-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow Internet results in Spotlight</p>
+<p>If set to false, search results from the web will not be shown in Spotlight.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>0.0</td>
+<td>10.11</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowCloudDocumentSync-auto">
+<h3><a class="toc-backref" href="#id45">allowCloudDocumentSync</a><a class="headerlink" href="#com.apple.applicationaccess-allowCloudDocumentSync-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow iCloud Document Sync</p>
+<p>Allow document syncing with iCloud. When false, disables document and key-value syncing to iCloud.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>5.0</td>
+<td>10.11</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowUntrustedTLSPrompt-auto">
+<h3><a class="toc-backref" href="#id46">allowUntrustedTLSPrompt</a><a class="headerlink" href="#com.apple.applicationaccess-allowUntrustedTLSPrompt-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow user to accept untrusted TLS certificates</p>
+<p>Allow user to accept untrusted TLS certificates</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>5.0</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowDiagnosticSubmission-auto">
+<h3><a class="toc-backref" href="#id47">allowDiagnosticSubmission</a><a class="headerlink" href="#com.apple.applicationaccess-allowDiagnosticSubmission-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow diagnostic submission</p>
+<p>Send diagnostic and usage reports to Apple</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>6.0</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowDiagnosticSubmissionModification-auto">
+<h3><a class="toc-backref" href="#id48">allowDiagnosticSubmissionModification</a><a class="headerlink" href="#com.apple.applicationaccess-allowDiagnosticSubmissionModification-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow modifying diagnostics settings</p>
+<p>If set to false, the diagnostic submission and app analytics settings in the Diagnostics &amp; Usage pane in Settings cannot be modified</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>9.3.2</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowPhotoStream-auto">
+<h3><a class="toc-backref" href="#id49">allowPhotoStream</a><a class="headerlink" href="#com.apple.applicationaccess-allowPhotoStream-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow Photo Stream</p>
+<p>Allow Photo Stream to be used on the device</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>5.0</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowCloudPhotoLibrary-auto">
+<h3><a class="toc-backref" href="#id50">allowCloudPhotoLibrary</a><a class="headerlink" href="#com.apple.applicationaccess-allowCloudPhotoLibrary-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow iCloud Photo Library</p>
+<p>Allow iCloud Photo Library to be used on the device</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>9.0</td>
+<td>10.12</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowCloudBackup-auto">
+<h3><a class="toc-backref" href="#id51">allowCloudBackup</a><a class="headerlink" href="#com.apple.applicationaccess-allowCloudBackup-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow iCloud Backup</p>
+<p>Allow backup using iCloud</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>5.0</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-forceITunesStorePasswordEntry-auto">
+<h3><a class="toc-backref" href="#id52">forceITunesStorePasswordEntry</a><a class="headerlink" href="#com.apple.applicationaccess-forceITunesStorePasswordEntry-auto" title="Permalink to this headline">¶</a></h3>
+<p>Require iTunes password for all purchases</p>
+<p>Require the user’s iTunes password to be entered for every purchase</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>False</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>5.0</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-ratingApps-auto">
+<h3><a class="toc-backref" href="#id53">ratingApps</a><a class="headerlink" href="#com.apple.applicationaccess-ratingApps-auto" title="Permalink to this headline">¶</a></h3>
+<p>Apps Ranking Number</p>
+<p>Ranking number for apps</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>integer</td>
+<td>1000</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-ratingMovies-auto">
+<h3><a class="toc-backref" href="#id54">ratingMovies</a><a class="headerlink" href="#com.apple.applicationaccess-ratingMovies-auto" title="Permalink to this headline">¶</a></h3>
+<p>Movies Ranking Number</p>
+<p>Ranking number for movies</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>integer</td>
+<td>1000</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-ratingTVShows-auto">
+<h3><a class="toc-backref" href="#id55">ratingTVShows</a><a class="headerlink" href="#com.apple.applicationaccess-ratingTVShows-auto" title="Permalink to this headline">¶</a></h3>
+<p>TV Shows Ranking Number</p>
+<p>Ranking number for TV Shows</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>integer</td>
+<td>1000</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-ratingRegion-auto">
+<h3><a class="toc-backref" href="#id56">ratingRegion</a><a class="headerlink" href="#com.apple.applicationaccess-ratingRegion-auto" title="Permalink to this headline">¶</a></h3>
+<p>Region Code</p>
+<p>Two-character code for the region used to specify ratings</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<h3>Valid Choices<a class="headerlink" href="#com.apple.applicationaccess-ratingRegion-auto" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>us</li>
+<li>au</li>
+<li>ca</li>
+<li>de</li>
+<li>fr</li>
+<li>ie</li>
+<li>jp</li>
+<li>nz</li>
+<li>gb</li>
+</ul>
+</div>
+<div class="section" id="com.apple.applicationaccess-safariAcceptCookies-auto">
+<h3><a class="toc-backref" href="#id57">safariAcceptCookies</a><a class="headerlink" href="#com.apple.applicationaccess-safariAcceptCookies-auto" title="Permalink to this headline">¶</a></h3>
+<p>Accept Cookies in Safari</p>
+<p>Accept cookies: 0 - Never, 1 - From current website only (iOS 8) or visited sites (pre-iOS 8), 1.5 - From websites I visit, 2 - Always</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>real</td>
+<td>2</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<h3>Valid Choices<a class="headerlink" href="#com.apple.applicationaccess-safariAcceptCookies-auto" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>0</li>
+<li>1</li>
+<li>1.5</li>
+<li>2</li>
+</ul>
+</div>
+<div class="section" id="com.apple.applicationaccess-safariAllowAutoFill-auto">
+<h3><a class="toc-backref" href="#id58">safariAllowAutoFill</a><a class="headerlink" href="#com.apple.applicationaccess-safariAllowAutoFill-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow AutoFill in Safari</p>
+<p>Allow AutoFill in Safari</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-safariAllowJavaScript-auto">
+<h3><a class="toc-backref" href="#id59">safariAllowJavaScript</a><a class="headerlink" href="#com.apple.applicationaccess-safariAllowJavaScript-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow JavaScript</p>
+<p>Allow JavaScript in Safari</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-safariAllowPopups-auto">
+<h3><a class="toc-backref" href="#id60">safariAllowPopups</a><a class="headerlink" href="#com.apple.applicationaccess-safariAllowPopups-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow Pop-ups</p>
+<p>Allow Pop-ups in Safari</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-safariForceFraudWarning-auto">
+<h3><a class="toc-backref" href="#id61">safariForceFraudWarning</a><a class="headerlink" href="#com.apple.applicationaccess-safariForceFraudWarning-auto" title="Permalink to this headline">¶</a></h3>
+<p>Enable Fraud Warning</p>
+<p>Enable fraud warning in Safari</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>False</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowAssistant-auto">
+<h3><a class="toc-backref" href="#id62">allowAssistant</a><a class="headerlink" href="#com.apple.applicationaccess-allowAssistant-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow Siri</p>
+<p>Allow Siri</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowAssistantWhileLocked-auto">
+<h3><a class="toc-backref" href="#id63">allowAssistantWhileLocked</a><a class="headerlink" href="#com.apple.applicationaccess-allowAssistantWhileLocked-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow Siri While Locked</p>
+<p>Allow Siri while device is locked</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>5.1</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-forceAssistantProfanityFilter-auto">
+<h3><a class="toc-backref" href="#id64">forceAssistantProfanityFilter</a><a class="headerlink" href="#com.apple.applicationaccess-forceAssistantProfanityFilter-auto" title="Permalink to this headline">¶</a></h3>
+<p>Enable Siri Profanity Filter</p>
+<p>Enable Siri Profanity Filter (Supervised devices only)</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>False</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowPredictiveKeyboard-auto">
+<h3><a class="toc-backref" href="#id65">allowPredictiveKeyboard</a><a class="headerlink" href="#com.apple.applicationaccess-allowPredictiveKeyboard-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow Predictive Keyboard</p>
+<p>Allow Predictive Keyboard (Supervised devices only)</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>8.1.3</td>
+<td>N/A</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowKeyboardShortcuts-auto">
+<h3><a class="toc-backref" href="#id66">allowKeyboardShortcuts</a><a class="headerlink" href="#com.apple.applicationaccess-allowKeyboardShortcuts-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow Keyboard Shortcuts</p>
+<p>Allow Keyboard Shortcuts (Supervised devices only)</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>9.0</td>
+<td>N/A</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowAutoCorrection-auto">
+<h3><a class="toc-backref" href="#id67">allowAutoCorrection</a><a class="headerlink" href="#com.apple.applicationaccess-allowAutoCorrection-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow Auto Correction</p>
+<p>Allow Auto Correction (Supervised devices only)</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>8.1.3</td>
+<td>N/A</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowSpellCheck-auto">
+<h3><a class="toc-backref" href="#id68">allowSpellCheck</a><a class="headerlink" href="#com.apple.applicationaccess-allowSpellCheck-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow Spell Check</p>
+<p>Allow Spell Check (Supervised devices only)</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>8.1.3</td>
+<td>N/A</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowDefinitionLookup-auto">
+<h3><a class="toc-backref" href="#id69">allowDefinitionLookup</a><a class="headerlink" href="#com.apple.applicationaccess-allowDefinitionLookup-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow Define</p>
+<p>Allow Define (Supervised devices only)</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>8.1.3</td>
+<td>10.11.2</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowOpenFromUnmanagedToManaged-auto">
+<h3><a class="toc-backref" href="#id70">allowOpenFromUnmanagedToManaged</a><a class="headerlink" href="#com.apple.applicationaccess-allowOpenFromUnmanagedToManaged-auto" title="Permalink to this headline">¶</a></h3>
+<p>Enable allow open from unmanaged to managed</p>
+<p>Enable allow open from unmanaged to managed</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>7.0</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowOpenFromManagedToUnmanaged-auto">
+<h3><a class="toc-backref" href="#id71">allowOpenFromManagedToUnmanaged</a><a class="headerlink" href="#com.apple.applicationaccess-allowOpenFromManagedToUnmanaged-auto" title="Permalink to this headline">¶</a></h3>
+<p>Enable allow open from managed to unmanaged</p>
+<p>Enable allow open from managed to unmanaged</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>7.0</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-forceAirDropUnmanaged-auto">
+<h3><a class="toc-backref" href="#id72">forceAirDropUnmanaged</a><a class="headerlink" href="#com.apple.applicationaccess-forceAirDropUnmanaged-auto" title="Permalink to this headline">¶</a></h3>
+<p>Treat AirDrop as Unmanaged Destination</p>
+<p>Treat AirDrop as Unmanaged Destination</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>False</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>9.0</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowActivityContinuation-auto">
+<h3><a class="toc-backref" href="#id73">allowActivityContinuation</a><a class="headerlink" href="#com.apple.applicationaccess-allowActivityContinuation-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow Handoff</p>
+<p>If set to false, Handoff will be disabled.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowFingerprintForUnlock-auto">
+<h3><a class="toc-backref" href="#id74">allowFingerprintForUnlock</a><a class="headerlink" href="#com.apple.applicationaccess-allowFingerprintForUnlock-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow Touch ID to Unlock Device</p>
+<p>Allow Touch ID to Unlock Device</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>7.0</td>
+<td>10.12.4</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowFingerprintModification-auto">
+<h3><a class="toc-backref" href="#id75">allowFingerprintModification</a><a class="headerlink" href="#com.apple.applicationaccess-allowFingerprintModification-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow Modifying Touch ID Fingerprints</p>
+<p>Allow modifying Touch ID fingerprints</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowNotificationsModification-auto">
+<h3><a class="toc-backref" href="#id76">allowNotificationsModification</a><a class="headerlink" href="#com.apple.applicationaccess-allowNotificationsModification-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow Modifying Notifications Settings</p>
+<p>Allow Modifying Notifications Settings</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>9.3</td>
+<td>N/A</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-blacklistedAppBundleIDs-auto">
+<h3><a class="toc-backref" href="#id77">blacklistedAppBundleIDs</a><a class="headerlink" href="#com.apple.applicationaccess-blacklistedAppBundleIDs-auto" title="Permalink to this headline">¶</a></h3>
+<p>Blacklisted Apps</p>
+<p>If present, prevents bundle IDs listed in the array from being shown or launchable.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>array</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>9.3</td>
+<td>N/A</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-whitelistedAppBundleIDs-auto">
+<h3><a class="toc-backref" href="#id78">whitelistedAppBundleIDs</a><a class="headerlink" href="#com.apple.applicationaccess-whitelistedAppBundleIDs-auto" title="Permalink to this headline">¶</a></h3>
+<p>Whitelisted Apps</p>
+<p>If present, allows only bundle IDs listed in the array from being shown or launchable.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>array</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>9.3</td>
+<td>N/A</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowAutoUnlock-auto">
+<h3><a class="toc-backref" href="#id79">allowAutoUnlock</a><a class="headerlink" href="#com.apple.applicationaccess-allowAutoUnlock-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow macOS auto unlock</p>
+<p>If set to false, disallows macOS auto unlock. Defaults to true.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>10.12</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.applicationaccess-allowCloudDesktopAndDocuments-auto">
+<h3><a class="toc-backref" href="#id80">allowCloudDesktopAndDocuments</a><a class="headerlink" href="#com.apple.applicationaccess-allowCloudDesktopAndDocuments-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow cloud desktop and documents</p>
+<p>If set to false, disallows macOS cloud desktop and document services. Defaults to true.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>10.12.4</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="links">
+<h2><a class="toc-backref" href="#id81">Links</a><a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW13">Official Documentation</a>.</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="scep.html" class="btn btn-neutral float-right" title="SCEP" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="profileremovalpassword.html" class="btn btn-neutral" title="Profile Removal Password" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, MacAdmins Community
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

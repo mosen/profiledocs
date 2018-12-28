@@ -1,0 +1,570 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Parental Controls - Content Filter &mdash; Configuration Profiles  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Parental Controls - Time Limits" href="parental-timelimits.html" />
+    <link rel="prev" title="Network Browser (Finder)" href="networkbrowser.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Configuration Profiles
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../common.html">Common Payloads</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../mac.html">Mac Payloads</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="accessibility.html"><span class="macos">Accessibility</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="activedirectory.html">Active Directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adcert.html">Active Directory Certificate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appstore.html">App Store</a></li>
+<li class="toctree-l2"><a class="reference internal" href="asam.html">Autonomous Single App Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assetcache.html">AssetCache Client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="certpref.html">Certificate Preference Payload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content-caching.html">Content Caching Payload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coremediaio.html">Core Media IO (Camera)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dashwidgets.html">Parental Control Dashboard Payload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datetime.html">Date and Time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="desktop.html">Desktop Payload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dictionary.html">Dictionary (Parental Controls)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="discrecording.html">Disc Recording</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dock.html">Dock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="energysaver.html">Energy Saver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ethernet.html">802.1x Ethernet Payload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fderecoveryescrow.html">FDE Recovery Key Escrow Payload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="finderburn.html">Finder (Disc Burning)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firewall.html">Firewall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fv2.html">FileVault 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fv2redirect.html">FileVault Recovery Key Redirect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gamecenter.html">Parental Control - Game Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="identification.html">Identification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="identpref.html">Identity Preference Payload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kernelextpolicy.html">Kernel Extension Policy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.html">Unified Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loginitems.html">Login Items</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loginscripts.html">Login Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loginwindow.html">Loginwindow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loginwindow_gp.html">Loginwindow (GlobalPreferences)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mcxother.html">MCX Other</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mcxredirector.html">Folder Redirection (MCX)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mediaaccess.html">Media Access (SystemUIServer)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="networkbrowser.html">Network Browser (Finder)</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Parental Controls - Content Filter</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#keys">Keys</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.familycontrols.contentfilter-whitelistEnabled-auto">whitelistEnabled</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.familycontrols.contentfilter-siteWhitelist-auto">siteWhitelist</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.familycontrols.contentfilter-useContentFilter-auto">useContentFilter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.familycontrols.contentfilter-restrictWeb-auto">restrictWeb</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.familycontrols.contentfilter-filterWhitelist-auto">filterWhitelist</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.familycontrols.contentfilter-filterBlacklist-auto">filterBlacklist</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="parental-timelimits.html">Parental Controls - Time Limits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parentalcontrols.html">Application Access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="printing.html">Printing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screensaver.html">Screen Saver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="securityui.html">UI Security Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setupassistant.html">Setup Assistant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sharekit.html">ShareKit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sidebar.html">Sidebar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="smartcard.html">Smart Card</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spctl.html">System Policy Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sprule.html">System Policy Rule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="submitdiag.html">Submit Diagnostics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="swupd.html">Software Update Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sysprefs.html">System Preference Panes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="systemconfiguration.html">SystemConfiguration (Proxies)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="systemmigration.html">System Migration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="systempolicy.html">System Policy (Gatekeeper)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tcc.html">Privacy Preferences Policy Control Payload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="timemachine.html">Time Machine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="touchid.html">Touch ID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="trackpad.html">TrackPad Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="userpreferences.html">User Preferences (iCloud)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="voicedictation.html">Voice Dictation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ios.html">iOS Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tvos.html">tvOS Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../custom/index.html">Custom Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../official.html">Official Links and Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manifest.html">Manifest File Format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extmanifest.html">Extended Manifest Format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../macos/index.html">macOS Subsystem Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pdp/index.html">Profile Domain Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html#submitting-an-error">Submitting an error</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html#writing-documentation">Writing Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Configuration Profiles</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../mac.html">Mac Payloads</a> &raquo;</li>
+        
+      <li>Parental Controls - Content Filter</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/payloads/mac/parental-contentfilter.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="parental-controls-content-filter">
+<span id="payloadtype-com-apple-familycontrols-contentfilter"></span><h1><a class="toc-backref" href="#id1">Parental Controls - Content Filter</a><a class="headerlink" href="#parental-controls-content-filter" title="Permalink to this headline">¶</a></h1>
+<p>This payload enables you to control access to sites through parental controls.
+As with the System Preference pane you can use two approaches:</p>
+<ul class="simple">
+<li>A simple whitelist, which blocks out everything except for the list.</li>
+<li>A content filter with custom blacklist and whitelist.</li>
+</ul>
+<p><strong>whitelistEnabled</strong> and <strong>useContentFilter</strong> are mutually exclusive.</p>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#parental-controls-content-filter" id="id1">Parental Controls - Content Filter</a><ul>
+<li><a class="reference internal" href="#summary" id="id2">Summary</a></li>
+<li><a class="reference internal" href="#keys" id="id3">Keys</a><ul>
+<li><a class="reference internal" href="#com.apple.familycontrols.contentfilter-whitelistEnabled-auto" id="id4">whitelistEnabled</a></li>
+<li><a class="reference internal" href="#com.apple.familycontrols.contentfilter-siteWhitelist-auto" id="id5">siteWhitelist</a></li>
+<li><a class="reference internal" href="#com.apple.familycontrols.contentfilter-useContentFilter-auto" id="id6">useContentFilter</a></li>
+<li><a class="reference internal" href="#com.apple.familycontrols.contentfilter-restrictWeb-auto" id="id7">restrictWeb</a></li>
+<li><a class="reference internal" href="#com.apple.familycontrols.contentfilter-filterWhitelist-auto" id="id8">filterWhitelist</a></li>
+<li><a class="reference internal" href="#com.apple.familycontrols.contentfilter-filterBlacklist-auto" id="id9">filterBlacklist</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="summary">
+<h2><a class="toc-backref" href="#id2">Summary</a><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">PayloadType:</th><td class="field-body">com.apple.familycontrols.contentfilter</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Supervised Only:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">N/A</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">macOS:</th><td class="field-body">N/A</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">macOS Deprecated:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">N/A</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">iOS:</th><td class="field-body">N/A</td>
+</tr>
+<tr class="field-even field"><th class="field-name">iOS Deprecated:</th><td class="field-body">N/A</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Highlander:</th><td class="field-body">N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="keys">
+<h2><a class="toc-backref" href="#id3">Keys</a><a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="com.apple.familycontrols.contentfilter-whitelistEnabled-auto">
+<h3><a class="toc-backref" href="#id4">whitelistEnabled</a><a class="headerlink" href="#com.apple.familycontrols.contentfilter-whitelistEnabled-auto" title="Permalink to this headline">¶</a></h3>
+<p>Enable site whitelist</p>
+<p>Set to true to use the filterWhiteList and filterBlackList lists.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.familycontrols.contentfilter-siteWhitelist-auto">
+<h3><a class="toc-backref" href="#id5">siteWhitelist</a><a class="headerlink" href="#com.apple.familycontrols.contentfilter-siteWhitelist-auto" title="Permalink to this headline">¶</a></h3>
+<p>Site Whitelist</p>
+<p>Required if whiteListEnabled is true. If specified, this key contains an array of dictionaries that define additional allowed sites besides those in the automated list of allowed and unallowed sites, including disallowed adult sites.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>array</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.familycontrols.contentfilter-useContentFilter-auto">
+<h3><a class="toc-backref" href="#id6">useContentFilter</a><a class="headerlink" href="#com.apple.familycontrols.contentfilter-useContentFilter-auto" title="Permalink to this headline">¶</a></h3>
+<p>Use built in content filter</p>
+<p>Set to true to try to automatically filter content.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.familycontrols.contentfilter-restrictWeb-auto">
+<h3><a class="toc-backref" href="#id7">restrictWeb</a><a class="headerlink" href="#com.apple.familycontrols.contentfilter-restrictWeb-auto" title="Permalink to this headline">¶</a></h3>
+<p>Limit access to websites</p>
+<p>Set to true to enable Web content filters.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>N/A</td>
+<td>always</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.familycontrols.contentfilter-filterWhitelist-auto">
+<h3><a class="toc-backref" href="#id8">filterWhitelist</a><a class="headerlink" href="#com.apple.familycontrols.contentfilter-filterWhitelist-auto" title="Permalink to this headline">¶</a></h3>
+<p>Content Filter Whitelist</p>
+<p>If specified and restrictWeb is true, an array of URLs designating the only allowed Websites.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>array</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.familycontrols.contentfilter-filterBlacklist-auto">
+<h3><a class="toc-backref" href="#id9">filterBlacklist</a><a class="headerlink" href="#com.apple.familycontrols.contentfilter-filterBlacklist-auto" title="Permalink to this headline">¶</a></h3>
+<p>Content Filter Backlist</p>
+<p>If specified and restrictWeb is true, an array of URLs of Websites never to be allowed.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>array</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="parental-timelimits.html" class="btn btn-neutral float-right" title="Parental Controls - Time Limits" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="networkbrowser.html" class="btn btn-neutral" title="Network Browser (Finder)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, MacAdmins Community
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

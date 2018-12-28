@@ -1,0 +1,590 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Mac Payloads &mdash; Configuration Profiles  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Accessibility" href="mac/accessibility.html" />
+    <link rel="prev" title="Wi-Fi" href="common/wifi.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Configuration Profiles
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="common.html">Common Payloads</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Mac Payloads</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/accessibility.html"><span class="macos">Accessibility</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/activedirectory.html">Active Directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/adcert.html">Active Directory Certificate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/appstore.html">App Store</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/asam.html">Autonomous Single App Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/assetcache.html">AssetCache Client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/certpref.html">Certificate Preference Payload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/content-caching.html">Content Caching Payload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/coremediaio.html">Core Media IO (Camera)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/dashwidgets.html">Parental Control Dashboard Payload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/datetime.html">Date and Time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/desktop.html">Desktop Payload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/dictionary.html">Dictionary (Parental Controls)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/discrecording.html">Disc Recording</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/dock.html">Dock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/energysaver.html">Energy Saver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/ethernet.html">802.1x Ethernet Payload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/fderecoveryescrow.html">FDE Recovery Key Escrow Payload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/finderburn.html">Finder (Disc Burning)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/firewall.html">Firewall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/fv2.html">FileVault 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/fv2redirect.html">FileVault Recovery Key Redirect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/gamecenter.html">Parental Control - Game Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/identification.html">Identification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/identpref.html">Identity Preference Payload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/kernelextpolicy.html">Kernel Extension Policy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/logging.html">Unified Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/loginitems.html">Login Items</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/loginscripts.html">Login Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/loginwindow.html">Loginwindow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/loginwindow_gp.html">Loginwindow (GlobalPreferences)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/mcxother.html">MCX Other</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/mcxredirector.html">Folder Redirection (MCX)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/mediaaccess.html">Media Access (SystemUIServer)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/networkbrowser.html">Network Browser (Finder)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/parental-contentfilter.html">Parental Controls - Content Filter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/parental-timelimits.html">Parental Controls - Time Limits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/parentalcontrols.html">Application Access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/printing.html">Printing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/screensaver.html">Screen Saver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/securityui.html">UI Security Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/setupassistant.html">Setup Assistant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/sharekit.html">ShareKit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/sidebar.html">Sidebar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/smartcard.html">Smart Card</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/spctl.html">System Policy Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/sprule.html">System Policy Rule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/submitdiag.html">Submit Diagnostics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/swupd.html">Software Update Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/sysprefs.html">System Preference Panes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/systemconfiguration.html">SystemConfiguration (Proxies)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/systemmigration.html">System Migration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/systempolicy.html">System Policy (Gatekeeper)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/tcc.html">Privacy Preferences Policy Control Payload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/timemachine.html">Time Machine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/touchid.html">Touch ID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/trackpad.html">TrackPad Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/userpreferences.html">User Preferences (iCloud)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/voicedictation.html">Voice Dictation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ios.html">iOS Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tvos.html">tvOS Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../custom/index.html">Custom Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../official.html">Official Links and Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manifest.html">Manifest File Format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extmanifest.html">Extended Manifest Format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../macos/index.html">macOS Subsystem Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pdp/index.html">Profile Domain Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html#submitting-an-error">Submitting an error</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html#writing-documentation">Writing Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Configuration Profiles</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Mac Payloads</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/payloads/mac.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="mac-payloads">
+<h1>Mac Payloads<a class="headerlink" href="#mac-payloads" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Mac Payloads:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="mac/accessibility.html"><span class="macos">Accessibility</span></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/accessibility.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/accessibility.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/activedirectory.html">Active Directory</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/activedirectory.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/activedirectory.html#keys">Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/activedirectory.html#links">Links</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/adcert.html">Active Directory Certificate</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/adcert.html#keys">Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/adcert.html#links">Links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/adcert.html#troubleshooting">Troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/adcert.html#uninstall-behaviour">Uninstall Behaviour</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/appstore.html">App Store</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/appstore.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/appstore.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/asam.html">Autonomous Single App Mode</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/asam.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/asam.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/assetcache.html">AssetCache Client</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/assetcache.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/assetcache.html#multiple-payloads">Multiple Payloads</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/certpref.html">Certificate Preference Payload</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/certpref.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/certpref.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/content-caching.html">Content Caching Payload</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/content-caching.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/content-caching.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/coremediaio.html">Core Media IO (Camera)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/coremediaio.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/coremediaio.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/dashwidgets.html">Parental Control Dashboard Payload</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/dashwidgets.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/dashwidgets.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/datetime.html">Date and Time</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/datetime.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/datetime.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/desktop.html">Desktop Payload</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/desktop.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/desktop.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/dictionary.html">Dictionary (Parental Controls)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/dictionary.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/dictionary.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/discrecording.html">Disc Recording</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/discrecording.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/discrecording.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/dock.html">Dock</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/dock.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/dock.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/energysaver.html">Energy Saver</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/energysaver.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/energysaver.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/ethernet.html">802.1x Ethernet Payload</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/ethernet.html#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/fderecoveryescrow.html">FDE Recovery Key Escrow Payload</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/fderecoveryescrow.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/fderecoveryescrow.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/finderburn.html">Finder (Disc Burning)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/finderburn.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/finderburn.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/firewall.html">Firewall</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/firewall.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/firewall.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/fv2.html">FileVault 2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/fv2.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/fv2.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/fv2redirect.html">FileVault Recovery Key Redirect</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/fv2redirect.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/fv2redirect.html#keys">Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/fv2redirect.html#links">Links</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/gamecenter.html">Parental Control - Game Center</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/gamecenter.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/gamecenter.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/identification.html">Identification</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/identification.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/identification.html#keys">Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/identification.html#payloads-supporting-identification">Payloads Supporting Identification</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/identpref.html">Identity Preference Payload</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/identpref.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/identpref.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/kernelextpolicy.html">Kernel Extension Policy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/kernelextpolicy.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/kernelextpolicy.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/logging.html">Unified Logging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/logging.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/logging.html#keys">Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/logging.html#notes">Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/logging.html#links">Links</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/loginitems.html">Login Items</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/loginitems.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/loginitems.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/loginscripts.html">Login Scripts</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/loginscripts.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/loginscripts.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/loginwindow.html">Loginwindow</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/loginwindow.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/loginwindow.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/loginwindow_gp.html">Loginwindow (GlobalPreferences)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/loginwindow_gp.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/loginwindow_gp.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/mcxother.html">MCX Other</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/mcxother.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/mcxother.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/mcxredirector.html">Folder Redirection (MCX)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/mcxredirector.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/mcxredirector.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/mediaaccess.html">Media Access (SystemUIServer)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/mediaaccess.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/mediaaccess.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/networkbrowser.html">Network Browser (Finder)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/networkbrowser.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/networkbrowser.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/parental-contentfilter.html">Parental Controls - Content Filter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/parental-contentfilter.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/parental-contentfilter.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/parental-timelimits.html">Parental Controls - Time Limits</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/parental-timelimits.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/parental-timelimits.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/parentalcontrols.html">Application Access</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/parentalcontrols.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/parentalcontrols.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/printing.html">Printing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/printing.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/printing.html#keys">Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/printing.html#links">Links</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/screensaver.html">Screen Saver</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/screensaver.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/screensaver.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/securityui.html">UI Security Preferences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/securityui.html#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/setupassistant.html">Setup Assistant</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/setupassistant.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/setupassistant.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/sharekit.html">ShareKit</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/sharekit.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/sharekit.html#keys">Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/sharekit.html#links">Links</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/sidebar.html">Sidebar</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/sidebar.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/sidebar.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/smartcard.html">Smart Card</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/smartcard.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/smartcard.html#keys">Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/smartcard.html#links">Links</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/spctl.html">System Policy Control</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/spctl.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/spctl.html#keys">Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/spctl.html#links">Links</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/sprule.html">System Policy Rule</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/sprule.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/sprule.html#keys">Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/sprule.html#links">Links</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/submitdiag.html">Submit Diagnostics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/submitdiag.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/submitdiag.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/swupd.html">Software Update Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mac/sysprefs.html">System Preference Panes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/sysprefs.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/sysprefs.html#bugs">Bugs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/systemconfiguration.html">SystemConfiguration (Proxies)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/systemconfiguration.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/systemconfiguration.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/systemmigration.html">System Migration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/systemmigration.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/systemmigration.html#keys">Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/systemmigration.html#links">Links</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/systempolicy.html">System Policy (Gatekeeper)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/systempolicy.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/systempolicy.html#links">Links</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/tcc.html">Privacy Preferences Policy Control Payload</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/tcc.html#keys">Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/tcc.html#service-dictionary-keys">Service Dictionary Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/timemachine.html">Time Machine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/timemachine.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mac/timemachine.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/touchid.html">Touch ID</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/touchid.html#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/trackpad.html">TrackPad Settings</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/trackpad.html#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/userpreferences.html">User Preferences (iCloud)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/userpreferences.html#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac/voicedictation.html">Voice Dictation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mac/voicedictation.html#summary">Summary</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="mac/accessibility.html" class="btn btn-neutral float-right" title="Accessibility" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="common/wifi.html" class="btn btn-neutral" title="Wi-Fi" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, MacAdmins Community
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

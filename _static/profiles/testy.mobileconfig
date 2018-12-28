@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>PayloadDisplayName</key>
+			<string>Its tricky</string>
+			<key>PayloadType</key>
+			<string>/mnt/test</string>
+			<key>AllowGuestAccess</key>
+			<true/>
+			<key>PayloadIdentifier</key>
+			<string>tricky.0</string>
+			<key>PayloadUUID</key>
+			<string>9D43A4D0-B035-4838-9E40-79CF51A00B57</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Its tricky</string>
+	<key>PayloadDisplayName</key>
+	<string>Its tricky</string>
+	<key>PayloadIdentifier</key>
+	<string>testy</string>
+	<key>PayloadRemovalDisallowed</key>
+	<false/>
+	<key>PayloadScope</key>
+	<string>System</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>C9568EB4-D503-4A60-A01C-005ED14375C1</string>
+</dict>
+</plist>

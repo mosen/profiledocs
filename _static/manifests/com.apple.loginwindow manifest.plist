@@ -96,7 +96,7 @@
             </dict>
             <dict>
                 <key>pfm_description</key>
-                <string>Set the default heading of the Login Window.  Example values include:  "HostName", "SystemVersion", "SystemBuild", "SerialNumber", "IPAddress", "DSStatus", "Time".</string>
+                <string>Set the default heading of the Login Window.  Example values include:  "HostName", "SystemVersion", "SystemBuild", "SerialNumber", "IPAddress", "DSStatus", "Time". After macOS 10.10, any value will allow the user to click the clock to cycle through info</string>
                 <key>pfm_name</key>
                 <string>AdminHostInfo</string>
                 <key>pfm_title</key>

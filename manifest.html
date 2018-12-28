@@ -13,6 +13,8 @@
 
   
   
+  
+  
 
   
 
@@ -22,28 +24,22 @@
 
   
 
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="Configuration Profiles  documentation" href="index.html"/>
-        <link rel="next" title="Extended Manifest Format" href="extmanifest.html"/>
-        <link rel="prev" title="Official Links and Documentation" href="official.html"/> 
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Extended Manifest Format" href="extmanifest.html" />
+    <link rel="prev" title="Official Links and Documentation" href="official.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -80,11 +76,17 @@
           
             
             
-                <p class="caption"><span class="caption-text">Contents:</span></p>
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contributing.html#submitting-an-error">Submitting an error</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contributing.html#writing-documentation">Writing Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="payloads/common.html">Common Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="payloads/mac.html">Mac Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="payloads/ios.html">iOS Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="payloads/tvos.html">tvOS Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom/index.html">Custom Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting/index.html">Troubleshooting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="official.html">Official Links and Documentation</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Manifest File Format</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#basic-keys">Basic Keys</a><ul>
@@ -132,11 +134,11 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="extmanifest.html">Extended Manifest Format</a></li>
-<li class="toctree-l1"><a class="reference internal" href="payloads/index.html">Payloads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="custom/index.html">Custom Settings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="troubleshooting/index.html">Troubleshooting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="macos/index.html">macOS Subsystem Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pdp/index.html">Profile Domain Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html#submitting-an-error">Submitting an error</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html#writing-documentation">Writing Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
 </ul>
 
@@ -149,34 +151,54 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">Configuration Profiles</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Configuration Profiles</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-    <li>Manifest File Format</li>
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Manifest File Format</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
             <a href="_sources/manifest.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -301,7 +323,7 @@ If the <strong>pfm_type</strong> is array or dict it can contain an entire struc
 <dt>Type</dt>
 <dd><strong>Integer</strong> or <strong>Real</strong> maximum value (if <strong>pfm_type</strong> is integer or real)</dd>
 </dl>
-<p>There exist a typo in some manifests where this key is named: &#8220;pmf_range_max&#8221;</p>
+<p>There exist a typo in some manifests where this key is named: “pmf_range_max”</p>
 </div>
 <div class="section" id="pfm-format">
 <h3>pfm_format<a class="headerlink" href="#pfm-format" title="Permalink to this headline">¶</a></h3>
@@ -315,7 +337,7 @@ If the <strong>pfm_type</strong> is array or dict it can contain an entire struc
 <h3>pfm_require<a class="headerlink" href="#pfm-require" title="Permalink to this headline">¶</a></h3>
 <dl class="docutils">
 <dt>Type</dt>
-<dd>String, one of &#8220;always&#8221;, &#8220;push&#8221;</dd>
+<dd>String, one of “always”, “push”</dd>
 </dl>
 <p>Indicates whether this key is required to be present.</p>
 <ul class="simple">
@@ -331,7 +353,7 @@ If the <strong>pfm_type</strong> is array or dict it can contain an entire struc
 <h3>pfm_required<a class="headerlink" href="#pfm-required" title="Permalink to this headline">¶</a></h3>
 <dl class="docutils">
 <dt>Type</dt>
-<dd>Boolean or String &#8220;always&#8221;</dd>
+<dd>Boolean or String “always”</dd>
 </dl>
 <p>Indicates whether this key is required to be present.</p>
 <ul class="simple">
@@ -345,7 +367,7 @@ If the <strong>pfm_type</strong> is array or dict it can contain an entire struc
 <dd>Integer representing the minimum number of times this key needs to appear.</dd>
 </dl>
 <p>Prior to pfm_require this was used to specify optional and required keys.
-It is still in use for array pairs such as com.apple.security.scep <code class="docutils literal"><span class="pre">Subject</span></code>.</p>
+It is still in use for array pairs such as com.apple.security.scep <code class="docutils literal notranslate"><span class="pre">Subject</span></code>.</p>
 </div>
 <div class="section" id="pfm-repetition-max">
 <h3>pfm_repetition_max<a class="headerlink" href="#pfm-repetition-max" title="Permalink to this headline">¶</a></h3>
@@ -387,7 +409,7 @@ payload will be valid.</p>
 <li>system</li>
 <li>system-managed</li>
 </ul>
-<p>The <code class="docutils literal"><span class="pre">-managed</span></code> suffix seems to infer that the key will be <em>FORCED</em>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">-managed</span></code> suffix seems to infer that the key will be <em>FORCED</em>.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Needs clarification</p>
@@ -404,7 +426,7 @@ payload will be valid.</p>
 </dl>
 <p>Specifies a key that this key depends on, and what the value should be to satisfy this condition.</p>
 <p>Example:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">key</span><span class="o">&gt;</span><span class="n">pfm_target_conditions</span><span class="o">&lt;/</span><span class="n">key</span><span class="o">&gt;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">key</span><span class="o">&gt;</span><span class="n">pfm_target_conditions</span><span class="o">&lt;/</span><span class="n">key</span><span class="o">&gt;</span>
 <span class="o">&lt;</span><span class="n">array</span><span class="o">&gt;</span>
     <span class="o">&lt;</span><span class="nb">dict</span><span class="o">&gt;</span>
         <span class="o">&lt;</span><span class="n">key</span><span class="o">&gt;</span><span class="n">pfm_target</span><span class="o">&lt;/</span><span class="n">key</span><span class="o">&gt;</span>
@@ -417,7 +439,7 @@ payload will be valid.</p>
 </div>
 <p>The value of <strong>pfm_target</strong> in this case refers to another key called <strong>DomainName</strong>.
 The condition, <strong>pfm_present</strong> says that this key must not be present to satisfy the condition.</p>
-<p>If this condition is a child of <a class="reference internal" href="#pfm-exclude">pfm_exclude</a> then the condition is &#8220;inverted&#8221;. The key will not be required unless
+<p>If this condition is a child of <a class="reference internal" href="#pfm-exclude">pfm_exclude</a> then the condition is “inverted”. The key will not be required unless
 this condition is not satisfied.</p>
 <div class="section" id="pfm-target">
 <h4>pfm_target<a class="headerlink" href="#pfm-target" title="Permalink to this headline">¶</a></h4>
@@ -426,7 +448,7 @@ this condition is not satisfied.</p>
 <dd>String</dd>
 </dl>
 <p>This key is part of a set of conditions and specifies the target key to evaluate. For nested keys the key names can be
-separated by a dot &#8221;.&#8221;</p>
+separated by a dot “.”</p>
 </div>
 <div class="section" id="pfm-present">
 <h4>pfm_present<a class="headerlink" href="#pfm-present" title="Permalink to this headline">¶</a></h4>
@@ -450,7 +472,7 @@ separated by a dot &#8221;.&#8221;</p>
 <dt>Type</dt>
 <dd>Array of target <strong>pfm_type</strong></dd>
 </dl>
-<p>This rule will pass if the target doesn&#8217;t match any value listed in the array.</p>
+<p>This rule will pass if the target doesn’t match any value listed in the array.</p>
 </div>
 <div class="section" id="id1">
 <h4>pfm_range_list<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
@@ -472,14 +494,14 @@ separated by a dot &#8221;.&#8221;</p>
 </div>
 <div class="section" id="union-policies-mcx">
 <h2>Union Policies (MCX)<a class="headerlink" href="#union-policies-mcx" title="Permalink to this headline">¶</a></h2>
-<p>The <code class="docutils literal"><span class="pre">union</span> <span class="pre">policy</span></code> type appears in older MCX style manifests (originally occurring in OS X Server 10.4-10.6).</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">union</span> <span class="pre">policy</span></code> type appears in older MCX style manifests (originally occurring in OS X Server 10.4-10.6).</p>
 <div class="section" id="pfm-upk-input-keys">
 <h3>pfm_upk_input_keys<a class="headerlink" href="#pfm-upk-input-keys" title="Permalink to this headline">¶</a></h3>
 <dl class="docutils">
 <dt>Type</dt>
 <dd>Array of key names which will be processed to produce an output key</dd>
 </dl>
-<p>Usually refers to a key name with a <code class="docutils literal"><span class="pre">-Raw</span></code> suffix that will be processed to produce the actual key.</p>
+<p>Usually refers to a key name with a <code class="docutils literal notranslate"><span class="pre">-Raw</span></code> suffix that will be processed to produce the actual key.</p>
 </div>
 <div class="section" id="pfm-upk-output-name">
 <h3>pfm_upk_output_name<a class="headerlink" href="#pfm-upk-output-name" title="Permalink to this headline">¶</a></h3>
@@ -503,15 +525,16 @@ separated by a dot &#8221;.&#8221;</p>
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="extmanifest.html" class="btn btn-neutral float-right" title="Extended Manifest Format" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="extmanifest.html" class="btn btn-neutral float-right" title="Extended Manifest Format" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="official.html" class="btn btn-neutral" title="Official Links and Documentation" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="official.html" class="btn btn-neutral" title="Official Links and Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -520,11 +543,11 @@ separated by a dot &#8221;.&#8221;</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2016, MacAdmins Community.
+        &copy; Copyright 2016, MacAdmins Community
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -539,34 +562,24 @@ separated by a dot &#8221;.&#8221;</p>
 
   
 
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
 
   
 
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
+  <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>

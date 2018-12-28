@@ -1,0 +1,422 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Notification Settings &mdash; Configuration Profiles  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="OSX Server Account" href="osxserver.html" />
+    <link rel="prev" title="Home Screen Layout" href="homescreen.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Configuration Profiles
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../common.html">Common Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mac.html">Mac Payloads</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../ios.html">iOS Payloads</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="applock.html">App Lock Payload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appmapping.html">App-to-Per-App VPN Mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cellular.html">Cellular Payload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dnsproxy.html">DNS Proxy Payload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="domains.html">Domains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="education.html">Education Configuration Payload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="google.html">Google Account Payload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="homescreen.html">Home Screen Layout</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Notification Settings</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#keys">Keys</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.notificationsettings-NotificationSettings-auto">NotificationSettings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#notification-settings-item">Notification Settings Item</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#links">Links</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="osxserver.html">OSX Server Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="perappvpn.html">Per-App VPN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shareddevice.html">Shared Device</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sso.html">Single-Sign On</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webcontentfilter.html">Web Content Filter</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tvos.html">tvOS Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../custom/index.html">Custom Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../official.html">Official Links and Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manifest.html">Manifest File Format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extmanifest.html">Extended Manifest Format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../macos/index.html">macOS Subsystem Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pdp/index.html">Profile Domain Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html#submitting-an-error">Submitting an error</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html#writing-documentation">Writing Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Configuration Profiles</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../ios.html">iOS Payloads</a> &raquo;</li>
+        
+      <li>Notification Settings</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/payloads/ios/notification.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="notification-settings">
+<h1><a class="toc-backref" href="#id1">Notification Settings</a><a class="headerlink" href="#notification-settings" title="Permalink to this headline">¶</a></h1>
+<p>It is supported on the User Channel.</p>
+<p>This payload specifies the restriction enforced notification settings for apps, using their bundle identifiers.</p>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#notification-settings" id="id1">Notification Settings</a><ul>
+<li><a class="reference internal" href="#summary" id="id2">Summary</a></li>
+<li><a class="reference internal" href="#keys" id="id3">Keys</a><ul>
+<li><a class="reference internal" href="#com.apple.notificationsettings-NotificationSettings-auto" id="id4">NotificationSettings</a></li>
+<li><a class="reference internal" href="#notification-settings-item" id="id5">Notification Settings Item</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#links" id="id6">Links</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="summary">
+<h2><a class="toc-backref" href="#id2">Summary</a><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">PayloadType:</th><td class="field-body">com.apple.notificationsettings</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Supervised Only:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">True</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">macOS:</th><td class="field-body">N/A</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">macOS Deprecated:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">N/A</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">iOS:</th><td class="field-body">9.3</td>
+</tr>
+<tr class="field-even field"><th class="field-name">iOS Deprecated:</th><td class="field-body">N/A</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Highlander:</th><td class="field-body">True</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="keys">
+<h2><a class="toc-backref" href="#id3">Keys</a><a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="com.apple.notificationsettings-NotificationSettings-auto">
+<h3><a class="toc-backref" href="#id4">NotificationSettings</a><a class="headerlink" href="#com.apple.notificationsettings-NotificationSettings-auto" title="Permalink to this headline">¶</a></h3>
+<p>Notification Settings</p>
+<p>Notification settings for each app</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>array</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="notification-settings-item">
+<h3><a class="toc-backref" href="#id5">Notification Settings Item</a><a class="headerlink" href="#notification-settings-item" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="43%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Title</th>
+<th class="head">Description</th>
+<th class="head">Required</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>BundleIdentifier</td>
+<td>string</td>
+<td>App Bundle Identifier</td>
+<td>Bundle identifier of the target app</td>
+<td>always</td>
+</tr>
+<tr class="row-odd"><td>NotificationsEnabled</td>
+<td>boolean</td>
+<td>Enable Notifications</td>
+<td>Whether notifications are allowed for this app.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>ShowInNotificationCenter</td>
+<td>boolean</td>
+<td>Show in Notification Center</td>
+<td>Whether notifications can be shown in notification center.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>ShowInLockScreen</td>
+<td>boolean</td>
+<td>Show in Lock Screen</td>
+<td>Whether notifications can be shown in the lock screen.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>AlertType</td>
+<td>integer</td>
+<td>Alert Type</td>
+<td>The type of alert for notifications for this app. None/Banner/Alert</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>BadgesEnabled</td>
+<td>boolean</td>
+<td>Badges Enabled</td>
+<td>Whether badges are allowed for this app.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>SoundsEnabled</td>
+<td>boolean</td>
+<td>Sounds Enabled</td>
+<td>Whether sounds are allowed for this app.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>ShowInCarPlay</td>
+<td>boolean</td>
+<td>Show in Car Play</td>
+<td>Whether notifications can be shown in CarPlay.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>GroupingType</td>
+<td>integer</td>
+<td>The type of grouping for notifications for this app</td>
+<td>0 auto, 1 by app, 2 off - do not group</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>CriticalAlertEnabled</td>
+<td>boolean</td>
+<td>Critical Alerts Enabled</td>
+<td>Whether an app can mark a notification as a critical alert that will ignore Do Not Disturb and ringer settings.	</td>
+<td>n/a</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="links">
+<h2><a class="toc-backref" href="#id6">Links</a><a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW604">Official Documentation</a>.</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="osxserver.html" class="btn btn-neutral float-right" title="OSX Server Account" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="homescreen.html" class="btn btn-neutral" title="Home Screen Layout" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, MacAdmins Community
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

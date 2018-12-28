@@ -8,21 +8,26 @@ Welcome to MacAdmins Profile Reference's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   contributing.rst
-   official.rst
-   manifest.rst
-   extmanifest.rst
+   payloads/common
+   payloads/mac
+   payloads/ios
+   payloads/tvos
 
-   payloads/index.rst
    custom/index.rst
 
    troubleshooting/index.rst
+
+   official.rst
+   manifest.rst
+   extmanifest.rst
 
    mdm/commands/index
 
    macos/index.rst
 
    pdp/index.rst
+
+   contributing.rst
 
    glossary.rst
 

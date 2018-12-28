@@ -1,0 +1,906 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Education Configuration Payload &mdash; Configuration Profiles  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Google Account Payload" href="google.html" />
+    <link rel="prev" title="Domains" href="domains.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Configuration Profiles
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../common.html">Common Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mac.html">Mac Payloads</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../ios.html">iOS Payloads</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="applock.html">App Lock Payload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appmapping.html">App-to-Per-App VPN Mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cellular.html">Cellular Payload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dnsproxy.html">DNS Proxy Payload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="domains.html">Domains</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Education Configuration Payload</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#keys">Keys</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.education-OrganizationUUID-auto">OrganizationUUID</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.education-OrganizationName-auto">OrganizationName</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.education-PayloadCertificateUUID-auto">PayloadCertificateUUID</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.education-LeaderPayloadCertificateAnchorUUID-auto">LeaderPayloadCertificateAnchorUUID</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.education-MemberPayloadCertificateAnchorUUID-auto">MemberPayloadCertificateAnchorUUID</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.education-UserIdentifier-auto">UserIdentifier</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.education-Departments-auto">Departments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#department-items">Department Items</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#group-items">Group Items</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#user-items">User Items</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="google.html">Google Account Payload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="homescreen.html">Home Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notification.html">Notification Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osxserver.html">OSX Server Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="perappvpn.html">Per-App VPN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shareddevice.html">Shared Device</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sso.html">Single-Sign On</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webcontentfilter.html">Web Content Filter</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tvos.html">tvOS Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../custom/index.html">Custom Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../official.html">Official Links and Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manifest.html">Manifest File Format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extmanifest.html">Extended Manifest Format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../macos/index.html">macOS Subsystem Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pdp/index.html">Profile Domain Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html#submitting-an-error">Submitting an error</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html#writing-documentation">Writing Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Configuration Profiles</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../ios.html">iOS Payloads</a> &raquo;</li>
+        
+      <li>Education Configuration Payload</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/payloads/ios/education.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="education-configuration-payload">
+<span id="payloadtype-com-apple-education"></span><h1><a class="toc-backref" href="#id1">Education Configuration Payload</a><a class="headerlink" href="#education-configuration-payload" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-right" style="width: 200px">
+<img alt="_static/ProfileManifests/Icons/ManifestsApple/com.apple.education.png" src="_static/ProfileManifests/Icons/ManifestsApple/com.apple.education.png" />
+</div>
+<p>The Education Configuration Payload defines the users, groups, and departments within an educational organization.</p>
+<ul class="simple">
+<li>All identities must be configured as both SSL clients and servers.</li>
+<li>Leader certificates must have the common name prefix “leader” (case insensitive).</li>
+<li>Member certificates must have the common name prefix “member” (case insensitive).</li>
+</ul>
+<p><code class="xref download docutils literal notranslate"><span class="pre">Template</span></code></p>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#education-configuration-payload" id="id1">Education Configuration Payload</a><ul>
+<li><a class="reference internal" href="#summary" id="id2">Summary</a></li>
+<li><a class="reference internal" href="#keys" id="id3">Keys</a><ul>
+<li><a class="reference internal" href="#com.apple.education-OrganizationUUID-auto" id="id4">OrganizationUUID</a></li>
+<li><a class="reference internal" href="#com.apple.education-OrganizationName-auto" id="id5">OrganizationName</a></li>
+<li><a class="reference internal" href="#com.apple.education-PayloadCertificateUUID-auto" id="id6">PayloadCertificateUUID</a></li>
+<li><a class="reference internal" href="#com.apple.education-LeaderPayloadCertificateAnchorUUID-auto" id="id7">LeaderPayloadCertificateAnchorUUID</a></li>
+<li><a class="reference internal" href="#com.apple.education-MemberPayloadCertificateAnchorUUID-auto" id="id8">MemberPayloadCertificateAnchorUUID</a></li>
+<li><a class="reference internal" href="#com.apple.education-UserIdentifier-auto" id="id9">UserIdentifier</a></li>
+<li><a class="reference internal" href="#com.apple.education-Departments-auto" id="id10">Departments</a></li>
+<li><a class="reference internal" href="#department-items" id="id11">Department Items</a><ul>
+<li><a class="reference internal" href="#com.apple.education-Groups-auto" id="id12">Groups</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#group-items" id="id13">Group Items</a><ul>
+<li><a class="reference internal" href="#com.apple.education-Users-auto" id="id14">Users</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#user-items" id="id15">User Items</a><ul>
+<li><a class="reference internal" href="#com.apple.education-DeviceGroups-auto" id="id16">DeviceGroups</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="summary">
+<h2><a class="toc-backref" href="#id2">Summary</a><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">PayloadType:</th><td class="field-body">com.apple.education</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Supervised Only:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">True</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">macOS:</th><td class="field-body">N/A</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">macOS Deprecated:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">N/A</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">iOS:</th><td class="field-body">9.3</td>
+</tr>
+<tr class="field-even field"><th class="field-name">iOS Deprecated:</th><td class="field-body">N/A</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Highlander:</th><td class="field-body">N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="keys">
+<h2><a class="toc-backref" href="#id3">Keys</a><a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="com.apple.education-OrganizationUUID-auto">
+<h3><a class="toc-backref" href="#id4">OrganizationUUID</a><a class="headerlink" href="#com.apple.education-OrganizationUUID-auto" title="Permalink to this headline">¶</a></h3>
+<p>Organization Identifier</p>
+<p>This can be any valid UUID. All teacher and student devices that need to communicate with one another must have the same OrganizationUUID, particularly if they originated from different Device Enrollment Programs.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>always</td>
+<td>^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.education-OrganizationName-auto">
+<h3><a class="toc-backref" href="#id5">OrganizationName</a><a class="headerlink" href="#com.apple.education-OrganizationName-auto" title="Permalink to this headline">¶</a></h3>
+<p>Organization Display Name</p>
+<p>This name will be shown in the iOS login screen.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>always</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.education-PayloadCertificateUUID-auto">
+<h3><a class="toc-backref" href="#id6">PayloadCertificateUUID</a><a class="headerlink" href="#com.apple.education-PayloadCertificateUUID-auto" title="Permalink to this headline">¶</a></h3>
+<p>Client Authentication Certificate UUID</p>
+<p>The UUID of an identity certificate payload that will be used to perform client authentication with other devices.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>always</td>
+<td>^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.education-LeaderPayloadCertificateAnchorUUID-auto">
+<h3><a class="toc-backref" href="#id7">LeaderPayloadCertificateAnchorUUID</a><a class="headerlink" href="#com.apple.education-LeaderPayloadCertificateAnchorUUID-auto" title="Permalink to this headline">¶</a></h3>
+<p>Leader Peer Identities</p>
+<p>An array of UUIDs referring to certificate payloads that will be used to authorize leader peer certificate identities. This array must contain all certificates needed to validate the entire chain of trust. Leader certificates must have the common name prefix leader (case insensitive).</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>array</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.education-MemberPayloadCertificateAnchorUUID-auto">
+<h3><a class="toc-backref" href="#id8">MemberPayloadCertificateAnchorUUID</a><a class="headerlink" href="#com.apple.education-MemberPayloadCertificateAnchorUUID-auto" title="Permalink to this headline">¶</a></h3>
+<p>Group Member Peer Identities</p>
+<p>An array of UUIDs referring to certificate payloads that will be used to authorize group member peer certificate identities. This array must contain all certificates needed to validate the entire chain of trust. Member certificates must have the common name prefix member (case insensitive).</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>array</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.education-UserIdentifier-auto">
+<h3><a class="toc-backref" href="#id9">UserIdentifier</a><a class="headerlink" href="#com.apple.education-UserIdentifier-auto" title="Permalink to this headline">¶</a></h3>
+<p>Device User</p>
+<p>A unique string that identifies the user of this device within the organization.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.education-Departments-auto">
+<h3><a class="toc-backref" href="#id10">Departments</a><a class="headerlink" href="#com.apple.education-Departments-auto" title="Permalink to this headline">¶</a></h3>
+<p>Departments</p>
+<p>Shared: An array of dictionaries that define departments that are shown in the iOS login window. Leader: An array of dictionaries that define departments that are shown in the Classroom app.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>array</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="department-items">
+<h3><a class="toc-backref" href="#id11">Department Items</a><a class="headerlink" href="#department-items" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="43%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Title</th>
+<th class="head">Description</th>
+<th class="head">Required</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Name</td>
+<td>string</td>
+<td>Department Display Name</td>
+<td>The display name of the department.</td>
+<td>always</td>
+</tr>
+<tr class="row-odd"><td>GroupBeaconIDs</td>
+<td>array</td>
+<td>Group Beacon Identifiers</td>
+<td>group beacon identifiers that are members of this department.</td>
+<td>always</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="com.apple.education-Groups-auto">
+<h4><a class="toc-backref" href="#id12">Groups</a><a class="headerlink" href="#com.apple.education-Groups-auto" title="Permalink to this headline">¶</a></h4>
+<p>Groups</p>
+<p>Shared: An array of dictionaries that define groups that the user can select in the login window.
+                    Leader: An array of dictionaries that define the groups that the user can control.
+                    Member: An array of dictionaries that define the groups of which the user is a member.
+                </p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>array</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="group-items">
+<h3><a class="toc-backref" href="#id13">Group Items</a><a class="headerlink" href="#group-items" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="43%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Title</th>
+<th class="head">Description</th>
+<th class="head">Required</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>BeaconID</td>
+<td>integer</td>
+<td>Group Unique Beacon ID</td>
+<td>unsigned 16 bit integer specifying this group’s unique beacon ID.</td>
+<td>always</td>
+</tr>
+<tr class="row-odd"><td>Name</td>
+<td>string</td>
+<td>Group Display Name</td>
+<td>The display name of the group.</td>
+<td>always</td>
+</tr>
+<tr class="row-even"><td>Description</td>
+<td>string</td>
+<td>Group Description</td>
+<td>The description of the group.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>ImageURL</td>
+<td>string</td>
+<td>Image URL</td>
+<td>URL of an image for the group.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>ConfigurationSource</td>
+<td>string</td>
+<td>Configuration Source</td>
+<td>the source that provided this group; e.g. iTunesU, SIS, or MDM.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>LeaderIdentifiers</td>
+<td>array</td>
+<td>Leader Identifiers</td>
+<td>user identifiers that are leaders of this group.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>MemberIdentifiers</td>
+<td>array</td>
+<td>Member Identifiers</td>
+<td>strings that refer to entries in the Users array that are members of the group.</td>
+<td>always</td>
+</tr>
+<tr class="row-odd"><td>DeviceGroupIdentifiers</td>
+<td>array</td>
+<td>Device Group Identifiers</td>
+<td>identifier strings that refer to entries in the DeviceGroups array that are device groups to which the instructor can assign users from this class.</td>
+<td>always</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="com.apple.education-Users-auto">
+<h4><a class="toc-backref" href="#id14">Users</a><a class="headerlink" href="#com.apple.education-Users-auto" title="Permalink to this headline">¶</a></h4>
+<p>Users</p>
+<p> Shared: An array of dictionaries that define the users that are shown in the iOS login window.
+                    Leader: An array of dictionaries that define users that are members of the leader’s groups.
+                    Member: An array of dictionaries that must contain the definition of the user specified in the UserIdentifier key.
+                    With one-to-one member devices, this key should include only the device user and the leader but not other class members.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>array</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="user-items">
+<h3><a class="toc-backref" href="#id15">User Items</a><a class="headerlink" href="#user-items" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="43%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Title</th>
+<th class="head">Description</th>
+<th class="head">Required</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Identifier</td>
+<td>string</td>
+<td>User ID</td>
+<td>uniquely identifies a user in the organization.</td>
+<td>always</td>
+</tr>
+<tr class="row-odd"><td>Name</td>
+<td>string</td>
+<td>User Name</td>
+<td>The display name of the user.</td>
+<td>always</td>
+</tr>
+<tr class="row-even"><td>GivenName</td>
+<td>string</td>
+<td>Given Name</td>
+<td>will be displayed as the given name of the user.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>FamilyName</td>
+<td>string</td>
+<td>Family Name</td>
+<td>will be displayed as the family name of the user.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>ImageURL</td>
+<td>string</td>
+<td>User Image</td>
+<td>A string containing a URL pointing to an image of the user. This image will be displayed in the iOS login screen and in the Classroom app. The recommended resolution is 256 x 256 pixels (512 x 512 pixels on a 2x device). The recommended formats are JPEG, PNG, and TIFF. The ResourcePayloadCertificateUUID identity certificate or the MDM client identity will be used to perform authentication when fetching the image.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>FullScreenImageURL</td>
+<td>string</td>
+<td>User Full Screen Image</td>
+<td>URL pointing to an image of the user. The ResourcePayloadCertificateUUID identity certificate or the MDM client identity will be used to perform authentication when fetching the specified resource.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-even"><td>AppleID</td>
+<td>string</td>
+<td>Managed Apple ID</td>
+<td>the Managed Apple ID for this user.</td>
+<td>n/a</td>
+</tr>
+<tr class="row-odd"><td>PasscodeType</td>
+<td>string</td>
+<td>Passcode Length</td>
+<td>The passcode UI to show when the user is at the login window</td>
+<td>n/a</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="com.apple.education-DeviceGroups-auto">
+<h4><a class="toc-backref" href="#id16">DeviceGroups</a><a class="headerlink" href="#com.apple.education-DeviceGroups-auto" title="Permalink to this headline">¶</a></h4>
+<p>Device Groups</p>
+<p>Leader: An array of dictionaries that define the device groups to which the leader can assign devices. This key is not included in member payloads.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>array</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="43%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Type</th>
+<th class="head">Title</th>
+<th class="head">Description</th>
+<th class="head">Required</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Identifier</td>
+<td>string</td>
+<td>Device Group ID</td>
+<td>uniquely identifies a device group in the organization.</td>
+<td>always</td>
+</tr>
+<tr class="row-odd"><td>Name</td>
+<td>string</td>
+<td>Device Group Name</td>
+<td>Will be displayed as the name of the device group, which must be unique in the organization</td>
+<td>always</td>
+</tr>
+<tr class="row-even"><td>SerialNumbers</td>
+<td>array</td>
+<td>Device Serial Numbers</td>
+<td>strings containing the serial numbers of the devices in the group.</td>
+<td>always</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="google.html" class="btn btn-neutral float-right" title="Google Account Payload" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="domains.html" class="btn btn-neutral" title="Domains" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, MacAdmins Community
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

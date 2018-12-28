@@ -8,6 +8,10 @@
 		<true/>
 		<key>CatalogURL</key>
 		<string></string>
+		<key>ManagedDeferredInstallDelay</key>
+		<integer>30</integer>
+		<key>forceDelayedSoftwareUpdates</key>
+		<false/>
 	</dict>
 </dict>
 </plist>

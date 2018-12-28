@@ -13,6 +13,8 @@
 
   
   
+  
+  
 
   
 
@@ -22,28 +24,22 @@
 
   
 
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="Configuration Profiles  documentation" href="index.html"/>
-        <link rel="next" title="Payloads" href="payloads/index.html"/>
-        <link rel="prev" title="Manifest File Format" href="manifest.html"/> 
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="macOS Subsystem Notes" href="macos/index.html" />
+    <link rel="prev" title="Manifest File Format" href="manifest.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -80,11 +76,17 @@
           
             
             
-                <p class="caption"><span class="caption-text">Contents:</span></p>
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contributing.html#submitting-an-error">Submitting an error</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contributing.html#writing-documentation">Writing Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="payloads/common.html">Common Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="payloads/mac.html">Mac Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="payloads/ios.html">iOS Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="payloads/tvos.html">tvOS Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom/index.html">Custom Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting/index.html">Troubleshooting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="official.html">Official Links and Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="manifest.html">Manifest File Format</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Extended Manifest Format</a><ul>
@@ -97,15 +99,17 @@
 <li class="toctree-l3"><a class="reference internal" href="#pfm-tvos-max">pfm_tvos_max</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pfm-supervised">pfm_supervised</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pfm-incompatible">pfm_incompatible</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pfm-note">pfm_note</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">Extended Manifest Format</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="payloads/index.html">Payloads</a></li>
-<li class="toctree-l1"><a class="reference internal" href="custom/index.html">Custom Settings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="troubleshooting/index.html">Troubleshooting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="macos/index.html">macOS Subsystem Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pdp/index.html">Profile Domain Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html#submitting-an-error">Submitting an error</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html#writing-documentation">Writing Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
 </ul>
 
@@ -118,34 +122,54 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">Configuration Profiles</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Configuration Profiles</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-    <li>Extended Manifest Format</li>
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Extended Manifest Format</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
             <a href="_sources/extmanifest.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -156,6 +180,7 @@
 <p>The manifest format covers most of the required information for writing configuration profiles, except for a few
 cases.</p>
 <p>The following is a description of keys added to the manifest format by the community as a working standard.</p>
+<p>See Also, erikberglunds extended format: <a href="#id2"><span class="problematic" id="id3">`https://github.com/erikberglund/ProfileManifests/wiki/Manifest-Format`_</span></a>.</p>
 <div class="section" id="extended-keys">
 <h2>Extended Keys<a class="headerlink" href="#extended-keys" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="pfm-macos-min">
@@ -192,23 +217,59 @@ Additionally, we will interpret this to mean that UAMDM is required for macOS.</
 <p>Suggest using the <strong>pfm_target_conditions</strong> dictionaries to specify rules about
 how this key or payload is incompatible with the other payload or key. Usually this would
 happen when one payload becomes superseded by another, and installing both results in undefined behaviour.</p>
-<p>There&#8217;s currently no way to reference other manifests so there might need to be a <strong>pfm_target_domain</strong> key to
+<p>There’s currently no way to reference other manifests so there might need to be a <strong>pfm_target_domain</strong> key to
 match a domain in another manifest.</p>
 </div>
+<div class="section" id="pfm-note">
+<h3>pfm_note<a class="headerlink" href="#pfm-note" title="Permalink to this headline">¶</a></h3>
+<p>To add a note that requires special attention about the current payload I.E a warning about the payload behaviour.</p>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>Extended Manifest Format<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>The following keys are used to extend the manifest format to describe settings and situations not covered by the
+original set of keys.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="16%" />
+<col width="9%" />
+<col width="5%" />
+<col width="49%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Key</th>
+<th class="head">Type</th>
+<th class="head">Payload</th>
+<th class="head">Key</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>pfm_allowed_file_types</td>
+<td>Array of Strings</td>
+<td>False</td>
+<td>True</td>
+<td>File extensions or UTIs allowed when using a file as
+value for a Data key.</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="payloads/index.html" class="btn btn-neutral float-right" title="Payloads" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="macos/index.html" class="btn btn-neutral float-right" title="macOS Subsystem Notes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="manifest.html" class="btn btn-neutral" title="Manifest File Format" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="manifest.html" class="btn btn-neutral" title="Manifest File Format" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -217,11 +278,11 @@ match a domain in another manifest.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2016, MacAdmins Community.
+        &copy; Copyright 2016, MacAdmins Community
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -236,34 +297,24 @@ match a domain in another manifest.</p>
 
   
 
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
 
   
 
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
+  <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>

@@ -13,6 +13,8 @@
 
   
   
+  
+  
 
   
 
@@ -22,29 +24,22 @@
 
   
 
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="Configuration Profiles  documentation" href="../index.html"/>
-        <link rel="up" title="Troubleshooting" href="index.html"/>
-        <link rel="next" title="mdmclient" href="mdmclient.html"/>
-        <link rel="prev" title="Troubleshooting" href="index.html"/> 
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="mdmclient" href="mdmclient.html" />
+    <link rel="prev" title="Troubleshooting" href="index.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -81,15 +76,15 @@
           
             
             
-                <p class="caption"><span class="caption-text">Contents:</span></p>
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../contributing.html#submitting-an-error">Submitting an error</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../contributing.html#writing-documentation">Writing Documentation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../official.html">Official Links and Documentation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../manifest.html">Manifest File Format</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../extmanifest.html">Extended Manifest Format</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../payloads/index.html">Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../payloads/common.html">Common Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../payloads/mac.html">Mac Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../payloads/ios.html">iOS Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../payloads/tvos.html">tvOS Payloads</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../custom/index.html">Custom Settings</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Troubleshooting</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Logging</a><ul>
@@ -101,8 +96,14 @@
 <li class="toctree-l2"><a class="reference internal" href="mdmclient.html">mdmclient</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../official.html">Official Links and Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manifest.html">Manifest File Format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extmanifest.html">Extended Manifest Format</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../macos/index.html">macOS Subsystem Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pdp/index.html">Profile Domain Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html#submitting-an-error">Submitting an error</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html#writing-documentation">Writing Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
 </ul>
 
@@ -115,36 +116,56 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">Configuration Profiles</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Configuration Profiles</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="index.html">Troubleshooting</a> &raquo;</li>
-      
-    <li>Logging</li>
+        
+      <li>Logging</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
             <a href="../_sources/troubleshooting/logging.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -153,21 +174,21 @@
   <div class="section" id="logging">
 <h1>Logging<a class="headerlink" href="#logging" title="Permalink to this headline">¶</a></h1>
 <p>There are several different processes related to profile installation and MDM command acknowledgement.
-The easiest option is to download this <a class="reference download internal" href="../_downloads/MDM Debug Logging.mobileconfig" download=""><code class="xref download docutils literal"><span class="pre">Logging</span> <span class="pre">Profile</span></code></a>
+The easiest option is to download this <a class="reference download internal" download="" href="../_downloads/0a0894a93d27c0146716446c8d691948/MDM Debug Logging.mobileconfig"><code class="xref download docutils literal notranslate"><span class="pre">Logging</span> <span class="pre">Profile</span></code></a>
 for macOS 10.12 and higher.</p>
 <div class="section" id="mdm-debugging">
 <h2>MDM Debugging<a class="headerlink" href="#mdm-debugging" title="Permalink to this headline">¶</a></h2>
 <p>Commands:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">touch</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">db</span><span class="o">/</span><span class="n">MDM_EnableDebug</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">touch</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">db</span><span class="o">/</span><span class="n">MDM_EnableDebug</span>
 </pre></div>
 </div>
 <p>In macOS 10.12 you can configure the logging subsystem via a configuration profile (as above) or by using the <strong class="command">log</strong>
 utility like so:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">log</span> <span class="n">config</span> <span class="o">--</span><span class="n">subsystem</span> <span class="n">com</span><span class="o">.</span><span class="n">apple</span><span class="o">.</span><span class="n">ManagedClient</span> <span class="o">--</span><span class="n">mode</span><span class="o">=</span><span class="s2">&quot;level:debug,persist:debug&quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">log</span> <span class="n">config</span> <span class="o">--</span><span class="n">subsystem</span> <span class="n">com</span><span class="o">.</span><span class="n">apple</span><span class="o">.</span><span class="n">ManagedClient</span> <span class="o">--</span><span class="n">mode</span><span class="o">=</span><span class="s2">&quot;level:debug,persist:debug&quot;</span>
 </pre></div>
 </div>
 <p>You will probably want to reset this back to normal so that debug logs are not persisted like so:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">log</span> <span class="n">config</span> <span class="o">--</span><span class="n">subsystem</span> <span class="n">com</span><span class="o">.</span><span class="n">apple</span><span class="o">.</span><span class="n">ManagedClient</span> <span class="o">--</span><span class="n">reset</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">log</span> <span class="n">config</span> <span class="o">--</span><span class="n">subsystem</span> <span class="n">com</span><span class="o">.</span><span class="n">apple</span><span class="o">.</span><span class="n">ManagedClient</span> <span class="o">--</span><span class="n">reset</span>
 </pre></div>
 </div>
 </div>
@@ -175,14 +196,14 @@ utility like so:</p>
 <h2>MCX<a class="headerlink" href="#mcx" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Some parts of ManagedClient don&#8217;t use Unified Logging so you&#8217;ll probably need to enable this also.</p>
+<p class="last">Some parts of ManagedClient don’t use Unified Logging so you’ll probably need to enable this also.</p>
 </div>
 <dl class="docutils">
 <dt>Log Location</dt>
 <dd>/Library/Logs/ManagedClient/ManagedClient.log</dd>
 </dl>
 <p>Commands:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">defaults</span> <span class="n">write</span> <span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Preferences</span><span class="o">/</span><span class="n">com</span><span class="o">.</span><span class="n">apple</span><span class="o">.</span><span class="n">MCXDebug</span> <span class="n">debugOutput</span> <span class="o">-</span><span class="mi">2</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">defaults</span> <span class="n">write</span> <span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Preferences</span><span class="o">/</span><span class="n">com</span><span class="o">.</span><span class="n">apple</span><span class="o">.</span><span class="n">MCXDebug</span> <span class="n">debugOutput</span> <span class="o">-</span><span class="mi">2</span>
 <span class="n">sudo</span> <span class="n">defaults</span> <span class="n">write</span> <span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Preferences</span><span class="o">/</span><span class="n">com</span><span class="o">.</span><span class="n">apple</span><span class="o">.</span><span class="n">MCXDebug</span> <span class="n">collateLogs</span> <span class="mi">1</span>
 </pre></div>
 </div>
@@ -197,28 +218,29 @@ you to wade through a ton of push service notifications.</p>
 </div>
 <p>Some useful predicates:</p>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">subsystem:com.apple.ManagedClient</span></code> Messages in this category cover a broad range of profile installation messages.</li>
-<li><code class="docutils literal"><span class="pre">subsystem:com.apple.securityd</span></code> Interactions with the keychain</li>
-<li><code class="docutils literal"><span class="pre">category:SCEP.fw</span></code> SCEP network requests only (no warnings on signature verification etc).</li>
+<li><code class="docutils literal notranslate"><span class="pre">subsystem:com.apple.ManagedClient</span></code> Messages in this category cover a broad range of profile installation messages.</li>
+<li><code class="docutils literal notranslate"><span class="pre">subsystem:com.apple.securityd</span></code> Interactions with the keychain</li>
+<li><code class="docutils literal notranslate"><span class="pre">category:SCEP.fw</span></code> SCEP network requests only (no warnings on signature verification etc).</li>
 </ul>
 <p>Payload specific combinations:</p>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">subsystem:com.apple.ManagedClient</span> <span class="pre">library:Certificate</span></code> Certificate payload messages</li>
+<li><code class="docutils literal notranslate"><span class="pre">subsystem:com.apple.ManagedClient</span> <span class="pre">library:Certificate</span></code> Certificate payload messages</li>
 </ul>
 </div>
 </div>
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="mdmclient.html" class="btn btn-neutral float-right" title="mdmclient" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="mdmclient.html" class="btn btn-neutral float-right" title="mdmclient" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="Troubleshooting" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral" title="Troubleshooting" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -227,11 +249,11 @@ you to wade through a ton of push service notifications.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2016, MacAdmins Community.
+        &copy; Copyright 2016, MacAdmins Community
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -246,34 +268,24 @@ you to wade through a ton of push service notifications.</p>
 
   
 
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
 
   
 
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>

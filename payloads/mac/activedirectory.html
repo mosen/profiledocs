@@ -1,0 +1,1820 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Active Directory &mdash; Configuration Profiles  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Active Directory Certificate" href="adcert.html" />
+    <link rel="prev" title="Accessibility" href="accessibility.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Configuration Profiles
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../common.html">Common Payloads</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../mac.html">Mac Payloads</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="accessibility.html"><span class="macos">Accessibility</span></a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Active Directory</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#keys">Keys</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.DirectoryService.managed-HostName-auto">HostName</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.DirectoryService.managed-UserName-auto">UserName</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.DirectoryService.managed-Password-auto">Password</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.DirectoryService.managed-ClientID-auto">ClientID</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.DirectoryService.managed-ADOrganizationalUnit-auto">ADOrganizationalUnit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.DirectoryService.managed-ADCreateMobileAccountAtLoginFlag-auto">ADCreateMobileAccountAtLoginFlag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.DirectoryService.managed-ADCreateMobileAccountAtLogin-auto">ADCreateMobileAccountAtLogin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.DirectoryService.managed-ADWarnUserBeforeCreatingMAFlag-auto">ADWarnUserBeforeCreatingMAFlag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.DirectoryService.managed-ADWarnUserBeforeCreatingMA-auto">ADWarnUserBeforeCreatingMA</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.DirectoryService.managed-ADForceHomeLocalFlag-auto">ADForceHomeLocalFlag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.DirectoryService.managed-ADForceHomeLocal-auto">ADForceHomeLocal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.DirectoryService.managed-ADUseWindowsUNCPathFlag-auto">ADUseWindowsUNCPathFlag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.DirectoryService.managed-ADUseWindowsUNCPath-auto">ADUseWindowsUNCPath</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.DirectoryService.managed-ADMountStyle-auto">ADMountStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.DirectoryService.managed-ADDefaultUserShellFlag-auto">ADDefaultUserShellFlag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.DirectoryService.managed-ADDefaultUserShell-auto">ADDefaultUserShell</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.DirectoryService.managed-ADMapUIDAttributeFlag-auto">ADMapUIDAttributeFlag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.DirectoryService.managed-ADMapUIDAttribute-auto">ADMapUIDAttribute</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.DirectoryService.managed-ADMapGIDAttributeFlag-auto">ADMapGIDAttributeFlag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.DirectoryService.managed-ADMapGIDAttribute-auto">ADMapGIDAttribute</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.DirectoryService.managed-ADMapGGIDAttributeFlag-auto">ADMapGGIDAttributeFlag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.DirectoryService.managed-ADMapGGIDAttribute-auto">ADMapGGIDAttribute</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.DirectoryService.managed-ADPreferredDCServerFlag-auto">ADPreferredDCServerFlag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.DirectoryService.managed-ADPreferredDCServer-auto">ADPreferredDCServer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.DirectoryService.managed-ADDomainAdminGroupListFlag-auto">ADDomainAdminGroupListFlag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.DirectoryService.managed-ADDomainAdminGroupList-auto">ADDomainAdminGroupList</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.DirectoryService.managed-ADAllowMultiDomainAuthFlag-auto">ADAllowMultiDomainAuthFlag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.DirectoryService.managed-ADAllowMultiDomainAuth-auto">ADAllowMultiDomainAuth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.DirectoryService.managed-ADNamespaceFlag-auto">ADNamespaceFlag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.DirectoryService.managed-ADNamespace-auto">ADNamespace</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.DirectoryService.managed-ADPacketSignFlag-auto">ADPacketSignFlag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.DirectoryService.managed-ADPacketSign-auto">ADPacketSign</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.DirectoryService.managed-ADPacketEncryptFlag-auto">ADPacketEncryptFlag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.DirectoryService.managed-ADPacketEncrypt-auto">ADPacketEncrypt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.DirectoryService.managed-ADRestrictDDNSFlag-auto">ADRestrictDDNSFlag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.DirectoryService.managed-ADRestrictDDNS-auto">ADRestrictDDNS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.DirectoryService.managed-ADTrustChangePassIntervalDaysFlag-auto">ADTrustChangePassIntervalDaysFlag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.DirectoryService.managed-ADTrustChangePassIntervalDays-auto">ADTrustChangePassIntervalDays</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#links">Links</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="adcert.html">Active Directory Certificate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appstore.html">App Store</a></li>
+<li class="toctree-l2"><a class="reference internal" href="asam.html">Autonomous Single App Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assetcache.html">AssetCache Client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="certpref.html">Certificate Preference Payload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content-caching.html">Content Caching Payload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coremediaio.html">Core Media IO (Camera)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dashwidgets.html">Parental Control Dashboard Payload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datetime.html">Date and Time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="desktop.html">Desktop Payload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dictionary.html">Dictionary (Parental Controls)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="discrecording.html">Disc Recording</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dock.html">Dock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="energysaver.html">Energy Saver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ethernet.html">802.1x Ethernet Payload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fderecoveryescrow.html">FDE Recovery Key Escrow Payload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="finderburn.html">Finder (Disc Burning)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firewall.html">Firewall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fv2.html">FileVault 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fv2redirect.html">FileVault Recovery Key Redirect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gamecenter.html">Parental Control - Game Center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="identification.html">Identification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="identpref.html">Identity Preference Payload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kernelextpolicy.html">Kernel Extension Policy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logging.html">Unified Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loginitems.html">Login Items</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loginscripts.html">Login Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loginwindow.html">Loginwindow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loginwindow_gp.html">Loginwindow (GlobalPreferences)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mcxother.html">MCX Other</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mcxredirector.html">Folder Redirection (MCX)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mediaaccess.html">Media Access (SystemUIServer)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="networkbrowser.html">Network Browser (Finder)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parental-contentfilter.html">Parental Controls - Content Filter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parental-timelimits.html">Parental Controls - Time Limits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parentalcontrols.html">Application Access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="printing.html">Printing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screensaver.html">Screen Saver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="securityui.html">UI Security Preferences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setupassistant.html">Setup Assistant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sharekit.html">ShareKit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sidebar.html">Sidebar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="smartcard.html">Smart Card</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spctl.html">System Policy Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sprule.html">System Policy Rule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="submitdiag.html">Submit Diagnostics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="swupd.html">Software Update Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sysprefs.html">System Preference Panes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="systemconfiguration.html">SystemConfiguration (Proxies)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="systemmigration.html">System Migration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="systempolicy.html">System Policy (Gatekeeper)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tcc.html">Privacy Preferences Policy Control Payload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="timemachine.html">Time Machine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="touchid.html">Touch ID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="trackpad.html">TrackPad Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="userpreferences.html">User Preferences (iCloud)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="voicedictation.html">Voice Dictation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ios.html">iOS Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tvos.html">tvOS Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../custom/index.html">Custom Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../official.html">Official Links and Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manifest.html">Manifest File Format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extmanifest.html">Extended Manifest Format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../macos/index.html">macOS Subsystem Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pdp/index.html">Profile Domain Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html#submitting-an-error">Submitting an error</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html#writing-documentation">Writing Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Configuration Profiles</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../mac.html">Mac Payloads</a> &raquo;</li>
+        
+      <li>Active Directory</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/payloads/mac/activedirectory.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="active-directory">
+<span id="payloadtype-com-apple-directoryservice-managed"></span><h1><a class="toc-backref" href="#id1">Active Directory</a><a class="headerlink" href="#active-directory" title="Permalink to this headline">¶</a></h1>
+<p><code class="xref download docutils literal notranslate"><span class="pre">Template</span></code></p>
+<p>Join an active directory domain.</p>
+<p>Advanced AD options available via Directory Utility or the dsconfigad command line tool can also be set using a configuration profile.</p>
+<ul class="simple">
+<li>ClientID does not appear in the official documentation.</li>
+</ul>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#active-directory" id="id1">Active Directory</a><ul>
+<li><a class="reference internal" href="#summary" id="id2">Summary</a></li>
+<li><a class="reference internal" href="#keys" id="id3">Keys</a><ul>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-HostName-auto" id="id4">HostName</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-UserName-auto" id="id5">UserName</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-Password-auto" id="id6">Password</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ClientID-auto" id="id7">ClientID</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADOrganizationalUnit-auto" id="id8">ADOrganizationalUnit</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADCreateMobileAccountAtLoginFlag-auto" id="id9">ADCreateMobileAccountAtLoginFlag</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADCreateMobileAccountAtLogin-auto" id="id10">ADCreateMobileAccountAtLogin</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADWarnUserBeforeCreatingMAFlag-auto" id="id11">ADWarnUserBeforeCreatingMAFlag</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADWarnUserBeforeCreatingMA-auto" id="id12">ADWarnUserBeforeCreatingMA</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADForceHomeLocalFlag-auto" id="id13">ADForceHomeLocalFlag</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADForceHomeLocal-auto" id="id14">ADForceHomeLocal</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADUseWindowsUNCPathFlag-auto" id="id15">ADUseWindowsUNCPathFlag</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADUseWindowsUNCPath-auto" id="id16">ADUseWindowsUNCPath</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADMountStyle-auto" id="id17">ADMountStyle</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADDefaultUserShellFlag-auto" id="id18">ADDefaultUserShellFlag</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADDefaultUserShell-auto" id="id19">ADDefaultUserShell</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADMapUIDAttributeFlag-auto" id="id20">ADMapUIDAttributeFlag</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADMapUIDAttribute-auto" id="id21">ADMapUIDAttribute</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADMapGIDAttributeFlag-auto" id="id22">ADMapGIDAttributeFlag</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADMapGIDAttribute-auto" id="id23">ADMapGIDAttribute</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADMapGGIDAttributeFlag-auto" id="id24">ADMapGGIDAttributeFlag</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADMapGGIDAttribute-auto" id="id25">ADMapGGIDAttribute</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADPreferredDCServerFlag-auto" id="id26">ADPreferredDCServerFlag</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADPreferredDCServer-auto" id="id27">ADPreferredDCServer</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADDomainAdminGroupListFlag-auto" id="id28">ADDomainAdminGroupListFlag</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADDomainAdminGroupList-auto" id="id29">ADDomainAdminGroupList</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADAllowMultiDomainAuthFlag-auto" id="id30">ADAllowMultiDomainAuthFlag</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADAllowMultiDomainAuth-auto" id="id31">ADAllowMultiDomainAuth</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADNamespaceFlag-auto" id="id32">ADNamespaceFlag</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADNamespace-auto" id="id33">ADNamespace</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADPacketSignFlag-auto" id="id34">ADPacketSignFlag</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADPacketSign-auto" id="id35">ADPacketSign</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADPacketEncryptFlag-auto" id="id36">ADPacketEncryptFlag</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADPacketEncrypt-auto" id="id37">ADPacketEncrypt</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADRestrictDDNSFlag-auto" id="id38">ADRestrictDDNSFlag</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADRestrictDDNS-auto" id="id39">ADRestrictDDNS</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADTrustChangePassIntervalDaysFlag-auto" id="id40">ADTrustChangePassIntervalDaysFlag</a></li>
+<li><a class="reference internal" href="#com.apple.DirectoryService.managed-ADTrustChangePassIntervalDays-auto" id="id41">ADTrustChangePassIntervalDays</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#links" id="id42">Links</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="summary">
+<h2><a class="toc-backref" href="#id2">Summary</a><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">PayloadType:</th><td class="field-body">com.apple.DirectoryService.managed</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Supervised Only:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">N/A</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">macOS:</th><td class="field-body">10.9</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">macOS Deprecated:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">N/A</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">iOS:</th><td class="field-body">N/A</td>
+</tr>
+<tr class="field-even field"><th class="field-name">iOS Deprecated:</th><td class="field-body">N/A</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Highlander:</th><td class="field-body">N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="keys">
+<h2><a class="toc-backref" href="#id3">Keys</a><a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="com.apple.DirectoryService.managed-HostName-auto">
+<h3><a class="toc-backref" href="#id4">HostName</a><a class="headerlink" href="#com.apple.DirectoryService.managed-HostName-auto" title="Permalink to this headline">¶</a></h3>
+<p>Active Directory Domain</p>
+<p>The Active Directory domain to join.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Apple documentation says the domain name, Profile Manager refers to a domain controller hostname.</p>
+</div>
+<div class="section" id="com.apple.DirectoryService.managed-UserName-auto">
+<h3><a class="toc-backref" href="#id5">UserName</a><a class="headerlink" href="#com.apple.DirectoryService.managed-UserName-auto" title="Permalink to this headline">¶</a></h3>
+<p>User name</p>
+<p>User name of the account used to join the domain.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.DirectoryService.managed-Password-auto">
+<h3><a class="toc-backref" href="#id6">Password</a><a class="headerlink" href="#com.apple.DirectoryService.managed-Password-auto" title="Permalink to this headline">¶</a></h3>
+<p>Password</p>
+<p>Password of the account used to join the domain.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.DirectoryService.managed-ClientID-auto">
+<h3><a class="toc-backref" href="#id7">ClientID</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ClientID-auto" title="Permalink to this headline">¶</a></h3>
+<p>Client ID</p>
+<p>The directory server client ID.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.DirectoryService.managed-ADOrganizationalUnit-auto">
+<h3><a class="toc-backref" href="#id8">ADOrganizationalUnit</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADOrganizationalUnit-auto" title="Permalink to this headline">¶</a></h3>
+<p>Organizational Unit</p>
+<p>The organizational unit (OU) where the joining computer object is added.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.DirectoryService.managed-ADCreateMobileAccountAtLoginFlag-auto">
+<h3><a class="toc-backref" href="#id9">ADCreateMobileAccountAtLoginFlag</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADCreateMobileAccountAtLoginFlag-auto" title="Permalink to this headline">¶</a></h3>
+<p>Enable ADCreateMobileAccountAtLogin Flag</p>
+<p>Enable ADCreateMobileAccountAtLogin Flag</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.DirectoryService.managed-ADCreateMobileAccountAtLogin-auto">
+<h3><a class="toc-backref" href="#id10">ADCreateMobileAccountAtLogin</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADCreateMobileAccountAtLogin-auto" title="Permalink to this headline">¶</a></h3>
+<p>Create mobile account at login</p>
+<p>Create mobile account at login.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>False</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.DirectoryService.managed-ADWarnUserBeforeCreatingMAFlag-auto">
+<h3><a class="toc-backref" href="#id11">ADWarnUserBeforeCreatingMAFlag</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADWarnUserBeforeCreatingMAFlag-auto" title="Permalink to this headline">¶</a></h3>
+<p>Enable ADWarnUserBeforeCreatingMA Flag</p>
+<p>Enable ADWarnUserBeforeCreatingMA Flag</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.DirectoryService.managed-ADWarnUserBeforeCreatingMA-auto">
+<h3><a class="toc-backref" href="#id12">ADWarnUserBeforeCreatingMA</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADWarnUserBeforeCreatingMA-auto" title="Permalink to this headline">¶</a></h3>
+<p>Require confirmation before creating mobile account</p>
+<p>Require confirmation before creating mobile account</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>False</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.DirectoryService.managed-ADForceHomeLocalFlag-auto">
+<h3><a class="toc-backref" href="#id13">ADForceHomeLocalFlag</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADForceHomeLocalFlag-auto" title="Permalink to this headline">¶</a></h3>
+<p>Enable ADForceHomeLocal Flag</p>
+<p>Enable ADForceHomeLocal Flag</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.DirectoryService.managed-ADForceHomeLocal-auto">
+<h3><a class="toc-backref" href="#id14">ADForceHomeLocal</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADForceHomeLocal-auto" title="Permalink to this headline">¶</a></h3>
+<p>Force local home directory on startup disk</p>
+<p>Force local home directory on startup disk</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.DirectoryService.managed-ADUseWindowsUNCPathFlag-auto">
+<h3><a class="toc-backref" href="#id15">ADUseWindowsUNCPathFlag</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADUseWindowsUNCPathFlag-auto" title="Permalink to this headline">¶</a></h3>
+<p>Enable ADUseWindowsUNCPath Flag</p>
+<p>Enable ADUseWindowsUNCPath Flag</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.DirectoryService.managed-ADUseWindowsUNCPath-auto">
+<h3><a class="toc-backref" href="#id16">ADUseWindowsUNCPath</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADUseWindowsUNCPath-auto" title="Permalink to this headline">¶</a></h3>
+<p>Use UNC path for network home location</p>
+<p>Use UNC path from Active Directory to derive network home location</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.DirectoryService.managed-ADMountStyle-auto">
+<h3><a class="toc-backref" href="#id17">ADMountStyle</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADMountStyle-auto" title="Permalink to this headline">¶</a></h3>
+<p>Mount Style</p>
+<p>Network protocol to be used to mount home directory.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>smb</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<h3>Valid Choices<a class="headerlink" href="#com.apple.DirectoryService.managed-ADMountStyle-auto" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>afp</li>
+<li>smb</li>
+</ul>
+</div>
+<div class="section" id="com.apple.DirectoryService.managed-ADDefaultUserShellFlag-auto">
+<h3><a class="toc-backref" href="#id18">ADDefaultUserShellFlag</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADDefaultUserShellFlag-auto" title="Permalink to this headline">¶</a></h3>
+<p>Enable ADDefaultUserShell Key</p>
+<p>Enable ADDefaultUserShell Key</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.DirectoryService.managed-ADDefaultUserShell-auto">
+<h3><a class="toc-backref" href="#id19">ADDefaultUserShell</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADDefaultUserShell-auto" title="Permalink to this headline">¶</a></h3>
+<p>Default user shell</p>
+<p>Default user shell</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>/bin/bash</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.DirectoryService.managed-ADMapUIDAttributeFlag-auto">
+<h3><a class="toc-backref" href="#id20">ADMapUIDAttributeFlag</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADMapUIDAttributeFlag-auto" title="Permalink to this headline">¶</a></h3>
+<p>Enable ADMapUIDAttribute Key</p>
+<p>Enable ADMapUIDAttribute Key</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>False</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.DirectoryService.managed-ADMapUIDAttribute-auto">
+<h3><a class="toc-backref" href="#id21">ADMapUIDAttribute</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADMapUIDAttribute-auto" title="Permalink to this headline">¶</a></h3>
+<p>Map UID to attribute</p>
+<p>Map UID to attribute</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.DirectoryService.managed-ADMapGIDAttributeFlag-auto">
+<h3><a class="toc-backref" href="#id22">ADMapGIDAttributeFlag</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADMapGIDAttributeFlag-auto" title="Permalink to this headline">¶</a></h3>
+<p>Enable ADMapGIDAttribute Key</p>
+<p>Enable ADMapGIDAttribute Key</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>False</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.DirectoryService.managed-ADMapGIDAttribute-auto">
+<h3><a class="toc-backref" href="#id23">ADMapGIDAttribute</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADMapGIDAttribute-auto" title="Permalink to this headline">¶</a></h3>
+<p>Map user GID to attribute</p>
+<p>Map user GID to attribute</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.DirectoryService.managed-ADMapGGIDAttributeFlag-auto">
+<h3><a class="toc-backref" href="#id24">ADMapGGIDAttributeFlag</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADMapGGIDAttributeFlag-auto" title="Permalink to this headline">¶</a></h3>
+<p>Enable ADMapGGIDAttribute Key</p>
+<p>Enable ADMapGGIDAttribute Key</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>False</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.DirectoryService.managed-ADMapGGIDAttribute-auto">
+<h3><a class="toc-backref" href="#id25">ADMapGGIDAttribute</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADMapGGIDAttribute-auto" title="Permalink to this headline">¶</a></h3>
+<p>Map group GID to attribute</p>
+<p>Map group GID to attribute</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.DirectoryService.managed-ADPreferredDCServerFlag-auto">
+<h3><a class="toc-backref" href="#id26">ADPreferredDCServerFlag</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADPreferredDCServerFlag-auto" title="Permalink to this headline">¶</a></h3>
+<p>Enable ADPreferredDCServer Key</p>
+<p>Enable ADPreferredDCServer Key</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>False</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.DirectoryService.managed-ADPreferredDCServer-auto">
+<h3><a class="toc-backref" href="#id27">ADPreferredDCServer</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADPreferredDCServer-auto" title="Permalink to this headline">¶</a></h3>
+<p>Preferred domain server</p>
+<p>Preferred domain server</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.DirectoryService.managed-ADDomainAdminGroupListFlag-auto">
+<h3><a class="toc-backref" href="#id28">ADDomainAdminGroupListFlag</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADDomainAdminGroupListFlag-auto" title="Permalink to this headline">¶</a></h3>
+<p>Enable ADDomainAdminGroupList Key</p>
+<p>Enable ADDomainAdminGroupList Key</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>False</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.DirectoryService.managed-ADDomainAdminGroupList-auto">
+<h3><a class="toc-backref" href="#id29">ADDomainAdminGroupList</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADDomainAdminGroupList-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow administration by specified Active Directory groups.</p>
+<p>Allow administration by specified Active Directory groups.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>array</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.DirectoryService.managed-ADAllowMultiDomainAuthFlag-auto">
+<h3><a class="toc-backref" href="#id30">ADAllowMultiDomainAuthFlag</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADAllowMultiDomainAuthFlag-auto" title="Permalink to this headline">¶</a></h3>
+<p>Enable ADAllowMultiDomainAuth Key</p>
+<p>Enable ADAllowMultiDomainAuth Key</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.DirectoryService.managed-ADAllowMultiDomainAuth-auto">
+<h3><a class="toc-backref" href="#id31">ADAllowMultiDomainAuth</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADAllowMultiDomainAuth-auto" title="Permalink to this headline">¶</a></h3>
+<p>Allow authentication from any domain in the forest</p>
+<p>Allow authentication from any domain in the forest</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.DirectoryService.managed-ADNamespaceFlag-auto">
+<h3><a class="toc-backref" href="#id32">ADNamespaceFlag</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADNamespaceFlag-auto" title="Permalink to this headline">¶</a></h3>
+<p>Enable ADNamespace Key</p>
+<p>Enable ADNamespace Key</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.DirectoryService.managed-ADNamespace-auto">
+<h3><a class="toc-backref" href="#id33">ADNamespace</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADNamespace-auto" title="Permalink to this headline">¶</a></h3>
+<p>Set primary user account naming convention: “forest” or “domain”</p>
+<p>Set primary user account naming convention: “forest” or “domain”</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>domain</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<h3>Valid Choices<a class="headerlink" href="#com.apple.DirectoryService.managed-ADNamespace-auto" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>domain</li>
+<li>forest</li>
+</ul>
+</div>
+<div class="section" id="com.apple.DirectoryService.managed-ADPacketSignFlag-auto">
+<h3><a class="toc-backref" href="#id34">ADPacketSignFlag</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADPacketSignFlag-auto" title="Permalink to this headline">¶</a></h3>
+<p>Enable ADPacketSign Key</p>
+<p>Enable ADPacketSign Key</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.DirectoryService.managed-ADPacketSign-auto">
+<h3><a class="toc-backref" href="#id35">ADPacketSign</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADPacketSign-auto" title="Permalink to this headline">¶</a></h3>
+<p>Packet signing</p>
+<p>Packet signing</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>allow</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<h3>Valid Choices<a class="headerlink" href="#com.apple.DirectoryService.managed-ADPacketSign-auto" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>allow</li>
+<li>disable</li>
+<li>require</li>
+</ul>
+</div>
+<div class="section" id="com.apple.DirectoryService.managed-ADPacketEncryptFlag-auto">
+<h3><a class="toc-backref" href="#id36">ADPacketEncryptFlag</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADPacketEncryptFlag-auto" title="Permalink to this headline">¶</a></h3>
+<p>Enable ADPacketEncrypt Key</p>
+<p>Enable ADPacketEncrypt Key</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.DirectoryService.managed-ADPacketEncrypt-auto">
+<h3><a class="toc-backref" href="#id37">ADPacketEncrypt</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADPacketEncrypt-auto" title="Permalink to this headline">¶</a></h3>
+<p>Packet encryption</p>
+<p>Packet encryption</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>allow</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<h3>Valid Choices<a class="headerlink" href="#com.apple.DirectoryService.managed-ADPacketEncrypt-auto" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>allow</li>
+<li>disable</li>
+<li>require</li>
+<li>ssl</li>
+</ul>
+</div>
+<div class="section" id="com.apple.DirectoryService.managed-ADRestrictDDNSFlag-auto">
+<h3><a class="toc-backref" href="#id38">ADRestrictDDNSFlag</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADRestrictDDNSFlag-auto" title="Permalink to this headline">¶</a></h3>
+<p>Enable ADRestrictDDNS Key</p>
+<p>Enable ADRestrictDDNS Key</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>False</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.DirectoryService.managed-ADRestrictDDNS-auto">
+<h3><a class="toc-backref" href="#id39">ADRestrictDDNS</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADRestrictDDNS-auto" title="Permalink to this headline">¶</a></h3>
+<p>Restrict DDNS on interfaces</p>
+<p>Restrict Dynamic DNS updates to the specified interfaces (e.g. en0, en1, etc).</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>array</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.DirectoryService.managed-ADTrustChangePassIntervalDaysFlag-auto">
+<h3><a class="toc-backref" href="#id40">ADTrustChangePassIntervalDaysFlag</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADTrustChangePassIntervalDaysFlag-auto" title="Permalink to this headline">¶</a></h3>
+<p>Enable ADTrustChangePassIntervalDays Key</p>
+<p>Enable ADTrustChangePassIntervalDays Key</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.DirectoryService.managed-ADTrustChangePassIntervalDays-auto">
+<h3><a class="toc-backref" href="#id41">ADTrustChangePassIntervalDays</a><a class="headerlink" href="#com.apple.DirectoryService.managed-ADTrustChangePassIntervalDays-auto" title="Permalink to this headline">¶</a></h3>
+<p>Password trust interval</p>
+<p>How often to change computer trust account password in days</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>integer</td>
+<td>14</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="links">
+<h2><a class="toc-backref" href="#id42">Links</a><a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW62">Official Documentation</a>.</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="adcert.html" class="btn btn-neutral float-right" title="Active Directory Certificate" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="accessibility.html" class="btn btn-neutral" title="Accessibility" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, MacAdmins Community
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

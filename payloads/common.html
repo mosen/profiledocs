@@ -1,0 +1,395 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Common Payloads &mdash; Configuration Profiles  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="AirPlay" href="common/airplay.html" />
+    <link rel="prev" title="Welcome to MacAdmins Profile Reference’s documentation!" href="../index.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Configuration Profiles
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Common Payloads</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="common/airplay.html">AirPlay</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/airprint.html">AirPrint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/caldav.html">CalDAV Payload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/calendar.html">Calendar Subscription Payload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/carddav.html">CardDAV Payload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/certpem.html">Certificate (PEM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/certpkcs1.html">Certificate (PKCS#1)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/certpkcs12.html">Certificate (PKCS#12)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/certroot.html">Certificate (Root CA)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/email.html">Email Payload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/enrollment.html">Enrollment (Supervised)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/exchange.html">Exchange</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/font.html">Font</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/globalproxy.html">Global HTTP Proxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/ldap.html">LDAP Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/mdm.html">MDM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/passcode.html">Password Policy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/profileremovalpassword.html">Profile Removal Password</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/restrictions.html">Restrictions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/scep.html">SCEP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/supervision.html">Supervision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/vpn.html">VPN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/webclip.html">WebClip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/wifi.html">Wi-Fi</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mac.html">Mac Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ios.html">iOS Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tvos.html">tvOS Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../custom/index.html">Custom Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../official.html">Official Links and Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manifest.html">Manifest File Format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extmanifest.html">Extended Manifest Format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../macos/index.html">macOS Subsystem Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pdp/index.html">Profile Domain Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html#submitting-an-error">Submitting an error</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html#writing-documentation">Writing Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Configuration Profiles</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Common Payloads</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/payloads/common.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="common-payloads">
+<h1>Common Payloads<a class="headerlink" href="#common-payloads" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Common Payloads:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="common/airplay.html">AirPlay</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="common/airplay.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="common/airprint.html">AirPrint</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="common/airprint.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/airprint.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="common/caldav.html">CalDAV Payload</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="common/caldav.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/caldav.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="common/calendar.html">Calendar Subscription Payload</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="common/calendar.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/calendar.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="common/carddav.html">CardDAV Payload</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="common/carddav.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/carddav.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="common/certpem.html">Certificate (PEM)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="common/certpem.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/certpem.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="common/certpkcs1.html">Certificate (PKCS#1)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="common/certpkcs1.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/certpkcs1.html#keys">Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/certpkcs1.html#links">Links</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="common/certpkcs12.html">Certificate (PKCS#12)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="common/certpkcs12.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/certpkcs12.html#keys">Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/certpkcs12.html#links">Links</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="common/certroot.html">Certificate (Root CA)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="common/certroot.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/certroot.html#keys">Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/certroot.html#links">Links</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="common/email.html">Email Payload</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="common/email.html#keys">Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/email.html#incoming-server-settings">Incoming Server Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/email.html#outgoing-server-settings">Outgoing Server Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/email.html#s-mime-signing-and-encryption">S/MIME Signing and Encryption</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="common/enrollment.html">Enrollment (Supervised)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="common/enrollment.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="common/exchange.html">Exchange</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="common/exchange.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/exchange.html#keys">Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/exchange.html#links">Links</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="common/font.html">Font</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="common/font.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/font.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="common/globalproxy.html">Global HTTP Proxy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="common/globalproxy.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/globalproxy.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="common/ldap.html">LDAP Account</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="common/ldap.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/ldap.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="common/mdm.html">MDM</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="common/mdm.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/mdm.html#keys">Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/mdm.html#access-rights">Access Rights</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/mdm.html#links">Links</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="common/passcode.html">Password Policy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="common/passcode.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/passcode.html#keys">Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/passcode.html#links">Links</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="common/profileremovalpassword.html">Profile Removal Password</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="common/profileremovalpassword.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/profileremovalpassword.html#links">Links</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="common/restrictions.html">Restrictions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="common/restrictions.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/restrictions.html#keys">Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/restrictions.html#links">Links</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="common/scep.html">SCEP</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="common/scep.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/scep.html#keys">Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/scep.html#substitution-variables">Substitution Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/scep.html#unified-logging">Unified Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/scep.html#links">Links</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="common/supervision.html">Supervision</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="common/supervision.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/supervision.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="common/vpn.html">VPN</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="common/vpn.html#keys">Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/vpn.html#links">Links</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="common/webclip.html">WebClip</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="common/webclip.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/webclip.html#keys">Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/webclip.html#links">Links</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="common/wifi.html">Wi-Fi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="common/wifi.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/wifi.html#keys">Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/wifi.html#keys-hotspot">Keys (HotSpot)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/wifi.html#keys-802-1x">Keys (802.1x)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/wifi.html#keys-proxy">Keys (Proxy)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/wifi.html#keys-qos">Keys (QoS)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/wifi.html#troubleshooting">Troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="common/wifi.html#links">Links</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="common/airplay.html" class="btn btn-neutral float-right" title="AirPlay" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../index.html" class="btn btn-neutral" title="Welcome to MacAdmins Profile Reference’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, MacAdmins Community
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -13,6 +13,8 @@
 
   
   
+  
+  
 
   
 
@@ -22,29 +24,22 @@
 
   
 
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="Configuration Profiles  documentation" href="../index.html"/>
-        <link rel="up" title="Troubleshooting" href="index.html"/>
-        <link rel="next" title="macOS Subsystem Notes" href="../macos/index.html"/>
-        <link rel="prev" title="Logging" href="logging.html"/> 
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Official Links and Documentation" href="../official.html" />
+    <link rel="prev" title="Logging" href="logging.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -81,15 +76,15 @@
           
             
             
-                <p class="caption"><span class="caption-text">Contents:</span></p>
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../contributing.html#submitting-an-error">Submitting an error</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../contributing.html#writing-documentation">Writing Documentation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../official.html">Official Links and Documentation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../manifest.html">Manifest File Format</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../extmanifest.html">Extended Manifest Format</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../payloads/index.html">Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../payloads/common.html">Common Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../payloads/mac.html">Mac Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../payloads/ios.html">iOS Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../payloads/tvos.html">tvOS Payloads</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../custom/index.html">Custom Settings</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Troubleshooting</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="logging.html">Logging</a></li>
@@ -145,8 +140,14 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../official.html">Official Links and Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manifest.html">Manifest File Format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extmanifest.html">Extended Manifest Format</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../macos/index.html">macOS Subsystem Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pdp/index.html">Profile Domain Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html#submitting-an-error">Submitting an error</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html#writing-documentation">Writing Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
 </ul>
 
@@ -159,36 +160,56 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">Configuration Profiles</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Configuration Profiles</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="index.html">Troubleshooting</a> &raquo;</li>
-      
-    <li>mdmclient</li>
+        
+      <li>mdmclient</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
             <a href="../_sources/troubleshooting/mdmclient.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -196,7 +217,7 @@
             
   <div class="section" id="mdmclient">
 <h1><a class="toc-backref" href="#id1">mdmclient</a><a class="headerlink" href="#mdmclient" title="Permalink to this headline">¶</a></h1>
-<p>The <code class="docutils literal"><span class="pre">mdmclient</span></code> binary ships with the operating system and is located in <code class="docutils literal"><span class="pre">/usr/libexec/mdmclient</span></code>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">mdmclient</span></code> binary ships with the operating system and is located in <code class="docutils literal notranslate"><span class="pre">/usr/libexec/mdmclient</span></code>.</p>
 <p>Several subcommands are available, some related to troubleshooting MDM.</p>
 <div class="contents topic" id="commands">
 <p class="topic-title first">Commands</p>
@@ -256,9 +277,9 @@
 <div class="section" id="common-flags">
 <h2><a class="toc-backref" href="#id2">Common Flags</a><a class="headerlink" href="#common-flags" title="Permalink to this headline">¶</a></h2>
 <dl class="docutils">
-<dt><code class="docutils literal"><span class="pre">-debug</span></code></dt>
+<dt><code class="docutils literal notranslate"><span class="pre">-debug</span></code></dt>
 <dd>Debug mode</dd>
-<dt><code class="docutils literal"><span class="pre">-beepOnError</span></code></dt>
+<dt><code class="docutils literal notranslate"><span class="pre">-beepOnError</span></code></dt>
 <dd>Beep on error</dd>
 </dl>
 </div>
@@ -267,7 +288,7 @@
 <div class="section" id="airplay">
 <h3><a class="toc-backref" href="#id4">airplay</a><a class="headerlink" href="#airplay" title="Permalink to this headline">¶</a></h3>
 <p>Usage:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">libexec</span><span class="o">/</span><span class="n">mdmclient</span> <span class="n">airplay</span> <span class="n">start</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">libexec</span><span class="o">/</span><span class="n">mdmclient</span> <span class="n">airplay</span> <span class="n">start</span>
 <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">libexec</span><span class="o">/</span><span class="n">mdmclient</span> <span class="n">airplay</span> <span class="n">stop</span>
 </pre></div>
 </div>
@@ -276,10 +297,10 @@
 <div class="section" id="queryappinstallation">
 <h3><a class="toc-backref" href="#id5">QueryAppInstallation</a><a class="headerlink" href="#queryappinstallation" title="Permalink to this headline">¶</a></h3>
 <p>Usage:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">libexec</span><span class="o">/</span><span class="n">mdmclient</span> <span class="n">QueryAppInstallation</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">libexec</span><span class="o">/</span><span class="n">mdmclient</span> <span class="n">QueryAppInstallation</span>
 </pre></div>
 </div>
-<p>Return information that would normally be returned to the MDM in a <code class="docutils literal"><span class="pre">DeviceInformation</span></code> query for Table 6 in</p>
+<p>Return information that would normally be returned to the MDM in a <code class="docutils literal notranslate"><span class="pre">DeviceInformation</span></code> query for Table 6 in</p>
 <ul class="simple">
 <li><a class="reference external" href="https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW15">Official: DeviceInformation</a>.</li>
 </ul>
@@ -287,10 +308,10 @@
 <div class="section" id="querycertificates">
 <h3><a class="toc-backref" href="#id6">QueryCertificates</a><a class="headerlink" href="#querycertificates" title="Permalink to this headline">¶</a></h3>
 <p>Usage:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">libexec</span><span class="o">/</span><span class="n">mdmclient</span> <span class="n">QueryCertificates</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">libexec</span><span class="o">/</span><span class="n">mdmclient</span> <span class="n">QueryCertificates</span>
 </pre></div>
 </div>
-<p>Return information that would normally be returned to the MDM in a <code class="docutils literal"><span class="pre">CertificateList</span></code> query.</p>
+<p>Return information that would normally be returned to the MDM in a <code class="docutils literal notranslate"><span class="pre">CertificateList</span></code> query.</p>
 <ul class="simple">
 <li><a class="reference external" href="https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW13">Official: CertificateList</a>.</li>
 </ul>
@@ -298,10 +319,10 @@
 <div class="section" id="querydeviceinformation">
 <h3><a class="toc-backref" href="#id7">QueryDeviceInformation</a><a class="headerlink" href="#querydeviceinformation" title="Permalink to this headline">¶</a></h3>
 <p>Usage:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">libexec</span><span class="o">/</span><span class="n">mdmclient</span> <span class="n">QueryDeviceInformation</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">libexec</span><span class="o">/</span><span class="n">mdmclient</span> <span class="n">QueryDeviceInformation</span>
 </pre></div>
 </div>
-<p>Return information that would normally be returned to the MDM in a <code class="docutils literal"><span class="pre">DeviceInformation</span></code> query for Table 7</p>
+<p>Return information that would normally be returned to the MDM in a <code class="docutils literal notranslate"><span class="pre">DeviceInformation</span></code> query for Table 7</p>
 <ul class="simple">
 <li><a class="reference external" href="https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW15">Official: DeviceInformation - Table 7</a>.</li>
 </ul>
@@ -309,10 +330,10 @@
 <div class="section" id="queryinstalledapps">
 <h3><a class="toc-backref" href="#id8">QueryInstalledApps</a><a class="headerlink" href="#queryinstalledapps" title="Permalink to this headline">¶</a></h3>
 <p>Usage:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">libexec</span><span class="o">/</span><span class="n">mdmclient</span> <span class="n">QueryInstalledApps</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">libexec</span><span class="o">/</span><span class="n">mdmclient</span> <span class="n">QueryInstalledApps</span>
 </pre></div>
 </div>
-<p>Return information that would normally be returned to the MDM in a <code class="docutils literal"><span class="pre">InstalledApplicationList</span></code> query.</p>
+<p>Return information that would normally be returned to the MDM in a <code class="docutils literal notranslate"><span class="pre">InstalledApplicationList</span></code> query.</p>
 <ul class="simple">
 <li><a class="reference external" href="https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW14">Official: InstalledApplicationList</a>.</li>
 </ul>
@@ -320,10 +341,10 @@
 <div class="section" id="queryinstalledprofiles">
 <h3><a class="toc-backref" href="#id9">QueryInstalledProfiles</a><a class="headerlink" href="#queryinstalledprofiles" title="Permalink to this headline">¶</a></h3>
 <p>Usage:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">libexec</span><span class="o">/</span><span class="n">mdmclient</span> <span class="n">QueryInstalledProfiles</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">libexec</span><span class="o">/</span><span class="n">mdmclient</span> <span class="n">QueryInstalledProfiles</span>
 </pre></div>
 </div>
-<p>Return information that would normally be returned to the MDM in a <code class="docutils literal"><span class="pre">ProfileList</span></code> query.</p>
+<p>Return information that would normally be returned to the MDM in a <code class="docutils literal notranslate"><span class="pre">ProfileList</span></code> query.</p>
 <ul class="simple">
 <li><a class="reference external" href="https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW7">Official: ProfileList</a>.</li>
 </ul>
@@ -331,10 +352,10 @@
 <div class="section" id="querynetworkinformation">
 <h3><a class="toc-backref" href="#id10">QueryNetworkInformation</a><a class="headerlink" href="#querynetworkinformation" title="Permalink to this headline">¶</a></h3>
 <p>Usage:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">libexec</span><span class="o">/</span><span class="n">mdmclient</span> <span class="n">QueryNetworkInformation</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">libexec</span><span class="o">/</span><span class="n">mdmclient</span> <span class="n">QueryNetworkInformation</span>
 </pre></div>
 </div>
-<p>Return information that would normally be returned to the MDM in a <code class="docutils literal"><span class="pre">DeviceInformation</span></code> query for Table 9</p>
+<p>Return information that would normally be returned to the MDM in a <code class="docutils literal notranslate"><span class="pre">DeviceInformation</span></code> query for Table 9</p>
 <ul class="simple">
 <li><a class="reference external" href="https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW15">Official: DeviceInformation - Table 9</a>.</li>
 </ul>
@@ -342,10 +363,10 @@
 <div class="section" id="querysecurityinfo">
 <h3><a class="toc-backref" href="#id11">QuerySecurityInfo</a><a class="headerlink" href="#querysecurityinfo" title="Permalink to this headline">¶</a></h3>
 <p>Usage:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">libexec</span><span class="o">/</span><span class="n">mdmclient</span> <span class="n">QuerySecurityInfo</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">libexec</span><span class="o">/</span><span class="n">mdmclient</span> <span class="n">QuerySecurityInfo</span>
 </pre></div>
 </div>
-<p>Return information that would normally be returned to the MDM in a <code class="docutils literal"><span class="pre">SecurityInfo</span></code> query.</p>
+<p>Return information that would normally be returned to the MDM in a <code class="docutils literal notranslate"><span class="pre">SecurityInfo</span></code> query.</p>
 <ul class="simple">
 <li><a class="reference external" href="https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW19">Official: SecurityInfo</a>.</li>
 </ul>
@@ -368,17 +389,17 @@
 <div class="section" id="dep-nag">
 <h3><a class="toc-backref" href="#id15">dep nag</a><a class="headerlink" href="#dep-nag" title="Permalink to this headline">¶</a></h3>
 <p>Usage:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">libexec</span><span class="o">/</span><span class="n">mdmclient</span> <span class="n">dep</span> <span class="n">nag</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">libexec</span><span class="o">/</span><span class="n">mdmclient</span> <span class="n">dep</span> <span class="n">nag</span>
 </pre></div>
 </div>
 <p>Clears out the cloud config activation record and retrieves a new one.</p>
 <p>Basic sequence of events:</p>
 <ol class="arabic simple">
-<li>Previously saved profile at <code class="docutils literal"><span class="pre">/var/db/ConfigurationProfiles/.cloudConfigProfileInstalled</span></code> is deleted.</li>
+<li>Previously saved profile at <code class="docutils literal notranslate"><span class="pre">/var/db/ConfigurationProfiles/.cloudConfigProfileInstalled</span></code> is deleted.</li>
 <li>Tries to fetch a new cloud config profile.</li>
 <li><dl class="first docutils">
-<dt>If this succeeded it writes out <code class="docutils literal"><span class="pre">/var/db/ConfigurationProfiles/.cloudConfigRecordFound</span></code>. If failed it writes</dt>
-<dd><code class="docutils literal"><span class="pre">/var/db/ConfigurationProfiles/.cloudConfigRecordNotFound</span></code> instead (No DEP record for this device).</dd>
+<dt>If this succeeded it writes out <code class="docutils literal notranslate"><span class="pre">/var/db/ConfigurationProfiles/.cloudConfigRecordFound</span></code>. If failed it writes</dt>
+<dd><code class="docutils literal notranslate"><span class="pre">/var/db/ConfigurationProfiles/.cloudConfigRecordNotFound</span></code> instead (No DEP record for this device).</dd>
 </dl>
 </li>
 </ol>
@@ -388,7 +409,7 @@
 <h2><a class="toc-backref" href="#id16">Misc debugging and utility commands</a><a class="headerlink" href="#misc-debugging-and-utility-commands" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="agent">
 <h3><a class="toc-backref" href="#id17">agent</a><a class="headerlink" href="#agent" title="Permalink to this headline">¶</a></h3>
-<p>Start XPC service <code class="docutils literal"><span class="pre">com.apple.mdmclient.agent</span></code>.</p>
+<p>Start XPC service <code class="docutils literal notranslate"><span class="pre">com.apple.mdmclient.agent</span></code>.</p>
 </div>
 <div class="section" id="cleanconfigprofile">
 <h3><a class="toc-backref" href="#id18">cleanconfigprofile</a><a class="headerlink" href="#cleanconfigprofile" title="Permalink to this headline">¶</a></h3>
@@ -402,13 +423,13 @@
 </div>
 <div class="section" id="dumpsessions-unverified">
 <h3><a class="toc-backref" href="#id20">dumpSessions (Unverified)</a><a class="headerlink" href="#dumpsessions-unverified" title="Permalink to this headline">¶</a></h3>
-<p>Outputs <code class="docutils literal"><span class="pre">Debug</span> <span class="pre">mode</span> <span class="pre">enabled</span></code>.
+<p>Outputs <code class="docutils literal notranslate"><span class="pre">Debug</span> <span class="pre">mode</span> <span class="pre">enabled</span></code>.
 Assume it logs communications with the MDM(?)</p>
 </div>
 <div class="section" id="encrypt">
 <h3><a class="toc-backref" href="#id21">encrypt</a><a class="headerlink" href="#encrypt" title="Permalink to this headline">¶</a></h3>
 <p>Usage:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">libexec</span><span class="o">/</span><span class="n">mdmclient</span> <span class="n">encrypt</span> <span class="o">&lt;</span><span class="n">recipient</span> <span class="n">cert</span> <span class="n">name</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">path</span> <span class="n">to</span> <span class="n">plist</span><span class="o">&gt;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">libexec</span><span class="o">/</span><span class="n">mdmclient</span> <span class="n">encrypt</span> <span class="o">&lt;</span><span class="n">recipient</span> <span class="n">cert</span> <span class="n">name</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">path</span> <span class="n">to</span> <span class="n">plist</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>Encrypt a payload into an encrypted payload.</p>
@@ -441,11 +462,11 @@ Assume it logs communications with the MDM(?)</p>
 </div>
 <div class="section" id="rundaemon">
 <h3><a class="toc-backref" href="#id29">rundaemon</a><a class="headerlink" href="#rundaemon" title="Permalink to this headline">¶</a></h3>
-<p>Used for the <code class="docutils literal"><span class="pre">com.apple.mdmclient.daemon.runatboot</span></code> launchd service.</p>
+<p>Used for the <code class="docutils literal notranslate"><span class="pre">com.apple.mdmclient.daemon.runatboot</span></code> launchd service.</p>
 </div>
 <div class="section" id="installedprofiles">
 <h3><a class="toc-backref" href="#id30">installedProfiles</a><a class="headerlink" href="#installedprofiles" title="Permalink to this headline">¶</a></h3>
-<p>Similar to <code class="docutils literal"><span class="pre">QueryInstalledProfiles</span></code> but takes a <strong>System</strong> or <strong>User</strong> scope option.</p>
+<p>Similar to <code class="docutils literal notranslate"><span class="pre">QueryInstalledProfiles</span></code> but takes a <strong>System</strong> or <strong>User</strong> scope option.</p>
 </div>
 <div class="section" id="installsystemprofile">
 <h3><a class="toc-backref" href="#id31">InstallSystemProfile</a><a class="headerlink" href="#installsystemprofile" title="Permalink to this headline">¶</a></h3>
@@ -483,15 +504,16 @@ Assume it logs communications with the MDM(?)</p>
 
 
            </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../macos/index.html" class="btn btn-neutral float-right" title="macOS Subsystem Notes" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../official.html" class="btn btn-neutral float-right" title="Official Links and Documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="logging.html" class="btn btn-neutral" title="Logging" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="logging.html" class="btn btn-neutral" title="Logging" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -500,11 +522,11 @@ Assume it logs communications with the MDM(?)</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2016, MacAdmins Community.
+        &copy; Copyright 2016, MacAdmins Community
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -519,34 +541,24 @@ Assume it logs communications with the MDM(?)</p>
 
   
 
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
 
   
 
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>

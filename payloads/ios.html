@@ -1,0 +1,322 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>iOS Payloads &mdash; Configuration Profiles  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="App Lock Payload" href="ios/applock.html" />
+    <link rel="prev" title="Voice Dictation" href="mac/voicedictation.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Configuration Profiles
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="common.html">Common Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mac.html">Mac Payloads</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">iOS Payloads</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ios/applock.html">App Lock Payload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios/appmapping.html">App-to-Per-App VPN Mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios/cellular.html">Cellular Payload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios/dnsproxy.html">DNS Proxy Payload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios/domains.html">Domains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios/education.html">Education Configuration Payload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios/google.html">Google Account Payload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios/homescreen.html">Home Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios/notification.html">Notification Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios/osxserver.html">OSX Server Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios/perappvpn.html">Per-App VPN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios/shareddevice.html">Shared Device</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios/sso.html">Single-Sign On</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios/webcontentfilter.html">Web Content Filter</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tvos.html">tvOS Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../custom/index.html">Custom Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../official.html">Official Links and Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manifest.html">Manifest File Format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extmanifest.html">Extended Manifest Format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../macos/index.html">macOS Subsystem Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pdp/index.html">Profile Domain Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html#submitting-an-error">Submitting an error</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html#writing-documentation">Writing Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Configuration Profiles</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>iOS Payloads</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/payloads/ios.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ios-payloads">
+<h1>iOS Payloads<a class="headerlink" href="#ios-payloads" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">iOS Payloads:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ios/applock.html">App Lock Payload</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ios/applock.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios/applock.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ios/appmapping.html">App-to-Per-App VPN Mapping</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ios/appmapping.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios/appmapping.html#links">Links</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ios/cellular.html">Cellular Payload</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ios/cellular.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios/cellular.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ios/dnsproxy.html">DNS Proxy Payload</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ios/dnsproxy.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios/dnsproxy.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ios/domains.html">Domains</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ios/domains.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios/domains.html#keys">Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios/domains.html#links">Links</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ios/education.html">Education Configuration Payload</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ios/education.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios/education.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ios/google.html">Google Account Payload</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ios/google.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios/google.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ios/homescreen.html">Home Screen Layout</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ios/homescreen.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios/homescreen.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ios/notification.html">Notification Settings</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ios/notification.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios/notification.html#keys">Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios/notification.html#links">Links</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ios/osxserver.html">OSX Server Account</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ios/osxserver.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios/osxserver.html#keys">Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios/osxserver.html#links">Links</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ios/perappvpn.html">Per-App VPN</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ios/perappvpn.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios/perappvpn.html#links">Links</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ios/shareddevice.html">Shared Device</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ios/shareddevice.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios/shareddevice.html#keys">Keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ios/sso.html">Single-Sign On</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ios/sso.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios/sso.html#keys">Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios/sso.html#links">Links</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ios/webcontentfilter.html">Web Content Filter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ios/webcontentfilter.html#summary">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios/webcontentfilter.html#keys">Keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios/webcontentfilter.html#links">Links</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ios/applock.html" class="btn btn-neutral float-right" title="App Lock Payload" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="mac/voicedictation.html" class="btn btn-neutral" title="Voice Dictation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, MacAdmins Community
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -210,7 +210,7 @@
 			<key>pfm_title</key>
 			<string>Past Days of Mail to Sync</string>
 			<key>pfm_description</key>
-			<string>The number of past days of mail to synchronzie</string>
+			<string>The number of past days of mail to synchronize</string>
 			<key>pfm_type</key>
 			<string>integer</string>
 			<key>pfm_default</key>
@@ -301,34 +301,24 @@
 			<string>If set to true, this account will support S/MIME</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
+			<key>pfm_ios_min</key>
+			<string>5.0</string>
+			<key>pfm_ios_max</key>
+			<string>9.3.3</string>
 		</dict>
 		<dict>
 			<key>pfm_name</key>
-			<string>SMIMEEnablePerMessageSwitch</string>
+			<string>SMIMESigningEnabled</string>
 			<key>pfm_title</key>
-			<string>S/MIME Enable Per-Message Switch</string>
+			<string>S/MIME Signing Enabled</string>
 			<key>pfm_description</key>
-			<string>If set to true, enable the per-message encryption switch.</string>
+			<string>If set to true, S/MIME signing will be enabled</string>
 			<key>pfm_type</key>
 			<string>boolean</string>
 			<key>pfm_default</key>
 			<false/>
-			<key>pfm_exclude</key>
-			<array>
-				<dict>
-					<key>pfm_target_conditions</key>
-					<array>
-						<dict>
-							<key>pfm_target</key>
-							<string>SMIMEEnabled</string>
-							<key>pfm_n_range_list</key>
-							<array>
-								<true/>
-							</array>
-						</dict>
-					</array>
-				</dict>
-			</array>
+			<key>pfm_ios_min</key>
+			<string>10.3</string>
 		</dict>
 		<dict>
 			<key>pfm_name</key>
@@ -339,6 +329,8 @@
 			<string>The PayloadUUID of the identity certificate used to sign messages sent from this account.</string>
 			<key>pfm_type</key>
 			<string>string</string>
+			<key>pfm_ios_min</key>
+			<string>5.0</string>
 			<key>pfm_format</key>
 			<string>^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$</string>
 			<key>pfm_exclude</key>
@@ -360,6 +352,22 @@
 		</dict>
 		<dict>
 			<key>pfm_name</key>
+			<string>SMIMEEncryptionEnabled</string>
+			<key>pfm_title</key>
+			<string>S/MIME Encryption Enabled</string>
+			<key>pfm_description</key>
+			<string>If set to true, S/MIME encryption will be enabled. Deprecated, use SMIMEEncryptByDefault</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_ios_min</key>
+			<string>10.3</string>
+			<key>pfm_ios_max</key>
+			<string>12.0</string>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
 			<string>SMIMEEncryptionCertificateUUID</string>
 			<key>pfm_title</key>
 			<string>S/MIME Encryption Certificate</string>
@@ -367,6 +375,8 @@
 			<string>The PayloadUUID of the identity certificate used to decrypt messages coming into this account.</string>
 			<key>pfm_type</key>
 			<string>string</string>
+			<key>pfm_ios_min</key>
+			<string>5.0</string>
 			<key>pfm_format</key>
 			<string>^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$</string>
 			<key>pfm_exclude</key>
@@ -377,6 +387,138 @@
 						<dict>
 							<key>pfm_target</key>
 							<string>SMIMEEnabled</string>
+							<key>pfm_n_range_list</key>
+							<array>
+								<true/>
+							</array>
+						</dict>
+					</array>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>SMIMEEnablePerMessageSwitch</string>
+			<key>pfm_title</key>
+			<string>S/MIME Enable Per-Message Switch</string>
+			<key>pfm_description</key>
+			<string>If set to true, enable the per-message encryption switch. DEPRECATED: Use SMIMEEnableEncryptionPerMessageSwitch</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_ios_min</key>
+			<string>8.0</string>
+			<key>pfm_ios_max</key>
+			<string>11.4.1</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_target</key>
+							<string>SMIMEEnabled</string>
+							<key>pfm_n_range_list</key>
+							<array>
+								<true/>
+							</array>
+						</dict>
+					</array>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>SMIMESigningUserOverrideable</string>
+			<key>pfm_title</key>
+			<string>S/MIME Signing Overrideable by user</string>
+			<key>pfm_description</key>
+			<string>If set to true, S/MIME can be toggled by the end user in the settings app</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_ios_min</key>
+			<string>12.0</string>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>SMIMESigningCertificateUUIDUserOverrideable</string>
+			<key>pfm_title</key>
+			<string>S/MIME Signing Identity Overrideable by user</string>
+			<key>pfm_description</key>
+			<string>If set to true, The user can select a signing identity</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_ios_min</key>
+			<string>12.0</string>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>SMIMEEncryptByDefault</string>
+			<key>pfm_title</key>
+			<string>S/MIME Encryption enabled by default.</string>
+			<key>pfm_description</key>
+			<string>If set to true, S/MIME Encryption is enabled by default.</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_ios_min</key>
+			<string>12.0</string>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>SMIMEEncryptByDefaultUserOverrideable</string>
+			<key>pfm_title</key>
+			<string>S/MIME Encryption can be overriden by user</string>
+			<key>pfm_description</key>
+			<string>The user can toggle S/MIME encryption to off</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_ios_min</key>
+			<string>12.0</string>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>SMIMEEncryptionCertificateUUIDUserOverrideable</string>
+			<key>pfm_title</key>
+			<string>S/MIME Encryption Identity Overrideable by user</string>
+			<key>pfm_description</key>
+			<string>If set to true, The user can select an encryption identity</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_ios_min</key>
+			<string>12.0</string>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>SMIMEEnableEncryptionPerMessageSwitch</string>
+			<key>pfm_title</key>
+			<string>S/MIME Enable Per-Message Encryption Switch</string>
+			<key>pfm_description</key>
+			<string>If set to true, enable the per-message encryption switch (shows a toggle when composing mail)</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_ios_min</key>
+			<string>12.0</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_target</key>
+							<string>SMIMEEncryptionEnabled</string>
 							<key>pfm_n_range_list</key>
 							<array>
 								<true/>
@@ -397,6 +539,8 @@
 			<string>boolean</string>
 			<key>pfm_default</key>
 			<false/>
+			<key>pfm_ios_min</key>
+			<string>6.0</string>
 		</dict>
 		<dict>
 			<key>pfm_name</key>
@@ -433,6 +577,48 @@
 					</array>
 					<key>pfm_required</key>
 					<true/>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>OAuth</string>
+			<key>pfm_title</key>
+			<string>OAuth</string>
+			<key>pfm_description</key>
+			<string>Connection should use OAuth for authentication. Not to use in conjunction with Password. Default is false</string>
+			<key>pfm_default</key>
+			<false/>
+			<key>pfm_macos_min</key>
+			<string>10.14.0</string>
+			<key>pfm_ios_min</key>
+			<string>12.0</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>OAuthSignInURL</string>
+			<key>pfm_title</key>
+			<string>oAuth Sign-in URL</string>
+			<key>pfm_description</key>
+			<string>Specifies the URL to display in a webview for authentication when auto-discovery isn't used. Requires Host at minimum</string>
+			<key>pfm_macos_min</key>
+			<string>10.14.0</string>
+			<key>pfm_type</key>
+			<string>string</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_target</key>
+							<string>Host</string>
+							<key>pfm_present</key>
+							<true/>
+						</dict>
+					</array>
 				</dict>
 			</array>
 		</dict>

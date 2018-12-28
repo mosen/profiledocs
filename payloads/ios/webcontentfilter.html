@@ -1,0 +1,863 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Web Content Filter &mdash; Configuration Profiles  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="tvOS Payloads" href="../tvos.html" />
+    <link rel="prev" title="Single-Sign On" href="sso.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Configuration Profiles
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../common.html">Common Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mac.html">Mac Payloads</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../ios.html">iOS Payloads</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="applock.html">App Lock Payload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appmapping.html">App-to-Per-App VPN Mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cellular.html">Cellular Payload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dnsproxy.html">DNS Proxy Payload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="domains.html">Domains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="education.html">Education Configuration Payload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="google.html">Google Account Payload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="homescreen.html">Home Screen Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notification.html">Notification Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="osxserver.html">OSX Server Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="perappvpn.html">Per-App VPN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shareddevice.html">Shared Device</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sso.html">Single-Sign On</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Web Content Filter</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#keys">Keys</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#com.apple.webcontent-filter-FilterType-auto">FilterType</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#filtertype-is-builtin">FilterType is BuiltIn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#filtertype-is-plugin">FilterType is Plugin</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#links">Links</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tvos.html">tvOS Payloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../custom/index.html">Custom Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../official.html">Official Links and Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manifest.html">Manifest File Format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extmanifest.html">Extended Manifest Format</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../macos/index.html">macOS Subsystem Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pdp/index.html">Profile Domain Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html#submitting-an-error">Submitting an error</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html#writing-documentation">Writing Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Configuration Profiles</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../ios.html">iOS Payloads</a> &raquo;</li>
+        
+      <li>Web Content Filter</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/payloads/ios/webcontentfilter.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="web-content-filter">
+<span id="payloadtype-com-apple-webcontent-filter"></span><h1><a class="toc-backref" href="#id1">Web Content Filter</a><a class="headerlink" href="#web-content-filter" title="Permalink to this headline">¶</a></h1>
+<p><code class="xref download docutils literal notranslate"><span class="pre">Template</span></code></p>
+<p>The Web Content Filter payload allows you to whitelist and blacklist specific web URLs. This payload is supported only on supervised devices.</p>
+<p>When multiple content filter payloads are present:</p>
+<ul>
+<li><p class="first">The blacklist is the union of all blacklists—that is, any URL that appears in any blacklist is inaccessible.</p>
+</li>
+<li><p class="first">The permitted list is the intersection of all permitted lists—that is, only URLs that appear in every permitted list
+are accessible when they would otherwise be blocked by the automatic filter.</p>
+</li>
+<li><p class="first">The whitelist list is the intersection of all whitelists—that is, only URLs that appear in every whitelist are accessible.</p>
+</li>
+<li><p class="first">URLs are matched by using string-based root matching. A URL matches a whitelist, blacklist, or permitted list pattern
+if the exact characters of the pattern appear as the root of the URL.</p>
+<p>For example, if test.com/a is blacklisted, then test.com, test.com/b, and test.com/c/d/e will all be blocked.
+Matching does not discard subdomain prefixes, so if test.com/a is blacklisted, m.test.com is not blocked.</p>
+<p>Also, no attempt is made to match aliases (IP address versus DNS names, for example) or to handle requests
+with explicit port numbers.</p>
+</li>
+</ul>
+<p>If a profile does not contain an array for PermittedURLs or WhitelistedBookmarks,
+that profile is skipped when evaluating the missing array or arrays.</p>
+<p>As an exception, if a payload contains an AutoFilterEnabled key, but does not contain a PermittedURLs array,
+that profile is treated as containing an empty array—that is, all websites are blocked.</p>
+<p>All filtering options are active simultaneously. Only URLs and sites that pass all rules are permitted.</p>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#web-content-filter" id="id1">Web Content Filter</a><ul>
+<li><a class="reference internal" href="#summary" id="id2">Summary</a></li>
+<li><a class="reference internal" href="#keys" id="id3">Keys</a><ul>
+<li><a class="reference internal" href="#com.apple.webcontent-filter-FilterType-auto" id="id4">FilterType</a></li>
+<li><a class="reference internal" href="#filtertype-is-builtin" id="id5">FilterType is BuiltIn</a><ul>
+<li><a class="reference internal" href="#com.apple.webcontent-filter-AutoFilterEnabled-auto" id="id6">AutoFilterEnabled</a></li>
+<li><a class="reference internal" href="#com.apple.webcontent-filter-PermittedURLs-auto" id="id7">PermittedURLs</a></li>
+<li><a class="reference internal" href="#com.apple.webcontent-filter-WhitelistedBookmarks-auto" id="id8">WhitelistedBookmarks</a></li>
+<li><a class="reference internal" href="#com.apple.webcontent-filter-BlacklistedURLs-auto" id="id9">BlacklistedURLs</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#filtertype-is-plugin" id="id10">FilterType is Plugin</a><ul>
+<li><a class="reference internal" href="#com.apple.webcontent-filter-UserDefinedName-auto" id="id11">UserDefinedName</a></li>
+<li><a class="reference internal" href="#com.apple.webcontent-filter-PluginBundleID-auto" id="id12">PluginBundleID</a></li>
+<li><a class="reference internal" href="#com.apple.webcontent-filter-ServerAddress-auto" id="id13">ServerAddress</a></li>
+<li><a class="reference internal" href="#com.apple.webcontent-filter-UserName-auto" id="id14">UserName</a></li>
+<li><a class="reference internal" href="#com.apple.webcontent-filter-Password-auto" id="id15">Password</a></li>
+<li><a class="reference internal" href="#com.apple.webcontent-filter-PayloadCertificateUUID-auto" id="id16">PayloadCertificateUUID</a></li>
+<li><a class="reference internal" href="#com.apple.webcontent-filter-Organization-auto" id="id17">Organization</a></li>
+<li><a class="reference internal" href="#com.apple.webcontent-filter-FilterBrowsers-auto" id="id18">FilterBrowsers</a></li>
+<li><a class="reference internal" href="#com.apple.webcontent-filter-FilterSockets-auto" id="id19">FilterSockets</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#links" id="id20">Links</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="summary">
+<h2><a class="toc-backref" href="#id2">Summary</a><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">PayloadType:</th><td class="field-body">com.apple.webcontent-filter</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Supervised Only:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">N/A</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">macOS:</th><td class="field-body">N/A</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">macOS Deprecated:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">N/A</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">iOS:</th><td class="field-body">N/A</td>
+</tr>
+<tr class="field-even field"><th class="field-name">iOS Deprecated:</th><td class="field-body">N/A</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Highlander:</th><td class="field-body">N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="keys">
+<h2><a class="toc-backref" href="#id3">Keys</a><a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="com.apple.webcontent-filter-FilterType-auto">
+<h3><a class="toc-backref" href="#id4">FilterType</a><a class="headerlink" href="#com.apple.webcontent-filter-FilterType-auto" title="Permalink to this headline">¶</a></h3>
+<p>FilterType</p>
+<p>Type of filter, built-in or plug-in</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>BuiltIn</td>
+<td>always</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">FilterType must be <strong>Plugin</strong> on macOS</p>
+</div>
+<div class="section" id="filtertype-is-builtin">
+<h3><a class="toc-backref" href="#id5">FilterType is BuiltIn</a><a class="headerlink" href="#filtertype-is-builtin" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="com.apple.webcontent-filter-AutoFilterEnabled-auto">
+<h4><a class="toc-backref" href="#id6">AutoFilterEnabled</a><a class="headerlink" href="#com.apple.webcontent-filter-AutoFilterEnabled-auto" title="Permalink to this headline">¶</a></h4>
+<p>Web filter enabled</p>
+<p>Optional. If true, automatic filtering is enabled. This function evaluates each web page as it is
+				loaded and attempts to identify and block content not suitable for children.
+				The search algorithm is complex and may vary from release to release, but it is basically looking for
+				adult language, i.e. swearing and sexually explicit language. The default value is false.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>boolean</td>
+<td>False</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.webcontent-filter-PermittedURLs-auto">
+<h4><a class="toc-backref" href="#id7">PermittedURLs</a><a class="headerlink" href="#com.apple.webcontent-filter-PermittedURLs-auto" title="Permalink to this headline">¶</a></h4>
+<p>PermittedURLs</p>
+<p>Used only when AutoFilterEnabled is true. Otherwise, this field is ignored.
+				Each entry contains a URL that is accessible whether the automatic filter allows access or not.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>array</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.webcontent-filter-WhitelistedBookmarks-auto">
+<h4><a class="toc-backref" href="#id8">WhitelistedBookmarks</a><a class="headerlink" href="#com.apple.webcontent-filter-WhitelistedBookmarks-auto" title="Permalink to this headline">¶</a></h4>
+<p>White list</p>
+<p>Optional. If present, these URLs are added to the browser’s bookmarks, and the user is not allowed to visit any sites other than these. The number of these URLs should be limited to about 500.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>array</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.webcontent-filter-BlacklistedURLs-auto">
+<h4><a class="toc-backref" href="#id9">BlacklistedURLs</a><a class="headerlink" href="#com.apple.webcontent-filter-BlacklistedURLs-auto" title="Permalink to this headline">¶</a></h4>
+<p>BlacklistedURLs</p>
+<p>Each entry contains a URL that will not be accessible.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>array</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="filtertype-is-plugin">
+<h3><a class="toc-backref" href="#id10">FilterType is Plugin</a><a class="headerlink" href="#filtertype-is-plugin" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="com.apple.webcontent-filter-UserDefinedName-auto">
+<h4><a class="toc-backref" href="#id11">UserDefinedName</a><a class="headerlink" href="#com.apple.webcontent-filter-UserDefinedName-auto" title="Permalink to this headline">¶</a></h4>
+<p>UserDefinedName</p>
+<p>A string which will be displayed for this filtering configuration.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>always</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.webcontent-filter-PluginBundleID-auto">
+<h4><a class="toc-backref" href="#id12">PluginBundleID</a><a class="headerlink" href="#com.apple.webcontent-filter-PluginBundleID-auto" title="Permalink to this headline">¶</a></h4>
+<p>PluginBundleID</p>
+<p>The Bundle ID of the plugin that provides filtering service.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>always</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.webcontent-filter-ServerAddress-auto">
+<h4><a class="toc-backref" href="#id13">ServerAddress</a><a class="headerlink" href="#com.apple.webcontent-filter-ServerAddress-auto" title="Permalink to this headline">¶</a></h4>
+<p>ServerAddress</p>
+<p> Server address (may be IP address, hostname, or URL).</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.webcontent-filter-UserName-auto">
+<h4><a class="toc-backref" href="#id14">UserName</a><a class="headerlink" href="#com.apple.webcontent-filter-UserName-auto" title="Permalink to this headline">¶</a></h4>
+<p>Username</p>
+<p>A username for the service.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.webcontent-filter-Password-auto">
+<h4><a class="toc-backref" href="#id15">Password</a><a class="headerlink" href="#com.apple.webcontent-filter-Password-auto" title="Permalink to this headline">¶</a></h4>
+<p>Password</p>
+<p>A password for the service.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.webcontent-filter-PayloadCertificateUUID-auto">
+<h4><a class="toc-backref" href="#id16">PayloadCertificateUUID</a><a class="headerlink" href="#com.apple.webcontent-filter-PayloadCertificateUUID-auto" title="Permalink to this headline">¶</a></h4>
+<p>Certificate UUID</p>
+<p>UUID of the certificate payload containing an identity used as the client credential</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.webcontent-filter-Organization-auto">
+<h4><a class="toc-backref" href="#id17">Organization</a><a class="headerlink" href="#com.apple.webcontent-filter-Organization-auto" title="Permalink to this headline">¶</a></h4>
+<p>Organization</p>
+<p>An Organization string that will be passed to the 3rd party plugin.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>string</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.webcontent-filter-FilterBrowsers-auto">
+<h4><a class="toc-backref" href="#id18">FilterBrowsers</a><a class="headerlink" href="#com.apple.webcontent-filter-FilterBrowsers-auto" title="Permalink to this headline">¶</a></h4>
+<p>FilterBrowsers</p>
+<p>FilterBrowsers</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>integer</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="com.apple.webcontent-filter-FilterSockets-auto">
+<h4><a class="toc-backref" href="#id19">FilterSockets</a><a class="headerlink" href="#com.apple.webcontent-filter-FilterSockets-auto" title="Permalink to this headline">¶</a></h4>
+<p>FilterSockets</p>
+<p>FilterSockets</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">Default</th>
+<th class="head">Required</th>
+<th class="head">Regex</th>
+<th class="head">iOS</th>
+<th class="head">macOS</th>
+<th class="head">Supervised</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>integer</td>
+<td>True</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="section" id="links">
+<h2><a class="toc-backref" href="#id20">Links</a><a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://developer.apple.com/library/content/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010206-CH1-SW45">Official Documentation</a>.</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../tvos.html" class="btn btn-neutral float-right" title="tvOS Payloads" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="sso.html" class="btn btn-neutral" title="Single-Sign On" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, MacAdmins Community
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

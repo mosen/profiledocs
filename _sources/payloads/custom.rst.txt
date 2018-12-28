@@ -1,23 +1,13 @@
-.. _payloadtype-anything:
-
-Custom Settings
+Custom Payloads
 ===============
 
-A preference may be managed by using the bundle id name as the value of the **PayloadType** variable.
+These payload entries describe ways of applying custom preferences.
 
-You may append ``.ByHost`` to manage the preference as a ByHost preference. The MCX post composite step will automatically
-apply the managed preference as a ByHost preference if this string is present.
+This may or may not work depending on how the application was written.
 
--[MCX_PostComposite postCompositeByHost:userHome:]:
+.. toctree::
+    :maxdepth: 2
+    :glob:
+    :caption: Custom Payloads:
 
-.. contents::
-
-Forced
-""""""
-
-Forced is an array containing a dictionary in the following format:
-
-.. pfm:: /_static/manifests/com.apple.ManagedClient.preferences manifest.plist
-   :key: PayloadContent:PreferenceDomainHere:Forced:ForcedItem
-
-
+    custom/*
