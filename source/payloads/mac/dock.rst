@@ -10,7 +10,7 @@ Dock
 :download:`Template <../_static/examples/com.apple.dock.mobileconfig>`
 
 The Dock payload is supported on the user channel and, except for AllowDockFixupOverride, on all version of macOS.
-The key ``AllowDockFixupOverride`` is supported on macOS 10.12 and later.
+The key ``AllowDockFixupOverride`` is supported on macOS 10.12 and later. The key ``show-recents`` is supported on macOS 10.14 and later.
 
 .. contents::
 
@@ -33,6 +33,7 @@ Keys
 .. pfmkey:: largesize /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.dock.plist
 .. pfmkey:: magsize-immutable /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.dock.plist
 .. pfmkey:: show-process-indicators /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.dock.plist
+.. pfmkey:: show-recents /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.dock.plist
 .. pfmkey:: launchanim /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.dock.plist
 .. pfmkey:: launchanim-immutable /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.dock.plist
 .. pfmkey:: mineffect /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.dock.plist
