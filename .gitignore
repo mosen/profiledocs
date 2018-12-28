@@ -6,3 +6,6 @@ pm2pfm
 *.iml
 config.py
 .DS_Store
+myna
+configurator2.8
+_static/ProfileManifests
