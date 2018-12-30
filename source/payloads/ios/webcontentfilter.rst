@@ -2,7 +2,7 @@
 
 Web Content Filter
 ==================
-:download:`Template <../_static/examples/com.apple.webcontent-filter.mobileconfig>`
+:download:`Template </_static/examples/com.apple.webcontent-filter.mobileconfig>`
 
 The Web Content Filter payload allows you to whitelist and blacklist specific web URLs. This payload is supported only on supervised devices.
 

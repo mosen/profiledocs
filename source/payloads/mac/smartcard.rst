@@ -2,7 +2,7 @@
 
 Smart Card
 ==========
-:download:`Template <../_static/examples/com.apple.smartcard.mobileconfig>`
+:download:`Template </_static/examples/com.apple.smartcard.mobileconfig>`
 
 This payload controls restrictions and settings for SmartCard pairing on macOS v10.12.4 and later.
 

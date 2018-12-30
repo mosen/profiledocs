@@ -7,7 +7,7 @@ AirPlay
     :align: right
     :figwidth: 200px
 
-:download:`Template <../_static/examples/com.apple.airplay.mobileconfig>`
+:download:`Template </_static/examples/com.apple.airplay.mobileconfig>`
 
 This payload is used to whitelist AirPlay destinations, and to provide passwords for AirPlay destinations.
 

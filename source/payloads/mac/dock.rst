@@ -7,7 +7,7 @@ Dock
     :align: right
     :figwidth: 200px
 
-:download:`Template <../_static/examples/com.apple.dock.mobileconfig>`
+:download:`Template </_static/examples/com.apple.dock.mobileconfig>`
 
 The Dock payload is supported on the user channel and, except for AllowDockFixupOverride, on all version of macOS.
 The key ``AllowDockFixupOverride`` is supported on macOS 10.12 and later. The key ``show-recents`` is supported on macOS 10.14 and later.

@@ -2,7 +2,7 @@
 
 Sidebar
 =======
-:download:`Template <../_static/examples/com.apple.MCX.sidebar.mobileconfig>`
+:download:`Template </_static/examples/com.apple.MCX.sidebar.mobileconfig>`
 
 .. warning:: This seems to be deprecated? calls LSSharedFileList
 

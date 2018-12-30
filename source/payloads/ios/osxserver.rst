@@ -1,21 +1,23 @@
 OSX Server Account
 ==================
 
+This payload is now fully deprecated as of roughly iOS 11.x (needs checking)
+
 .. contents::
 
 Summary
 -------
 
-.. pfmheader:: manifests/ac2/com.apple.osxserver.account manifest.plist
+.. pfmheader:: /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.osxserver.account.plist
 
 Keys
 ----
 
-.. pfmkey:: AccountDescription manifests/ac2/com.apple.osxserver.account manifest.plist
-.. pfmkey:: HostName manifests/ac2/com.apple.osxserver.account manifest.plist
-.. pfmkey:: UserName manifests/ac2/com.apple.osxserver.account manifest.plist
-.. pfmkey:: Password manifests/ac2/com.apple.osxserver.account manifest.plist
-.. pfmkey:: ConfiguredAccounts manifests/ac2/com.apple.osxserver.account manifest.plist
+.. pfmkey:: AccountDescription /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.osxserver.account.plist
+.. pfmkey:: HostName /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.osxserver.account.plist
+.. pfmkey:: UserName /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.osxserver.account.plist
+.. pfmkey:: Password /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.osxserver.account.plist
+.. pfmkey:: ConfiguredAccounts /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.osxserver.account.plist
 
 Links
 -----

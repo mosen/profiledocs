@@ -7,7 +7,7 @@ Google Account Payload
     :align: right
     :figwidth: 200px
 
-:download:`Template <../_static/examples/com.apple.google-oauth.mobileconfig>`
+:download:`Template </_static/examples/com.apple.google-oauth.mobileconfig>`
 
 You can install multiple Google payloads.
 

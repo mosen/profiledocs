@@ -7,7 +7,7 @@ Email Payload
     :align: right
     :figwidth: 200px
 
-:download:`Template <../_static/examples/com.apple.mail.managed.mobileconfig>`
+:download:`Template </_static/examples/com.apple.mail.managed.mobileconfig>`
 
 An email payload creates an email account on the device.
 

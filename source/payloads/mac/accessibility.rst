@@ -5,7 +5,7 @@
 :macos:`Accessibility`
 ======================
 
-:download:`Template <../_static/examples/com.apple.universalaccess.mobileconfig>`
+:download:`Template </_static/examples/com.apple.universalaccess.mobileconfig>`
 
 This payload controls accessibility settings.
 

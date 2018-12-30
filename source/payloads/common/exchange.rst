@@ -2,7 +2,7 @@
 
 Exchange
 ========
-:download:`Template <../_static/examples/com.apple.eas.account.mobileconfig>`
+:download:`Template </_static/examples/com.apple.eas.account.mobileconfig>`
 
 In iOS, the Exchange payload is designated by specifying **com.apple.eas.account** as the PayloadType value. This payload configures an Exchange Active Sync account on the device.
 

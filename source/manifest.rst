@@ -144,7 +144,7 @@ Indicates whether this key is required to be present.
     automatically, the profile installation will fail.
 
 pfm_required
-^^^^^^^^^^^
+^^^^^^^^^^^^
 
 Type
     Boolean or String "always"

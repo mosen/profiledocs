@@ -7,7 +7,7 @@ Autonomous Single App Mode
     :align: right
     :figwidth: 200px
 
-:download:`Template <../_static/examples/com.apple.asam.mobileconfig>`
+:download:`Template </_static/examples/com.apple.asam.mobileconfig>`
 
 This payload grants Autonomous Single App Mode capabilities for specific applications. Available in macOS 10.13.4 and later.
 

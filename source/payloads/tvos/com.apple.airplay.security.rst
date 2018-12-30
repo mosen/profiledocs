@@ -8,7 +8,7 @@ AirPlay Security
 
 The AirPlay Security payload locks Apple TV to a single security type.
 
-:download:`Template <../_static/examples/com.apple.airplay.security.mobileconfig>`
+:download:`Template </_static/examples/com.apple.airplay.security.mobileconfig>`
 
 .. pfmheader:: /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.airplay.security.plist
 

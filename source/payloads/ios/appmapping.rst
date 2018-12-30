@@ -2,7 +2,7 @@
 
 App-to-Per-App VPN Mapping
 ==========================
-:download:`Template <../_static/examples/com.apple.vpn.managed.appmapping.mobileconfig>`
+:download:`Template </_static/examples/com.apple.vpn.managed.appmapping.mobileconfig>`
 
 .. contents::
 

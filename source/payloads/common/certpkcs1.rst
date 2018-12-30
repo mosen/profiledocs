@@ -7,7 +7,7 @@ Certificate (PKCS#1)
     :align: right
     :figwidth: 200px
 
-:download:`Template <../_static/examples/com.apple.security.pkcs1.mobileconfig>`
+:download:`Template </_static/examples/com.apple.security.pkcs1.mobileconfig>`
 
 DER-encoded certificate (.cer) without private key. May contain root certificates.
 
@@ -16,14 +16,14 @@ DER-encoded certificate (.cer) without private key. May contain root certificate
 Summary
 -------
 
-.. pfmheader:: /_static/ProfileManifests/ManifestsApple/com.apple.security.pkcs1.plist
+.. pfmheader:: /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.security.pkcs1.plist
 
 Keys
 ----
 
-.. pfmkey:: PayloadCertificateFileName /_static/ProfileManifests/ManifestsApple/com.apple.security.pkcs1.plist
-.. pfmkey:: PayloadContent /_static/ProfileManifests/ManifestsApple/com.apple.security.pkcs1.plist
-.. pfmkey:: Password /_static/ProfileManifests/ManifestsApple/com.apple.security.pkcs1.plist
+.. pfmkey:: PayloadCertificateFileName /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.security.pkcs1.plist
+.. pfmkey:: PayloadContent /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.security.pkcs1.plist
+.. pfmkey:: Password /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.security.pkcs1.plist
 
 
 Links

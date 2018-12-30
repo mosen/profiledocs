@@ -7,7 +7,7 @@ CalDAV Payload
     :align: right
     :figwidth: 200px
 
-:download:`Template <../_static/examples/com.apple.caldav.account.mobileconfig>`
+:download:`Template </_static/examples/com.apple.caldav.account.mobileconfig>`
 
 This payload configures a CalDAV account.
 

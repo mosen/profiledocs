@@ -2,7 +2,7 @@
 
 Date and Time
 =============
-:download:`Template <../_static/examples/com.apple.MCX.mobileconfig>`
+:download:`Template </_static/examples/com.apple.MCX.mobileconfig>`
 
 This payload describes Timezone and NTP settings.
 It is part of the generic bag of settings *com.apple.MCX* type along with Energy Saver

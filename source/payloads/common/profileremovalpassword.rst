@@ -6,7 +6,7 @@ Profile Removal Password
 Summary
 -------
 
-.. pfmheader:: manifests/ac2/com.apple.profileRemovalPassword manifest.plist
+.. pfmheader:: /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.profileRemovalPassword.plist
 
 Links
 -----

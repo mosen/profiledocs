@@ -9,7 +9,7 @@ App Store
 
 Establishes macOS App Store restrictions.
 
-:download:`Template <../_static/examples/com.apple.appstore.mobileconfig>`
+:download:`Template </_static/examples/com.apple.appstore.mobileconfig>`
 
 .. contents::
 

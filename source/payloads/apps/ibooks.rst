@@ -4,8 +4,8 @@ iBooks
 Disabling the Book Store
 ------------------------
 
-To disable the book store you need two payload domains, :ref:`com.apple.iTunes` and
-:ref:`com.apple.iBooksX`.
+To disable the book store you need two payload domains, **com.apple.iTunes** and
+**com.apple.iBooksX**.
 
 For the iTunes domain, you will need a payload which includes the **disableMusicStore** key, example::
 

@@ -2,7 +2,7 @@
 
 Wi-Fi
 =====
-:download:`Template <../_static/examples/com.apple.wifi.managed.mobileconfig>`
+:download:`Template </_static/examples/com.apple.wifi.managed.mobileconfig>`
 
 .. warning:: The profile cannot be installed if your machine does not have a Wi-Fi AirPort adapter. USB Adapters do not
     qualify, so you may have issues testing in a Virtual Machine. This is because it uses CoreWLAN to make the settings

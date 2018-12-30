@@ -7,7 +7,7 @@ FileVault 2
     :align: right
     :figwidth: 200px
 
-:download:`Template <../_static/examples/com.apple.MCX.FileVault2.mobileconfig>`
+:download:`Template </_static/examples/com.apple.MCX.FileVault2.mobileconfig>`
 
 
 You can use FileVault 2 to perform full XTS-AES 128 encryption on the contents of a volume.

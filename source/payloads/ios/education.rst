@@ -13,7 +13,7 @@ The Education Configuration Payload defines the users, groups, and departments w
 - Leader certificates must have the common name prefix "leader" (case insensitive).
 - Member certificates must have the common name prefix "member" (case insensitive).
 
-:download:`Template <../_static/examples/com.apple.education.mobileconfig>`
+:download:`Template </_static/examples/com.apple.education.mobileconfig>`
 
 .. contents::
 

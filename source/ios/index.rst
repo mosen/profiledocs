@@ -6,3 +6,4 @@ iOS Notes
     :caption: iOS Notes:
 
     defaults/index.rst
+    handlers/index

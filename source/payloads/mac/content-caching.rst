@@ -10,7 +10,7 @@ Content Caching Payload
 The content caching payload configures the content caching service.
 
 
-:download:`Template <../_static/examples/com.apple.AssetCache.managed.mobileconfig>`
+:download:`Template </_static/examples/com.apple.AssetCache.managed.mobileconfig>`
 
 
 .. contents::

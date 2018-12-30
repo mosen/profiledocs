@@ -2,7 +2,7 @@
 
 System Migration
 ================
-:download:`Template <../_static/examples/com.apple.systemmigration.mobileconfig>`
+:download:`Template </_static/examples/com.apple.systemmigration.mobileconfig>`
 
 System migration occurs when items are transferred to a macOS device from a Windows device by reading source and
 destination path pairs from plist files. This payload provides a way to customize those transfers.

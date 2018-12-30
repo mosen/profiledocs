@@ -13,7 +13,9 @@ Welcome to MacAdmins Profile Reference's documentation!
    payloads/ios
    payloads/tvos
 
-   payloads/apps
+   payloads/custom/index
+
+   payloads/apps/index
 
    troubleshooting/index.rst
 
@@ -21,11 +23,7 @@ Welcome to MacAdmins Profile Reference's documentation!
    manifest.rst
    extmanifest.rst
 
-   mdm/commands/index
-
    macos/index.rst
-
-   pdp/index.rst
 
    contributing.rst
 

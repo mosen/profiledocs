@@ -2,7 +2,7 @@
 
 Domains
 =======
-:download:`Template <../_static/examples/com.apple.domains.mobileconfig>`
+:download:`Template </_static/examples/com.apple.domains.mobileconfig>`
 
 This payload defines domains that are under an enterprise’s management.
 

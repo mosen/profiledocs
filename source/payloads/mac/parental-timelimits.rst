@@ -2,7 +2,7 @@
 
 Parental Controls - Time Limits
 ===============================
-:download:`Template <../_static/examples/com.apple.familycontrols.timelimits.v2.mobileconfig>`
+:download:`Template </_static/examples/com.apple.familycontrols.timelimits.v2.mobileconfig>`
 
 This payload controls time allowances and curfews as shown in the Parental Controls system preference pane.
 

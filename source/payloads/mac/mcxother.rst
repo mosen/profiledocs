@@ -2,7 +2,7 @@
 
 MCX Other
 =========
-:download:`Template <../_static/examples/com.apple.MCX.mobileconfig>`
+:download:`Template </_static/examples/com.apple.MCX.mobileconfig>`
 
 This payload describes a grab bag of settings along with Energy Saver and Timezone information.
 

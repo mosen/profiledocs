@@ -2,7 +2,7 @@
 
 AssetCache Client
 =================
-:download:`Template <../_static/examples/com.apple.assetcache.client.osx.profile.plugin.mobileconfig>`
+:download:`Template </_static/examples/com.apple.assetcache.client.osx.profile.plugin.mobileconfig>`
 
 .. note:: TODO Key functionality still needs verification
 

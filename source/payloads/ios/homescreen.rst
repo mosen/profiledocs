@@ -7,7 +7,7 @@ Home Screen Layout
     :align: right
     :figwidth: 200px
 
-:download:`Template <../_static/examples/com.apple.homescreenlayout.mobileconfig>`
+:download:`Template </_static/examples/com.apple.homescreenlayout.mobileconfig>`
 
 The Home Screen Layout Payload defines a layout of apps, folders, and web clips for the Home screen.
 It is supported on the User Channel.

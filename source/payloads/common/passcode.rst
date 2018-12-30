@@ -2,7 +2,7 @@
 
 Password Policy
 ===============
-:download:`Template <../_static/examples/com.apple.mobiledevice.passwordpolicy.mobileconfig>`
+:download:`Template </_static/examples/com.apple.mobiledevice.passwordpolicy.mobileconfig>`
 
 On iOS, the key names generally reflect the expected functionality.
 

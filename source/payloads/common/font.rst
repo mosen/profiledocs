@@ -7,7 +7,7 @@ Font
     :align: right
     :figwidth: 200px
 
-:download:`Template <../_static/examples/com.apple.font.mobileconfig>`
+:download:`Template </_static/examples/com.apple.font.mobileconfig>`
 
 A Font payload lets you add an additional font to an iOS device.
 
@@ -23,10 +23,10 @@ Collection formats (**.ttc** or **.otc**) are not supported.
 Summary
 -------
 
-.. pfmheader:: /_static/ProfileManifests/ManifestsApple/com.apple.font.plist
+.. pfmheader:: /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.font.plist
 
 Keys
 ----
 
-.. pfmkey:: Name /_static/ProfileManifests/ManifestsApple/com.apple.font.plist
-.. pfmkey:: Font /_static/ProfileManifests/ManifestsApple/com.apple.font.plist
+.. pfmkey:: Name /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.font.plist
+.. pfmkey:: Font /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.font.plist

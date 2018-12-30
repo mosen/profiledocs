@@ -6,8 +6,10 @@ These payload entries describe ways of applying custom preferences.
 This may or may not work depending on how the application was written.
 
 .. toctree::
-    :maxdepth: 2
-    :glob:
-    :caption: Custom Payloads:
+	:maxdepth: 2
+	:glob:
+	:caption: Custom Payloads:
 
-    custom/*
+	custom
+	defaults
+	legacy_custom

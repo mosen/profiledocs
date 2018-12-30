@@ -6,7 +6,7 @@ cases.
 
 The following is a description of keys added to the manifest format by the community as a working standard.
 
-See Also, erikberglunds extended format: `https://github.com/erikberglund/ProfileManifests/wiki/Manifest-Format`_.
+See Also, erikberglunds extended format: `<https://github.com/erikberglund/ProfileManifests/wiki/Manifest-Format>`_.
 
 Extended Keys
 -------------

@@ -10,7 +10,7 @@ AirPrint
 The AirPrint payload adds AirPrint printers to the user’s AirPrint printer list.
 This makes it easier to support environments where the printers and the devices are on different subnets.
 
-:download:`Template <../_static/examples/com.apple.airprint.mobileconfig>`
+:download:`Template </_static/examples/com.apple.airprint.mobileconfig>`
 
 .. contents::
 

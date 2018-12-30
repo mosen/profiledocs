@@ -15,7 +15,7 @@ The home button is disabled, and the device returns to the specified application
    During that time you should restrict the visible apps as much as possible,
    except for Settings and Phone and any other apps that cannot be blacklisted.
 
-:download:`Template <../_static/examples/com.apple.app.lock.mobileconfig>`
+:download:`Template </_static/examples/com.apple.app.lock.mobileconfig>`
 
 .. contents::
 

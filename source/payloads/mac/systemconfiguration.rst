@@ -3,7 +3,7 @@
 SystemConfiguration (Proxies)
 =============================
 
-:download:`Template <../_static/examples/com.apple.SystemConfiguration.mobileconfig>`
+:download:`Template </_static/examples/com.apple.SystemConfiguration.mobileconfig>`
 
 This profile allows you to change the proxy settings in the advanced dialog of a network interface.
 

@@ -8,7 +8,7 @@ Global HTTP Proxy
     :figwidth: 200px
 
 
-:download:`Template <../_static/examples/com.apple.proxy.http.global.mobileconfig>`
+:download:`Template </_static/examples/com.apple.proxy.http.global.mobileconfig>`
 
 This payload allows you to specify global HTTP proxy settings.
 
@@ -23,16 +23,16 @@ will not be supervised until the workflow completes.
 Summary
 -------
 
-.. pfmheader:: /_static/ProfileManifests/ManifestsApple/com.apple.proxy.http.global.plist
+.. pfmheader:: /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.proxy.http.global.plist
 
 Keys
 ----
 
-.. pfmkey:: ProxyType /_static/ProfileManifests/ManifestsApple/com.apple.proxy.http.global.plist
-.. pfmkey:: ProxyServer /_static/ProfileManifests/ManifestsApple/com.apple.proxy.http.global.plist
-.. pfmkey:: ProxyServerPort /_static/ProfileManifests/ManifestsApple/com.apple.proxy.http.global.plist
-.. pfmkey:: ProxyUsername /_static/ProfileManifests/ManifestsApple/com.apple.proxy.http.global.plist
-.. pfmkey:: ProxyPassword /_static/ProfileManifests/ManifestsApple/com.apple.proxy.http.global.plist
-.. pfmkey:: ProxyPACURL /_static/ProfileManifests/ManifestsApple/com.apple.proxy.http.global.plist
-.. pfmkey:: ProxyPACFallbackAllowed /_static/ProfileManifests/ManifestsApple/com.apple.proxy.http.global.plist
-.. pfmkey:: ProxyCaptiveLoginAllowed /_static/ProfileManifests/ManifestsApple/com.apple.proxy.http.global.plist
+.. pfmkey:: ProxyType /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.proxy.http.global.plist
+.. pfmkey:: ProxyServer /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.proxy.http.global.plist
+.. pfmkey:: ProxyServerPort /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.proxy.http.global.plist
+.. pfmkey:: ProxyUsername /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.proxy.http.global.plist
+.. pfmkey:: ProxyPassword /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.proxy.http.global.plist
+.. pfmkey:: ProxyPACURL /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.proxy.http.global.plist
+.. pfmkey:: ProxyPACFallbackAllowed /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.proxy.http.global.plist
+.. pfmkey:: ProxyCaptiveLoginAllowed /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.proxy.http.global.plist

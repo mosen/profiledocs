@@ -7,7 +7,7 @@ Desktop Payload
     :align: right
     :figwidth: 200px
 
-:download:`Template <../_static/examples/com.apple.desktop.mobileconfig>`
+:download:`Template </_static/examples/com.apple.desktop.mobileconfig>`
 
 This payload sets up macOS Desktop settings and restrictions. It is supported on the user channel and on macOS 10.10 and later.
 

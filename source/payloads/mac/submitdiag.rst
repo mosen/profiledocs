@@ -2,7 +2,7 @@
 
 Submit Diagnostics
 ==================
-:download:`Template <../_static/examples/com.apple.SubmitDiagInfo.mobileconfig>`
+:download:`Template </_static/examples/com.apple.SubmitDiagInfo.mobileconfig>`
 
 .. contents::
 

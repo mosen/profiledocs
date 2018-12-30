@@ -11,7 +11,7 @@ Conference Room Display Payload
 This payload configures an Apple TV to enter Conference Room Display mode and restricts exit from that mode.
 It is supported on supervised devices running tvOS 10.2 or later.
 
-:download:`Template <../_static/examples/com.apple.conferenceroomdisplay.mobileconfig>`
+:download:`Template </_static/examples/com.apple.conferenceroomdisplay.mobileconfig>`
 
 .. contents::
 

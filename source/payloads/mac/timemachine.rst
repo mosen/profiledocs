@@ -2,7 +2,7 @@
 
 Time Machine
 ============
-:download:`Template <../_static/examples/com.apple.MCX.TimeMachine.mobileconfig>`
+:download:`Template </_static/examples/com.apple.MCX.TimeMachine.mobileconfig>`
 
 Time machine settings.
 

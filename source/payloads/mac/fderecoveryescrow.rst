@@ -7,7 +7,7 @@ FDE Recovery Key Escrow Payload
     :align: right
     :figwidth: 200px
 
-:download:`Template <../_static/examples/com.apple.security.FDERecoveryKeyEscrow.mobileconfig>`
+:download:`Template </_static/examples/com.apple.security.FDERecoveryKeyEscrow.mobileconfig>`
 
 By default, FileVault recovery keys are sent to Apple if the user requests.
 

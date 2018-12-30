@@ -7,7 +7,7 @@ Certificate (PKCS#12)
     :align: right
     :figwidth: 200px
 
-:download:`Template <../_static/examples/com.apple.security.pkcs12.mobileconfig>`
+:download:`Template </_static/examples/com.apple.security.pkcs12.mobileconfig>`
 
 Password-protected identity certificate (.p12). Only one certificate may be included.
 
@@ -18,14 +18,14 @@ Password-protected identity certificate (.p12). Only one certificate may be incl
 Summary
 -------
 
-.. pfmheader:: /_static/ProfileManifests/ManifestsApple/com.apple.security.pkcs12.plist
+.. pfmheader:: /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.security.pkcs12.plist
 
 Keys
 ----
 
-.. pfmkey:: PayloadCertificateFileName /_static/ProfileManifests/ManifestsApple/com.apple.security.pkcs12.plist
-.. pfmkey:: PayloadContent /_static/ProfileManifests/ManifestsApple/com.apple.security.pkcs12.plist
-.. pfmkey:: Password /_static/ProfileManifests/ManifestsApple/com.apple.security.pkcs12.plist
+.. pfmkey:: PayloadCertificateFileName /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.security.pkcs12.plist
+.. pfmkey:: PayloadContent /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.security.pkcs12.plist
+.. pfmkey:: Password /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.security.pkcs12.plist
 
 
 Links

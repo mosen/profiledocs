@@ -9,7 +9,7 @@ DNS Proxy Payload
 
 This payload sets up iOS Proxy DNS Settings.
 
-:download:`Template <../_static/examples/com.apple.dnsProxy.managed.mobileconfig>`
+:download:`Template </_static/examples/com.apple.dnsProxy.managed.mobileconfig>`
 
 
 .. contents::
