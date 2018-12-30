@@ -17,6 +17,8 @@
 					</array>
 					<key>Type</key>
 					<string>Application</string>
+					<key>URL</key>
+					<string></string>
 				</dict>
 			</array>
 			<key>Pages</key>
@@ -31,6 +33,8 @@
 					</array>
 					<key>Type</key>
 					<string>Application</string>
+					<key>URL</key>
+					<string></string>
 				</dict>
 			</array>
 			<key>PayloadDescription</key>
@@ -60,6 +64,8 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>24d958c0-7b51-465b-a191-0b552edeade8</string>
+	<string>d31bfd51-5824-421e-b931-2b47f35cbbb0</string>
+	<key>PayloadVersion</key>
+	<string>1</string>
 </dict>
 </plist>

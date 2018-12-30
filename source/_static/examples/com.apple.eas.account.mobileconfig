@@ -25,6 +25,10 @@
 			<string></string>
 			<key>MailNumberOfPastDaysToSync</key>
 			<integer>7</integer>
+			<key>OAuth</key>
+			<false/>
+			<key>OAuthSignInURL</key>
+			<string></string>
 			<key>Password</key>
 			<string></string>
 			<key>PayloadCertificateUUID</key>
@@ -47,14 +51,30 @@
 			<false/>
 			<key>PreventMove</key>
 			<false/>
+			<key>SMIMEEnableEncryptionPerMessageSwitch</key>
+			<false/>
 			<key>SMIMEEnablePerMessageSwitch</key>
 			<false/>
 			<key>SMIMEEnabled</key>
 			<false/>
+			<key>SMIMEEncryptByDefault</key>
+			<false/>
+			<key>SMIMEEncryptByDefaultUserOverrideable</key>
+			<false/>
 			<key>SMIMEEncryptionCertificateUUID</key>
 			<string></string>
+			<key>SMIMEEncryptionCertificateUUIDUserOverrideable</key>
+			<false/>
+			<key>SMIMEEncryptionEnabled</key>
+			<false/>
 			<key>SMIMESigningCertificateUUID</key>
 			<string></string>
+			<key>SMIMESigningCertificateUUIDUserOverrideable</key>
+			<false/>
+			<key>SMIMESigningEnabled</key>
+			<false/>
+			<key>SMIMESigningUserOverrideable</key>
+			<false/>
 			<key>SSL</key>
 			<true/>
 			<key>UserName</key>
@@ -76,7 +96,7 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>a0358988-d7ee-4bd5-b45e-8a206c21e9fe</string>
+	<string>3997037a-e9f6-4498-8479-71d76c347d04</string>
 	<key>PayloadVersion</key>
 	<string>1</string>
 </dict>

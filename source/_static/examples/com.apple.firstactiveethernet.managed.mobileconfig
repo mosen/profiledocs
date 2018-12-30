@@ -40,6 +40,8 @@
 				<key>UserPassword</key>
 				<string></string>
 			</dict>
+			<key>Interface</key>
+			<string>FirstEthernet</string>
 			<key>Password</key>
 			<string></string>
 			<key>PayloadCertificateUUID</key>
@@ -98,6 +100,8 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>b2ce9954-0fad-48c5-bc78-a0961a91f1a8</string>
+	<string>0e1ddba2-4457-4f40-837e-4429051c84be</string>
+	<key>PayloadVersion</key>
+	<string>1</string>
 </dict>
 </plist>

@@ -27,6 +27,12 @@
 			<true/>
 			<key>allowAirDrop</key>
 			<false/>
+			<key>allowAirPrint</key>
+			<true/>
+			<key>allowAirPrintCredentialsStorage</key>
+			<true/>
+			<key>allowAirPrintiBeaconDiscovery</key>
+			<true/>
 			<key>allowAppCellularDataModification</key>
 			<true/>
 			<key>allowAppInstallation</key>
@@ -88,6 +94,8 @@
 			<key>allowDiagnosticSubmission</key>
 			<false/>
 			<key>allowDiagnosticSubmissionModification</key>
+			<true/>
+			<key>allowDictation</key>
 			<true/>
 			<key>allowEnablingRestrictions</key>
 			<true/>
@@ -165,11 +173,15 @@
 			<true/>
 			<key>allowSpotlightInternetResults</key>
 			<true/>
+			<key>allowSystemAppRemoval</key>
+			<true/>
 			<key>allowUIAppInstallation</key>
 			<true/>
 			<key>allowUIConfigurationProfileInstallation</key>
 			<true/>
 			<key>allowUntrustedTLSPrompt</key>
+			<true/>
+			<key>allowVPNCreation</key>
 			<true/>
 			<key>allowVideoConferencing</key>
 			<true/>
@@ -181,6 +193,8 @@
 			<true/>
 			<key>allowiTunes</key>
 			<true/>
+			<key>allowiTunesFileSharing</key>
+			<true/>
 			<key>autonomousSingleAppModePermittedAppIDs</key>
 			<array>
 				<string></string>
@@ -189,13 +203,25 @@
 			<array>
 				<string></string>
 			</array>
+			<key>enforcedSoftwareUpdateDelay</key>
+			<integer>30</integer>
 			<key>forceAirDropUnmanaged</key>
 			<false/>
 			<key>forceAirPlayIncomingRequestsPairingPassword</key>
 			<false/>
 			<key>forceAirPlayOutgoingRequestsPairingPassword</key>
 			<false/>
+			<key>forceAirPrintTrustedTLSRequirement</key>
+			<false/>
 			<key>forceAssistantProfanityFilter</key>
+			<false/>
+			<key>forceClassroomAutomaticallyJoinClasses</key>
+			<false/>
+			<key>forceClassroomRequestPermissionToLeaveClasses</key>
+			<false/>
+			<key>forceClassroomUnpromptedAppAndDeviceLock</key>
+			<false/>
+			<key>forceClassroomUnpromptedScreenObservation</key>
 			<false/>
 			<key>forceEncryptedBackup</key>
 			<false/>
@@ -203,8 +229,12 @@
 			<false/>
 			<key>forceLimitAdTracking</key>
 			<false/>
+			<key>forceUnpromptedManagedClassroomScreenObservation</key>
+			<false/>
 			<key>forceWatchWristDetection</key>
 			<false/>
+			<key>forceWiFiWhitelisting</key>
+			<true/>
 			<key>ratingApps</key>
 			<integer>1000</integer>
 			<key>ratingMovies</key>
@@ -240,6 +270,8 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>8bce4a89-6ad1-44c1-b876-98ed3194a659</string>
+	<string>50bb4491-39e5-4600-b4cf-80e57ce41d54</string>
+	<key>PayloadVersion</key>
+	<string>1</string>
 </dict>
 </plist>

@@ -5,41 +5,25 @@
 	<key>PayloadContent</key>
 	<array>
 		<dict>
-			<key>NotificationSettings</key>
+			<key>AllowedApplications</key>
 			<array>
 				<dict>
-					<key>AlertType</key>
-					<integer>1</integer>
-					<key>BadgesEnabled</key>
-					<true/>
 					<key>BundleIdentifier</key>
 					<string></string>
-					<key>CriticalAlertEnabled</key>
-					<false/>
-					<key>GroupingType</key>
-					<integer>0</integer>
-					<key>NotificationsEnabled</key>
-					<true/>
-					<key>ShowInCarPlay</key>
-					<true/>
-					<key>ShowInLockScreen</key>
-					<true/>
-					<key>ShowInNotificationCenter</key>
-					<true/>
-					<key>SoundsEnabled</key>
-					<true/>
+					<key>TeamIdentifier</key>
+					<string></string>
 				</dict>
 			</array>
 			<key>PayloadDescription</key>
-			<string>Configures notifications settings for apps</string>
+			<string>Autonomous Single App Mode</string>
 			<key>PayloadDisplayName</key>
-			<string>Notifications</string>
+			<string>Autonomous Single App Mode</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.notificationsettings</string>
+			<string>com.apple.asam</string>
 			<key>PayloadOrganization</key>
 			<string></string>
 			<key>PayloadType</key>
-			<string>com.apple.notificationsettings</string>
+			<string>com.apple.asam</string>
 			<key>PayloadUUID</key>
 			<string></string>
 			<key>PayloadVersion</key>
@@ -47,17 +31,17 @@
 		</dict>
 	</array>
 	<key>PayloadDescription</key>
-	<string>Example: Configures notifications settings for apps</string>
+	<string>Example: This payload grants Autonomous Single App Mode capabilities for specific applications</string>
 	<key>PayloadDisplayName</key>
-	<string>Example: Notifications</string>
+	<string>Example: Autonomous Single App Mode</string>
 	<key>PayloadIdentifier</key>
-	<string>com.apple.notificationsettings.example</string>
+	<string>com.apple.asam.example</string>
 	<key>PayloadOrganization</key>
 	<string>Example Organization</string>
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>e79f0ccf-5fce-40b4-86f1-107114b68195</string>
+	<string>31802908-def4-48c3-9d21-27fd30913d6e</string>
 	<key>PayloadVersion</key>
 	<string>1</string>
 </dict>

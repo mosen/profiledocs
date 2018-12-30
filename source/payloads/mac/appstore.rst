@@ -16,7 +16,7 @@ Establishes macOS App Store restrictions.
 Summary
 -------
 
-.. pfmheader:: /_static/manifests/com.apple.appstore manifest.plist
+.. pfmheader:: /_static/ProfileManifests/Manifests/ManifestsApple/com.apple.appstore.plist
 
 Keys
 ----

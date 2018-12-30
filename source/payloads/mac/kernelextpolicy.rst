@@ -16,13 +16,13 @@ The payload can only be installed by an MDM that is "User Approved". IE. only vi
 Summary
 -------
 
-.. pfmheader:: /_static/manifests/com.apple.syspolicy.kernel-extension-policy.plist
+.. pfmheader:: /_static/ProfileManifests/ManifestsApple/com.apple.syspolicy.kernel-extension-policy.plist
 
 Keys
 ----
 
-.. pfmkey:: AllowUserOverrides /_static/manifests/com.apple.syspolicy.kernel-extension-policy.plist
-.. pfmkey:: AllowedTeamIdentifiers /_static/manifests/com.apple.syspolicy.kernel-extension-policy.plist
-.. pfmkey:: AllowedKernelExtensions /_static/manifests/com.apple.syspolicy.kernel-extension-policy.plist
+.. pfmkey:: AllowUserOverrides /_static/ProfileManifests/ManifestsApple/com.apple.syspolicy.kernel-extension-policy.plist
+.. pfmkey:: AllowedTeamIdentifiers /_static/ProfileManifests/ManifestsApple/com.apple.syspolicy.kernel-extension-policy.plist
+.. pfmkey:: AllowedKernelExtensions /_static/ProfileManifests/ManifestsApple/com.apple.syspolicy.kernel-extension-policy.plist
 
 

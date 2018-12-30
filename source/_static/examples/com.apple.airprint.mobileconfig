@@ -8,8 +8,12 @@
 			<key>AirPrint</key>
 			<array>
 				<dict>
+					<key>ForceTLS</key>
+					<false/>
 					<key>IPAddress</key>
 					<string></string>
+					<key>Port</key>
+					<integer>0</integer>
 					<key>ResourcePath</key>
 					<string></string>
 				</dict>
@@ -41,6 +45,8 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>f5a554be-149f-4596-8904-2ca6e97d59b5</string>
+	<string>ef7849ad-a51d-4c67-bec3-1d2e11507f58</string>
+	<key>PayloadVersion</key>
+	<string>1</string>
 </dict>
 </plist>

@@ -16,7 +16,8 @@
 			<key>BackupSkipSys</key>
 			<true/>
 			<key>BasePaths</key>
-			<array/>
+			<array>
+			</array>
 			<key>MobileBackups</key>
 			<true/>
 			<key>PayloadDescription</key>
@@ -34,7 +35,8 @@
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>SkipPaths</key>
-			<array/>
+			<array>
+			</array>
 		</dict>
 	</array>
 	<key>PayloadDescription</key>
@@ -48,7 +50,7 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>974b0915-b10f-4b72-8ea1-7cd71970af20</string>
+	<string>6c78a0fd-2502-46f1-8be3-0c67d67b69f4</string>
 	<key>PayloadVersion</key>
 	<string>1</string>
 </dict>

@@ -20,9 +20,11 @@
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>loginscripts</key>
-			<array/>
+			<array>
+			</array>
 			<key>logoutscripts</key>
-			<array/>
+			<array>
+			</array>
 			<key>skipLoginHook</key>
 			<false/>
 			<key>skipLogoutHook</key>
@@ -40,7 +42,7 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>35ac26ea-a1db-4fcb-8ef8-ee929dd7e365</string>
+	<string>606a707d-e587-420c-a932-88a2a430046c</string>
 	<key>PayloadVersion</key>
 	<string>1</string>
 </dict>

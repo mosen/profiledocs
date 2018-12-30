@@ -10,10 +10,12 @@
 			<key>AllowedKernelExtensions</key>
 			<dict>
 				<key>Team ID Key</key>
-				<array/>
+				<array>
+				</array>
 			</dict>
 			<key>AllowedTeamIdentifiers</key>
-			<array/>
+			<array>
+			</array>
 			<key>PayloadDescription</key>
 			<string>Kernel Extension Policy</string>
 			<key>PayloadDisplayName</key>
@@ -41,7 +43,7 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>06bf38bf-cd51-4ade-a5c8-fbab76c307c4</string>
+	<string>93f024bd-9c64-4f68-9839-b09f63603d82</string>
 	<key>PayloadVersion</key>
 	<string>1</string>
 </dict>

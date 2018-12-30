@@ -1,8 +1,15 @@
-macOS Subsystem Notes
-=====================
+macOS Architecture Notes
+========================
+
+These pages are about the MDM architecture in macOS.
 
 .. toctree::
     :maxdepth: 2
     :caption: macOS Subsystems:
 
-    pwpolicy.rst
+    mcxcompositor
+    postcomposite
+    pwpolicy
+
+    pdp/index.rst
+    cpxpc/index.rst

@@ -13,7 +13,7 @@ Welcome to MacAdmins Profile Reference's documentation!
    payloads/ios
    payloads/tvos
 
-   custom/index.rst
+   payloads/apps
 
    troubleshooting/index.rst
 

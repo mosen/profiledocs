@@ -12,6 +12,8 @@
 					<false/>
 					<key>BundleID</key>
 					<string></string>
+					<key>Name</key>
+					<string></string>
 				</dict>
 			</array>
 			<key>BlockAllIncoming</key>
@@ -47,6 +49,8 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>c9fe66c3-5292-4298-aa54-006fcd59bfdf</string>
+	<string>1ddcb716-4a71-4b9f-b017-676e8a294aa7</string>
+	<key>PayloadVersion</key>
+	<string>1</string>
 </dict>
 </plist>

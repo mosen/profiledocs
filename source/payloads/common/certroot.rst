@@ -14,14 +14,14 @@ Alias for :ref:`payloadtype-com.apple.security.pkcs1`.
 Summary
 -------
 
-.. pfmheader:: /_static/manifests/com.apple.security.root manifest.plist
+.. pfmheader:: /_static/ProfileManifests/ManifestsApple/com.apple.security.pkcs1.plist
 
 Keys
 ----
 
-.. pfmkey:: PayloadCertificateFileName /_static/manifests/com.apple.security.root manifest.plist
-.. pfmkey:: PayloadContent /_static/manifests/com.apple.security.root manifest.plist
-.. pfmkey:: Password /_static/manifests/com.apple.security.root manifest.plist
+.. pfmkey:: PayloadCertificateFileName /_static/ProfileManifests/ManifestsApple/com.apple.security.pkcs1.plist
+.. pfmkey:: PayloadContent /_static/ProfileManifests/ManifestsApple/com.apple.security.pkcs1.plist
+.. pfmkey:: Password /_static/ProfileManifests/ManifestsApple/com.apple.security.pkcs1.plist
 
 Links
 -----

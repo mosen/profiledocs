@@ -6,8 +6,9 @@ Troubleshooting
     :maxdepth: 2
     :caption: Troubleshooting:
 
-    logging.rst
-    mdmclient.rst
-    apns.rst
-
+    apns
+    custom_mcx
+    logging
+    mdmclient
+    setup-assistant
 

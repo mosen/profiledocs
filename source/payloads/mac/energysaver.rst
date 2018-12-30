@@ -12,24 +12,24 @@ For more information on the individual settings you can also consult the :comman
 Summary
 -------
 
-.. pfmheader:: /_static/manifests/com.apple.MCX manifest.plist
+.. pfmheader:: /_static/ProfileManifests/ManifestsApple/com.apple.MCX.plist
 
 Keys
 ----
 
-.. pfmkey:: DestroyFVKeyOnStandby /_static/manifests/com.apple.MCX manifest.plist
-.. pfmkey:: SleepDisabled /_static/manifests/com.apple.MCX manifest.plist
-.. pfmkey:: com.apple.EnergySaver.desktop.ACPower-ProfileNumber /_static/manifests/com.apple.MCX manifest.plist
-.. pfmkey:: com.apple.EnergySaver.portable.ACPower-ProfileNumber /_static/manifests/com.apple.MCX manifest.plist
-.. pfmkey:: com.apple.EnergySaver.portable.BatteryPower-ProfileNumber /_static/manifests/com.apple.MCX manifest.plist
-.. pfmkey:: com.apple.EnergySaver.desktop.ACPower /_static/manifests/com.apple.MCX manifest.plist
-.. pfmkey:: com.apple.EnergySaver.portable.ACPower /_static/manifests/com.apple.MCX manifest.plist
-.. pfmkey:: com.apple.EnergySaver.portable.BatteryPower /_static/manifests/com.apple.MCX manifest.plist
+.. pfmkey:: DestroyFVKeyOnStandby /_static/ProfileManifests/ManifestsApple/com.apple.MCX.plist
+.. pfmkey:: SleepDisabled /_static/ProfileManifests/ManifestsApple/com.apple.MCX.plist
+.. pfmkey:: com.apple.EnergySaver.desktop.ACPower-ProfileNumber /_static/ProfileManifests/ManifestsApple/com.apple.MCX.plist
+.. pfmkey:: com.apple.EnergySaver.portable.ACPower-ProfileNumber /_static/ProfileManifests/ManifestsApple/com.apple.MCX.plist
+.. pfmkey:: com.apple.EnergySaver.portable.BatteryPower-ProfileNumber /_static/ProfileManifests/ManifestsApple/com.apple.MCX.plist
+.. pfmkey:: com.apple.EnergySaver.desktop.ACPower /_static/ProfileManifests/ManifestsApple/com.apple.MCX.plist
+.. pfmkey:: com.apple.EnergySaver.portable.ACPower /_static/ProfileManifests/ManifestsApple/com.apple.MCX.plist
+.. pfmkey:: com.apple.EnergySaver.portable.BatteryPower /_static/ProfileManifests/ManifestsApple/com.apple.MCX.plist
 
 Power Settings Dict
 ^^^^^^^^^^^^^^^^^^^
 
-.. pfm:: /_static/manifests/com.apple.MCX manifest.plist
+.. pfm:: /_static/ProfileManifests/ManifestsApple/com.apple.MCX.plist
     :key: com.apple.EnergySaver.portable.BatteryPower
 
 
@@ -38,14 +38,14 @@ Power Settings Dict
 Schedule
 ^^^^^^^^
 
-.. pfmkey:: com.apple.EnergySaver.desktop.Schedule /_static/manifests/com.apple.MCX manifest.plist
+.. pfmkey:: com.apple.EnergySaver.desktop.Schedule /_static/ProfileManifests/ManifestsApple/com.apple.MCX.plist
 
-.. pfm:: /_static/manifests/com.apple.MCX manifest.plist
+.. pfm:: /_static/ProfileManifests/ManifestsApple/com.apple.MCX.plist
     :key: com.apple.EnergySaver.desktop.Schedule
 
-.. pfm:: /_static/manifests/com.apple.MCX manifest.plist
+.. pfm:: /_static/ProfileManifests/ManifestsApple/com.apple.MCX.plist
     :key: com.apple.EnergySaver.desktop.Schedule:RepeatingPowerOn
 
-.. pfm:: /_static/manifests/com.apple.MCX manifest.plist
+.. pfm:: /_static/ProfileManifests/ManifestsApple/com.apple.MCX.plist
     :key: com.apple.EnergySaver.desktop.Schedule:RepeatingPowerOff
 

@@ -18,14 +18,14 @@ Password-protected identity certificate (.p12). Only one certificate may be incl
 Summary
 -------
 
-.. pfmheader:: /_static/manifests/com.apple.security.pkcs12 manifest.plist
+.. pfmheader:: /_static/ProfileManifests/ManifestsApple/com.apple.security.pkcs12.plist
 
 Keys
 ----
 
-.. pfmkey:: PayloadCertificateFileName /_static/manifests/com.apple.security.pkcs12 manifest.plist
-.. pfmkey:: PayloadContent /_static/manifests/com.apple.security.pkcs12 manifest.plist
-.. pfmkey:: Password /_static/manifests/com.apple.security.pkcs12 manifest.plist
+.. pfmkey:: PayloadCertificateFileName /_static/ProfileManifests/ManifestsApple/com.apple.security.pkcs12.plist
+.. pfmkey:: PayloadContent /_static/ProfileManifests/ManifestsApple/com.apple.security.pkcs12.plist
+.. pfmkey:: Password /_static/ProfileManifests/ManifestsApple/com.apple.security.pkcs12.plist
 
 
 Links

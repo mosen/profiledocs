@@ -5,22 +5,30 @@
 	<key>PayloadContent</key>
 	<array>
 		<dict>
-			<key>Password</key>
-			<string></string>
-			<key>PayloadCertificateFileName</key>
-			<string></string>
-			<key>PayloadContent</key>
-			<string>Base64EncodedDataHere==</string>
+			<key>AllowedRemotes</key>
+			<array>
+				<dict>
+					<key>RemoteDeviceID</key>
+					<string></string>
+				</dict>
+			</array>
+			<key>AllowedTVs</key>
+			<array>
+				<dict>
+					<key>TVDeviceID</key>
+					<string></string>
+				</dict>
+			</array>
 			<key>PayloadDescription</key>
-			<string>Adds a PKCS#1-formatted certificate</string>
+			<string>Configures TV Remote settings</string>
 			<key>PayloadDisplayName</key>
-			<string>Certificate</string>
+			<string>TV Remote settings</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.security.pkcs1</string>
+			<string>com.apple.tvremote</string>
 			<key>PayloadOrganization</key>
 			<string></string>
 			<key>PayloadType</key>
-			<string>com.apple.security.pkcs1</string>
+			<string>com.apple.tvremote</string>
 			<key>PayloadUUID</key>
 			<string></string>
 			<key>PayloadVersion</key>
@@ -28,17 +36,17 @@
 		</dict>
 	</array>
 	<key>PayloadDescription</key>
-	<string>Example: Use this section to define settings for a pkcs1 certificate.</string>
+	<string>Example: TV Remote settings</string>
 	<key>PayloadDisplayName</key>
-	<string>Example: Certificate</string>
+	<string>Example: TV Remote</string>
 	<key>PayloadIdentifier</key>
-	<string>com.apple.security.pkcs1.example</string>
+	<string>com.apple.tvremote.example</string>
 	<key>PayloadOrganization</key>
 	<string>Example Organization</string>
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>44a20f36-8a38-4996-81ce-4d8d3cfde562</string>
+	<string>4fa24d77-412a-4e06-8031-0a856993a60e</string>
 	<key>PayloadVersion</key>
 	<string>1</string>
 </dict>

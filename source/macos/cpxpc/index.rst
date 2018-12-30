@@ -12,8 +12,11 @@ The Info.plist has been extended for each of these bundles to include the payloa
 
     AirPlayService.xpc
     AppleService.xpc
+    AssessmentService.xpc
+    AssetCacheProfilePlugin.xpc
     CardDAVService.xpc
     CertificateService.xpc
+    ClassroomMCXService.xpc
     ExchangeService.xpc
     ExecutionPolicyService.xpc
     FileVaultEscrowService.xpc
@@ -21,6 +24,7 @@ The Info.plist has been extended for each of these bundles to include the payloa
     FirmwarePasswordService.xpc
     FontService.xpc
     MDMService.xpc
-    PlugInKitService.xpc
+    PluginKitService.xpc
     SampleService.xpc
     SystemPolicyService.xpc
+    TCCProfileService.xpc

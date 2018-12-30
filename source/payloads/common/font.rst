@@ -23,10 +23,10 @@ Collection formats (**.ttc** or **.otc**) are not supported.
 Summary
 -------
 
-.. pfmheader:: /_static/manifests/com.apple.font manifest.plist
+.. pfmheader:: /_static/ProfileManifests/ManifestsApple/com.apple.font.plist
 
 Keys
 ----
 
-.. pfmkey:: Name /_static/manifests/com.apple.font manifest.plist
-.. pfmkey:: Font /_static/manifests/com.apple.font manifest.plist
+.. pfmkey:: Name /_static/ProfileManifests/ManifestsApple/com.apple.font.plist
+.. pfmkey:: Font /_static/ProfileManifests/ManifestsApple/com.apple.font.plist

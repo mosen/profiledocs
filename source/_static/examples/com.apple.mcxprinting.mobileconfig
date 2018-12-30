@@ -55,7 +55,8 @@
 					<key>Model</key>
 					<string></string>
 					<key>Option</key>
-					<dict/>
+					<dict>
+					</dict>
 					<key>PPDURL</key>
 					<string></string>
 					<key>PrinterLocked</key>
@@ -75,7 +76,7 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>530df3a9-ec41-41cd-a2e5-578e8df8c99f</string>
+	<string>f7f6bd9a-7d90-48c5-891a-94c33b972407</string>
 	<key>PayloadVersion</key>
 	<string>1</string>
 </dict>

@@ -23,18 +23,19 @@ Available in macOS 10.12 and later. A Firewall payload manages the Application F
 Summary
 -------
 
-.. pfmheader:: /_static/manifests/com.apple.security.firewall manifest.plist
+.. pfmheader:: /_static/ProfileManifests/ManifestsApple/com.apple.security.firewall.plist
 
 Keys
 ----
 
-.. pfmkey:: EnableFirewall /_static/manifests/com.apple.security.firewall manifest.plist
-.. pfmkey:: BlockAllIncoming /_static/manifests/com.apple.security.firewall manifest.plist
-.. pfmkey:: EnableStealthMode /_static/manifests/com.apple.security.firewall manifest.plist
-.. pfmkey:: Applications /_static/manifests/com.apple.security.firewall manifest.plist
+.. pfmkey:: EnableFirewall /_static/ProfileManifests/ManifestsApple/com.apple.security.firewall.plist
+.. pfmkey:: BlockAllIncoming /_static/ProfileManifests/ManifestsApple/com.apple.security.firewall.plist
+.. pfmkey:: EnableStealthMode /_static/ProfileManifests/ManifestsApple/com.apple.security.firewall.plist
+.. pfmkey:: Applications /_static/ProfileManifests/ManifestsApple/com.apple.security.firewall.plist
 
 Each item in the applications list contains these keys:
 
-.. pfmkey:: Applications:ApplicationItem:BundleID /_static/manifests/com.apple.security.firewall manifest.plist
-.. pfmkey:: Applications:ApplicationItem:Allowed /_static/manifests/com.apple.security.firewall manifest.plist
+.. pfmkey:: Applications:ApplicationItem:BundleID /_static/ProfileManifests/ManifestsApple/com.apple.security.firewall.plist
+.. pfmkey:: Applications:ApplicationItem:Allowed /_static/ProfileManifests/ManifestsApple/com.apple.security.firewall.plist
 
+.. todo:: Undocumented "Name" key.

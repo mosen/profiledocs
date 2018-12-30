@@ -20,11 +20,10 @@
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>SidebarDestination</key>
-			<string></string>
+			<string>Favorites</string>
 			<key>customBaseURLs</key>
 			<array>
-				<dict>
-				</dict>
+				<string></string>
 			</array>
 			<key>hideiCloudDrive</key>
 			<false/>
@@ -45,6 +44,8 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>8f0afd4c-e47f-401a-892f-9b14144edbbc</string>
+	<string>574ec5db-51b0-47f0-987a-ea47d711e728</string>
+	<key>PayloadVersion</key>
+	<string>1</string>
 </dict>
 </plist>

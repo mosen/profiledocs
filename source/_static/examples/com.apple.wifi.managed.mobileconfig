@@ -35,6 +35,8 @@
 				<array>
 					<string></string>
 				</array>
+				<key>SystemModeCredentialsSource</key>
+				<string>ActiveDirectory</string>
 				<key>TLSAllowTrustExceptions</key>
 				<false/>
 				<key>TLSTrustedServerNames</key>
@@ -115,6 +117,8 @@
 			<string></string>
 			<key>ServiceProviderRoamingEnabled</key>
 			<false/>
+			<key>SetupModes</key>
+			<string>System</string>
 			<key>TLSCertificateRequired</key>
 			<false/>
 		</dict>
@@ -130,6 +134,8 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>bf6fdead-f130-4720-a89a-0d2d4d5c8f52</string>
+	<string>0b9384c0-10ce-41e0-ad61-c072e71501df</string>
+	<key>PayloadVersion</key>
+	<string>1</string>
 </dict>
 </plist>
